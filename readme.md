@@ -36,8 +36,7 @@ Set up Virtualenv
 		$ cd /opt/phaidra
 		# The name of our virtualenv is "env"
 		$ virtualenv --no-site-packages env
-		$ cd env
-		$ source bin/activate
+		$ source env/bin/activate
 
 Now, in front of your command prompt, you should see `(env)`, which indicates that you are operating within that environment.
 
