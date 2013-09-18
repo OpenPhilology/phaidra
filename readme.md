@@ -62,7 +62,8 @@ Make sure you are running the latest version of Uwsgi (at time of writing, 1.9) 
 
 Open `/opt/phaidra/extras/nginx/phaidra.conf` and set the variables to be appropriate for your server:
 
-		server_name YOUR_SERVER.com www.YOUR_SERVER.com
+		# Can also just be an IP Address
+		server_name YOUR_SERVER.com www.YOUR_SERVER.com 
 
 Next we must create a symlink so Nginx uses our configuration file:
 
@@ -72,17 +73,12 @@ And do the same to enable Uwsgi:
 
 		$ ln -s /etc/uwsgi/apps-enabled/phaidra.ini /opt/phaedra/extras/uwsgi/phaidra.ini
 
-Edit the main nginx.conf to import our conf file. For example:
+Create a safe space for the socket to exist, which can be accessed by both Nginx and Uwsgi:
 
-		http {
-			# ...
-			include /opt/phaidra/extras/nginx/phaidra.conf;
-			# ...
-		}
+		$ sudo mkdir /var/uwsgi
+		$ sudo chown www-data:www-data /var/uwsgi
 
-Start up both services:
+Start up services:
 
 		$ sudo service nginx start
 		$ sudo service uwsgi start
-
-
