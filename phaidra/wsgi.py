@@ -23,10 +23,6 @@ import sys
 # os.environ["DJANGO_SETTINGS_MODULE"] = "phaidra.settings"
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
 sys.path.append('/opt/phaidra')
-# sys.path.append('/opt/phaidra/phaidra/phaidra')
-
-# from phaidra import addsitedir
-# addsitedir('/opt/phaidra/env/lib/python2.7/site-packages')
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION

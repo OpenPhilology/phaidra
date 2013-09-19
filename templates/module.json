@@ -1,0 +1,24 @@
+{
+	"name" : "Learn the Alphabet",
+	"modules" : {
+		{
+			"uid" : "",
+			"name" : "",
+			"slides" : {
+				{},
+				{}
+			}
+		},
+		{
+			"uid" : 0,
+			"name" : "Lowercase Letters"
+			"slides" : {
+				{
+					"name" : "This is an alpha"	
+				},
+				{
+					"name" : "Beta"
+				}
+			}
+		}
+}
