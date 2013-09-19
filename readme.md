@@ -48,7 +48,7 @@ Presuming you are starting with a new machine, you need to install Python-relate
 
 Install and configure Nginx with Uwsgi
 ---
-Phaedra runs on nginx as its web server.
+Phaidra runs on nginx as its web server.
 
 		$ sudo apt-get install nginx uwsgi uwsgi-plugin-python
 
