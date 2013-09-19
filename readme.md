@@ -1,7 +1,6 @@
 Phaidra
 ===
-
-WIP -- do not use this installation document yet.
+Phaidra is that system that powers the Historical Language eLearning Project. It will provide distributed eLearning for historical languages such as Greek and Latin, so that more people can delve deeply into primary sources in their original language.
 
 Installing Phaidra
 ===
@@ -67,11 +66,11 @@ Open `/opt/phaidra/extras/nginx/phaidra.conf` and set the variables to be approp
 
 Next we must create a symlink so Nginx uses our configuration file:
 
-		$ ln -s /etc/nginx/sites-enabled/phaidra.conf /opt/phaedra/extras/nginx/phaidra.conf
+		$ ln -s /etc/nginx/sites-enabled/phaidra.conf /opt/phaidra/extras/nginx/phaidra.conf
 
 And do the same to enable Uwsgi:
 
-		$ ln -s /etc/uwsgi/apps-enabled/phaidra.ini /opt/phaedra/extras/uwsgi/phaidra.ini
+		$ ln -s /etc/uwsgi/apps-enabled/phaidra.ini /opt/phaidra/extras/uwsgi/phaidra.ini
 
 Create a safe space for the socket to exist, which can be accessed by both Nginx and Uwsgi:
 
