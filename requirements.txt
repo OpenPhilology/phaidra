@@ -1,3 +1,4 @@
 Django==1.5.3
 argparse==1.2.1
+meld3==0.6.10
 wsgiref==0.1.2

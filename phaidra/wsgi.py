@@ -22,7 +22,7 @@ import sys
 # mod_wsgi daemon mode with each site in its own daemon process, or use
 # os.environ["DJANGO_SETTINGS_MODULE"] = "phaidra.settings"
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
-sys.path.append('/opt/phaidra/phaidra')
+sys.path.append('/opt/phaidra')
 # sys.path.append('/opt/phaidra/phaidra/phaidra')
 
 # from phaidra import addsitedir
