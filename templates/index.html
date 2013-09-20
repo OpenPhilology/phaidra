@@ -13,15 +13,50 @@
 
 	<!-- JS -->
 	<script src="./static/js/lib/jquery-2.0.3.min.js"></script>
-	<script src="./static/js/lib/backbone-min.js"></script>
+	<script src="./static/js/lib/json2.js"></script>
+	<script src="./static/js/lib/underscore-min.js"></script>
+	<script src="./static/js/lib/backbone.js"></script>
 	<script src="./static/js/base.js"></script>
 
+	<style>
+		.work {
+			width: 3000px;
+			position: relative;
+		}
+		.work div {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.work div span {
+			display: inline-block;
+			width: 2px;
+			height: 2px;
+			background-color: #EEE;
+			border-bottom: 1px solid white;
+		}
+		.work div span.r {
+			background-color: #BE1E2D;
+		}
+		.work div span.g {
+			background-color: #1FADAD;
+		}
+		.work div span.b {
+			background-color: #F5BC78;
+		}
+	</style>
 </head>
 <body>
 
-	{{ name }}
-
-	{{ content }}
+	<div class="work">
+		<div class="book1"></div>
+		<div class="book2"></div>
+		<div class="book3"></div>
+		<div class="book4"></div>
+		<div class="book5"></div>
+		<div class="book6"></div>
+		<div class="book7"></div>
+		<div class="book8"></div>
+	</div>
 
 </body>
 </html>
