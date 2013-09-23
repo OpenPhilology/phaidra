@@ -1,0 +1,28 @@
+.work {
+	width: 3000px;
+	position: relative;
+
+	div {
+		display: inline-block;
+		vertical-align: top;
+
+		span {
+			display: inline-block;
+			width: 2px;
+			height: 2px;
+			background-color: #EEE;
+			border-bottom: 1px solid white;
+		}
+
+		/* Colors for types of knowledge of text */ 
+		span.r {
+			background-color: #BE1E2D;
+		}
+		span.g {
+			background-color: #1FADAD;
+		}
+		span.b {
+			background-color: #F5BC78;
+		}
+	}
+}
