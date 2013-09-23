@@ -1,3 +1,130 @@
+/* Color Scheme! */
+$color-pri-one: #BE1E2D; 		// Bright red
+$color-pri-two: #1FADAD; 		// Teal
+$color-pri-two-darker: rgba(9, 61, 61, 0.3);
+$color-pri-two-lighter: #69D1D1;
+
+$color-pri-three: #523D5B;		// Purple
+
+$color-sec-one: #931926;		// Deep red
+$color-sec-two: #4E6087;		// Indigo
+$color-sec-three: #F05629;	 	// Orange
+$color-sec-four: #F5BC78;		// Yellow
+
+$text-light-color: #EEE;
+$text-dark-color: #666;
+
+/* Fonts! */
+$font-family: 'Georgia';
+
+body {
+	//background-image: url(../images/ricepaper_v3.png);	
+}
+
+/* Override Bootstrap Styles */
+.container {
+	max-width: none !important;
+}
+
+/* Header */
+.banner {
+	color: $text-light-color; 
+	background-color: $color-pri-two;
+
+	#search-form {
+		margin: 7px 0px;
+
+		.form-group {
+			margin-bottom: 7px;
+		}
+	}
+
+	.user-data {
+		
+		a {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 18px;
+			margin-left: 10px;
+			color: #EEE;
+			letter-spacing: 0.08em;
+		}
+	}
+
+}
+.navigation {
+	text-align: center;
+
+	a {
+		display: inline-block;
+		text-shadow: -1px -1px 0px $color-pri-two-darker;
+		letter-spacing: 0.08em;
+		padding: 20px 10px;
+		cursor: pointer;
+		text-decoration: none;
+
+		&:last-child {
+			border-right: 1px solid $color-pri-two-lighter;
+		}
+		&:first-child {
+			border-left: 1px solid $color-pri-two-lighter;
+		}
+		&:hover {
+			background-color: $color-pri-two-lighter;	
+		}
+
+		strong {
+			font-size: 18px;
+
+			span {
+				margin-right: 5px;
+			}
+		}
+		small {
+			display: block;
+			font-size: 11px;
+		}
+		&.progress-book {
+			color: $text-light-color;
+		}
+		&.progress-voc {
+			color: $text-light-color;
+		}
+		&.progress-lessons {
+			color: $text-light-color;
+		}
+	}
+
+}
+
+/* Visualization Styles */
+.progress-therm {
+	margin-top: 0px;
+
+	.sec {
+		height: 10px;
+		display: inline-block;
+		margin-right: -4px;
+
+		&.morph {
+			background-color: $color-pri-three;
+		}
+		&.syn {
+			background-color: $color-sec-two;
+		}
+		&.voc {
+			background-color: $color-sec-four;
+		}
+		&.rem {
+			background-color: #DEDEDE;
+		}
+		&:hover {
+			opacity: 0.8;
+			cursor: pointer;
+		}
+	}
+}
+
 .work {
 	width: 3000px;
 	position: relative;

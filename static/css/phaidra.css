@@ -1,3 +1,73 @@
+/* Color Scheme! */
+/* Fonts! */
+/* Override Bootstrap Styles */
+.container {
+  max-width: none !important; }
+
+/* Header */
+.banner {
+  color: #eeeeee;
+  background-color: #1fadad; }
+  .banner #search-form {
+    margin: 7px 0px; }
+    .banner #search-form .form-group {
+      margin-bottom: 7px; }
+  .banner .user-data a {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    margin-left: 10px;
+    color: #EEE;
+    letter-spacing: 0.08em; }
+
+.navigation {
+  text-align: center; }
+  .navigation a {
+    display: inline-block;
+    text-shadow: -1px -1px 0px rgba(9, 61, 61, 0.3);
+    letter-spacing: 0.08em;
+    padding: 20px 10px;
+    cursor: pointer;
+    text-decoration: none; }
+    .navigation a:last-child {
+      border-right: 1px solid #69d1d1; }
+    .navigation a:first-child {
+      border-left: 1px solid #69d1d1; }
+    .navigation a:hover {
+      background-color: #69d1d1; }
+    .navigation a strong {
+      font-size: 18px; }
+      .navigation a strong span {
+        margin-right: 5px; }
+    .navigation a small {
+      display: block;
+      font-size: 11px; }
+    .navigation a.progress-book {
+      color: #eeeeee; }
+    .navigation a.progress-voc {
+      color: #eeeeee; }
+    .navigation a.progress-lessons {
+      color: #eeeeee; }
+
+/* Visualization Styles */
+.progress-therm {
+  margin-top: 0px; }
+  .progress-therm .sec {
+    height: 10px;
+    display: inline-block;
+    margin-right: -4px; }
+    .progress-therm .sec.morph {
+      background-color: #523d5b; }
+    .progress-therm .sec.syn {
+      background-color: #4e6087; }
+    .progress-therm .sec.voc {
+      background-color: #f5bc78; }
+    .progress-therm .sec.rem {
+      background-color: #DEDEDE; }
+    .progress-therm .sec:hover {
+      opacity: 0.8;
+      cursor: pointer; }
+
 .work {
   width: 3000px;
   position: relative; }

@@ -13,6 +13,7 @@
 
 	<!-- JS -->
 	<script src="./static/js/lib/jquery-2.0.3.min.js"></script>
+	<script src="./static/bootstrap/js/bootstrap.js"></script>
 	<script src="./static/js/lib/json2.js"></script>
 	<script src="./static/js/lib/underscore-min.js"></script>
 	<script src="./static/js/lib/backbone.js"></script>
@@ -23,6 +24,65 @@
 </head>
 <body>
 
+<div class="container">
+	<header class="row banner">
+		<div class="col-md-2">
+			logo
+		</div>
+		<div class="col-md-7">
+			<nav class="row navigation">
+				<a class="col-sm-4 progress-book">
+					<strong>
+						<span class="glyphicon glyphicon-book"></span>
+						22% 
+					</strong>
+					<small>
+						Thucydides
+					</small>
+				</a>
+				<a class="col-sm-4 progress-voc">
+					<strong>
+						<span class="glyphicon glyphicon-inbox"></span>
+						300 
+					</strong>
+					<small>
+						vocabulary learned
+					</small>
+				</a>
+				<a class="col-sm-4 progress-lessons">
+					<strong>
+						<span class="glyphicon glyphicon-list"></span>
+						20
+					</strong>
+					<small>
+						lessons completed
+					</small>
+				</a>
+			</nav>
+		</div>
+		<div class="col-md-3">
+			<form role="form" id="search-form">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+			</form>
+
+			<div class="user-data">
+				<div class="img-thumbnail" style="height: 25px; width: 25px"></div>
+				<a href="#">Username</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- High-level overview of user progress -->
+	<div class="row progress-therm">
+		<div class="sec morph" style="width: 20%" title="Morphology"></div>
+		<div class="sec syn" style="width: 30%" title="Syntax"></div>
+		<div class="sec voc" style="width: 30%" title="Vocabulary"></div>
+		<div class="sec rem" style="width: 20%"></div>
+	</div>
+
+</div>
 
 </body>
 </html>
