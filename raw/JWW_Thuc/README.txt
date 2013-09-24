@@ -1,3 +1,3 @@
-First Greek Book, John Williams White, modified in accordance with the Thucydides corpus
+Repository of development for John Williams White First Greek Book, modified for Thucydides
 
-UNDER CONSTRUCTION FALL 2013
+
