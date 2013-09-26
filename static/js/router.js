@@ -4,4 +4,5 @@
 
 $(function() {
 	$('.sec').tooltip();
+	$('.module .circle').tooltip();
 });

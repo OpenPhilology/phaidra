@@ -1,13 +1,24 @@
 /* Color Scheme! */
 /* Fonts! */
+/* Mix-ins */
+body {
+  color: #666; }
+
 /* Override Bootstrap Styles */
 .container {
   max-width: none !important; }
 
 /* Header */
 .banner {
-  color: #eeeeee;
-  background-color: #1fadad; }
+  color: #EEE;
+  background-image: linear-gradient(bottom, #1fadad 0, #23c3c3 100);
+  background-image: -o-linear-gradient(bottom, #1fadad 0, #23c3c3 100);
+  background-image: -moz-linear-gradient(bottom, #1fadad 0, #23c3c3 100);
+  background-image: -webkit-linear-gradient(bottom, #1fadad 0, #23c3c3 100);
+  background-image: -ms-linear-gradient(bottom, #1fadad 0, #23c3c3 100);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1fadad), color-stop(1, #23c3c3));
+  position: relative;
+  z-index: 1; }
   .banner #search-form {
     margin: 7px 0px; }
     .banner #search-form .form-group {
@@ -24,19 +35,25 @@
   text-align: center; }
   .navigation a {
     display: inline-block;
-    text-shadow: -1px -1px 0px rgba(9, 61, 61, 0.3);
     letter-spacing: 0.08em;
     padding: 20px 10px;
     cursor: pointer;
-    text-decoration: none; }
-    .navigation a:last-child {
-      border-right: 1px solid #69d1d1; }
-    .navigation a:first-child {
-      border-left: 1px solid #69d1d1; }
+    text-decoration: none;
+    -webkix-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
     .navigation a:hover {
-      background-color: #69d1d1; }
+      background-color: #23c3c3;
+      -webkix-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in; }
     .navigation a strong {
-      font-size: 18px; }
+      font-size: 18px;
+      font-weight: normal; }
       .navigation a strong span {
         margin-right: 5px; }
     .navigation a small {
@@ -51,22 +68,122 @@
 
 /* Visualization Styles */
 .progress-therm {
-  margin-top: 0px; }
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid whitesmoke;
+  margin-bottom: 20px;
+  height: 20px; }
   .progress-therm .sec {
-    height: 10px;
+    height: 16px;
     display: inline-block;
-    margin-right: -4px; }
+    margin-right: -4px;
+    -webkix-transition: background-color 0.3s cubic;
+    -moz-transition: background-color 0.3s cubic;
+    -o-transition: background-color 0.3s cubic;
+    -ms-transition: background-color 0.3s cubic;
+    transition: background-color 0.3s cubic; }
     .progress-therm .sec.morph {
-      background-color: #523d5b; }
+      background-color: #be1e2d; }
+      .progress-therm .sec.morph:hover {
+        background-color: #d4081b; }
     .progress-therm .sec.syn {
-      background-color: #4e6087; }
+      background-color: #1fadad; }
+      .progress-therm .sec.syn:hover {
+        background-color: #0bc1c1; }
     .progress-therm .sec.voc {
       background-color: #f5bc78; }
+      .progress-therm .sec.voc:hover {
+        background-color: #ffbd6e; }
     .progress-therm .sec.rem {
-      background-color: #DEDEDE; }
+      background-color: #FEFEFE; }
+      .progress-therm .sec.rem:hover {
+        background-color: lighter(#fefefe, 5%); }
     .progress-therm .sec:hover {
-      opacity: 0.8;
+      -webkix-transition: background-color 0.3s cubic;
+      -moz-transition: background-color 0.3s cubic;
+      -o-transition: background-color 0.3s cubic;
+      -ms-transition: background-color 0.3s cubic;
+      transition: background-color 0.3s cubic;
       cursor: pointer; }
+
+.legend .sec {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  border: 1px solid whitesmoke;
+  margin-right: 5px;
+  margin-left: 10px; }
+  .legend .sec.morph {
+    background-color: #be1e2d; }
+  .legend .sec.syn {
+    background-color: #1fadad; }
+  .legend .sec.voc {
+    background-color: #f5bc78; }
+
+/* Lesson-related styles */
+.feedback-container {
+  padding: 20px; }
+  .feedback-container h2 {
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 0.1em; }
+
+.module-container {
+  background: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  padding: 20px;
+  text-align: center; }
+
+div.module {
+  opacity: 0.3; }
+
+.module {
+  border-radius: 6px;
+  color: #666;
+  text-align: center;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-decoration: none;
+  width: 200px;
+  height: 160px;
+  vertical-align: top;
+  position: relative;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1); }
+  .module:hover {
+    text-decoration: none; }
+  .module h3 {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    color: #333;
+    margin-bottom: 30px; }
+  .module .circle {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #be1e2d;
+    position: relative;
+    top: -10px;
+    margin: 5px; }
+    .module .circle:after {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 26px;
+      width: 0;
+      border: 10px solid transparent;
+      border-top-color: #be1e2d; }
+    .module .circle:before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      width: 0;
+      height: 0;
+      border-bottom: 10px solid #e24755;
+      border-right: 10px solid transparent; }
 
 .work {
   width: 3000px;
@@ -74,13 +191,13 @@
   .work div {
     display: inline-block;
     vertical-align: top;
+    border: 2px solid #FFF;
     /* Colors for types of knowledge of text */ }
     .work div span {
       display: inline-block;
       width: 2px;
       height: 2px;
-      background-color: #EEE;
-      border-bottom: 1px solid white; }
+      background-color: #FFF; }
     .work div span.r {
       background-color: #BE1E2D; }
     .work div span.g {

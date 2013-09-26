@@ -2,12 +2,13 @@
 $color-pri-one: #BE1E2D; 		// Bright red
 $color-pri-two: #1FADAD; 		// Teal
 $color-pri-two-darker: rgba(9, 61, 61, 0.3);
-$color-pri-two-lighter: #69D1D1;
+$color-pri-two-lighter: #56C7C7;
 
 $color-pri-three: #523D5B;		// Purple
 
 $color-sec-one: #931926;		// Deep red
 $color-sec-two: #4E6087;		// Indigo
+$color-sec-two-lighter: #62749C; 
 $color-sec-three: #F05629;	 	// Orange
 $color-sec-four: #F5BC78;		// Yellow
 
@@ -17,8 +18,36 @@ $text-dark-color: #666;
 /* Fonts! */
 $font-family: 'Georgia';
 
+/* Mix-ins */
+// Background-color transition
+@mixin transition($prop, $len, $style) {
+	$trans: $prop $len $style;
+
+	-webkix-transition: $trans;
+	-moz-transition: $trans;
+	-o-transition: $trans;
+	-ms-transition: $trans;
+	transition: $trans;
+}
+@mixin gradient($top-color, $top-percent, $bottom-color, $bottom-percent) {
+	background-image: linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+	background-image: -o-linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+	background-image: -moz-linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+	background-image: -webkit-linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+	background-image: -ms-linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop($top-percent / 100, $top-color),
+		color-stop($bottom-percent / 100, $bottom-color)
+	);
+}
+
 body {
 	//background-image: url(../images/ricepaper_v3.png);	
+	color: #666;
 }
 
 /* Override Bootstrap Styles */
@@ -28,8 +57,10 @@ body {
 
 /* Header */
 .banner {
-	color: $text-light-color; 
-	background-color: $color-pri-two;
+	color: #EEE; 
+	@include gradient($color-pri-two, 0, lighten($color-pri-two, 5%), 100);
+	position: relative;
+	z-index: 1;
 
 	#search-form {
 		margin: 7px 0px;
@@ -40,7 +71,6 @@ body {
 	}
 
 	.user-data {
-		
 		a {
 			display: inline-block;
 			vertical-align: top;
@@ -57,24 +87,27 @@ body {
 
 	a {
 		display: inline-block;
-		text-shadow: -1px -1px 0px $color-pri-two-darker;
+		//text-shadow: -1px -1px 3px $color-pri-two-darker, 1px 1px 3px rgba(255, 255, 255, 0.3);
 		letter-spacing: 0.08em;
 		padding: 20px 10px;
 		cursor: pointer;
 		text-decoration: none;
+		@include transition(background-color, .2s, ease-out);
 
-		&:last-child {
-			border-right: 1px solid $color-pri-two-lighter;
-		}
-		&:first-child {
-			border-left: 1px solid $color-pri-two-lighter;
-		}
+//		&:last-child {
+//			border-right: 1px solid $color-sec-two-lighter;
+//		}
+//		&:first-child {
+//			border-left: 1px solid $color-sec-two-lighter;
+//		}
 		&:hover {
-			background-color: $color-pri-two-lighter;	
+			background-color: lighten($color-pri-two, 5%);	
+			@include transition(background-color, .2s, ease-in);
 		}
 
 		strong {
 			font-size: 18px;
+			font-weight: normal;
 
 			span {
 				margin-right: 5px;
@@ -100,28 +133,184 @@ body {
 /* Visualization Styles */
 .progress-therm {
 	margin-top: 0px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 2px solid whitesmoke;
+	margin-bottom: 20px;
+	height: 20px;
 
 	.sec {
-		height: 10px;
+		height: 16px;
 		display: inline-block;
 		margin-right: -4px;
+		@include transition(background-color, 0.3s, cubic);
 
 		&.morph {
-			background-color: $color-pri-three;
+			background-color: $color-pri-one;
+
+			&:hover {
+				background-color: saturate($color-pri-one, 20%);
+			}
 		}
 		&.syn {
-			background-color: $color-sec-two;
+			background-color: $color-pri-two;
+
+			&:hover {
+				background-color: saturate($color-pri-two, 20%);
+			}
+		}
+		&.voc {
+
+			&:hover {
+				background-color: saturate($color-sec-four, 20%);
+			}
+			background-color: $color-sec-four;
+		}
+		&.rem {
+			background-color: #FEFEFE;
+
+			&:hover {
+				background-color: lighter(#FEFEFE, 5%);
+			}
+		}
+		&:hover {
+			@include transition(background-color, 0.3s, cubic);
+			cursor: pointer;
+		}
+	}
+}
+.legend {
+	.sec {
+		height: 10px;
+		width: 10px;
+		display: inline-block;
+		border: 1px solid whitesmoke;
+		margin-right: 5px;
+		margin-left: 10px;
+
+		&.morph {
+			background-color: $color-pri-one;
+		}
+		&.syn {
+			background-color: $color-pri-two;
 		}
 		&.voc {
 			background-color: $color-sec-four;
 		}
-		&.rem {
-			background-color: #DEDEDE;
+	}
+}
+
+.main {
+	//background-image: url(../images/blur.png);
+	//background-position-y: -500px;
+}
+
+/* Lesson-related styles */
+.feedback-container {
+	padding: 20px;
+
+	h2 {
+		//$shadow: darken($color-pri-two, 20%);
+		color: #333;
+		font-size: 14px;
+		letter-spacing: 0.1em;
+		//text-shadow: 0px 0px 5px rgba(red($shadow), green($shadow), blue($shadow), 0.5); 
+	}
+}
+.module-container {
+	background: rgba(255, 255, 255, 0.7);
+	//border-right: 1px solid #CCC;
+	height: 100%;
+	//box-shadow: 5px 0px 5px 0px rgba(73, 111, 102, 0.2);
+	padding: 20px;
+	text-align: center;
+}
+div.module {
+	opacity: 0.3;
+}
+.module {
+	border-radius: 6px;
+	color: #666;
+	text-align: center;
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+
+	text-decoration: none;
+	width: 200px;
+	height: 160px;
+	vertical-align: top;
+	position: relative;
+	box-shadow:	0px 0px 4px 0px rgba(0, 0, 0, .1);
+				//0px 0px 1px 1px darken(#DDD, 2%) inset;
+				//1px 1px 0px 0px #8BCECB inset;
+
+	&:hover {
+		text-decoration: none;
+		//@include gradient(lighten($color-pri-two, 5%), 100, $color-pri-two, 30);
+	}	
+
+	h3 {
+		font-size: 14px;
+		font-weight: normal;
+		letter-spacing: 0.1em;
+		color: #333;
+		margin-bottom: 30px;
+	}
+
+	.circle {
+
+		$circle-color: $color-pri-one;
+
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-bottom-color: $circle-color;
+		position: relative;
+		top: -10px;
+		margin: 5px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: -10px;
+			top: 26px;
+			width: 0;
+			border: 10px solid transparent;
+			border-top-color: $circle-color;
 		}
-		&:hover {
-			opacity: 0.8;
-			cursor: pointer;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 16px;
+			width: 0;
+			height: 0;
+			border-bottom: 10px solid lighten($circle-color, 15%);
+			border-right: 10px solid transparent; 
 		}
+
+//		display: inline-block;
+//		height: 15px;
+//		width: 15px;
+//		margin: 0px 2px;
+//		border-radius: 20px;
+//		border: 2px solid $circle-color;
+//		opacity: 0.7;
+//
+//		&:hover {
+//			opacity: 1;
+//		}
+//
+//		&.complete {
+//			background-color: $circle-color;
+//			opacity: 1;
+//		}
+//		&.current {
+//			border-color: $circle-color;
+//			border-width: 3px;
+//			opacity: 1; 
+//		}
 	}
 }
 
@@ -132,13 +321,13 @@ body {
 	div {
 		display: inline-block;
 		vertical-align: top;
+		border: 2px solid #FFF;
 
 		span {
 			display: inline-block;
 			width: 2px;
 			height: 2px;
-			background-color: #EEE;
-			border-bottom: 1px solid white;
+			background-color: #FFF;
 		}
 
 		/* Colors for types of knowledge of text */ 
