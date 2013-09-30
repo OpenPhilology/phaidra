@@ -49,10 +49,19 @@ body {
 	//background-image: url(../images/ricepaper_v3.png);	
 	color: #666;
 }
+a {
+	color: $color-pri-two;
+}
 
 /* Override Bootstrap Styles */
 .container {
 	max-width: none !important;
+}
+.progress {
+	
+}
+.progress-bar {
+	background-color: $color-pri-two;
 }
 
 /* Header */
@@ -311,6 +320,52 @@ div.module {
 //			border-width: 3px;
 //			opacity: 1; 
 //		}
+	}
+}
+
+.lesson-container {
+
+}
+.slide {
+
+	padding: 40px;
+	border-radius: 3px;
+	background-color: #EFEFEF;
+	min-height: 300px;
+
+	h3 {
+		
+	}
+	
+	ul.answers {
+		display: block;
+		text-align: center;
+		margin: {
+			top: 30px;
+		}
+
+		&.short-multi {
+			li {
+				list-style: none;
+				display: inline-block;
+				margin: 10px;
+				font-size: 18px;
+			}
+			a {
+				padding: 10px 30px;
+				background-color: $color-sec-two;
+				color: #FFF;
+				text-decoration: none;
+				border-radius: 3px;
+				@include transition(background-color, .2s, ease-out);
+
+				&:hover {
+					background-color: saturate($color-sec-two, 20%);
+					@include transition(background-color, .2s, ease-out);
+				}
+			}
+		}
+
 	}
 }
 

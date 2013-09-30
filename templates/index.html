@@ -1,84 +1,6 @@
-<html>
-<head>
-	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>
-		Historical Languages eLearning - by Open Philology Project
-	</title>
+{% extends "base.html" %}
 
-	<!-- CSS -->
-	<link href="./static/bootstrap/css/bootstrap.css" rel="stylesheet">
-	<link href="./static/css/phaidra.css" rel="stylesheet">
-
-	<!-- JS -->
-	<script src="./static/js/lib/jquery-2.0.3.min.js"></script>
-	<script src="./static/bootstrap/js/bootstrap.js"></script>
-	<script src="./static/js/lib/json2.js"></script>
-	<script src="./static/js/lib/underscore-min.js"></script>
-	<script src="./static/js/lib/backbone.js"></script>
-	<script src="./static/js/base.js"></script>
-	<script src="./static/js/views/viz-work.js"></script>
-	<script src="./static/js/router.js"></script>
-
-</head>
-<body>
-
-<div class="container">
-	<header class="row banner">
-		<div class="col-md-2">
-			logo
-		</div>
-		<div class="col-md-7">
-			<nav class="row navigation">
-				<a class="col-sm-4 progress-book">
-					<strong>
-						<span class="glyphicon glyphicon-book"></span>
-						22% 
-					</strong>
-					<small>
-						Thucydides
-					</small>
-				</a>
-				<a class="col-sm-4 progress-voc">
-					<strong>
-						<span class="glyphicon glyphicon-inbox"></span>
-						300 
-					</strong>
-					<small>
-						words learned
-					</small>
-				</a>
-				<a class="col-sm-4 progress-lessons">
-					<strong>
-						<span class="glyphicon glyphicon-list"></span>
-						3
-					</strong>
-					<small>
-						lessons completed
-					</small>
-				</a>
-			</nav>
-		</div>
-		<div class="col-md-3">
-			<form role="form" id="search-form">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
-				</div>
-			</form>
-
-			<div class="user-data">
-				<div class="img-thumbnail" style="height: 25px; width: 25px"></div>
-				<a href="#">Username</a>
-			</div>
-		</div>
-	</header>
-
-
-	<!-- Lesson list (will become its own template)  -->
-
-
-	<div class="row main">
+	{% block content %}
 		
 		<div class="col-md-5 col-md-push-7 feedback-container">
 
@@ -117,7 +39,7 @@
 		</div>
 		<div class="col-md-7 col-md-pull-5 module-container">
 
-			<a class="module" href="#">
+			<a class="module" href="/module">
 				<h3>The Greek Alphabet</h3>
 	
 				<div style="background-color: #74C082; color: white; display: inline-block; border-radius: 15px; padding: 7px;"><span class="glyphicon glyphicon-ok" style="position: relative; top: -1px"></span></div>
@@ -172,8 +94,4 @@
 		</div>
 	</div>
 
-
-</div>
-
-</body>
-</html>
+{% endblock %}

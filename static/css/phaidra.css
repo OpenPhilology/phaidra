@@ -4,9 +4,15 @@
 body {
   color: #666; }
 
+a {
+  color: #1fadad; }
+
 /* Override Bootstrap Styles */
 .container {
   max-width: none !important; }
+
+.progress-bar {
+  background-color: #1fadad; }
 
 /* Header */
 .banner {
@@ -184,6 +190,39 @@ div.module {
       height: 0;
       border-bottom: 10px solid #e24755;
       border-right: 10px solid transparent; }
+
+.slide {
+  padding: 40px;
+  border-radius: 3px;
+  background-color: #EFEFEF;
+  min-height: 300px; }
+  .slide ul.answers {
+    display: block;
+    text-align: center;
+    margin-top: 30px; }
+    .slide ul.answers.short-multi li {
+      list-style: none;
+      display: inline-block;
+      margin: 10px;
+      font-size: 18px; }
+    .slide ul.answers.short-multi a {
+      padding: 10px 30px;
+      background-color: #4e6087;
+      color: #FFF;
+      text-decoration: none;
+      border-radius: 3px;
+      -webkix-transition: background-color 0.2s ease-out;
+      -moz-transition: background-color 0.2s ease-out;
+      -o-transition: background-color 0.2s ease-out;
+      -ms-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out; }
+      .slide ul.answers.short-multi a:hover {
+        background-color: #39589c;
+        -webkix-transition: background-color 0.2s ease-out;
+        -moz-transition: background-color 0.2s ease-out;
+        -o-transition: background-color 0.2s ease-out;
+        -ms-transition: background-color 0.2s ease-out;
+        transition: background-color 0.2s ease-out; }
 
 .work {
   width: 3000px;

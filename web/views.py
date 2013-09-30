@@ -18,3 +18,12 @@ def index(request):
 	})
 
 	return HttpResponse(template.render(context))
+
+def module(request):
+	template = loader.get_template('module.html')
+	context = RequestContext(request, {
+		'title' : 'Learn the Greek Alphabet',
+		'content' : ''
+	})
+
+	return HttpResponse(template.render(context))
