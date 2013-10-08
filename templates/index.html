@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+	{# Determine which navigation element is 'active'  #}
+	{% block nav %}
+		{% with 'active' as lessons_active %}
+			{{ block.super }}
+		{% endwith %}
+	{% endblock %}
+
 	{% block content %}
 		
 		<div class="col-md-5 col-md-push-7 feedback-container">
@@ -39,57 +46,120 @@
 		</div>
 		<div class="col-md-7 col-md-pull-5 module-container">
 
-			<a class="module" href="/module">
-				<h3>The Greek Alphabet</h3>
-	
-				<div style="background-color: #74C082; color: white; display: inline-block; border-radius: 15px; padding: 7px;"><span class="glyphicon glyphicon-ok" style="position: relative; top: -1px"></span></div>
+			<a class="module basics" href="/module">
+				<!--<span class="practice-module glyphicon glyphicon-flash" title="Practice"></span>-->
 
-				<!--<div class="module-progress">
-					<span class="circle complete" title="Lowercase Letters"></span>
-					<span class="circle current" title="Uppercase Letters"></span>
-					<span class="circle" title="Dipthongs"></span>
-				</div>-->
+				<div>
+					<h3>The Greek Alphabet</h3>
+					<span class="circle complete" title="Lowercase"></span>
+					<span class="circle complete" title="Uppercase"></span>
+				</div>
 			</a>
 
 			<!-- Modules a user cannot yet access should not be links -->
-			<a href="#" class="module">
-				<h3>Greek Diacritics</h3>
-				<div style="background-color: #74C082; color: white; display: inline-block; border-radius: 15px; padding: 7px;"><span class="glyphicon glyphicon-ok" style="position: relative; top: -1px"></span></div>
+			<a href="#" class="module basics">
+				<div>
+					<h3>Greek Diacritics</h3>
+					<span class="circle complete" title="Breathings"></span>
+					<span class="circle complete" title="Syllables"></span>
+					<span class="circle complete" title="Elision"></span>
+					<span class="circle complete" title="Accent"></span>
+					<span class="circle complete" title="Punctuation"></span>
+				</div>
 			</a>
-			<a href="#" class="module">
-				<h3>Introduction to Nouns</h3>
-				<div style="background-color: #74C082; color: white; display: inline-block; border-radius: 15px; padding: 7px;"><span class="glyphicon glyphicon-ok" style="position: relative; top: -1px"></span></div>
+			<a href="#" class="module nouns">
+				<div>
+					<h3>Introduction to Nouns</h3>
+					<span class="circle complete" title="Greek Cases"></span>
+					<span class="circle complete" title="Number"></span>
+					<span class="circle complete" title="Gender"></span>
+					<span class="circle complete" title="Declensions"></span>
+					<span class="circle complete" title="Alpha Declension"></span>
+				</div>
 			</a>
-			<a href="#" class="module">
-				<h3>α-Declension<br>(Feminines in -η)</h3>
-				<div style="background-color: #333; color: white; display: inline-block; border-radius: 15px; padding: 7px;"><span class="glyphicon glyphicon-play" style="position: relative; top: -1px"></span></div>
+			<a href="#" class="module nouns">
+				<div>
+					<h3><span class="greek-text">α</span>-Declension<br>(Feminines in -<span class="greek-text">η</span>)</h3>
+					<span class="circle complete" title="Introduction"></span>
+					<span class="circle" title="Introduction"></span>
+				</div>
 			</a>
 			<div class="module">
-				<h3>Introduction to Verbs</h3>
+				<div>
+					<h3>Introduction to Verbs</h3>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
 			</div>
 			<div class="module">
-				<h3>α-Declension<br>(Feminines in -α)</h3>
+				<div>
+					<h3><span class="greek-text">α</span>-Declension<br>(Feminines in -<span class="greek-text">α</span>)</h3>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
 			</div>
 			<div class="module">
-				<h3>Imperfect Activate Indicative</h3>
+				<div>
+					<h3>Imperfect Activate Indicative</h3>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
 			</div>
 			<div class="module">
-				<h3>O-Declension Nouns (Pt. I)</h3>
+				<div>
+					<h3>O-Declension Nouns (Pt. I)</h3>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
 			</div>
 			<div class="module">
-				<h3>O-Declension Nouns (Pt. II)</h3>
+				<div>
+					<h3>O-Declension Nouns (Pt. II)</h3>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
 			</div>
 			<div class="module">
-				<h3>Future and First Aorist Indicative Active</h3>
+				<div>
+					<h3>Future and First Aorist Indicative Active</h3>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
 			</div>
 			<div class="module">
-				<h3>The Art of Reading</h3>
+				<div>
+					<h3>The Art of Reading</h3>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
 			</div>
 			<div class="module">
-				<h3>Adjectives of the Vowel Declension</h3>
+				<div>
+					<h3>Adjectives of the Vowel Declension</h3>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
 			</div>
 			<div class="module">
-				<h3>Analysis of the Primary Tenses of the Indicative Active</h3>
+				<div>
+					<h3>Analysis of the Primary Tenses of the Indicative Active</h3>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
 			</div>
 		</div>
 	</div>

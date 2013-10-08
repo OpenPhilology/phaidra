@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+	{# Determine which navigation element is 'active'  #}
+	{% block nav %}
+		{% with 'active' as vocab_active %}
+			{{ block.super }}
+		{% endwith %}
+	{% endblock %}
+
+	{% block content %}
+
+	
+	{% endblock %}

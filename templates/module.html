@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+{# Determine which navigation element is 'active'  #}
+{% block nav %}
+	{% with 'active' as lessons_active %}
+		{{ block.super }}
+	{% endwith %}
+{% endblock %}
+
 {% block content %}
 
 	<div class="col-md-2">
@@ -17,13 +24,45 @@
 
 		<div class="slide">
 
-			<h3>What is the lowercase form of Omega (&Omega;)?</h3>
+			<h3>Multiple Choice Question</h3>
 
-			<ul class="answers short-multi">
+			<ul class="answers short-multi greek-text">
 				<li><a href="#">&omega;</a></li>
 				<li><a href="#">&upsilon;</a></li>
 				<li><a href="#">&omicron;</a></li>
 				<li><a href="#">&alpha;</a></li>
+			</ul>
+
+		</div>
+
+		<hr>
+
+		<div class="slide">
+
+			<h3>Multi-choice Composition</h3>
+			<p>What is the nominative, singular form for"The Fine Tent"?</p>
+
+			<div class="workspace">
+				
+			</div>
+
+			<ul class="answers short-multi greek-text">
+				<li><a href="#">ἡ</a></li>
+				<li><a href="#">τῇ</a></li>
+				<li><a href="#">τῶν</a></li>
+				<li><a href="#">ταῖς</a></li>
+			</ul>
+			<ul class="answers short-multi greek-text">
+				<li><a href="#">καλῆς</a></li>
+				<li><a href="#">καλαὶ</a></li>
+				<li><a href="#">καλὰς</a></li>
+				<li><a href="#">καλὴν</a></li>
+			</ul>
+			<ul class="answers short-multi greek-text">
+				<li><a href="#">σκηνά</a></li>
+				<li><a href="#">σκηνή</a></li>
+				<li><a href="#">σκηνῶν</a></li>
+				<li><a href="#">σκηνάς</a></li>
 			</ul>
 
 		</div>

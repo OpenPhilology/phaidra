@@ -2,7 +2,8 @@
 /* Fonts! */
 /* Mix-ins */
 body {
-  color: #666; }
+  color: #666;
+  font-family: 'Myriad Pro'; }
 
 a {
   color: #1fadad; }
@@ -17,12 +18,7 @@ a {
 /* Header */
 .banner {
   color: #EEE;
-  background-image: linear-gradient(bottom, #1fadad 0, #23c3c3 100);
-  background-image: -o-linear-gradient(bottom, #1fadad 0, #23c3c3 100);
-  background-image: -moz-linear-gradient(bottom, #1fadad 0, #23c3c3 100);
-  background-image: -webkit-linear-gradient(bottom, #1fadad 0, #23c3c3 100);
-  background-image: -ms-linear-gradient(bottom, #1fadad 0, #23c3c3 100);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1fadad), color-stop(1, #23c3c3));
+  background-color: #4e6087;
   position: relative;
   z-index: 1; }
   .banner #search-form {
@@ -51,7 +47,14 @@ a {
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .navigation a:hover {
-      background-color: #23c3c3;
+      background-color: #576b97;
+      -webkix-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in; }
+    .navigation a.active {
+      background-color: #6378a5;
       -webkix-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
@@ -90,19 +93,34 @@ a {
     -ms-transition: background-color 0.3s cubic;
     transition: background-color 0.3s cubic; }
     .progress-therm .sec.morph {
-      background-color: #be1e2d; }
+      background-color: #4e6087; }
       .progress-therm .sec.morph:hover {
-        background-color: #d4081b; }
+        background-color: #576b97;
+        -webkix-transition: background-color 0.3s cubic;
+        -moz-transition: background-color 0.3s cubic;
+        -o-transition: background-color 0.3s cubic;
+        -ms-transition: background-color 0.3s cubic;
+        transition: background-color 0.3s cubic; }
     .progress-therm .sec.syn {
       background-color: #1fadad; }
       .progress-therm .sec.syn:hover {
-        background-color: #0bc1c1; }
+        background-color: #23c3c3;
+        -webkix-transition: background-color 0.3s cubic;
+        -moz-transition: background-color 0.3s cubic;
+        -o-transition: background-color 0.3s cubic;
+        -ms-transition: background-color 0.3s cubic;
+        transition: background-color 0.3s cubic; }
     .progress-therm .sec.voc {
       background-color: #f5bc78; }
       .progress-therm .sec.voc:hover {
-        background-color: #ffbd6e; }
+        background-color: #f7c890;
+        -webkix-transition: background-color 0.3s cubic;
+        -moz-transition: background-color 0.3s cubic;
+        -o-transition: background-color 0.3s cubic;
+        -ms-transition: background-color 0.3s cubic;
+        transition: background-color 0.3s cubic; }
     .progress-therm .sec.rem {
-      background-color: #FEFEFE; }
+      background-color: #EEE; }
       .progress-therm .sec.rem:hover {
         background-color: lighter(#fefefe, 5%); }
     .progress-therm .sec:hover {
@@ -121,7 +139,7 @@ a {
   margin-right: 5px;
   margin-left: 10px; }
   .legend .sec.morph {
-    background-color: #be1e2d; }
+    background-color: #4e6087; }
   .legend .sec.syn {
     background-color: #1fadad; }
   .legend .sec.voc {
@@ -142,10 +160,10 @@ a {
   text-align: center; }
 
 div.module {
-  opacity: 0.3; }
+  background-color: #C3E3E4; }
 
 .module {
-  border-radius: 6px;
+  border-radius: 3px;
   color: #666;
   text-align: center;
   display: inline-block;
@@ -153,49 +171,59 @@ div.module {
   margin-bottom: 20px;
   padding: 20px;
   text-decoration: none;
-  width: 200px;
-  height: 160px;
+  width: 160px;
+  height: 100px;
   vertical-align: top;
   position: relative;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1); }
   .module:hover {
     text-decoration: none; }
+  .module .practice-module {
+    float: right;
+    margin-top: -18px;
+    margin-right: -16px;
+    margin-left: 5px;
+    color: #F5BC78;
+    background-color: #FFF;
+    padding: 3px 3px 4px 3px;
+    border-radius: 12px; }
+  .module.nouns {
+    background-color: #49A556; }
+  .module.basics {
+    background-color: #A3D55F; }
   .module h3 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     letter-spacing: 0.1em;
-    color: #333;
-    margin-bottom: 30px; }
+    color: #FFF;
+    font-family: 'Helvetica';
+    margin-left: 10px;
+    margin-right: 10px; }
+  .module div {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    margin-left: -20px;
+    margin-right: -20px; }
   .module .circle {
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-bottom-color: #be1e2d;
-    position: relative;
-    top: -10px;
-    margin: 5px; }
-    .module .circle:after {
-      content: '';
-      position: absolute;
-      left: -10px;
-      top: 26px;
-      width: 0;
-      border: 10px solid transparent;
-      border-top-color: #be1e2d; }
-    .module .circle:before {
-      content: '';
-      position: absolute;
-      top: 16px;
-      width: 0;
-      height: 0;
-      border-bottom: 10px solid #e24755;
-      border-right: 10px solid transparent; }
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 2px; }
+    .module .circle.complete {
+      background-color: white; }
 
 .slide {
   padding: 40px;
   border-radius: 3px;
   background-color: #EFEFEF;
   min-height: 300px; }
+  .slide .workspace {
+    height: 50px;
+    border-bottom: 1px dashed #999; }
   .slide ul.answers {
     display: block;
     text-align: center;
@@ -203,8 +231,8 @@ div.module {
     .slide ul.answers.short-multi li {
       list-style: none;
       display: inline-block;
-      margin: 10px;
-      font-size: 18px; }
+      margin: 5px;
+      font-size: 28px; }
     .slide ul.answers.short-multi a {
       padding: 10px 30px;
       background-color: #4e6087;
@@ -217,12 +245,16 @@ div.module {
       -ms-transition: background-color 0.2s ease-out;
       transition: background-color 0.2s ease-out; }
       .slide ul.answers.short-multi a:hover {
-        background-color: #39589c;
+        background-color: #1fadad;
         -webkix-transition: background-color 0.2s ease-out;
         -moz-transition: background-color 0.2s ease-out;
         -o-transition: background-color 0.2s ease-out;
         -ms-transition: background-color 0.2s ease-out;
         transition: background-color 0.2s ease-out; }
+
+.greek-text {
+  font-family: 'Garamond';
+  font-size: 1.3em; }
 
 .work {
   width: 3000px;

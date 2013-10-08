@@ -46,8 +46,8 @@ $font-family: 'Georgia';
 }
 
 body {
-	//background-image: url(../images/ricepaper_v3.png);	
 	color: #666;
+	font-family: 'Myriad Pro';
 }
 a {
 	color: $color-pri-two;
@@ -67,7 +67,8 @@ a {
 /* Header */
 .banner {
 	color: #EEE; 
-	@include gradient($color-pri-two, 0, lighten($color-pri-two, 5%), 100);
+	//@include gradient($color-pri-two, 0, lighten($color-pri-two, 5%), 100);
+	background-color: $color-sec-two;
 	position: relative;
 	z-index: 1;
 
@@ -89,28 +90,24 @@ a {
 			letter-spacing: 0.08em;
 		}
 	}
-
 }
 .navigation {
 	text-align: center;
 
 	a {
 		display: inline-block;
-		//text-shadow: -1px -1px 3px $color-pri-two-darker, 1px 1px 3px rgba(255, 255, 255, 0.3);
 		letter-spacing: 0.08em;
 		padding: 20px 10px;
 		cursor: pointer;
 		text-decoration: none;
 		@include transition(background-color, .2s, ease-out);
 
-//		&:last-child {
-//			border-right: 1px solid $color-sec-two-lighter;
-//		}
-//		&:first-child {
-//			border-left: 1px solid $color-sec-two-lighter;
-//		}
 		&:hover {
-			background-color: lighten($color-pri-two, 5%);	
+			background-color: lighten($color-sec-two, 5%);	
+			@include transition(background-color, .2s, ease-in);
+		}
+		&.active {
+			background-color: lighten($color-sec-two, 10%);	
 			@include transition(background-color, .2s, ease-in);
 		}
 
@@ -155,28 +152,31 @@ a {
 		@include transition(background-color, 0.3s, cubic);
 
 		&.morph {
-			background-color: $color-pri-one;
+			background-color: $color-sec-two;
 
 			&:hover {
-				background-color: saturate($color-pri-one, 20%);
+				background-color: lighten($color-sec-two, 5%);
+				@include transition(background-color, 0.3s, cubic);
 			}
 		}
 		&.syn {
 			background-color: $color-pri-two;
 
 			&:hover {
-				background-color: saturate($color-pri-two, 20%);
+				background-color: lighten($color-pri-two, 5%);
+				@include transition(background-color, 0.3s, cubic);
 			}
 		}
 		&.voc {
 
-			&:hover {
-				background-color: saturate($color-sec-four, 20%);
-			}
 			background-color: $color-sec-four;
+			&:hover {
+				background-color: lighten($color-sec-four, 5%);
+				@include transition(background-color, 0.3s, cubic);
+			}
 		}
 		&.rem {
-			background-color: #FEFEFE;
+			background-color: #EEE;
 
 			&:hover {
 				background-color: lighter(#FEFEFE, 5%);
@@ -198,7 +198,7 @@ a {
 		margin-left: 10px;
 
 		&.morph {
-			background-color: $color-pri-one;
+			background-color: $color-sec-two;
 		}
 		&.syn {
 			background-color: $color-pri-two;
@@ -210,8 +210,6 @@ a {
 }
 
 .main {
-	//background-image: url(../images/blur.png);
-	//background-position-y: -500px;
 }
 
 /* Lesson-related styles */
@@ -219,26 +217,22 @@ a {
 	padding: 20px;
 
 	h2 {
-		//$shadow: darken($color-pri-two, 20%);
 		color: #333;
 		font-size: 14px;
 		letter-spacing: 0.1em;
-		//text-shadow: 0px 0px 5px rgba(red($shadow), green($shadow), blue($shadow), 0.5); 
 	}
 }
 .module-container {
 	background: rgba(255, 255, 255, 0.7);
-	//border-right: 1px solid #CCC;
 	height: 100%;
-	//box-shadow: 5px 0px 5px 0px rgba(73, 111, 102, 0.2);
 	padding: 20px;
 	text-align: center;
 }
 div.module {
-	opacity: 0.3;
+	background-color: #C3E3E4;
 }
 .module {
-	border-radius: 6px;
+	border-radius: 3px;
 	color: #666;
 	text-align: center;
 	display: inline-block;
@@ -247,79 +241,69 @@ div.module {
 	padding: 20px;
 
 	text-decoration: none;
-	width: 200px;
-	height: 160px;
+	width: 160px;
+	height: 100px;
 	vertical-align: top;
 	position: relative;
 	box-shadow:	0px 0px 4px 0px rgba(0, 0, 0, .1);
-				//0px 0px 1px 1px darken(#DDD, 2%) inset;
-				//1px 1px 0px 0px #8BCECB inset;
 
 	&:hover {
 		text-decoration: none;
-		//@include gradient(lighten($color-pri-two, 5%), 100, $color-pri-two, 30);
 	}	
 
+	// Styles the practice lightning bolt
+	.practice-module {
+		float: right;
+		margin-top: -18px;
+		margin-right: -16px;
+		margin-left: 5px;
+		color: #F5BC78;
+		background-color: #FFF;
+		padding: 3px 3px 4px 3px;
+		border-radius: 12px;
+	}
+
+	// Different types of modules
+	&.nouns {
+		background-color: #49A556;
+	}
+	&.basics {
+		background-color: #A3D55F;
+	}
+
 	h3 {
-		font-size: 14px;
+		font-size: 12px;
 		font-weight: normal;
 		letter-spacing: 0.1em;
-		color: #333;
-		margin-bottom: 30px;
+		color: #FFF;
+		font-family: 'Helvetica';
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	div {
+		position: absolute;
+		bottom: 10px;
+		text-align: center;
+		width: 100%;
+		margin-left: -20px;
+		margin-right: -20px;
 	}
 
 	.circle {
 
-		$circle-color: $color-pri-one;
+		$circle-color: #FFF;
 
-		width: 0;
-		height: 0;
-		border: 10px solid transparent;
-		border-bottom-color: $circle-color;
-		position: relative;
-		top: -10px;
-		margin: 5px;
+		display: inline-block;
+		width: 13px;
+		height: 13px;
+		border: 2px solid $circle-color;
+		border-radius: 10px;
+		margin: 2px;
 
-		&:after {
-			content: '';
-			position: absolute;
-			left: -10px;
-			top: 26px;
-			width: 0;
-			border: 10px solid transparent;
-			border-top-color: $circle-color;
+		&.complete {
+			background-color: $circle-color;
 		}
-		&:before {
-			content: '';
-			position: absolute;
-			top: 16px;
-			width: 0;
-			height: 0;
-			border-bottom: 10px solid lighten($circle-color, 15%);
-			border-right: 10px solid transparent; 
-		}
-
-//		display: inline-block;
-//		height: 15px;
-//		width: 15px;
-//		margin: 0px 2px;
-//		border-radius: 20px;
-//		border: 2px solid $circle-color;
-//		opacity: 0.7;
-//
-//		&:hover {
-//			opacity: 1;
-//		}
-//
-//		&.complete {
-//			background-color: $circle-color;
-//			opacity: 1;
-//		}
-//		&.current {
-//			border-color: $circle-color;
-//			border-width: 3px;
-//			opacity: 1; 
-//		}
 	}
 }
 
@@ -332,6 +316,11 @@ div.module {
 	border-radius: 3px;
 	background-color: #EFEFEF;
 	min-height: 300px;
+
+	.workspace {
+		height: 50px;
+		border-bottom: 1px dashed #999;
+	}
 
 	h3 {
 		
@@ -348,8 +337,8 @@ div.module {
 			li {
 				list-style: none;
 				display: inline-block;
-				margin: 10px;
-				font-size: 18px;
+				margin: 5px;
+				font-size: 28px;
 			}
 			a {
 				padding: 10px 30px;
@@ -360,13 +349,18 @@ div.module {
 				@include transition(background-color, .2s, ease-out);
 
 				&:hover {
-					background-color: saturate($color-sec-two, 20%);
+					background-color: $color-pri-two;
 					@include transition(background-color, .2s, ease-out);
 				}
 			}
 		}
 
 	}
+}
+
+.greek-text {
+	font-family: 'Garamond';
+	font-size: 1.3em;
 }
 
 .work {

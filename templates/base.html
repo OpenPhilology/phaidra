@@ -30,35 +30,38 @@
 			logo
 		</div>
 		<div class="col-md-7">
-			<nav class="row navigation">
-				<a class="col-sm-4 progress-book">
-					<strong>
-						<span class="glyphicon glyphicon-book"></span>
-						22% 
-					</strong>
-					<small>
-						Thucydides
-					</small>
-				</a>
-				<a class="col-sm-4 progress-voc">
-					<strong>
-						<span class="glyphicon glyphicon-inbox"></span>
-						300 
-					</strong>
-					<small>
-						words learned
-					</small>
-				</a>
-				<a class="col-sm-4 progress-lessons">
-					<strong>
-						<span class="glyphicon glyphicon-list"></span>
-						3
-					</strong>
-					<small>
-						lessons completed
-					</small>
-				</a>
-			</nav>
+
+			{% block nav %}
+				<nav class="row navigation">
+					<a class="col-sm-4 progress-lessons {{ lessons_active }}" href="/">
+						<strong>
+							<span class="glyphicon glyphicon-list"></span>
+							3
+						</strong>
+						<small>
+							lessons completed
+						</small>
+					</a>
+					<a class="col-sm-4 progress-voc {{ vocab_active }}" href="/vocab">
+						<strong>
+							<span class="glyphicon glyphicon-inbox"></span>
+							300 
+						</strong>
+						<small>
+							words learned
+						</small>
+					</a>
+					<a class="col-sm-4 progress-book {{ viz_active }}" href="/viz">
+						<strong>
+							<span class="glyphicon glyphicon-book"></span>
+							22% 
+						</strong>
+						<small>
+							Thucydides
+						</small>
+					</a>
+				</nav>
+			{% endblock %}
 		</div>
 		<div class="col-md-3">
 			<form role="form" id="search-form">

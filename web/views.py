@@ -19,6 +19,33 @@ def index(request):
 
 	return HttpResponse(template.render(context))
 
+def viz(request):
+	template = loader.get_template('viz.html')
+	context = RequestContext(request, {
+		'title' : 'Learn the Greek Alphabet',
+		'content' : ''
+	})
+
+	return HttpResponse(template.render(context))
+
+def profile(request):
+	template = loader.get_template('profile.html')
+	context = RequestContext(request, {
+		'title' : 'Learn the Greek Alphabet',
+		'content' : ''
+	})
+
+	return HttpResponse(template.render(context))
+
+def vocab(request):
+	template = loader.get_template('vocab.html')
+	context = RequestContext(request, {
+		'title' : 'Learn the Greek Alphabet',
+		'content' : ''
+	})
+
+	return HttpResponse(template.render(context))
+
 def module(request):
 	template = loader.get_template('module.html')
 	context = RequestContext(request, {
