@@ -2,3 +2,4 @@ env/*
 logs/*
 *.pyc
 *.sass-cache/*
+*/.sass-cache/*

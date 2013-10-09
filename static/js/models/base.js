@@ -1,6 +1,6 @@
 Phaidra.Models.Base = Backbone.Model.extend({
 	defaults: {
-		'modelName': 'base'
+		'modelName': 'base',
 		'urlRoot': '/api/'
 	},
 	url: function() {

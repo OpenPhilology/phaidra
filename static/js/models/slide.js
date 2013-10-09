@@ -35,3 +35,4 @@ Phaidra.Models.Slide = Phaidra.Models.Base.extend({
 		);
 	}
 });
+_.extend(Phaidra.Models.Slide.defaults, Phaidra.Models.Base.defaults);

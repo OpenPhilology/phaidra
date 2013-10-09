@@ -57,12 +57,7 @@ a {
 .container {
 	max-width: none !important;
 }
-.progress {
-	
-}
-.progress-bar {
-	background-color: $color-pri-two;
-}
+
 
 /* Header */
 .banner {
@@ -222,6 +217,45 @@ a {
 		letter-spacing: 0.1em;
 	}
 }
+.lesson-progress {
+	margin-bottom: 15px;
+
+	.bar {
+		$c: #DDD;
+
+		display: inline-block;
+		height: 15px;
+		@include gradient(#FFF, 0, #EEE, 100);
+
+		border: {
+			top: 1px solid $c;
+			bottom: 1px solid $c;
+			left: 1px solid $c;
+		}
+
+		&:first-child {
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		&:last-child {
+			border-right: 1px solid $c;
+			border-bottom-right-radius: 3px;
+			border-top-right-radius: 3px;
+		}
+
+		&.complete {
+			$b: $color-sec-four;
+
+			box-shadow: 1px 1px 0px lighten($b, 20%) inset;
+			@include gradient($b, 0, lighten($b, 10%), 100);
+			border-color: darken($b, 10%);
+
+			&:last-of-type {
+				border-right: 1px solid;
+			}
+		}
+	}
+}
 .module-container {
 	background: rgba(255, 255, 255, 0.7);
 	height: 100%;
@@ -322,45 +356,72 @@ div.module {
 		border-bottom: 1px dashed #999;
 	}
 
-	h3 {
-		
-	}
-	
-	ul.answers {
+	ul {
 		display: block;
+		padding-left: 0;
 		text-align: center;
-		margin: {
-			top: 30px;
-		}
+		margin-bottom: 0;
 
 		&.short-multi {
+
+
 			li {
 				list-style: none;
 				display: inline-block;
-				margin: 5px;
-				font-size: 28px;
+				font-size: 16px;
+				line-height: 36px;
+				margin: 2px;
 			}
 			a {
-				padding: 10px 30px;
-				background-color: $color-sec-two;
-				color: #FFF;
+				padding: 5px 20px;
+				color: #666;
 				text-decoration: none;
 				border-radius: 3px;
-				@include transition(background-color, .2s, ease-out);
 
-				&:hover {
-					background-color: $color-pri-two;
+			}
+			&.options {
+				a {
+					$color: #EEE;
+
+					border: 1px solid darken($color, 5%);
 					@include transition(background-color, .2s, ease-out);
+					@include gradient($color, 20, lighten($color, 7%), 100);
+
+					&:hover {
+						@include gradient($color-pri-two, 20, lighten($color-pri-two, 7%), 100);
+						border-color: darken($color-pri-two, 5%);
+						color: #FFF;
+					}
+				}
+			}
+			&.answers {
+				a {
+					$color: $color-pri-two;
+
+					border: 1px solid darken($color, 5%);
+					@include transition(background-color, .2s, ease-out);
+					@include gradient($color, 20, lighten($color, 7%), 100);
+					color: #FFF;
+
+					&:hover {
+						@include gradient($color-pri-one, 20, lighten($color-pri-one, 7%), 100);
+						border-color: darken($color-pri-one, 5%);
+					}
 				}
 			}
 		}
-
+		&.inline {
+			display: inline;
+			margin-right: 20px;
+			margin-bottom: 20px;
+		}
 	}
 }
 
 .greek-text {
-	font-family: 'Garamond';
+	font-family: 'Times New Romans';
 	font-size: 1.3em;
+	letter-spacing: 0.1em;
 }
 
 .work {

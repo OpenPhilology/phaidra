@@ -12,9 +12,6 @@ a {
 .container {
   max-width: none !important; }
 
-.progress-bar {
-  background-color: #1fadad; }
-
 /* Header */
 .banner {
   color: #EEE;
@@ -153,6 +150,39 @@ a {
     font-size: 14px;
     letter-spacing: 0.1em; }
 
+.lesson-progress {
+  margin-bottom: 15px; }
+  .lesson-progress .bar {
+    display: inline-block;
+    height: 15px;
+    background-image: linear-gradient(bottom, white 0, #eeeeee 100);
+    background-image: -o-linear-gradient(bottom, white 0, #eeeeee 100);
+    background-image: -moz-linear-gradient(bottom, white 0, #eeeeee 100);
+    background-image: -webkit-linear-gradient(bottom, white 0, #eeeeee 100);
+    background-image: -ms-linear-gradient(bottom, white 0, #eeeeee 100);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #eeeeee));
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid #dddddd; }
+    .lesson-progress .bar:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px; }
+    .lesson-progress .bar:last-child {
+      border-right: 1px solid #dddddd;
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px; }
+    .lesson-progress .bar.complete {
+      box-shadow: 1px 1px 0px #fcebd7 inset;
+      background-image: linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
+      background-image: -o-linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
+      background-image: -moz-linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
+      background-image: -webkit-linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
+      background-image: -ms-linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f5bc78), color-stop(1, #f9d4a7));
+      border-color: #f1a449; }
+      .lesson-progress .bar.complete:last-of-type {
+        border-right: 1px solid; }
+
 .module-container {
   background: rgba(255, 255, 255, 0.7);
   height: 100%;
@@ -224,37 +254,75 @@ div.module {
   .slide .workspace {
     height: 50px;
     border-bottom: 1px dashed #999; }
-  .slide ul.answers {
+  .slide ul {
     display: block;
+    padding-left: 0;
     text-align: center;
-    margin-top: 30px; }
-    .slide ul.answers.short-multi li {
+    margin-bottom: 0; }
+    .slide ul.short-multi li {
       list-style: none;
       display: inline-block;
-      margin: 5px;
-      font-size: 28px; }
-    .slide ul.answers.short-multi a {
-      padding: 10px 30px;
-      background-color: #4e6087;
-      color: #FFF;
+      font-size: 16px;
+      line-height: 36px;
+      margin: 2px; }
+    .slide ul.short-multi a {
+      padding: 5px 20px;
+      color: #666;
       text-decoration: none;
-      border-radius: 3px;
+      border-radius: 3px; }
+    .slide ul.short-multi.options a {
+      border: 1px solid #e1e1e1;
       -webkix-transition: background-color 0.2s ease-out;
       -moz-transition: background-color 0.2s ease-out;
       -o-transition: background-color 0.2s ease-out;
       -ms-transition: background-color 0.2s ease-out;
-      transition: background-color 0.2s ease-out; }
-      .slide ul.answers.short-multi a:hover {
-        background-color: #1fadad;
-        -webkix-transition: background-color 0.2s ease-out;
-        -moz-transition: background-color 0.2s ease-out;
-        -o-transition: background-color 0.2s ease-out;
-        -ms-transition: background-color 0.2s ease-out;
-        transition: background-color 0.2s ease-out; }
+      transition: background-color 0.2s ease-out;
+      background-image: linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -o-linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -moz-linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -webkit-linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -ms-linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #eeeeee), color-stop(1, white)); }
+      .slide ul.short-multi.options a:hover {
+        background-image: linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -o-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -moz-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -webkit-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -ms-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #1fadad), color-stop(1, #24cbcb));
+        border-color: #1b9797;
+        color: #FFF; }
+    .slide ul.short-multi.answers a {
+      border: 1px solid #1b9797;
+      -webkix-transition: background-color 0.2s ease-out;
+      -moz-transition: background-color 0.2s ease-out;
+      -o-transition: background-color 0.2s ease-out;
+      -ms-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out;
+      background-image: linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -o-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -moz-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -webkit-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -ms-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #1fadad), color-stop(1, #24cbcb));
+      color: #FFF; }
+      .slide ul.short-multi.answers a:hover {
+        background-image: linear-gradient(bottom, #be1e2d 20, #dc2335 100);
+        background-image: -o-linear-gradient(bottom, #be1e2d 20, #dc2335 100);
+        background-image: -moz-linear-gradient(bottom, #be1e2d 20, #dc2335 100);
+        background-image: -webkit-linear-gradient(bottom, #be1e2d 20, #dc2335 100);
+        background-image: -ms-linear-gradient(bottom, #be1e2d 20, #dc2335 100);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #be1e2d), color-stop(1, #dc2335));
+        border-color: #a81b28; }
+    .slide ul.inline {
+      display: inline;
+      margin-right: 20px;
+      margin-bottom: 20px; }
 
 .greek-text {
-  font-family: 'Garamond';
-  font-size: 1.3em; }
+  font-family: 'Times New Romans';
+  font-size: 1.3em;
+  letter-spacing: 0.1em; }
 
 .work {
   width: 3000px;
