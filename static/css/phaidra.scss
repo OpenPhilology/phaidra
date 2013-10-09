@@ -52,6 +52,12 @@ body {
 a {
 	color: $color-pri-two;
 }
+p strong {
+	margin-left: 2px;
+	margin-right: 2px;
+	letter-spacing: 0.05em;
+	color: $color-sec-two;
+}
 
 /* Override Bootstrap Styles */
 .container {
@@ -218,7 +224,7 @@ a {
 	}
 }
 .lesson-progress {
-	margin-bottom: 15px;
+	margin-bottom: 35px;
 
 	.bar {
 		$c: #DDD;
@@ -244,15 +250,12 @@ a {
 		}
 
 		&.complete {
-			$b: $color-sec-four;
+			$b: $color-sec-two;
 
 			box-shadow: 1px 1px 0px lighten($b, 20%) inset;
 			@include gradient($b, 0, lighten($b, 10%), 100);
-			border-color: darken($b, 10%);
+			border: 1px solid darken($b, 10%);
 
-			&:last-of-type {
-				border-right: 1px solid;
-			}
 		}
 	}
 }
@@ -342,19 +345,21 @@ div.module {
 }
 
 .lesson-container {
-
+	.lesson-header {
+		h3 {
+			display: inline-block;
+			margin-top: 0;
+		}
+	}
+}
+.lesson-left-menu {
+	padding-top: 20px;
 }
 .slide {
 
-	padding: 40px;
+	padding: 20px;
 	border-radius: 3px;
-	background-color: #EFEFEF;
 	min-height: 300px;
-
-	.workspace {
-		height: 50px;
-		border-bottom: 1px dashed #999;
-	}
 
 	ul {
 		display: block;
@@ -411,7 +416,7 @@ div.module {
 			}
 		}
 		&.inline {
-			display: inline;
+			display: inline-block;
 			margin-right: 20px;
 			margin-bottom: 20px;
 		}

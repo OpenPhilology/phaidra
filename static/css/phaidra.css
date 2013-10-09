@@ -8,6 +8,12 @@ body {
 a {
   color: #1fadad; }
 
+p strong {
+  margin-left: 2px;
+  margin-right: 2px;
+  letter-spacing: 0.05em;
+  color: #4e6087; }
+
 /* Override Bootstrap Styles */
 .container {
   max-width: none !important; }
@@ -151,7 +157,7 @@ a {
     letter-spacing: 0.1em; }
 
 .lesson-progress {
-  margin-bottom: 15px; }
+  margin-bottom: 35px; }
   .lesson-progress .bar {
     display: inline-block;
     height: 15px;
@@ -172,16 +178,14 @@ a {
       border-bottom-right-radius: 3px;
       border-top-right-radius: 3px; }
     .lesson-progress .bar.complete {
-      box-shadow: 1px 1px 0px #fcebd7 inset;
-      background-image: linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
-      background-image: -o-linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
-      background-image: -moz-linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
-      background-image: -webkit-linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
-      background-image: -ms-linear-gradient(bottom, #f5bc78 0, #f9d4a7 100);
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f5bc78), color-stop(1, #f9d4a7));
-      border-color: #f1a449; }
-      .lesson-progress .bar.complete:last-of-type {
-        border-right: 1px solid; }
+      box-shadow: 1px 1px 0px #8394b8 inset;
+      background-image: linear-gradient(bottom, #4e6087 0, #6378a5 100);
+      background-image: -o-linear-gradient(bottom, #4e6087 0, #6378a5 100);
+      background-image: -moz-linear-gradient(bottom, #4e6087 0, #6378a5 100);
+      background-image: -webkit-linear-gradient(bottom, #4e6087 0, #6378a5 100);
+      background-image: -ms-linear-gradient(bottom, #4e6087 0, #6378a5 100);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4e6087), color-stop(1, #6378a5));
+      border: 1px solid #3b4967; }
 
 .module-container {
   background: rgba(255, 255, 255, 0.7);
@@ -246,14 +250,17 @@ div.module {
     .module .circle.complete {
       background-color: white; }
 
+.lesson-container .lesson-header h3 {
+  display: inline-block;
+  margin-top: 0; }
+
+.lesson-left-menu {
+  padding-top: 20px; }
+
 .slide {
-  padding: 40px;
+  padding: 20px;
   border-radius: 3px;
-  background-color: #EFEFEF;
   min-height: 300px; }
-  .slide .workspace {
-    height: 50px;
-    border-bottom: 1px dashed #999; }
   .slide ul {
     display: block;
     padding-left: 0;
@@ -315,7 +322,7 @@ div.module {
         background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #be1e2d), color-stop(1, #dc2335));
         border-color: #a81b28; }
     .slide ul.inline {
-      display: inline;
+      display: inline-block;
       margin-right: 20px;
       margin-bottom: 20px; }
 

@@ -9,29 +9,29 @@
 
 	{% block content %}
 
-	<div class="col-md-2">
+	<div class="col-md-2 lesson-left-menu">
 		<a href="#"><span class="glyphicon glyphicon-arrow-left"></span> Back to Lessons</a>
 	</div>
 	<div class="col-md-8 lesson-container">
 
-		<h2>Learn the Greek Alphabet <small>Current Lesson</small></h2>
-
-
-		<!-- Populate dyn. based on # slides in lesson -->
-		{% spaceless %}
-			<div class="lesson-progress">
-				<div class="bar complete" style="width: 20%"></div>
-				<div class="bar complete" style="width: 20%"></div>
-				<div class="bar" style="width: 20%"></div>
-				<div class="bar" style="width: 20%"></div>
-				<div class="bar" style="width: 20%"></div>
-			</div>
-		{% endspaceless %}
 
 		<div class="slide multi-slide">
+			<div class="lesson-header">
+				<h3>Introduction to Nouns <small>What is a Noun?</small></h3>
+			</div>
 
-			<h3>Multi-choice Composition</h3>
-			<p>What is the nominative, singular form for "The Fine Tent"?</p>
+			<!-- Populate dyn. based on # slides in lesson -->
+			{% spaceless %}
+				<div class="lesson-progress">
+					<div class="bar complete" style="width: 20%"></div>
+					<div class="bar complete" style="width: 20%"></div>
+					<div class="bar" style="width: 20%"></div>
+					<div class="bar" style="width: 20%"></div>
+					<div class="bar" style="width: 20%"></div>
+				</div>
+			{% endspaceless %}
+
+			<p>What is the <strong>nominative, singular</strong> form for "The Fine Tent"?</p>
 
 			<div class="well">
 				<ul class="answers short-multi greek-text" style="min-height: 40px">
@@ -66,7 +66,6 @@
 			{% endspaceless %}
 
 		</div>
-
 	</div>
 
 {% endblock %}
