@@ -1,6 +1,8 @@
 /*
 
-Slide: Lowest level component in learning hierarchy.
+Slide: The slide model represents the data that is used to render a slide, the user's submissions, and various other data
+that we want to collect about how users are interacting with learning content. The slide model is used in many kinds of
+slide-representing views.
 
 */
 Phaidra.Models.Slide = Phaidra.Models.Base.extend({
@@ -8,8 +10,10 @@ Phaidra.Models.Slide = Phaidra.Models.Base.extend({
 		'modelName': 'slide',
 		'uid': 0,
 		'title': '',
+		'moduleTitle': '',
+		'type': '',		// Determines the view and template that will be used
 		'content': '',
-		'options': ['a', 'b', 'c'],
+		'options': [],
 		'submission': ''
 	},
 	// Check user's submission against the server 
@@ -36,3 +40,9 @@ Phaidra.Models.Slide = Phaidra.Models.Base.extend({
 	}
 });
 _.extend(Phaidra.Models.Slide.defaults, Phaidra.Models.Base.defaults);
+
+// Super basic slide examples, to be replaced by real content
+
+
+
+

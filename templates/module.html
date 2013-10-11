@@ -14,58 +14,48 @@
 	</div>
 	<div class="col-md-8 lesson-container">
 
-
-		<div class="slide multi-slide">
-			<div class="lesson-header">
-				<h3>Introduction to Nouns <small>What is a Noun?</small></h3>
-			</div>
-
-			<!-- Populate dyn. based on # slides in lesson -->
-			{% spaceless %}
-				<div class="lesson-progress">
-					<div class="bar complete" style="width: 20%"></div>
-					<div class="bar complete" style="width: 20%"></div>
-					<div class="bar" style="width: 20%"></div>
-					<div class="bar" style="width: 20%"></div>
-					<div class="bar" style="width: 20%"></div>
+			<div class="slide multi-slide">
+				<div class="lesson-header">
+					{% verbatim %}
+						<h3><%= moduleTitle  %> <small><%= title %></small></h3>
+					{% endverbatim %}
 				</div>
-			{% endspaceless %}
 
-			<p>What is the <strong>nominative, singular</strong> form for "The Fine Tent"?</p>
+				<!-- Populate dyn. based on # slides in lesson -->
+				{% spaceless %}
+					<div class="lesson-progress">
+						<div class="bar complete" style="width: 20%"></div>
+						<div class="bar complete" style="width: 20%"></div>
+						<div class="bar" style="width: 20%"></div>
+						<div class="bar" style="width: 20%"></div>
+						<div class="bar" style="width: 20%"></div>
+					</div>
+				{% endspaceless %}
 
-			<div class="well">
-				<ul class="answers short-multi greek-text" style="min-height: 40px">
-				</ul>
+				{% verbatim %}
+					<%= content %>
+				{% endverbatim %}
+
+				<div class="well">
+					<ul class="answers short-multi greek-text" style="min-height: 40px">
+					</ul>
+				</div>
+
+				{% spaceless %}
+					{% verbatim %}
+					<% _.each(options, function(optionSet) { %>
+						<ul class="options short-multi greek-text inline">
+
+							<% _.each(optionSet, function(option) { %>
+								<li><a href="#" data-value="<%= option.value  %>"><%= option.display %></a></li>
+							<% }); %>
+
+						</ul>
+					<% }); %>
+					{% endverbatim %}
+				{% endspaceless %}
+
 			</div>
-
-			{% spaceless %}
-				<ul class="options short-multi greek-text inline">
-					<li><a href="#" data-value="eta">ἡ</a></li>
-					<li><a href="#" data-value="te">τῇ</a></li>
-					<li><a href="#" data-value="ton">τῶν</a></li>
-					<li><a href="#" data-value="tais">ταῖς</a></li>
-				</ul>
-			{% endspaceless %}
-
-			{% spaceless %}
-				<ul class="options short-multi greek-text inline">
-					<li><a href="#">καλῆς</a></li>
-					<li><a href="#">καλαὶ</a></li>
-					<li><a href="#">καλὰς</a></li>
-					<li><a href="#">καλὴν</a></li>
-				</ul>
-			{% endspaceless %}
-
-			{% spaceless %}
-				<ul class="options short-multi greek-text inline">
-					<li><a href="#">σκηνά</a></li>
-					<li><a href="#">σκηνή</a></li>
-					<li><a href="#">σκηνῶν</a></li>
-					<li><a href="#">σκηνάς</a></li>
-				</ul>
-			{% endspaceless %}
-
-		</div>
 	</div>
 
 {% endblock %}
