@@ -66,11 +66,11 @@ Open `/opt/phaidra/extras/nginx/phaidra.conf` and set the variables to be approp
 
 Next we must create a symlink so Nginx uses our configuration file:
 
-		$ ln -s /etc/nginx/sites-enabled/phaidra.conf /opt/phaidra/extras/nginx/phaidra.conf
+		$ ln -s /opt/phaidra/extras/nginx/phaidra.conf /etc/nginx/sites-enabled/phaidra.conf
 
 And do the same to enable Uwsgi:
 
-		$ ln -s /etc/uwsgi/apps-enabled/phaidra.ini /opt/phaidra/extras/uwsgi/phaidra.ini
+		$ ln -s /opt/phaidra/extras/uwsgi/phaidra.ini /etc/uwsgi/apps-enabled/phaidra.ini
 
 Create a safe space for the socket to exist, which can be accessed by both Nginx and Uwsgi:
 

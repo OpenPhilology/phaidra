@@ -5,12 +5,10 @@ Phaidra.Views.MultiCompositionSlide = Backbone.View.extend({
 	},
 	initialize: function() {
 		this.template = _.template(this.$el.find('#slide_multi_composition').html());
-	},
-	render: function() {
-
 		this.el = this.template(this.model.attributes);
 		this.$el = $(this.el);
-
+	},
+	render: function() {
 		return this;	
 	},
 	selectAnswer: function(e) {

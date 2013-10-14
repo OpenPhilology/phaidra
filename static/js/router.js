@@ -33,6 +33,17 @@ $(function() {
 					value: 'σκηνή'
 				}]
 			]
+		},
+		{
+			title: 'Other',
+			content: 'second content',
+			type: 'slide_multi_composition',
+			options: [
+				[{
+					display: 'choice',
+					value: 'choice'
+				}]
+			]
 		}
 	]);
 
@@ -42,8 +53,6 @@ $(function() {
 		slides: slides,
 	});
 
-	console.log(typeof(Phaidra.Views.Module));
 	new Phaidra.Views.Module({ el: '.slide', model: Phaidra.TestModule }).render();
 
-	//new Phaidra.Views.MultiCompositionSlide({ el: '.multi-slide', model: Phaidra.TestModule }).render();
 });
