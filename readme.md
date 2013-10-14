@@ -35,7 +35,6 @@ Set up Virtualenv
 		$ cd /opt/phaidra
 		# The name of our virtualenv is "env"
 		$ virtualenv --no-site-packages env
-		$ source env/bin/activate
 
 Now, in front of your command prompt, you should see `(env)`, which indicates that you are operating within that environment.
 
@@ -43,8 +42,9 @@ Install Requirements
 ---
 Presuming you are starting with a new machine, you need to install Python-related tools.
 
+		$ source env/bin/activate
 		$ sudo pip install -r requirements.txt
-
+		$ deactivate
 
 Install and configure Nginx with Uwsgi
 ---
@@ -76,6 +76,11 @@ Create a safe space for the socket to exist, which can be accessed by both Nginx
 
 		$ sudo mkdir /var/uwsgi
 		$ sudo chown www-data:www-data /var/uwsgi
+
+Touch necessarily files so that Uwsgi can write to them.
+
+		$ mkdir /opt/phaidra/logs
+		$ touch /opt/phaidra/logs/master.pid
 
 Start up services:
 
