@@ -1,0 +1,18 @@
+<script type="text/template" id="slide_multi_composition">
+	<div class="slide-unit">
+		<div class="well">
+			<ul class="answers short-multi greek-text" style="min-height: 40px">
+			</ul>
+		</div>
+
+		<% _.each(options, function(optionSet) { %>
+			<ul class="options short-multi greek-text inline">
+
+				<% _.each(optionSet, function(option) { %>
+					<li><a href="#" data-value="<%= option.value  %>"><%= option.display %></a></li>
+				<% }); %>
+
+			</ul>
+		<% }); %>
+	</div>
+</script>

@@ -8,13 +8,13 @@ slide-representing views.
 Phaidra.Models.Slide = Phaidra.Models.Base.extend({
 	defaults: {
 		'modelName': 'slide',
-		'uid': 0,
+		/*'uid': 0,
 		'title': '',
 		'moduleTitle': '',
 		'type': '',		// Determines the view and template that will be used
 		'content': '',
 		'options': [],
-		'submission': ''
+		'submission': ''*/
 	},
 	// Check user's submission against the server 
 	checkSubmission: function(submission, options) {
@@ -40,9 +40,3 @@ Phaidra.Models.Slide = Phaidra.Models.Base.extend({
 	}
 });
 _.extend(Phaidra.Models.Slide.defaults, Phaidra.Models.Base.defaults);
-
-// Super basic slide examples, to be replaced by real content
-
-
-
-

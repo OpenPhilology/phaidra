@@ -10,15 +10,13 @@
 	{% block content %}
 
 	<div class="col-md-2 lesson-left-menu">
-		<a href="#"><span class="glyphicon glyphicon-arrow-left"></span> Back to Lessons</a>
+		<a href="/"><span class="glyphicon glyphicon-arrow-left"></span> Back to Lessons</a>
 	</div>
 	<div class="col-md-8 lesson-container">
 
 			<div class="slide multi-slide">
 				<div class="lesson-header">
-					{% verbatim %}
-						<h3><%= moduleTitle  %> <small><%= title %></small></h3>
-					{% endverbatim %}
+					<h3>Module Title</h3>
 				</div>
 
 				<!-- Populate dyn. based on # slides in lesson -->
@@ -32,29 +30,9 @@
 					</div>
 				{% endspaceless %}
 
-				{% verbatim %}
-					<%= content %>
-				{% endverbatim %}
-
-				<div class="well">
-					<ul class="answers short-multi greek-text" style="min-height: 40px">
-					</ul>
+				<div id="lesson-content">
+					{% include 'slides.html' %}
 				</div>
-
-				{% spaceless %}
-					{% verbatim %}
-					<% _.each(options, function(optionSet) { %>
-						<ul class="options short-multi greek-text inline">
-
-							<% _.each(optionSet, function(option) { %>
-								<li><a href="#" data-value="<%= option.value  %>"><%= option.display %></a></li>
-							<% }); %>
-
-						</ul>
-					<% }); %>
-					{% endverbatim %}
-				{% endspaceless %}
-
 			</div>
 	</div>
 

@@ -1,13 +1,6 @@
-/*$(function() {
-	new Phaidra.Views.ProgressViz({el: '.work'}).render();
-});*/
-
 $(function() {
 	$('.sec').tooltip();
 	$('.module .circle').tooltip({ container: 'body'});
-
-	console.log(Phaidra.Collections);
-	console.log(typeof(Phaidra.Collections.Slides));
 
 	var slides = new Phaidra.Collections.Slides([
 		{
@@ -44,12 +37,13 @@ $(function() {
 	]);
 
 	// Test objects
-	Phaidra.TestModule = new Phaidra.Models.Module([
-		{
-			title: 'Alpha Nouns', 
-			slides: slides,
-		}
-	]);
+	Phaidra.TestModule = new Phaidra.Models.Module({
+		title: 'Alpha Nouns', 
+		slides: slides,
+	});
 
-	new Phaidra.Views.MultiCompositionSlide({ el: '.multi-slide', model: Phaidra.TestModule }).render();
+	console.log(typeof(Phaidra.Views.Module));
+	new Phaidra.Views.Module({ el: '.slide', model: Phaidra.TestModule }).render();
+
+	//new Phaidra.Views.MultiCompositionSlide({ el: '.multi-slide', model: Phaidra.TestModule }).render();
 });

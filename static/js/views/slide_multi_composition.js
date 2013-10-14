@@ -4,9 +4,13 @@ Phaidra.Views.MultiCompositionSlide = Backbone.View.extend({
 		"click .answers a" : "deselectAnswer"
 	},
 	initialize: function() {
+		this.template = _.template(this.$el.find('#slide_multi_composition').html());
 	},
 	render: function() {
-		this.$el.html(_.template(this.$el.html(), this.model.attributes));
+
+		this.el = this.template(this.model.attributes);
+		this.$el = $(this.el);
+
 		return this;	
 	},
 	selectAnswer: function(e) {
