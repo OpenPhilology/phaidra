@@ -13,27 +13,20 @@
 		<a href="/"><span class="glyphicon glyphicon-arrow-left"></span> Back to Lessons</a>
 	</div>
 	<div class="col-md-8 lesson-container">
-
-			<div class="slide multi-slide">
-				<div class="lesson-header">
-					<h3>Module Title</h3>
-				</div>
-
-				<!-- Populate dyn. based on # slides in lesson -->
-				{% spaceless %}
-					<div class="lesson-progress">
-						<div class="bar complete" style="width: 20%"></div>
-						<div class="bar complete" style="width: 20%"></div>
-						<div class="bar" style="width: 20%"></div>
-						<div class="bar" style="width: 20%"></div>
-						<div class="bar" style="width: 20%"></div>
-					</div>
-				{% endspaceless %}
-
-				<div id="lesson-content">
-					{% include 'slides.html' %}
-				</div>
+		<div class="slide">
+			<div class="lesson-header">
+				<h3>Module Title</h3>
 			</div>
+
+			{% spaceless %}
+				<div class="lesson-progress"></div>
+			{% endspaceless %}
+
+			<div id="lesson-content">
+				{# These are the front-end templates that Backbone/Underscore uses #}
+				{% include 'slides.html' %}
+			</div>
+		</div>
 	</div>
 
 {% endblock %}

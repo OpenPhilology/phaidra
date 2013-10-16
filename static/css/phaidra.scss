@@ -361,6 +361,10 @@ div.module {
 	border-radius: 3px;
 	min-height: 300px;
 
+	.slide-unit {
+		display: none;
+	}
+
 	ul {
 		display: block;
 		padding-left: 0;
