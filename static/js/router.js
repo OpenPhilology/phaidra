@@ -42,13 +42,20 @@ $(function() {
 
 			var alphaDecSlides = new Phaidra.Collections.Slides([
 				{
-					title: 'Intro',
-					content: 'just stuff',
+					title: 'An Introduction to Cases',
+					content: '<p>There are five <strong>CASES</strong> in Greek, the nominative, genitive, dative, accusative, and vocative.</p>' + 
+						'<p>The nominative and vocative plural are always alike. In neuters, the nominative, accusative, and vocative are alike in all numbers; in the plural these end in α.</p>' +
+						'<p>In English, readers rely on the order that words appear in a sentence to indicate the grammatical function of each word.  In Ancient Greek, their case tells the reader the grammatical function of each word in the sentence.</p>',
 					type: 'slide_info'
 				},
 				{
-					title: 'Feminines in -&eta;',
-					content: 'What is the nominative singular form for "The Fine Tent"?',
+					title: 'The Nominative Case',
+					content: '',
+					type: 'slide_info'
+				},
+				{
+					title: 'Feminines in -&alpha;',
+					content: 'What is the accusative plural form for "The Small Country"?',
 					type: 'slide_multi_composition',
 					options: [
 						[{
@@ -58,22 +65,30 @@ $(function() {
 						{
 							display: 'τῆς',
 							value: 'τῆς`'
+						}, 
+						{
+							display: 'τὰς',
+							value: 'τὰς'
 						}],
 						[{
-							display: 'καλαῖς',
-							value: 'καλαῖς'
+							display: 'μῑκρᾷ',
+							value: 'μῑκρᾷ'
 						},
 						{
-							display: 'καλὴ',
-							value: 'καλὴ'
+							display: 'μῑκρὰς',
+							value: 'μῑκρὰς'
+						},
+						{
+							display: 'μῑκρὰ',
+							value: 'μῑκρὰ'
 						}],
 						[{
-							display: 'σκηνῆς',
-							value: 'σκηνῆς'
+							display: 'χώρᾱς',
+							value: 'χώρᾱς'
 						},
 						{
-							display: 'σκηνή',
-							value: 'σκηνή'
+							display: 'χώραιν',
+							value: 'χώραιν'
 						}]
 					]
 				},
@@ -101,7 +116,7 @@ $(function() {
 					title: 'Introduction to Nouns'
 				},
 				{
-					title: 'Alpha Declension - Feminines in &eta;',
+					title: 'Introduction to Nouns',
 					slides: alphaDecSlides,
 					levels: alphaDecSlides.length
 				},
