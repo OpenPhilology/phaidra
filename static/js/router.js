@@ -39,6 +39,9 @@ $(function() {
 			// Populate the modules/slides collections only if user is in lesson section 
 
 			// These will be replaced with dynamic versions
+			var slides = [];
+
+
 
 			var alphaDecSlides = new Phaidra.Collections.Slides([
 				{
@@ -55,7 +58,7 @@ $(function() {
 				},
 				{
 					title: 'Feminines in -&alpha;',
-					content: 'What is the accusative plural form for "The Small Country"?',
+					content: 'What is the <strong>accusative plural</strong> form for "The Small Country"?',
 					type: 'slide_multi_composition',
 					options: [
 						[{
