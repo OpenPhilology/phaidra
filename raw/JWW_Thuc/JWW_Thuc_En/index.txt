@@ -31,7 +31,7 @@
 5.3, Vocab
 5.4, Frequency Stats
 6.0, Objectives
-6.1, A-Declension'97Feminines in uc0u945 
+6.1, A-Declension-- Feminines in alpha
 6.2, Paradigms
 6.3, Vocab
 7.1, Imperfect Indicative Active
@@ -68,11 +68,11 @@
 14.2, Paradigms
 14.3, Vocab
 15.1.1, Analysis of the Primary Tenses of the Indicative Active
-15.1.2, Stems of uc0u7940 u947 u969 
+15.1.2, Stems of a)/gw
 15.2, Paradigms
 15.3, Vocab
 15.4, Frequency Stats
 16.1.1, Analysis of the Secondary Tenses of the Indicative Active
 16.1.2, Notes on the Formation of the Secondary Tenses of the Indicative Active
 16.2, Paradigms
-16.3, Vocab
+
