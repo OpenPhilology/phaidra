@@ -3,7 +3,10 @@
 .1 = grammar
 .2 = paradigm tables
 .3 = vocab
-.4 = alignment
+.4 = frequency stats
+.5 = alignment
+.6 = treebanking
+
 		
 
 3.0, Objectives
@@ -26,6 +29,7 @@
 5.1.7, Stem
 5.2, Paradigms
 5.3, Vocab
+5.4, Frequency Stats
 6.0, Objectives
 6.1, A-Declension'97Feminines in uc0u945 
 6.2, Paradigms
@@ -33,6 +37,7 @@
 7.1, Imperfect Indicative Active
 7.2, Paradigms
 7.3, Vocab
+7.4, Frequency Stats
 8.1, O-Declension Nouns
 8.2.1, O-Declension Noun Paradigms
 8.2.2, O-Declension Adjective Paradigms
@@ -48,11 +53,14 @@
 10.1.4, Compound Verbs
 10.2, Paradigms
 10.3, Vocab
+10.4.1, First Aorist Indicative Active Frequency
+10.4.2, Future Indicative Active Frequency
 12.1.1, Perfect and Pluperfect Indicative Active
 12.1.2, Endings for the Perfect and the Pluperfect
 12.1.3 The Second Perfect and Pluperfect
 12.2, Paradigms
 12.3, Vocab
+12.4, Frequency Stats
 13.1.1, How to Read Ancient Greek
 13.1.2, Directions for Reading
 13.3, Vocab
@@ -63,7 +71,8 @@
 15.1.2, Stems of uc0u7940 u947 u969 
 15.2, Paradigms
 15.3, Vocab
+15.4, Frequency Stats
 16.1.1, Analysis of the Secondary Tenses of the Indicative Active
 16.1.2, Notes on the Formation of the Secondary Tenses of the Indicative Active
 16.2, Paradigms
-16.3, Vocab}
+16.3, Vocab
