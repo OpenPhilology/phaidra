@@ -19,6 +19,23 @@
 						"includeHTML": "/static/raw/thuc/en/3.0.html"
 					},
 					{
+						"type": "slide_multi_composition",
+						"title": "Test Composition",
+						"content": "Make the words agree",
+						"options": [
+							[
+								{
+									"value": "A",
+									"display": "A"
+								},
+								{
+									"value": "B",
+									"display": "C"
+								}
+							]
+						]
+					},
+					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/en/3.1.1.html"
 					},

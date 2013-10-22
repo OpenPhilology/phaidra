@@ -11,7 +11,7 @@ Phaidra.Views.Module = Backbone.View.extend({
 		var slides = this.model.get('slides');
 		var progress = this.$el.find('.lesson-progress');
 
-		var progWidth = Math.floor(100 / slides.length) || 100;
+		var progWidth = Math.floor(100 / (slides.length - 1)) || 100;
 
 		for (var i = 0; i < slides.length; i++) {
 			var selector = '#' + slides[i].get('type');	
@@ -31,7 +31,8 @@ Phaidra.Views.Module = Backbone.View.extend({
 			this.slides.push(view);
 
 			// Create a progress bar section for each slide
-			progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
+			if (i < (slides.length - 1))
+				progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
 		}
 		
 		return this;	
