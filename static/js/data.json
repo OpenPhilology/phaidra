@@ -1,0 +1,44 @@
+[
+	{
+		"title": "The Greek Alphabet"
+	},
+	{
+		"title": ""
+	},
+	{
+		"title": ""
+	},
+	{
+		"title": "Introduction to Nouns",
+		"modules": [
+			{
+				"title": "Basic Noun Stuff",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/3.0.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/3.1.1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/3.1.2.html"
+					}
+				]
+			},
+			{
+				"title": "Advanced Noun Stuff",
+				"slides": [
+					{
+						"type": "slide_info",
+						"title": "Exciting stuff!",
+						"content": "Wheeee!!!"
+					}
+				]
+			}
+		]
+
+	}
+]
