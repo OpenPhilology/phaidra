@@ -20,7 +20,7 @@ $(function() {
 		},
 		showModule: function(mod) {
 			if (!Phaidra.modules)
-				this.fetchModules();
+				this.fetchModules(mod);
 			
 			// For now, we assume that the user must go to the first slide
 
@@ -28,85 +28,33 @@ $(function() {
 		},
 		showSlide: function(mod, slide) {
 			if (!Phaidra.modules)
-				this.fetchModules();
+				this.fetchModules(mod);
 
-			// Render the HTML for modules
-			Phaidra.module_view = new Phaidra.Views.Module({ el: '.slide', model: Phaidra.modules.models[mod] }).render();
+			if (!Phaidra.module_view)
+				Phaidra.module_view = new Phaidra.Views.Module({ el: '.slide', model: Phaidra.modules.models[mod] }).render();
+
 			Phaidra.module_view.showSlide(slide);
 
 		},
-		fetchModules: function() {
+		fetchModules: function(mod) {
+
 			// Populate the modules/slides collections only if user is in lesson section 
 
 			// These will be replaced with dynamic versions
 			var slides = [];
 
-
-
-			var alphaDecSlides = new Phaidra.Collections.Slides([
-				{
-					title: 'An Introduction to Cases',
-					content: '<p>There are five <strong>CASES</strong> in Greek, the nominative, genitive, dative, accusative, and vocative.</p>' + 
-						'<p>The nominative and vocative plural are always alike. In neuters, the nominative, accusative, and vocative are alike in all numbers; in the plural these end in α.</p>' +
-						'<p>In English, readers rely on the order that words appear in a sentence to indicate the grammatical function of each word.  In Ancient Greek, their case tells the reader the grammatical function of each word in the sentence.</p>',
-					type: 'slide_info'
-				},
-				{
-					title: 'The Nominative Case',
-					content: '',
-					type: 'slide_info'
-				},
-				{
-					title: 'Feminines in -&alpha;',
-					content: 'What is the <strong>accusative plural</strong> form for "The Small Country"?',
-					type: 'slide_multi_composition',
-					options: [
-						[{
-							display: 'ἡ',
-							value: 'ἡ'
-						},
-						{
-							display: 'τῆς',
-							value: 'τῆς`'
-						}, 
-						{
-							display: 'τὰς',
-							value: 'τὰς'
-						}],
-						[{
-							display: 'μῑκρᾷ',
-							value: 'μῑκρᾷ'
-						},
-						{
-							display: 'μῑκρὰς',
-							value: 'μῑκρὰς'
-						},
-						{
-							display: 'μῑκρὰ',
-							value: 'μῑκρὰ'
-						}],
-						[{
-							display: 'χώρᾱς',
-							value: 'χώρᾱς'
-						},
-						{
-							display: 'χώραιν',
-							value: 'χώραιν'
-						}]
-					]
-				},
-				{
-					title: 'Other',
-					content: 'second content',
-					type: 'slide_multi_composition',
-					options: [
-						[{
-							display: 'choice',
-							value: 'choice'
-						}]
-					]
-				},
-			]);
+			slides.push(new Phaidra.Models.Slide({ 
+				includeHTML: '/static/raw/thuc/en/3.0.html',
+				type: 'slide_info'
+			}));
+			slides.push(new Phaidra.Models.Slide({ 
+				includeHTML: '/static/raw/thuc/en/3.1.1.html',
+				type: 'slide_info'
+			}));
+			slides.push(new Phaidra.Models.Slide({ 
+				includeHTML: '/static/raw/thuc/en/3.1.2.html',
+				type: 'slide_info'
+			}));
 
 			Phaidra.modules =  new Phaidra.Collections.Modules([
 				{
@@ -120,14 +68,13 @@ $(function() {
 				},
 				{
 					title: 'Introduction to Nouns',
-					slides: alphaDecSlides,
-					levels: alphaDecSlides.length
+					slides: [new Phaidra.Collections.Slides(slides)],
+					levels: slides.length
 				},
 				{
 					title: 'Introduction to Verbs'
 				}
 			]);
-
 		}
 	});
 

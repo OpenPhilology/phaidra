@@ -8,7 +8,7 @@ Phaidra.Views.Module = Backbone.View.extend({
 		this.$el.find('h3').html(this.model.get('title'));
 
 		// Create as many slides as there are in this module
-		var slides = this.model.get('slides').models;
+		var slides = this.model.get('slides')[0].models;
 		var progress = this.$el.find('.lesson-progress');
 
 		var progWidth = Math.floor(100 / slides.length) || 100;
