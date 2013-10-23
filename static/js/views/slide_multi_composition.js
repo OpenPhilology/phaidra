@@ -1,12 +1,12 @@
 Phaidra.Views.MultiCompositionSlide = Backbone.View.extend({
+	tagName: 'div',
+	className: 'slide-unit',
 	events: {
 		"click .options a" : "selectAnswer",
 		"click .answers a" : "deselectAnswer"
 	},
-	initialize: function() {
-		this.template = _.template(this.$el.find('#slide_multi_composition').html());
-		this.el = this.template(this.model.attributes);
-		this.$el = $(this.el);
+	initialize: function(options) {
+		this.$el.html(options.template(this.model.attributes));
 	},
 	render: function() {
 		return this;	

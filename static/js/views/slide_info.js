@@ -1,5 +1,10 @@
 Phaidra.Views.InfoSlide = Backbone.View.extend({
-	initialize: function() {
+	tagName: 'div',
+	className: 'slide-unit',
+	events: {
+		"click .btn-continue": "navigate"
+	},
+	initialize: function(options) {
 
 		var that = this;
 
@@ -13,8 +18,11 @@ Phaidra.Views.InfoSlide = Backbone.View.extend({
 				async: false,
 				success: function(responseText) {
 					that.template = _.template(responseText);
-					that.el = that.template(that.model.attributes);
-					that.$el = $(that.el);
+					that.$el.html(that.template(that.model.attributes));
+
+					// Append a 'next' button
+					var index = Phaidra.module.get('slides').indexOf(that.model) + 1;
+					that.$el.append('<p><a href="' + index + '" class="btn-continue">Continue</a></p>');
 				},
 				error: function(responseText) {
 					console.log("Problem!");	
@@ -22,18 +30,18 @@ Phaidra.Views.InfoSlide = Backbone.View.extend({
 			});
 		}
 		else {
-			this.template = _.template(this.$el.find('#slide_info').html());
-			this.el = this.template(this.model.attributes);
-			this.$el = $(this.el);
+			this.template(this.model.attributes);
 		}
-
 	},
 	render: function() {
-		// Append a 'next' button
-		
-		//var index = Phaidra.modules.indexOf(this.model);
-		//this.$el.append('<p><a href="' + index + '">Continue</a></p>');
-
 		return this;
+	},
+	navigate: function(e) {
+		e.preventDefault();
+
+		// Try not to laugh
+		var url = Backbone.history.fragment.split('/').splice(0, 5).join('/') + '/' + (this.model.get('index') + 1);
+
+		Phaidra.app.navigate(url, { trigger: true });
 	}
 });

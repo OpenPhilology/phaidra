@@ -54,9 +54,9 @@ $(function() {
 					data = JSON.parse(data);
 					var slide_data = data[mod]["modules"][sect]["slides"];
 
-					var slides = [];
+					var slides = new Phaidra.Collections.Slides();
 					for (var i = 0; i < slide_data.length; i++) {
-						slides.push(new Phaidra.Models.Module(slide_data[i]));
+						slides.add(new Phaidra.Models.Module(slide_data[i]));
 					}
 
 					Phaidra.module = new Phaidra.Models.Module({

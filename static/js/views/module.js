@@ -5,6 +5,7 @@ Phaidra.Views.Module = Backbone.View.extend({
 		this.slides = [];
 	},
 	render: function() {
+		var that = this;
 		this.$el.find('h3').html(this.model.get('title'));
 
 		// Create as many slides as there are in this module
@@ -14,17 +15,25 @@ Phaidra.Views.Module = Backbone.View.extend({
 		var progWidth = Math.floor(100 / (slides.length - 1)) || 100;
 
 		for (var i = 0; i < slides.length; i++) {
-			var selector = '#' + slides[i].get('type');	
+			var selector = '#' + slides.at(i).get('type');	
 			var view;
+
+			// Set for easy navigation to next slide
+			slides.at(i).set('index', i);
+
 			if (selector == '#slide_multi_composition') {
-				view = new Phaidra.Views.MultiCompositionSlide({ model: slides[i], el: this.el })
-					.render()
+				view = new Phaidra.Views.MultiCompositionSlide({ 
+					model: slides.at(i), 
+					template: _.template(that.$el.find('#slide_multi_composition').html()) 
+				}).render()
 					.$el
 					.appendTo(this.$el.find('#lesson-content'));
 			}
 			else if (selector == '#slide_info') {
-				view = new Phaidra.Views.InfoSlide({ model: slides[i], el: this.el })
-					.render()
+				view = new Phaidra.Views.InfoSlide({ 
+					model: slides.at(i), 
+					template: _.template(that.$el.find('#slide_info').html()) 
+				}).render()
 					.$el
 					.appendTo(this.$el.find('#lesson-content'));
 			}
