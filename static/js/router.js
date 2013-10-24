@@ -13,21 +13,21 @@ $(function() {
 		},
 		module: function() {
 			if (!Phaidra.module)
-				this.fetchModules();
+				this.fetchModules(3, 0);
 
 			// For now, we assume that the user needs to go to our test module
-			this.showModule(3);
+			Phaidra.app.navigate('module/3/section/0/slide/0', { trigger: true });
 		},
 		showModule: function(mod) {
 			if (!Phaidra.module)
-				this.fetchModules(mod, 0);
+				this.fetchModules(3, 0);
 			
 			// For now, we assume that the user must go to the first slide
-			this.showSlide(3, 0, 0);
+			Phaidra.app.navigate('module/3/section/0/slide/0', { trigger: true });
 		},
 		showSect: function(mod, sect) {
 			if (!Phaidra.module)
-				this.fetchModules(mod, 0);
+				this.fetchModules(3, 0);
 				
 			this.showSlide(3, 0, 0);
 		},
