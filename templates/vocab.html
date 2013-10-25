@@ -1,13 +1,75 @@
 {% extends "base.html" %}
 
-	{# Determine which navigation element is 'active'  #}
-	{% block nav %}
-		{% with 'active' as vocab_active %}
-			{{ block.super }}
-		{% endwith %}
-	{% endblock %}
+{# Determine which navigation element is 'active'  #}
+{% block nav %}
+	{% with 'active' as vocab_active %}
+		{{ block.super }}
+	{% endwith %}
+{% endblock %}
 
-	{% block content %}
+{% block content %}
 
-	
-	{% endblock %}
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<h1>Vocabulary</h1>
+			<p>50 words learned</p>
+			<hr>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-7">
+			<table class="table">
+				<thead>
+					<tr>
+						<td style="width: 20%">Word</td>
+						<td style="width: 50%">Definition</td>
+						<td style="width: 10%; text-align: center">Lesson</td>
+						<td style="width: 30%; text-align: center">Times Seen</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="greek-text">γνώμη, ης, ἡ</td>
+						<td>means of knowing, mark, token, judgement will, opinion, mind, intelligence.</td>
+						<td style="text-align: center">4</td>
+						<td style="text-align: center">20</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-3">
+			<p style="text-align: center">
+				<a class="btn btn-default" href="#">Strengthen Vocabulary</a>
+			</p>
+
+			<p>
+				<strong>Options</strong>
+				<form role="form">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Hide Definitions
+						</label>
+					</div>
+				</form>
+			</p>
+			<p>
+				<strong>Sort By</strong>
+				<form role="form">
+					<div class="radio">
+						<label>
+							<input type="radio"> Recency
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio"> Alphabetical
+						</label>
+					</div>
+				</form>
+		</div>
+	</div>
+
+{% endblock %}
