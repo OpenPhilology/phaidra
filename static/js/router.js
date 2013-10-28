@@ -1,8 +1,8 @@
-$(function() {
-
-	Phaidra.Router = Backbone.Router.extend({
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module'], function($, _, Backbone, Models, Collections, ModuleView) { 
+	var Router = {};
+	Router.Router = Backbone.Router.extend({
 		routes: {
-			"module/": "module",
+			"module/": "rootModule",
 			"module/:mod": "showModule",
 			"module/:mod/section/:sec": "showSect",
 			"module/:mod/section/:sect/slide/:slide": "showSlide"
@@ -11,39 +11,40 @@ $(function() {
 			// Create/Populate necessary models and collections
 			// User model
 		},
-		module: function() {
-			if (!Phaidra.module)
+		rootModule: function() {
+			if (!this.module)
 				this.fetchModules(3, 0);
 
 			// For now, we assume that the user needs to go to our test module
-			Phaidra.app.navigate('module/3/section/0/slide/0', { trigger: true });
+			Backbone.history.navigate('module/3/section/0/slide/0', { trigger: true });
 		},
 		showModule: function(mod) {
-			if (!Phaidra.module)
+			if (!this.module)
 				this.fetchModules(3, 0);
 			
 			// For now, we assume that the user must go to the first slide
-			Phaidra.app.navigate('module/3/section/0/slide/0', { trigger: true });
+			Backbone.history.navigate('module/3/section/0/slide/0', { trigger: true });
 		},
 		showSect: function(mod, sect) {
-			if (!Phaidra.module)
+			if (!this.module)
 				this.fetchModules(3, 0);
 				
 			this.showSlide(3, 0, 0);
 		},
 		showSlide: function(mod, sect, slide) {
-			if (!Phaidra.module)
+			if (!this.module)
 				this.fetchModules(mod, sect);
 
-			if (!Phaidra.module_view)
-				Phaidra.module_view = new Phaidra.Views.Module({ el: '.slide', model: Phaidra.module }).render();
+			if (!this.module_view)
+				this.module_view = new ModuleView({ el: '.slide', model: this.module }).render();
 
-			Phaidra.module_view.showSlide(slide);
+			this.module_view.showSlide(slide);
 		},
 		fetchModules: function(mod, sect) {
 			// Fetch our static data, and use it to build the current module section
 
 			mod = parseInt(mod);
+			var that = this;
 
 			$.ajax({
 				url: '/static/js/data.json',
@@ -54,12 +55,12 @@ $(function() {
 					data = JSON.parse(data);
 					var slide_data = data[mod]["modules"][sect]["slides"];
 
-					var slides = new Phaidra.Collections.Slides();
+					var slides = new Collections.Slides();
 					for (var i = 0; i < slide_data.length; i++) {
-						slides.add(new Phaidra.Models.Module(slide_data[i]));
+						slides.add(new Models.Module(slide_data[i]));
 					}
 
-					Phaidra.module = new Phaidra.Models.Module({
+					that.module = new Models.Module({
 						title: data[mod]["title"],
 						slides: slides
 					});
@@ -71,14 +72,6 @@ $(function() {
 			});
 		}
 	});
-
-	Phaidra.app = new Phaidra.Router();
-	Backbone.history.start({ pushState: true });
-	console.log(Backbone.history.fragment);
 	
-	// Activate Bootstrap JS Components
-	$('.sec').tooltip();
-	$('.module .circle').tooltip({ container: 'body'});
-
-	window.Phaidra = Phaidra;
+	return Router;
 });
