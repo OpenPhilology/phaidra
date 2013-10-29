@@ -1,0 +1,78 @@
+ # = lesson (module) number
+.0= objectives and introduction
+.1 = grammar
+.2 = paradigm tables
+.3 = vocab
+.4 = frequency stats
+.5 = alignment
+.6 = treebanking
+
+		
+
+3.0, Objectives
+3.1.1,  Numbers
+3.1.2,  Gender
+3.1.3,  Cases
+3.1.4,  Declensions and A-Declensions
+3.2, Paradigms
+3.3, Vocab
+4.0, Objectives
+4.1, A-Declension Nouns
+4.2, Paradigms
+4.3, Vocab
+5.1.1, Person and Number
+5.1.2, Tense
+5.1.3, Mood
+5.1.4, Tense
+5.1.5, Voice
+5.1.6, Accent
+5.1.7, Stem
+5.2, Paradigms
+5.3, Vocab
+5.4, Frequency Stats
+6.0, Objectives
+6.1, A-Declension-- Feminines in alpha
+6.2, Paradigms
+6.3, Vocab
+7.1, Imperfect Indicative Active
+7.2, Paradigms
+7.3, Vocab
+7.4, Frequency Stats
+8.1, O-Declension Nouns
+8.2.1, O-Declension Noun Paradigms
+8.2.2, O-Declension Adjective Paradigms
+8.3, Vocab
+9.1, O-Declension (continued)
+9.2.1, Article Declensions
+9.2.2, More O-Declension Paradigms
+9.3, Vocab
+10.0, Intro
+10.1.1, Future Indicative and First Aorist Indicative
+10.1.2, Second Aorist
+10.1.3, Present Infinitive Active
+10.1.4, Compound Verbs
+10.2, Paradigms
+10.3, Vocab
+10.4.1, First Aorist Indicative Active Frequency
+10.4.2, Future Indicative Active Frequency
+12.1.1, Perfect and Pluperfect Indicative Active
+12.1.2, Endings for the Perfect and the Pluperfect
+12.1.3 The Second Perfect and Pluperfect
+12.2, Paradigms
+12.3, Vocab
+12.4, Frequency Stats
+13.1.1, How to Read Ancient Greek
+13.1.2, Directions for Reading
+13.3, Vocab
+14.1, Adjectives of the Vowel Declension
+14.2, Paradigms
+14.3, Vocab
+15.1.1, Analysis of the Primary Tenses of the Indicative Active
+15.1.2, Stems of a)/gw
+15.2, Paradigms
+15.3, Vocab
+15.4, Frequency Stats
+16.1.1, Analysis of the Secondary Tenses of the Indicative Active
+16.1.2, Notes on the Formation of the Secondary Tenses of the Indicative Active
+16.2, Paradigms
+

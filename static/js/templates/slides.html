@@ -1,41 +1,33 @@
 <script type="text/template" id="slide_multi_composition">
-	<div class="slide-unit">
-		<h4><%= title %></h4>
+	<h4><%= title %></h4>
 
-		<p>
-			<%= content %>
-		</p>
+	<p>
+		<%= content %>
+	</p>
 
-		<div class="well">
-			<ul class="answers short-multi greek-text" style="min-height: 40px">
-			</ul>
-		</div>
-
-		<% _.each(options, function(optionSet) { %>
-			<ul class="options short-multi greek-text inline">
-
-				<% _.each(optionSet, function(option) { %>
-					<li><a href="#" data-value="<%= option.value  %>"><%= option.display %></a></li>
-				<% }); %>
-
-			</ul>
-		<% }); %>
-
-		<div class="alert alert-success">
-			<strong>Correct!</strong> The accusative plural form of "The Small Country" is <span class="greek-text">τὰς μῑκρὰς χώρᾱς</span> 
-
-			<a href="3" class="btn btn-success" style="float: right">Continue</a>
-		</div>
-
+	<div class="well">
+		<ul class="answers short-multi greek-text" style="min-height: 40px">
+		</ul>
 	</div>
+
+	<% _.each(options, function(optionSet) { %>
+		<ul class="options short-multi greek-text inline">
+
+			<% _.each(optionSet, function(option) { %>
+				<li><a href="#" data-value="<%= option.value  %>"><%= option.display %></a></li>
+			<% }); %>
+
+		</ul>
+	<% }); %>
 </script>
 <script type="text/template" id="slide_info">
-	<div class="slide-unit">
-		<h4><%= title %></h4>
+	<h4><%= title %></h4>
 
-		<p>
-			<%= content %>
-		</p>
+	<p>
+		<%= content %>
+	</p>
 
-	</div>
+	<p>
+		<a href="<% print(index + 1) %>" class="btn-continue">Continue</a>
+	</p>
 </script>
