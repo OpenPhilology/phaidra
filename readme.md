@@ -107,4 +107,9 @@ Installing neo4j (http://www.neo4j.org/download):
 		$ echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
 		$ apt-get update
 		$ apt-get install neo4j
-		$ neo4j start
+		$ service neo4j-service start
+
+If you are developing remotely, you must uncomment the following line in `/var/lib/neo4j/conf/neo4j-server.properties` so that you can access the web interface from outside the VM:
+
+		#allow any client to connect
+		org.neo4j.server.webserver.address=0.0.0.0
