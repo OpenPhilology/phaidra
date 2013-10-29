@@ -1,12 +1,7 @@
 Django==1.5.3
 argparse==1.2.1
 decorator==3.4.0
-distribute==0.6.24
-httplib2==0.8
-lucene-querybuilder==0.2
+distribute==0.6.49
+djangorestframework==2.3.8
 meld3==0.6.10
--e git+https://github.com/scholrly/neo4django/@1f107335052d7a04a0bc8c8e640bbbf2ec44148f#egg=neo4django-dev
-neo4jrestclient==1.9.0
-python-dateutil==2.1
-six==1.4.1
 wsgiref==0.1.2
