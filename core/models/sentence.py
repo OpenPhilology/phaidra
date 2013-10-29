@@ -1,8 +1,13 @@
-from django.db import models
+from neo4django.db import models
 
 from core.models.document import Document
 
-class Sentence(models.Model):
-	CTS = models.CharField(max_length=200)
-	document = models.ForeignKey(Document)
-	length = models.IntegerField()
+class Sentence(models.NodeModel):
+	
+	CTS = models.StringProperty(max_length=200)
+	length = models.IntegerProperty()
+	document = models.Relationship(Document,
+                                rel_type='belongs_to',
+                                single=True,
+                                related_name='sentences'
+                               )

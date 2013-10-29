@@ -86,3 +86,25 @@ Start up services:
 
 		$ sudo service nginx start
 		$ sudo service uwsgi start
+
+Install and configure the Neo4j database
+---
+Make sure you installed java 1.7. Do this outside your virtualenv.
+
+		$ java -version
+
+If not or less, install java as you prefer (e.g. http://www.cyberciti.biz/faq/howto-installing-oracle-java7-on-ubuntu-linux/) or follow:
+
+		$ sudo add-apt-repository ppa:webupd8team/java
+		$ sudo apt-get update
+		$ sudo apt-get install oracle-java7-installer
+		$ sudo update-java-alternatives -s java-7-oracle
+
+Installing neo4j (http://www.neo4j.org/download):
+
+		$ sudo -s
+		$ wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add - 
+		$ echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
+		$ apt-get update
+		$ apt-get install neo4j
+		$ neo4j start
