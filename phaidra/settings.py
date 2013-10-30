@@ -130,9 +130,11 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'core.models',
-    #'django.contrib.auth',
-    #'django.contrib.contenttypes',
-    #'django.contrib.sessions',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'neo4django.graph_auth',
+    'rest_framework',
     #'django.contrib.sites',
     #'django.contrib.messages',
     #'django.contrib.staticfiles',
@@ -143,6 +145,17 @@ INSTALLED_APPS = (
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.file'
+
+AUTHENTICATION_BACKENDS = ('neo4django.graph_auth.backends.NodeModelBackend',)
+
+AUTH_USER_MODEL = 'graph_auth.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGINATE_BY': 10
+}
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
