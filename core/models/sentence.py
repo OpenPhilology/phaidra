@@ -11,3 +11,5 @@ class Sentence(models.NodeModel):
                                 single=True,
                                 related_name='sentences'
                                )
+	def __unicode__(self):
+		return unicode(self.CTS) or u''

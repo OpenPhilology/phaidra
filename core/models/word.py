@@ -43,5 +43,5 @@ class Word(models.NodeModel):
                                )
 	
 	
-
-	
+	def __unicode__(self):
+		return self.value

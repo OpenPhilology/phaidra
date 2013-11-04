@@ -1,11 +1,14 @@
 from django.conf.urls import patterns, include, url
 #from web import views
-from api import views
-from rest_framework import routers
+#from api import views
+#from rest_framework import routers
 
+from api.api import UserResource
 
-router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
+user_resource = UserResource()
+
+#router = routers.DefaultRouter()
+#router.register(r'api/users', views.UserViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browseable API.
@@ -28,7 +31,8 @@ urlpatterns = patterns('',
 	url(r'^vocab/', 'web.views.vocab'),
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^$', 'web.views.index'),
+	url(r'^api/', include(user_resource.urls))
 
-	url(r'^', include(router.urls)),
-        url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+	#url(r'^', include(router.urls)),
+	#url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 )
