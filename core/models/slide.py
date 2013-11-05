@@ -1,24 +1,19 @@
-from django.db import models
+from neo4django.db import models
 
-from core.models.custom_fields import SeparatedValuesField
-from core.models.module import Module
-from core.models.lesson import Lesson
+class Slide(models.NodeModel):
+	# Template refers to a front-end template
+	# These are used to ultimately render the slide
+	title = models.StringProperty()
+	template = models.URLProperty()
 
-class Slide(models.Model):
-	name = models.CharField(max_length=200)
-	uid = models.IntegerField(default=0)
-	module = models.ForeignKey(Module)
-	lesson = models.ForeignKey(Lesson)
+	# Options is an array of possible solutions to this slide.
+	# It is only applicable to slides that require feedback
+	options = models.ArrayProperty()
 
-	content = models.CharField(max_length=2000)
-	options = SeparatedValuesField()
-	answers = SeparatedValuesField()
+	# Used to compare user-submitted answers to acceptable answers
+	answers = models.ArrayProperty()
 
-	require_all_answers = models.BooleanField(default=True)
-	require_order = models.BooleanField(default=False)
-
-	# User-related metadata
-	response = models.CharField(max_length=50)
-	speed = models.IntegerField(default=0) # In seconds
-	accuracy_degree = models.IntegerField(default=0)
-	timestamp = models.DateTimeField() # UTC
+	# Determines the type of comparisons the system makes between
+	# user-submitted answers and accepted answers
+	require_all_answers = models.BooleanProperty()
+	require_order = models.BooleanProperty()
