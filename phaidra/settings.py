@@ -152,7 +152,7 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.file'
 
 AUTHENTICATION_BACKENDS = ('neo4django.graph_auth.backends.NodeModelBackend',)
 
-AUTH_USER_MODEL = 'graph_auth.User'
+AUTH_USER_MODEL = 'core.models.user.AppUser'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),

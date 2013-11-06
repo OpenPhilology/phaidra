@@ -5,9 +5,11 @@ from django.conf.urls import patterns, include, url
 
 from api.api import UserResource
 from api.api import SlideResource
+from api.api import SubmissionResource
 
 user_resource = UserResource()
 slide_resource = SlideResource()
+submission_resource = SubmissionResource()
 
 #router = routers.DefaultRouter()
 #router.register(r'api/users', views.UserViewSet)
@@ -34,7 +36,9 @@ urlpatterns = patterns('',
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^$', 'web.views.index'),
 	url(r'^api/', include(user_resource.urls)),
-	url(r'^api/', include(slide_resource.urls))
+	url(r'^api/', include(slide_resource.urls)),
+	url(r'^api/', include(submission_resource.urls)),
+
 
 	#url(r'^', include(router.urls)),
 	#url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))

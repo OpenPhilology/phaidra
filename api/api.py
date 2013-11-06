@@ -1,6 +1,7 @@
 from tastypie.resources import ModelResource
 from core.models.user import AppUser
 from core.models.slide import Slide
+from core.models.submission import Submission
 
 class UserResource(ModelResource):
 	class Meta:
@@ -14,3 +15,9 @@ class SlideResource(ModelResource):
 		queryset = Slide.objects.all()
 		resource_name = 'slide'
 		excludes = ['answers', 'require_order', 'require_all']
+
+class SubmissionResource(ModelResource):
+	class Meta:
+		queryset = Submission.objects.all()
+		resource_name = 'submission'
+		excludes = ['require_order', 'require_all']

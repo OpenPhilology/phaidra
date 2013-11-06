@@ -3,21 +3,23 @@ from neo4django.db import models
 from core.models.user import AppUser
 from core.models.slide import Slide
 
-class Answer(models.NodeModel):
+class Submission(models.NodeModel):
 	
-	submission = models.ArrayProperty()
+	value = models.ArrayProperty()
 	started = models.DateTimeProperty()
 	finished = models.DateTimeProperty()
 
 	user = models.Relationship(AppUser,
                                 rel_type='answered_by',
-                                related_name='answers'
+				single=True,
+                                related_name='submissions'
                                )
 
 	slide = models.Relationship(Slide,
                                 rel_type='response_to',
-                                related_name='answers'
+				single=True,
+                                related_name='submissions'
                                )
 
 	def __unicode__(self):
-		return unicode(self.submission) or u''
+		return unicode(self.value) or u''
