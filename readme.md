@@ -93,20 +93,19 @@ Make sure you installed java 1.7. Do this outside your virtualenv.
 
 		$ java -version
 
-If not or less, install java as you prefer (e.g. http://www.cyberciti.biz/faq/howto-installing-oracle-java7-on-ubuntu-linux/) or follow:
+If you have an earlier version of Java or no Java at all, install it as you prefer (e.g. [Installing Java 7 on Ubuntu](http://www.cyberciti.biz/faq/howto-installing-oracle-java7-on-ubuntu-linux/)) or follow:
 
 		$ sudo add-apt-repository ppa:webupd8team/java
 		$ sudo apt-get update
 		$ sudo apt-get install oracle-java7-installer
 		$ sudo update-java-alternatives -s java-7-oracle
 
-Installing neo4j (http://www.neo4j.org/download):
+Install Neo4j (see [Neo4j Downloads](http://www.neo4j.org/download)):
 
-		$ sudo -s
 		$ wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add - 
 		$ echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
-		$ apt-get update
-		$ apt-get install neo4j
+		$ sudo apt-get update
+		$ sudo apt-get install neo4j
 		$ service neo4j-service start
 
 If you are developing remotely, you must uncomment the following line in `/var/lib/neo4j/conf/neo4j-server.properties` so that you can access the web interface from outside the VM:
