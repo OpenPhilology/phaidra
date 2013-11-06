@@ -135,7 +135,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'neo4django.graph_auth',
-	'tastypie',
+    'tastypie',
     # 'rest_framework',
     #'django.contrib.sites',
     #'django.contrib.messages',

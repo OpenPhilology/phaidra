@@ -1,9 +1,9 @@
 from tastypie.resources import ModelResource
-from neo4django.graph_auth.models import User
+from core.models.user import AppUser
 
 class UserResource(ModelResource):
 	class Meta:
-		queryset = User.objects.all()
+		queryset = AppUser.objects.all()
 		resource_name = 'user'
 		excludes = ['password']
 		allowed_methods = ['get']
