@@ -1,4 +1,6 @@
 from tastypie.resources import ModelResource
+from tastypie.authentication import BasicAuthentication
+
 from core.models.user import AppUser
 from core.models.slide import Slide
 from core.models.submission import Submission
@@ -6,9 +8,10 @@ from core.models.submission import Submission
 class UserResource(ModelResource):
 	class Meta:
 		queryset = AppUser.objects.all()
-		resource_name = 'user'
+		resource_name = 'auth/user'
 		excludes = ['password']
 		allowed_methods = ['get']
+		authentication = BasicAuthentication()
 
 class SlideResource(ModelResource):
 	class Meta:
