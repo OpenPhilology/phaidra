@@ -3,15 +3,18 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
 from django.http import Http404
 
-from core.models.user import AppUser
 from core.models.slide import Slide
 from core.models.submission import Submission
+from core.models.user import AppUser
 
-from tastypie.resources import ModelResource
-from tastypie.authentication import BasicAuthentication
-from tastypie.utils import trailing_slash
+from tastypie.authentication import BasicAuthentication, SessionAuthentication, MultiAuthentication
 from tastypie.authorization import Authorization
 from tastypie.exceptions import Unauthorized
+from tastypie.resources import ModelResource
+from tastypie.serializers import Serializer
+from tastypie.utils import trailing_slash
+
+import json
 
 class UserObjectsOnlyAuthorization(Authorization):
 	def read_list(self, object_list, bundle):
@@ -67,26 +70,17 @@ class SubmissionResource(ModelResource):
 		resource_name = 'submission'
 		excludes = ['require_order', 'require_all']
 		always_return_data = True
-		authentication = BasicAuthentication()
+		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
 		authorization = UserObjectsOnlyAuthorization()
+		serializer = Serializer(formats=['json'])
 	
-	#
-	#  Everything below this line, untested! Todo:
-	# 		- Route different types of requests (GET, POST/PUT, PATCH) to do appropriate actions
-	#		- Make this actually work...somehow.
-	#
-
-	def prepend_urls(self):
-		return [
-			#url(r"^submission/", self.wrap_view('post_or_put_submission'), name="api_post_or_put_submission"),
-			url(r"^submission/(?P<pk>[0-9]*)/", self.wrap_view('patch_submission'), name="api_patch_submission")
-		]
-
-	def post_or_put_submission(self, request, **kwargs):
+	# This cannot be the best way of doing this, but deadlines are looming. 
+	def post_list(self, request, **kwargs):
 
 		self.method_check(request, allowed=['post'])
 		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
+		# Create a new Submission node -- we should be validating all of these fields
 		try:
 			node = Submission.objects.create(
 				value = data.get("value"),
@@ -99,7 +93,7 @@ class SubmissionResource(ModelResource):
 				'error': e
 			})
 
-		# Get the slide node that the user is answering
+		# Get the slide node that the user is answering -- this also needs further checks (e.g. can they even submit to this slide yet?)
 		try:
 			slide_node = Slide.objects.get(pk=data.get("slide_pk"))
 		except ObjectDoesNotExist as e:
@@ -112,25 +106,27 @@ class SubmissionResource(ModelResource):
 		try:
 			user_node = AppUser.objects.get(username=data.get("user"))
 		except ObjectDoesNotExist as e:
-			# Is it possible this could occur if the user passes authorization checks?
+			# Is it possible this could occur if the user passes authentication?
 			return self.create_response(request, {
 				'success': False,
 				'error': e
 			})
 
 		# Form the connections from the new Submission node to the existing slide and user nodes
-		node.add(slide_node)
-		node.add(user_node)
+		node.slide = slide_node
+		node.user = user_node
 
-		# Modify the request and serve it back to the user along with a success message!
+		## TO-DO: Fill out the rest of the object with the other fields it's supposed to have
 		body = json.loads(request.body) if type(request.body) is str else request.body
-		## TO-DO: Perform checks against the slide model to see if the user answered the question correctly
 
+		## TO-DO: Perform checks against the slide model to see if the user answered the question correctly
 		node.save()
+
 		return self.create_response(request, body)
 
-	def patch_submission(self, request, **kwargs):
+	def patch_list(self, request, **kwargs):
 		try:
 			node = Submission.objects.select_related(depth=1).get(id=kwargs["pk"])
 		except ObjectDoesNotExist:
 			raise Http404("Cannot update non-existant submission")
+
