@@ -8,10 +8,9 @@ from core.models.submission import Submission
 from core.models.user import AppUser
 
 from tastypie.authentication import BasicAuthentication, SessionAuthentication, MultiAuthentication
-from tastypie.authorization import Authorization
+from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.exceptions import Unauthorized
 from tastypie.resources import ModelResource
-from tastypie.serializers import Serializer
 from tastypie.utils import trailing_slash
 
 import json
@@ -53,16 +52,61 @@ class UserResource(ModelResource):
 	class Meta:
 		queryset = AppUser.objects.all()
 		resource_name = 'user'
-		fields = ['first_name', 'last_name', 'username', 'email', 'is_staff', 'password']
-		allowed_methods = ['get']
+		fields = ['first_name', 'last_name', 'username', 'email', 'is_staff']
+		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
+		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
+		authorization = ReadOnlyAuthorization()
+
+	def post_list(self, object_list, bundle):
+		# Create an App user
+
+	def read_list(self, object_list, bundle):
+		return object_list.filter(pk=bundle.request.user.id)
+
+	def patch_detail(self, request, **kwargs):
+		try:
+			node = AppUser.objects.select_related(depth=1).get(id=kwargs["pk"])
+		except ObjectDoesNotExist:
+			raise Http404("Cannot find user.")
+
+		body = json.loads(request.body) if type(request.body) is str else request.body
+		data = body.copy()
+
+		for field in body:
+			if hasattr(node, field) and not field.startswith("_"):
+				attr = getattr(node, field)
+				value = data[field]
+
+				# Patch relationships
+				if hasattr(attr, "_rel"):
+					related_model = attr._rel.relationship.target_model
+
+					# Do something here...need to come up with structure for relationship updates.
+					#	- When will this actually happen?
+					#	- How do we treat differently o2m relationships vs m2m.
+
+				else:
+					setattr(node, field, value)
+				continue
+
+			# This field is not contained in our model, so discard it
+			del data[field]
+
+		if len(data) > 0:
+			node.save()
+
+		# We need to fill out the entire response so the API is round-trippable before returning the response
+		return self.create_response(request, data)
 
 class SlideResource(ModelResource):
 	class Meta:
 		queryset = Slide.objects.all()
 		resource_name = 'slide'
-		excludes = ['answers', 'require_order', 'require_all']
+		excludes = ['answers', 'require_order', 'require_all_answers']
 		always_return_data = True
+		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
+		authorization = ReadOnlyAuthorization()
 
 class SubmissionResource(ModelResource):
 	class Meta:
@@ -72,9 +116,10 @@ class SubmissionResource(ModelResource):
 		always_return_data = True
 		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
 		authorization = UserObjectsOnlyAuthorization()
-		serializer = Serializer(formats=['json'])
 	
 	# This cannot be the best way of doing this, but deadlines are looming. 
+	# For a cleaner implementation, see: https://github.com/jplusplus/detective.io/blob/master/app/detective/individual.py
+		
 	def post_list(self, request, **kwargs):
 
 		self.method_check(request, allowed=['post'])
@@ -118,15 +163,11 @@ class SubmissionResource(ModelResource):
 
 		## TO-DO: Fill out the rest of the object with the other fields it's supposed to have
 		body = json.loads(request.body) if type(request.body) is str else request.body
+		# data = body.clone()
 
-		## TO-DO: Perform checks against the slide model to see if the user answered the question correctly
+		# Check to see if the user answered the question correctly or not
+
 		node.save()
 
 		return self.create_response(request, body)
-
-	def patch_list(self, request, **kwargs):
-		try:
-			node = Submission.objects.select_related(depth=1).get(id=kwargs["pk"])
-		except ObjectDoesNotExist:
-			raise Http404("Cannot update non-existant submission")
 
