@@ -1,8 +1,10 @@
 from django.conf.urls import url
+from django.contrib.auth import authenticate, login, logout
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
 from django.http import Http404
+from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
 
 from core.models.slide import Slide
 from core.models.submission import Submission
@@ -12,7 +14,6 @@ from tastypie.authentication import BasicAuthentication, SessionAuthentication, 
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.exceptions import Unauthorized
 from tastypie.resources import ModelResource
-from tastypie.serializers import Serializer
 from tastypie.utils import trailing_slash
 
 import json
@@ -50,21 +51,149 @@ class UserObjectsOnlyAuthorization(Authorization):
 	def delete_detail(self, object_list, bundle):
 		raise Unauthorized("Deletion forbidden")
 
-
 class UserResource(ModelResource):
 	class Meta:
 		queryset = AppUser.objects.all()
 		resource_name = 'user'
-		fields = ['first_name', 'last_name', 'username', 'email', 'is_staff', 'password']
-		allowed_methods = ['get']
+		fields = ['first_name', 'last_name', 'username', 'email', 'is_staff']
+		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
+		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
+		authorization = Authorization()
+
+	def prepend_urls(self):
+		params = (self._meta.resource_name, trailing_slash())
+		return [
+			url(r"^(?P<resource_name>%s)/login%s$" % params, self.wrap_view('login'), name="api_login"),
+			url(r"^(?P<resource_name>%s)/logout%s$" % params, self.wrap_view('logout'), name="api_login")
+		]
+
+	def login(self, request, **kwargs):
+		"""
+		Authenticate a user, create a CSRF token for them, and return the user object as JSON.
+		"""
+		self.method_check(request, allowed=['post'])
+
+		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+
+		username = data.get('username', '')
+		password = data.get('password', '')
+
+		if username == '' or password == '':
+			return self.create_response(request, {
+				'success': False,
+				'error_message': 'Missing username or password'
+			})
+		
+		user = authenticate(username=username, password=password)
+		if user:
+			response = self.create_response(request, {
+				'success': True,
+				'username': user.username
+			})
+			response.set_cookie("csrftoken", get_new_csrf_key())
+			return response
+
+		else:
+			return self.create_response(request, {
+				'success': False,
+				'error_message': 'Incorrect username or password'
+			})
+
+	#
+	# This is a problem function. It constantly thinks that request.user is an AnonymousUser, even when we also submit
+	# authentication parameters with it. TO-DO: Fix this.
+	#
+	def logout(self, request, **kwargs):
+		""" 
+		Attempt to log a user out, and return success status.		
+		"""
+		self.method_check(request, allowed=['get'])
+		if not request.user.is_authenticated():
+			return self.create_response(request, {'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
+		if request.user:
+			logout(request)
+			return self.create_response(request, { 'success': True })
+		else:
+			return self.create_response(request, { 'success': False })
+
+	def post_list(self, object_list, bundle):
+		"""
+		Make sure the user isn't already registered, create the user, return user object as JSON.
+		"""
+		self.method_check(request, allowed=['post'])
+		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+
+		try:
+			user = AppUser.objects.create_user(
+				data.get("username"),
+				data.get("email"),
+				data.get("password")
+			)
+			user.save()
+		except IntegrityError as e:
+			return self.create_response(request, {
+				'success': False,
+				'error': e
+			})
+
+		return self.create_response(request, {
+			'success': True
+		})
+
+
+	def read_list(self, object_list, bundle):
+		"""
+		Allow the endpoint for the User Resource to display only the logged in user's information
+		"""
+		return object_list.filter(pk=bundle.request.user.id)
+
+	def patch_detail(self, request, **kwargs):
+		"""
+		Update the fields of a user and return the updated User Resource.	
+		"""
+		try:
+			node = AppUser.objects.select_related(depth=1).get(id=kwargs["pk"])
+		except ObjectDoesNotExist:
+			raise Http404("Cannot find user.")
+
+		body = json.loads(request.body) if type(request.body) is str else request.body
+		data = body.copy()
+
+		restricted_fields = ['is_staff', 'is_user', 'username', 'password']
+
+		for field in body:
+			if hasattr(node, field) and not field.startswith("_"):
+				attr = getattr(node, field)
+				value = data[field]
+
+				# Do not alter relationship fields from this endpoint
+				if not hasattr(attr, "_rel") and field not in restricted_fields:
+					setattr(node, field, value)
+				else:
+					return self.create_response(request, {
+						'success': False,
+						'error_message': 'You are not authorized to update this field.'
+					})
+				continue
+
+			# This field is not contained in our model, so discard it
+			del data[field]
+
+		if len(data) > 0:
+			node.save()
+
+		# We need to fill out the entire response so the API is round-trippable before returning the response
+		return self.create_response(request, data)
 
 class SlideResource(ModelResource):
 	class Meta:
 		queryset = Slide.objects.all()
 		resource_name = 'slide'
-		excludes = ['answers', 'require_order', 'require_all']
+		excludes = ['answers', 'require_order', 'require_all_answers']
 		always_return_data = True
+		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
+		authorization = ReadOnlyAuthorization()
 
 class SubmissionResource(ModelResource):
 	class Meta:
@@ -72,13 +201,17 @@ class SubmissionResource(ModelResource):
 		resource_name = 'submission'
 		excludes = ['require_order', 'require_all']
 		always_return_data = True
-		authentication = BasicAuthentication()
-		authorization = Authorization()
-		serializer = Serializer(formats=['json'])
+		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
+		authorization = UserObjectsOnlyAuthorization()
 	
 	# This cannot be the best way of doing this, but deadlines are looming. 
+	# For a cleaner implementation, see: https://github.com/jplusplus/detective.io/blob/master/app/detective/individual.py
+		
 	def post_list(self, request, **kwargs):
-
+		"""
+		Create a new submission object, which relates to the slide it responds to and the user who submitted it.
+		Return the submission object, complete with whether or not they got the answer correct.
+		"""
 		self.method_check(request, allowed=['post'])
 		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
@@ -120,15 +253,10 @@ class SubmissionResource(ModelResource):
 
 		# create the body
 		body = json.loads(request.body) if type(request.body) is str else request.body
+		# data = body.clone()
 
-		## TO-DO: Perform checks against the slide model to see if the user answered the question correctly (see above)
+		# Check to see if the user answered the question correctly or not
 		node.save()
 
 		return self.create_response(request, body)
-
-	def patch_list(self, request, **kwargs):
-		try:
-			node = Submission.objects.select_related(depth=1).get(id=kwargs["pk"])
-		except ObjectDoesNotExist:
-			raise Http404("Cannot update non-existant submission")
 
