@@ -21,3 +21,6 @@ class Slide(models.NodeModel):
 	# user-submitted answers and accepted answers
 	require_all_answers = models.BooleanProperty()
 	require_order = models.BooleanProperty()
+
+	def __unicode__(self):
+		return unicode(self.pk) or u''

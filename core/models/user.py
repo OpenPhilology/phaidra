@@ -9,6 +9,6 @@ class AppUser(User):
 	objects = UserManager()
 
 	#follows = models.Relationship('self', rel_type='follows', related_name='followed_by')
-	
+
 	def __unicode__(self):
-           return self.username
+		return unicode(self.username) or u''
