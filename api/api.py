@@ -15,6 +15,7 @@ from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.exceptions import Unauthorized
 from tastypie.resources import ModelResource
 from tastypie.utils import trailing_slash
+from tastypie.http import HttpUnauthorized, HttpForbidden
 
 import json
 from neo4django.db.models import NodeModel
@@ -86,19 +87,27 @@ class UserResource(ModelResource):
 			})
 		
 		user = authenticate(username=username, password=password)
+		
 		if user:
-			response = self.create_response(request, {
-				'success': True,
-				'username': user.username
-			})
-			response.set_cookie("csrftoken", get_new_csrf_key())
-			return response
-
+			if user.is_active:
+				login(request, user)
+				response = self.create_response(request, {
+					'success': True,
+					'username': user.username
+				})
+				response.set_cookie("csrftoken", get_new_csrf_key())
+				return response
+			else:
+				return self.create_response(request, {
+					'success': False,
+					'reason': 'disabled',
+				}, HttpForbidden )
 		else:
 			return self.create_response(request, {
 				'success': False,
 				'error_message': 'Incorrect username or password'
 			})
+			
 
 	#
 	# This is a problem function. It constantly thinks that request.user is an AnonymousUser, even when we also submit
@@ -109,13 +118,13 @@ class UserResource(ModelResource):
 		Attempt to log a user out, and return success status.		
 		"""
 		self.method_check(request, allowed=['get'])
-		if not request.user.is_authenticated():
-			return self.create_response(request, {'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
-		if request.user:
+		self.is_authenticated(request)
+		if request.user and request.user.is_authenticated():
 			logout(request)
 			return self.create_response(request, { 'success': True })
 		else:
-			return self.create_response(request, { 'success': False })
+			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
+
 
 	def post_list(self, object_list, bundle):
 		"""
