@@ -6,13 +6,15 @@ from django.db import IntegrityError
 from django.http import Http404
 from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
 
-from core.models.slide import Slide
-from core.models.submission import Submission
-from core.models.user import AppUser
+from app.models import Slide, Submission, AppUser
+#from models.slide import Slide
+#from models.submission import Submission
+#from models.user import AppUser
 
 from tastypie.authentication import BasicAuthentication, SessionAuthentication, MultiAuthentication, Authentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.exceptions import Unauthorized
+from tastypie.models import create_api_key
 from tastypie.resources import ModelResource
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden
@@ -59,14 +61,14 @@ class UserResource(ModelResource):
 		fields = ['first_name', 'last_name', 'username', 'email', 'is_staff']
 		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
-		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
+		authentication = SessionAuthentication()
 		authorization = Authorization()
 
 	def prepend_urls(self):
 		params = (self._meta.resource_name, trailing_slash())
 		return [
 			url(r"^(?P<resource_name>%s)/login%s$" % params, self.wrap_view('login'), name="api_login"),
-			url(r"^(?P<resource_name>%s)/logout%s$" % params, self.wrap_view('logout'), name="api_login")
+			url(r"^(?P<resource_name>%s)/logout%s$" % params, self.wrap_view('logout'), name="api_logout")
 		]
 
 	def login(self, request, **kwargs):
@@ -101,18 +103,13 @@ class UserResource(ModelResource):
 				return self.create_response(request, {
 					'success': False,
 					'reason': 'disabled',
-				}, HttpForbidden )
+				}, HttpForbidden)
 		else:
 			return self.create_response(request, {
 				'success': False,
 				'error_message': 'Incorrect username or password'
 			})
 			
-
-	#
-	# This is a problem function. It constantly thinks that request.user is an AnonymousUser, even when we also submit
-	# authentication parameters with it. TO-DO: Fix this.
-	#
 	def logout(self, request, **kwargs):
 		""" 
 		Attempt to log a user out, and return success status.		
@@ -155,6 +152,7 @@ class UserResource(ModelResource):
 		"""
 		Allow the endpoint for the User Resource to display only the logged in user's information
 		"""
+		self.is_authenticated(request)
 		return object_list.filter(pk=bundle.request.user.id)
 
 	def patch_detail(self, request, **kwargs):
@@ -255,7 +253,6 @@ class SubmissionResource(ModelResource):
 			# in case an error wasn't already raised 			
 			raise ValidationError('Something went wrong with the submission creation.')
 	
-
 		# Form the connections from the new Submission node to the existing slide and user nodes
 		node.slide = slide_node
 		node.user = user_node
@@ -268,4 +265,3 @@ class SubmissionResource(ModelResource):
 		node.save()
 
 		return self.create_response(request, body)
-

@@ -130,7 +130,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'core.models',
+	'app',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -152,7 +152,7 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.file'
 
 AUTHENTICATION_BACKENDS = ('neo4django.graph_auth.backends.NodeModelBackend',)
 
-AUTH_USER_MODEL = 'core.models.user.AppUser'
+AUTH_USER_MODEL = 'app.AppUser'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
