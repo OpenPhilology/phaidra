@@ -7,9 +7,6 @@ from django.http import Http404
 from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
 
 from app.models import Slide, Submission, AppUser
-#from models.slide import Slide
-#from models.submission import Submission
-#from models.user import AppUser
 
 from tastypie.authentication import BasicAuthentication, SessionAuthentication, MultiAuthentication, Authentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
@@ -28,19 +25,19 @@ class UserObjectsOnlyAuthorization(Authorization):
 		return object_list.filter(user=user_pk)
 	
 	def read_detail(self, object_list, bundle):
-		return bundle.obj.user == bundle.request.user.pk
+		return bundle.obj.user == bundle.request.user
 	
 	def create_list(self, object_list, bundle):
 		return object_list
 
 	def create_detail(self, object_list, bundle):
-		return bundle.obj.user == bundle.request.user.pk
+		return bundle.obj.user == bundle.request.user
 
 	def update_list(self, object_list, bundle):
 		allowed = []
 
 		for obj in object_list:
-			if obj.user == bundle.request.user.pk:
+			if obj.user == bundle.request.user:
 				allowed.append(obj)
 
 		return allowed
@@ -122,7 +119,6 @@ class UserResource(ModelResource):
 		else:
 			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
 
-
 	def post_list(self, object_list, bundle):
 		"""
 		Make sure the user isn't already registered, create the user, return user object as JSON.
@@ -195,22 +191,24 @@ class UserResource(ModelResource):
 
 class SlideResource(ModelResource):
 	class Meta:
+		allowed_methods = ['post', 'get', 'patch']
+		always_return_data = True
+		authentication = SessionAuthentication() 
+		authorization = Authorization()
+		excludes = ['answers', 'require_order', 'require_all_answers']
 		queryset = Slide.objects.all()
 		resource_name = 'slide'
-		excludes = ['answers', 'require_order', 'require_all_answers']
-		always_return_data = True
-		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
-		authorization = ReadOnlyAuthorization()
 
 class SubmissionResource(ModelResource):
 	class Meta:
+		allowed_methods = ['post', 'get', 'patch']
+		always_return_data = True
+		authentication = SessionAuthentication() 
+		authorization = Authorization()
+		excludes = ['require_order', 'require_all']
 		queryset = Submission.objects.all()
 		resource_name = 'submission'
-		excludes = ['require_order', 'require_all']
-		always_return_data = True
-		authentication = MultiAuthentication(BasicAuthentication(), SessionAuthentication())
-		authorization = UserObjectsOnlyAuthorization()
-	
+
 	# This cannot be the best way of doing this, but deadlines are looming. 
 	# For a cleaner implementation, see: https://github.com/jplusplus/detective.io/blob/master/app/detective/individual.py
 		
@@ -220,11 +218,16 @@ class SubmissionResource(ModelResource):
 		Return the submission object, complete with whether or not they got the answer correct.
 		"""
 		self.method_check(request, allowed=['post'])
+		self.is_authenticated(request)
+
+		if not request.user or not request.user.is_authenticated():
+			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user })
+
 		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
 		# Get the slide node that the user is answering before creation of the submission -- this also needs further checks (e.g. can they even submit to this slide yet?)
 		try:
-			slide_node = Slide.objects.get(pk=data.get("slide_pk"))
+			slide_node = Slide.objects.get(pk=data.get("slide"))
 		except ObjectDoesNotExist as e:
 			return self.create_response(request, {
 				'success': False,
