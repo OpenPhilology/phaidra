@@ -12,6 +12,9 @@ from datetime import datetime
 class AppUser(User):
 	objects = UserManager()
 
+	def property_names(self):
+		return ['first_name', 'last_name', 'username', 'email', 'is_staff']
+
 	def __unicode__(self):
 		return unicode(self.username) or u''
 
@@ -25,16 +28,26 @@ class Document(models.NodeModel):
 		return unicode(self.name) or u''
 
 class Sentence(models.NodeModel):
-	
 	CTS = models.StringProperty(max_length=200)
 	length = models.IntegerProperty()
 	document = models.Relationship(Document,
                                 rel_type='belongs_to',
                                 single=True,
                                 related_name='sentences'
+				#preserve_ordering=True
                                )
+	def word_objects(self):
+		array = []
+		for obj in reversed(self.words.all()):
+			array.append(obj)
+		return array
+
+	# best this would be created while writing the backend not on calling the method
 	def __unicode__(self):
-		return unicode(self.CTS) or u''
+		words = ""
+		for obj in reversed(self.words.all()):
+			words+= obj.value + " "
+		return str(unicode(words)) or u''
 
 class Slide(models.NodeModel):
 	# Template refers to a front-end template

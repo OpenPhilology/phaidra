@@ -6,13 +6,12 @@ from django.db import IntegrityError
 from django.http import Http404
 from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
 
-from app.models import Slide, Submission, AppUser
+from app.models import Slide, Submission, AppUser, Document, Sentence, Word
 
 from tastypie.authentication import BasicAuthentication, SessionAuthentication, MultiAuthentication, Authentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.exceptions import Unauthorized
-from tastypie.models import create_api_key
-from tastypie.resources import ModelResource
+from tastypie.resources import ModelResource, ALL, ALL_WITH_RELATIONS
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden
 
@@ -186,8 +185,13 @@ class UserResource(ModelResource):
 		if len(data) > 0:
 			node.save()
 
-		# We need to fill out the entire response so the API is round-trippable before returning the response
+		# Returns all field data of the related user as response data
+		data = {}		
+		for property_name in node.property_names(): 		
+			data[property_name] = getattr(node, property_name)
+
 		return self.create_response(request, data)
+
 
 class SlideResource(ModelResource):
 	class Meta:
@@ -245,7 +249,7 @@ class SubmissionResource(ModelResource):
 			})
 
 		# some validation in the manager class of the model
-		# on errors which are not caught in the manager class, the node will still be created (try except wouldn't work as well)
+		# on errors which are not caught in the manager class, the node will still be created because save is called (too?) soon
 		# look into django.db.models.Model save method for saving behaviour on error?!
 		node = Submission.objects.create(
 			value = data.get("value"),
@@ -268,3 +272,70 @@ class SubmissionResource(ModelResource):
 		node.save()
 
 		return self.create_response(request, body)
+
+class DocumentResource(ModelResource):
+	class Meta:
+		queryset = Document.objects.all()
+		resource_name = 'document'
+		always_return_data = True
+		excludes = ['require_order', 'require_all']
+		authorization = ReadOnlyAuthorization()
+		
+	def get_detail(self, request, **kwargs):
+
+		"""
+		returns a document identified by CTS.
+		"""
+		self.method_check(request, allowed=['get'])
+		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+		doc_node = Document.objects.get(CTS=data.get("CTS"))	
+		return self.create_response(request, data)
+
+	#def dehydrate(self, bundle):
+	#	# in case we want to get back not the whole object
+	#	del bundle.data['id']
+	#	del bundle.data['lang']
+	#	del bundle.data['resource_uri']
+	#	del bundle.data['sentences']
+	#	return bundle
+
+class SentenceResource(ModelResource):
+	class Meta:
+		queryset = Sentence.objects.all()
+		resource_name = 'sentence'
+		always_return_data = True
+		excludes = ['require_order', 'require_all']
+		authorization = ReadOnlyAuthorization()
+		filtering = {'CTS': ALL}
+
+	#def read_list(self, object_list, bundle):
+		"""
+		Allow the endpoint for the User Resource to display only the logged in user's information
+		"""
+		#return object_list.filter(pk=bundle.request.user.id)
+	
+	#def get_object_list(self, request):
+	#	data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+	#	return super(SentenceResource, self).get_object_list(request).filter(CTS=data.get("CTS"))
+
+
+	#def get_detail(self, request, **kwargs):
+		"""
+		returns a document identified by CTS.
+		"""
+		#self.method_check(request, allowed=['get'])
+		#data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+		#sent_node = Sentence.objects.get(CTS=data.get("CTS"))	
+
+		#return object_list.filter(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.2")
+		#return self.create_response(request, data)
+
+
+class WordResource(ModelResource):
+	class Meta:
+		queryset = Word.objects.all()
+		resource_name = 'word'
+		always_return_data = True
+		excludes = ['require_order', 'require_all']
+		authorization = ReadOnlyAuthorization()
+		filtering = {'CTS': ALL}

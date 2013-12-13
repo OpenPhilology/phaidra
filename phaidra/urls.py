@@ -1,15 +1,22 @@
 from django.conf.urls import patterns, include, url
 #from web import views
-#from api import views
 #from rest_framework import routers
 
 from api.api import UserResource
 from api.api import SlideResource
 from api.api import SubmissionResource
 
+from api.api import DocumentResource
+from api.api import SentenceResource
+from api.api import WordResource
+
 user_resource = UserResource()
 slide_resource = SlideResource()
 submission_resource = SubmissionResource()
+
+document_resource = DocumentResource()
+sentence_resource = SentenceResource()
+word_resource = WordResource()
 
 #router = routers.DefaultRouter()
 #router.register(r'api/users', views.UserViewSet)
@@ -38,6 +45,10 @@ urlpatterns = patterns('',
 	url(r'^api/', include(user_resource.urls)),
 	url(r'^api/', include(slide_resource.urls)),
 	url(r'^api/', include(submission_resource.urls)),
+
+	url(r'^api/', include(document_resource.urls)),
+	url(r'^api/', include(sentence_resource.urls)),
+	url(r'^api/', include(word_resource.urls)),
 
 
 	#url(r'^', include(router.urls)),
