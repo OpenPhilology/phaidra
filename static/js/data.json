@@ -16,12 +16,12 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/en/3.0.html"
+						"includeHTML": "/static/raw/thuc/fa/3.0.html"
 					},
 					{
 						"type": "slide_multi_composition",
-						"title": "Test Composition",
-						"content": "Make the words agree",
+						"title": "Feminines in Alpha",
+						"content": "What is the accusative plural form for 'The Small Country'",
 						"options": [
 							[
 								{

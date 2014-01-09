@@ -1,7 +1,9 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module'], function($, _, Backbone, Models, Collections, ModuleView) { 
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module', 'views/login'], function($, _, Backbone, Models, Collections, ModuleView, LoginView) { 
 	var Router = {};
 	Router.Router = Backbone.Router.extend({
 		routes: {
+			"":"index",
+			"login/": "login",
 			"module/": "rootModule",
 			"module/:mod": "showModule",
 			"module/:mod/section/:sec": "showSect",
@@ -10,6 +12,13 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 		initialize: function() {
 			// Create/Populate necessary models and collections
 			// User model
+		},
+		index: function() {
+			console.log("Index called");
+		},
+		login: function() {
+			if (!this.login_view)
+				this.login_view = new LoginView({ el: '#loginform'}).render();
 		},
 		rootModule: function() {
 			if (!this.module)

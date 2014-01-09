@@ -19,6 +19,16 @@ def index(request):
 
 	return HttpResponse(template.render(context))
 
+def login(request):
+	template = loader.get_template('login.html')
+
+	context = RequestContext(request, {
+		'name' : 'Learn the Greek Alphabet',
+		'content' : '...'
+	})
+
+	return HttpResponse(template.render(context))
+
 def viz(request):
 	template = loader.get_template('viz.html')
 	context = RequestContext(request, {
