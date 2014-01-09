@@ -18,8 +18,6 @@ from tastypie.http import HttpUnauthorized, HttpForbidden
 import json
 from neo4django.db.models import NodeModel
 
-import logging
-
 class UserObjectsOnlyAuthorization(Authorization):
 	def read_list(self, object_list, bundle):
 		user_pk = bundle.request.user.pk
@@ -73,10 +71,6 @@ class UserResource(ModelResource):
 		"""
 		Authenticate a user, create a CSRF token for them, and return the user object as JSON.
 		"""
-		f = open("file.txt", 'w')
-		f.write('login function\n')
-		f.close()
-
 		self.method_check(request, allowed=['post'])
 		
 		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))

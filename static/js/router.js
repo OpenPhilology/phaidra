@@ -12,6 +12,13 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 		initialize: function() {
 			// Create/Populate necessary models and collections
 			// User model
+
+			window.user = new Models.User();
+			window.user.fetch({
+				success: function() {
+					console.log("success");
+				}
+			});
 		},
 		index: function() {
 			console.log("Index called");

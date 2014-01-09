@@ -4,16 +4,26 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 	Models.Base = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'base',
-			'urlRoot': '/api/'
 		},
-		url: function() {
-			return this.urlRoot + this.modelName;		
+	});
+
+	Models.User = Models.Base.extend({
+		defaults: {
+			'modelName': 'user',
 		},
+		url: '/api/user/',
+		parse: function(response) {
+			if (response && response.meta)
+				this.meta = response.meta;
+
+			return response && response.objects && (_.isArray(response.objects) ? response.objects[0] : response.objects) 
+				|| response;
+		}
 	});
 
 	Models.Lesson = Models.Base.extend({
 		defaults: {
-			'modelMame': 'lesson'
+			'modelName': 'lesson'
 		}
 	});
 
