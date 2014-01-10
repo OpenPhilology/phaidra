@@ -16,7 +16,7 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/fa/3.0.html"
+						"includeHTML": "/static/raw/thuc/en/3.0.html"
 					},
 					{
 						"type": "slide_multi_composition",
