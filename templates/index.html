@@ -9,7 +9,7 @@
 
 	{% block content %}
 		
-		<div class="col-md-5 col-md-push-7 feedback-container">
+		<div class="col-md-4 col-md-push-7 feedback-container">
 
 			<div style="text-align: center">
 				<div class="btn-group">
@@ -20,7 +20,11 @@
 			</div>
 
 			<!-- High-level overview of user progress -->
-			<h2>Thucydides Progress</h2>
+			<h2>TARGET TEXT</h2>
+			<p>
+				Thucydides' <em>History of the Peloponnesian War</em>
+			</p>
+			<!--<h2>Thucydides Progress</h2>
 			<div class="progress-therm">
 				<span class="sec morph" style="width: 20%" title="2,000 words"></span>
 				<span class="sec syn" style="width: 30%" title="3,000 words"></span>
@@ -32,133 +36,148 @@
 				<span class="sec morph" style="width: 10px; height: 10px"></span> Morphology 
 				<span class="sec syn" style="width: 10px; height: 10px"></span> Syntax 
 				<span class="sec voc" style="width: 10px; height: 10px"></span> Vocabulary 
-			</div>
+			</div>-->
 
 			<hr>
 
-			<h2>This Week</h2>
+			<h2>THIS WEEK</h2>
 			<p>Chart here</p>
 
 			<hr>
 
-			<h2>Your Records</h2>
-			<p>Most words learned in a day, lessons completed in a day, days spent doing Greek. etc.</p>
+			<h2>RECENT ACTIVITY</h2>
+			<h3>Yesterday</h3>
+			<p>
+				<span class="badge lesson">+2</span> Completed 2 lessons<br>
+				<span class="badge vocab">+10</span> Learned 10 new words<br>
+			</p>
+			<h3>Last Week</h3>
+			<p>
+				<span class="badge treebank">+4</span> Treebanked 4 sentences<br>
+			</p>
 		</div>
-		<div class="col-md-7 col-md-pull-5 module-container">
+		<div class="col-md-offset-1 col-md-6 col-md-pull-4 module-container">
 
-			<a class="module basics" href="/module">
-				<!--<span class="practice-module glyphicon glyphicon-flash" title="Practice"></span>-->
+			<div class="row">
 
-				<div>
-					<h3>The Greek Alphabet</h3>
-					<span class="circle complete" title="Lowercase"></span>
-					<span class="circle complete" title="Uppercase"></span>
+				<div class="col-sm-3 col-md-3">
+					<a class="module basics" href="/module">
+						<!--<span class="practice-module glyphicon glyphicon-flash" title="Practice"></span>-->
+
+						<div>
+							<h3>The Greek Alphabet</h3>
+							<span class="circle complete" title="Lowercase"></span>
+							<span class="circle complete" title="Uppercase"></span>
+						</div>
+					</a>
 				</div>
-			</a>
 
 			<!-- Modules a user cannot yet access should not be links -->
-			<a href="#" class="module basics">
-				<div>
-					<h3>Greek Diacritics</h3>
-					<span class="circle complete" title="Breathings"></span>
-					<span class="circle complete" title="Syllables"></span>
-					<span class="circle complete" title="Elision"></span>
-					<span class="circle complete" title="Accent"></span>
-					<span class="circle complete" title="Punctuation"></span>
+				<div class="col-sm-3 col-md-3">
+					<a href="#" class="module basics">
+						<div>
+							<h3>Greek Diacritics</h3>
+							<span class="circle complete" title="Breathings"></span>
+							<span class="circle complete" title="Syllables"></span>
+							<span class="circle complete" title="Elision"></span>
+							<span class="circle complete" title="Accent"></span>
+							<span class="circle complete" title="Punctuation"></span>
+						</div>
+					</a>
 				</div>
-			</a>
-			<a href="#" class="module nouns">
-				<div>
-					<h3>Introduction to Nouns</h3>
-					<span class="circle complete" title="Greek Cases"></span>
-					<span class="circle complete" title="Number"></span>
-					<span class="circle complete" title="Gender"></span>
-					<span class="circle complete" title="Declensions"></span>
-					<span class="circle complete" title="Alpha Declension"></span>
+				<div class="col-sm-3 col-md-3">
+					<a href="#" class="module nouns">
+						<div>
+							<h3>Introduction to Nouns</h3>
+							<span class="circle complete" title="Greek Cases"></span>
+							<span class="circle complete" title="Number"></span>
+							<span class="circle complete" title="Gender"></span>
+							<span class="circle complete" title="Declensions"></span>
+							<span class="circle complete" title="Alpha Declension"></span>
+						</div>
+					</a>
 				</div>
-			</a>
-			<a href="#" class="module nouns">
-				<div>
-					<h3><span class="greek-text">α</span>-Declension<br>(Feminines in -<span class="greek-text">η</span>)</h3>
-					<span class="circle complete" title="Introduction"></span>
-					<span class="circle" title="Introduction"></span>
+				<div class="col-sm-3 col-md-3">
+					<a href="#" class="module nouns">
+						<div>
+							<h3><span class="greek-text">α</span>-Declension<br>(Feminines in -<span class="greek-text">η</span>)</h3>
+							<span class="circle complete" title="Introduction"></span>
+							<span class="circle" title="Introduction"></span>
+						</div>
+					</a>
 				</div>
-			</a>
-			<div class="module">
-				<div>
-					<h3>Introduction to Verbs</h3>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
+				<div class="col-sm-3 col-md-3">
+					<div class="module">
+						<div>
+							<h3>Introduction to Verbs</h3>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="module">
-				<div>
-					<h3><span class="greek-text">α</span>-Declension<br>(Feminines in -<span class="greek-text">α</span>)</h3>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
+				<div class="col-sm-3 col-md-3">
+					<div class="module">
+						<div>
+							<h3><span class="greek-text">α</span>-Declension<br>(Feminines in -<span class="greek-text">α</span>)</h3>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="module">
-				<div>
-					<h3>Imperfect Activate Indicative</h3>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
+				<div class="col-sm-3 col-md-3">
+					<div class="module">
+						<div>
+							<h3>Imperfect Activate Indicative</h3>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="module">
-				<div>
-					<h3>O-Declension Nouns (Pt. I)</h3>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
+				<div class="col-sm-3 col-md-3">
+					<div class="module">
+						<div>
+							<h3>O-Declension Nouns (Pt. I)</h3>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="module">
-				<div>
-					<h3>O-Declension Nouns (Pt. II)</h3>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
+				<div class="col-sm-3 col-md-3">
+					<div class="module">
+						<div>
+							<h3>O-Declension Nouns (Pt. II)</h3>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="module">
-				<div>
-					<h3>Future and First Aorist Indicative Active</h3>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
+				<div class="col-sm-3 col-md-3">
+					<div class="module">
+						<div>
+							<h3>Future and First Aorist Indicative Active</h3>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="module">
-				<div>
-					<h3>The Art of Reading</h3>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
-				</div>
-			</div>
-			<div class="module">
-				<div>
-					<h3>Adjectives of the Vowel Declension</h3>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
-				</div>
-			</div>
-			<div class="module">
-				<div>
-					<h3>Analysis of the Primary Tenses of the Indicative Active</h3>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
-					<span class="circle"></span>
+				<div class="col-sm-3 col-md-3">
+					<div class="module">
+						<div>
+							<h3>The Art of Reading</h3>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

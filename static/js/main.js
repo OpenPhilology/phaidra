@@ -6,7 +6,8 @@ requirejs.config({
 		'bootstrap': '../bootstrap/js/bootstrap',
 		'json2': 'lib/json2',
 		'underscore': 'lib/underscore-min',
-		'backbone': 'lib/backbone'
+		'backbone': 'lib/backbone',
+		'd3': 'lib/d3.v3.min'
 	},
 	'shim': {
 		'underscore': {
