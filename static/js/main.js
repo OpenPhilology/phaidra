@@ -23,7 +23,7 @@ requirejs.config({
 	}
 });
 
-require(['jquery', 'underscore', 'backbone', 'router'], function($, _, Backbone, Phaidra) {
+require(['jquery', 'underscore', 'backbone', 'router', 'bootstrap'], function($, _, Backbone, Phaidra) {
 	$(document).ready(function() {
 		var app = new Phaidra.Router();
 		Backbone.history.start({ pushState: true });

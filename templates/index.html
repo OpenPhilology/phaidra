@@ -8,58 +8,51 @@
 	{% endblock %}
 
 	{% block content %}
-		
-		<div class="col-md-4 col-md-push-7 feedback-container">
 
-			<div style="text-align: center">
-				<div class="btn-group">
-					<button type="button" class="btn btn-default">Strengthen Skills</button>
-					<button type="button" class="btn btn-default">Practice Vocab</button>
-					<button type="button" class="btn btn-default">Grammar Guide</button>
-				</div>
+		<div class="col-md-4 col-md-push-8 feedback-container">
+			<div class="calls-to-action" style="text-align: center">
+				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-flash"></span> <span class="hidden-inline-sm">Strengthen</span> Skills</button>
+				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-inbox"></span> <span class="hidden-inline-sm">Practice</span> Vocab</button>
+				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list-alt"></span> Grammar <span class="hidden-inline-sm">Guide</span></button>
 			</div>
 
 			<!-- High-level overview of user progress -->
-			<h2>TARGET TEXT</h2>
-			<p>
-				Thucydides' <em>History of the Peloponnesian War</em>
-			</p>
-			<!--<h2>Thucydides Progress</h2>
-			<div class="progress-therm">
-				<span class="sec morph" style="width: 20%" title="2,000 words"></span>
-				<span class="sec syn" style="width: 30%" title="3,000 words"></span>
-				<span class="sec voc" style="width: 30%" title="3,000 words"></span>
-				<span class="sec rem" style="width: 20%" title="20% to go!"></span>
+			<div class="hidden-sm hidden-xs">
+				<h2>TARGET TEXT</h2>
+				<p>
+					Thucydides' <em>History of the Peloponnesian War</em>
+				</p>
+				<hr>
+
+				<h2>THIS WEEK</h2>
+				<p>Chart here</p>
+
+				<hr>
+
+				<h2>RECENT ACTIVITY</h2>
+				<h3>Yesterday</h3>
+				<p>
+					<span class="badge lesson">+ 2</span> Completed 2 lessons<br>
+					<span class="badge vocab">+ 10</span> Learned 10 new words<br>
+				</p>
+				<h3>Last Week</h3>
+				<p>
+					<span class="badge treebank">+ 4</span> Treebanked 4 sentences<br>
+				</p>
 			</div>
-
-			<div class="legend">
-				<span class="sec morph" style="width: 10px; height: 10px"></span> Morphology 
-				<span class="sec syn" style="width: 10px; height: 10px"></span> Syntax 
-				<span class="sec voc" style="width: 10px; height: 10px"></span> Vocabulary 
-			</div>-->
-
-			<hr>
-
-			<h2>THIS WEEK</h2>
-			<p>Chart here</p>
-
-			<hr>
-
-			<h2>RECENT ACTIVITY</h2>
-			<h3>Yesterday</h3>
-			<p>
-				<span class="badge lesson">+ 2</span> Completed 2 lessons<br>
-				<span class="badge vocab">+ 10</span> Learned 10 new words<br>
-			</p>
-			<h3>Last Week</h3>
-			<p>
-				<span class="badge treebank">+ 4</span> Treebanked 4 sentences<br>
-			</p>
 		</div>
-		<div class="col-md-offset-1 col-md-6 col-md-pull-4 module-container">
+		<div class="col-md-offset-1 col-md-7 col-md-pull-4 module-container">
 
 			<div class="row">
-
+				<div class="col-md-12">
+					<a class="module keep-learning" href="/module" style="min-height: 60px">
+						<div>
+							<h3><span class="glyphicon glyphicon-flag"></span> Keep Learning <span class="greek-text">α</span>-Declension!</h3>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row">
 				<div class="col-sm-3 col-md-3">
 					<a class="module basics" href="/module">
 						<!--<span class="practice-module glyphicon glyphicon-flash" title="Practice"></span>-->

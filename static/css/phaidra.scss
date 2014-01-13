@@ -1,5 +1,5 @@
 /* Color Scheme! */
-$color-pri-one: #BE1E2D; 		// Bright red
+$color-pri-one: #F44D61; //#BE1E2D; 		// Bright red
 $color-pri-two: #1FADAD; 		// Teal
 $color-pri-two-darker: rgba(9, 61, 61, 0.3);
 $color-pri-two-lighter: #56C7C7;
@@ -10,7 +10,10 @@ $color-sec-one: #931926;		// Deep red
 $color-sec-two: #4E6087;		// Indigo
 $color-sec-two-lighter: #62749C; 
 $color-sec-three: #F05629;	 	// Orange
-$color-sec-four: #F5BC78;		// Yellow
+$color-sec-four: #F4BC78;		// Yellow
+
+$color-dark-green: #A3D55F;
+$color-light-green: #49A556;
 
 $text-light-color: #EEE;
 $text-dark-color: #666;
@@ -217,6 +220,43 @@ p strong {
 .main {
 }
 
+@media (max-width: 768px) {
+	.hidden-inline-sm {
+		display: none !important;	
+	}
+	#logo-container {
+		display: none !important;
+	}
+}
+
+/* Styling buttons that are calls to action */
+.calls-to-action {
+	button {
+		border: 0;
+		background-color: darken($color-sec-two, 10%);
+		color: #EEE;
+		@include transition(background-color, .2s, ease-out);
+		margin-top: 3px;
+
+		&:hover {
+			background-color: lighten($color-sec-two, 5%);
+			@include transition(background-color, .2s, ease-out);
+		}
+	}
+	.glyphicon {
+		margin-right: 5px;
+	}
+	.glyphicon-flash {
+		color: $color-sec-four;	
+	}
+	.glyphicon-list-alt {
+		color: $color-pri-one;
+	}
+	.glyphicon-inbox {
+		color: $color-pri-two;
+	}
+}
+
 /* Lesson-related styles */
 .feedback-container {
 	padding: 20px;
@@ -287,6 +327,11 @@ p strong {
 	height: 100%;
 	padding: 20px;
 	text-align: center;
+
+	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
 }
 div.module {
 	background-color: #DDD;
@@ -298,7 +343,6 @@ div.module {
 	display: inline-block;
 	padding: 20px;
 	margin-bottom: 10px;
-
 	text-decoration: none;
 	width: 100%;
 	min-height: 150px;
@@ -323,11 +367,14 @@ div.module {
 	}
 
 	// Different types of modules
+	&.keep-learning {
+		@include gradient($color-pri-two, 20, lighten($color-pri-two, 7%), 100);
+	}
 	&.nouns {
-		background-color: #49A556;
+		background-color: $color-light-green;
 	}
 	&.basics {
-		background-color: #A3D55F;
+		background-color: $color-dark-green;
 	}
 
 	h3 {
