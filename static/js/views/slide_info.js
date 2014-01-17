@@ -21,6 +21,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 						that.template = _.template(responseText);
 						that.$el.html(that.template(that.model.attributes));
 
+						that.$el.find('a[data-toggle="popover"]').popover();
+						that.$el.find('em[data-toggle="tooltip"]').tooltip();
 						// Append a 'next' button
 						//var index = Phaidra.module.get('slides').indexOf(that.model) + 1;
 						//that.$el.append('<p><a href="' + index + '" class="btn-continue">Continue</a></p>');

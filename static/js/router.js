@@ -55,6 +55,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 				this.module_view = new ModuleView({ el: '.slide', model: this.module }).render();
 
 			this.module_view.showSlide(slide);
+
 		},
 		fetchModules: function(mod, sect) {
 			// Fetch our static data, and use it to build the current module section
@@ -63,7 +64,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			var that = this;
 
 			$.ajax({
-				url: '/static/js/data.json',
+				url: '/static/js/design_data.json',
 				dataType: 'text',
 				async: false,
 				success: function(data) {

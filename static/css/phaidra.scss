@@ -55,12 +55,6 @@ body {
 a {
 	color: $color-pri-two;
 }
-p strong {
-	margin-left: 2px;
-	margin-right: 2px;
-	letter-spacing: 0.05em;
-	color: $color-sec-two;
-}
 
 /* Override Bootstrap Styles */
 .container {
@@ -218,6 +212,27 @@ p strong {
 }
 
 .main {
+	overflow: hidden;
+	position: relative;
+	
+	.lesson-right-menu {
+		position: relative;
+		height: 40%;
+
+		a {
+			color: $color-sec-two;
+			position: absolute;
+			bottom: 0;
+			font-size: 70px;
+		}
+	}
+
+	strong {
+		margin-left: 2px;
+		margin-right: 2px;
+		letter-spacing: 0.05em;
+		color: $color-sec-two;
+	}
 }
 
 @media (max-width: 768px) {
@@ -437,7 +452,6 @@ div.module {
 	ul {
 		display: block;
 		padding-left: 0;
-		text-align: center;
 		margin-bottom: 0;
 
 		&.short-multi {
@@ -500,6 +514,26 @@ div.module {
 	font-family: 'Times New Romans';
 	font-size: 1.3em;
 	letter-spacing: 0.1em;
+
+	&.masc {
+		color: #3882C5;
+	}
+	&.fem {
+		color: #E04A62;
+	}
+	&.neut {
+		color: #3C8818;
+	}
+
+	em {
+		background-color: #E5F8FF;
+		border-radius: 10px;
+		padding: 3px;
+		font-style: normal;
+	}
+	em[data-toggle="tooltip"] {
+		cursor: pointer;
+	}
 }
 
 .work {

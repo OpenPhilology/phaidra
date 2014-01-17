@@ -1,0 +1,64 @@
+[
+	{
+		"title": "The Greek Alphabet"
+	},
+	{
+		"title": ""
+	},
+	{
+		"title": ""
+	},
+	{
+		"title": "Introduction to Nouns",
+		"modules": [
+			{
+				"title": "Nouns in Ancient Greek",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/0.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/1.html"
+					},
+					{
+						"type": "slide_multi_composition",
+						"title": "Feminines in Alpha",
+						"content": "What is the accusative plural form for 'The Small Country'",
+						"options": [
+							[
+								{
+									"value": "A",
+									"display": "A"
+								},
+								{
+									"value": "B",
+									"display": "C"
+								}
+							]
+						]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/3.1.1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/3.1.2.html"
+					}
+				]
+			},
+			{
+				"title": "Advanced Noun Stuff",
+				"slides": [
+					{
+						"type": "slide_info",
+						"title": "Exciting stuff!",
+						"content": "Wheeee!!!"
+					}
+				]
+			}
+		]
+	}
+]

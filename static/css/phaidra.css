@@ -8,12 +8,6 @@ body {
 a {
   color: #1fadad; }
 
-p strong {
-  margin-left: 2px;
-  margin-right: 2px;
-  letter-spacing: 0.05em;
-  color: #4e6087; }
-
 /* Override Bootstrap Styles */
 .container {
   max-width: none !important; }
@@ -149,6 +143,23 @@ p strong {
     background-color: #1fadad; }
   .legend .sec.voc {
     background-color: #f4bc78; }
+
+.main {
+  overflow: hidden;
+  position: relative; }
+  .main .lesson-right-menu {
+    position: relative;
+    height: 40%; }
+    .main .lesson-right-menu a {
+      color: #4e6087;
+      position: absolute;
+      bottom: 0;
+      font-size: 70px; }
+  .main strong {
+    margin-left: 2px;
+    margin-right: 2px;
+    letter-spacing: 0.05em;
+    color: #4e6087; }
 
 @media (max-width: 768px) {
   .hidden-inline-sm {
@@ -323,7 +334,6 @@ div.module {
   .slide ul {
     display: block;
     padding-left: 0;
-    text-align: center;
     margin-bottom: 0; }
     .slide ul.short-multi li {
       list-style: none;
@@ -389,6 +399,19 @@ div.module {
   font-family: 'Times New Romans';
   font-size: 1.3em;
   letter-spacing: 0.1em; }
+  .greek-text.masc {
+    color: #3882C5; }
+  .greek-text.fem {
+    color: #E04A62; }
+  .greek-text.neut {
+    color: #3C8818; }
+  .greek-text em {
+    background-color: #E5F8FF;
+    border-radius: 10px;
+    padding: 3px;
+    font-style: normal; }
+  .greek-text em[data-toggle="tooltip"] {
+    cursor: pointer; }
 
 .work {
   width: 3000px;
