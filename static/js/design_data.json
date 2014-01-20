@@ -24,28 +24,95 @@
 					},
 					{
 						"type": "slide_multi_composition",
-						"title": "Feminines in Alpha",
-						"content": "What is the accusative plural form for 'The Small Country'",
+						"title": "Pick the correct definite article",
+						"content": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
 						"options": [
 							[
 								{
-									"value": "A",
-									"display": "A"
+									"value": "ὁ",
+									"display": "ὁ"
 								},
 								{
-									"value": "B",
-									"display": "C"
+									"value": "ἡ",
+									"display": "ἡ"
+								},
+								{
+									"value": "τό",
+									"display": "τό"
 								}
 							]
+						],
+						"answers": [
+							{
+								"value": "ἡ",
+								"correct": "true",
+								"message": "Correct! "
+							}
+						]
+					},
+					{
+						"type": "slide_multi_composition",
+						"title": "Pick the correct definite article",
+						"content": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span class=\"greek-text masc\">πόλεμος</span> (battle)?",
+						"options": [
+							[
+								{
+									"value": "ὁ",
+									"display": "ὁ"
+								},
+								{
+									"value": "ἡ",
+									"display": "ἡ"
+								},
+								{
+									"value": "τό",
+									"display": "τό"
+								}
+							]
+						],
+						"answers": [
+							{
+								"value": "ὁ",
+								"correct": "true",
+								"message": "Correct! "
+							}
+						]
+					},
+					{
+						"type": "slide_multi_composition",
+						"title": "Pick the correct definite article",
+						"content": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span class=\"greek-text neut\">ἔργον</span> (work)?",
+						"options": [
+							[
+								{
+									"value": "ὁ",
+									"display": "ὁ"
+								},
+								{
+									"value": "ἡ",
+									"display": "ἡ"
+								},
+								{
+									"value": "τό",
+									"display": "τό"
+								}
+							]
+						],
+						"answers": [
+							{
+								"value": "τό",
+								"correct": "true",
+								"message": "Correct! "
+							}
 						]
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/en/3.1.1.html"
+						"includeHTML": "/static/raw/thuc/design/2.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/en/3.1.2.html"
+						"includeHTML": "/static/raw/thuc/design/3.html"
 					}
 				]
 			},
