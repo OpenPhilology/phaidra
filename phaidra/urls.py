@@ -9,6 +9,7 @@ from api.api import SubmissionResource
 from api.api import DocumentResource
 from api.api import SentenceResource
 from api.api import WordResource
+from api.api import LemmaResource
 
 user_resource = UserResource()
 slide_resource = SlideResource()
@@ -17,6 +18,7 @@ submission_resource = SubmissionResource()
 document_resource = DocumentResource()
 sentence_resource = SentenceResource()
 word_resource = WordResource()
+lemma_resource = LemmaResource()
 
 #router = routers.DefaultRouter()
 #router.register(r'api/users', views.UserViewSet)
@@ -50,6 +52,7 @@ urlpatterns = patterns('',
 	url(r'^api/', include(document_resource.urls)),
 	url(r'^api/', include(sentence_resource.urls)),
 	url(r'^api/', include(word_resource.urls)),
+    url(r'^api/', include(lemma_resource.urls)),
 
 
 	#url(r'^', include(router.urls)),
