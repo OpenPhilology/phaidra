@@ -29,6 +29,7 @@ class Document(models.NodeModel):
 
 class Sentence(models.NodeModel):
 	CTS = models.StringProperty(max_length=200)
+	sentence = models.StringProperty()
 	length = models.IntegerProperty()
 	document = models.Relationship(Document,
                                 rel_type='belongs_to',
@@ -44,10 +45,11 @@ class Sentence(models.NodeModel):
 
 	# best this would be created while writing the backend not on calling the method
 	def __unicode__(self):
-		words = ""
-		for obj in reversed(self.words.all()):
-			words+= obj.value + " "
-		return str(unicode(words)) or u''
+		#words = ""
+		#for obj in reversed(self.words.all()):
+			#words+= obj.value + " "
+		#return str(unicode(words)) or u''
+		return str(unicode(self.sentence)) or u''
 
 class Slide(models.NodeModel):
 	# Template refers to a front-end template
@@ -124,6 +126,12 @@ class Submission(models.NodeModel):
 	def __unicode__(self):
 		return unicode(self.value) or u''	
 
+class Lemma(models.NodeModel):
+	
+	value = models.StringProperty(max_length=100)
+
+	def __unicode__(self):
+		return self.value
 
 class Word(models.NodeModel):
 	
@@ -163,6 +171,17 @@ class Word(models.NodeModel):
                                 rel_type='belongs_to',
                                 single=True,
                                 related_name='words'
+                               )
+	
+	translation = models.Relationship("Word",
+                                rel_type='translation_of',
+                                related_name='translation'
+                               )
+	
+	lemmas = models.Relationship(Lemma,
+                                rel_type='has_base',
+                                single=True,
+                                related_name='values'
                                )
 	
 	def __unicode__(self):

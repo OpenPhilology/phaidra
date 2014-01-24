@@ -1,12 +1,14 @@
 from django.conf.urls import url
+from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
 from django.http import Http404
 from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
+from django.middleware.csrf import _sanitize_token, constant_time_compare
 
-from app.models import Slide, Submission, AppUser, Document, Sentence, Word
+from app.models import Slide, Submission, AppUser, Document, Sentence, Word, Lemma
 
 from tastypie.authentication import BasicAuthentication, SessionAuthentication, MultiAuthentication, Authentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
@@ -58,6 +60,8 @@ class UserResource(ModelResource):
 		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
 		authentication = SessionAuthentication()
+		#authentication = BasicAuthentication()
+		#authentication = PhaidraSessionAuthentication()
 		authorization = Authorization()
 
 	def prepend_urls(self):
@@ -118,7 +122,7 @@ class UserResource(ModelResource):
 		else:
 			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
 
-	def post_list(self, object_list, bundle):
+	def post_list(self, request, **kwargs):
 		"""
 		Make sure the user isn't already registered, create the user, return user object as JSON.
 		"""
@@ -197,7 +201,8 @@ class SlideResource(ModelResource):
 	class Meta:
 		allowed_methods = ['post', 'get', 'patch']
 		always_return_data = True
-		authentication = SessionAuthentication() 
+		authentication = SessionAuthentication()
+		#authentication = BasicAuthentication()
 		authorization = Authorization()
 		excludes = ['answers', 'require_order', 'require_all_answers']
 		queryset = Slide.objects.all()
@@ -208,6 +213,7 @@ class SubmissionResource(ModelResource):
 		allowed_methods = ['post', 'get', 'patch']
 		always_return_data = True
 		authentication = SessionAuthentication() 
+		#authentication = BasicAuthentication()
 		authorization = Authorization()
 		excludes = ['require_order', 'require_all']
 		queryset = Submission.objects.all()
@@ -339,3 +345,15 @@ class WordResource(ModelResource):
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'CTS': ALL}
+	
+class LemmaResource(ModelResource):
+	class Meta:
+		queryset = Lemma.objects.all()
+		resource_name = 'lemma'
+		always_return_data = True
+		excludes = ['require_order', 'require_all']
+		authorization = ReadOnlyAuthorization()
+		filtering = {'value': ALL}
+
+		
+		
