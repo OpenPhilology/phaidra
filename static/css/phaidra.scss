@@ -510,30 +510,73 @@ div.module {
 	}
 }
 
+table.inflection-table {
+	font-size: 0.9em;
+
+	td {
+	}
+
+	tr.current {
+		background-color: lighten(#E04A62, 10);
+		color: #FFF;
+
+		.greek-text {
+			color: #FFF;
+
+			em {
+				color: #E04A62;
+				background-color: #FFF;
+			}
+		}
+	}
+	tr.future {
+		color: #FFF;
+
+		.greek-text {
+			color: #CCC;
+		}
+	}
+
+}
+
+.label {
+	padding: 0.4em 0.6em 0.3em;
+	background-color: #BBB;
+	margin: 0px 3px;
+}
+
 .greek-text {
-	font-family: 'Times New Romans';
+	font-family: 'Cambria', 'Times New Romans';
 	font-size: 1.3em;
 	letter-spacing: 0.1em;
 
-	&.masc {
-		color: #3882C5;
-	}
-	&.fem {
-		color: #E04A62;
-	}
-	&.neut {
-		color: #3C8818;
-	}
-
 	em {
-		background-color: #E5F8FF;
-		border-radius: 10px;
+		background-color: #FFF0A3;
+		border-radius: 3px;
 		padding: 3px;
 		font-style: normal;
 	}
 	em[data-toggle="tooltip"] {
 		cursor: pointer;
 	}
+}
+.masc {
+	color: #3882C5;
+}
+.fem {
+	color: #E04A62;
+}
+.neut {
+	color: #3C8818;
+}
+
+p .greek-text {
+	border: 1px solid #EEE;
+	padding: 2px;
+	border-radius: 3px;
+	background-color: #F6F6F6;
+	margin-left: 3px;
+	margin-right: 3px;
 }
 
 .work {
