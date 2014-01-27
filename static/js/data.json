@@ -3,16 +3,13 @@
 		"title": "The Greek Alphabet"
 	},
 	{
-		"title": ""
-	},
-	{
-		"title": ""
+		"title": "Breathings, Syllables, Elision, Accent, Punctuation"
 	},
 	{
 		"title": "Introduction to Nouns",
 		"modules": [
 			{
-				"title": "Basic Noun Stuff",
+				"title": "Introduction to Nouns",
 				"slides": [
 					{
 						"type": "slide_info",
@@ -42,20 +39,592 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/en/3.1.2.html"
+					},
+						{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/3.1.3.html"
+					},
+						{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/3.1.4.html"
 					}
+					
+						
+					
 				]
 			},
 			{
-				"title": "Advanced Noun Stuff",
+			"title": "Paradigms",
+			"slides": [
+			
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/3.2.html"
+			}
+			
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/3.3.html"
+			}
+			]
+			}
+			
+			
+			]
+		},
+
+			{
+		"title": "A-Declension Nouns",
+		"modules": [
+			{
+				"title": "Feminines in η",
 				"slides": [
 					{
 						"type": "slide_info",
-						"title": "Exciting stuff!",
-						"content": "Wheeee!!!"
+						"includeHTML": "/static/raw/thuc/en/4.0.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/4.1.html"
 					}
+					
+					
+			},
+			{
+			"title": "Paradigms",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/4.2.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/4.3.html"
+			}
+			]
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "Introduction to Verbs",
+		"modules": [
+		{
+				"title": "Basic Introduction to Verbs",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/5.1.1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/5.1.2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/5.1.3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/5.1.4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/5.1.5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/5.1.6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/5.1.7.html"
+					}
+					
+					
+					
+				]
+			},
+			{
+			"title": "Paradigms and Frequency",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/5.2.html"
+			},
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/5.4.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/5.3.html"
+			}
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "A-Declension Nouns",
+		"modules": [
+				{
+				"title": "Feminines in α",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/6.0.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/6.1.html"
+					}
+					
+				
+				]
+			},
+			{
+			"title": "Paradigms",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/6.2.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/6.3.html"
+			}
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "Verbs: Imperfect Active Indicative",
+		"modules": [
+			{
+				"title": "Verbs: Imperfect Active Indicative",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/7.1.html"
+					}
+				
+				
+					
+				]
+			},
+			{
+			"title": "Paradigms and Frequency",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/7.2.html"
+			},
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/7.4.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/7.3.html"
+			}
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "O-Declension Nouns",
+		"modules": [
+				{
+				"title": "O-Declension Nouns",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/8.1.html"
+					}
+					
+				
+			},
+			{
+			"title": "Paradigms",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/8.2.1.html"
+			},
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/8.2.2.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/8.3.html"
+			}
+			]
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "O-Declension Nouns, continued",
+		"modules": [
+			{
+				"title": "O-Declension Nouns, continued",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/9.1.html"
+					}
+				
+					
+				]
+			},
+			{
+			"title": "Paradigms",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/9.2.1.html"
+			},
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/9.2.2.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/9.3.html"
+			}
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "Verbs: Future and First Aorist Active Indicative",
+		"modules": [
+			{
+				"title": "Verbs: Future and First Aorist Active Indicative",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/10.0.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/10.1.1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/10.1.2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/10.1.3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/10.1.4.html"
+					}
+					
+				
+					
+				]
+			},
+			{
+			"title": "Paradigms and Frequencies",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/10.2.html"
+			},
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/10.4.1.html"
+			},
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/10.4.2.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/10.3.html"
+			}
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "A-Declension Nouns",
+		"modules": [
+
+			{
+				"title": "Masculine A-Declension Nouns",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/11.1.html"
+					}
+					
+					
+				]
+			},
+			{
+			"title": "Paradigms",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/11.2.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/11.3.html"
+			}
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "Verbs: Perfect and Pluperfect Active Indicative",
+		"modules": [
+
+			{
+				"title": "Verbs: Perfect and Pluperfect Active Indicative",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/12.1.1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/12.1.2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/12.1.3.html"
+					},
+					
+					
+				]
+			},
+			{
+			"title": "Paradigms and Frequencies",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/12.2.html"
+			},
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/12.4.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/12.3.html"
+			}
+			
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "The Art of Reading",
+		"modules": [
+			{
+				"title": "Tips for Reading Ancient Greek",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/13.1.1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/13.1.2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/13.3.html"
+					}
+				]
+			}
+			]
+			},
+			{
+		"title": "Adjectives: Vowel Declension",
+		"modules": [
+			{
+				"title": "Adjectives: Vowel Declension",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/14.1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/14.2.html"
+					}
+					
+				]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/14.3.html"
+			}
+			]
+			},
+		
+			
+			]
+			},
+			{
+		"title": "Analysis of the Primary Tenses of the Indicative Active",
+		"modules": [
+		{
+				"title": "Analysis of the Primary Tenses of the Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/15.1.1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/15.1.2.html"
+					}
+					
+				
+				]
+			},
+			{
+			"title": "Paradigms and Frequency",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/15.2.html"
+			},
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/15.4.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/15.3.html"
+			}
+			
+			]
+			}
+			
+			]
+			},
+			{
+		"title": "Analysis of the Secondary Tenses of the Indicative Active",
+		"modules": [
+		{
+				"title": "Analysis of the Secondary Tenses of the Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/16.1.1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/en/16.1.2.html"
+					}
+					
+					
+			]
+			},
+			{
+			"title": "Paradigms and Frequencies",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/16.2.html"
+			},
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/16.4.html"
+			}
+			]
+			},
+			{
+			"title": "Vocabulary",
+			"slides": [
+			{
+			"type": "slide_info",
+			"includeHTML": "/static/raw/thuc/en/16.3.html"
+			}
+			
+			]
+			}
+			
+			
+			
 				]
 			}
 		]
 
-	}
-]
+	}]
+
