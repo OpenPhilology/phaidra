@@ -28,6 +28,7 @@ class Document(models.NodeModel):
 		return unicode(self.name) or u''
 
 class Sentence(models.NodeModel):
+	internal = models.StringProperty(max_length=200)
 	CTS = models.StringProperty(max_length=200)
 	sentence = models.StringProperty()
 	length = models.IntegerProperty()
@@ -49,7 +50,7 @@ class Sentence(models.NodeModel):
 		#for obj in reversed(self.words.all()):
 			#words+= obj.value + " "
 		#return str(unicode(words)) or u''
-		return str(unicode(self.sentence)) or u''
+		return unicode(self.sentence) or u''
 
 class Slide(models.NodeModel):
 	# Template refers to a front-end template
@@ -129,12 +130,12 @@ class Submission(models.NodeModel):
 class Lemma(models.NodeModel):
 	
 	value = models.StringProperty(max_length=100)
-
 	def __unicode__(self):
 		return self.value
 
 class Word(models.NodeModel):
 	
+	internal = models.StringProperty(max_length=200)
 	CTS = models.StringProperty(max_length=200)
 	value = models.StringProperty(max_length=100)
 	# this is the length of the value
