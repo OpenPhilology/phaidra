@@ -395,23 +395,54 @@ div.module {
       margin-right: 20px;
       margin-bottom: 20px; }
 
+table.inflection-table {
+  font-size: 0.9em; }
+  table.inflection-table tr.current {
+    background-color: #e77688;
+    color: #FFF; }
+    table.inflection-table tr.current .greek-text {
+      color: #FFF; }
+      table.inflection-table tr.current .greek-text em {
+        color: #E04A62;
+        background-color: #FFF; }
+  table.inflection-table tr.future {
+    color: #FFF; }
+    table.inflection-table tr.future .greek-text {
+      color: #CCC; }
+
+.label {
+  padding: 0.4em 0.6em 0.3em;
+  background-color: #BBB;
+  margin: 0px 3px; }
+
 .greek-text {
-  font-family: 'Times New Romans';
+  font-family: 'Cambria', 'Times New Romans';
   font-size: 1.3em;
   letter-spacing: 0.1em; }
-  .greek-text.masc {
-    color: #3882C5; }
-  .greek-text.fem {
-    color: #E04A62; }
-  .greek-text.neut {
-    color: #3C8818; }
   .greek-text em {
-    background-color: #E5F8FF;
-    border-radius: 10px;
+    background-color: #FFF0A3;
+    border-radius: 3px;
     padding: 3px;
     font-style: normal; }
   .greek-text em[data-toggle="tooltip"] {
     cursor: pointer; }
+
+.masc {
+  color: #3882C5; }
+
+.fem {
+  color: #E04A62; }
+
+.neut {
+  color: #3C8818; }
+
+p .greek-text {
+  border: 1px solid #EEE;
+  padding: 2px;
+  border-radius: 3px;
+  background-color: #F6F6F6;
+  margin-left: 3px;
+  margin-right: 3px; }
 
 .work {
   width: 3000px;
