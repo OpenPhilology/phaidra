@@ -1,3 +1,8 @@
+from __future__ import unicode_literals
+# coding: utf8
+from django.core.management import setup_environ
+from phaidra import settings
+setup_environ(settings)
 from django.conf.urls import url
 from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
@@ -10,6 +15,7 @@ from django.middleware.csrf import _sanitize_token, constant_time_compare
 
 from app.models import Slide, Submission, AppUser, Document, Sentence, Word, Lemma
 
+from tastypie import fields
 from tastypie.authentication import BasicAuthentication, SessionAuthentication, MultiAuthentication, Authentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.exceptions import Unauthorized
@@ -60,8 +66,6 @@ class UserResource(ModelResource):
 		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
 		authentication = SessionAuthentication()
-		#authentication = BasicAuthentication()
-		#authentication = PhaidraSessionAuthentication()
 		authorization = Authorization()
 
 	def prepend_urls(self):
@@ -214,7 +218,7 @@ class SubmissionResource(ModelResource):
 		always_return_data = True
 		authentication = SessionAuthentication() 
 		#authentication = BasicAuthentication()
-		authorization = Authorization()
+		authorization = UserObjectsOnlyAuthorization()
 		excludes = ['require_order', 'require_all']
 		queryset = Submission.objects.all()
 		resource_name = 'submission'
@@ -279,33 +283,27 @@ class SubmissionResource(ModelResource):
 
 		return self.create_response(request, body)
 
+
 class DocumentResource(ModelResource):
+	
 	class Meta:
 		queryset = Document.objects.all()
 		resource_name = 'document'
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
+		filtering = {'CTS': ALL}
 		
-	def get_detail(self, request, **kwargs):
+	def obj_get_list(self, bundle, **kwargs):
+	#def get_object_list(self, request):
+		if 'CTS' in bundle.request.GET.keys():
+			return super(DocumentResource, self).obj_get_list(bundle, **kwargs).filter(CTS=bundle.request.GET['CTS'])
+		else:
+			return super(DocumentResource, self).obj_get_list(bundle, **kwargs).filter()
 
-		"""
-		returns a document identified by CTS.
-		"""
-		self.method_check(request, allowed=['get'])
-		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
-		doc_node = Document.objects.get(CTS=data.get("CTS"))	
-		return self.create_response(request, data)
-
-	#def dehydrate(self, bundle):
-	#	# in case we want to get back not the whole object
-	#	del bundle.data['id']
-	#	del bundle.data['lang']
-	#	del bundle.data['resource_uri']
-	#	del bundle.data['sentences']
-	#	return bundle
 
 class SentenceResource(ModelResource):
+	
 	class Meta:
 		queryset = Sentence.objects.all()
 		resource_name = 'sentence'
@@ -314,39 +312,14 @@ class SentenceResource(ModelResource):
 		authorization = ReadOnlyAuthorization()
 		filtering = {'CTS': ALL}
 
-	#def read_list(self, object_list, bundle):
-		"""
-		Allow the endpoint for the User Resource to display only the logged in user's information
-		"""
-		#return object_list.filter(pk=bundle.request.user.id)
-	
-	#def get_object_list(self, request):
-	#	data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
-	#	return super(SentenceResource, self).get_object_list(request).filter(CTS=data.get("CTS"))
+ 		#def get_object_list(self, request):
+  		# data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+   		# return super(SentenceResource, self).get_object_list(request).filter(CTS=data.get("CTS"))
 
 
-	#def get_detail(self, request, **kwargs):
-		"""
-		returns a document identified by CTS.
-		"""
-		#self.method_check(request, allowed=['get'])
-		#data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
-		#sent_node = Sentence.objects.get(CTS=data.get("CTS"))	
-
-		#return object_list.filter(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.2")
-		#return self.create_response(request, data)
-
-
-class WordResource(ModelResource):
-	class Meta:
-		queryset = Word.objects.all()
-		resource_name = 'word'
-		always_return_data = True
-		excludes = ['require_order', 'require_all']
-		authorization = ReadOnlyAuthorization()
-		filtering = {'CTS': ALL}
-	
 class LemmaResource(ModelResource):
+	
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj))
 	class Meta:
 		queryset = Lemma.objects.all()
 		resource_name = 'lemma'
@@ -354,6 +327,21 @@ class LemmaResource(ModelResource):
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'value': ALL}
+		#limit = 50
 
-		
-		
+
+class WordResource(ModelResource):
+	# doesnt work for detail words with relations
+	base = fields.ToOneField('api.api.LemmaResource', lambda bundle: Lemma.objects.get(value=bundle.obj), null=True)
+	class Meta:
+		queryset = Word.objects.all()
+		resource_name = 'word'
+		always_return_data = True
+		excludes = ['require_order', 'require_all']
+		authorization = ReadOnlyAuthorization()
+		filtering = {'CTS': ALL}
+		#limit = 100
+
+					
+					
+					
