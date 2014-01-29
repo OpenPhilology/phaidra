@@ -64,7 +64,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			var that = this;
 
 			$.ajax({
-				url: '/static/js/data.json',
+				url: '/static/js/design_data.json',
 				dataType: 'text',
 				async: false,
 				success: function(data) {

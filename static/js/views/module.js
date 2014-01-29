@@ -3,7 +3,9 @@ define(
 	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView) { 
 
 		var View = Backbone.View.extend({
-			events: {},
+			events: {
+				'click .lesson-right-menu a': 'navigate'	
+			},
 			initialize: function() {
 				this.slides = [];
 			},
@@ -50,6 +52,8 @@ define(
 				return this;	
 			},
 			showSlide: function(slide) {
+				slide = parseInt(slide);
+
 				// Show the correct slide
 				for (var i = 0; i < this.slides.length; i++) {
 					this.slides[i].hide();
@@ -64,6 +68,20 @@ define(
 					else
 						$(progress[i]).removeClass('complete');
 				}
+
+				// Update the navigation link
+				if (!this.slides[slide + 1])
+					this.$el.find('.lesson-right-menu a').hide();
+				else {
+					var url = '/' + Backbone.history.fragment.split('/').splice(0, 5).join('/') + '/' + (1 + slide);
+					this.$el.find('.lesson-right-menu a').attr('href', url);
+				}
+			},
+			navigate: function(e) {
+				e.preventDefault();
+
+				var url = $(e.target).parent().attr('href');
+				Backbone.history.navigate(url, { trigger: true });
 			}
 		});
 

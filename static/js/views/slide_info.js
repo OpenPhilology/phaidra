@@ -3,7 +3,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 		tagName: 'div',
 		className: 'slide-unit',
 		events: {
-			"click .btn-continue": "navigate"
+			//"click .btn-continue": "navigate"
 		},
 		initialize: function(options) {
 
@@ -23,8 +23,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 
 						that.$el.find('a[data-toggle="popover"]').popover();
 						that.$el.find('em[data-toggle="tooltip"]').tooltip();
+
 						// Append a 'next' button
-						//var index = Phaidra.module.get('slides').indexOf(that.model) + 1;
+						//var index = that.module.get('slides').indexOf(that.model) + 1;
 						//that.$el.append('<p><a href="' + index + '" class="btn-continue">Continue</a></p>');
 					},
 					error: function(responseText) {
@@ -43,9 +44,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 			e.preventDefault();
 
 			// Try not to laugh -- this will be fixed
-			var url = Backbone.history.fragment.split('/').splice(0, 5).join('/') + '/' + (this.model.get('index') + 1);
+			//var url = Backbone.history.fragment.split('/').splice(0, 5).join('/') + '/' + (this.model.get('index') + 1);
 
-			Backbone.history.navigate(url, { trigger: true });
+			//Backbone.history.navigate(url, { trigger: true });
 		}
 	});
 
