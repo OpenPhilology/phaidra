@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 # coding: utf8
 from django.core.management import setup_environ
 from phaidra import settings
+from tastypie.bundle import Bundle
 setup_environ(settings)
 from django.conf.urls import url
 from django.conf import settings
@@ -329,19 +330,77 @@ class LemmaResource(ModelResource):
 		filtering = {'value': ALL}
 		#limit = 50
 
+class LemmaWordResource(ModelResource):
+	#EXPENSIVE!!!!
+	# I can only ask for lemma, if word objects will be returned: filter(lemma=bundle.obj.lemma))
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj)) 
+	class Meta:
+		# merges with the return of obj:get
+		queryset = Lemma.objects.all()
+		resource_name = 'lemma/word'
+		always_return_data = True
+		excludes = ['require_order', 'require_all']
+		authorization = ReadOnlyAuthorization()
+		filtering = {'value': ALL}
+		limit = 5
+
+	# tooo slow	manipulate queryset to make it faster how???		
+	#def get_object_list(self, request):
+	def obj_get_list(self, bundle, **kwargs):
+		#for key in bundle.request.GET.iterkeys():
+		if 'pos' in bundle.request.GET.keys() and 'gender' in bundle.request.GET.keys():
+			data = []
+			words = Word.objects.filter(pos=bundle.request.GET['pos'], gender="neut" )
+			for word in words:
+				# catch target language words without w/o lemma!!
+				if word.lemmas is not None and word.lemmas.valuesCount() >= 5:
+					data.append(word.lemmas)
+			# returns not the objects, only the lemma api urls
+			return data
+			#return Word.objects.filter(pos=bundle.request.GET['pos'])	
+		#elif 'gender' in bundle.request.GET.keys():
+			#return Word.objects.filter(gender=bundle.request.GET['gender'])
+
+		return super(LemmaWordResource, self).obj_get_list(bundle, **kwargs).filter()
+	
+	#def dehydrate_value(self, bundle):
+		#return unicode(bundle.obj.lemma) or u''  
 
 class WordResource(ModelResource):
+	
 	# doesnt work for detail words with relations
-	base = fields.ToOneField('api.api.LemmaResource', lambda bundle: Lemma.objects.get(value=bundle.obj), null=True)
+	base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True)
+	  
 	class Meta:
 		queryset = Word.objects.all()
 		resource_name = 'word'
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
-		filtering = {'CTS': ALL}
+		filtering = {'CTS': ALL,
+					'pos': ALL, 
+					'gender': ALL}
 		#limit = 100
-
+		
+	def build_filters(self, filters=None):
+		"""
+		a filter example to compose several conditions 
+		"""
+		if filters is None:
+			filters = {}
+	 		
+	 	orm_filters = super(WordResource, self).build_filters(filters)
+	
+		if 'q' in filters:
+			#/api/word/?q=perseus-grc1
+			orm_filters['CTS__contains'] = filters['q'] # comes from the url: dyn; contains greek words, that are
+			orm_filters['pos'] = "noun"					# static: nouns and
+			orm_filters['gender'] = "masc"				# masc
+		return orm_filters
+			
+		
 					
-					
-					
+	
+	
+	
+	
