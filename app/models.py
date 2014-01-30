@@ -130,8 +130,18 @@ class Submission(models.NodeModel):
 class Lemma(models.NodeModel):
 	
 	value = models.StringProperty(max_length=100)
+	
 	def __unicode__(self):
-		return self.value
+		return unicode(self.value) or u''
+	
+	"""
+	returns the no. of incoming words to a lemma.
+	"""
+	def valuesCount(self):
+		if self.values is not None:
+			return len(self.values.all())
+		else :
+			return None
 
 class Word(models.NodeModel):
 	
@@ -186,4 +196,4 @@ class Word(models.NodeModel):
                                )
 	
 	def __unicode__(self):
-		return self.value
+		return unicode(self.value) or u''
