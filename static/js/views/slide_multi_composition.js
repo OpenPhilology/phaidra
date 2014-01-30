@@ -22,6 +22,17 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 
 			this.$el.find('ul.answers').append(answer);
 			selectedOption.hide();
+
+			// Check answer, if appropriate
+
+			if (this.$el.find('ul.answers li').length == this.model.get('answers').length) {
+				var attempt = [];
+				var btns = this.$el.find('ul.answers li a');
+				for (var i = 0; i < btns.length; i++)
+					attempt.push(btns[i].getAttribute('data-value'))
+
+				this.checkAnswer(attempt);
+			}
 		},
 		deselectAnswer: function(e) {
 			e.preventDefault();
@@ -30,7 +41,27 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 			answer.hide();
 
 			answer.data('source').show();
+			answer.remove();
+		},
+		checkAnswer: function(attempt) {
+			if (this.model.checkAnswer(attempt)) {
 
+				// Display correct answer message
+				var info = this.$el.find('.alert');
+				info.html(this.model.get('successMsg'));
+				info.removeClass('alert-info');
+				info.addClass('alert-success');
+				info.slideDown();
+			}
+			else {
+
+				// Give the user a hint so they can try again
+				var info = this.$el.find('.alert');
+				info.html(this.model.get('hintMsg'));
+				info.removeClass('alert-success');
+				info.addClass('alert-info');
+				info.slideDown();
+			}
 		}
 	});
 

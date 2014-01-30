@@ -46,13 +46,12 @@
 								}
 							]
 						],
-						"answers": [
-							{
-								"value": "ἡ",
-								"correct": "true",
-								"message": "Correct! "
-							}
-						]
+						"answers": ["ἡ"],
+						"successMsg": "<strong>Right Answer!</strong> The definite article for feminine, second declension nouns like <span class=\"greek-text\">ἡμέρα</span> is <span class=\"greek-text\">ἡ</span>",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
 					},
 					{
 						"type": "slide_multi_composition",
@@ -74,13 +73,11 @@
 								}
 							]
 						],
-						"answers": [
-							{
-								"value": "ὁ",
-								"correct": "true",
-								"message": "Correct! "
-							}
-						]
+						"answers": ["ἡ"],
+						"successMsg": "",
+						"hintMsg": "",
+						"require_order": "false",
+						"require_all": "true"
 					},
 					{
 						"type": "slide_multi_composition",
@@ -102,13 +99,11 @@
 								}
 							]
 						],
-						"answers": [
-							{
-								"value": "τό",
-								"correct": "true",
-								"message": "Correct! "
-							}
-						]
+						"answers": ["ἡ"],
+						"successMsg": "",
+						"hintMsg": "",
+						"require_order": "false",
+						"require_all": "true"
 					},
 					{
 						"type": "slide_info",

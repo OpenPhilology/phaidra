@@ -12,6 +12,9 @@ a {
 .container {
   max-width: none !important; }
 
+.alert.alert-success strong {
+  color: #19641A !important; }
+
 /* Header */
 .banner {
   color: #EEE;

@@ -74,7 +74,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 
 					var slides = new Collections.Slides();
 					for (var i = 0; i < slide_data.length; i++) {
-						slides.add(new Models.Module(slide_data[i]));
+						slides.add(new Models.Slide(slide_data[i]));
 					}
 
 					that.module = new Models.Module({
