@@ -2,7 +2,7 @@ define(['jquery', 'underscore', 'backbone', 'models'], function($, _, Backbone, 
 
 	var Collections = {};
 
-	// Some modidifications to Backbone to work with Tastypie
+	// Some modifications to Backbone to work with Tastypie
 	Collections.Base = Backbone.Collection.extend({
 		urlRoot: '/api/',
 		url: function() {
@@ -44,15 +44,15 @@ define(['jquery', 'underscore', 'backbone', 'models'], function($, _, Backbone, 
 		}
 	});
 
-	Collections.Modules = Collections.Base.extend({ 
+	Collections.Modules = Backbone.Collection.extend({ 
 		model: Models.Module
 	});
 
-	Collections.Slides = Collections.Base.extend({
+	Collections.Slides = Backbone.Collection.extend({
 		model: Models.Slide
 	});
 
-	Collections.Vocab = Collections.Base.extend({
+	Collections.Vocab = Backbone.Collection.extend({
 		model: Models.Word
 	});
 

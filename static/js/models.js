@@ -1,13 +1,7 @@
 define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 	var Models = {};
 
-	Models.Base = Backbone.Model.extend({
-		defaults: {
-			'modelName': 'base',
-		},
-	});
-
-	Models.User = Models.Base.extend({
+	Models.User = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'user',
 		},
@@ -21,55 +15,60 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 		}
 	});
 
-	Models.Lesson = Models.Base.extend({
+	Models.Lesson = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'lesson'
 		}
 	});
 
-	Models.Module = Models.Base.extend({
+	Models.Module = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'module',
 			'levels': 0
 		}
 	});
 
-	Models.Slide = Models.Base.extend({
+	Models.Slide = Backbone.Model.extend({
+		initialize: function() {
+			_.bindAll(this, 'checkAnswer');
+		},
 		defaults: {
 			'modelName': 'slide',
-			/*'uid': 0,
-			'title': '',
-			'moduleTitle': '',
-			'type': '',		// Determines the view and template that will be used
-			'content': '',
-			'options': [],
-			'submission': ''*/
 		},
-		// Check user's submission against the server 
-		checkSubmission: function(submission, options) {
-			var that = this;
+		checkAnswer: function(attempt) {
+			if (typeof(attempt) == 'string')
+				attempt = [attempt]
 
-			this.save({ 
-					submission: submission 
-				},
-				{ 
-					patch: true,
+			// Check if all submitted attempts are somewhere in answers
+			if (!Boolean(this.get('require_all'))) {
+				for (var i = 0; i < attempt.length; i++)
+					if (this.get('answers').indexOf(attempt[i]) == -1)
+						return false;
 
-					// Allow views to handle how passing and failing submissions are handled
-					success: function(model, response, options) {
-						if (that.options && that.options.success)
-							that.options.success(model, response, options);					
-					},
-					error: function(model, xhr, options) {
-						if (that.options && that.options.error)
-							that.options.error(model, xhr, options);
+				return true;
+			}
+			// Require order implies that require_all is also true
+			else if (Boolean(this.get('require_order'))) {
+				if (this.get('answers').length !== attempt.length)
+					return false;
+				else {
+					for (var i = 0; i < attempt.length; i++) {
+						if (attempt[i] != this.get('answers')[i]) 
+							return false;
 					}
+
+					return true;
 				}
-			);
+			}
+			// All Required, but order is not required
+			else if (Boolean(this.get('require_all')) && !Boolean(this.get('require_order')))
+				return $(attempt).not(this.get('answers')).length == 0 && $(this.get('answers')).not(attempt).length == 0;
+			else
+				return false;
 		}
 	});
 
-	Models.Word = Models.Base.extend({
+	Models.Word = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'word',
 			/*
@@ -80,10 +79,10 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 		}
 	});
 
-	_.extend(Models.Lesson.defaults, Models.Base.defaults);
-	_.extend(Models.Module.defaults, Models.Base.defaults);
-	_.extend(Models.Slide.defaults, Models.Base.defaults);
-	_.extend(Models.Word.defaults, Models.Base.defaults);
+	//_.extend(Models.Lesson.defaults, Models.Base.defaults);
+	//_.extend(Models.Module.defaults, Models.Base.defaults);
+	//_.extend(Models.Slide.defaults, Models.Base.defaults);
+	//_.extend(Models.Word.defaults, Models.Base.defaults);
 
 	return Models;
 });

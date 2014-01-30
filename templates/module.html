@@ -12,28 +12,31 @@
 	<div class="col-xs-1 col-sm-1 lesson-left-menu">
 		<a href="/"><span class="glyphicon glyphicon-chevron-left"></span> All Lessons</a>
 	</div>
-	<div class="col-xs-10 col-sm-10 lesson-container">
-		<div class="slide">
-			<div class="lesson-header">
-				<h3>Module Title</h3>
+	<div class="col-xs-11 col-sm-11 lesson-container">
+		<div class="row slide">
+			<div class="col-xs-11">
+				<div class="lesson-header">
+					<h3>Module Title</h3>
+				</div>
+
+				{% spaceless %}
+					<div class="lesson-progress"></div>
+				{% endspaceless %}
+
+				<div id="lesson-content">
+					{# These are the front-end templates that Backbone/Underscore uses #}
+					{% include 'slides.html' %}
+				</div>
+
+				<div id="lesson-feedback">
+					{# These are the types of feedback a user can receive #}
+				</div>
 			</div>
-
-			{% spaceless %}
-				<div class="lesson-progress"></div>
-			{% endspaceless %}
-
-			<div id="lesson-content">
-				{# These are the front-end templates that Backbone/Underscore uses #}
-				{% include 'slides.html' %}
-			</div>
-
-			<div id="lesson-feedback">
-				{# These are the types of feedback a user can receive #}
+			<div class="col-xs-1 lesson-right-menu">
+				{# This must be accessible by the module view #}
+				<a href="#" title="Next"><span class="glyphicon glyphicon-chevron-right"></span></a>	
 			</div>
 		</div>
-	</div>
-	<div class="col-xs-1 col-sm-1 lesson-right-menu">
-		<a href="#" title="Next"><span class="glyphicon glyphicon-chevron-right"></span></a>	
 	</div>
 
 {% endblock %}

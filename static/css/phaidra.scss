@@ -60,6 +60,13 @@ a {
 .container {
 	max-width: none !important;
 }
+.alert {
+	&.alert-success {
+		strong {
+			color: #19641A !important;
+		}
+	}
+}
 
 
 /* Header */
@@ -339,7 +346,6 @@ a {
 }
 .module-container {
 	background: rgba(255, 255, 255, 0.7);
-	height: 100%;
 	padding: 20px;
 	text-align: center;
 
