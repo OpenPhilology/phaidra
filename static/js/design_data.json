@@ -47,7 +47,7 @@
 							]
 						],
 						"answers": ["ἡ"],
-						"successMsg": "<strong>Right Answer!</strong> The definite article for feminine, second declension nouns like <span class=\"greek-text\">ἡμέρα</span> is <span class=\"greek-text\">ἡ</span>",
+						"successMsg": "<strong>Right Answer!</strong> The definite article for feminine nouns like <span class=\"greek-text\">ἡμέρα</span> is <span class=\"greek-text\">ἡ</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
@@ -73,9 +73,9 @@
 								}
 							]
 						],
-						"answers": ["ἡ"],
-						"successMsg": "",
-						"hintMsg": "",
+						"answers": ["ὁ"],
+						"successMsg": "<strong>Right Answer!</strong> The definite article for masculine nouns like <span class=\"greek-text\">πόλεμος</span> is <span class=\"greek-text\">ὁ</span>.",
+						"hintMsg": "<strong>Not Quite</strong>",
 						"require_order": "false",
 						"require_all": "true"
 					},
@@ -99,9 +99,9 @@
 								}
 							]
 						],
-						"answers": ["ἡ"],
-						"successMsg": "",
-						"hintMsg": "",
+						"answers": ["τό"],
+						"successMsg": "<strong>Right Answer!</strong> The definite article for neuter nouns like <span class=\"greek-text\">ἔργον</span> is <span class=\"greek-text\">τό</span>.",
+						"hintMsg": "<strong>Not Quite</strong>",
 						"require_order": "false",
 						"require_all": "true"
 					},
