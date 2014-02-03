@@ -19,6 +19,7 @@ class AppUser(User):
 		return unicode(self.username) or u''
 
 class Document(models.NodeModel):
+	name_eng = models.StringProperty(max_length=200)
 	CTS = models.StringProperty(max_length=200)	
 	author = models.StringProperty(max_length=200)
 	name = models.StringProperty(max_length=200)
@@ -28,6 +29,8 @@ class Document(models.NodeModel):
 		return unicode(self.name) or u''
 
 class Sentence(models.NodeModel):
+	# introduced to get API filed work
+	document_name = models.StringProperty(max_length=200)
 	internal = models.StringProperty(max_length=200)
 	CTS = models.StringProperty(max_length=200)
 	sentence = models.StringProperty()
@@ -38,6 +41,7 @@ class Sentence(models.NodeModel):
                                 related_name='sentences'
 				#preserve_ordering=True
                                )
+	
 	def word_objects(self):
 		array = []
 		for obj in reversed(self.words.all()):

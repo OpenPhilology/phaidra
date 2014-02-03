@@ -285,25 +285,28 @@ class SubmissionResource(ModelResource):
 		return self.create_response(request, body)
 
 
+
 class DocumentResource(ModelResource):
 	
+	#sents = fields.ToManyField('app.api.SentenceResource', 'file', full=True, null = True, blank = True)
+	# doesnt work yet
+	sents = fields.ToManyField('api.api.SentenceResource', lambda bundle: Sentence.objects.filter(document_name = bundle.obj.name ), full = True, null = True, blank = True )#full=True)
+							
 	class Meta:
 		queryset = Document.objects.all()
 		resource_name = 'document'
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
-		filtering = {'CTS': ALL}
-		
-	def obj_get_list(self, bundle, **kwargs):
-	#def get_object_list(self, request):
-		if 'CTS' in bundle.request.GET.keys():
-			return super(DocumentResource, self).obj_get_list(bundle, **kwargs).filter(CTS=bundle.request.GET['CTS'])
-		else:
-			return super(DocumentResource, self).obj_get_list(bundle, **kwargs).filter()
+		filtering = {'CTS': ALL,
+					'lang': ALL,
+					#'sent': ALL_WITH_RELATIONS
+					}
 
 
 class SentenceResource(ModelResource):
+	
+	file = fields.ForeignKey(DocumentResource, 'document')
 	
 	class Meta:
 		queryset = Sentence.objects.all()
@@ -311,16 +314,15 @@ class SentenceResource(ModelResource):
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
-		filtering = {'CTS': ALL}
-
- 		#def get_object_list(self, request):
-  		# data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
-   		# return super(SentenceResource, self).get_object_list(request).filter(CTS=data.get("CTS"))
-
-
+		filtering = {'CTS': ALL
+					}
+		#limit=2
+ 	
 class LemmaResource(ModelResource):
 	
+	# this works because Lemma object unicode function equals the lemma attribute of the word model
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj))
+	
 	class Meta:
 		queryset = Lemma.objects.all()
 		resource_name = 'lemma'
@@ -331,45 +333,40 @@ class LemmaResource(ModelResource):
 		#limit = 50
 
 class LemmaWordResource(ModelResource):
-	#EXPENSIVE!!!!
-	# I can only ask for lemma, if word objects will be returned: filter(lemma=bundle.obj.lemma))
+
+	# filter(lemma=bundle.obj.lemma))
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj)) 
 	class Meta:
-		# merges with the return of obj:get
+		# merges with the return of obj_get_list
 		queryset = Lemma.objects.all()
 		resource_name = 'lemma/word'
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'value': ALL}
-		limit = 5
+		limit = 100
 
-	# tooo slow	manipulate queryset to make it faster how???		
-	#def get_object_list(self, request):
 	def obj_get_list(self, bundle, **kwargs):
-		#for key in bundle.request.GET.iterkeys():
-		if 'pos' in bundle.request.GET.keys() and 'gender' in bundle.request.GET.keys():
+		if ('pos' and 'posAdd') in bundle.request.GET.keys():
 			data = []
-			words = Word.objects.filter(pos=bundle.request.GET['pos'], gender="neut" )
+			## http://localhost:8000/api/lemma/word/?pos=verb&posAdd=o_stem&format=json
+			words = Word.objects.filter(pos=bundle.request.GET['pos'], posAdd__contains = bundle.request.GET['posAdd'] )
 			for word in words:
 				# catch target language words without w/o lemma!!
-				if word.lemmas is not None and word.lemmas.valuesCount() >= 5:
+				if word.lemmas is not None and word.lemmas.valuesCount() >= 2:
 					data.append(word.lemmas)
-			# returns not the objects, only the lemma api urls
-			return data
-			#return Word.objects.filter(pos=bundle.request.GET['pos'])	
-		#elif 'gender' in bundle.request.GET.keys():
-			#return Word.objects.filter(gender=bundle.request.GET['gender'])
-
+			return data	
 		return super(LemmaWordResource, self).obj_get_list(bundle, **kwargs).filter()
+		##return super(WordResource, self).obj_get_list(bundle, **kwargs).filter(CTS=bundle.request.GET['CTS'])		
 	
 	#def dehydrate_value(self, bundle):
 		#return unicode(bundle.obj.lemma) or u''  
 
+
 class WordResource(ModelResource):
 	
 	# doesnt work for detail words with relations
-	base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True)
+	base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), full = True, null=True, blank=True) 
 	  
 	class Meta:
 		queryset = Word.objects.all()
@@ -380,22 +377,22 @@ class WordResource(ModelResource):
 		filtering = {'CTS': ALL,
 					'pos': ALL, 
 					'gender': ALL}
-		#limit = 100
+		limit = 5
 		
 	def build_filters(self, filters=None):
 		"""
-		a filter example to compose several conditions 
+		a filter example to compose several conditions within a filer
 		"""
 		if filters is None:
 			filters = {}
-	 		
+				 		
 	 	orm_filters = super(WordResource, self).build_filters(filters)
-	
-		if 'q' in filters:
+	 	
+	 	if 'q' in filters:
 			#/api/word/?q=perseus-grc1
-			orm_filters['CTS__contains'] = filters['q'] # comes from the url: dyn; contains greek words, that are
-			orm_filters['pos'] = "noun"					# static: nouns and
-			orm_filters['gender'] = "masc"				# masc
+			orm_filters = {'CTS__contains':filters['q'], # comes from the url: dyn; contains greek words, that are masc. nouns
+						'pos': "noun",
+						'gender': "masc"}
 		return orm_filters
 			
 		
