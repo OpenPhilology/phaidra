@@ -1,5 +1,5 @@
 /* Color Scheme! */
-$color-pri-one: #F44D61; //#BE1E2D; 		// Bright red
+$color-pri-one: #D15241; //#F44D61; //#BE1E2D; 		// Bright red
 $color-pri-two: #1FADAD; 		// Teal
 $color-pri-two-darker: rgba(9, 61, 61, 0.3);
 $color-pri-two-lighter: #56C7C7;
@@ -12,8 +12,8 @@ $color-sec-two-lighter: #62749C;
 $color-sec-three: #F05629;	 	// Orange
 $color-sec-four: #F4BC78;		// Yellow
 
-$color-dark-green: #A3D55F;
-$color-light-green: #49A556;
+$color-light-green: #A3D55F;
+$color-dark-green: #49A556;
 
 $text-light-color: #EEE;
 $text-dark-color: #666;
@@ -46,6 +46,8 @@ $font-family: 'Georgia';
 		color-stop($top-percent / 100, $top-color),
 		color-stop($bottom-percent / 100, $bottom-color)
 	);
+
+	background-color: $top-color;
 }
 
 body {
@@ -263,6 +265,7 @@ a {
 		&:hover {
 			background-color: lighten($color-sec-two, 5%);
 			@include transition(background-color, .2s, ease-out);
+			color: #FFF;
 		}
 	}
 	.glyphicon {
@@ -304,8 +307,24 @@ a {
 			background-color: $color-pri-one;
 		}
 		&.treebank {
-			background-color: #8BC53F;
+			background-color: $color-dark-green;
 		}
+	}
+
+	#pies {
+		text-align: center;
+	}
+	#vocab-pie + h3 {
+		color: $color-pri-two;
+		margin-bottom: 0px;
+	}
+	#morph-pie + h3 {
+		color: $color-sec-four;
+		margin-bottom: 0px;
+	}
+	#syn-pie + h3 {
+		color: $color-pri-one;		
+		margin-bottom: 0px;
 	}
 }
 .lesson-progress {
@@ -371,6 +390,10 @@ div.module {
 	position: relative;
 	box-shadow:	0px 0px 4px 0px rgba(0, 0, 0, .1);
 
+	img {
+		height: 60px;
+	}
+
 	&:hover {
 		text-decoration: none;
 	}	
@@ -389,13 +412,32 @@ div.module {
 
 	// Different types of modules
 	&.keep-learning {
-		@include gradient($color-pri-two, 20, lighten($color-pri-two, 7%), 100);
+		background-color: $color-pri-two;
+		@include transition(background-color, .2s, ease-out);
+		margin-bottom: 20px;
+
+		&:hover {
+			background-color: lighten($color-pri-two, 5%);
+			@include transition(background-color, .2s, ease-in);
+		}
 	}
 	&.nouns {
-		background-color: $color-light-green;
+		background-color: $color-dark-green;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color-dark-green, 5%);
+			@include transition(background-color, .2s, ease-in);
+		}
 	}
 	&.basics {
-		background-color: $color-dark-green;
+		background-color: $color-pri-one;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color-pri-one, 5%);
+			@include transition(background-color, .2s, ease-in);
+		}
 	}
 
 	h3 {
