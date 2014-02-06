@@ -510,6 +510,9 @@ table.inflection-table {
 .neut {
   color: #49a556; }
 
+p {
+  line-height: 3em; }
+
 p .greek-text {
   border: 1px solid #EEE;
   padding: 2px;
