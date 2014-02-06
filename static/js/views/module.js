@@ -1,6 +1,6 @@
 define(
-	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition'], 
-	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView) { 
+	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition','views/FrankTestView','views/SimpleVocabView'], 
+	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView,FrankTestView,SimpleVocabView) { 
 
 		var View = Backbone.View.extend({
 			events: {
@@ -26,6 +26,10 @@ define(
 					// Set for easy navigation to next slide
 					slides.at(i).set('index', i);
 
+
+
+
+
 					if (selector == '#slide_multi_composition') {
 						view = new MultiCompSlideView({ 
 							model: slides.at(i), 
@@ -34,7 +38,10 @@ define(
 							.$el
 							.appendTo(this.$el.find('#lesson-content'));
 					}
-					else if (selector == '#slide_info') {
+					else
+
+
+if (selector == '#slide_info') {
 						view = new InfoSlideView({ 
 							model: slides.at(i), 
 							template: _.template(that.$el.find('#slide_info').html()) 
@@ -42,12 +49,35 @@ define(
 							.$el
 							.appendTo(this.$el.find('#lesson-content'));
 					}
+
+else //TODO requirejs: testen ob includes als array möglich und reference by name
+ if (typeof selector=='string' && selector[0]=="#" && that.$el.find(selector))
+{
+ //TODO bad practice using eval but atm ok
+
+
+fnName = selector.substring(1);
+  var selectorFunc= eval('(function(){ try {return '+fnName+'}catch(e){ return null;} })()')
+
+if (selectorFunc==null) throw new Error(selector+" has no corresponding view defined in local r global scope")
+view = new selectorFunc({ 
+							model: slides.at(i), 
+							template: _.template(that.$el.find(selector).html()) 
+						})
+
+.render().$el.appendTo(this.$el.find('#lesson-content'));
+
+
+}
+
+
 					this.slides.push(view);
 
 					// Create a progress bar section for each slide
 					if (i < (slides.length - 1))
 						progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
 				}
+
 				
 				return this;	
 			},
