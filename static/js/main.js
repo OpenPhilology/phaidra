@@ -19,17 +19,20 @@ requirejs.config({
 		},
 		'bootstrap': {
 			'deps': ['jquery']
+		},
+		'd3': {
+			'exports': 'd3'
 		}
 	}
 });
 
-require(['jquery', 'underscore', 'backbone', 'router', 'bootstrap'], function($, _, Backbone, Phaidra) {
+require(['jquery', 'underscore', 'backbone', 'router', 'd3', 'bootstrap'], function($, _, Backbone, Phaidra, d3) {
 	$(document).ready(function() {
 		var app = new Phaidra.Router();
 		Backbone.history.start({ pushState: true });
 
 		// Activate Bootstrap JS Components
 		//$('.sec').tooltip();
-		//$('.module .circle').tooltip({ container: 'body'});
+		$('.module .circle').tooltip({ container: 'body'});
 	});
 });

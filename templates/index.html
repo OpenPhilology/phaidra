@@ -22,11 +22,33 @@
 				<p>
 					Thucydides' <em>History of the Peloponnesian War</em>
 				</p>
+
 				<hr>
 
-				<h2>THIS WEEK</h2>
-				<p>Chart here</p>
+				<div class="row" id="pies">
+					<div class="col-md-4">
+						<div id="vocab-pie"></div>
+						<h3>Vocabulary</h3> learned
+					</div>
 
+					<div class="col-md-4">
+						<div id="morph-pie"></div>
+						<h3>Morphology</h3> learned
+					</div>
+					
+					<div class="col-md-4">
+						<div id="syn-pie"></div>
+						<h3>Syntax</h3> learned
+					</div>
+				</div>
+
+				<hr>
+
+				<h2>RECORDS</h2>
+				<div id="records">
+					<div class="sparkline"></div>
+					10 lessons in a week
+				</div>
 				<hr>
 
 				<h2>RECENT ACTIVITY</h2>
@@ -55,7 +77,8 @@
 			<div class="row">
 				<div class="col-sm-3 col-md-3">
 					<a class="module basics" href="/module">
-						<!--<span class="practice-module glyphicon glyphicon-flash" title="Practice"></span>-->
+
+						<img src="/static/images/icon_grk_alphabet.png" alt="The Greek Alphabet">
 
 						<div>
 							<h3>The Greek Alphabet</h3>
@@ -68,6 +91,7 @@
 			<!-- Modules a user cannot yet access should not be links -->
 				<div class="col-sm-3 col-md-3">
 					<a href="/module/3/section/0/slide/0" class="module basics">
+						<img src="/static/images/icon_grk_diacritics.png" alt="Diacritics">
 						<div>
 							<h3>Greek Diacritics</h3>
 							<span class="circle complete" title="Breathings"></span>
@@ -81,12 +105,11 @@
 				<div class="col-sm-3 col-md-3">
 					<a href="/module/3/section/0/slide/0" class="module nouns">
 						<div>
+							<img src="/static/images/icon_grk_nouns_intro.png" alt="Introduction to Nouns">
 							<h3>Introduction to Nouns</h3>
-							<span class="circle complete" title="Greek Cases"></span>
+							<span class="circle complete" title="Nouns in Greek"></span>
 							<span class="circle" title="Number"></span>
 							<span class="circle" title="Gender"></span>
-							<span class="circle" title="Declensions"></span>
-							<span class="circle" title="Alpha Declension"></span>
 						</div>
 					</a>
 				</div>
@@ -94,6 +117,8 @@
 					<div class="module">
 						<div>
 							<h3><span class="greek-text">α</span>-Declension<br>(Feminines in -<span class="greek-text">η</span>)</h3>
+							<span class="circle" title="Nominative Case"></span>
+							<span class="circle" title="Accusative Case"></span>
 							<span class="circle" title="Introduction"></span>
 							<span class="circle" title="Introduction"></span>
 						</div>

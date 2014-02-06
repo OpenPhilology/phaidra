@@ -187,13 +187,15 @@ a {
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out; }
+    transition: background-color 0.2s ease-out;
+    box-shadow: 2px 2px 3px #CCC;
+    color: #FFF; }
 .calls-to-action .glyphicon {
   margin-right: 5px; }
 .calls-to-action .glyphicon-flash {
   color: #f4bc78; }
 .calls-to-action .glyphicon-list-alt {
-  color: #f44d61; }
+  color: #d15241; }
 .calls-to-action .glyphicon-inbox {
   color: #1fadad; }
 
@@ -214,9 +216,26 @@ a {
     .feedback-container .badge.vocab {
       background-color: #1fadad; }
     .feedback-container .badge.lesson {
-      background-color: #f44d61; }
+      background-color: #d15241; }
     .feedback-container .badge.treebank {
-      background-color: #8BC53F; }
+      background-color: #49a556; }
+  .feedback-container #pies {
+    text-align: center; }
+  .feedback-container #vocab-pie + h3 {
+    color: #1fadad;
+    margin-bottom: 0px; }
+  .feedback-container #morph-pie + h3 {
+    color: #f4bc78;
+    margin-bottom: 0px; }
+  .feedback-container #syn-pie + h3 {
+    color: #d15241;
+    margin-bottom: 0px; }
+  .feedback-container #records .sparkline {
+    display: inline-block; }
+    .feedback-container #records .sparkline path {
+      stroke: #888;
+      stroke-width: 2px;
+      fill: none; }
 
 .lesson-progress {
   margin-bottom: 35px; }
@@ -229,6 +248,7 @@ a {
     background-image: -webkit-linear-gradient(bottom, white 0, #eeeeee 100);
     background-image: -ms-linear-gradient(bottom, white 0, #eeeeee 100);
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #eeeeee));
+    background-color: white;
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     border-left: 1px solid #dddddd; }
@@ -247,6 +267,7 @@ a {
       background-image: -webkit-linear-gradient(bottom, #4e6087 0, #6378a5 100);
       background-image: -ms-linear-gradient(bottom, #4e6087 0, #6378a5 100);
       background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4e6087), color-stop(1, #6378a5));
+      background-color: #4e6087;
       border: 1px solid #3b4967; }
 
 .module-container {
@@ -273,6 +294,8 @@ div.module {
   vertical-align: top;
   position: relative;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1); }
+  .module img {
+    height: 60px; }
   .module:hover {
     text-decoration: none; }
   .module .practice-module {
@@ -285,16 +308,55 @@ div.module {
     padding: 3px 3px 4px 3px;
     border-radius: 12px; }
   .module.keep-learning {
-    background-image: linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-    background-image: -o-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-    background-image: -moz-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-    background-image: -webkit-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-    background-image: -ms-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #1fadad), color-stop(1, #24cbcb)); }
+    background-color: #1fadad;
+    -webkix-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    margin-bottom: 20px; }
+    .module.keep-learning:hover {
+      background-color: #23c3c3;
+      -webkix-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC; }
   .module.nouns {
-    background-color: #49a556; }
+    background-color: #49a556;
+    -webkix-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module.nouns:hover {
+      background-color: #54b362;
+      -webkix-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
   .module.basics {
-    background-color: #a3d55f; }
+    background-color: #d15241;
+    -webkix-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module.basics:hover {
+      background-color: #d66556;
+      -webkix-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
   .module h3 {
     font-size: 12px;
     font-weight: normal;
@@ -360,7 +422,8 @@ div.module {
       background-image: -moz-linear-gradient(bottom, #eeeeee 20, white 100);
       background-image: -webkit-linear-gradient(bottom, #eeeeee 20, white 100);
       background-image: -ms-linear-gradient(bottom, #eeeeee 20, white 100);
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #eeeeee), color-stop(1, white)); }
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #eeeeee), color-stop(1, white));
+      background-color: #eeeeee; }
       .slide ul.short-multi.options a:hover {
         background-image: linear-gradient(bottom, #1fadad 20, #24cbcb 100);
         background-image: -o-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
@@ -368,6 +431,7 @@ div.module {
         background-image: -webkit-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
         background-image: -ms-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
         background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #1fadad), color-stop(1, #24cbcb));
+        background-color: #1fadad;
         border-color: #1b9797;
         color: #FFF; }
     .slide ul.short-multi.answers a {
@@ -383,15 +447,17 @@ div.module {
       background-image: -webkit-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
       background-image: -ms-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
       background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #1fadad), color-stop(1, #24cbcb));
+      background-color: #1fadad;
       color: #FFF; }
       .slide ul.short-multi.answers a:hover {
-        background-image: linear-gradient(bottom, #f44d61 20, #f66f7f 100);
-        background-image: -o-linear-gradient(bottom, #f44d61 20, #f66f7f 100);
-        background-image: -moz-linear-gradient(bottom, #f44d61 20, #f66f7f 100);
-        background-image: -webkit-linear-gradient(bottom, #f44d61 20, #f66f7f 100);
-        background-image: -ms-linear-gradient(bottom, #f44d61 20, #f66f7f 100);
-        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #f44d61), color-stop(1, #f66f7f));
-        border-color: #f3354c; }
+        background-image: linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -o-linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -moz-linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -webkit-linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -ms-linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #d15241), color-stop(1, #d86c5e));
+        background-color: #d15241;
+        border-color: #c84230; }
     .slide ul.inline {
       display: inline-block;
       margin-right: 20px;
