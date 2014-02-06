@@ -1,43 +1,47 @@
 [
+        {
+                "title": "Placeholder"
+        },        
 	{
-		"title": "The Greek Alphabet"
-	},
+                "title": "The Greek Alphabet"
+        },
 	{
-		"title": ""
-	},
-	{
-		"title": ""
-	},
-	{
-		"title": "Introduction to Nouns",
-		"modules": [
-			{
-				"title": "Nouns in Ancient Greek",
-				"slides": [
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/0.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/0.1.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/1.html"
-					},
-					{
-						"type": "slide_multi_composition",
-						"title": "Pick the correct definite article",
-						"content": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
-						"options": [
-							[
-								{
+                "title": "Greek Diacritics"
+        },
+        {
+                "title": "Introduction to Nouns",
+                "modules": [
+                           {
+                                "title": "Nouns in Ancient Greek",
+                                "slides": [
+                                        {
+                                                "type": "slide_info",
+                                                "includeHTML": "/static/raw/thuc/emily_content/0.introduction/intro.html"
+                                        },
+                                        {
+                                                "type": "slide_info",
+                                                "includeHTML": "/static/raw/thuc/emily_content/3.nouns/0.html"
+                                        },
+                                        {
+                                                "type": "slide_info",
+                                                "includeHTML": "/static/raw/thuc/design/0.1.html"
+                                        },
+                                        {
+                                                "type": "slide_info",
+                                                "includeHTML": "/static/raw/thuc/design/1.html"
+                                        },
+                                        {
+                                                "type": "slide_multi_composition",
+                                                "title": "Pick the correct definite article",
+                                                "content": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
+                                        "options": [
+                                                    [
+                                                                {
 									"value": "ὁ",
 									"display": "ὁ"
-								},
-								{
-									"value": "ἡ",
+                                                                },
+								{  
+                                                                        "value": "ἡ",
 									"display": "ἡ"
 								},
 								{
