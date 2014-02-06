@@ -430,11 +430,15 @@ div.module {
 		background-color: $color-pri-two;
 		@include transition(background-color, .2s, ease-out);
 		margin-bottom: 20px;
-
+		
 		&:hover {
 			background-color: lighten($color-pri-two, 5%);
 			@include transition(background-color, .2s, ease-in);
 			box-shadow: 2px 2px 3px #CCC;
+		}
+
+		h3 {
+			color: #FFF;
 		}
 	}
 	&.nouns {
@@ -449,6 +453,10 @@ div.module {
 			position: relative;
 			top: -3px;
 		}
+
+		h3 {
+			color: #FFF;
+		}
 	}
 	&.basics {
 		background-color: $color-pri-one;
@@ -461,13 +469,17 @@ div.module {
 			position: relative;
 			top: -3px;
 		}
+
+		h3 {
+			color: #FFF;
+		}
 	}
 
 	h3 {
 		font-size: 12px;
 		font-weight: normal;
 		letter-spacing: 0.1em;
-		color: #FFF;
+		color: #999;
 		font-family: 'Helvetica';
 		margin-left: 10px;
 		margin-right: 10px;
@@ -501,6 +513,7 @@ div.module {
 
 .lesson-container {
 	.lesson-header {
+
 		h3 {
 			display: inline-block;
 			margin-top: 0;
@@ -588,14 +601,14 @@ table.inflection-table {
 	}
 
 	tr.current {
-		background-color: lighten(#E04A62, 10);
+		background-color: lighten($color-pri-one, 10);
 		color: #FFF;
 
 		.greek-text {
 			color: #FFF;
 
 			em {
-				color: #E04A62;
+				color: $color-pri-one;
 				background-color: #FFF;
 			}
 		}
@@ -632,13 +645,13 @@ table.inflection-table {
 	}
 }
 .masc {
-	color: #3882C5;
+	color: $color-pri-two; // #3882C5;
 }
 .fem {
-	color: #E04A62;
+	color: $color-pri-one; //#E04A62;
 }
 .neut {
-	color: #3C8818;
+	color: $color-dark-green; //#3C8818;
 }
 
 p .greek-text {

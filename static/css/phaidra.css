@@ -323,6 +323,8 @@ div.module {
       -ms-transition: background-color 0.2s ease-in;
       transition: background-color 0.2s ease-in;
       box-shadow: 2px 2px 3px #CCC; }
+    .module.keep-learning h3 {
+      color: #FFF; }
   .module.nouns {
     background-color: #49a556;
     -webkix-transition: background-color 0.2s ease-out;
@@ -340,6 +342,8 @@ div.module {
       box-shadow: 2px 2px 3px #CCC;
       position: relative;
       top: -3px; }
+    .module.nouns h3 {
+      color: #FFF; }
   .module.basics {
     background-color: #d15241;
     -webkix-transition: background-color 0.2s ease-out;
@@ -357,11 +361,13 @@ div.module {
       box-shadow: 2px 2px 3px #CCC;
       position: relative;
       top: -3px; }
+    .module.basics h3 {
+      color: #FFF; }
   .module h3 {
     font-size: 12px;
     font-weight: normal;
     letter-spacing: 0.1em;
-    color: #FFF;
+    color: #999;
     font-family: 'Helvetica';
     margin-left: 10px;
     margin-right: 10px; }
@@ -466,12 +472,12 @@ div.module {
 table.inflection-table {
   font-size: 0.9em; }
   table.inflection-table tr.current {
-    background-color: #e77688;
+    background-color: #db776a;
     color: #FFF; }
     table.inflection-table tr.current .greek-text {
       color: #FFF; }
       table.inflection-table tr.current .greek-text em {
-        color: #E04A62;
+        color: #d15241;
         background-color: #FFF; }
   table.inflection-table tr.future {
     color: #FFF; }
@@ -496,13 +502,13 @@ table.inflection-table {
     cursor: pointer; }
 
 .masc {
-  color: #3882C5; }
+  color: #1fadad; }
 
 .fem {
-  color: #E04A62; }
+  color: #d15241; }
 
 .neut {
-  color: #3C8818; }
+  color: #49a556; }
 
 p .greek-text {
   border: 1px solid #EEE;
