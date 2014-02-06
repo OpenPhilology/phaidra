@@ -290,7 +290,7 @@ class DocumentResource(ModelResource):
 	
 	#sents = fields.ToManyField('app.api.SentenceResource', 'file', full=True, null = True, blank = True)
 	# doesnt work yet
-	sents = fields.ToManyField('api.api.SentenceResource', lambda bundle: Sentence.objects.filter(document_name = bundle.obj.name ), full = True, null = True, blank = True )#full=True)
+	sents = fields.ToManyField('api.api.SentenceResource', lambda bundle: Sentence.objects.filter(document__name = bundle.obj.name ), full = True, null = True, blank = True )
 							
 	class Meta:
 		queryset = Document.objects.all()
@@ -299,14 +299,13 @@ class DocumentResource(ModelResource):
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'CTS': ALL,
-					'lang': ALL,
-					#'sent': ALL_WITH_RELATIONS
+					'lang': ALL
 					}
 
 
 class SentenceResource(ModelResource):
-	
-	file = fields.ForeignKey(DocumentResource, 'document')
+	#sentence/?format=json&file__lang=fas
+	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
 	
 	class Meta:
 		queryset = Sentence.objects.all()
@@ -314,7 +313,8 @@ class SentenceResource(ModelResource):
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
-		filtering = {'CTS': ALL
+		filtering = {'CTS': ALL,
+					'file': ALL_WITH_RELATIONS
 					}
 		#limit=2
  	
@@ -377,7 +377,7 @@ class WordResource(ModelResource):
 		filtering = {'CTS': ALL,
 					'pos': ALL, 
 					'gender': ALL}
-		limit = 5
+		#limit = 5
 		
 	def build_filters(self, filters=None):
 		"""
