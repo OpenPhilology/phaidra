@@ -327,6 +327,38 @@ div.module {
 .lesson-left-menu {
   padding-top: 20px; }
 
+.slide .sentence .word{
+border:0px;
+border-bottom:2px solid transparent;
+}
+
+
+.slide .sentence .word-selected{
+border-bottom:2px solid grey;
+}
+
+.slide .sentence .word a:hover{
+background-color:rgba(230,230,230,0.5);
+}
+.greek-word-small-spacing {
+margin:0;
+padding:0 0;
+}
+
+.slide .vocab_image_container
+{
+max-height:600;
+max-width:400;
+min-height:300;
+min-width:200;
+}
+
+
+.hidden{
+display:none;
+}
+
+
 .slide {
   padding: 20px;
   border-radius: 3px;

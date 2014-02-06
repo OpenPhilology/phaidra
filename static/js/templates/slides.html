@@ -23,6 +23,49 @@
 	<p class="alert" style="display: none">
 	</p>
 </script>
+
+<script type="text/template" id="FrankTestView">
+	<h4><%= title %></h4>
+        <h3>
+	<ul class="sentence short-multi inline">
+		<% _.each(sentence.split(' '), function(word) { %>
+			<li class="word">
+				<a class="greek-word-small-spacing" style="padding:0" href="#" data-value="<%= word  %>"><%= word %></a>
+			</li>
+		
+		<% }); %>
+	</ul>
+	</h3>
+	<p>
+		<%= content %>
+	</p>
+	<p class="alert" style="display: none">
+	</p>
+</script>
+
+
+
+<script type="text/template" id="SimpleVocabView">
+	<h4><%= title %></h4>
+        <h3>
+	<div class="vocab_image_container"></div> 
+	<ul class="sentence short-multi inline">
+		<% _.each(options, function(word) { %>
+			<li class="word">
+				<a class="greek-word-small-spacing" style="padding:0" href="#" data-value="<%= word  %>"><%= word %></a>
+			</li>
+		
+		<% }); %>
+	</ul>
+	</h3>
+	<p>
+		<%= content %>
+	</p>
+	<p class="alert" style="display: none">
+	</p>
+</script>
+
+
 <script type="text/template" id="slide_info">
 	<h4><%= title %></h4>
 
