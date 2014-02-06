@@ -50,7 +50,7 @@ Install and configure Nginx with Uwsgi
 ---
 Phaidra runs on nginx as its web server.
 
-		$ sudo apt-get install nginx uwsgi uwsgi-plugin-python
+		$ sudo apt-get install nginx uwsgi uwsgi-plugin-python python2.7-dev
 
 Make sure you are running the latest version of Uwsgi (at time of writing, 1.9) with `uwsgi --version`. If this gives you an older version, you will need to upgrade by doing the following:
 
@@ -58,6 +58,10 @@ Make sure you are running the latest version of Uwsgi (at time of writing, 1.9) 
 		$ cd /usr/bin
 		$ mv uwsgi uwsgi-old
 		$ ln -s /usr/local/bin/uwsgi uwsgi
+		
+		# Test the version again
+		$ uwsgi --version
+		1.9
 
 Open `/opt/phaidra/extras/nginx/phaidra.conf` and set the variables to be appropriate for your server:
 
@@ -81,11 +85,15 @@ Touch necessarily files so that Uwsgi can write to them.
 
 		$ mkdir /opt/phaidra/logs
 		$ touch /opt/phaidra/logs/master.pid
+		$ mkdir /var/log/uwsgi
+		$ touch /var/log/uwsgi/phaidra_daemon.log
 
 Start up services:
 
 		$ sudo service nginx start
-		$ sudo service uwsgi start
+		$ uwsgi /opt/phaidra/extras/uwsgi/phaidra.ini
+		
+* Check that everything has worked up to this point by navigating to http://localhost:8000 *
 
 Install and configure the Neo4j database
 ---
@@ -94,7 +102,7 @@ Make sure you installed java 1.7. Do this outside your virtualenv.
 		$ java -version
 
 If you have an earlier version of Java or no Java at all, install it as you prefer (e.g. [Installing Java 7 on Ubuntu](http://www.cyberciti.biz/faq/howto-installing-oracle-java7-on-ubuntu-linux/)) or follow:
-
+		
 		$ sudo add-apt-repository ppa:webupd8team/java
 		$ sudo apt-get update
 		$ sudo apt-get install oracle-java7-installer
