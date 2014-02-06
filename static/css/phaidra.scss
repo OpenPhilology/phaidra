@@ -265,6 +265,7 @@ a {
 		&:hover {
 			background-color: lighten($color-sec-two, 5%);
 			@include transition(background-color, .2s, ease-out);
+			box-shadow: 2px 2px 3px #CCC;
 			color: #FFF;
 		}
 	}
@@ -314,9 +315,11 @@ a {
 	#pies {
 		text-align: center;
 	}
-	#vocab-pie + h3 {
-		color: $color-pri-two;
-		margin-bottom: 0px;
+	#vocab-pie {
+		& + h3 {
+			color: $color-pri-two;
+			margin-bottom: 0px;
+		}
 	}
 	#morph-pie + h3 {
 		color: $color-sec-four;
@@ -325,6 +328,18 @@ a {
 	#syn-pie + h3 {
 		color: $color-pri-one;		
 		margin-bottom: 0px;
+	}
+
+	#records {
+		.sparkline {
+			display: inline-block;
+
+			path {
+				stroke: #888;
+				stroke-width: 2px;
+				fill: none;
+			}
+		}
 	}
 }
 .lesson-progress {
@@ -419,6 +434,7 @@ div.module {
 		&:hover {
 			background-color: lighten($color-pri-two, 5%);
 			@include transition(background-color, .2s, ease-in);
+			box-shadow: 2px 2px 3px #CCC;
 		}
 	}
 	&.nouns {
@@ -428,6 +444,10 @@ div.module {
 		&:hover {
 			background-color: lighten($color-dark-green, 5%);
 			@include transition(background-color, .2s, ease-in);
+
+			box-shadow: 2px 2px 3px #CCC;
+			position: relative;
+			top: -3px;
 		}
 	}
 	&.basics {
@@ -437,6 +457,9 @@ div.module {
 		&:hover {
 			background-color: lighten($color-pri-one, 5%);
 			@include transition(background-color, .2s, ease-in);
+			box-shadow: 2px 2px 3px #CCC;
+			position: relative;
+			top: -3px;
 		}
 	}
 

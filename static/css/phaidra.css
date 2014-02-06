@@ -188,6 +188,7 @@ a {
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
+    box-shadow: 2px 2px 3px #CCC;
     color: #FFF; }
 .calls-to-action .glyphicon {
   margin-right: 5px; }
@@ -229,6 +230,12 @@ a {
   .feedback-container #syn-pie + h3 {
     color: #d15241;
     margin-bottom: 0px; }
+  .feedback-container #records .sparkline {
+    display: inline-block; }
+    .feedback-container #records .sparkline path {
+      stroke: #888;
+      stroke-width: 2px;
+      fill: none; }
 
 .lesson-progress {
   margin-bottom: 35px; }
@@ -314,7 +321,8 @@ div.module {
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
-      transition: background-color 0.2s ease-in; }
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC; }
   .module.nouns {
     background-color: #49a556;
     -webkix-transition: background-color 0.2s ease-out;
@@ -328,7 +336,10 @@ div.module {
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
-      transition: background-color 0.2s ease-in; }
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
   .module.basics {
     background-color: #d15241;
     -webkix-transition: background-color 0.2s ease-out;
@@ -342,7 +353,10 @@ div.module {
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
-      transition: background-color 0.2s ease-in; }
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
   .module h3 {
     font-size: 12px;
     font-weight: normal;

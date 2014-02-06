@@ -6,9 +6,29 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				this.drawDonut('#vocab-pie', '15', '#1FADAD', 'Vocabulary'); 		
 				this.drawDonut('#morph-pie', '20', '#F4BC78', 'Morphology'); 		
 				this.drawDonut('#syn-pie', '10', '#D15241', 'Syntax'); 		
+
+				this.drawSparkline('#records .sparkline', [1, 10, 5, 7, 2, 8, 5, 9, 2, 1], '#333');
 			},
 			render: function() {
 				return this;	
+			},
+			drawSparkline: function(selector, data, color) {
+				var graph = d3.select(selector).append('svg')
+					.attr('width', 50)
+					.attr('height', 15);
+
+				var x = d3.scale.linear().domain([0, 10]).range([0, 50]);
+				var y = d3.scale.linear().domain([0, 10]).range([0, 15]);
+
+				var line = d3.svg.line()
+					.x(function(d, i) {
+						return x(i);
+					})
+					.y(function(d, i) {
+						return y(d);
+					});
+
+				graph.append('svg:path').attr('d', line(data));
 			},
 			drawDonut: function(selector, percentComplete, color, label) {
 
@@ -59,6 +79,11 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						return colors(d.data.key);
 					})
 					.style('fill-opacity', 0.8);
+
+				svg.append('text')
+					.attr('dy', '.35em')
+					.style('text-anchor', 'middle')
+					.text(percentComplete + '%');
 
 			}
 		});
