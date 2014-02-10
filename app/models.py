@@ -19,6 +19,8 @@ class AppUser(User):
 		return unicode(self.username) or u''
 
 class Document(models.NodeModel):
+	# introduced to get API filed work
+	internal = models.StringProperty(max_length=200)
 	name_eng = models.StringProperty(max_length=200)
 	CTS = models.StringProperty(max_length=200)	
 	author = models.StringProperty(max_length=200)
@@ -30,7 +32,6 @@ class Document(models.NodeModel):
 
 class Sentence(models.NodeModel):
 	# introduced to get API filed work
-	document_name = models.StringProperty(max_length=200)
 	internal = models.StringProperty(max_length=200)
 	CTS = models.StringProperty(max_length=200)
 	sentence = models.StringProperty()
