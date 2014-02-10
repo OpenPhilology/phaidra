@@ -9,7 +9,7 @@
 		"title": "Greek Diacritics"
 	},
 	{
-	"title": "Introduction to Nouns",
+		"title": "Introduction to Nouns",
 		"modules": [
 			{
 				"title": "Nouns in Ancient Greek",
@@ -118,7 +118,12 @@
 						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/3.html"
 					}
 				]
-			},
+			}
+		]
+	},
+	{
+		"title": "Introduction to Cases",
+		"modules": [
 			{
 				"title": "Nominative Case",
 				"slides": [
@@ -165,6 +170,58 @@
 							"message": "Correct! "
 							}
 						]
+					}
+				]
+			},
+			{
+				"title": "Accusative Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/6.html"
+					}
+				]
+			},
+			{
+				"title": "Genitive Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/6.html"
+					}
+				]
+			},
+			{
+				"title": "Dative Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/6.html"
+					}
+				]
+			},
+			{
+				"title": "Vocative Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/6.html"
 					}
 				]
 			}
