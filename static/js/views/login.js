@@ -1,6 +1,4 @@
-define(
-	['jquery', 'underscore', 'backbone'], 
-	function($, _, Backbone) { 
+define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) { 
 
 		var View = Backbone.View.extend({
 			events: {
