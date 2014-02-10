@@ -70,6 +70,78 @@ a {
 	}
 }
 
+@mixin context-bg($color) {
+	border: 2px $color solid;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+	line-height: 2em;
+
+	background-color: lighten($color, 50%);
+
+	.glyphicon {
+		margin-right: 3px;
+		color: lighten($color, 40%);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		background-color: $color;
+		color: #FFF;
+		margin: -10px -10px 10px;
+		padding: 10px;
+		letter-spacing: 0.1em;
+	}
+}
+
+.bg-success {
+	@include context-bg($color-dark-green);
+}
+.bg-info {
+	@include context-bg($color-sec-two);
+}
+.bg-primary {
+	@include context-bg($color-pri-two);
+}
+
+.speech {
+	$color: lighten($color-sec-four, 15%);
+
+	position: relative;
+	padding: 15px;
+	margin: 1em 0 3em;
+	background-color: $color;
+	border-radius: 3px;
+	line-height: 2em;
+	margin-bottom: 10px;
+
+	&:before {
+		top: -20px;
+		bottom: auto;
+		left: auto;
+		right: 40px;
+		border-width: 0 20px 20px;
+		content: "";
+		position: absolute;
+		border-style: solid;
+		border-color: $color transparent;
+		display: block;
+		width: 0;
+	}
+
+	&:after {
+		top: -13px;
+		bottom: auto;
+		left: auto;
+		right: 47px;
+		border-width: 0 13px 13px;
+		content: "";
+		position: absolute;
+		border-style: solid;
+		border-color: $color transparent;
+		display: block;
+		width: 0;
+	}
+}
 
 /* Header */
 .banner {
@@ -255,7 +327,7 @@ a {
 
 /* Styling buttons that are calls to action */
 .calls-to-action {
-	button {
+	button, a {
 		border: 0;
 		background-color: darken($color-sec-two, 10%);
 		color: #EEE;
@@ -538,9 +610,8 @@ div.module {
 		padding-left: 0;
 		margin-bottom: 0;
 
+		/* Corresponds to Multi Composition Slide options */
 		&.short-multi {
-
-
 			li {
 				list-style: none;
 				display: inline-block;
