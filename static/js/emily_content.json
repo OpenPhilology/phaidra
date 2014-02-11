@@ -286,7 +286,7 @@
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "true",
 						"require_all": "true"
-					},
+					}
 				]
 			}
 		]
