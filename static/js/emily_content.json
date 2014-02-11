@@ -228,6 +228,66 @@
 						"includeHTML": "/static/raw/thuc/design/6.html"
 					}
 				]
+			},
+			{
+				"title": "Placeholder",
+				"slides" : [
+					{
+						"type": "slide_multi_composition",
+						"title": "Make the forms agree!",
+						"content": "What is the accusative plural form for \"the small country\"?",
+						"options": [
+							[
+								{
+									"value": "τῆς",
+									"display": "τῆς"
+								},
+								{  
+									"value": "ἡ",
+									"display": "ἡ"
+								},
+								{
+									"value": "τὰς",
+									"display": "τὰς"
+								}
+							],
+							[
+								{
+									"value": "μῑκρᾷ",
+									"display": "μῑκρᾷ"
+								},
+								{  
+									"value": "μῑκραὶ",
+									"display": "μῑκραὶ"
+								},
+								{
+									"value": "μῑκρὰς",
+									"display": "μῑκρὰς"
+								}
+							],
+							[
+								{
+									"value": "χώρᾱν",
+									"display": "χώρᾱν"
+								},
+								{  
+									"value": "χώραιν",
+									"display": "χώραιν"
+								},
+								{
+									"value": "χώρᾱς",
+									"display": "χώρᾱς"
+								}
+							]
+						],
+						"answers": ["τὰς", "μῑκρὰς", "χώρᾱς"],
+						"successMsg": "<strong>Right Answer!</strong> The accusative plural form of 'the small country' is <span class=\"greek-text\">τὰς μῑκρὰς χώρᾱς</span>.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "true",
+						"require_all": "true"
+					},
+				]
 			}
 		]
 	}
