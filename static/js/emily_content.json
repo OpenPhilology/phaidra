@@ -133,15 +133,15 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/5.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/intro.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/6.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/history.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/7.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative.html"
 					},
 					{
 						"type": "slide_multi_composition",
