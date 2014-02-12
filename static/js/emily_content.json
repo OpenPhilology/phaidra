@@ -143,6 +143,9 @@
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative.html"
 					},
+					{	"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative.html"
+					},
 					{
 						"type": "slide_multi_composition",
 						"title": "Identify the Nominative",
