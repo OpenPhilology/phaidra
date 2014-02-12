@@ -564,10 +564,12 @@ table.inflection-table {
       table.inflection-table tr.current .greek-text em {
         color: #d15241;
         background-color: #FFF; }
-  table.inflection-table tr.future {
-    color: #FFF; }
-    table.inflection-table tr.future .greek-text {
-      color: #CCC; }
+  table.inflection-table tr.future .greek-text {
+    color: #CCC; }
+  table.inflection-table tr.past {
+    color: #333; }
+    table.inflection-table tr.past .greek-text {
+      color: #333; }
 
 .label {
   padding: 0.4em 0.6em 0.3em;

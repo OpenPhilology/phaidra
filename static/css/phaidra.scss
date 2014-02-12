@@ -685,12 +685,18 @@ table.inflection-table {
 		}
 	}
 	tr.future {
-		color: #FFF;
 
 		.greek-text {
 			color: #CCC;
 		}
 	}
+	tr.past {
+		color: #333;
+		.greek-text {
+			color: #333;
+		}
+	}
+		
 
 }
 

@@ -36,7 +36,7 @@
 					},
 					{
 						"type": "slide_multi_composition",
-						"title": "Pick the correct definite article",
+						"title": "Exercise: Pick the correct definite article",
 						"content": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
 						"options": [
 							[
@@ -63,7 +63,7 @@
 					},
 					{
 						"type": "slide_multi_composition",
-						"title": "Pick the correct definite article",
+						"title": "Exercise: Pick the correct definite article",
 						"content": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span class=\"greek-text masc\">πόλεμος</span> (battle)?",
 						"options": [
 							[
@@ -89,7 +89,7 @@
 					},
 					{
 						"type": "slide_multi_composition",
-						"title": "Pick the correct definite article",
+						"title": "Exercise: Pick the correct definite article",
 						"content": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span class=\"greek-text neut\">ἔργον</span> (work)?",
 						"options": [
 							[
@@ -142,6 +142,26 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_subj.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_comp.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_pent.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative_pent.html"
 					},
 					{
 						"type": "slide_multi_composition",
