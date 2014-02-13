@@ -3,7 +3,6 @@ $color-pri-one: #D15241; //#F44D61; //#BE1E2D; 		// Bright red
 $color-pri-two: #1FADAD; 		// Teal
 $color-pri-two-darker: rgba(9, 61, 61, 0.3);
 $color-pri-two-lighter: #56C7C7;
-
 $color-pri-three: #523D5B;		// Purple
 
 $color-sec-one: #931926;		// Deep red
@@ -19,7 +18,7 @@ $text-light-color: #EEE;
 $text-dark-color: #666;
 
 /* Fonts! */
-$font-family: 'Georgia';
+$font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans serif;
 
 /* Mix-ins */
 // Background-color transition
@@ -49,13 +48,74 @@ $font-family: 'Georgia';
 
 	background-color: $top-color;
 }
+@mixin animate($name, $duration, $timing-function, $delay, $iteration-count) {
+	-webkit-animation: $name $duration $timing-function $delay $iteration-count;
+	-moz-animation: $name $duration $timing-function $delay $iteration-count;
+	-o-animation: $name $duration $timing-function $delay $iteration-count;
+	animation: $name $duration $timing-function $delay $iteration-count;
+}
+@mixin wiggle {
+	@include animate(wiggle, .2s, ease, 0, 3);
+}
+
+// CSS3 Animations
+@-webkit-keyframes wiggle {
+	0% {
+		-webkit-transform: rotateZ(2deg);
+	}
+	50% {
+		-webkit-transform: rotateZ(-2deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(2deg);
+	}
+}
+
+@-moz-keyframes wiggle {
+	0% {
+		-moz-transform: rotateZ(2deg);
+	}
+	50% {
+		-moz-transform: rotateZ(-2deg);
+	}
+	100% {
+		-moz-transform: rotateZ(2deg);
+	}
+}
+@-o-keyframes wiggle {
+	0% {
+		-o-transform: rotateZ(2deg);
+	}
+	50% {
+		-o-transform: rotateZ(-2deg);
+	}
+	100% {
+		-o-transform: rotateZ(2deg);
+	}
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotateZ(2deg);
+	}
+	50% {
+		transform: rotateZ(-2deg);
+	}
+	100% {
+		transform: rotateZ(2deg);
+	}
+}
 
 body {
 	color: #666;
-	font-family: 'Myriad Pro';
+	font-family: $font-family;
 }
 a {
 	color: $color-pri-two;
+
+	&:hover {
+		color: darken($color-pri-two, 10%);
+	}
 }
 
 /* Override Bootstrap Styles */
@@ -95,12 +155,20 @@ a {
 
 .bg-success {
 	@include context-bg($color-dark-green);
+
+	strong {
+		color: darken($color-dark-green, 10%) !important;
+	}
 }
 .bg-info {
 	@include context-bg($color-sec-two);
 }
 .bg-primary {
 	@include context-bg($color-pri-two);
+
+	strong {
+		color: darken($color-pri-two, 10%) !important;
+	}
 }
 
 .speech {
@@ -603,6 +671,119 @@ div.module {
 
 	.slide-unit {
 		display: none;
+	}
+
+	.exercise {
+		.badge {
+			background-color: #BBB;
+			border-radius: 3px;
+			margin-right: 10px;
+		}
+	}
+	.direct-select {
+		text-align: center;
+		font-size: 2em;
+		margin-bottom: 20px;
+
+		&.vertical {
+			a {
+				margin-right: auto;
+				margin-left: auto;
+				text-align: left;
+				display: block;
+				max-width: 300px;
+			}
+			.badge {
+				border: 1px solid #FFF;
+				vertical-align: middle;
+			}
+			small {
+				margin-left: 35px;
+			}
+		}
+
+		&.horizontal {
+			a {
+				position: relative;
+				margin-bottom: 25px;
+				white-space: nowrap;
+				display: inline-block;
+			}
+			.badge {
+				position: absolute;
+				top: 20px;
+				margin-right: 0;
+				left: 40%;
+				top: 110%;
+				border: 1px solid #FFF;
+				@include transition(background-color, 0.2s, ease-in);
+			}
+		}
+
+		a small {
+			font-size: .5em;
+			font-family: $font-family;
+			letter-spacing: normal;
+		}
+
+		a.selected, a.selected:hover {
+			background-color: $color-sec-two;
+			color: #FFF;
+			border: 1px solid transparent;
+			box-shadow: 2px 2px 3px #CCC;
+
+			.badge {
+				background-color: $color-pri-two;
+			}
+		}
+
+		a.success, a.success:hover {
+			background-color: $color-dark-green;
+			color: #FFF;
+			border: 1px solid transparent;
+			box-shadow: 2px 2px 3px #CCC;
+
+			@include wiggle;
+
+			.badge {
+				background-color: $color-pri-two;
+			}
+		}
+
+		a.failure, a.failure:hover {
+			background-color: $color-pri-one;
+			color: #FFF;
+			border: 1px solid transparent;
+			box-shadow: 2px 2px 3px #CCC;
+
+			.badge {
+				background-color: $color-sec-four;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			border: 1px solid #DDD;
+			border-radius: 3px;
+			padding: 10px;
+			margin: 5px;
+			@include transition(background-color, 0.2s, ease-in);
+
+			&:hover {
+				background-color: $color-pri-two;
+				border: 1px solid transparent;
+				color: #FFF;
+				@include transition(background-color, 0.2s, ease-out);
+				box-shadow: 2px 2px 3px #CCC;
+
+				.badge {
+					background-color: $color-pri-one;
+					color: #FFF;
+					@include transition(background-color, 0.2s, ease-out);
+				}
+			}
+		}
+
 	}
 
 	ul {

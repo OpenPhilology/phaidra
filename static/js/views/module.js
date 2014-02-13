@@ -1,6 +1,6 @@
 define(
-	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition','views/FrankTestView','views/SimpleVocabView'], 
-	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView,FrankTestView,SimpleVocabView) { 
+	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition','views/FrankTestView','views/SimpleVocabView', 'views/slide_direct_select'], 
+	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView, FrankTestView, SimpleVocabView, DirectSelectSlideView) { 
 
 		var View = Backbone.View.extend({
 			events: {
@@ -38,6 +38,14 @@ define(
 						view = new InfoSlideView({ 
 							model: slides.at(i), 
 							template: _.template(that.$el.find('#slide_info').html()) 
+						}).render()
+							.$el
+							.appendTo(this.$el.find('#lesson-content'));
+					}
+					else if (selector == '#slide_direct_select') {
+						view = new DirectSelectSlideView({ 
+							model: slides.at(i), 
+							template: _.template(that.$el.find('#slide_direct_select').html()) 
 						}).render()
 							.$el
 							.appendTo(this.$el.find('#lesson-content'));

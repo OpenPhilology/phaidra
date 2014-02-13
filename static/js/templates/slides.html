@@ -1,3 +1,23 @@
+<script type="text/template" id="slide_direct_select">
+	<h4><%= title %></h4>
+
+	<p>
+		<%= content %>
+	</p>
+
+	<div class="greek-text exercise direct-select <%= settings.orientation || 'horizontal' %>">
+		<% _.each(options, function(optionSet) { %>
+
+				<% _.each(optionSet, function(option, index) { %>
+					<a href="#" data-value="<%= option.value  %>"><span class="badge"><%= index + 1 %></span><%= option.display %></a> 
+				<% }); %>
+
+		<% }); %>
+	</div>
+
+	<div class="slide-feedback" style="display: none">
+	</div>
+</script>
 <script type="text/template" id="slide_multi_composition">
 	<h4><%= title %></h4>
 
@@ -5,22 +25,24 @@
 		<%= content %>
 	</p>
 
-	<div class="well">
-		<ul class="answers short-multi greek-text" style="min-height: 40px">
-		</ul>
+	<div class="exercise">
+		<div class="well">
+			<ul class="answers short-multi greek-text" style="min-height: 40px">
+			</ul>
+		</div>
+
+		<% _.each(options, function(optionSet) { %>
+			<ul class="options short-multi greek-text inline">
+
+				<% _.each(optionSet, function(option) { %>
+					<li><a href="#" data-value="<%= option.value  %>"><%= option.display %></a></li>
+				<% }); %>
+
+			</ul>
+		<% }); %>
 	</div>
 
-	<% _.each(options, function(optionSet) { %>
-		<ul class="options short-multi greek-text inline">
-
-			<% _.each(optionSet, function(option) { %>
-				<li><a href="#" data-value="<%= option.value  %>"><%= option.display %></a></li>
-			<% }); %>
-
-		</ul>
-	<% }); %>
-
-	<p class="alert" style="display: none">
+	<p class="slide-feedback" style="display: none">
 	</p>
 </script>
 

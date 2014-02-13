@@ -1,12 +1,54 @@
 /* Color Scheme! */
 /* Fonts! */
 /* Mix-ins */
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotateZ(2deg); }
+
+  50% {
+    -webkit-transform: rotateZ(-2deg); }
+
+  100% {
+    -webkit-transform: rotateZ(2deg); } }
+
+@-moz-keyframes wiggle {
+  0% {
+    -moz-transform: rotateZ(2deg); }
+
+  50% {
+    -moz-transform: rotateZ(-2deg); }
+
+  100% {
+    -moz-transform: rotateZ(2deg); } }
+
+@-o-keyframes wiggle {
+  0% {
+    -o-transform: rotateZ(2deg); }
+
+  50% {
+    -o-transform: rotateZ(-2deg); }
+
+  100% {
+    -o-transform: rotateZ(2deg); } }
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(2deg); }
+
+  50% {
+    transform: rotateZ(-2deg); }
+
+  100% {
+    transform: rotateZ(2deg); } }
+
 body {
   color: #666;
-  font-family: 'Myriad Pro'; }
+  font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans serif; }
 
 a {
   color: #1fadad; }
+  a:hover {
+    color: #178282; }
 
 /* Override Bootstrap Styles */
 .container {
@@ -31,6 +73,8 @@ a {
     margin: -10px -10px 10px;
     padding: 10px;
     letter-spacing: 0.1em; }
+  .bg-success strong {
+    color: #398244 !important; }
 
 .bg-info {
   border: 2px #4e6087 solid;
@@ -65,6 +109,8 @@ a {
     margin: -10px -10px 10px;
     padding: 10px;
     letter-spacing: 0.1em; }
+  .bg-primary strong {
+    color: #178282 !important; }
 
 .speech {
   position: relative;
@@ -485,6 +531,100 @@ div.module {
   min-height: 300px; }
   .slide .slide-unit {
     display: none; }
+  .slide .exercise .badge {
+    background-color: #BBB;
+    border-radius: 3px;
+    margin-right: 10px; }
+  .slide .direct-select {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px; }
+    .slide .direct-select.vertical a {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+      display: block;
+      max-width: 300px; }
+    .slide .direct-select.vertical .badge {
+      border: 1px solid #FFF;
+      vertical-align: middle; }
+    .slide .direct-select.vertical small {
+      margin-left: 35px; }
+    .slide .direct-select.horizontal a {
+      position: relative;
+      margin-bottom: 25px;
+      white-space: nowrap;
+      display: inline-block; }
+    .slide .direct-select.horizontal .badge {
+      position: absolute;
+      top: 20px;
+      margin-right: 0;
+      left: 40%;
+      top: 110%;
+      border: 1px solid #FFF;
+      -webkix-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in; }
+    .slide .direct-select a small {
+      font-size: .5em;
+      font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans serif;
+      letter-spacing: normal; }
+    .slide .direct-select a.selected, .slide .direct-select a.selected:hover {
+      background-color: #4e6087;
+      color: #FFF;
+      border: 1px solid transparent;
+      box-shadow: 2px 2px 3px #CCC; }
+      .slide .direct-select a.selected .badge, .slide .direct-select a.selected:hover .badge {
+        background-color: #1fadad; }
+    .slide .direct-select a.success, .slide .direct-select a.success:hover {
+      background-color: #49a556;
+      color: #FFF;
+      border: 1px solid transparent;
+      box-shadow: 2px 2px 3px #CCC;
+      -webkit-animation: wiggle 0.2s ease 0 3;
+      -moz-animation: wiggle 0.2s ease 0 3;
+      -o-animation: wiggle 0.2s ease 0 3;
+      animation: wiggle 0.2s ease 0 3; }
+      .slide .direct-select a.success .badge, .slide .direct-select a.success:hover .badge {
+        background-color: #1fadad; }
+    .slide .direct-select a.failure, .slide .direct-select a.failure:hover {
+      background-color: #d15241;
+      color: #FFF;
+      border: 1px solid transparent;
+      box-shadow: 2px 2px 3px #CCC; }
+      .slide .direct-select a.failure .badge, .slide .direct-select a.failure:hover .badge {
+        background-color: #f4bc78; }
+    .slide .direct-select a {
+      text-decoration: none;
+      border: 1px solid #DDD;
+      border-radius: 3px;
+      padding: 10px;
+      margin: 5px;
+      -webkix-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in; }
+      .slide .direct-select a:hover {
+        background-color: #1fadad;
+        border: 1px solid transparent;
+        color: #FFF;
+        -webkix-transition: background-color 0.2s ease-out;
+        -moz-transition: background-color 0.2s ease-out;
+        -o-transition: background-color 0.2s ease-out;
+        -ms-transition: background-color 0.2s ease-out;
+        transition: background-color 0.2s ease-out;
+        box-shadow: 2px 2px 3px #CCC; }
+        .slide .direct-select a:hover .badge {
+          background-color: #d15241;
+          color: #FFF;
+          -webkix-transition: background-color 0.2s ease-out;
+          -moz-transition: background-color 0.2s ease-out;
+          -o-transition: background-color 0.2s ease-out;
+          -ms-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out; }
   .slide ul {
     display: block;
     padding-left: 0;

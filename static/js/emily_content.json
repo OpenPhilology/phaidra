@@ -152,6 +152,96 @@
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_comp.html"
 					},
 					{
+						"type": "slide_direct_select",
+						"settings": 
+							{ 
+								"orientation" : "horizontal" 
+							},
+						"title": "Exercise: Select the Subject of this Sentence",
+						"content": "Which of these words is the subject of the following English sentence:",
+						"options": [
+							[
+								{
+									"value": "The ships",
+									"display": "The ships"
+								},
+								{
+									"value": "sailed",
+									"display": "sailed"
+								},
+								{
+									"value": "to Sicily",
+									"display": "to Sicily"
+								}
+							]
+						],
+						"answers": ["The ships"],
+						"successMsg": "<strong>Right Answer!</strong> \"The Ships\" is the subject of this sentence, because it performs the action of the verb, \"sailed\". If this sentence were in Greek, \"The ships\" would be in the <strong>nominative case</strong>.", 
+						"hintMsg": "<strong>Not quite.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": 
+							{ 
+								"orientation" : "horizontal" 
+							},
+						"title": "Exercise: Select the <strong>Complement</strong> of this Sentence",
+						"content": "Which of these words is the complement to the subject?",
+						"options": [
+							[
+								{
+									"value": "The day",
+									"display": "ἡ ἡμέρα<br><small>The day</small>"
+								},
+								{
+									"value": "is",
+									"display": "εστίν<br><small>is</small>"
+								},
+								{
+									"value": "long",
+									"display": "μακρά<br><small>long</small>"
+								}
+							]
+						],
+						"answers": ["long"],
+						"successMsg": "<strong>Right Answer!</strong> You noticed that 'long' is the complement to the subject, 'the day'.", 
+						"hintMsg": "<strong>Not quite.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": 
+							{ 
+								"orientation" : "vertical" 
+							},
+						"title": "Exercise: Pick the Correct Case",
+						"content": "In which case does the <strong>subject of a sentence</strong> belong?",
+						"options": [
+							[
+								{
+									"value": "Nominative",
+									"display": "Nominative"
+								},
+								{
+									"value": "Genitive",
+									"display": "Genitive"
+								},
+								{
+									"value": "Dative",
+									"display": "Dative"
+								}
+							]
+						],
+						"answers": ["Nominative"],
+						"successMsg": "<strong>Right Answer!</strong> Subjects of a sentence always belong in the nominative case.", 
+						"hintMsg": "<strong>Not quite.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_pent.html"
 					},
