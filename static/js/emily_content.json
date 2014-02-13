@@ -164,6 +164,26 @@
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative_pent.html"
 					},
 					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_poss.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_part.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_comp.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_pent.html"
+					},
+					{
 						"type": "slide_multi_composition",
 						"title": "Identify the Nominative",
 						"content": "Pay careful attention to the endings of the words. Can you spot the <strong>Nominative</strong>, <strong>Singular</strong>, <strong>Feminine</strong> noun?<br><br><blockquote><span class=\"greek-text\">οὕς,ἐπειδὴ ἡμέρα ἐγένετο, οἱ ἱππῆςτῶν Συρακοσίων περιελάσαντες διέφθειραν.</span><small>Thucydides' <em>History of the Peloponnesian War</em>, <a href=\"#\">7.44.8</a></small></blockquote><blockquote>...[there were soldiers] who, when day broke, were cut off by the Syracusian horsemen that ranged around the country.</blockquote>",
