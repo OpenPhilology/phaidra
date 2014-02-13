@@ -54,7 +54,7 @@ define(
 					this.slides.push(view);
 
 					// Create a progress bar section for each slide
-					if (i < (slides.length - 1))
+					if (i < (slides.length - 1)) 
 						progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
 				}
 

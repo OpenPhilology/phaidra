@@ -849,24 +849,20 @@ div.module {
 table.inflection-table {
 	font-size: 0.9em;
 
-	td {
-	}
-
 	tr.current {
-		background-color: lighten($color-pri-one, 10);
+		background-color: $color-pri-one;
 		color: #FFF;
 
 		.greek-text {
 			color: #FFF;
 
 			em {
-				color: $color-pri-one;
+				color: $color-pri-two;
 				background-color: #FFF;
 			}
 		}
 	}
 	tr.future {
-
 		.greek-text {
 			color: #CCC;
 		}

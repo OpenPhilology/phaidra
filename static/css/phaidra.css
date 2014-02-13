@@ -697,12 +697,12 @@ div.module {
 table.inflection-table {
   font-size: 0.9em; }
   table.inflection-table tr.current {
-    background-color: #db776a;
+    background-color: #d15241;
     color: #FFF; }
     table.inflection-table tr.current .greek-text {
       color: #FFF; }
       table.inflection-table tr.current .greek-text em {
-        color: #d15241;
+        color: #1fadad;
         background-color: #FFF; }
   table.inflection-table tr.future .greek-text {
     color: #CCC; }

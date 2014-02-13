@@ -23,10 +23,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 
 						that.$el.find('a[data-toggle="popover"]').popover();
 						that.$el.find('em[data-toggle="tooltip"]').tooltip();
-
-						// Append a 'next' button
-						//var index = that.module.get('slides').indexOf(that.model) + 1;
-						//that.$el.append('<p><a href="' + index + '" class="btn-continue">Continue</a></p>');
 					},
 					error: function(responseText) {
 						console.log("Problem!");	
