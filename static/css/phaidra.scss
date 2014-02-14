@@ -109,6 +109,10 @@ $font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans serif;
 body {
 	color: #666;
 	font-family: $font-family;
+	background-image: url('/static/images/footer_graphic.png');
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	background-attachment: fixed;
 }
 a {
 	color: $color-pri-two;
@@ -426,6 +430,8 @@ a {
 /* Lesson-related styles */
 .feedback-container {
 	padding: 20px;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 2px;
 
 	h2 {
 		color: lighten($color-pri-three, 10%);
@@ -520,6 +526,7 @@ a {
 }
 .module-container {
 	background: rgba(255, 255, 255, 0.7);
+	border-radius: 2px;
 	padding: 20px;
 	text-align: center;
 
@@ -668,6 +675,8 @@ div.module {
 	padding: 20px;
 	border-radius: 3px;
 	min-height: 300px;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 2px;
 
 	.slide-unit {
 		display: none;

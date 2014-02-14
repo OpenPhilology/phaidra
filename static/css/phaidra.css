@@ -43,7 +43,11 @@
 
 body {
   color: #666;
-  font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans serif; }
+  font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans serif;
+  background-image: url("/static/images/footer_graphic.png");
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-attachment: fixed; }
 
 a {
   color: #1fadad; }
@@ -331,7 +335,9 @@ a {
 
 /* Lesson-related styles */
 .feedback-container {
-  padding: 20px; }
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 2px; }
   .feedback-container h2 {
     color: #6e517a;
     font-size: 14px;
@@ -402,6 +408,7 @@ a {
 
 .module-container {
   background: rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
   padding: 20px;
   text-align: center; }
   .module-container .col-xs-1, .module-container .col-xs-2, .module-container .col-xs-3, .module-container .col-xs-4, .module-container .col-xs-5, .module-container .col-xs-6, .module-container .col-xs-7, .module-container .col-xs-8, .module-container .col-xs-9, .module-container .col-xs-10, .module-container .col-xs-11, .module-container .col-xs-12, .module-container .col-sm-1, .module-container .col-sm-2, .module-container .col-sm-3, .module-container .col-sm-4, .module-container .col-sm-5, .module-container .col-sm-6, .module-container .col-sm-7, .module-container .col-sm-8, .module-container .col-sm-9, .module-container .col-sm-10, .module-container .col-sm-11, .module-container .col-sm-12, .module-container .col-md-1, .module-container .col-md-2, .module-container .col-md-3, .module-container .col-md-4, .module-container .col-md-5, .module-container .col-md-6, .module-container .col-md-7, .module-container .col-md-8, .module-container .col-md-9, .module-container .col-md-10, .module-container .col-md-11, .module-container .col-md-12, .module-container .col-lg-1, .module-container .col-lg-2, .module-container .col-lg-3, .module-container .col-lg-4, .module-container .col-lg-5, .module-container .col-lg-6, .module-container .col-lg-7, .module-container .col-lg-8, .module-container .col-lg-9, .module-container .col-lg-10, .module-container .col-lg-11, .module-container .col-lg-12 {
@@ -528,7 +535,9 @@ div.module {
 .slide {
   padding: 20px;
   border-radius: 3px;
-  min-height: 300px; }
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 2px; }
   .slide .slide-unit {
     display: none; }
   .slide .exercise .badge {
