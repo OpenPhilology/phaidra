@@ -1,6 +1,6 @@
 define(
-	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition'], 
-	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView) { 
+	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition','views/FrankTestView','views/SimpleVocabView', 'views/slide_direct_select'], 
+	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView, FrankTestView, SimpleVocabView, DirectSelectSlideView) { 
 
 		var View = Backbone.View.extend({
 			events: {
@@ -42,12 +42,22 @@ define(
 							.$el
 							.appendTo(this.$el.find('#lesson-content'));
 					}
+					else if (selector == '#slide_direct_select') {
+						view = new DirectSelectSlideView({ 
+							model: slides.at(i), 
+							template: _.template(that.$el.find('#slide_direct_select').html()) 
+						}).render()
+							.$el
+							.appendTo(this.$el.find('#lesson-content'));
+					}
+
 					this.slides.push(view);
 
 					// Create a progress bar section for each slide
-					if (i < (slides.length - 1))
+					if (i < (slides.length - 1)) 
 						progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
 				}
+
 				
 				return this;	
 			},
