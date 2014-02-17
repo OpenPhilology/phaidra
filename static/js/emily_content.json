@@ -129,6 +129,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/nouns_concl.html"
 					}
 				]
 			}
