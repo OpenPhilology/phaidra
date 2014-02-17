@@ -123,7 +123,8 @@ a {
   background-color: #fadfbf;
   border-radius: 3px;
   line-height: 2em;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
   .speech:before {
     top: -20px;
     bottom: auto;
@@ -324,6 +325,11 @@ a {
     transition: background-color 0.2s ease-out;
     box-shadow: 2px 2px 3px #CCC;
     color: #FFF; }
+    .calls-to-action button:hover .glyphicon, .calls-to-action a:hover .glyphicon {
+      -webkit-animation: wiggle 0.2s ease 0 3;
+      -moz-animation: wiggle 0.2s ease 0 3;
+      -o-animation: wiggle 0.2s ease 0 3;
+      animation: wiggle 0.2s ease 0 3; }
 .calls-to-action .glyphicon {
   margin-right: 5px; }
 .calls-to-action .glyphicon-flash {

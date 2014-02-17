@@ -7,7 +7,8 @@ requirejs.config({
 		'json2': 'lib/json2',
 		'underscore': 'lib/underscore-min',
 		'backbone': 'lib/backbone',
-		'd3': 'lib/d3.v3.min'
+		'd3': 'lib/d3.v3.min',
+		'text': 'lib/text'
 	},
 	'shim': {
 		'underscore': {

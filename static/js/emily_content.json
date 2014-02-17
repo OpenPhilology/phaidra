@@ -35,7 +35,10 @@
 						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/1.html"
 					},
 					{
-						"type": "slide_multi_composition",
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
 						"title": "Exercise: Pick the correct definite article",
 						"content": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
 						"options": [
@@ -62,7 +65,10 @@
 						"require_all": "true"
 					},
 					{
-						"type": "slide_multi_composition",
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
 						"title": "Exercise: Pick the correct definite article",
 						"content": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span class=\"greek-text masc\">πόλεμος</span> (battle)?",
 						"options": [
@@ -88,7 +94,10 @@
 						"require_all": "true"
 					},
 					{
-						"type": "slide_multi_composition",
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
 						"title": "Exercise: Pick the correct definite article",
 						"content": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span class=\"greek-text neut\">ἔργον</span> (work)?",
 						"options": [
@@ -245,6 +254,15 @@
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_pent.html"
 					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_concl.html"
+					}
+				]
+			},
+			{
+				"title": "Accusative Case",
+				"slides": [
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative.html"
@@ -253,6 +271,15 @@
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative_pent.html"
 					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative_concl.html"
+					}
+				]
+			},
+			{
+				"title": "Genitive Case",
+				"slides": [
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive.html"
@@ -272,32 +299,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_pent.html"
-					}
-				]
-			},
-			{
-				"title": "Accusative Case",
-				"slides": [
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/5.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/6.html"
-					}
-				]
-			},
-			{
-				"title": "Genitive Case",
-				"slides": [
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/5.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/6.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_concl.html"
 					}
 				]
 			},

@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($, _, Backbone, Models, Collections) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/table_inflections'], function($, _, Backbone, Models, Collections, inflectionTableView) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',
@@ -31,6 +31,13 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 			}
 			else {
 				this.template(this.model.attributes);
+			}
+
+			var tableView;
+			if (this.$el.find('.inflection-placeholder').length > 0) {
+				tableView = new inflectionTableView().render({
+					el: this.$el.find('.inflection-placeholder')
+				});
 			}
 		},
 		render: function() {
