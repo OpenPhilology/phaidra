@@ -324,6 +324,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative_concl.html"
 					}
 				]
 			},
@@ -332,11 +336,11 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/5.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/vocative.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/6.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/vocative_concl.html"
 					}
 				]
 			},
