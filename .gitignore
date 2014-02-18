@@ -1,3 +1,4 @@
+data.py
 env/*
 logs/*
 *.pyc
