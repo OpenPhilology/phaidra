@@ -271,6 +271,66 @@
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative.html"
 					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "horizontal"
+						},
+						"title": "Exercise: Select the Direct Object",
+						"content": "In the following sentence, which word or words are the direct object, and would belong in the <strong>accusative case</strong> if they were written in Greek?",
+						"options": [
+							[
+								{
+									"value": "The king",
+									"display": "The king"
+								},
+								{  
+									"value": "gave",
+									"display": "gave"
+								},
+								{
+									"value": "an order",
+									"display": "an order"
+								}
+							]
+						],
+						"answers": ["an order"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": 
+							{ 
+								"orientation" : "horizontal" 
+							},
+						"title": "Exercise: Select the Direct Object",
+						"content": "Which of these words is in the accusative case?",
+						"options": [
+							[
+								{
+									"value": "The city",
+									"display": "ἡ πόλις<br><small>The city</small>"
+								},
+								{
+									"value": "has",
+									"display": "ἔχει<br><small>has</small>"
+								},
+								{
+									"value": "an army",
+									"display": "στρατίαν<br><small>an army</small>"
+								}
+							]
+						],
+						"answers": ["an army"],
+						"successMsg": "<strong>Right Answer!</strong>", 
+						"hintMsg": "<strong>Not quite.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative_pent.html"
@@ -315,11 +375,19 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/5.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/6.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative_in.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative_concl.html"
 					}
 				]
 			},
@@ -328,11 +396,11 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/5.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/vocative.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/6.html"
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/vocative_concl.html"
 					}
 				]
 			},
@@ -393,6 +461,20 @@
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "true",
 						"require_all": "true"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Alpha Declension",
+		"modules": [
+			{
+				"title": "Section 0",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/0.introduction/intro.html"
 					}
 				]
 			}
