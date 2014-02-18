@@ -465,5 +465,19 @@
 				]
 			}
 		]
+	},
+	{
+		"title": "Alpha Declension",
+		"modules": [
+			{
+				"title": "Section 0",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/0.introduction/intro.html"
+					}
+				]
+			}
+		]
 	}
 ]
