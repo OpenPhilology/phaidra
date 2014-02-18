@@ -288,9 +288,8 @@ class SubmissionResource(ModelResource):
 
 class DocumentResource(ModelResource):
 	
-	#sents = fields.ToManyField('app.api.SentenceResource', 'file', full=True, null = True, blank = True)
-	# doesnt work yet
-	sents = fields.ToManyField('api.api.SentenceResource', lambda bundle: Sentence.objects.filter(document__name = bundle.obj.name ), full = True, null = True, blank = True )
+	# foreign key to sentences of a document
+	sentences = fields.ToManyField('api.api.SentenceResource', lambda bundle: Sentence.objects.filter(document__name = bundle.obj.name), full = True, null = True, blank = True )
 							
 	class Meta:
 		queryset = Document.objects.all()
@@ -299,14 +298,15 @@ class DocumentResource(ModelResource):
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'CTS': ALL,
-					'lang': ALL
-					}
+					'lang': ALL}
 
 
 class SentenceResource(ModelResource):
 	#sentence/?format=json&file__lang=fas
 	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
-	
+	# expensive put somewhere else?!
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True)
+		
 	class Meta:
 		queryset = Sentence.objects.all()
 		resource_name = 'sentence'
@@ -314,9 +314,10 @@ class SentenceResource(ModelResource):
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'CTS': ALL,
-					'file': ALL_WITH_RELATIONS
-					}
-		#limit=2
+					'file': ALL_WITH_RELATIONS,
+					'words': ALL_WITH_RELATIONS}
+				
+		
  	
 class LemmaResource(ModelResource):
 	
@@ -330,30 +331,34 @@ class LemmaResource(ModelResource):
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'value': ALL}
-		#limit = 50
+
 
 class LemmaWordResource(ModelResource):
 
+	"""
+	this is a resource that was introduced before foreign key references worked.
+	It displays the possibility to manipulate the returned query set.
+	"""
 	# filter(lemma=bundle.obj.lemma))
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj)) 
+	
 	class Meta:
-		# merges with the return of obj_get_list
-		queryset = Lemma.objects.all()
+		queryset = Lemma.objects.all()	# merges with the return of obj_get_list
 		resource_name = 'lemma/word'
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'value': ALL}
-		limit = 100
+		limit = 5
 
 	def obj_get_list(self, bundle, **kwargs):
 		if ('pos' and 'posAdd') in bundle.request.GET.keys():
 			data = []
 			## http://localhost:8000/api/lemma/word/?pos=verb&posAdd=o_stem&format=json
-			words = Word.objects.filter(pos=bundle.request.GET['pos'], posAdd__contains = bundle.request.GET['posAdd'] )
+			words = Word.objects.filter(pos=bundle.request.GET['pos'], posAdd__contains = bundle.request.GET['posAdd'] ) # pre-filtering is recommended
+			#words = Word.objects.all()
 			for word in words:
-				# catch target language words without w/o lemma!!
-				if word.lemmas is not None and word.lemmas.valuesCount() >= 2:
+				if word.lemmas is not None and word.lemmas.valuesCount() >=2 :
 					data.append(word.lemmas)
 			return data	
 		return super(LemmaWordResource, self).obj_get_list(bundle, **kwargs).filter()
@@ -365,9 +370,10 @@ class LemmaWordResource(ModelResource):
 
 class WordResource(ModelResource):
 	
-	# doesnt work for detail words with relations
 	base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), full = True, null=True, blank=True) 
-	  
+	#word/?format=json&sentenceRes__file__lang=fas
+	sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True)
+	
 	class Meta:
 		queryset = Word.objects.all()
 		resource_name = 'word'
@@ -376,12 +382,15 @@ class WordResource(ModelResource):
 		authorization = ReadOnlyAuthorization()
 		filtering = {'CTS': ALL,
 					'pos': ALL, 
-					'gender': ALL}
-		#limit = 5
+					'gender': ALL,
+					'sentenceRes': ALL_WITH_RELATIONS,
+					'base': ALL_WITH_RELATIONS}
+		
 		
 	def build_filters(self, filters=None):
 		"""
-		a filter example to compose several conditions within a filer
+		a filter example to compose several conditions within a filer - this would make sense if we ask for a special (static) compos. more often
+		this should MAYBE be more generic! 
 		"""
 		if filters is None:
 			filters = {}
