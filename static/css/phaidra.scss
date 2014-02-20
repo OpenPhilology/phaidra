@@ -611,6 +611,23 @@ div.module {
 		}
 	}
 	&.morph {
+		background-color: $color-sec-one;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color-sec-one, 5%);
+			@include transition(background-color, .2s, ease-in);
+
+			box-shadow: 2px 2px 3px #CCC;
+			position: relative;
+			top: -3px;
+		}
+
+		h3 {
+			color: #FFF;
+		}
+	}
+	&.verbs {
 		background-color: $color-pri-three;
 		@include transition(background-color, .2s, ease-out);
 
