@@ -289,7 +289,8 @@ class SubmissionResource(ModelResource):
 class DocumentResource(ModelResource):
 	
 	# foreign key to sentences of a document
-	sentences = fields.ToManyField('api.api.SentenceResource', lambda bundle: Sentence.objects.filter(document__name = bundle.obj.name), full = True, null = True, blank = True )
+	#document/?format=json&sentences__length=24
+	sentences = fields.ToManyField('api.api.SentenceResource', lambda bundle: Sentence.objects.filter(document__name = bundle.obj.name), null = True, blank = True )# full = True)
 							
 	class Meta:
 		queryset = Document.objects.all()
@@ -297,14 +298,19 @@ class DocumentResource(ModelResource):
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
-		filtering = {'CTS': ALL,
-					'lang': ALL}
+		filtering = {'internal': ALL,
+					'CTS': ALL,
+					'author': ALL,
+					'name': ALL,
+					'name_eng': ALL,
+					'lang': ALL,
+					'sentences': ALL_WITH_RELATIONS}
 
 
 class SentenceResource(ModelResource):
 	#sentence/?format=json&file__lang=fas
 	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
-	# expensive put somewhere else?!
+	# expensive
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True)
 		
 	class Meta:
@@ -313,15 +319,17 @@ class SentenceResource(ModelResource):
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
-		filtering = {'CTS': ALL,
+		filtering = {'internal': ALL,
+					'CTS': ALL,
+					'length': ALL,
 					'file': ALL_WITH_RELATIONS,
 					'words': ALL_WITH_RELATIONS}
-				
-		
+						
  	
 class LemmaResource(ModelResource):
 	
 	# this works because Lemma object unicode function equals the lemma attribute of the word model
+	# expensive
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj))
 	
 	class Meta:
@@ -330,14 +338,17 @@ class LemmaResource(ModelResource):
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
-		filtering = {'value': ALL}
+		filtering = {'value': ALL,
+					#'wordcount': ALL, # coming soon?
+					'words': ALL_WITH_RELATIONS}
 
 
 class LemmaWordResource(ModelResource):
 
 	"""
 	this is a resource that was introduced before foreign key references worked.
-	It displays the possibility to manipulate the returned query set.
+	It displays the possibility to manipulate the returned query set (returns a list of lemmas with a special property, but takes the words).
+	Performance issue
 	"""
 	# filter(lemma=bundle.obj.lemma))
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj)) 
@@ -349,7 +360,6 @@ class LemmaWordResource(ModelResource):
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'value': ALL}
-		limit = 5
 
 	def obj_get_list(self, bundle, **kwargs):
 		if ('pos' and 'posAdd') in bundle.request.GET.keys():
@@ -380,12 +390,26 @@ class WordResource(ModelResource):
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
-		filtering = {'CTS': ALL,
+		filtering = {'internal': ALL,
+					'CTS': ALL,
+					'value': ALL,
+					'length': ALL,
+					'form': ALL,
+					'lemma': ALL,
 					'pos': ALL, 
+					'person': ALL,
+					'number': ALL,
+					'tense': ALL,
+					'mood': ALL,
+					'voice': ALL,
 					'gender': ALL,
+					'case': ALL,
+					'degree': ALL,
+					'dialect': ALL,
+					'isIndecl': ALL,
+					'posAdd': ALL,					
 					'sentenceRes': ALL_WITH_RELATIONS,
 					'base': ALL_WITH_RELATIONS}
-		
 		
 	def build_filters(self, filters=None):
 		"""
