@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.core.management import setup_environ
 from phaidra import settings
 from tastypie.bundle import Bundle
+from django.contrib.webdesign.lorem_ipsum import sentence
 setup_environ(settings)
 from django.conf.urls import url
 from django.conf import settings
@@ -25,6 +26,7 @@ from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden
 
 import json
+import random
 from neo4django.db.models import NodeModel
 
 class UserObjectsOnlyAuthorization(Authorization):
@@ -311,7 +313,7 @@ class SentenceResource(ModelResource):
 	#sentence/?format=json&file__lang=fas
 	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
 	# expensive
-	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True)
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True)#full = True)
 		
 	class Meta:
 		queryset = Sentence.objects.all()
@@ -324,7 +326,48 @@ class SentenceResource(ModelResource):
 					'length': ALL,
 					'file': ALL_WITH_RELATIONS,
 					'words': ALL_WITH_RELATIONS}
-						
+		limit = 3
+ 		
+class SentenceRandomResource(ModelResource):
+
+	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
+	# expensive
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True, full = True)
+		
+	class Meta:
+		queryset = Sentence.objects.filter()
+		resource_name = 'sentence/random'
+		always_return_data = True
+		excludes = ['require_order', 'require_all', 'sentence']
+		authorization = ReadOnlyAuthorization()
+		filtering = {'internal': ALL,
+					'CTS': ALL,
+					'length': ALL,
+					'file': ALL_WITH_RELATIONS,
+					'words': ALL_WITH_RELATIONS}
+
+ 	
+
+	def obj_get_list(self, bundle, **kwargs):
+	
+ 		#sentence/random/?format=json&number=sg&case=gen&lemma=Ἰωνία
+ 		if 'case' in bundle.request.GET.keys() and 'lemma' in bundle.request.GET.keys() :
+ 			if 'number'  in bundle.request.GET.keys() :
+ 			 	words = Word.objects.filter(case = bundle.request.GET['case'], number = bundle.request.GET['number'], lemma = bundle.request.GET['lemma'])
+ 			else :
+ 				words = Word.objects.filter(case = bundle.request.GET['case'], lemma = bundle.request.GET['lemma'])
+ 			number_of_words = len(words)
+ 			if number_of_words > 0 :
+ 				random_index = int(random.random()*number_of_words)+0
+ 				random_word = words[random_index]
+ 				sentence = random_word.sentence			
+ 				#bundle.request.path = '/api/sentence/' + str(sentence.id) + '/?format=json'				
+		 		return [sentence]
+ 			else : 
+ 				return http.HttpNotFound() 				 			 			
+ 		else:
+ 			return super(SentenceRandomResource, self).obj_get_list(bundle, **kwargs)
+ 		 	 	
  	
 class LemmaResource(ModelResource):
 	
@@ -346,9 +389,7 @@ class LemmaResource(ModelResource):
 class LemmaWordResource(ModelResource):
 
 	"""
-	this is a resource that was introduced before foreign key references worked.
-	It displays the possibility to manipulate the returned query set (returns a list of lemmas with a special property, but takes the words).
-	Performance issue
+	Returns a list of lemmas with a special properties of a relative - words.
 	"""
 	# filter(lemma=bundle.obj.lemma))
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj)) 
@@ -373,14 +414,11 @@ class LemmaWordResource(ModelResource):
 			return data	
 		return super(LemmaWordResource, self).obj_get_list(bundle, **kwargs).filter()
 		##return super(WordResource, self).obj_get_list(bundle, **kwargs).filter(CTS=bundle.request.GET['CTS'])		
-	
-	#def dehydrate_value(self, bundle):
-		#return unicode(bundle.obj.lemma) or u''  
 
 
 class WordResource(ModelResource):
 	
-	base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), full = True, null=True, blank=True) 
+	base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True) 
 	#word/?format=json&sentenceRes__file__lang=fas
 	sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True)
 	
@@ -388,7 +426,7 @@ class WordResource(ModelResource):
 		queryset = Word.objects.all()
 		resource_name = 'word'
 		always_return_data = True
-		excludes = ['require_order', 'require_all']
+		excludes = ['require_all', 'sentence']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'internal': ALL,
 					'CTS': ALL,
@@ -413,7 +451,7 @@ class WordResource(ModelResource):
 		
 	def build_filters(self, filters=None):
 		"""
-		a filter example to compose several conditions within a filer - this would make sense if we ask for a special (static) compos. more often
+		A filter example to compose several conditions within a filer - this would make sense if we ask for a special (static) compos. more often
 		this should MAYBE be more generic! 
 		"""
 		if filters is None:
