@@ -386,10 +386,11 @@ class LemmaResource(ModelResource):
 					'words': ALL_WITH_RELATIONS}
 
 
+
 class LemmaWordResource(ModelResource):
 
 	"""
-	Returns a list of lemmas with a special properties of a relative - words.
+	Returns a list of lemmas with special properties of a relative - words.
 	"""
 	# filter(lemma=bundle.obj.lemma))
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj)) 
@@ -403,17 +404,20 @@ class LemmaWordResource(ModelResource):
 		filtering = {'value': ALL}
 
 	def obj_get_list(self, bundle, **kwargs):
-		if ('pos' and 'posAdd') in bundle.request.GET.keys():
+		if 'word_number' in bundle.request.GET.keys() and 'posAdd' in bundle.request.GET.keys():
 			data = []
-			## http://localhost:8000/api/lemma/word/?pos=verb&posAdd=o_stem&format=json
-			words = Word.objects.filter(pos=bundle.request.GET['pos'], posAdd__contains = bundle.request.GET['posAdd'] ) # pre-filtering is recommended
-			#words = Word.objects.all()
+			words = Word.objects.all()
+			## http://localhost:8000/api/lemma/word/?word_number=2&pos=verb&posAdd=o_stem&format=json
+			if 'pos' in bundle.request.GET.keys() :
+				words = Word.objects.filter(pos=bundle.request.GET['pos'])
+			if 'posAdd' in bundle.request.GET.keys() :
+				words = words.filter(posAdd__contains=bundle.request.GET['posAdd'])
 			for word in words:
-				if word.lemmas is not None and word.lemmas.valuesCount() >=2 :
+				if word.lemmas is not None and word.lemmas.valuesCount() >= int(bundle.request.GET['word_number']) :
 					data.append(word.lemmas)
 			return data	
-		return super(LemmaWordResource, self).obj_get_list(bundle, **kwargs).filter()
-		##return super(WordResource, self).obj_get_list(bundle, **kwargs).filter(CTS=bundle.request.GET['CTS'])		
+		return super(LemmaWordResource, self).obj_get_list(bundle, **kwargs).filter()	
+
 
 
 class WordResource(ModelResource):
