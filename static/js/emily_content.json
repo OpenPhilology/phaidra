@@ -467,14 +467,18 @@
 		]
 	},
 	{
-		"title": "Alpha Declension",
+		"title": "The First or α- Declension",
 		"modules": [
 			{
-				"title": "Section 0",
+				"title": "The First or α- Declension",
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/0.introduction/intro.html"
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/history.html"
 					}
 				]
 			}
