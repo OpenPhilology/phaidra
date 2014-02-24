@@ -23,7 +23,7 @@ from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.exceptions import Unauthorized
 from tastypie.resources import ModelResource, ALL, ALL_WITH_RELATIONS
 from tastypie.utils import trailing_slash
-from tastypie.http import HttpUnauthorized, HttpForbidden
+from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 
 import json
 import random
@@ -326,13 +326,74 @@ class SentenceResource(ModelResource):
 					'length': ALL,
 					'file': ALL_WITH_RELATIONS,
 					'words': ALL_WITH_RELATIONS}
-		limit = 3
+		
+		
+	def prepend_urls(self, *args, **kwargs):
+		
+		name = 'get_one_random'
+		return [url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, name, trailing_slash()), self.wrap_view(name), name="api_%s" % name)]
+
+	
+	def get_one_random(self, request, **kwargs):
+		
+		"""
+		Gets one random sentence of sentences with provided morphological information to one word.
+		"""
+		case = request.GET.get('case')
+		lemma = request.GET.get('lemma')
+		number = request.GET.get('number')
+		length = request.GET.get('length')
+		posAdd = request.GET.get('posAdd')
+		query_params = {}
+				
+		if case is not None:
+			query_params['case'] = case
+			
+		if lemma is not None:
+			#query_params = {'case': case, 'lemma': lemma}
+			query_params['lemma'] = lemma
+			
+		if number is not None:
+			query_params['number'] = number
+			
+		if posAdd is not None:
+			query_params['posAdd__contains'] = posAdd
+			
+		words = Word.objects.filter(**query_params)
+		if len(words) < 1:
+			return self.error_response(request, {'error': 'No results hit this query.'}, response_class=HttpBadRequest)
+		
+		if length is not None:
+			
+			sentences = []
+			for w in words:
+				if (w.sentence.length<=int(length)):
+					sentences.append(w.sentence)
+			
+			if len(sentences) < 1: return self.error_response(request, {'error': 'Wanna try it without sentence length condition?'}, response_class=HttpBadRequest)
+		
+			sentence = random.choice(sentences)
+		
+		else : 
+			word = random.choice(words)
+			sentence = word.sentence
+			
+		data = {'sentence': sentence.__dict__}
+		data = data['sentence']['_prop_values']
+		data['words'] = []			
+		for word in reversed(sentence.words.all()) :
+			w = word.__dict__
+			data['words'].append(w['_prop_values'])
+										
+		return self.create_response(request, data)	
+		#return self.error_response(request, {'error': 'lemma and case are required.'}, response_class=HttpBadRequest)
+		
  		
 class SentenceRandomResource(ModelResource):
 
 	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
 	# expensive
-	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True, full = True)
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True)#, full = True)
 		
 	class Meta:
 		queryset = Sentence.objects.filter()
@@ -345,30 +406,47 @@ class SentenceRandomResource(ModelResource):
 					'length': ALL,
 					'file': ALL_WITH_RELATIONS,
 					'words': ALL_WITH_RELATIONS}
-
+		limit = 3
  	
-
-	def obj_get_list(self, bundle, **kwargs):
 	
- 		#sentence/random/?format=json&number=sg&case=gen&lemma=Ἰωνία
- 		if 'case' in bundle.request.GET.keys() and 'lemma' in bundle.request.GET.keys() :
- 			if 'number'  in bundle.request.GET.keys() :
- 			 	words = Word.objects.filter(case = bundle.request.GET['case'], number = bundle.request.GET['number'], lemma = bundle.request.GET['lemma'])
- 			else :
- 				words = Word.objects.filter(case = bundle.request.GET['case'], lemma = bundle.request.GET['lemma'])
- 			number_of_words = len(words)
- 			if number_of_words > 0 :
- 				random_index = int(random.random()*number_of_words)+0
- 				random_word = words[random_index]
- 				sentence = random_word.sentence			
- 				#bundle.request.path = '/api/sentence/' + str(sentence.id) + '/?format=json'				
-		 		return [sentence]
- 			else : 
- 				return http.HttpNotFound() 				 			 			
- 		else:
- 			return super(SentenceRandomResource, self).obj_get_list(bundle, **kwargs)
- 		 	 	
- 	
+	def prepend_urls(self, *args, **kwargs):
+		
+		name = 'get_one_random'
+		return [url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, name, trailing_slash()), self.wrap_view(name), name="api_%s" % name)]
+
+	
+	def get_one_random(self, request, **kwargs):
+		
+		"""
+		Gets one random sentence of sentences with provided `case` and `lemma` params.
+		"""
+		case = request.GET.get('case')
+		lemma = request.GET.get('lemma')
+		number = request.GET.get('number')
+		
+		if case and lemma:
+			
+			query_params = {'case': case, 'lemma': lemma}
+			if number is not None:
+				
+				query_params['number'] = number
+				words = Word.objects.filter(**query_params)
+				word = random.choice(words)
+				sentence = word.sentence
+			
+				data = {'sentence': word.sentence.__dict__}
+				data = data['sentence']['_prop_values']
+				data['words'] = []			
+				for word in sentence.words.all() :
+					w = word.__dict__
+					data['words'].append(w['_prop_values'])
+										
+			return self.create_response(request, data)
+		
+		else:
+			return self.error_response(request, {'error': 'lemma and case are required.'}, response_class=HttpBadRequest)
+		
+		
 class LemmaResource(ModelResource):
 	
 	# this works because Lemma object unicode function equals the lemma attribute of the word model
