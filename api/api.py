@@ -337,33 +337,46 @@ class SentenceResource(ModelResource):
 	def get_one_random(self, request, **kwargs):
 		
 		"""
-		Gets one random sentence of sentences with provided `case` and `lemma` params.
+		Gets one random sentence of sentences with provided morphological information to one word.
 		"""
 		case = request.GET.get('case')
 		lemma = request.GET.get('lemma')
 		number = request.GET.get('number')
 		
-		if case and lemma:
-			
-			query_params = {'case': case, 'lemma': lemma}
-			if number is not None:
-				
-				query_params['number'] = number
-				words = Word.objects.filter(**query_params)
-				word = random.choice(words)
-				sentence = word.sentence
-			
-				data = {'sentence': word.sentence.__dict__}
-				data = data['sentence']['_prop_values']
-				data['words'] = []			
-				for word in sentence.words.all() :
-					w = word.__dict__
-					data['words'].append(w['_prop_values'])
-										
-			return self.create_response(request, data)
 		
-		else:
-			return self.error_response(request, {'error': 'lemma and case are required.'}, response_class=HttpBadRequest)
+		length = request.GET.get('length')
+		query_params = {}
+		
+		if case is not None:
+			query_params['case'] = case
+			
+		if lemma is not None:
+			#query_params = {'case': case, 'lemma': lemma}
+			query_params['lemma'] = lemma
+			
+		if number is not None:
+			query_params['number'] = number
+			
+		#if length is not None:
+			#query_params['length__gt'] = length
+			
+		words = Word.objects.filter(**query_params)
+		if len(words) < 1:
+			return self.error_response(request, {'error': 'No results hit this query.'}, response_class=HttpBadRequest)
+		
+		word = random.choice(words)
+		sentence = word.sentence
+			
+		data = {'sentence': word.sentence.__dict__}
+		data = data['sentence']['_prop_values']
+		data['words'] = []			
+		for word in reversed(sentence.words.all()) :
+			w = word.__dict__
+			data['words'].append(w['_prop_values'])
+										
+		return self.create_response(request, data)
+		
+		#return self.error_response(request, {'error': 'lemma and case are required.'}, response_class=HttpBadRequest)
 		
  		
 class SentenceRandomResource(ModelResource):
