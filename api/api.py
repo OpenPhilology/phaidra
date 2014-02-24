@@ -342,11 +342,10 @@ class SentenceResource(ModelResource):
 		case = request.GET.get('case')
 		lemma = request.GET.get('lemma')
 		number = request.GET.get('number')
-		
-		
 		length = request.GET.get('length')
+		posAdd = request.GET.get('posAdd')
 		query_params = {}
-		
+				
 		if case is not None:
 			query_params['case'] = case
 			
@@ -357,25 +356,36 @@ class SentenceResource(ModelResource):
 		if number is not None:
 			query_params['number'] = number
 			
-		#if length is not None:
-			#query_params['length__gt'] = length
+		if posAdd is not None:
+			query_params['posAdd__contains'] = posAdd
 			
 		words = Word.objects.filter(**query_params)
 		if len(words) < 1:
 			return self.error_response(request, {'error': 'No results hit this query.'}, response_class=HttpBadRequest)
 		
-		word = random.choice(words)
-		sentence = word.sentence
+		if length is not None:
 			
-		data = {'sentence': word.sentence.__dict__}
+			sentences = []
+			for w in words:
+				if (w.sentence.length<=int(length)):
+					sentences.append(w.sentence)
+			
+			if len(sentences) < 1: return self.error_response(request, {'error': 'Wanna try it without sentence length condition?'}, response_class=HttpBadRequest)
+		
+			sentence = random.choice(sentences)
+		
+		else : 
+			word = random.choice(words)
+			sentence = word.sentence
+			
+		data = {'sentence': sentence.__dict__}
 		data = data['sentence']['_prop_values']
 		data['words'] = []			
 		for word in reversed(sentence.words.all()) :
 			w = word.__dict__
 			data['words'].append(w['_prop_values'])
 										
-		return self.create_response(request, data)
-		
+		return self.create_response(request, data)	
 		#return self.error_response(request, {'error': 'lemma and case are required.'}, response_class=HttpBadRequest)
 		
  		
