@@ -482,6 +482,10 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec0.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec.html"
 					},
 					{
@@ -491,6 +495,14 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec_pent1.html"
 					}
 				]
 			}
