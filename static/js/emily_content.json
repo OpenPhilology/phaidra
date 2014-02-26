@@ -132,6 +132,10 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/articles.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/nouns_concl.html"
 					}
 				]
@@ -503,6 +507,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec_pent1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec_concl.html"
 					}
 				]
 			}
