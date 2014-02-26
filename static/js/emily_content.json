@@ -515,5 +515,23 @@
 				]
 			}
 		]
+	},
+	{	
+		"title": "The Second Declension",
+		"modules": [
+			{
+				"title": "The Second Declension",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/history.html"
+					}
+				]
+			}
+		]		
 	}
 ]
