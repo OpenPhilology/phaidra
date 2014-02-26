@@ -479,6 +479,19 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/history.html"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"task": "identify_morph_noun",
+						"inputs": {
+							"lemmas": ["πρεσβεία", "οἰκία", "χώρα", "ἡμέρα", "στρατιά", "συμμαχία", "ναυμαχία", "αἰτία", "ὠφέλεια", "γνώμη", "πολίτης"],
+							"lemmas": ["συμμαχία", "ναυμαχία", "ὠφέλεια"],
+							"filter": "number=sg&case=nom"
+						},
+						"count": 5
 					}
 				]
 			}

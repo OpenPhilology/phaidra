@@ -44,12 +44,56 @@ define(['jquery', 'underscore', 'backbone', 'models'], function($, _, Backbone, 
 		}
 	});
 
-	Collections.Modules = Backbone.Collection.extend({ 
-		model: Models.Module
-	});
-
 	Collections.Slides = Backbone.Collection.extend({
-		model: Models.Slide
+		model: Models.Slide,
+		initialize: function(models, options) {
+			var that = this;
+
+			/* Is this really bad? */
+			if (!this._meta)
+				this._meta = [];
+
+			this.meta = function(prop, value) {
+				if (value == undefined)
+					return this._meta[prop];
+				else
+					this._meta[prop] = value;
+			};
+
+			that.meta('module', parseInt(options.module));
+			that.meta('section', parseInt(options.section));
+		},
+		populate: function(collection) {
+			var that = this;
+
+			$.ajax({
+				url: '/static/js/emily_content.json',
+				dataType: 'text',
+				async: false,
+				success: function(data) {
+					// Get the data we care about -- specific section of a module
+					data = JSON.parse(data);
+					var slide_data = data[that.meta('module')]["modules"][that.meta('section')]["slides"];
+
+					/*
+					Goes through and creates either an individual slide, or a cluster of slides,
+					based on data from the JSON file.
+					*/
+
+					// Set attributes on this object
+					that.meta('title', data[that.meta('module')]["title"]);
+					that.meta('initLength', slide_data.length);
+
+					for (var i = 0; i < slide_data.length; i++) {
+						that.add(new Models.Slide(slide_data[i]));
+					}
+
+				},
+				error: function(xhr, status, error) {
+					console.log(xhr, status, error);
+				}
+			});
+		}
 	});
 
 	Collections.Vocab = Backbone.Collection.extend({

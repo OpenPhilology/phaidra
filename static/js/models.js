@@ -21,19 +21,80 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 		}
 	});
 
-	Models.Module = Backbone.Model.extend({
-		defaults: {
-			'modelName': 'module',
-			'levels': 0
-		}
-	});
-
 	Models.Slide = Backbone.Model.extend({
 		initialize: function() {
 			_.bindAll(this, 'checkAnswer');
 		},
+		constructor: function(attributes, options) {
+
+			//Backbone.Model.apply(this, arguments);
+			Backbone.Model.prototype.constructor.call(this, attributes);
+
+			// Slide is dynamic if it has a task defined
+			// Or it has all set attributes already (as is case for hand-written slides) 
+
+			if (attributes.task)
+				this.fillAttributes(attributes, options)
+		},
 		defaults: {
 			'modelName': 'slide',
+		},
+		fillAttributes: function(attributes, options) {
+			
+			var that = this;
+
+			var taskMapper = {
+				/*
+					If the task is "identify_morph_noun", we expect the inputs:
+					* lemmas
+					* filter
+				*/
+				'identify_morph_noun': function() {
+
+					var index = Math.floor((Math.random() * attributes.inputs.lemmas.length));
+					var lemma = attributes.inputs.lemmas[index];
+
+					$.ajax({
+						url: '/api/sentence/get_one_random/?format=json&lemma=' + lemma + '&' + attributes.inputs.filter,
+						async: false,
+						dataType: 'json',
+						success: function(response_text) {
+							that.set({
+								title: "Identify the case, number, and gender of <span class=\"greek-text\">" + lemma + "</span>",	
+								content: response_text.sentence,
+								options: [
+									[
+										{
+											"value": "Nominative",
+											"display": "Nominative"
+										},
+										{
+											"value": "Genitive",
+											"display": "Genitive"
+										},
+										{
+											"value": "Dative",
+											"display": "Dative"
+										}
+									]
+								],
+								answers: ["Dative"],
+								successMsg: "Right",
+								hintMsg: "Wrong",
+								failureMsg: "Correct was",
+								require_order: true,
+								require_all: true
+							});
+						},
+						error: function(xhr, status, error) {
+							console.log(xhr, status, error);
+						}
+					});
+				}
+			};
+
+			taskMapper[attributes.task]();
+
 		},
 		checkAnswer: function(attempt) {
 			if (typeof(attempt) == 'string')

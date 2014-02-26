@@ -4,67 +4,81 @@ define(
 
 		var View = Backbone.View.extend({
 			events: {
-				'click .lesson-right-menu a': 'navigate'	
+				'click .lesson-right-menu a': 'navigate'
 			},
-			initialize: function() {
-				this.slides = [];
+			initialize: function(options) {
+
+				/*
+					If model doesn't exist, it can go build itself.
+				*/
+				if (!this.lesson) {
+					console.log("creating a new lesson");
+					this.lesson = new Collections.Slides([], {
+						module: options.module, 
+						section: options.section
+					});
+				}
+				
+				if (!this.slides) this.slides = [];
+
+				this.lesson.bind('add', _.bind(this.addSlide, this));
+				this.lesson.populate();
+				
 			},
-			render: function() {
+			addSlide: function(model, collection, options) {
+				var selector = '#' + model.get('type');
 				var that = this;
-				this.$el.find('h3').html(this.model.get('title'));
+				var view;
 
-				// Create as many slides as there are in this module
-				var slides = this.model.get('slides');
-				var progress = this.$el.find('.lesson-progress');
+				// Set for easy navigation to next slide
+				model.set('index', model.collection.indexOf(model));
 
-				var progWidth = Math.floor(100 / (slides.length - 1)) || 100;
-
-				for (var i = 0; i < slides.length; i++) {
-					var selector = '#' + slides.at(i).get('type');	
-					var view;
-
-					// Set for easy navigation to next slide
-					slides.at(i).set('index', i);
-
-					if (selector == '#slide_multi_composition') {
-						view = new MultiCompSlideView({ 
-							model: slides.at(i), 
-							template: _.template(that.$el.find('#slide_multi_composition').html()) 
-						}).render()
-							.$el
-							.appendTo(this.$el.find('#lesson-content'));
-					}
-					else if (selector == '#slide_info') {
-						view = new InfoSlideView({ 
-							model: slides.at(i), 
-							template: _.template(that.$el.find('#slide_info').html()) 
-						}).render()
-							.$el
-							.appendTo(this.$el.find('#lesson-content'));
-					}
-					else if (selector == '#slide_direct_select') {
-						view = new DirectSelectSlideView({ 
-							model: slides.at(i), 
-							template: _.template(that.$el.find('#slide_direct_select').html()) 
-						}).render()
-							.$el
-							.appendTo(this.$el.find('#lesson-content'));
-					}
-
-					this.slides.push(view);
-
-					// Create a progress bar section for each slide
-					if (i < (slides.length - 1)) 
-						progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
+				// Decide which type of view to create
+				if (selector == '#slide_multi_composition') {
+					view = new MultiCompSlideView({ 
+						model: model, 
+						template: _.template(this.$el.find('#slide_multi_composition').html()) 
+					}).render()
+						.$el
+						.appendTo(this.$el.find('#lesson-content'));
+				}
+				else if (selector == '#slide_info') {
+					view = new InfoSlideView({ 
+						model: model, 
+						template: _.template(this.$el.find('#slide_info').html()) 
+					}).render()
+						.$el
+						.appendTo(this.$el.find('#lesson-content'));
+				}
+				else if (selector == '#slide_direct_select') {
+					view = new DirectSelectSlideView({ 
+						model: model, 
+						template: _.template(this.$el.find('#slide_direct_select').html()) 
+					}).render()
+						.$el
+						.appendTo(this.$el.find('#lesson-content'));
 				}
 
-				
+				// The Module view keeps references to the various slide views
+				this.slides.push(view);
+
+				// Create a progress bar section for each slide
+				if (model.get('index') < model.collection.meta('initLength') - 1) {
+					var progress = this.$el.find('.lesson-progress');
+					progWidth = Math.floor(100 / (model.collection.meta('initLength') - 1));
+					progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
+				}
+			},
+			render: function() {
 				return this;	
 			},
 			showSlide: function(slide) {
 				slide = parseInt(slide);
 
-				// Show the correct slide
+				console.log("show slide called for ", slide);
+				console.log("views so far", _(this.slides).clone());
+
+				// Show the correct slide view
 				for (var i = 0; i < this.slides.length; i++) {
 					this.slides[i].hide();
 				}
