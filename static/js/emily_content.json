@@ -487,7 +487,7 @@
 					{
 						"type": "slide_direct_select",
 						"settings": {
-							"orientation": "vertical"
+							"orientation": "horizontal"
 						},
 						"task": "identify_morph_noun",
 						"inputs": {

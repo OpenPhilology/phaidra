@@ -60,7 +60,9 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 						dataType: 'json',
 						success: function(response_text) {
 							that.set({
-								title: "Identify the case, number, and gender of <span class=\"greek-text\">" + lemma + "</span>",	
+								title: "Exercise: Identify the Case!",
+								responseText: response_text,
+								lemma: lemma,
 								content: response_text.sentence,
 								options: [
 									[

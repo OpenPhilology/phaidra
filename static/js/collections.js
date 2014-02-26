@@ -85,7 +85,13 @@ define(['jquery', 'underscore', 'backbone', 'models'], function($, _, Backbone, 
 					that.meta('initLength', slide_data.length);
 
 					for (var i = 0; i < slide_data.length; i++) {
-						that.add(new Models.Slide(slide_data[i]));
+						if (slide_data[i]["count"]) {
+							for (var j = 0; j < slide_data[i]["count"]; j++)
+								that.add(new Models.Slide(slide_data[i]));
+						}
+						else {
+							that.add(new Models.Slide(slide_data[i]));
+						}
 					}
 
 				},

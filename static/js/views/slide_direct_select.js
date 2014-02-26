@@ -9,6 +9,21 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 			this.$el.html(options.template(this.model.attributes));
 		},
 		render: function() {
+
+			if (this.model.get('task')) {
+				var div = this.$el.find('.responseText');
+				div.html("");
+				var words = this.model.get('responseText').words;
+				var that = this;
+
+				for (var i = 0; i < words.length; i++) {
+					var text = words[i]["value"];
+					var color = (words[i]["lemma"] == that.model.get('lemma')) ? '#EEE' : '#FFF'
+
+					div.append('<div class="greek-text" style="display: inline-block; padding: 10px; background-color: ' + color + '">' + text + '</div> ');
+				}
+			}
+
 			return this;	
 		},
 		selectAnswer: function(e) {
