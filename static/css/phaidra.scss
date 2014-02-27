@@ -365,6 +365,36 @@ a {
 	}
 }
 
+.user-info {
+
+	img {
+		margin-right: 10px;
+	}
+	a {
+		color: #EEE;
+	}
+	a.username {
+		border: 0;
+		background-color: darken($color-sec-two, 10%);
+		@include transition(background-color, .2s, ease-out);
+		padding: 10px;
+		text-decoration: none;
+		border-radius: 3px;
+		margin: 0px 20px 0px 5px;
+
+		&:hover {
+			background-color: lighten($color-sec-two, 10%);
+			@include transition(background-color, .2s, ease-out);
+			box-shadow: 2px 2px 3px darken($color-sec-two, 5%);
+			color: #FFF;
+
+			img {
+				box-shadow: 2px 2px 3px darken($color-sec-two, 5%);
+			}
+		}
+	}
+}
+
 .main {
 	overflow: hidden;
 	position: relative;

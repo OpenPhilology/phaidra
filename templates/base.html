@@ -58,20 +58,38 @@
 		</div>
 		<div class="col-md-4 hidden-sm hidden-xs">
 
-			<div class="pull-left" style="margin: 28px" id="user-info">
+			<div class="user-info pull-right" style="margin: 20px">
+				{% if user.is_authenticated %}
+					<span class="logged-in">
+						<span class="greek-text">χαῖρε</span>, 
+						<a href="/profile/" class="username">
+							<img src="http://www.gravatar.com/avatar/{{ email_hash }}?s=25&d=mm" class="img-circle img-thumbnail"> 
+							{{ user.username }} 
+							<span style="color: #6378A5; font-size: 1.2em">!</span>
+						</a>
+						
+						<a href="/logout/">Log out</a>
+					</span>
+				{% else %}
+					<span class="logged-out">
+						<a href="/login">Would you care to log in?</a>
+					</span>
+				{% endif %}
 			</div>
 
-			<div class="btn-group pull-right" style="margin: 24px;">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">English <span class="caret" style="margin-left: 10px"></span></button> 
-				<ul class="dropdown-menu" role="menu">
-					<li> <a href="#">български език</a></li>
-					<li> <a href="#">Deutsch</a></li>
-					<li> <a href="#">English <span class="glyphicon glyphicon-ok"></span></a></li>
-					<li> <a href="#">Italiano</a></li>
-					<li> <a href="#">فارسی</a></li>
-					
-				</ul>
-			</div>
+			{% comment %}
+				<div class="btn-group pull-right" style="margin: 24px;">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">English <span class="caret" style="margin-left: 10px"></span></button> 
+					<ul class="dropdown-menu" role="menu">
+						<li> <a href="#">български език</a></li>
+						<li> <a href="#">Deutsch</a></li>
+						<li> <a href="#">English <span class="glyphicon glyphicon-ok"></span></a></li>
+						<li> <a href="#">Italiano</a></li>
+						<li> <a href="#">فارسی</a></li>
+						
+					</ul>
+				</div>
+			{% endcomment %}
 		</div>
 	</header>
 

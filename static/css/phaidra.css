@@ -282,6 +282,34 @@ a {
   .legend .sec.voc {
     background-color: #f4bc78; }
 
+.user-info img {
+  margin-right: 10px; }
+.user-info a {
+  color: #EEE; }
+.user-info a.username {
+  border: 0;
+  background-color: #3b4967;
+  -webkix-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  margin: 0px 20px 0px 5px; }
+  .user-info a.username:hover {
+    background-color: #6378a5;
+    -webkix-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    box-shadow: 2px 2px 3px #455577;
+    color: #FFF; }
+    .user-info a.username:hover img {
+      box-shadow: 2px 2px 3px #455577; }
+
 .main {
   overflow: hidden;
   position: relative; }
