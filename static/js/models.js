@@ -80,7 +80,6 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 										}
 									]
 								],
-								answers: ["Dative"],
 								successMsg: "Right",
 								hintMsg: "Wrong",
 								failureMsg: "Correct was",

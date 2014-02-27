@@ -2,5 +2,23 @@
 
 	{% block content %}
 
+		<div class="col-md-4 col-md-offset-1">
+			<div class="user-info" style="margin: 20px">
+				{% if user.is_authenticated %}
+						<img src="http://www.gravatar.com/avatar/{{ email_hash }}?s=100&d=mm" class="img-circle img-thumbnail pull-left"> 
+						<h3>{{ user.username }}</h3>
+						<br> 
+						{{ user.email }} <br>
+						
+					</span>
+				{% else %}
+					<span class="logged-out">
+						<h3>You're not logged in!</h3>
+						<a href="/login">Would you care to log in?</a>
+					</span>
+				{% endif %}
+			</div>
+		</div>
+
 	
 	{% endblock %}

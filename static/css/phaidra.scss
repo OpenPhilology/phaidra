@@ -366,14 +366,13 @@ a {
 }
 
 .user-info {
-
 	img {
 		margin-right: 10px;
 	}
 	a {
 		color: #EEE;
 	}
-	a.username {
+	a.username, a.log-in-link {
 		border: 0;
 		background-color: darken($color-sec-two, 10%);
 		@include transition(background-color, .2s, ease-out);

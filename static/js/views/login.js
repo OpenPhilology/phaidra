@@ -26,10 +26,10 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 					dataType: 'json',
 					data: JSON.stringify(data),
 					success: function(response_text) {
-						console.log("success, " + response_text.username + "!");
+						window.location.assign("/");	
 					},
 					error: function(response_text) {
-						console.log("error", response_text);
+						alert("Try again");
 					}
 				});
 			}

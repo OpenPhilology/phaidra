@@ -56,8 +56,8 @@
 				</nav>
 			{% endblock %}
 		</div>
-		<div class="col-md-4 hidden-sm hidden-xs">
 
+		<div class="col-md-4">
 			<div class="user-info pull-right" style="margin: 20px">
 				{% if user.is_authenticated %}
 					<span class="logged-in">
@@ -72,7 +72,7 @@
 					</span>
 				{% else %}
 					<span class="logged-out">
-						<a href="/login">Would you care to log in?</a>
+						<a href="/login" class="log-in-link">Would you care to log in?</a>
 					</span>
 				{% endif %}
 			</div>
@@ -97,6 +97,5 @@
 		{% block content %} {% endblock %} 	
 	</div>
 </div>
-
 </body>
 </html>
