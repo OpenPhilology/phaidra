@@ -16,7 +16,10 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			window.user = new Models.User();
 			window.user.fetch({
 				success: function() {
-					console.log("success");
+					$('#user-info').html('<span class="greek-text">χαῖρε</span>, <a href="/profile/">' + window.user.get('username') + '</a>!');
+				},
+				error: function() {
+					$('#user-info').html('Would you like to <a href="/login/">log in</a>?');
 				}
 			});
 		},

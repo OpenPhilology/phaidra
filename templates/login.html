@@ -9,19 +9,23 @@
 
 	{% block content %}
 		
-		<div class="col-md-12" id="loginform">
-			<form role="form" id="login-form">
-				<div class="form-group">
-					<label for="username">Username</label>
-					<input type="text" class="form-control" id="username" name="username">
+		<div class="col-md-offset-4 col-md-4" id="loginform">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form role="form" id="login-form">
+						<div class="form-group">
+							<label for="username">Username</label>
+							<input type="text" class="form-control" id="username" name="username">
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" id="password" name="password">
+						</div>
+					<button type="submit" class="btn btn-default">Log in</button>
+					{% csrf_token %}
+					</form>
 				</div>
-				<div class="form-group">
-					<label for="password">Password</label>
-					<input type="password" class="form-control" id="password" name="password">
-				</div>
-			<button type="submit" class="btn btn-default">Log in</button>
-			{% csrf_token %}
-			</form>
+			</div>
 		</div>
 
 	{% endblock %}
