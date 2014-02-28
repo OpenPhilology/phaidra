@@ -563,5 +563,19 @@
 				]
 			}
 		]		
+	},
+	{	
+		"title": "Introduction to Verbs",
+		"modules": [
+			{
+				"title": "Verbs in Ancient Greek",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/intro.html"
+					}
+				]
+			}	
+		]
 	}
 ]
