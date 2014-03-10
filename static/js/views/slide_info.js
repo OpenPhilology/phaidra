@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/table_inflections'], function($, _, Backbone, Models, Collections, inflectionTableView) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/parse_tree', 'views/table_inflections'], function($, _, Backbone, Models, Collections, parseTreeView, inflectionTableView) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',
@@ -23,6 +23,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/tabl
 
 						that.$el.find('a[data-toggle="popover"]').popover();
 						that.$el.find('em[data-toggle="tooltip"]').tooltip();
+
 					},
 					error: function(responseText) {
 						console.log("Problem!");	
@@ -38,6 +39,10 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/tabl
 				tableView = new inflectionTableView().render({
 					el: this.$el.find('.inflection-placeholder')
 				});
+			}
+
+			if (this.$el.find('.parse-tree').length > 0) {
+				parseTree = new parseTreeView({ container: that.$el.find('.parse-tree')}).render();				
 			}
 		},
 		render: function() {

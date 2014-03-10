@@ -510,11 +510,11 @@ class TranslationResource(ModelResource):
 
 class WordResource(ModelResource):
 
-	root = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True)			
+	#root = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True)			
 	#root = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True) 
 	#word/?format=json&sentenceRes__file__lang=fas
-	sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True	
-	translation = fields.ToManyField('api.api.TranslationResource', attribute=lambda bundle: bundle.obj.translation.all(), full=True, null=True, blank=True)
+	#sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True	
+	#translation = fields.ToManyField('api.api.TranslationResource', attribute=lambda bundle: bundle.obj.translation.all(), full=True, null=True, blank=True)
 		
 	class Meta:
 		queryset = Word.objects.all()
