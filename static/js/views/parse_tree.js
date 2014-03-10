@@ -5,9 +5,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 		events: {
 		},
 		initialize: function(options) {
-			
-			this.$el.html('');
-
+			this.$el = $('');
 			var that = this;
 			$.ajax({
 				url: '/api/sentence/3602/?format=json',
@@ -15,7 +13,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				success: function(sentence) {
 
 					// Populate html
-					//options.container.html(that.$el.html());
+					options.container.find('.sentence').html(sentence.sentence);
 
 					data = that.convertData(sentence.words);
 					that.renderTree(data);
@@ -54,6 +52,9 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			});
 			return treeData;
 		},
+		/*
+		*	Renders the parse tree
+		*/
 		renderTree: function(treeData) {
 			var margin = { top: 20, right: 120, bottom: 20, left: 120 },
 				width = 960 - margin.right - margin.left,
@@ -73,7 +74,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				.append('g')
 				.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-			root = treeData[0]
+			root = treeData[0];
 			update(root);
 
 			function update(source) {
@@ -97,7 +98,31 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 
 				nodeEnter.append('circle')
 					.attr('r', 10)
-					.style('fill', '#FFF');
+					.on('click', function(d, i) {
+						var c = d3.select(this);
+
+						// If this node was previously selected, unselect it.
+						if (c.classed('selected')) 
+							this.setAttribute('class', '');
+
+						/* Otherwise, it's either going to be:
+						*		1. Another node's parent or child
+						* 		2. No change, it's already the child of clicked-on-parent 
+						*/
+
+						else {
+							c.attr('class', 'selected');
+
+							/*
+							If user has selected a new parent:
+								1. Get current parent of node-to-move.
+								2. Store and remove node-to-move from parent list. Update node-to-move's parent pointer.
+								3. Change the head value of the node to point to the parent id.
+								4. Call a transition to alter appearance of tree
+							*/
+						}
+
+					});
 
 				nodeEnter.append('text')
 					.attr('y', 20)

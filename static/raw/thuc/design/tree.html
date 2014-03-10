@@ -1,8 +1,23 @@
 <style>
 	.node circle {
 		fill: #fff;
-		stroke: steelblue;
+		stroke: #49A556;
 		stroke-width: 3px;
+	}
+
+	.node circle.selected {
+		fill: #6AC76A;
+		stroke: #49A556;
+		stroke-width: 6px;
+		cursor: pointer;
+	}
+
+	/* Hovering over an already selected node gives you option to unselect it */
+	.node circle:hover, .node circle.selected:hover {
+		fill: #FFF;
+		stroke: #49A556;
+		stroke-width: 6px;
+		cursor: pointer;
 	}
 
 	.node text { 
@@ -19,5 +34,8 @@
 </style>
 
 
-<div class="parse-tree">
+<div class="parse-tree" style="text-align: center">
+	<hr>
+	<div class="greek-text sentence"></div>
+	<hr>
 </div>
