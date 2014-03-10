@@ -3,7 +3,18 @@
 		"title": "Placeholder"
 	},        
 	{
-		"title": "The Greek Alphabet"
+		"title": "The Greek Alphabet",
+		"modules": [
+			{
+				"title": "Ancient Greek Alphabet",
+				"slides": [
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/0.introduction/history.html"
+					}
+				]
+			}
+		]
 	},
 	{
 		"title": "Greek Diacritics"
@@ -497,20 +508,6 @@
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec1.html"
 					},
 					{
-						"type": "slide_direct_select",
-						"settings": {
-							"orientation": "horizontal"
-						},
-						"task": "identify_morph_noun",
-						"inputs": {
-							"lemmas": ["πρεσβεία", "οἰκία", "χώρα", "ἡμέρα", "στρατιά", "συμμαχία", "ναυμαχία", "αἰτία", "ὠφέλεια", "γνώμη", "πολίτης"],
-							"lemmas": ["συμμαχία", "ναυμαχία", "ὠφέλεια"],
-							"filter": "number=sg&case=nom"
-						},
-						"answers": ["Nominative"],
-						"count": 2
-					},
-					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec2.html"
 					},
@@ -573,6 +570,30 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/verbs.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/person.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/number.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/tense.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/mood.html"
 					}
 				]
 			}	
