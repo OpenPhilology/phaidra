@@ -60,7 +60,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				width = 960 - margin.right - margin.left,
 				height = 800 - margin.top - margin.bottom;
 
-			var i = 0;
+			var i = 0, duration = 750;
 
 			var tree = d3.layout.tree().size([height, width]);
 
@@ -93,36 +93,12 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				var nodeEnter = node.enter().append('g')
 					.attr('class', 'node')
 					.attr('transform', function(d) {
-						return 'translate(' + d.x + ', ' + d.y + ')';
+						return 'translate(' + source.x + ', ' + source.y + ')';
 					});
 
 				nodeEnter.append('circle')
 					.attr('r', 10)
-					.on('click', function(d, i) {
-						var c = d3.select(this);
-
-						// If this node was previously selected, unselect it.
-						if (c.classed('selected')) 
-							this.setAttribute('class', '');
-
-						/* Otherwise, it's either going to be:
-						*		1. Another node's parent or child
-						* 		2. No change, it's already the child of clicked-on-parent 
-						*/
-
-						else {
-							c.attr('class', 'selected');
-
-							/*
-							If user has selected a new parent:
-								1. Get current parent of node-to-move.
-								2. Store and remove node-to-move from parent list. Update node-to-move's parent pointer.
-								3. Change the head value of the node to point to the parent id.
-								4. Call a transition to alter appearance of tree
-							*/
-						}
-
-					});
+					.on('click', click);
 
 				nodeEnter.append('text')
 					.attr('y', 20)
@@ -133,6 +109,26 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 					})
 					.style('fill-opacity', 1);
 
+				var nodeUpdate = node.transition()
+					.duration(duration)
+					.attr('transform', function(d) {
+						return 'translate(' + d.x + ', ' + d.y + ')';
+					});
+
+				// Transition exiting nodes to parents new position
+				var nodeExit = node.exit().transition()
+					.duration(duration)
+					.attr('transform', function(d) {
+						return 'translate(' + source.x + ',' + source.y + ')';
+					})
+					.remove();
+
+				nodeExit.select('circle')
+					.attr('r', 1e-6);
+
+				nodeExit.select('text')
+					.style('fill-opacity', 1e-6);
+
 				var link = svg.selectAll('path.link')
 					.data(links, function(d) {
 						return d.target.id;
@@ -140,7 +136,99 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 
 				link.enter().insert('path', 'g')
 					.attr('class', 'link')
+					.attr('d', function(d) {
+						var o = { x: source.x, y: source.y };
+						return diagonal({ source: o, target: o });
+					});
+
+				link.transition()
+					.duration(duration)
 					.attr('d', diagonal);
+
+				link.exit().transition()
+					.duration(duration)
+					.attr('d', function(d) {
+						var o = { x: source.x, y: source.y};
+						return diagonal({ source: o, target: o });
+					})
+					.remove();
+
+				nodes.forEach(function(d, i) {
+					d.x0 = d.x;
+					d.y0 = d.y;
+
+					var siblings = (d.parent && d.parent.children) ? d.parent.children : [];
+
+					for (var j = 0; j < siblings.length; j++) {
+						if (d.id != siblings[j]["id"] && collide(d, siblings[j])) {
+							console.log("collision detected!");
+						}
+					}
+
+				});
+
+				function collide(node, sibling) {
+					var r = node.size,
+						n1y1 = node.x - r,
+						n1y2 = node.x + r;
+					var r2 = sibling.size,
+						n2y1 = sibling.x - r2,
+						n2y2 = sibling.x + r2;
+
+					return (n1y1 < n2y2 && n1y1 > n2y1) || (n1y2 > n2y2 && n1y2 < n2y1);
+				}
+
+
+				function click(d, i) {
+					var c = d3.select(this);
+
+					// If this node was previously selected, unselect it.
+					if (c.classed('selected')) { 
+						this.setAttribute('class', '');
+						return;
+					}
+					else
+						c.attr('class', 'selected');
+
+					// Check whether it's time to update links
+					var selected = [];
+					d3.selectAll('circle').each(function(d, i) {
+						if (d3.select(this).classed('selected')) selected.push(d); 
+					});
+
+					// Means they've selected the new parent just now
+					if (selected.length == 2) {
+						var parent = d;
+						var child = (parent.id != selected[0]["id"]) ? selected[0] : selected[1]; 
+
+						if (parent.tbwid == child.head) {
+							d3.selectAll('circle').each(function(d, i) {
+								this.setAttribute('class', '');
+							});
+						}
+						else {
+							(parent.children || (parent.children = [])).push(child);
+							parent.children = _.sortBy(parent.children, function(obj) {
+								return obj.tbwid;
+							});
+
+							// Remove child from former parent
+							child.parent.children = _.filter(child.parent.children, function(obj) {
+								return obj.id != child.id;
+							});
+							if (child.parent.children.length == 0)
+								delete child.parent.children;	
+
+							child.parent = parent;
+							child.head = parent.twid;
+							update(child);
+							update(parent);
+							d3.selectAll('circle').each(function(d, i) {
+								this.setAttribute('class', '');
+							});
+						}
+					}
+				}
 			}
 		}
 	});
