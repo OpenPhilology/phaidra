@@ -63,7 +63,7 @@ class Slide(models.NodeModel):
 	title = models.StringProperty()
 	template = models.URLProperty()
 
-	# Either a template or an exercise side_type is provided, not both.
+	# Either a template or an exercize side_type is provided, not both.
 	# Exercises are interactive, whereas templates are information only.
 	exercise = models.StringProperty()
 
@@ -105,7 +105,7 @@ class Submission(models.NodeModel):
 
 	value = models.ArrayProperty()
 
-	# Set by the client, allows us to determine how much time the user spent
+	# Set by the client, allows us to determine how must time the user spent
 	# on a particular slide.
 	started = models.DateTimeProperty()
 	finished = models.DateTimeProperty()

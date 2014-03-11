@@ -21,7 +21,23 @@
 				"slides": [
 					{	
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/0.introduction/history.html"
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/intro.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/alphabettable.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/excep.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/punctuation.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/concl.html"
 					}
 				]
 			}
@@ -605,6 +621,14 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/mood.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/voice.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/concl.html"
 					}
 				]
 			}	
