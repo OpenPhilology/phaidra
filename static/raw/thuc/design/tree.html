@@ -19,6 +19,12 @@
 		cursor: pointer;
 	}
 
+	.node .root, .node .root:hover {
+		stroke-width: 3px;
+		fill: #666;
+		stroke: #666;
+	}
+
 	.node text { 
 		font-size: 18px; 
 		font-family: 'Cambria', 'Times New Romans';
@@ -29,6 +35,17 @@
 		fill: none;
 		stroke: #ccc;
 		stroke-width: 2px;
+	}
+
+	.parse-tree {
+		position: relative;
+	}
+	.svg-container {
+		border-radius: 3px;
+		background-color: rgba(255, 255, 255, 0.5);
+		width: 100%;
+		box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, .2);
+		border: 1px solid #AAA;
 	}
 </style>
 

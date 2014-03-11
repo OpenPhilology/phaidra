@@ -17,6 +17,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 
 					data = that.convertData(sentence.words);
 					that.renderTree(data);
+					that.render();
 				},
 				failure: function(x, y, z) {
 					console.log(x, y, z);
@@ -24,6 +25,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			});
 		},
 		render: function() {
+			$('.svg-container').parent().append('<a id="zoom-in" href="#" class="btn btn-default">+</a> <a id="zoom-out" href="#" class="btn btn-default">-</a>');
 			return this;	
 		},
 		/*
@@ -33,8 +35,18 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			// Right now, our data comes in reverse. Delete this later.
 			words = words.reverse();
 			words = _.map(words, function(obj) {
-				return _.pick(obj, 'tbwid', 'head', 'value');
+
+				// Just to start the tree from scratch
+				obj.head = 0;
+
+				// Assign a width for building the tree later
+				obj.width = obj.value.length;
+
+				return _.pick(obj, 'tbwid', 'head', 'value', 'width');
 			});
+
+			// Create a root node
+			words.push({ 'tbwid': 0, 'value': 'root'});
 
 			var dataMap = words.reduce(function(map, node) {
 				map[node.tbwid] = node;
@@ -56,23 +68,49 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 		*	Renders the parse tree
 		*/
 		renderTree: function(treeData) {
-			var margin = { top: 20, right: 120, bottom: 20, left: 120 },
-				width = 960 - margin.right - margin.left,
-				height = 800 - margin.top - margin.bottom;
+			var margin = { top: 30, right: 0, bottom: 30, left: 0 },
+				width = $('.parse-tree').width(),
+				height = 500 - margin.top - margin.bottom;
 
 			var i = 0, duration = 750;
 
-			var tree = d3.layout.tree().size([height, width]);
+			var tree = d3.layout.tree().nodeSize([100, 50]);
+			/*tree.separation(function(a, b) {
+				var width = (a.width * 3) + (b.width * 3), 
+					distance = width / 2  + 16 + 'px';
+				return distance;
+			});*/
 
 			var diagonal = d3.svg.diagonal().projection(function(d) {
 				return [d.x, d.y];
 			});
 
 			var svg = d3.select('.parse-tree').append('svg')
-				.attr('width', width + margin.right + margin.left)
-				.attr('height', height + margin.top + margin.bottom)
-				.append('g')
-				.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+				.attr('class', 'svg-container')
+				//.attr('width', width + margin.right + margin.left)
+				//.attr('height', height + margin.top + margin.bottom)
+				.style('overflow', 'scroll')
+			.append('g')
+				.attr('class', 'canvas')
+			.append('g')
+				.attr('transform', 'translate(' + (width / 2) + ',' + margin.top + ')')
+
+
+			function zoom() {
+				var scale = d3.event.scale,
+					translation = d3.event.translate,
+					tbound = -height * scale,
+					bbound = height * scale,
+					lbound = (-width + margin.right) * scale,
+					rbound = (width + margin.left) * scale;
+
+				translation = [
+					Math.max(Math.min(translation[0], rbound), lbound),
+					Math.max(Math.min(translation[1], bbound), tbound)
+				];
+				d3.select('.canvas')
+					.attr('transform', 'translate(' + translation + ') scale(' + scale + ')');
+			}
 
 			root = treeData[0];
 			update(root);
@@ -97,15 +135,28 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 					});
 
 				nodeEnter.append('circle')
-					.attr('r', 10)
-					.on('click', click);
+					.attr('r', function(d, i) {
+						return (d.tbwid == 0) ? 5 : 10;
+					})
+					.on('click', click)
+					.attr('class', function(d, i) {
+						return (d.tbwid == 0) ? 'root' : ''
+					});
 
 				nodeEnter.append('text')
-					.attr('y', 20)
-					.attr('dy', '.55em')
+					.attr('y', function(d, i) {
+						if (d.tbwid == 0) 
+							return -30;
+						else
+							return 20;
+					})
+					.attr('dy', '14px')
 					.attr('text-anchor', 'middle')
 					.text(function(d) {
 						return d.value;
+					})
+					.style('fill', function(d, i) {
+						return (d.tbwid == 0) ? '#CCC' : '#333';
 					})
 					.style('fill-opacity', 1);
 
@@ -159,15 +210,14 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 
 					var siblings = (d.parent && d.parent.children) ? d.parent.children : [];
 
-					for (var j = 0; j < siblings.length; j++) {
+					/*for (var j = 0; j < siblings.length; j++) {
 						if (d.id != siblings[j]["id"] && collide(d, siblings[j])) {
 							console.log("collision detected!");
 						}
-					}
-
+					}*/
 				});
 
-				function collide(node, sibling) {
+				/*function collide(node, sibling) {
 					var r = node.size,
 						n1y1 = node.x - r,
 						n1y2 = node.x + r;
@@ -176,8 +226,51 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						n2y2 = sibling.x + r2;
 
 					return (n1y1 < n2y2 && n1y1 > n2y1) || (n1y2 > n2y2 && n1y2 < n2y1);
-				}
+				}*/
 
+				/*var levelHeight = [1];*/
+				/*var childCount = function(level, n) {
+					if (n.children && n.children.length > 0) {
+						if (levelHeight.length <= level + 1) levelHeight.push(0);
+
+						levelHeight[level + 1] += n.children.length;
+						n.children.forEach(function(d) {
+							childCount(level + 1, d);
+						});
+					}
+				};*/
+				
+
+
+				//childCount(0, root);
+				//var newWidth = d3.max(levelHeight) * 20;
+				//console.log("height, width", height, newWidth);
+				//tree.size([height, newWidth]);
+				//*/
+
+				function computeTextSize(data, fontSize, fontName) {
+					var maxH = 0, maxW = 0;
+					var div = document.createElement('div');
+					document.body.appendChild('div');
+					$(div).class({
+						position: 'absolute',
+						left: -1000,
+						top: -1000,
+						display: 'none',
+						margin: 0,
+						padding: 0
+					});
+					$(div).css('font', fontSize + 'px ' + fontName);
+
+					data.forEach(function(d) {
+						$(div).html(d);
+						maxH = Math.max(maxH, $(div).outerHeight());
+						maxW = Math.max(maxW, $(div).outerWidth());
+					});
+
+					$(div).remove();
+					return { maxH: maxH, maxW: maxW };
+				}
 
 				function click(d, i) {
 					var c = d3.select(this);
@@ -201,7 +294,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						var parent = d;
 						var child = (parent.id != selected[0]["id"]) ? selected[0] : selected[1]; 
 
-						if (parent.tbwid == child.head) {
+						if (parent.tbwid == child.head || child.tbwid == 0) {
 							d3.selectAll('circle').each(function(d, i) {
 								this.setAttribute('class', '');
 							});
@@ -222,13 +315,17 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 							child.parent = parent;
 							child.head = parent.twid;
 							update(child);
-							update(parent);
+							//update(parent);
 							d3.selectAll('circle').each(function(d, i) {
 								this.setAttribute('class', '');
 							});
 						}
 					}
 				}
+
+				d3.select('svg').call(d3.behavior.zoom()
+						.scaleExtent([0.5, 5])
+						.on("zoom", zoom));
 			}
 		}
 	});
