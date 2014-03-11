@@ -33,8 +33,8 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 		*/
 		convertData: function(words) {
 			// Right now, our data comes in reverse. Delete this later.
-			words = words.reverse();
-			words = _.map(words, function(obj) {
+			this.words = words.reverse();
+			this.words = _.map(words, function(obj) {
 
 				// Just to start the tree from scratch
 				obj.head = 0;
@@ -46,16 +46,16 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			});
 
 			// Create a root node
-			words.push({ 'tbwid': 0, 'value': 'root'});
+			this.words.push({ 'tbwid': 0, 'value': 'root'});
 
-			var dataMap = words.reduce(function(map, node) {
+			var dataMap = this.words.reduce(function(map, node) {
 				map[node.tbwid] = node;
 				return map;
 			}, {});
 
 			// Create hierarchical data
 			var treeData = [];
-			words.forEach(function(node) {
+			this.words.forEach(function(node) {
 				var head = dataMap[node.head];
 				if (head) 
 					(head.children || (head.children = [])).push(node);
@@ -73,13 +73,22 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				height = 500 - margin.top - margin.bottom;
 
 			var i = 0, duration = 750;
+			var that = this;
 
 			var tree = d3.layout.tree().nodeSize([100, 50]);
-			/*tree.separation(function(a, b) {
-				var width = (a.width * 3) + (b.width * 3), 
-					distance = width / 2  + 16 + 'px';
-				return distance;
-			});*/
+			tree.separation(function(a, b) {
+
+				// Determine horizontal spacing needed for words based on their length
+				var max = _.max(that.words, function(obj) {
+					return obj.width;
+				}).width + 1;
+				var widths = [.2], scale = .13;
+				for (j = 1; j < max; j++)
+					widths.push(parseFloat(widths[j-1]) + scale);
+
+				var avg = Math.ceil((a.width + b.width) / 2);
+				return widths[avg];
+			});
 
 			var diagonal = d3.svg.diagonal().projection(function(d) {
 				return [d.x, d.y];
@@ -87,8 +96,6 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 
 			var svg = d3.select('.parse-tree').append('svg')
 				.attr('class', 'svg-container')
-				//.attr('width', width + margin.right + margin.left)
-				//.attr('height', height + margin.top + margin.bottom)
 				.style('overflow', 'scroll')
 			.append('g')
 				.attr('class', 'canvas')
@@ -166,7 +173,6 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						return 'translate(' + d.x + ', ' + d.y + ')';
 					});
 
-				// Transition exiting nodes to parents new position
 				var nodeExit = node.exit().transition()
 					.duration(duration)
 					.attr('transform', function(d) {
@@ -207,70 +213,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				nodes.forEach(function(d, i) {
 					d.x0 = d.x;
 					d.y0 = d.y;
-
-					var siblings = (d.parent && d.parent.children) ? d.parent.children : [];
-
-					/*for (var j = 0; j < siblings.length; j++) {
-						if (d.id != siblings[j]["id"] && collide(d, siblings[j])) {
-							console.log("collision detected!");
-						}
-					}*/
 				});
-
-				/*function collide(node, sibling) {
-					var r = node.size,
-						n1y1 = node.x - r,
-						n1y2 = node.x + r;
-					var r2 = sibling.size,
-						n2y1 = sibling.x - r2,
-						n2y2 = sibling.x + r2;
-
-					return (n1y1 < n2y2 && n1y1 > n2y1) || (n1y2 > n2y2 && n1y2 < n2y1);
-				}*/
-
-				/*var levelHeight = [1];*/
-				/*var childCount = function(level, n) {
-					if (n.children && n.children.length > 0) {
-						if (levelHeight.length <= level + 1) levelHeight.push(0);
-
-						levelHeight[level + 1] += n.children.length;
-						n.children.forEach(function(d) {
-							childCount(level + 1, d);
-						});
-					}
-				};*/
-				
-
-
-				//childCount(0, root);
-				//var newWidth = d3.max(levelHeight) * 20;
-				//console.log("height, width", height, newWidth);
-				//tree.size([height, newWidth]);
-				//*/
-
-				function computeTextSize(data, fontSize, fontName) {
-					var maxH = 0, maxW = 0;
-					var div = document.createElement('div');
-					document.body.appendChild('div');
-					$(div).class({
-						position: 'absolute',
-						left: -1000,
-						top: -1000,
-						display: 'none',
-						margin: 0,
-						padding: 0
-					});
-					$(div).css('font', fontSize + 'px ' + fontName);
-
-					data.forEach(function(d) {
-						$(div).html(d);
-						maxH = Math.max(maxH, $(div).outerHeight());
-						maxW = Math.max(maxW, $(div).outerWidth());
-					});
-
-					$(div).remove();
-					return { maxH: maxH, maxW: maxW };
-				}
 
 				function click(d, i) {
 					var c = d3.select(this);
