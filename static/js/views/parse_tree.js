@@ -8,7 +8,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			this.$el = $('');
 			var that = this;
 			$.ajax({
-				url: '/api/sentence/3602/?format=json',
+				url: '/api/sentence/60/?format=json',
 				dataType: 'json', 
 				success: function(sentence) {
 
@@ -37,7 +37,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			this.words = _.map(words, function(obj) {
 
 				// Just to start the tree from scratch
-				obj.head = 0;
+				//obj.head = 0;
 
 				// Assign a width for building the tree later
 				obj.width = obj.value.length;
