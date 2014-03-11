@@ -1,6 +1,17 @@
 [
 	{
-		"title": "Placeholder"
+		"title": "Experiments!",
+		"modules": [
+			{
+				"title": "Parse trees",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/tree.html"
+					}
+				]
+			}
+		]
 	},        
 	{
 		"title": "The Greek Alphabet",
