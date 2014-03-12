@@ -509,7 +509,7 @@
 		]
 	},
 	{
-		"title": "The First or α- Declension",
+		"title": "First or α- Declension",
 		"modules": [
 			{
 				"title": "The First or α- Declension",
@@ -555,7 +555,7 @@
 		]
 	},
 	{	
-		"title": "The Second Declension",
+		"title": "Second Declension",
 		"modules": [
 			{
 				"title": "The Second Declension",
@@ -625,6 +625,36 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/voice.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Present Indicative Active",
+		"modules": [
+			{
+				"title": "Present Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact1.html"
 					},
 					{
 						"type": "slide_info",
