@@ -13,6 +13,7 @@ from api.api import LemmaResource
 
 from api.api import LemmaWordResource
 from api.api import SentenceRandomResource
+from api.api import TranslationResource
 
 user_resource = UserResource()
 slide_resource = SlideResource()
@@ -25,6 +26,7 @@ lemma_resource = LemmaResource()
 
 lemma_word_resource = LemmaWordResource()
 sentence_random_resource = SentenceRandomResource()
+translation_resource = TranslationResource()
 
 #router = routers.DefaultRouter()
 #router.register(r'api/users', views.UserViewSet)
@@ -63,6 +65,7 @@ urlpatterns = patterns('',
     
     url(r'^api/', include(lemma_word_resource.urls)),
     url(r'^api/', include(lemma_resource.urls)),
+    url(r'^api/', include(translation_resource.urls)),
 
 	#url(r'^', include(router.urls)),
 	#url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))

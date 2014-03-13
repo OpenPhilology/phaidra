@@ -394,7 +394,7 @@ class SentenceRandomResource(ModelResource):
 	
 	"""
 	This resource searches a related object to given object parameters and
-	returns the selected bundled and dehydrated as in a detail view.
+	returns the selected bundled and dehydrated as in a detail view. It is far more expensive than working with the __dict__ of an object.
 	"""
 	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
 	# expensive
@@ -411,7 +411,6 @@ class SentenceRandomResource(ModelResource):
 					'length': ALL,
 					'file': ALL_WITH_RELATIONS,
 					'words': ALL_WITH_RELATIONS}
-		#cache = SimpleCache(timeout=10)
 	
 	def prepend_urls(self, *args, **kwargs):
 		
@@ -444,8 +443,7 @@ class SentenceRandomResource(ModelResource):
 	
 class LemmaResource(ModelResource):
 	
-	# this works because Lemma object unicode function equals the lemma attribute of the word model
-	# expensive
+	# filtering on word object list is faster than on the bundle object; expensive anyway
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj))
 	
 	class Meta:
@@ -458,12 +456,13 @@ class LemmaResource(ModelResource):
 					#'wordcount': ALL, # coming soon?
 					'words': ALL_WITH_RELATIONS}
 
+
 class LemmaWordResource(ModelResource):
 
 	"""
 	Returns a list of lemmas with special properties of a relative - words.
 	"""
-	# filter(lemma=bundle.obj.lemma))
+	# field makes the resource view slower
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj)) 
 	
 	class Meta:
@@ -492,11 +491,11 @@ class LemmaWordResource(ModelResource):
 
 class TranslationResource(ModelResource):
 	
-	sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True	
+	#sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True	
 		
 	class Meta:
 		queryset = Word.objects.all()
-		resource_name = 'word'
+		resource_name = 'translation'
 		always_return_data = True
 		excludes = ['require_all', 'sentence', 'case', 'cid', 'degree', 'dialect', 'form', 'gender', 'head', 'isIndecl', 
 				'lemma', 'lemmas', 'mood', 'number' , 'person', 'pos', 'posAdd', 'posClass', 'ref', 'relation', 'tbwid', 'tense', 'translation', 'voice']		
@@ -511,10 +510,9 @@ class TranslationResource(ModelResource):
 class WordResource(ModelResource):
 
 	root = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True)			
-	#root = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True) 
 	#word/?format=json&sentenceRes__file__lang=fas
-	sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True	
-	translation = fields.ToManyField('api.api.TranslationResource', attribute=lambda bundle: bundle.obj.translation.all(), full=True, null=True, blank=True)
+	#sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True	
+	translation = fields.ToManyField('api.api.TranslationResource', attribute=lambda bundle: bundle.obj.translation.all(), null=True, blank=True)#, full=True)
 		
 	class Meta:
 		queryset = Word.objects.all()

@@ -48,6 +48,48 @@ class Sentence(models.NodeModel):
 		for obj in reversed(self.words.all()):
 			array.append(obj)
 		return array
+	
+	def get_shortened(self):
+		
+		words = self.words.all()
+		aim_words = []		
+		# get PRED and PRED_CO
+		for verb in words:
+			if verb.relation == "PRED" or verb.relation == "PRED_CO":
+				s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
+				
+				s.append(verb.tbwid)
+				aim_words.append(verb)
+				# group the words and make sure dependent grouping is resolved, save the selected words
+				for word in words:
+					if word.head in s and word.relation != "AuxC" and word.relation != "COORD" and word.pos != "participle":
+						r.append(word.tbwid)
+						aim_words.append(word)
+					if word.head in s and word.relation == "COORD":
+						u.append(word.tbwid)
+						aim_words.append(word)
+					if word.head in s and word.relation == "AuxP": 
+						f.append(word.tbwid)
+						aim_words.append(word)
+				
+				for word in words:
+					if word.head in u and (word.relation == "OBJ_CO" or word.relation == "ADV_CO") and word.pos != "participle" and word.pos != "verb":
+						i.append(word.tbwid)
+						aim_words.append(word)
+					if word.head in f and word.relation != "AuxC" and word.pos != "participle": 
+						z.append(word.tbwid)
+						aim_words.append(word)
+					if word.head in r and word.relation == "ATR" and word.pos != "verb":
+						g.append(word.tbwid)
+						aim_words.append(word)
+						
+				for word in words:
+					if word.head in z and word.relation == "ATR" and word.pos != "verb":
+						a.append(word.id)
+						aim_words.append(word)
+				break
+		
+		return aim_words
 
 	# best this would be created while writing the backend not on calling the method
 	def __unicode__(self):
