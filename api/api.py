@@ -313,7 +313,7 @@ class SentenceResource(ModelResource):
 	#sentence/?format=json&file__lang=fas
 	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
 	# expensive
-	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True)#full = True)
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True, full = True)
 		
 	class Meta:
 		queryset = Sentence.objects.all()
@@ -344,6 +344,9 @@ class SentenceResource(ModelResource):
 		number = request.GET.get('number')
 		length = request.GET.get('length')
 		posAdd = request.GET.get('posAdd')
+		tense = request.GET.get('tense')
+		voice = request.GET.get('voice')
+		mood = request.GET.get('mood')
 		query_params = {}
 				
 		if case is not None:
@@ -355,6 +358,15 @@ class SentenceResource(ModelResource):
 			
 		if number is not None:
 			query_params['number'] = number
+
+		if tense is not None:
+			query_params['tense'] = tense
+
+		if voice is not None:
+			query_params['voice'] = voice
+
+		if mood is not None:
+			query_params['mood'] = mood
 			
 		if posAdd is not None:
 			query_params['posAdd__contains'] = posAdd
@@ -500,9 +512,9 @@ class LemmaWordResource(ModelResource):
 
 class WordResource(ModelResource):
 
-	base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True) 
+	#base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True) 
 	#word/?format=json&sentenceRes__file__lang=fas
-	sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True)
+	#sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True)
 	
 	#root = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True)			
 	#word/?format=json&sentenceRes__file__lang=fas
