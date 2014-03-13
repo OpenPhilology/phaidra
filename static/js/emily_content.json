@@ -1,9 +1,47 @@
 [
 	{
-		"title": "Placeholder"
+		"title": "Experiments!",
+		"modules": [
+			{
+				"title": "Parse trees",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/tree.html"
+					}
+				]
+			}
+		]
 	},        
 	{
-		"title": "The Greek Alphabet"
+		"title": "The Greek Alphabet",
+		"modules": [
+			{
+				"title": "Ancient Greek Alphabet",
+				"slides": [
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/intro.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/alphabettable.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/excep.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/punctuation.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/concl.html"
+					}
+				]
+			}
+		]
 	},
 	{
 		"title": "Greek Diacritics"
@@ -471,7 +509,7 @@
 		]
 	},
 	{
-		"title": "The First or α- Declension",
+		"title": "First or α- Declension",
 		"modules": [
 			{
 				"title": "The First or α- Declension",
@@ -497,20 +535,6 @@
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec1.html"
 					},
 					{
-						"type": "slide_direct_select",
-						"settings": {
-							"orientation": "horizontal"
-						},
-						"task": "identify_morph_noun",
-						"inputs": {
-							"lemmas": ["πρεσβεία", "οἰκία", "χώρα", "ἡμέρα", "στρατιά", "συμμαχία", "ναυμαχία", "αἰτία", "ὠφέλεια", "γνώμη", "πολίτης"],
-							"lemmas": ["συμμαχία", "ναυμαχία", "ὠφέλεια"],
-							"filter": "number=sg&case=nom"
-						},
-						"answers": ["Nominative"],
-						"count": 2
-					},
-					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec2.html"
 					},
@@ -531,7 +555,7 @@
 		]
 	},
 	{	
-		"title": "The Second Declension",
+		"title": "Second Declension",
 		"modules": [
 			{
 				"title": "The Second Declension",
@@ -573,6 +597,68 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/verbs.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/person.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/number.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/tense.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/mood.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/voice.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Present Indicative Active",
+		"modules": [
+			{
+				"title": "Present Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/concl.html"
 					}
 				]
 			}	

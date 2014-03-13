@@ -1,0 +1,57 @@
+<style>
+	.node circle {
+		fill: #fff;
+		stroke: #49A556;
+		stroke-width: 3px;
+	}
+
+	.node circle.selected {
+		fill: #6AC76A;
+		stroke: #49A556;
+		stroke-width: 6px;
+		cursor: pointer;
+	}
+
+	/* Hovering over an already selected node gives you option to unselect it */
+	.node circle:hover, .node circle.selected:hover {
+		stroke: #49A556;
+		stroke-width: 6px;
+		cursor: pointer;
+	}
+
+	.node .root, .node .root:hover {
+		stroke-width: 3px;
+		fill: #666;
+		stroke: #666;
+	}
+
+	.node text { 
+		font-size: 18px; 
+		font-family: 'Cambria', 'Times New Romans';
+		letter-spacing: 2px;
+	}
+
+	.link {
+		fill: none;
+		stroke: #ccc;
+		stroke-width: 2px;
+	}
+
+	.parse-tree {
+		position: relative;
+	}
+	.svg-container {
+		border-radius: 3px;
+		background-color: rgba(255, 255, 255, 0.5);
+		width: 100%;
+		box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, .2);
+		border: 1px solid #AAA;
+	}
+</style>
+
+
+<div class="parse-tree" style="text-align: center">
+	<hr>
+	<div class="greek-text sentence"></div>
+	<hr>
+</div>
