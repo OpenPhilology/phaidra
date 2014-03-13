@@ -7,13 +7,23 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 		initialize: function(options) {
 			this.$el = $('');
 			var that = this;
+
+			this.options = options;
+
 			$.ajax({
-				url: '/api/sentence/60/?format=json',
+				url: '/api/sentence/2086/?format=json',
 				dataType: 'json', 
 				success: function(sentence) {
 
 					// Populate html
-					options.container.find('.sentence').html(sentence.sentence);
+					var words = sentence.words.reverse();
+
+					for (var i = 0; i < words.length; i++) {
+						options.container.find('.sentence').append($('<span>', {
+							html: words[i]["value"], 
+							'data-tbwid': words[i]["tbwid"]
+						}));
+					}
 
 					data = that.convertData(sentence.words);
 					that.renderTree(data);
@@ -42,7 +52,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				// Assign a width for building the tree later
 				obj.width = obj.value.length;
 
-				return _.pick(obj, 'tbwid', 'head', 'value', 'width');
+				return _.pick(obj, 'tbwid', 'head', 'value', 'width', 'relation');
 			});
 
 			// Create a root node
@@ -146,6 +156,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						return (d.tbwid == 0) ? 5 : 10;
 					})
 					.on('click', click)
+					.on('dblclick', editProps)
 					.attr('class', function(d, i) {
 						return (d.tbwid == 0) ? 'root' : ''
 					});
@@ -155,7 +166,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						if (d.tbwid == 0) 
 							return -30;
 						else
-							return 20;
+							return 15;
 					})
 					.attr('dy', '14px')
 					.attr('text-anchor', 'middle')
@@ -166,6 +177,20 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						return (d.tbwid == 0) ? '#CCC' : '#333';
 					})
 					.style('fill-opacity', 1);
+
+				nodeEnter.append('text')
+					.attr('y', function(d, i) {
+						if (d.tbwid == 0) 
+							return '';
+						else
+							return -30;
+					})
+					.attr('dy', '12px')
+					.attr('text-anchor', 'middle')
+					.attr('class', 'label')
+					.text(function(d) {
+						return d.relation;
+					});
 
 				var nodeUpdate = node.transition()
 					.duration(duration)
@@ -215,16 +240,25 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 					d.y0 = d.y;
 				});
 
+				function editProps(d, i) {
+					console.log(d);
+				}
+
 				function click(d, i) {
 					var c = d3.select(this);
 
 					// If this node was previously selected, unselect it.
 					if (c.classed('selected')) { 
 						this.setAttribute('class', '');
+						that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').removeClass('selected');
 						return;
 					}
 					else
 						c.attr('class', 'selected');
+
+					// Highlight the word in the top sentence
+					that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').addClass('selected');
+					console.log(that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').addClass('selected'));
 
 					// Check whether it's time to update links
 					var selected = [];
@@ -258,17 +292,26 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 							child.parent = parent;
 							child.head = parent.twid;
 							update(child);
-							//update(parent);
+							update(parent);
+
+							// Now, reset state of tree to unselected everything 
 							d3.selectAll('circle').each(function(d, i) {
 								this.setAttribute('class', '');
 							});
+
+							// So users can see in the sentence which two words they connected
+							setTimeout(function() {
+								that.options.container.find('.sentence span[data-tbwid="' + parent.tbwid + '"]').removeClass('selected');
+								that.options.container.find('.sentence span[data-tbwid="' + child.tbwid + '"]').removeClass('selected');
+							}, 1000);
 						}
 					}
 				}
 
 				d3.select('svg').call(d3.behavior.zoom()
 						.scaleExtent([0.5, 5])
-						.on("zoom", zoom));
+						.on("zoom", zoom))
+						.on('dblclick.zoom', null);
 			}
 		}
 	});
