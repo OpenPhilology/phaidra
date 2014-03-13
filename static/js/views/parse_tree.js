@@ -1,14 +1,13 @@
-define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) {
+define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], function($, _, Backbone, d3, bootstrap) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'text',
-		events: {
-		},
 		initialize: function(options) {
 			this.$el = $('');
 			var that = this;
 
 			this.options = options;
+
 
 			$.ajax({
 				url: '/api/sentence/2086/?format=json',
@@ -25,7 +24,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						}));
 					}
 
-					data = that.convertData(sentence.words);
+					data = that.convertData(words);
 					that.renderTree(data);
 					that.render();
 				},
@@ -35,15 +34,14 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			});
 		},
 		render: function() {
-			$('.svg-container').parent().append('<a id="zoom-in" href="#" class="btn btn-default">+</a> <a id="zoom-out" href="#" class="btn btn-default">-</a>');
+			var that = this;
+			$('#pos-selector').on('change', that.displayFields);
 			return this;	
 		},
 		/*
 		*	Converts data from flat JSON into hierarchical.
 		*/
 		convertData: function(words) {
-			// Right now, our data comes in reverse. Delete this later.
-			this.words = words.reverse();
 			this.words = _.map(words, function(obj) {
 
 				// Just to start the tree from scratch
@@ -241,7 +239,12 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				});
 
 				function editProps(d, i) {
-					console.log(d);
+					var modal = $('#parse-tree-modal');
+					modal.draggable({
+						handle: '.modal-header'
+					});
+					modal.modal('show');
+					modal.find('.modal-header h4').html(d.value);
 				}
 
 				function click(d, i) {
@@ -275,6 +278,8 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 							d3.selectAll('circle').each(function(d, i) {
 								this.setAttribute('class', '');
 							});
+							that.options.container.find('.sentence span[data-tbwid="' + parent.tbwid + '"]').removeClass('selected');
+							that.options.container.find('.sentence span[data-tbwid="' + child.tbwid + '"]').removeClass('selected');
 						}
 						else {
 							(parent.children || (parent.children = [])).push(child);
@@ -312,6 +317,19 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						.scaleExtent([0.5, 5])
 						.on("zoom", zoom))
 						.on('dblclick.zoom', null);
+			}
+		},
+		displayFields: function(e) {
+			var form = $('form');
+			var formControls = form.find('.form-group');
+			var pos = form.find('#pos-selector').val();
+
+			for (var i = 0; i < formControls.length; i++) {
+				var group = $(formControls[i]).attr('data-group');
+				if (group && group.indexOf(pos) != -1)
+					$(formControls[i]).show();
+				else
+					$(formControls[i]).hide();
 			}
 		}
 	});
