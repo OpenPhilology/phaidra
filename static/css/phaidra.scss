@@ -18,7 +18,7 @@ $text-light-color: #EEE;
 $text-dark-color: #666;
 
 /* Fonts! */
-$font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans serif;
+$font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 /* Mix-ins */
 // Background-color transition
@@ -585,9 +585,10 @@ div.module {
 	vertical-align: top;
 	position: relative;
 	box-shadow:	0px 0px 4px 0px rgba(0, 0, 0, .1);
+	color: #BBB !important;
 
 	img {
-		height: 60px;
+		height: 65px;
 	}
 
 	&:hover {
@@ -623,11 +624,11 @@ div.module {
 		}
 	}
 	&.nouns {
-		background-color: $color-dark-green;
+		background-color: $color-pri-two;
 		@include transition(background-color, .2s, ease-out);
 
 		&:hover {
-			background-color: lighten($color-dark-green, 5%);
+			background-color: lighten($color-pri-two, 5%);
 			@include transition(background-color, .2s, ease-in);
 
 			box-shadow: 2px 2px 3px #CCC;
@@ -640,11 +641,11 @@ div.module {
 		}
 	}
 	&.morph {
-		background-color: $color-sec-one;
+		background-color: $color-sec-two;
 		@include transition(background-color, .2s, ease-out);
 
 		&:hover {
-			background-color: lighten($color-sec-one, 5%);
+			background-color: lighten($color-sec-two, 5%);
 			@include transition(background-color, .2s, ease-in);
 
 			box-shadow: 2px 2px 3px #CCC;
@@ -657,11 +658,11 @@ div.module {
 		}
 	}
 	&.verbs {
-		background-color: $color-pri-three;
+		background-color: $color-sec-two;
 		@include transition(background-color, .2s, ease-out);
 
 		&:hover {
-			background-color: lighten($color-pri-three, 5%);
+			background-color: lighten($color-sec-two, 5%);
 			@include transition(background-color, .2s, ease-in);
 
 			box-shadow: 2px 2px 3px #CCC;
