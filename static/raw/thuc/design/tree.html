@@ -22,7 +22,6 @@
 		max-width: 400px;
 	}
 
-
 	.sentence span {
 		padding: 5px;
 		margin: 3px;
@@ -118,11 +117,11 @@
 				<form role="form">
 				<div class="form-group" data-group="adzefixnmtgrpuv">
 					<label for="lemma">Lemma</label>
-					<input type="text" class="form-control" id="lemma" placeholder="Nominative singular or first principle part">
+					<input type="text" class="form-control" name="lemma" placeholder="Nominative singular or first principle part">
 				</div>
 				<div class="form-group" data-group="adzefixnmtgrpuv">
 					<label for="lemma">Part of Speech</label>
-					<select class="form-control" id="pos-selector">
+					<select class="form-control" name="pos">
 						<option value="a" data-morpheus="noun">Adjective</option>
 						<option value="d" data-morpheus="adverb">Adverb</option>
 						<option value="z" data-morpheus="">Determiner</option>
@@ -143,13 +142,25 @@
 				<div class="form-group" data-group="vp" style="display: none">
 				<label for="person">Person</label><br>
 					<label class="radio-inline">
-						<input type="radio" value="1" data-morpheus="1st">First</input>
+						<input type="radio" name="person" value="1" data-morpheus="1st">First</input>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" value="2" data-morpheus="2nd">Second</input>
+						<input type="radio" name="person" value="2" data-morpheus="2nd">Second</input>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" value="3" data-morpheus="3rd">Third</input>
+						<input type="radio" name="person" value="3" data-morpheus="3rd">Third</input>
+					</label>
+				</div>
+				<div class="form-group" data-group="nvp" style="display: none">
+				<label for="number">Number</label><br>
+					<label class="radio-inline">
+						<input type="radio" name="number" value="s" data-morpheus="sg">Singular</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="number" value="p" data-morpheus="pl">Plural</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="number" value="d" data-morpheus="dual">Dual</input>
 					</label>
 				</div>
 				<div class="form-group" data-group="vt" style="display: none">
@@ -182,31 +193,31 @@
 				<div class="form-group" data-group="vt" style="display: none">
 					<label for="voice">Voice</label><br>
 					<label class="radio-inline">
-						<input type="radio" value="a" data-morpheus="act">Active</input>
+						<input type="radio" name="voice" value="a" data-morpheus="act">Active</input>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" value="m" data-morpheus="mid">Middle</input>
+						<input type="radio" name="voice" value="m" data-morpheus="mid">Middle</input>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" value="e" data-morpheus="mp">Middle-Passive</input>
+						<input type="radio" name="voice" value="e" data-morpheus="mp">Middle-Passive</input>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" value="p" data-morpheus="pass">Passive</input>
+						<input type="radio" name="voice" value="p" data-morpheus="pass">Passive</input>
 					</label>
 				</div>
 				<div class="form-group" data-group="ntalp" style="display: none">
 					<label for="gender">Gender</label><br>
 					<label class="radio-inline">
-						<input type="radio" value="m" data-morpheus="masc">Masculine</input>
+						<input type="radio" name="gender" value="m" data-morpheus="masc">Masculine</input>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" value="f" data-morpheus="fem">Feminine</input>
+						<input type="radio" name="gender" value="f" data-morpheus="fem">Feminine</input>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" value="n" data-morpheus="neut">Neuter</input>
+						<input type="radio" name="gender" value="n" data-morpheus="neut">Neuter</input>
 					</label>
 				</div>
-				<div class="form-group" data-group="tapdl" style="display: none">
+				<div class="form-group" data-group="tanpl" style="display: none">
 					<label for="case">Case</label>
 					<select class="form-control" name="case">
 						<option>Select a Case</option>
@@ -221,10 +232,10 @@
 				<div class="form-group" data-group="a" style="display: none">
 					<label for="degree">Degree</label><br>
 					<label class="radio-inline">
-						<input type="radio" value="c" data-morpheus="comp">Comparative</input>
+						<input type="radio" name="degree" value="c" data-morpheus="comp">Comparative</input>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" value="s" data-morpheus="superl">Superlative</input>
+						<input type="radio" name="degree" value="s" data-morpheus="superl">Superlative</input>
 					</label>
 				</div>
 			</div>

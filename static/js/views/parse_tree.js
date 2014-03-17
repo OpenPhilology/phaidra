@@ -7,6 +7,12 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			var that = this;
 
 			this.options = options;
+			/*
+				options.mode = edit | create | display
+				1. Edit -- Editing existing parse tree
+				2. Create -- Create new parse tree
+				3. Display -- Non-editable view of existing parse tree
+			*/
 
 
 			$.ajax({
@@ -35,7 +41,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 		},
 		render: function() {
 			var that = this;
-			$('#pos-selector').on('change', that.displayFields);
+			$('select[name="pos"]').on('change', that.displayFields);
 			return this;	
 		},
 		/*
@@ -50,7 +56,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				// Assign a width for building the tree later
 				obj.width = obj.value.length;
 
-				return _.pick(obj, 'tbwid', 'head', 'value', 'width', 'relation');
+				return _.pick(obj, 'tbwid', 'head', 'value', 'lemma', 'pos', 'person', 'number', 'tense', 'mood', 'voice', 'gender', 'case', 'degree', 'width', 'relation');
 			});
 
 			// Create a root node
@@ -243,8 +249,23 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					modal.draggable({
 						handle: '.modal-header'
 					});
-					modal.modal('show');
+
+					modal.find('form')[0].reset();
+					
+					// Display values of the node -- replace this with a template
 					modal.find('.modal-header h4').html(d.value);
+					modal.find('input[name="lemma"]').val(d.lemma || '');
+					modal.find('select[name="pos"] option[data-morpheus="' + d.pos + '"]').prop('selected', true).trigger('change');
+					modal.find('input[name="person"][data-morpheus="' + d.person + '"]').prop('checked', true);
+					modal.find('input[name="number"][data-morpheus="' + d.number + '"]').prop('checked', true);
+					modal.find('select[name="tense"] option[data-morpheus="' + d.tense + '"]').prop('selected', true);
+					modal.find('select[name="mood"] option[data-morpheus="' + d.mood + '"]').prop('selected', true);
+					modal.find('input[name="voice"][data-morpheus="' + d.voice + '"]').prop('checked', true);
+					modal.find('input[name="gender"][data-morpheus="' + d.gender + '"]').prop('checked', true);
+					modal.find('select[name="case"] option[data-morpheus="' + d.case + '"]').prop('selected', true);
+					modal.find('input[name="degree"][data-morpheus="' + d.degree + '"]').prop('checked', true);
+
+					modal.modal('show');
 				}
 
 				function click(d, i) {
@@ -261,7 +282,6 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 					// Highlight the word in the top sentence
 					that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').addClass('selected');
-					console.log(that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').addClass('selected'));
 
 					// Check whether it's time to update links
 					var selected = [];
@@ -322,14 +342,14 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 		displayFields: function(e) {
 			var form = $('form');
 			var formControls = form.find('.form-group');
-			var pos = form.find('#pos-selector').val();
+			var pos = form.find('select[name="pos"]').val();
 
 			for (var i = 0; i < formControls.length; i++) {
 				var group = $(formControls[i]).attr('data-group');
-				if (group && group.indexOf(pos) != -1)
-					$(formControls[i]).show();
-				else
+				if (!group || group.indexOf(pos) == -1)
 					$(formControls[i]).hide();
+				else
+					$(formControls[i]).show();
 			}
 		}
 	});
