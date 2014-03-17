@@ -7,6 +7,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			var that = this;
 
 			this.options = options;
+
 			/*
 				options.mode = edit | create | display
 				1. Edit -- Editing existing parse tree
@@ -254,6 +255,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					
 					// Display values of the node -- replace this with a template
 					modal.find('.modal-header h4').html(d.value);
+					modal.find('select[name="relation"] option[value="' + d.relation + '"]').prop('selected', true);
 					modal.find('input[name="lemma"]').val(d.lemma || '');
 					modal.find('select[name="pos"] option[data-morpheus="' + d.pos + '"]').prop('selected', true).trigger('change');
 					modal.find('input[name="person"][data-morpheus="' + d.person + '"]').prop('checked', true);

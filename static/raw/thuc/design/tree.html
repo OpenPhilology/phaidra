@@ -116,6 +116,33 @@
 			<div class="modal-body">
 				<form role="form">
 				<div class="form-group" data-group="adzefixnmtgrpuv">
+					<label for="relation">Relationship to Parent</label>
+					<select class="form-control" name="relation">
+						<option value="PRED">PRED</option>
+						<option value="SBJ">SBJ</option>
+						<option value="OBJ">OBJ</option>
+						<option value="ATR">ATR</option>
+						<option value="ADV">ADV</option>
+						<option value="ATV">ATV</option>
+						<option value="AtvV">AtvV</option>
+						<option value="PNOM">PNOM</option>
+						<option value="OCOMP">OCOMP</option>
+						<option value="APOS">APOS</option>
+						<option value="COORD">COORD</option>
+						<option value="AuxP">AuxP</option>
+						<option value="AuxC">AuxC</option>
+						<option value="AuxR">AuxR</option>
+						<option value="AuxY">AuxY</option>
+						<option value="AuxX">AuxX</option>
+						<option value="AuxG">AuxG</option>
+						<option value="AuxK">AuxK</option>
+						<option value="AuxV">AuxV</option>
+						<option value="AuxZ">AuxZ</option>
+						<option value="ExD">ExD</option>
+					</select>
+				</div>
+				<hr>
+				<div class="form-group" data-group="adzefixnmtgrpuv">
 					<label for="lemma">Lemma</label>
 					<input type="text" class="form-control" name="lemma" placeholder="Nominative singular or first principle part">
 				</div>
@@ -151,7 +178,7 @@
 						<input type="radio" name="person" value="3" data-morpheus="3rd">Third</input>
 					</label>
 				</div>
-				<div class="form-group" data-group="nvp" style="display: none">
+				<div class="form-group" data-group="anvp" style="display: none">
 				<label for="number">Number</label><br>
 					<label class="radio-inline">
 						<input type="radio" name="number" value="s" data-morpheus="sg">Singular</input>
