@@ -16,6 +16,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			*/
 
 
+			// To test answer checking!
+			this.options.mode = 'create';
+
 			$.ajax({
 				url: '/api/sentence/2086/?format=json',
 				dataType: 'json', 
@@ -49,16 +52,25 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 		*	Converts data from flat JSON into hierarchical.
 		*/
 		convertData: function(words) {
+			var that = this;
 			this.words = _.map(words, function(obj) {
-
-				// Just to start the tree from scratch
-				//obj.head = 0;
 
 				// Assign a width for building the tree later
 				obj.width = obj.value.length;
 
 				return _.pick(obj, 'tbwid', 'head', 'value', 'lemma', 'pos', 'person', 'number', 'tense', 'mood', 'voice', 'gender', 'case', 'degree', 'width', 'relation');
 			});
+
+			// If the student is creating the tree, then clone original data to check their answers later
+			if (this.options.mode == 'create') {
+
+				this.answers = JSON.parse(JSON.stringify(that.words));
+
+				this.words = _.map(that.words, function(obj) {
+					obj.head = 0;
+					return _.pick(obj, 'tbwid', 'value', 'head', 'width');
+				});
+			}
 
 			// Create a root node
 			this.words.push({ 'tbwid': 0, 'value': 'root'});
@@ -313,6 +325,8 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 							child.parent.children = _.filter(child.parent.children, function(obj) {
 								return obj.id != child.id;
 							});
+
+							// The problem area -- causes the children to get eaten
 							if (child.parent.children.length == 0)
 								delete child.parent.children;	
 
@@ -325,6 +339,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 							d3.selectAll('circle').each(function(d, i) {
 								this.setAttribute('class', '');
 							});
+
+							// Check whether the connection is correct -- if it's incorrect if the child has the wrong parent
+							that.checkConnection(child);
 
 							// So users can see in the sentence which two words they connected
 							setTimeout(function() {
@@ -353,6 +370,26 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				else
 					$(formControls[i]).show();
 			}
+		},
+		checkConnection: function(child) {
+			var dataMap = this.answers.reduce(function(map, node) {
+				map[node.tbwid] = node;
+				return map;
+			}, {});
+
+			d3.selectAll('circle').each(function(d, i) {
+				if (d.id == child.id) {
+					if (child.parent.tbwid != dataMap[child.tbwid]["head"]) {
+						this.setAttribute('class', 'wrong');
+						console.log("WRONG ANSWER!")
+					}
+					else {
+						this.setAttribute('class', 'right');
+						console.log("Bravo!")
+					}
+				}
+			});
+
 		}
 	});
 
