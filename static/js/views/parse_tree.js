@@ -17,7 +17,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 
 			// To test answer checking!
-			this.options.mode = 'create';
+			//this.options.mode = 'create';
 
 			$.ajax({
 				url: '/api/sentence/2086/?format=json',
@@ -102,6 +102,10 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			var i = 0, duration = 750;
 			var that = this;
 
+			var color = d3.scale.ordinal()
+				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article"])
+				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2"]);
+
 			var tree = d3.layout.tree().nodeSize([100, 50]);
 			tree.separation(function(a, b) {
 
@@ -128,7 +132,6 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				.attr('class', 'canvas')
 			.append('g')
 				.attr('transform', 'translate(' + (width / 2) + ',' + margin.top + ')')
-
 
 			function zoom() {
 				var scale = d3.event.scale,
@@ -171,6 +174,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				nodeEnter.append('circle')
 					.attr('r', function(d, i) {
 						return (d.tbwid == 0) ? 5 : 10;
+					})
+					.style('stroke', function(d) {
+						return color(d.pos);
 					})
 					.on('click', click)
 					.on('dblclick', editProps)
@@ -287,12 +293,12 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 					// If this node was previously selected, unselect it.
 					if (c.classed('selected')) { 
-						this.setAttribute('class', '');
+						this.classList.remove('selected');
 						that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').removeClass('selected');
 						return;
 					}
 					else
-						c.attr('class', 'selected');
+						this.classList.add('selected');
 
 					// Highlight the word in the top sentence
 					that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').addClass('selected');
@@ -310,7 +316,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 						if (parent.tbwid == child.head || child.tbwid == 0) {
 							d3.selectAll('circle').each(function(d, i) {
-								this.setAttribute('class', '');
+								this.classList.remove('selected');
 							});
 							that.options.container.find('.sentence span[data-tbwid="' + parent.tbwid + '"]').removeClass('selected');
 							that.options.container.find('.sentence span[data-tbwid="' + child.tbwid + '"]').removeClass('selected');
@@ -337,7 +343,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 							// Now, reset state of tree to unselected everything 
 							d3.selectAll('circle').each(function(d, i) {
-								this.setAttribute('class', '');
+								this.classList.remove('selected');
 							});
 
 							// Check whether the connection is correct -- if it's incorrect if the child has the wrong parent
@@ -380,11 +386,13 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			d3.selectAll('circle').each(function(d, i) {
 				if (d.id == child.id) {
 					if (child.parent.tbwid != dataMap[child.tbwid]["head"]) {
-						this.setAttribute('class', 'wrong');
+						this.classList.remove('right');
+						this.classList.add('wrong');
 						console.log("WRONG ANSWER!")
 					}
 					else {
-						this.setAttribute('class', 'right');
+						this.classList.remove('wrong');
+						this.classList.add('right');
 						console.log("Bravo!")
 					}
 				}
