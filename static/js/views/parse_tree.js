@@ -133,6 +133,12 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			.append('g')
 				.attr('transform', 'translate(' + (width / 2) + ',' + margin.top + ')')
 
+			var legend = d3.select('.svg-container').append('g')
+				.attr('class', 'legend')
+				.attr('height', 100)
+				.attr('width', 100)
+				.attr('transform', 'translate(0, 10)');
+
 			function zoom() {
 				var scale = d3.event.scale,
 					translation = d3.event.translate,
@@ -269,12 +275,6 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					if (_.where(legendNodes, { pos: n.pos }).length == 0)
 						legendNodes.push(n);	
 				});
-
-				var legend = d3.select('.svg-container').append('g')
-					.attr('class', 'legend')
-					.attr('height', 100)
-					.attr('width', 100)
-					.attr('transform', 'translate(0, 10)');
 
 				legend.selectAll('rect')
 					.data(legendNodes, function(d, i) {
@@ -421,6 +421,8 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			}
 		},
 		checkConnection: function(child) {
+			if (!this.options || this.options.mode != 'create') return;
+
 			var dataMap = this.answers.reduce(function(map, node) {
 				map[node.tbwid] = node;
 				return map;
