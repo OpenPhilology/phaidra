@@ -27,6 +27,7 @@ from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 
 import json
 import random
+from random import shuffle
 from neo4django.db.models import NodeModel
 
 class UserObjectsOnlyAuthorization(Authorization):
@@ -290,7 +291,6 @@ class SubmissionResource(ModelResource):
 
 class DocumentResource(ModelResource):
 	
-	# foreign key to sentences of a document
 	#document/?format=json&sentences__length=24
 	sentences = fields.ToManyField('api.api.SentenceResource', lambda bundle: Sentence.objects.filter(document__name = bundle.obj.name), null = True, blank = True )# full = True)
 							
@@ -311,9 +311,9 @@ class DocumentResource(ModelResource):
 
 class SentenceResource(ModelResource):
 	#sentence/?format=json&file__lang=fas
-	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
+	file = fields.ForeignKey(DocumentResource, 'document')
 	# expensive
-	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True)#full = True)
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True, full = True)
 		
 	class Meta:
 		queryset = Sentence.objects.all()
@@ -326,39 +326,27 @@ class SentenceResource(ModelResource):
 					'length': ALL,
 					'file': ALL_WITH_RELATIONS,
 					'words': ALL_WITH_RELATIONS}
+		limit = 5	
 		
+	def prepend_urls(self, *args, **kwargs):	
 		
-	def prepend_urls(self, *args, **kwargs):
-		
-		name = 'get_one_random'
-		return [url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, name, trailing_slash()), self.wrap_view(name), name="api_%s" % name)]
-
+		return [
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'get_one_random', trailing_slash()), self.wrap_view('get_one_random'), name="api_%s" % 'get_one_random'),
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'get_one_random_short', trailing_slash()), self.wrap_view('get_one_random_short'), name="api_%s" % 'get_one_random_short')
+			]
 	
+	#/api/sentence/get_one_random/?format=json&case=gen&lemma=Λακεδαιμόνιος
 	def get_one_random(self, request, **kwargs):
 		
 		"""
 		Gets one random sentence of sentences with provided morphological information to one word.
 		"""
-		case = request.GET.get('case')
-		lemma = request.GET.get('lemma')
-		number = request.GET.get('number')
 		length = request.GET.get('length')
-		posAdd = request.GET.get('posAdd')
 		query_params = {}
-				
-		if case is not None:
-			query_params['case'] = case
-			
-		if lemma is not None:
-			#query_params = {'case': case, 'lemma': lemma}
-			query_params['lemma'] = lemma
-			
-		if number is not None:
-			query_params['number'] = number
-			
-		if posAdd is not None:
-			query_params['posAdd__contains'] = posAdd
-			
+		for obj in request.GET.keys():
+			if obj in dir(Word) and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+							
 		words = Word.objects.filter(**query_params)
 		if len(words) < 1:
 			return self.error_response(request, {'error': 'No results hit this query.'}, response_class=HttpBadRequest)
@@ -377,6 +365,9 @@ class SentenceResource(ModelResource):
 		else : 
 			word = random.choice(words)
 			sentence = word.sentence
+		
+		#data = self.build_bundle(obj=sentence, request=request)
+		#data = self.full_dehydrate(data)
 			
 		data = {'sentence': sentence.__dict__}
 		data = data['sentence']['_prop_values']
@@ -388,20 +379,52 @@ class SentenceResource(ModelResource):
 		return self.create_response(request, data)	
 		#return self.error_response(request, {'error': 'lemma and case are required.'}, response_class=HttpBadRequest)
 		
- 		
-class SentenceRandomResource(ModelResource):
+	#/api/sentence/get_one_random_short/?format=json&case=gen&lemma=Λακεδαιμόνιος
+	def get_one_random_short(self, request, **kwargs):
+		
+		"""
+		Gets one short random sentence of sentences with provided morphological information to one word.
+		Makes sure the query params are still supported by the short sentence
+		"""
+		#query_params = {'case': 'gen', 'lemma': 'Λακεδαιμόνιος'}
+		query_params = {}
+		for obj in request.GET.keys():
+			if obj in dir(Word) and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+		
+		# filter on params asap brings kinda performance, shuffle result set 						
+		x = list(Word.objects.filter(**query_params))
+		words = sorted(x, key=lambda *args: random.random())
+		
+		for word in words:
+			sentence = word.sentence
+			# asap check if the short sentence to a word's sentence returns a set with query params matching words
+			sentence = sentence.get_shortened(query_params)
+			if sentence is not None:
+		
+				data = {}
+				data['words'] = []
+				for word in sentence:
+					w = word.__dict__
+					data['words'].append(w['_prop_values'])
+										
+				return self.create_response(request, data)
+		
+		return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
 	
+ 		
+class SentenceShortResource(ModelResource):
 	"""
-	This resource searches a related object to given object parameters and
-	returns the selected bundled and dehydrated as in a detail view. It is far more expensive than working with the __dict__ of an object.
+	test resource for short sentence to parameter returns
+	Try short sentences to CTS
 	"""
-	file = fields.ForeignKey(DocumentResource, 'document')#full = True)
+	file = fields.ForeignKey(DocumentResource, 'document')
 	# expensive
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(sentence__sentence=bundle.obj.sentence), null=True, blank=True)#, full = True)
 		
 	class Meta:
 		queryset = Sentence.objects.filter()
-		resource_name = 'sentence/random'
+		resource_name = 'sentence/short'
 		always_return_data = True
 		excludes = ['require_order', 'require_all', 'sentence']
 		authorization = ReadOnlyAuthorization()
@@ -411,44 +434,45 @@ class SentenceRandomResource(ModelResource):
 					'file': ALL_WITH_RELATIONS,
 					'words': ALL_WITH_RELATIONS}
 		limit = 3
-
 	
-	def prepend_urls(self, *args, **kwargs):
+	def prepend_urls(self, *args, **kwargs):	
 		
-		name = 'get_one_random'
-		return [url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, name, trailing_slash()), self.wrap_view(name), name="api_%s" % name)]
+		return [
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'get_one_random', trailing_slash()), self.wrap_view('get_one_random'), name="api_%s" % 'get_one_random'),
+			]
 
-	
+	#/api/sentence/short/get_one_random/?format=json&case=gen&lemma=Λακεδαιμόνιος
 	def get_one_random(self, request, **kwargs):
 		
 		"""
-		Gets one random sentence of sentences with provided `case` and `lemma` params.
+		Gets one random sentence of sentences with provided morphological information to one word.
+		Makes sure the query params are still supported by the short sentence
 		"""
-		case = request.GET.get('case')
-		lemma = request.GET.get('lemma')
-		number = request.GET.get('number')
+		#query_params = {'case': 'gen', 'lemma': 'Λακεδαιμόνιος'}
+		query_params = {}
+		for obj in request.GET.keys():
+			if obj in dir(Word) and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
 		
-		if case and lemma:
-			
-			query_params = {'case': case, 'lemma': lemma}
-			if number is not None:
-				
-				query_params['number'] = number
-				words = Word.objects.filter(**query_params)
-				word = random.choice(words)
-				sentence = word.sentence
-			
-				data = {'sentence': word.sentence.__dict__}
-				data = data['sentence']['_prop_values']
-				data['words'] = []			
-				for word in sentence.words.all() :
+		# filter on params asap brings kinda performance, shuffle result set 						
+		x = list(Word.objects.filter(**query_params))
+		words = sorted(x, key=lambda *args: random.random())
+		
+		for word in words:
+			sentence = word.sentence
+			# asap check if the short sentence to a word's sentence returns a set with query params matching words
+			sentence = sentence.get_shortened(query_params)
+			if sentence is not None:
+		
+				data = {}
+				data['words'] = []
+				for word in sentence:
 					w = word.__dict__
 					data['words'].append(w['_prop_values'])
 										
-			return self.create_response(request, data)
+				return self.create_response(request, data)
 		
-		else:
-			return self.error_response(request, {'error': 'lemma and case are required.'}, response_class=HttpBadRequest)
+		return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)	
 		
 		
 class LemmaResource(ModelResource):
@@ -472,7 +496,6 @@ class LemmaWordResource(ModelResource):
 	"""
 	Returns a list of lemmas with special properties of a relative - words.
 	"""
-	# field makes the resource view slower
 	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj)) 
 	
 	class Meta:
