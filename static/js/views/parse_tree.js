@@ -73,7 +73,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			}
 
 			// Create a root node
-			this.words.push({ 'tbwid': 0, 'value': 'root'});
+			this.words.push({ 'tbwid': 0, 'value': 'root', 'pos': 'other' });
 
 			var dataMap = this.words.reduce(function(map, node) {
 				map[node.tbwid] = node;
@@ -103,13 +103,13 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			var that = this;
 
 			var color = d3.scale.ordinal()
-				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article"])
-				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2"]);
+				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root"])
+				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#666"]);
 
 			var tree = d3.layout.tree().nodeSize([100, 50]);
-			tree.separation(function(a, b) {
 
-				// Determine horizontal spacing needed for words based on their length
+			// Determine horizontal spacing needed for words based on their length
+			tree.separation(function(a, b) {
 				var max = _.max(that.words, function(obj) {
 					return obj.width;
 				}).width + 1;
@@ -262,6 +262,49 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					d.x0 = d.x;
 					d.y0 = d.y;
 				});
+
+				// Get only unique colors for the legend
+				var legendNodes = [];
+				_.each(nodes, function(n) {
+					if (_.where(legendNodes, { pos: n.pos }).length == 0)
+						legendNodes.push(n);	
+				});
+
+				var legend = d3.select('.svg-container').append('g')
+					.attr('class', 'legend')
+					.attr('height', 100)
+					.attr('width', 100)
+					.attr('transform', 'translate(0, 10)');
+
+				legend.selectAll('rect')
+					.data(legendNodes, function(d, i) {
+						return d.id || (d.id = ++i);
+					})
+					.enter()
+					.append('rect')
+					.attr('x', 10)
+					.attr('y', function(d, i) {
+						return i * 20;
+					})
+					.attr('width', 10)
+					.attr('height', 10)
+					.style('fill', function(d) {
+						return color(d.pos);
+					});
+
+				legend.selectAll('text')
+					.data(legendNodes, function(d, i) {
+						return d.id || (d.id = ++i);
+					})
+					.enter()
+					.append('text')
+					.attr('x', 23)
+					.attr('y', function(d, i) {
+						return (i * 20) + 9;
+					})
+					.text(function(d) {
+						return d.pos;
+					});
 
 				function editProps(d, i) {
 					var modal = $('#parse-tree-modal');
