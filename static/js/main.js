@@ -8,6 +8,7 @@ requirejs.config({
 		'underscore': 'lib/underscore-min',
 		'backbone': 'lib/backbone',
 		'd3': 'lib/d3.v3.min',
+		'jquery-ui': 'lib/jquery-ui-draggable',
 		'text': 'lib/text'
 	},
 	'shim': {

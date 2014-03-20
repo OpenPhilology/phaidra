@@ -1,21 +1,40 @@
-define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) {
+define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], function($, _, Backbone, d3, bootstrap) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'text',
-		events: {
-		},
 		initialize: function(options) {
 			this.$el = $('');
 			var that = this;
+
+			this.options = options;
+
+			/*
+				options.mode = edit | create | display
+				1. Edit -- Editing existing parse tree
+				2. Create -- Create new parse tree
+				3. Display -- Non-editable view of existing parse tree
+			*/
+
+
+			// To test answer checking!
+			//this.options.mode = 'create';
+
 			$.ajax({
-				url: '/api/sentence/60/?format=json',
+				url: '/api/sentence/2086/?format=json',
 				dataType: 'json', 
 				success: function(sentence) {
 
 					// Populate html
-					options.container.find('.sentence').html(sentence.sentence);
+					var words = sentence.words.reverse();
 
-					data = that.convertData(sentence.words);
+					for (var i = 0; i < words.length; i++) {
+						options.container.find('.sentence').append($('<span>', {
+							html: words[i]["value"], 
+							'data-tbwid': words[i]["tbwid"]
+						}));
+					}
+
+					data = that.convertData(words);
 					that.renderTree(data);
 					that.render();
 				},
@@ -25,28 +44,36 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			});
 		},
 		render: function() {
-			$('.svg-container').parent().append('<a id="zoom-in" href="#" class="btn btn-default">+</a> <a id="zoom-out" href="#" class="btn btn-default">-</a>');
+			var that = this;
+			$('select[name="pos"]').on('change', that.displayFields);
 			return this;	
 		},
 		/*
 		*	Converts data from flat JSON into hierarchical.
 		*/
 		convertData: function(words) {
-			// Right now, our data comes in reverse. Delete this later.
-			this.words = words.reverse();
+			var that = this;
 			this.words = _.map(words, function(obj) {
-
-				// Just to start the tree from scratch
-				//obj.head = 0;
 
 				// Assign a width for building the tree later
 				obj.width = obj.value.length;
 
-				return _.pick(obj, 'tbwid', 'head', 'value', 'width');
+				return _.pick(obj, 'tbwid', 'head', 'value', 'lemma', 'pos', 'person', 'number', 'tense', 'mood', 'voice', 'gender', 'case', 'degree', 'width', 'relation');
 			});
 
+			// If the student is creating the tree, then clone original data to check their answers later
+			if (this.options.mode == 'create') {
+
+				this.answers = JSON.parse(JSON.stringify(that.words));
+
+				this.words = _.map(that.words, function(obj) {
+					obj.head = 0;
+					return _.pick(obj, 'tbwid', 'value', 'head', 'width');
+				});
+			}
+
 			// Create a root node
-			this.words.push({ 'tbwid': 0, 'value': 'root'});
+			this.words.push({ 'tbwid': 0, 'value': 'root', 'pos': 'other' });
 
 			var dataMap = this.words.reduce(function(map, node) {
 				map[node.tbwid] = node;
@@ -75,10 +102,14 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			var i = 0, duration = 750;
 			var that = this;
 
-			var tree = d3.layout.tree().nodeSize([100, 50]);
-			tree.separation(function(a, b) {
+			var color = d3.scale.ordinal()
+				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root"])
+				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#666"]);
 
-				// Determine horizontal spacing needed for words based on their length
+			var tree = d3.layout.tree().nodeSize([100, 50]);
+
+			// Determine horizontal spacing needed for words based on their length
+			tree.separation(function(a, b) {
 				var max = _.max(that.words, function(obj) {
 					return obj.width;
 				}).width + 1;
@@ -102,6 +133,11 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			.append('g')
 				.attr('transform', 'translate(' + (width / 2) + ',' + margin.top + ')')
 
+			var legend = d3.select('.svg-container').append('g')
+				.attr('class', 'legend')
+				.attr('height', 100)
+				.attr('width', 100)
+				.attr('transform', 'translate(0, 10)');
 
 			function zoom() {
 				var scale = d3.event.scale,
@@ -145,7 +181,11 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 					.attr('r', function(d, i) {
 						return (d.tbwid == 0) ? 5 : 10;
 					})
+					.style('stroke', function(d) {
+						return color(d.pos);
+					})
 					.on('click', click)
+					.on('dblclick', editProps)
 					.attr('class', function(d, i) {
 						return (d.tbwid == 0) ? 'root' : ''
 					});
@@ -155,7 +195,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						if (d.tbwid == 0) 
 							return -30;
 						else
-							return 20;
+							return 15;
 					})
 					.attr('dy', '14px')
 					.attr('text-anchor', 'middle')
@@ -166,6 +206,20 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 						return (d.tbwid == 0) ? '#CCC' : '#333';
 					})
 					.style('fill-opacity', 1);
+
+				nodeEnter.append('text')
+					.attr('y', function(d, i) {
+						if (d.tbwid == 0) 
+							return '';
+						else
+							return -30;
+					})
+					.attr('dy', '12px')
+					.attr('text-anchor', 'middle')
+					.attr('class', 'label')
+					.text(function(d) {
+						return d.relation;
+					});
 
 				var nodeUpdate = node.transition()
 					.duration(duration)
@@ -215,16 +269,82 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 					d.y0 = d.y;
 				});
 
+				// Get only unique colors for the legend
+				var legendNodes = [];
+				_.each(nodes, function(n) {
+					if (_.where(legendNodes, { pos: n.pos }).length == 0)
+						legendNodes.push(n);	
+				});
+
+				legend.selectAll('rect')
+					.data(legendNodes, function(d, i) {
+						return d.id || (d.id = ++i);
+					})
+					.enter()
+					.append('rect')
+					.attr('x', 10)
+					.attr('y', function(d, i) {
+						return i * 20;
+					})
+					.attr('width', 10)
+					.attr('height', 10)
+					.style('fill', function(d) {
+						return color(d.pos);
+					});
+
+				legend.selectAll('text')
+					.data(legendNodes, function(d, i) {
+						return d.id || (d.id = ++i);
+					})
+					.enter()
+					.append('text')
+					.attr('x', 23)
+					.attr('y', function(d, i) {
+						return (i * 20) + 9;
+					})
+					.text(function(d) {
+						return d.pos;
+					});
+
+				function editProps(d, i) {
+					var modal = $('#parse-tree-modal');
+					modal.draggable({
+						handle: '.modal-header'
+					});
+
+					modal.find('form')[0].reset();
+					
+					// Display values of the node -- replace this with a template
+					modal.find('.modal-header h4').html(d.value);
+					modal.find('select[name="relation"] option[value="' + d.relation + '"]').prop('selected', true);
+					modal.find('input[name="lemma"]').val(d.lemma || '');
+					modal.find('select[name="pos"] option[data-morpheus="' + d.pos + '"]').prop('selected', true).trigger('change');
+					modal.find('input[name="person"][data-morpheus="' + d.person + '"]').prop('checked', true);
+					modal.find('input[name="number"][data-morpheus="' + d.number + '"]').prop('checked', true);
+					modal.find('select[name="tense"] option[data-morpheus="' + d.tense + '"]').prop('selected', true);
+					modal.find('select[name="mood"] option[data-morpheus="' + d.mood + '"]').prop('selected', true);
+					modal.find('input[name="voice"][data-morpheus="' + d.voice + '"]').prop('checked', true);
+					modal.find('input[name="gender"][data-morpheus="' + d.gender + '"]').prop('checked', true);
+					modal.find('select[name="case"] option[data-morpheus="' + d.case + '"]').prop('selected', true);
+					modal.find('input[name="degree"][data-morpheus="' + d.degree + '"]').prop('checked', true);
+
+					modal.modal('show');
+				}
+
 				function click(d, i) {
 					var c = d3.select(this);
 
 					// If this node was previously selected, unselect it.
 					if (c.classed('selected')) { 
-						this.setAttribute('class', '');
+						this.classList.remove('selected');
+						that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').removeClass('selected');
 						return;
 					}
 					else
-						c.attr('class', 'selected');
+						this.classList.add('selected');
+
+					// Highlight the word in the top sentence
+					that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').addClass('selected');
 
 					// Check whether it's time to update links
 					var selected = [];
@@ -239,8 +359,10 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 
 						if (parent.tbwid == child.head || child.tbwid == 0) {
 							d3.selectAll('circle').each(function(d, i) {
-								this.setAttribute('class', '');
+								this.classList.remove('selected');
 							});
+							that.options.container.find('.sentence span[data-tbwid="' + parent.tbwid + '"]').removeClass('selected');
+							that.options.container.find('.sentence span[data-tbwid="' + child.tbwid + '"]').removeClass('selected');
 						}
 						else {
 							(parent.children || (parent.children = [])).push(child);
@@ -252,24 +374,75 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 							child.parent.children = _.filter(child.parent.children, function(obj) {
 								return obj.id != child.id;
 							});
+
+							// The problem area -- causes the children to get eaten
 							if (child.parent.children.length == 0)
 								delete child.parent.children;	
 
 							child.parent = parent;
 							child.head = parent.twid;
 							update(child);
-							//update(parent);
+							update(parent);
+
+							// Now, reset state of tree to unselected everything 
 							d3.selectAll('circle').each(function(d, i) {
-								this.setAttribute('class', '');
+								this.classList.remove('selected');
 							});
+
+							// Check whether the connection is correct -- if it's incorrect if the child has the wrong parent
+							that.checkConnection(child);
+
+							// So users can see in the sentence which two words they connected
+							setTimeout(function() {
+								that.options.container.find('.sentence span[data-tbwid="' + parent.tbwid + '"]').removeClass('selected');
+								that.options.container.find('.sentence span[data-tbwid="' + child.tbwid + '"]').removeClass('selected');
+							}, 1000);
 						}
 					}
 				}
 
 				d3.select('svg').call(d3.behavior.zoom()
 						.scaleExtent([0.5, 5])
-						.on("zoom", zoom));
+						.on("zoom", zoom))
+						.on('dblclick.zoom', null);
 			}
+		},
+		displayFields: function(e) {
+			var form = $('form');
+			var formControls = form.find('.form-group');
+			var pos = form.find('select[name="pos"]').val();
+
+			for (var i = 0; i < formControls.length; i++) {
+				var group = $(formControls[i]).attr('data-group');
+				if (!group || group.indexOf(pos) == -1)
+					$(formControls[i]).hide();
+				else
+					$(formControls[i]).show();
+			}
+		},
+		checkConnection: function(child) {
+			if (!this.options || this.options.mode != 'create') return;
+
+			var dataMap = this.answers.reduce(function(map, node) {
+				map[node.tbwid] = node;
+				return map;
+			}, {});
+
+			d3.selectAll('circle').each(function(d, i) {
+				if (d.id == child.id) {
+					if (child.parent.tbwid != dataMap[child.tbwid]["head"]) {
+						this.classList.remove('right');
+						this.classList.add('wrong');
+						console.log("WRONG ANSWER!")
+					}
+					else {
+						this.classList.remove('wrong');
+						this.classList.add('right');
+						console.log("Bravo!")
+					}
+				}
+			});
+
 		}
 	});
 
