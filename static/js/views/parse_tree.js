@@ -20,7 +20,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			//this.options.mode = 'create';
 
 			$.ajax({
-				url: '/api/sentence/2086/?format=json',
+				url: '/api/sentence/3602/?format=json',
 				dataType: 'json', 
 				success: function(sentence) {
 
@@ -103,8 +103,8 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			var that = this;
 
 			var color = d3.scale.ordinal()
-				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root"])
-				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#666"]);
+				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root", ""])
+				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#666", "#666"]);
 
 			var tree = d3.layout.tree().nodeSize([100, 50]);
 

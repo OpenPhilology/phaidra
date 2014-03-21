@@ -49,7 +49,7 @@
 		stroke-width: 3px;
 	}
 	.node circle.right {
-		fill: #F4BC78 !important;
+		fill: #94DA87 !important;
 	}
 	.node circle.wrong {
 		fill: #D15241 !important;
@@ -119,7 +119,7 @@
 			</div>
 			<div class="modal-body">
 				<form role="form">
-				<div class="form-group" data-group="adzefixnmtgrpuv">
+				<div class="form-group" data-group="adzefixnmtgrpuv_">
 					<label for="relation">Relationship to Parent</label>
 					<select class="form-control" name="relation">
 						<option value="PRED">PRED</option>
@@ -146,13 +146,14 @@
 					</select>
 				</div>
 				<hr>
-				<div class="form-group" data-group="adzefixnmtgrpuv">
+				<div class="form-group" data-group="adzefixnmtgrpuv_">
 					<label for="lemma">Lemma</label>
 					<input type="text" class="form-control" name="lemma" placeholder="Nominative singular or first principle part">
 				</div>
-				<div class="form-group" data-group="adzefixnmtgrpuv">
+				<div class="form-group" data-group="adzefixnmtgrpuv_">
 					<label for="lemma">Part of Speech</label>
 					<select class="form-control" name="pos">
+						<option value="_" data-morpheus="">Select a Part of Speech</option>
 						<option value="a" data-morpheus="noun">Adjective</option>
 						<option value="d" data-morpheus="adverb">Adverb</option>
 						<option value="z" data-morpheus="">Determiner</option>
