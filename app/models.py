@@ -49,12 +49,20 @@ class Sentence(models.NodeModel):
 			array.append(obj)
 		return array
 	
-	def get_shortened(self):
+	# TODO: make unique and order
+	def get_shortened(self, params = None):
 		
 		words = self.words.all()
-		aim_words = []		
+		critique_words = self.words.filter(**params)
+				
 		# get PRED and PRED_CO
 		for verb in words:
+			
+			# if no greek return None
+			if verb.relation is None or verb.relation == "":
+				return None
+			
+			aim_words = []
 			if verb.relation == "PRED" or verb.relation == "PRED_CO":
 				s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
 				
@@ -66,7 +74,7 @@ class Sentence(models.NodeModel):
 						r.append(word.tbwid)
 						aim_words.append(word)
 					if word.head in s and word.relation == "COORD":
-						u.append(word.tbwid)
+						#u.append(word.tbwid)
 						aim_words.append(word)
 					if word.head in s and word.relation == "AuxP": 
 						f.append(word.tbwid)
@@ -87,9 +95,22 @@ class Sentence(models.NodeModel):
 					if word.head in z and word.relation == "ATR" and word.pos != "verb":
 						a.append(word.id)
 						aim_words.append(word)
-				break
+				
+				# refinement of u
+				for id in u:
+					w = self.words.get(tbwid = id)
+					if w.head in i:
+						aim_words.append(w)  
+				
+				# check if aim_words and critiques match asap
+				# check if not verbs only are returned
+				# set and order words
+				if len(list(set(aim_words) & set(critique_words))) > 0 and len(aim_words) > 1:
+					aim_words = set(aim_words)
+					return sorted(aim_words, key=lambda x: x.tbwid, reverse=False)
 		
-		return aim_words
+		
+		return None
 
 	# best this would be created while writing the backend not on calling the method
 	def __unicode__(self):
