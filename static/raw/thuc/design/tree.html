@@ -1,13 +1,61 @@
 <style>
+	.modal.fade.ui-draggable-dragging {
+		-moz-transition: none;
+		-o-transition: none;
+		-webkit-transition: none;
+		transition: none;
+	}
+	.modal {
+		overflow-y: hidden;
+	}
+	.modal-open {
+		overflow: auto;
+	}
+	.modal-header {
+		cursor: move;
+	}
+	.modal .btn-primary {
+		background-color: #6AC76A;
+		border-color: #6AC76A;
+	}
+	.modal-dialog.modal-sm {
+		max-width: 400px;
+	}
+
+	.sentence span {
+		padding: 5px;
+		margin: 3px;
+		border-radius: 3px;
+		background-color: transparent;
+		-webkit-transition: background-color 700ms ease-out;
+		-moz-transition: background-color 700ms ease-out;
+		-o-transition: background-color 700ms ease-out;
+		-ms-transition: background-color 700ms ease-out;
+		transition: background-color 700ms ease-out;
+	}
+	.sentence .selected {
+		background-color: #6AC76A;
+		color: #FFF;
+		-webkit-transition: background-color 500ms ease-in;
+		-moz-transition: background-color 500ms ease-in;
+		-o-transition: background-color 500ms ease-in;
+		-ms-transition: background-color 500ms ease-in;
+		transition: background-color 500ms ease-in;
+	}
+		
 	.node circle {
 		fill: #fff;
 		stroke: #49A556;
 		stroke-width: 3px;
 	}
+	.node circle.right {
+		fill: #F4BC78 !important;
+	}
+	.node circle.wrong {
+		fill: #D15241 !important;
+	}
 
 	.node circle.selected {
-		fill: #6AC76A;
-		stroke: #49A556;
 		stroke-width: 6px;
 		cursor: pointer;
 	}
@@ -26,9 +74,15 @@
 	}
 
 	.node text { 
-		font-size: 18px; 
 		font-family: 'Cambria', 'Times New Romans';
 		letter-spacing: 2px;
+		font-size: 18px;
+	}
+	.node text.label {
+		font-family: sans-serif;
+		font-size: 12px !important;
+		font-weight: 500;
+		color: #666;
 	}
 
 	.link {
@@ -54,4 +108,172 @@
 	<hr>
 	<div class="greek-text sentence"></div>
 	<hr>
+</div>
+
+<div class="modal fade" id="parse-tree-modal" role="dialog" aria-hidden="true" lang="en">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4></h4>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+				<div class="form-group" data-group="adzefixnmtgrpuv">
+					<label for="relation">Relationship to Parent</label>
+					<select class="form-control" name="relation">
+						<option value="PRED">PRED</option>
+						<option value="SBJ">SBJ</option>
+						<option value="OBJ">OBJ</option>
+						<option value="ATR">ATR</option>
+						<option value="ADV">ADV</option>
+						<option value="ATV">ATV</option>
+						<option value="AtvV">AtvV</option>
+						<option value="PNOM">PNOM</option>
+						<option value="OCOMP">OCOMP</option>
+						<option value="APOS">APOS</option>
+						<option value="COORD">COORD</option>
+						<option value="AuxP">AuxP</option>
+						<option value="AuxC">AuxC</option>
+						<option value="AuxR">AuxR</option>
+						<option value="AuxY">AuxY</option>
+						<option value="AuxX">AuxX</option>
+						<option value="AuxG">AuxG</option>
+						<option value="AuxK">AuxK</option>
+						<option value="AuxV">AuxV</option>
+						<option value="AuxZ">AuxZ</option>
+						<option value="ExD">ExD</option>
+					</select>
+				</div>
+				<hr>
+				<div class="form-group" data-group="adzefixnmtgrpuv">
+					<label for="lemma">Lemma</label>
+					<input type="text" class="form-control" name="lemma" placeholder="Nominative singular or first principle part">
+				</div>
+				<div class="form-group" data-group="adzefixnmtgrpuv">
+					<label for="lemma">Part of Speech</label>
+					<select class="form-control" name="pos">
+						<option value="a" data-morpheus="noun">Adjective</option>
+						<option value="d" data-morpheus="adverb">Adverb</option>
+						<option value="z" data-morpheus="">Determiner</option>
+						<option value="e" data-morpheus="exclam">Exclamation</option>
+						<option value="f" data-morpheus="">Functional</option>
+						<option value="i" data-morpheus="interjection">Interjection</option>
+						<option value="x" data-morpheus="">Irregular</option>
+						<option value="n" data-morpheus="noun">Noun</option>
+						<option value="m" data-morpheus="numeral">Numeral</option>
+						<option value="t" data-morpheus="participle">Participle</option>
+						<option value="g" data-morpheus="particle">Particle</option>
+						<option value="r" data-morpheus="prep">Preposition</option>
+						<option value="p" data-morpheus="pron">Pronoun</option>
+						<option value="u" data-morpheus="punct">Punctuation</option>
+						<option value="v" data-morpheus="verb">Verb</option>
+					</select>
+				</div>
+				<div class="form-group" data-group="vp" style="display: none">
+				<label for="person">Person</label><br>
+					<label class="radio-inline">
+						<input type="radio" name="person" value="1" data-morpheus="1st">First</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="person" value="2" data-morpheus="2nd">Second</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="person" value="3" data-morpheus="3rd">Third</input>
+					</label>
+				</div>
+				<div class="form-group" data-group="anvp" style="display: none">
+				<label for="number">Number</label><br>
+					<label class="radio-inline">
+						<input type="radio" name="number" value="s" data-morpheus="sg">Singular</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="number" value="p" data-morpheus="pl">Plural</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="number" value="d" data-morpheus="dual">Dual</input>
+					</label>
+				</div>
+				<div class="form-group" data-group="vt" style="display: none">
+					<label for="tense">Tense</label>
+					<select class="form-control" name="tense">
+						<option>Select a Tense</option>
+						<option value="a" data-morpheus="aor">Aorist</option>
+						<option value="f" data-morpheus="fut">Future</option>
+						<option value="t" data-morpheus="futperf">Future Perfect</option>
+						<option value="i" data-morpheus="imperf">Imperfect</option>
+						<option value="r" data-morpheus="perf">Perfect</option>
+						<option value="l" data-morpheus="plup">Pluperfect</option>
+						<option value="p" data-morpheus="pres">Present</option>
+					</select>
+					</label>
+				</div>
+				<div class="form-group" data-group="vt" style="display: none">
+					<label for="mood">Mood</label>
+					<select class="form-control" name="mood">
+						<option>Select a Mood</option>
+						<option value="i" data-morpheus="ind">Indicative</option>
+						<option value="s" data-morpheus="subj">Subjunctive</option>
+						<option value="o" data-morpheus="opt">Optative</option>
+						<option value="n" data-morpheus="inf">Infinitive</option>
+						<option value="m" data-morpheus="imperat">Imperative</option>
+						<option value="g" data-morpheus="">Gerundive</option>
+						<option value="p" data-morpheus="part">Participle</option>
+					</select>
+				</div>
+				<div class="form-group" data-group="vt" style="display: none">
+					<label for="voice">Voice</label><br>
+					<label class="radio-inline">
+						<input type="radio" name="voice" value="a" data-morpheus="act">Active</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="voice" value="m" data-morpheus="mid">Middle</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="voice" value="e" data-morpheus="mp">Middle-Passive</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="voice" value="p" data-morpheus="pass">Passive</input>
+					</label>
+				</div>
+				<div class="form-group" data-group="ntalp" style="display: none">
+					<label for="gender">Gender</label><br>
+					<label class="radio-inline">
+						<input type="radio" name="gender" value="m" data-morpheus="masc">Masculine</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="gender" value="f" data-morpheus="fem">Feminine</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="gender" value="n" data-morpheus="neut">Neuter</input>
+					</label>
+				</div>
+				<div class="form-group" data-group="tanpl" style="display: none">
+					<label for="case">Case</label>
+					<select class="form-control" name="case">
+						<option>Select a Case</option>
+						<option value="n" data-morpheus="nom">Nominative</option>
+						<option value="g" data-morpheus="gen">Genitive</option>
+						<option value="d" data-morpheus="dat">Dative</option>
+						<option value="a" data-morpheus="acc">Accusative</option>
+						<option value="v" data-morpheus="voc">Vocative</option>
+						<option value="l" data-morpheus="loc">Locative</option>
+					</select>
+				</div>
+				<div class="form-group" data-group="a" style="display: none">
+					<label for="degree">Degree</label><br>
+					<label class="radio-inline">
+						<input type="radio" name="degree" value="c" data-morpheus="comp">Comparative</input>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="degree" value="s" data-morpheus="superl">Superlative</input>
+					</label>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save Changes</button>
+			</div>
+		</div>
+	</div>
 </div>

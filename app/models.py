@@ -48,6 +48,69 @@ class Sentence(models.NodeModel):
 		for obj in reversed(self.words.all()):
 			array.append(obj)
 		return array
+	
+	# TODO: make unique and order
+	def get_shortened(self, params = None):
+		
+		words = self.words.all()
+		critique_words = self.words.filter(**params)
+				
+		# get PRED and PRED_CO
+		for verb in words:
+			
+			# if no greek return None
+			if verb.relation is None or verb.relation == "":
+				return None
+			
+			aim_words = []
+			if verb.relation == "PRED" or verb.relation == "PRED_CO":
+				s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
+				
+				s.append(verb.tbwid)
+				aim_words.append(verb)
+				# group the words and make sure dependent grouping is resolved, save the selected words
+				for word in words:
+					if word.head in s and word.relation != "AuxC" and word.relation != "COORD" and word.pos != "participle":
+						r.append(word.tbwid)
+						aim_words.append(word)
+					if word.head in s and word.relation == "COORD":
+						#u.append(word.tbwid)
+						aim_words.append(word)
+					if word.head in s and word.relation == "AuxP": 
+						f.append(word.tbwid)
+						aim_words.append(word)
+				
+				for word in words:
+					if word.head in u and (word.relation == "OBJ_CO" or word.relation == "ADV_CO") and word.pos != "participle" and word.pos != "verb":
+						i.append(word.tbwid)
+						aim_words.append(word)
+					if word.head in f and word.relation != "AuxC" and word.pos != "participle": 
+						z.append(word.tbwid)
+						aim_words.append(word)
+					if word.head in r and word.relation == "ATR" and word.pos != "verb":
+						g.append(word.tbwid)
+						aim_words.append(word)
+						
+				for word in words:
+					if word.head in z and word.relation == "ATR" and word.pos != "verb":
+						a.append(word.id)
+						aim_words.append(word)
+				
+				# refinement of u
+				for id in u:
+					w = self.words.get(tbwid = id)
+					if w.head in i:
+						aim_words.append(w)  
+				
+				# check if aim_words and critiques match asap
+				# check if not verbs only are returned
+				# set and order words
+				if len(list(set(aim_words) & set(critique_words))) > 0 and len(aim_words) > 1:
+					aim_words = set(aim_words)
+					return sorted(aim_words, key=lambda x: x.tbwid, reverse=False)
+		
+		
+		return None
 
 	# best this would be created while writing the backend not on calling the method
 	def __unicode__(self):
