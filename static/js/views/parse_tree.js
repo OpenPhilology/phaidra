@@ -20,7 +20,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			this.options.mode = 'create';
 
 			$.ajax({
-				url: '/api/sentence/get_one_random_short/?format=json&lemma=κρατέω',
+				url: '/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48',
 				dataType: 'json', 
 				success: function(sentence) {
 
@@ -54,23 +54,21 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 		convertData: function(words) {
 			var that = this;
 
+			// Start calculating what the root node should use as an ID
+			var rootTbwid = _.min(words, function(obj) {
+				return obj.head;
+			}).head;
+
 			this.words = _.map(words, function(obj) {
 
 				// Assign a width for building the tree later
 				obj.width = obj.value.length;
 
+				// If lowest head ID also refers to a word in that sentence, tree root node ID as 0
+				if (rootTbwid == obj.head) rootTbwid = 0;
+
 				return _.pick(obj, 'tbwid', 'head', 'value', 'lemma', 'pos', 'person', 'number', 'tense', 'mood', 'voice', 'gender', 'case', 'degree', 'width', 'relation');
 			});
-
-
-			/* Create a root node
-			   Find the lowest tree id, and make that the tbwid of the root, in case we're dealing with
-			   a shortened sentence. 
-			*/
-
-			var rootTbwid = _.min(that.words, function(obj) {
-				return obj.head;
-			}).head;
 
 			// If the student is creating the tree, then clone original data to check their answers later
 			if (this.options.mode == 'create') {
@@ -113,8 +111,8 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			var that = this;
 
 			var color = d3.scale.ordinal()
-				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root", ""])
-				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#666", "#666"]);
+				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root", "", undefined])
+				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#666", "#666", "#666"]);
 
 			var tree = d3.layout.tree().nodeSize([100, 50]);
 
@@ -431,6 +429,8 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			}
 		},
 		checkConnection: function(child) {
+			// Don't check the connection unless the user is creating tree from scratch, 
+			// because we wouldn't be checking against a gold-standard tree
 			if (!this.options || this.options.mode != 'create') return;
 
 			var dataMap = this.answers.reduce(function(map, node) {
@@ -452,6 +452,8 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					}
 				}
 			});
+
+			// If all nodes apart from those who belong at the root have been evaluated, evaluate children of the root
 
 		}
 	});
