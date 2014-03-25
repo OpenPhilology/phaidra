@@ -1,25 +1,46 @@
 <style>
-	.modal.fade.ui-draggable-dragging {
+	/*.modal.fade.ui-draggable-dragging {
 		-moz-transition: none;
 		-o-transition: none;
 		-webkit-transition: none;
 		transition: none;
-	}
-	.modal {
-		overflow-y: hidden;
-	}
+	}*/
 	.modal-open {
 		overflow: auto;
-	}
-	.modal-header {
-		cursor: move;
 	}
 	.modal .btn-primary {
 		background-color: #6AC76A;
 		border-color: #6AC76A;
 	}
-	.modal-dialog.modal-sm {
-		max-width: 400px;
+	.modal-header {
+		cursor: move;
+		position: absolute;
+		width: 100%;
+		height: 60px;
+	}
+	.modal-content {
+		position: relative;
+		height: 500px;
+	}
+	.modal-body {
+		position: absolute;
+		top: 60px;
+		bottom: 75px;
+		width: 100%;
+		overflow-y: auto;
+	}
+	.modal-footer {
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		height: 75px;
+	}
+	.modal {
+		overflow: hidden;
+	}
+	.modal-dialog {
+		margin-right: 0;
+		margin-left: 0;
 	}
 
 	.sentence span {
@@ -110,7 +131,7 @@
 	<hr>
 </div>
 
-<div class="modal fade" id="parse-tree-modal" role="dialog" aria-hidden="true" lang="en">
+<div class="modal fade nofly" id="parse-tree-modal" role="dialog" aria-hidden="true" lang="en">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -122,6 +143,7 @@
 				<div class="form-group" data-group="adzefixnmtgrpuv_">
 					<label for="relation">Relationship to Parent</label>
 					<select class="form-control" name="relation">
+						<option value="unassigned">Select a Relationship</option>
 						<option value="PRED">PRED</option>
 						<option value="SBJ">SBJ</option>
 						<option value="OBJ">OBJ</option>
@@ -172,28 +194,21 @@
 					</select>
 				</div>
 				<div class="form-group" data-group="vp" style="display: none">
-				<label for="person">Person</label><br>
-					<label class="radio-inline">
-						<input type="radio" name="person" value="1" data-morpheus="1st">First</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="person" value="2" data-morpheus="2nd">Second</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="person" value="3" data-morpheus="3rd">Third</input>
-					</label>
+					<label for="person">Person</label>
+					<select class="form-control" name="person">
+						<option>Select a Person</option>
+						<option value="1" data-morpheus="1st">First</input>
+						<option value="2" data-morpheus="2nd">Second</input>
+						<option value="3" data-morpheus="3rd">Three</input>
+					</select>
 				</div>
 				<div class="form-group" data-group="anvp" style="display: none">
-				<label for="number">Number</label><br>
-					<label class="radio-inline">
-						<input type="radio" name="number" value="s" data-morpheus="sg">Singular</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="number" value="p" data-morpheus="pl">Plural</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="number" value="d" data-morpheus="dual">Dual</input>
-					</label>
+					<label for="number">Number</label>
+					<select class="form-control" name="number">
+						<option value="s" data-morpheus="sg">Singular</input>
+						<option value="p" data-morpheus="pl">Plural</input>
+						<option value="d" data-morpheus="dual">Dual</input>
+					</select>
 				</div>
 				<div class="form-group" data-group="vt" style="display: none">
 					<label for="tense">Tense</label>
@@ -223,31 +238,23 @@
 					</select>
 				</div>
 				<div class="form-group" data-group="vt" style="display: none">
-					<label for="voice">Voice</label><br>
-					<label class="radio-inline">
-						<input type="radio" name="voice" value="a" data-morpheus="act">Active</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="voice" value="m" data-morpheus="mid">Middle</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="voice" value="e" data-morpheus="mp">Middle-Passive</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="voice" value="p" data-morpheus="pass">Passive</input>
-					</label>
+					<label for="voice">Voice</label>
+					<select class="form-control" name="voice">
+						<option>Select a Voice</option>
+						<option value="a" data-morpheus="act">Active</option>
+						<option value="m" data-morpheus="mid">Middle</option>
+						<option value="e" data-morpheus="mp">Middle-Passive</option>
+						<option value="p" data-morpheus="pass">Passive</option>
+					</select>
 				</div>
 				<div class="form-group" data-group="ntalp" style="display: none">
-					<label for="gender">Gender</label><br>
-					<label class="radio-inline">
-						<input type="radio" name="gender" value="m" data-morpheus="masc">Masculine</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="gender" value="f" data-morpheus="fem">Feminine</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="gender" value="n" data-morpheus="neut">Neuter</input>
-					</label>
+					<label for="gender">Gender</label>
+					<select class="form-control" name="gender">
+						<option>Select a Gender</option>
+						<option value="m" data-morpheus="masc">Masculine</option>
+						<option value="m" data-morpheus="fem">Feminine</option>
+						<option value="m" data-morpheus="neut">Neuter</option>
+					</select>
 				</div>
 				<div class="form-group" data-group="tanpl" style="display: none">
 					<label for="case">Case</label>
@@ -262,18 +269,17 @@
 					</select>
 				</div>
 				<div class="form-group" data-group="a" style="display: none">
-					<label for="degree">Degree</label><br>
-					<label class="radio-inline">
-						<input type="radio" name="degree" value="c" data-morpheus="comp">Comparative</input>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="degree" value="s" data-morpheus="superl">Superlative</input>
-					</label>
+					<label for="degree">Degree</label>
+					<select class="form-control" name="degree">
+						<option>Select a Degree</option>
+						<option value="c" data-morpheus="comp">Comparative</option>
+						<option value="s" data-morpheus="superl">Superlative</option>
+					</select>
 				</div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save Changes</button>
+				<button type="submit" class="btn btn-primary">Save Changes</button>
 			</div>
 		</div>
 	</div>

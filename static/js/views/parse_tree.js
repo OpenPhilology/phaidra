@@ -15,23 +15,25 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				3. Display -- Non-editable view of existing parse tree
 			*/
 
-
 			// To test answer checking!
 			this.options.mode = 'create';
 
 			$.ajax({
-				url: '/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48',
+				// Shortened sentence example:
+				//url: '/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48',
+
+				// Full sentence example:
+				url: '/api/sentence/2455/?format=json',
+
 				dataType: 'json', 
 				success: function(sentence) {
 
 					// Populate html
-					var words = sentence.words;
+					var words = sentence.words.reverse();
 
 					for (var i = 0; i < words.length; i++) {
-						options.container.find('.sentence').append($('<span>', {
-							html: words[i]["value"], 
-							'data-tbwid': words[i]["tbwid"]
-						}));
+						options.container.find('.sentence')
+							.append('<span data-tbwid="' + words[i]["tbwid"] + '">' + words[i]["value"] + '</span> ');
 					}
 
 					data = that.convertData(words);
@@ -46,6 +48,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 		render: function() {
 			var that = this;
 			$('select[name="pos"]').on('change', that.displayFields);
+			$('button[type="submit"]').on('click', that.updateNodeAttrs);
 			return this;	
 		},
 		/*
@@ -54,39 +57,52 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 		convertData: function(words) {
 			var that = this;
 
-			// Start calculating what the root node should use as an ID
-			var rootTbwid = _.min(words, function(obj) {
-				return obj.head;
-			}).head;
-
 			this.words = _.map(words, function(obj) {
-
-				// Assign a width for building the tree later
-				obj.width = obj.value.length;
-
-				// If lowest head ID also refers to a word in that sentence, tree root node ID as 0
-				if (rootTbwid == obj.head) rootTbwid = 0;
-
 				return _.pick(obj, 'tbwid', 'head', 'value', 'lemma', 'pos', 'person', 'number', 'tense', 'mood', 'voice', 'gender', 'case', 'degree', 'width', 'relation');
 			});
 
 			// If the student is creating the tree, then clone original data to check their answers later
 			if (this.options.mode == 'create') {
-
 				this.answers = JSON.parse(JSON.stringify(that.words));
-
 				this.words = _.map(that.words, function(obj) {
-					obj.head = rootTbwid;
-					return _.pick(obj, 'tbwid', 'value', 'head', 'width');
+					obj.pos = 'unassigned';
+					return _.pick(obj, 'tbwid', 'value', 'head', 'width', 'pos');
 				});
 			}
-
-			this.words.push({ 'tbwid': rootTbwid, 'value': 'root', 'pos': 'root' });
 
 			var dataMap = this.words.reduce(function(map, node) {
 				map[node.tbwid] = node;
 				return map;
 			}, {});
+
+			/* Append a root node to the tree:
+			*  - For normal sentences, root has a tbwid of zero.
+			*  - If it's a shortened sentence, the root node tbwid will not be zero.
+			*/
+			var rootNodeTbwid = 0;
+			for (var i = 0; i < this.words.length; i++) {
+				var node = this.words[i];
+				if (dataMap[node.head] == undefined) {
+					var rootNode = {
+						'tbwid': node.head,
+						'value': 'root',
+						'pos': 'root'
+					};
+					that.words.push(rootNode);
+					dataMap[node.head] = rootNode;
+					rootNodeTbwid = node.head;
+					break;
+				}
+			}
+			if (this.options.mode == 'create') {
+				this.words.forEach(function(node) {
+					if (node.pos != 'root') node.head = rootNodeTbwid;
+				});
+				Object.keys(dataMap).forEach(function(tbwid) {
+					if (dataMap[tbwid]["pos"] != 'root')
+						dataMap[tbwid]["head"] = rootNodeTbwid;
+				});
+			}
 
 			// Create hierarchical data
 			var treeData = [];
@@ -97,6 +113,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				else 
 					treeData.push(node);
 			});
+
 			return treeData;
 		},
 		/*
@@ -107,25 +124,25 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				width = $('.parse-tree').width(),
 				height = 500 - margin.top - margin.bottom;
 
-			var i = 0, duration = 750;
+			var i = 0, duration = 600;
 			var that = this;
 
 			var color = d3.scale.ordinal()
-				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root", "", undefined])
-				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#666", "#666", "#666"]);
+				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root", "", "unassigned"])
+				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#666", "#666", "#999"]);
 
 			var tree = d3.layout.tree().nodeSize([100, 50]);
 
 			// Determine horizontal spacing needed for words based on their length
 			tree.separation(function(a, b) {
 				var max = _.max(that.words, function(obj) {
-					return obj.width;
-				}).width + 1;
+					return obj.value.length;
+				}).value.length + 1;
 				var widths = [.2], scale = .13;
 				for (j = 1; j < max; j++)
 					widths.push(parseFloat(widths[j-1]) + scale);
 
-				var avg = Math.ceil((a.width + b.width) / 2);
+				var avg = Math.ceil((a.value.length + b.value.length) / 2);
 				return widths[avg];
 			});
 
@@ -317,24 +334,26 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				function editProps(d, i) {
 					var modal = $('#parse-tree-modal');
 					modal.draggable({
-						handle: '.modal-header'
+						handle: '.modal-header',
+						backdrop: false
 					});
 
 					modal.find('form')[0].reset();
+					modal.find('form').eq(0).data('node', d);
 					
 					// Display values of the node -- replace this with a template
 					modal.find('.modal-header h4').html(d.value);
 					modal.find('select[name="relation"] option[value="' + d.relation + '"]').prop('selected', true);
 					modal.find('input[name="lemma"]').val(d.lemma || '');
 					modal.find('select[name="pos"] option[data-morpheus="' + d.pos + '"]').prop('selected', true).trigger('change');
-					modal.find('input[name="person"][data-morpheus="' + d.person + '"]').prop('checked', true);
-					modal.find('input[name="number"][data-morpheus="' + d.number + '"]').prop('checked', true);
+					modal.find('select[name="person"] option[data-morpheus="' + d.person + '"]').prop('selected', true);
+					modal.find('select[name="number"] option[data-morpheus="' + d.number + '"]').prop('selected', true);
 					modal.find('select[name="tense"] option[data-morpheus="' + d.tense + '"]').prop('selected', true);
 					modal.find('select[name="mood"] option[data-morpheus="' + d.mood + '"]').prop('selected', true);
-					modal.find('input[name="voice"][data-morpheus="' + d.voice + '"]').prop('checked', true);
-					modal.find('input[name="gender"][data-morpheus="' + d.gender + '"]').prop('checked', true);
+					modal.find('select[name="voice"] option[data-morpheus="' + d.voice + '"]').prop('selected', true);
+					modal.find('select[name="gender"] option[data-morpheus="' + d.gender + '"]').prop('selected', true);
 					modal.find('select[name="case"] option[data-morpheus="' + d.case + '"]').prop('selected', true);
-					modal.find('input[name="degree"][data-morpheus="' + d.degree + '"]').prop('checked', true);
+					modal.find('select[name="degree"] option[data-morpheus="' + d.degree + '"]').prop('selected', true);
 
 					modal.modal('show');
 				}
@@ -345,14 +364,19 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					// If this node was previously selected, unselect it.
 					if (c.classed('selected')) { 
 						this.classList.remove('selected');
-						that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').removeClass('selected');
+						that.options.container
+							.find('.sentence span[data-tbwid="' + d.tbwid + '"]')
+							.removeClass('selected');
+
 						return;
 					}
 					else
 						this.classList.add('selected');
 
 					// Highlight the word in the top sentence
-					that.options.container.find('.sentence span[data-tbwid="' + d.tbwid + '"]').addClass('selected');
+					that.options.container
+						.find('.sentence span[data-tbwid="' + d.tbwid + '"]')
+						.addClass('selected');
 
 					// Check whether it's time to update links
 					var selected = [];
@@ -369,8 +393,14 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 							d3.selectAll('circle').each(function(d, i) {
 								this.classList.remove('selected');
 							});
-							that.options.container.find('.sentence span[data-tbwid="' + parent.tbwid + '"]').removeClass('selected');
-							that.options.container.find('.sentence span[data-tbwid="' + child.tbwid + '"]').removeClass('selected');
+
+							that.options.container
+								.find('.sentence span[data-tbwid="' + parent.tbwid + '"]')
+								.removeClass('selected');
+
+							that.options.container
+								.find('.sentence span[data-tbwid="' + child.tbwid + '"]')
+								.removeClass('selected');
 						}
 						else {
 							(parent.children || (parent.children = [])).push(child);
@@ -384,8 +414,10 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 							});
 
 							// The problem area -- causes the children to get eaten
-							if (child.parent.children.length == 0)
+
+							/*if (child.parent.children.length == 0)
 								delete child.parent.children;	
+							*/
 
 							child.parent = parent;
 							child.head = parent.twid;
@@ -397,14 +429,17 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 								this.classList.remove('selected');
 							});
 
-							// Check whether the connection is correct -- if it's incorrect if the child has the wrong parent
-							that.checkConnection(child);
 
 							// So users can see in the sentence which two words they connected
 							setTimeout(function() {
 								that.options.container.find('.sentence span[data-tbwid="' + parent.tbwid + '"]').removeClass('selected');
 								that.options.container.find('.sentence span[data-tbwid="' + child.tbwid + '"]').removeClass('selected');
-							}, 1000);
+								/* Check whether the connection is correct 
+									-- If it's incorrect if the child has the wrong parent
+									-- Do connection check after the node has already been moved 
+								*/
+								that.checkConnection(child);
+							}, 700);
 						}
 					}
 				}
@@ -427,6 +462,16 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				else
 					$(formControls[i]).show();
 			}
+		},
+		updateNodeAttrs: function(e) {
+			e.preventDefault();
+			var node = $($('form').eq(0)).data('node');
+
+			d3.selectAll('circle').each(function(d, i) {
+				if (node.id == d.id) {
+					
+				}
+			});
 		},
 		checkConnection: function(child) {
 			// Don't check the connection unless the user is creating tree from scratch, 
@@ -452,9 +497,6 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					}
 				}
 			});
-
-			// If all nodes apart from those who belong at the root have been evaluated, evaluate children of the root
-
 		}
 	});
 
