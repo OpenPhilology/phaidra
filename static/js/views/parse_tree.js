@@ -17,15 +17,15 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 
 			// To test answer checking!
-			//this.options.mode = 'create';
+			this.options.mode = 'create';
 
 			$.ajax({
-				url: '/api/sentence/3602/?format=json',
+				url: '/api/sentence/get_one_random_short/?format=json&lemma=κρατέω',
 				dataType: 'json', 
 				success: function(sentence) {
 
 					// Populate html
-					var words = sentence.words.reverse();
+					var words = sentence.words;
 
 					for (var i = 0; i < words.length; i++) {
 						options.container.find('.sentence').append($('<span>', {
@@ -53,6 +53,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 		*/
 		convertData: function(words) {
 			var that = this;
+
 			this.words = _.map(words, function(obj) {
 
 				// Assign a width for building the tree later
@@ -61,19 +62,28 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				return _.pick(obj, 'tbwid', 'head', 'value', 'lemma', 'pos', 'person', 'number', 'tense', 'mood', 'voice', 'gender', 'case', 'degree', 'width', 'relation');
 			});
 
+
+			/* Create a root node
+			   Find the lowest tree id, and make that the tbwid of the root, in case we're dealing with
+			   a shortened sentence. 
+			*/
+
+			var rootTbwid = _.min(that.words, function(obj) {
+				return obj.head;
+			}).head;
+
 			// If the student is creating the tree, then clone original data to check their answers later
 			if (this.options.mode == 'create') {
 
 				this.answers = JSON.parse(JSON.stringify(that.words));
 
 				this.words = _.map(that.words, function(obj) {
-					obj.head = 0;
+					obj.head = rootTbwid;
 					return _.pick(obj, 'tbwid', 'value', 'head', 'width');
 				});
 			}
 
-			// Create a root node
-			this.words.push({ 'tbwid': 0, 'value': 'root', 'pos': 'other' });
+			this.words.push({ 'tbwid': rootTbwid, 'value': 'root', 'pos': 'root' });
 
 			var dataMap = this.words.reduce(function(map, node) {
 				map[node.tbwid] = node;
@@ -179,7 +189,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 				nodeEnter.append('circle')
 					.attr('r', function(d, i) {
-						return (d.tbwid == 0) ? 5 : 10;
+						return (d.pos == 'root') ? 5 : 10;
 					})
 					.style('stroke', function(d) {
 						return color(d.pos);
@@ -187,12 +197,12 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					.on('click', click)
 					.on('dblclick', editProps)
 					.attr('class', function(d, i) {
-						return (d.tbwid == 0) ? 'root' : ''
+						return (d.pos == 'root') ? 'root' : ''
 					});
 
 				nodeEnter.append('text')
 					.attr('y', function(d, i) {
-						if (d.tbwid == 0) 
+						if (d.pos == 'root') 
 							return -30;
 						else
 							return 15;
@@ -203,7 +213,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 						return d.value;
 					})
 					.style('fill', function(d, i) {
-						return (d.tbwid == 0) ? '#CCC' : '#333';
+						return (d.pos == 'root') ? '#CCC' : '#333';
 					})
 					.style('fill-opacity', 1);
 
@@ -357,7 +367,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 						var parent = d;
 						var child = (parent.id != selected[0]["id"]) ? selected[0] : selected[1]; 
 
-						if (parent.tbwid == child.head || child.tbwid == 0) {
+						if (parent.tbwid == child.head || child.pos == 'root') {
 							d3.selectAll('circle').each(function(d, i) {
 								this.classList.remove('selected');
 							});
