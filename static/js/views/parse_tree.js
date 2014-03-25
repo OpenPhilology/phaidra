@@ -16,20 +16,20 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			*/
 
 			// To test answer checking!
-			this.options.mode = 'create';
+			//this.options.mode = 'create';
 
 			$.ajax({
 				// Shortened sentence example:
 				//url: '/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48',
 
 				// Full sentence example:
-				url: '/api/sentence/2455/?format=json',
+				url: '/api/sentence/get_one_random/?format=json&number=pl&case=nom&lemma=οἰκία',
 
 				dataType: 'json', 
 				success: function(sentence) {
 
 					// Populate html
-					var words = sentence.words.reverse();
+					var words = sentence.words;
 
 					for (var i = 0; i < words.length; i++) {
 						options.container.find('.sentence')
@@ -129,7 +129,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 			var color = d3.scale.ordinal()
 				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root", "", "unassigned"])
-				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#999", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#666", "#666", "#999"]);
+				.range(["#4E6087", "#D15241", "#999", "#1FADAD", "#F05629", "#FF881A", "#931926", "#49A556", "#523D5B", "#999", "#F4BC78", "#F4BC78", "#999", "#6EE2E2", "#333", "#666", "#999"]);
 
 			var tree = d3.layout.tree().nodeSize([100, 50]);
 
@@ -153,6 +153,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			var svg = d3.select('.parse-tree').append('svg')
 				.attr('class', 'svg-container')
 				.style('overflow', 'scroll')
+				.style('height', '700px')
 			.append('g')
 				.attr('class', 'canvas')
 			.append('g')
@@ -234,7 +235,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 				nodeEnter.append('text')
 					.attr('y', function(d, i) {
-						if (d.tbwid == 0) 
+						if (d.pos == 'root') 
 							return '';
 						else
 							return -30;
@@ -370,8 +371,10 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 						return;
 					}
-					else
+					else {
+						/* CAUSES PROBLEM IN SAFARI 6.0.3, though caniuse.com says it shouldn't... */
 						this.classList.add('selected');
+					}
 
 					// Highlight the word in the top sentence
 					that.options.container
@@ -428,7 +431,6 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 							d3.selectAll('circle').each(function(d, i) {
 								this.classList.remove('selected');
 							});
-
 
 							// So users can see in the sentence which two words they connected
 							setTimeout(function() {
