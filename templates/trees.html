@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			OPP Parse Tree Editor
+		</title>
+
+		<!-- CSS -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/phaidra.css" rel="stylesheet">
+		<link href="/static/css/parse-tree.css" rel="stylesheet">
+
+		<!-- JS -->
+		<script data-main="/static/js/tree-main" src="/static/js/lib/require.js"></script>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Parse trees!</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="tree" data-mode="edit" data-url="/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48"></div>
+				</div>
+				<div class="col-md-4">
+					<div class="tree" data-mode="edit" data-url="/api/sentence/get_one_random_short/?format=json&number=pl&case=nom&lemma=οἰκία"></div>
+				</div>
+				<div class="col-md-4">
+					<div class="tree" data-mode="create" data-url="/api/sentence/get_one_random_short/?format=json&number=pl&case=nom&lemma=οἰκία"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

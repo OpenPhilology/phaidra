@@ -1,11 +1,15 @@
-define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], function($, _, Backbone, d3, bootstrap) {
+define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/tree.html', 'jquery-ui'], function($, _, Backbone, d3, bootstrap, treeTemplate) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'text',
 		initialize: function(options) {
-			this.$el = $('');
 			var that = this;
 
+			// Use the HTML 
+			this.$el = $(this.options.container);
+			this.$el.append(treeTemplate);
+
+			// Make options available throughout view
 			this.options = options;
 
 			/*
@@ -16,15 +20,11 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			*/
 
 			// To test answer checking!
-			this.options.mode = 'create';
+			this.options.mode = this.$el.attr('data-mode');
+			this.options.url = this.$el.attr('data-url'); 
 
 			$.ajax({
-				// Shortened sentence example:
-				url: '/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48',
-
-				// Full sentence example:
-				//url: '/api/sentence/get_one_random/?format=json&number=pl&case=nom&lemma=οἰκία',
-
+				url: that.options.url,
 				dataType: 'json', 
 				success: function(sentence) {
 
@@ -48,7 +48,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 		},
 		render: function() {
 			var that = this;
-			this.options.container.find('select[name="pos"]').on('change', _.bind(this.displayFields, this));
+			this.$el.find('select[name="pos"]').on('change', _.bind(this.displayFields, this));
 			return this;	
 		},
 		/*
@@ -121,7 +121,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 		*/
 		renderTree: function(treeData) {
 			var margin = { top: 30, right: 0, bottom: 30, left: 0 },
-				width = $('.tree-container').width(),
+				width = this.$el.find('.tree-container').width(),
 				height = 500 - margin.top - margin.bottom;
 
 			var i = 0, duration = 600;
@@ -129,12 +129,12 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 			this.color = d3.scale.ordinal()
 				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root", "", "unassigned"])
-				.range(["#4E6087", "#D15241", "#00F", "#1FADAD", "#F05629", "#FF881A", "#931926", "#49A556", "#523D5B", "#000", "#F4BC78", "#F4BC78", "#EEE", "#6EE2E2", "#333", "#666", "#999"]);
+				.range(["#4E6087", "#D15241", "#17701F", "#1FADAD", "#F05629", "#FF881A", "#931926", "#49A556", "#523D5B", "#000", "#F4BC78", "#F4BC78", "#EEE", "#6EE2E2", "#333", "#666", "#999"]);
 
-			var tree = d3.layout.tree().nodeSize([100, 50]);
+			this.tree = d3.layout.tree().nodeSize([100, 50]);
 
 			// Determine horizontal spacing needed for words based on their length
-			tree.separation(function(a, b) {
+			this.tree.separation(function(a, b) {
 				var max = _.max(that.words, function(obj) {
 					return obj.value.length;
 				}).value.length + 1;
@@ -150,20 +150,21 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				return [d.x, d.y];
 			});
 
-			var svg = d3.select('.tree-container').append('svg')
+			this.svg = d3.select(this.$el.find('.tree-container')[0]).append('svg')
 				.attr('class', 'svg-container')
 			.append('g')
 				.attr('class', 'canvas')
 			.append('g')
 				.attr('transform', 'translate(' + (width / 2) + ',' + margin.top + ')')
 
-			var legend = d3.select('.svg-container').append('g')
+			var legend = this.svg.select('.svg-container').append('g')
 				.attr('class', 'legend')
 				.attr('height', 100)
 				.attr('width', 100)
 				.attr('transform', 'translate(0, 10)');
 
 			function zoom() {
+				console.log("zoom triggered");
 				var scale = d3.event.scale,
 					translation = d3.event.translate,
 					tbound = -height * scale,
@@ -175,25 +176,27 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					Math.max(Math.min(translation[0], rbound), lbound),
 					Math.max(Math.min(translation[1], bbound), tbound)
 				];
-				d3.select('.canvas')
+				//d3.select(that.$el.find('.canvas')[0])
+				//d3.select('.canvas')
+				that.svg.select('.canvas')
 					.attr('transform', 'translate(' + translation + ') scale(' + scale + ')');
 			}
 
-			root = treeData[0];
-			update(root);
+			this.root = treeData[0];
+			update(this.root);
 
 			function update(source) {
 
 				console.log("update function called");
 
-				var nodes = tree.nodes(root).reverse(),
-					links = tree.links(nodes);
+				var nodes = that.tree.nodes(that.root).reverse(),
+					links = that.tree.links(nodes);
 
 				nodes.forEach(function(d) {
 					d.y = d.depth * 100;
 				});
 
-				var node = svg.selectAll('g.node')
+				var node = that.svg.selectAll('g.node')
 					.data(nodes, function(d) {
 						return d.id || (d.id = ++i);
 					});
@@ -248,10 +251,10 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 						return d.relation;
 					});
 
-
 				var nodeUpdate = node.transition()
 					.duration(duration)
 					.attr('transform', function(d) {
+						console.log("translating node", d);
 						return 'translate(' + d.x + ', ' + d.y + ')';
 					});
 
@@ -259,8 +262,18 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					.style('stroke', function(d) {
 						return that.color(d.pos);
 					})
+					.style('fill', function(d) {
+						if (d3.select(this).classed('right'))
+							return d3.rgb(that.color(d.pos)).brighter();
+						else
+							return '#FFF';
+					})
 
-				/*var nodeExit = node.exit().transition()
+				/*
+
+				// Keep this in case we later allow deleting nodes.
+
+				var nodeExit = node.exit().transition()
 					.duration(duration)
 					.attr('transform', function(d) {
 						return 'translate(' + source.x + ',' + source.y + ')';
@@ -273,7 +286,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				nodeExit.select('text')
 					.style('fill-opacity', 1e-6);*/
 
-				var link = svg.selectAll('path.link')
+				var link = that.svg.selectAll('path.link')
 					.data(links, function(d) {
 						return d.target.id;
 					});
@@ -289,7 +302,11 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					.duration(duration)
 					.attr('d', diagonal);
 
-				/*link.exit().transition()
+				/*
+				
+				// Keep this in case we later allow deleting nodes.
+
+				link.exit().transition()
 					.duration(duration)
 					.attr('d', function(d) {
 						var o = { x: source.x, y: source.y};
@@ -339,11 +356,14 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 						return d.pos;
 					});
 
+				/*
+					Handles what happens when node is double-clicked. Namely, a property editor pops up, which allows users to 
+					update the properties of their trees.
+				*/
 				function editProps(d, i) {
-					var modal = that.options.container.find('.modal');
+					var modal = that.$el.find('.modal');
 					modal.draggable({
-						handle: '.modal-header',
-						backdrop: false
+						handle: '.modal-header'
 					});
 
 					modal.find('form')[0].reset();
@@ -353,7 +373,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					modal.find('.modal-header h4').html(d.value);
 					modal.find('select[name="relation"] option[value="' + d.relation + '"]').prop('selected', true);
 					modal.find('input[name="lemma"]').val(d.lemma || '');
-					modal.find('select[name="pos"] option[data-morpheus="' + d.pos + '"]').prop('selected', true).trigger('change');
+					modal.find('select[name="pos"] option[data-morpheus="' + d.pos + '"]').prop('selected', true).change();
 					modal.find('select[name="person"] option[data-morpheus="' + d.person + '"]').prop('selected', true);
 					modal.find('select[name="number"] option[data-morpheus="' + d.number + '"]').prop('selected', true);
 					modal.find('select[name="tense"] option[data-morpheus="' + d.tense + '"]').prop('selected', true);
@@ -366,17 +386,18 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					modal.modal('show');
 				}
 
-
+				/*
+					Handles what happens when a node is double clicked -- namely, it is selected in the parse tree
+					and in the corresponding sentence.
+				*/
 				function click(d, i) {
+					console.log(this);
 					var c = d3.select(this);
 
 					// If this node was previously selected, unselect it.
 					if (c.classed('selected')) { 
 						c.classed({ 'selected': false });
-						that.options.container
-							.find('.sentence span[data-tbwid="' + d.tbwid + '"]')
-							.removeClass('selected');
-
+						that.$el.find('.sentence span[data-tbwid="' + d.tbwid + '"]').removeClass('selected');
 						return;
 					}
 					else {
@@ -384,13 +405,13 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					}
 
 					// Highlight the word in the top sentence
-					that.options.container
-						.find('.sentence span[data-tbwid="' + d.tbwid + '"]')
+						that.$el.find('.sentence span[data-tbwid="' + d.tbwid + '"]')
 						.addClass('selected');
 
 					// Check whether it's time to update links
 					var selected = [];
-					d3.selectAll('circle').each(function(d, i) {
+					console.log(that.svg.selectAll('circle'));
+					that.svg.selectAll('circle').each(function(d, i) {
 						if (d3.select(this).classed('selected')) selected.push(d); 
 					});
 
@@ -401,16 +422,14 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 
 						if (parent.tbwid == child.head || child.pos == 'root') {
 
-							d3.selectAll('circle').each(function(d, i) {
+							that.svg.selectAll('circle').each(function(d, i) {
 								d3.select(this).classed({ 'selected': false });
 							});
 
-							that.options.container
-								.find('.sentence span[data-tbwid="' + parent.tbwid + '"]')
+							that.$el.find('.sentence span[data-tbwid="' + parent.tbwid + '"]')
 								.removeClass('selected');
 
-							that.options.container
-								.find('.sentence span[data-tbwid="' + child.tbwid + '"]')
+							that.$el.find('.sentence span[data-tbwid="' + child.tbwid + '"]')
 								.removeClass('selected');
 						}
 						else {
@@ -436,14 +455,14 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 							update(parent);
 
 							// Now, reset state of tree to unselected everything 
-							d3.selectAll('circle').each(function(d, i) {
+							that.svg.selectAll('circle').each(function(d, i) {
 								d3.select(this).classed({ 'selected': false });
 							});
 
 							// So users can see in the sentence which two words they connected
 							setTimeout(function() {
-								that.options.container.find('.sentence span[data-tbwid="' + parent.tbwid + '"]').removeClass('selected');
-								that.options.container.find('.sentence span[data-tbwid="' + child.tbwid + '"]').removeClass('selected');
+								that.$el.find('.sentence span[data-tbwid="' + parent.tbwid + '"]').removeClass('selected');
+								that.$el.find('.sentence span[data-tbwid="' + child.tbwid + '"]').removeClass('selected');
 								/* Check whether the connection is correct 
 									-- If it's incorrect if the child has the wrong parent
 									-- Do connection check after the node has already been moved 
@@ -454,7 +473,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					}
 				}
 
-				d3.select('svg').call(d3.behavior.zoom()
+				d3.select(that.$el.find('svg')[0]).call(d3.behavior.zoom()
 						.scaleExtent([0.5, 5])
 						.on("zoom", zoom))
 						.on('dblclick.zoom', null);
@@ -467,11 +486,11 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 			function updateNodeAttrs(e) {
 				e.preventDefault();
 				var that = this;
-				var node = that.options.container.find('form').data('node');
+				var node = that.$el.find('form').data('node');
 
-				d3.selectAll('circle').each(function(d, i) {
+				that.svg.selectAll('circle').each(function(d, i) {
 					if (node.id == d.id) {
-						var fields = that.options.container.find('form .form-group:visible');	
+						var fields = that.$el.find('form .form-group:visible');	
 						for (var i = 0; i < fields.length; i++) {
 							var name, value;
 							if ($(fields[i]).find('select').length == 1) {
@@ -491,12 +510,18 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 						update(d);
 					}
 				});
-				that.options.container.find('.modal').modal('hide');
+				that.$el.find('.modal').modal('hide');
 			}
-			this.options.container.find('button[type="submit"]').on('click', _.bind(updateNodeAttrs, this));
+			
+			// Bind events
+			this.$el.find('button[type="submit"]').on('click', _.bind(updateNodeAttrs, this));
+			this.update = update;
 		},
+		/*
+			Display only the correct fields that are appropriate to the node's POS.
+		*/
 		displayFields: function(e) {
-			var form = this.options.container.find('form');
+			var form = this.$el.find('form');
 			var formControls = form.find('.form-group');
 			var pos = form.find('select[name="pos"]').val();
 
@@ -508,6 +533,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 					$(formControls[i]).show();
 			}
 		},
+		/*
+			Show whether a child node has been assigned to the correct parent, and update original dataset. 
+		*/
 		checkConnection: function(child) {
 			// Don't check the connection unless the user is creating tree from scratch, 
 			// because we wouldn't be checking against a gold-standard tree
@@ -520,19 +548,16 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'jquery-ui'], fun
 				return map;
 			}, {});
 
-			d3.selectAll('circle').each(function(d, i) {
+			that.svg.selectAll('circle').each(function(d, i) {
 				if (d.id == child.id) {
 					if (child.parent.tbwid != dataMap[child.tbwid]["head"]) {
 						d3.select(this).classed({ 'right': false, 'wrong': true });
+						that.update(child);
 						console.log("WRONG ANSWER!")
 					}
 					else {
 						d3.select(this).classed({ 'right': true, 'wrong': false });
-						d3.select(this)
-							.attr('fill', function(d) {
-								var color = d3.rgb(that.color(d.pos));
-								return color.brighter();
-							});
+						that.update(child);
 						console.log("Bravo!")
 					}
 				}
