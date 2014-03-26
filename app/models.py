@@ -49,7 +49,7 @@ class Sentence(models.NodeModel):
 			array.append(obj)
 		return array
 	
-	# TODO: make unique and order
+	# shortens a sentence by its morpho-syntactical information
 	def get_shortened(self, params = None):
 		
 		words = self.words.all()

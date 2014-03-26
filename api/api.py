@@ -328,6 +328,174 @@ class SentenceResource(ModelResource):
 					'words': ALL_WITH_RELATIONS}
 		limit = 5	
 		
+	"""
+	Gets one or more short/long randomized/not random sentence(s) with provided morphological information to one word.
+	Makes sure the query params are still supported by the short sentence.
+	"""
+	def get_list(self, request, **kwargs):
+		
+		query_params = {}
+		for obj in request.GET.keys():
+			if obj in dir(Word) and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+		
+		# filter on parameters asap brings kind of performance, shuffle result set 						
+		words = Word.objects.filter(**query_params)
+		
+		# if ordinary filter behavior is required, put key default
+		if 'default' in request.GET.keys():		
+			return super(SentenceResource, self).get_list(request, **kwargs)
+		
+		#/api/sentence/?randomized=&short=&format=json&lemma=κρατέω
+		elif 'randomized' in request.GET.keys():
+			# TODO: object sentence?????
+			if 'short' in request.GET.keys():
+			
+				x = list(words)
+				words = sorted(x, key=lambda *args: random.random())
+		
+				data = {}
+				data['sentences'] = []
+				for word in words:
+					sentence = word.sentence
+					# asap check if the short sentence to a word's sentence returns a set with query params matching words
+					sentence = sentence.get_shortened(query_params)
+					
+					if sentence is not None:
+						
+						tmp = {}
+						tmp['words'] = []
+						for word in sentence:
+							w = word.__dict__
+							tmp['words'].append(w['_prop_values'])
+							
+						data['sentences'].append(tmp)
+							
+						return self.create_response(request, data)
+					
+				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
+			
+			# randomized, long
+			#/api/sentence/?randomized=&format=json&lemma=κρατέω	
+			else:
+				data = {}
+				data['sentences'] = []
+				
+				word = random.choice(words)
+				sentence = word.sentence
+				
+				tmp = {'sentence': sentence.__dict__}
+				tmp = tmp['sentence']['_prop_values']
+				tmp['words'] = []	
+				for word in reversed(sentence.words.all()):
+					
+					w = word.__dict__
+					tmp['words'].append(w['_prop_values'])
+				
+				data['sentences'].append(tmp)
+				
+				return self.create_response(request, data)
+		
+		# not randomized
+		else:
+			# not randomized, short and CTS queries a sentence via CTS
+			if 'short' in request.GET.keys():
+				
+				CTS = request.GET.get('CTS')
+				# if CTS is missed all sentences containing words that hit the query are returned, Expensive!!!
+				#/api/sentence/?format=json&short=&form=ἀπέβησαν
+				# make it a set	
+				if CTS is None:
+					
+					data = {}
+					data['sentences'] = []
+					
+					for word in words:
+						sentence = word.sentence
+						# asap check if the short sentence to a word's sentence returns a set with query params matching words
+						sentence = sentence.get_shortened(query_params)
+					
+						if sentence is not None:
+							tmp = {}
+							tmp['words'] = []
+					
+							for word in sentence:
+								w = word.__dict__
+								tmp['words'].append(w['_prop_values'])
+							
+							data['sentences'].append(tmp)
+							
+					return self.create_response(request, data)
+				
+				# not randomized, short with CTS
+				#/api/sentence/?format=json&short=&CTS=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5
+				# TODO: object sentence?????
+				else:
+					sentence = Sentence.objects.get(CTS = CTS)
+					sentence = sentence.get_shortened({})
+					
+					data = {}
+					data['sentences'] = []
+					tmp = {}
+					tmp['words'] = []				
+					for word in sentence:
+						w = word.__dict__
+						tmp['words'].append(w['_prop_values'])
+						
+					data['sentences'].append(tmp)
+					
+					return self.create_response(request, data)
+				
+				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
+			
+			# not randomized, long, no CTS implies more than one sentence
+			else:
+				CTS = request.GET.get('CTS')
+				# if CTS is missed all sentences containing words that hit the query are returned
+				#/api/sentence/?format=json&form=ἀπέβησαν
+				if CTS is None:
+					
+					data = {}
+					data['sentences'] = []	
+
+					for word in words:
+						
+						sentence = word.sentence
+						tmp = {'sentence': sentence.__dict__}
+						tmp = tmp['sentence']['_prop_values']
+						tmp['words'] = []	
+						for word in reversed(sentence.words.all()):
+					
+							w = word.__dict__
+							tmp['words'].append(w['_prop_values'])
+							
+						data['sentences'].append(tmp)
+						
+					return self.create_response(request, data)
+				
+				# not randomized, long, CTS return one sentence
+				#/api/sentence/?format=json&CTS=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5
+				else:
+					data = {}
+					data['sentences'] = []
+					
+					sentence = Sentence.objects.get(CTS = CTS)
+								
+					tmp = {'sentence': sentence.__dict__}
+					tmp = tmp['sentence']['_prop_values']
+					tmp['words'] = []
+					for word in reversed(sentence.words.all()):
+						
+						w = word.__dict__
+						tmp['words'].append(w['_prop_values'])
+					
+					data['sentences'].append(tmp)
+					
+					return self.create_response(request, data)
+			
+	
+	
+	
 	def prepend_urls(self, *args, **kwargs):	
 		
 		return [
@@ -379,7 +547,7 @@ class SentenceResource(ModelResource):
 		return self.create_response(request, data)	
 		#return self.error_response(request, {'error': 'lemma and case are required.'}, response_class=HttpBadRequest)
 		
-	#/api/sentence/get_one_random_short/?format=json&case=gen&lemma=Λακεδαιμόνιος
+	#/api/sentence/get_one_random_short/?format=json&case=gen&lemma=Λακεδαιμόνιος κρατέω
 	def get_one_random_short(self, request, **kwargs):
 		
 		"""
@@ -473,12 +641,12 @@ class SentenceShortResource(ModelResource):
 				return self.create_response(request, data)
 		
 		return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)	
-		
+	
 		
 class LemmaResource(ModelResource):
 	
 	# filtering on word object list is faster than on the bundle object; expensive anyway
-	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj))
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj), null=True, blank=True)
 	
 	class Meta:
 		queryset = Lemma.objects.all()
@@ -496,10 +664,10 @@ class LemmaWordResource(ModelResource):
 	"""
 	Returns a list of lemmas with special properties of a relative - words.
 	"""
-	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj)) 
+	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj), null=True, blank=True) 
 	
 	class Meta:
-		queryset = Lemma.objects.all()	# merges with the return of obj_get_list
+		queryset = Lemma.objects.all()
 		resource_name = 'lemma/word'
 		always_return_data = True
 		excludes = ['require_order', 'require_all']
@@ -510,16 +678,17 @@ class LemmaWordResource(ModelResource):
 		if 'word_number' in bundle.request.GET.keys() and 'posAdd' in bundle.request.GET.keys():
 			data = []
 			words = Word.objects.all()
-			## http://localhost:8000/api/lemma/word/?word_number=2&pos=verb&posAdd=o_stem&format=json
+			## localhost:8000/api/lemma/word/?word_number=2&pos=verb&posAdd=o_stem&format=json
 			if 'pos' in bundle.request.GET.keys() :
 				words = Word.objects.filter(pos=bundle.request.GET['pos'])
 			if 'posAdd' in bundle.request.GET.keys() :
 				words = words.filter(posAdd__contains=bundle.request.GET['posAdd'])
-			for word in words:
+			for word in reversed(words):
 				if word.lemmas is not None and word.lemmas.valuesCount() >= int(bundle.request.GET['word_number']) :
 					data.append(word.lemmas)
-			return data	
-		return super(LemmaWordResource, self).obj_get_list(bundle, **kwargs).filter()	
+			if len(data) >= 1:
+				return data
+		return super(LemmaWordResource, self).obj_get_list(bundle, **kwargs).filter()
 
 
 class TranslationResource(ModelResource):
@@ -542,13 +711,13 @@ class TranslationResource(ModelResource):
 
 class WordResource(ModelResource):
 
-	#base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True) 
+	##base = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else '' if bundle.obj.lemmas is '' else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True) 
+	
 	#word/?format=json&sentenceRes__file__lang=fas
 	#sentenceRes = fields.ForeignKey(SentenceResource, 'sentence')#, full = True)
-	
 	#root = fields.ToOneField('api.api.LemmaResource', lambda bundle: None if bundle.obj.lemmas is None else Lemma.objects.get(value=bundle.obj.lemmas), null=True, blank=True)			
-	#word/?format=json&sentenceRes__file__lang=fas
-	#translation = fields.ToManyField('api.api.TranslationResource', attribute=lambda bundle: bundle.obj.translation.all(), full=True, null=True, blank=True)
+	
+	#translation = fields.ToManyField('api.api.TranslationResource', attribute=lambda bundle: bundle.obj.translation.all(), null=True, blank=True)
 
 	class Meta:
 		queryset = Word.objects.all()
