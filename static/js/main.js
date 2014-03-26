@@ -3,7 +3,7 @@ requirejs.config({
 	'paths': {
 		// Lib paths
 		'jquery': 'lib/jquery-2.0.3',
-		'bootstrap': '../bootstrap/js/bootstrap',
+		'bootstrap': '../bootstrap/js/bootstrap.min',
 		'json2': 'lib/json2',
 		'underscore': 'lib/underscore-min',
 		'backbone': 'lib/backbone',

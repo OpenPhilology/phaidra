@@ -56,7 +56,8 @@ a {
 
 /* Override Bootstrap Styles */
 .container {
-  max-width: none !important; }
+  max-width: none !important;
+  width: 100%; }
 
 .alert.alert-success strong {
   color: #19641A !important; }
