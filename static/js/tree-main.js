@@ -28,13 +28,12 @@ requirejs.config({
 	}
 });
 
-require(['jquery', 'underscore', 'backbone', 'router', 'd3', 'bootstrap'], function($, _, Backbone, Phaidra, d3) {
+require(['jquery', 'underscore', 'backbone', 'd3', 'views/parse_tree', 'bootstrap'], function($, _, Backbone, d3, parseTree) {
 	$(document).ready(function() {
-		var app = new Phaidra.Router();
-		Backbone.history.start({ pushState: true });
-
-		// Activate Bootstrap JS Components
-		//$('.sec').tooltip();
-		$('.module .circle').tooltip({ container: 'body'});
+		var trees = [];
+		var tree = $('.tree');
+		for (var i = 0; i < tree.length; i++) {
+			trees.push(new parseTree({ container: $(tree[i]) }).render());
+		}
 	});
 });
