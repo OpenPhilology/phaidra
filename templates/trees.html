@@ -11,6 +11,14 @@
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/static/css/phaidra.css" rel="stylesheet">
 		<link href="/static/css/parse-tree.css" rel="stylesheet">
+		<style>
+			.label-primary {
+				background-color: #1FADAD;
+			}
+			.label-info {
+				background-color: #4E6087;
+			}
+		</style>
 
 		<!-- JS -->
 		<script data-main="/static/js/tree-main" src="/static/js/lib/require.js"></script>
@@ -19,19 +27,78 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<h1>Parse trees!</h1>
+				<div class="col-md-9 col-md-offset-2">
+					<h1>Let there be parse trees!</h1>
+					Please be patient, as these trees are loading live on my small VM. The first three sentences are also being shortened from full-length Thucydides sentences,
+					to demonstrate how eLearners might get acquainted with treebanking early on.
+					<hr>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4">
-					<div class="tree" data-mode="edit" data-url="/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48"></div>
-				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-md-offset-3">
+					<h3>Edit Mode</h3>
+					<p>To move a node, click the node itself and then a new parent node. Doubleclick a node to see/edit its morph info, relationship, or lemma.</p> 
 					<div class="tree" data-mode="edit" data-url="/api/sentence/get_one_random_short/?format=json&number=pl&case=nom&lemma=οἰκία"></div>
-				</div>
-				<div class="col-md-4">
+					<hr>
+
+					<h3>Create Mode</h3>
+					<p>Doubleclick a node to edit its POS. Then, move a node to its parent node &mdash; if the node's color fills in, you got it right!</p>
 					<div class="tree" data-mode="create" data-url="/api/sentence/get_one_random_short/?format=json&number=pl&case=nom&lemma=οἰκία"></div>
+					<span class="label label-primary">Coming Soon</span> Checking morphology, relation value, and lemma against gold standard.
+
+					<hr>
+
+					<h3>View Mode</h3>
+					<p>You can double click to view this tree's morph info, relationship, or lemma, but cannot change them.</p>
+					<div class="tree" data-mode="view" data-url="/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48"></div>
+				</div>
+				<div class="col-md-3">
+					<div class="well">
+						<h4>User-Oriented Features</h4>
+						<ul>
+							<li><strong>Move words via node circles</strong> &mdash; Provides users with a consistent area they can click to move a word, no matter if text is a giant word or a tiny punctuation mark. A click interaction rather than drag-n-drop is also more mobile-friendly.</li>
+							<li><strong>Zoom and pan</strong> &mdash; Ideal for building large trees which cannot fit on your monitor.</li>
+							<li><strong>Editor modal is draggable</strong> &mdash; This way, you can still see the word you're working on and the complete sentence while you're editing its part of speech, morphology, or relation attributes. It'll also continue popping up in the same place if you relocate it.</li> 
+							<li><strong>Answer-checking against gold-standard tree</strong> &mdash; On a tree in edit mode, the node fills in when a user has placed it under the correct parent.</li>
+							<li><strong>Node's corresponding word highlights in sentence</strong> &mdash; So it's clear which instance of a word in the sentence you're working with.
+							<li><strong>Part of Speech Legend</strong> &mdash; Legend updates as users mark more words with POS tags.</li>
+						</ul>
+
+						<hr style="border-color: #BBB">
+						
+						<h4>Technical Features</h4>
+						<ul>
+							<li><strong>Built on <a href="http://d3js.org">d3.js</a></strong> &mdash; Popular, well-supported, standards-compliant data visualization framework.</li>
+							<li><strong>Browser Compatibility</strong> &mdash; As a result, this parse tree editor works in Chrome, Safari, and Firefox (and hopefully, soon, a recent IE version).</li>
+							<li><strong>AMD Compliant</strong> &mdash; You can include this parse tree editor into your page easily with RequireJS.</li>
+							<li><strong>Flexible Word IDs</strong> &mdash; Word IDs do not have to be sequential, start from zero (including root), or even be integers. Useful for presenting automatically-shortened sentences without assigning words artifical ids.</li>
+						</ul>
+						<hr style="border-color: #BBB">
+
+						<h4>Known Bugs</h4>
+						Please report bugs and feature requests via <a href="https://github.com/OpenPhilology/phaidra/issues?state=open" target="_blank">our project's github</a>.
+
+						<hr style="border-color: #BBB">
+
+						<h4>Future Plans &amp; Posibilities</h4>
+						<ul>
+							<li><span class="label label-primary">Near Future</span> <strong>Move nodes by clicking on words in the original sentence</strong>, which ties into the need for: </li>
+							<ul>
+								<li><strong>Error Recognition on Input Data</strong> &mdash; Inform users when they would be introducing a circular depdency into the tree, or detect if incoming data is incompatible and in which way(s).</li>
+							</ul>
+							<li><strong>Make SVG canvas size responsive</strong> &mdash; Accomodate more resolutions.</li>
+							<li><span class="label label-primary">Near Future</span> <strong>Move into independent Github repo</strong> &mdash; Generalize a couple of our project-specific requirements out of the codebase.</li>
+							<li><strong>Import/Export XML</strong> &mdash; Accept and output standard formats of XML. <span class="label label-info">Pending Interest</span></li>
+							<ul>
+								<li>Accomodating other 'real world' treebanking needs, such as ellipses, supplying elided forms, different types of annotation (e.g. named entities), checking against more than one gold standard, etc.</li>
+							</ul>
+							<li><strong>Optimize support for handheld devices</strong> &mdash; Basic functionality of the editor is present, but can be enhanced for our mobile users (e.g. optimizing default size and zoom based on device resolution).</li>
+						</ul>
+
+						<hr style="border-color: #BBB">
+						<h4>Disclaimer!</h4>
+						Code's a bit rough at the moment, but has lots of comments :) You can take a peak at it <a href="https://github.com/OpenPhilology/phaidra/blob/master/static/js/views/parse_tree.js" target="_blank">here</a>.
+					</div>
 				</div>
 			</div>
 		</div>

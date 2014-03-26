@@ -13,15 +13,15 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 			this.options = options;
 
 			/*
-				options.mode = edit | create | display
+				options.mode = edit | create | view
 				1. Edit -- Editing existing parse tree
 				2. Create -- Create new parse tree
-				3. Display -- Non-editable view of existing parse tree
+				3. View -- Non-editable view of existing parse tree
 			*/
 
-			// To test answer checking!
 			this.options.mode = this.$el.attr('data-mode');
 			this.options.url = this.$el.attr('data-url'); 
+			this.options.height = this.$el.attr('data-height') || '500px';
 
 			$.ajax({
 				url: that.options.url,
@@ -122,7 +122,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 		renderTree: function(treeData) {
 			var margin = { top: 30, right: 0, bottom: 30, left: 0 },
 				width = this.$el.find('.tree-container').width(),
-				height = 500 - margin.top - margin.bottom;
+				height = this.options.height - margin.top - margin.bottom;
 
 			var i = 0, duration = 600;
 			var that = this;
