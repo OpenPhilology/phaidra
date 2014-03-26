@@ -54,11 +54,11 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/0.introduction/intro.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/intro.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/0.introduction/history.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/history.html"
 					},
 					{
 						"type": "slide_info",
@@ -667,6 +667,24 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Future Indicative Active",
+		"modules": [
+			{
+				"title": "Future Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/history.html"
 					}
 				]
 			}	
