@@ -685,6 +685,56 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Adjectives: First and Second Declension",
+		"modules": [
+			{
+				"title": "Adjectives: First and Second Declension",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/adjectives.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/threeending.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/concl.html"
 					}
 				]
 			}	
