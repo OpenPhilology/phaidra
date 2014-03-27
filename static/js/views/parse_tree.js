@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/tree.html', 'jquery-ui'], function($, _, Backbone, d3, bootstrap, treeTemplate) {
+define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/tree.html', 'jquery-ui'], function($, _, Backbone, d3, bootstrap, treeTemplate, jQueryUI) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'text',
@@ -21,7 +21,8 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 
 			this.options.mode = this.$el.attr('data-mode');
 			this.options.url = this.$el.attr('data-url'); 
-			this.options.height = this.$el.attr('data-height') || '500px';
+			this.options.height = this.$el.attr('data-height') || '500';
+			this.options.width = this.$el.attr('data-width') || '300';
 
 			$.ajax({
 				url: that.options.url,
@@ -58,6 +59,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 			var that = this;
 
 			this.words = _.map(words, function(obj) {
+				obj.width = (obj.value.length > obj.relation.length) ? obj.value.length : obj.relation.length;
 				return _.pick(obj, 'tbwid', 'head', 'value', 'lemma', 'pos', 'person', 'number', 'tense', 'mood', 'voice', 'gender', 'case', 'degree', 'width', 'relation');
 			});
 
@@ -120,29 +122,34 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 		*	Renders the parse tree
 		*/
 		renderTree: function(treeData) {
-			var margin = { top: 30, right: 0, bottom: 30, left: 0 },
-				width = this.$el.find('.tree-container').width(),
-				height = this.options.height - margin.top - margin.bottom;
+			this.dimensions = { margin: 
+					{ top: 30, 
+					right: 0, 
+					bottom: 30, 
+					left: 0 },
+				width: this.$el.find('.tree-container').width(),
+				height: this.options.height
+			};
 
 			var i = 0, duration = 600;
 			var that = this;
 
 			this.color = d3.scale.ordinal()
 				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root", "", "unassigned"])
-				.range(["#4E6087", "#D15241", "#17701F", "#1FADAD", "#F05629", "#FF881A", "#931926", "#49A556", "#523D5B", "#000", "#F4BC78", "#F4BC78", "#EEE", "#6EE2E2", "#333", "#666", "#999"]);
+				.range(["#019292", "#D15241", "#8CD141", "#4E6087", "#8CD141", "#FF881A", "#754574", "#149069", "#523D5B", "#812F0F", "#F4BC78", "#F4BC78", "#1D78AA", "#257008", "#333", "#666", "#999"]);
 
 			this.tree = d3.layout.tree().nodeSize([100, 50]);
 
 			// Determine horizontal spacing needed for words based on their length
 			this.tree.separation(function(a, b) {
 				var max = _.max(that.words, function(obj) {
-					return obj.value.length;
-				}).value.length + 1;
+					return obj.width; 
+				}).width + 1;
 				var widths = [.2], scale = .13;
 				for (j = 1; j < max; j++)
 					widths.push(parseFloat(widths[j-1]) + scale);
 
-				var avg = Math.ceil((a.value.length + b.value.length) / 2);
+				var avg = Math.ceil((a.width + b.width) / 2);
 				return widths[avg];
 			});
 
@@ -151,13 +158,17 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 			});
 
 			this.svg = d3.select(this.$el.find('.tree-container')[0]).append('svg')
-				.attr('class', 'svg-container')
-			.append('g')
-				.attr('class', 'canvas')
-			.append('g')
-				.attr('transform', 'translate(' + (width / 2) + ',' + margin.top + ')')
+				.attr('class', 'svg-container');
+			this.canvas = this.svg.append('g')
+				.attr('class', 'canvas');
+			this.canvas.append('g')
+				.attr('transform', 'translate(' + (that.dimensions.width / 2) + ',' + that.dimensions.margin.top + ')');
 
-			var legend = this.svg.select('.svg-container').append('g')
+			// Set height on CSS element for height transition.
+			this.$el.find('.svg-container').css('height', this.options.height + 'px');
+			this.$el.find('.tree-container').css('max-height', this.options.height + 'px');
+
+			var legend = this.svg.append('g')
 				.attr('class', 'legend')
 				.attr('height', 100)
 				.attr('width', 100)
@@ -167,19 +178,16 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 				console.log("zoom triggered");
 				var scale = d3.event.scale,
 					translation = d3.event.translate,
-					tbound = -height * scale,
-					bbound = height * scale,
-					lbound = (-width + margin.right) * scale,
-					rbound = (width + margin.left) * scale;
+					tbound = -that.dimensions.height * scale,
+					bbound = that.dimensions.height * scale,
+					lbound = (-that.dimensions.width + that.dimensions.margin.right) * scale,
+					rbound = (that.dimensions.width + that.dimensions.margin.left) * scale;
 
 				translation = [
 					Math.max(Math.min(translation[0], rbound), lbound),
 					Math.max(Math.min(translation[1], bbound), tbound)
 				];
-				//d3.select(that.$el.find('.canvas')[0])
-				//d3.select('.canvas')
-				that.svg.select('.canvas')
-					.attr('transform', 'translate(' + translation + ') scale(' + scale + ')');
+				that.canvas.attr('transform', 'translate(' + translation + ') scale(' + scale + ')');
 			}
 
 			this.root = treeData[0];
@@ -196,7 +204,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					d.y = d.depth * 100;
 				});
 
-				var node = that.svg.selectAll('g.node')
+				var node = that.svg.select('.canvas g').selectAll('g.node')
 					.data(nodes, function(d) {
 						return d.id || (d.id = ++i);
 					});
@@ -208,11 +216,15 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					});
 
 				nodeEnter.append('circle')
-					.attr('r', function(d, i) {
-						return (d.pos == 'root') ? 5 : 10;
-					})
+					.attr('r', 10)
 					.style('stroke', function(d) {
 						return that.color(d.pos);
+					})
+					.style('fill', function(d) {
+						if (that.options.mode != 'create' && d.pos != 'root')	
+							return d3.rgb(that.color(d.pos)).brighter();
+						else
+							return '#FFF';
 					})
 					.on('click', click)
 					.on('dblclick', editProps)
@@ -263,7 +275,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 						return that.color(d.pos);
 					})
 					.style('fill', function(d) {
-						if (d3.select(this).classed('right'))
+						if (d3.select(this).classed('right') || that.options.mode != 'create')
 							return d3.rgb(that.color(d.pos)).brighter();
 						else
 							return '#FFF';
@@ -286,7 +298,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 				nodeExit.select('text')
 					.style('fill-opacity', 1e-6);*/
 
-				var link = that.svg.selectAll('path.link')
+				var link = that.svg.select('.canvas g').selectAll('path.link')
 					.data(links, function(d) {
 						return d.target.id;
 					});
@@ -325,6 +337,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					if (_.where(legendNodes, { pos: n.pos }).length == 0)
 						legendNodes.push(n);	
 				});
+				legendNodes = _.sortBy(legendNodes, function(obj) {
+					return obj.pos;
+				});
 
 				legend.selectAll('rect')
 					.data(legendNodes, function(d, i) {
@@ -332,7 +347,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					})
 					.enter()
 					.append('rect')
-					.attr('x', 10)
+					.attr('x', 15)
 					.attr('y', function(d, i) {
 						return i * 20;
 					})
@@ -348,9 +363,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					})
 					.enter()
 					.append('text')
-					.attr('x', 23)
+					.attr('x', 30)
 					.attr('y', function(d, i) {
-						return (i * 20) + 9;
+						return (i * 20) + 11;
 					})
 					.text(function(d) {
 						return d.pos;
