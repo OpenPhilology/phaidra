@@ -24,7 +24,6 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 			this.options.height = this.$el.attr('data-height') || '500';
 			this.options.width = this.$el.attr('data-width') || '300';
 
-
 			$.ajax({
 				url: that.options.url,
 				dataType: 'json', 
@@ -122,9 +121,14 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 		*	Renders the parse tree
 		*/
 		renderTree: function(treeData) {
-			var margin = { top: 30, right: 0, bottom: 30, left: 0 },
-				width = this.$el.find('.tree-container').width(),
-				height = this.options.height - margin.top - margin.bottom;
+			this.dimensions = { margin: 
+					{ top: 30, 
+					right: 0, 
+					bottom: 30, 
+					left: 0 },
+				width: this.$el.find('.tree-container').width(),
+				height: this.options.height
+			};
 
 			var i = 0, duration = 600;
 			var that = this;
@@ -138,7 +142,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 			// Determine horizontal spacing needed for words based on their length
 			this.tree.separation(function(a, b) {
 				var max = _.max(that.words, function(obj) {
-					return obj.value.length;
+					return obj.value.length; // > obj.relation.length) ? obj.value.length : obj.relation.length;
 				}).value.length + 1;
 				var widths = [.2], scale = .13;
 				for (j = 1; j < max; j++)
@@ -153,17 +157,17 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 			});
 
 			this.svg = d3.select(this.$el.find('.tree-container')[0]).append('svg')
-				.attr('class', 'svg-container')
-			.append('g')
-				.attr('class', 'canvas')
-			.append('g')
-				.attr('transform', 'translate(' + (width / 2) + ',' + margin.top + ')')
+				.attr('class', 'svg-container');
+			this.canvas = this.svg.append('g')
+				.attr('class', 'canvas');
+			this.canvas.append('g')
+				.attr('transform', 'translate(' + (that.dimensions.width / 2) + ',' + that.dimensions.margin.top + ')');
 
 			// Set height on CSS element for height transition.
 			this.$el.find('.svg-container').css('height', this.options.height + 'px');
 			this.$el.find('.tree-container').css('max-height', this.options.height + 'px');
 
-			var legend = this.svg.select('.svg-container').append('g')
+			var legend = this.svg.append('g')
 				.attr('class', 'legend')
 				.attr('height', 100)
 				.attr('width', 100)
@@ -173,19 +177,16 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 				console.log("zoom triggered");
 				var scale = d3.event.scale,
 					translation = d3.event.translate,
-					tbound = -height * scale,
-					bbound = height * scale,
-					lbound = (-width + margin.right) * scale,
-					rbound = (width + margin.left) * scale;
+					tbound = -that.dimensions.height * scale,
+					bbound = that.dimensions.height * scale,
+					lbound = (-that.dimensions.width + that.dimensions.margin.right) * scale,
+					rbound = (that.dimensions.width + that.dimensions.margin.left) * scale;
 
 				translation = [
 					Math.max(Math.min(translation[0], rbound), lbound),
 					Math.max(Math.min(translation[1], bbound), tbound)
 				];
-				//d3.select(that.$el.find('.canvas')[0])
-				//d3.select('.canvas')
-				that.svg.select('.canvas')
-					.attr('transform', 'translate(' + translation + ') scale(' + scale + ')');
+				that.canvas.attr('transform', 'translate(' + translation + ') scale(' + scale + ')');
 			}
 
 			this.root = treeData[0];
@@ -202,7 +203,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					d.y = d.depth * 100;
 				});
 
-				var node = that.svg.selectAll('g.node')
+				var node = that.svg.select('.canvas g').selectAll('g.node')
 					.data(nodes, function(d) {
 						return d.id || (d.id = ++i);
 					});
@@ -292,7 +293,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 				nodeExit.select('text')
 					.style('fill-opacity', 1e-6);*/
 
-				var link = that.svg.selectAll('path.link')
+				var link = that.svg.select('.canvas g').selectAll('path.link')
 					.data(links, function(d) {
 						return d.target.id;
 					});
