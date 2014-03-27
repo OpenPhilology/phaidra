@@ -25,17 +25,16 @@
 
 	</head>
 	<body>
-		<div class="container">
+		<div class="tree" data-mode="edit" data-url="/api/sentence/get_one_random/?format=json&cid=26874750" data-width="100%" data-height="600"></div>
+		<div class="container" style="width: 1000px !important">
 			<div class="row">
-				<div class="col-md-9 col-md-offset-2">
-					<h1>Let there be parse trees!</h1>
-					Please be patient, as these trees are loading live on my small VM. The first three sentences are also being shortened from full-length Thucydides sentences,
-					to demonstrate how eLearners might get acquainted with treebanking early on.
-					<hr>
-				</div>
+				<h1>Let there be parse trees!</h1>
+				Please be patient, as these trees are loading live on my small VM. The first three sentences are also being shortened from full-length Thucydides sentences,
+				to demonstrate how eLearners might get acquainted with treebanking early on.
+				<hr>
 			</div>
-			<div class="row">
-				<div class="col-md-4 col-md-offset-3">
+			<div style="overflow: auto; width: 100%;">
+				<div style="width: 45%; float: left">
 					<h3>Edit Mode</h3>
 					<p>To move a node, click the node itself and then a new parent node. Doubleclick a node to see/edit its morph info, relationship, or lemma.</p> 
 					<div class="tree" data-mode="edit" data-url="/api/sentence/get_one_random_short/?format=json&number=pl&case=nom&lemma=οἰκία"></div>
@@ -52,7 +51,7 @@
 					<p>You can double click to view this tree's morph info, relationship, or lemma, but cannot change them.</p>
 					<div class="tree" data-mode="view" data-url="/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48"></div>
 				</div>
-				<div class="col-md-3">
+				<div style="width: 45%; float: right">
 					<div class="well">
 						<h4>User-Oriented Features</h4>
 						<ul>

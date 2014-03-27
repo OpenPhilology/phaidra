@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/tree.html', 'jquery-ui'], function($, _, Backbone, d3, bootstrap, treeTemplate) {
+define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/tree.html', 'jquery-ui'], function($, _, Backbone, d3, bootstrap, treeTemplate, jQueryUI) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'text',
@@ -21,7 +21,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 
 			this.options.mode = this.$el.attr('data-mode');
 			this.options.url = this.$el.attr('data-url'); 
-			this.options.height = this.$el.attr('data-height') || '500px';
+			this.options.height = this.$el.attr('data-height') || '500';
+			this.options.width = this.$el.attr('data-width') || '300';
+
 
 			$.ajax({
 				url: that.options.url,
@@ -156,6 +158,10 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 				.attr('class', 'canvas')
 			.append('g')
 				.attr('transform', 'translate(' + (width / 2) + ',' + margin.top + ')')
+
+			// Set height on CSS element for height transition.
+			this.$el.find('.svg-container').css('height', this.options.height + 'px');
+			this.$el.find('.tree-container').css('max-height', this.options.height + 'px');
 
 			var legend = this.svg.select('.svg-container').append('g')
 				.attr('class', 'legend')
