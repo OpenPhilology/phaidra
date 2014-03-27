@@ -60,7 +60,6 @@ body {
 }
 	
 .node circle {
-	fill: #FFF;
 	stroke: #49A556;
 	stroke-width: 3px;
 }

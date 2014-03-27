@@ -59,6 +59,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 			var that = this;
 
 			this.words = _.map(words, function(obj) {
+				obj.width = (obj.value.length > obj.relation.length) ? obj.value.length : obj.relation.length;
 				return _.pick(obj, 'tbwid', 'head', 'value', 'lemma', 'pos', 'person', 'number', 'tense', 'mood', 'voice', 'gender', 'case', 'degree', 'width', 'relation');
 			});
 
@@ -135,20 +136,20 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 
 			this.color = d3.scale.ordinal()
 				.domain(["noun", "verb", "participle", "adj", "adverb", "particle", "conj", "prep", "pron", "numeral", "interjection", "exclam", "punct", "article", "root", "", "unassigned"])
-				.range(["#4E6087", "#D15241", "#17701F", "#1FADAD", "#F05629", "#FF881A", "#931926", "#49A556", "#523D5B", "#000", "#F4BC78", "#F4BC78", "#EEE", "#6EE2E2", "#333", "#666", "#999"]);
+				.range(["#019292", "#D15241", "#8CD141", "#4E6087", "#8CD141", "#FF881A", "#754574", "#149069", "#523D5B", "#812F0F", "#F4BC78", "#F4BC78", "#1D78AA", "#257008", "#333", "#666", "#999"]);
 
 			this.tree = d3.layout.tree().nodeSize([100, 50]);
 
 			// Determine horizontal spacing needed for words based on their length
 			this.tree.separation(function(a, b) {
 				var max = _.max(that.words, function(obj) {
-					return obj.value.length; // > obj.relation.length) ? obj.value.length : obj.relation.length;
-				}).value.length + 1;
+					return obj.width; 
+				}).width + 1;
 				var widths = [.2], scale = .13;
 				for (j = 1; j < max; j++)
 					widths.push(parseFloat(widths[j-1]) + scale);
 
-				var avg = Math.ceil((a.value.length + b.value.length) / 2);
+				var avg = Math.ceil((a.width + b.width) / 2);
 				return widths[avg];
 			});
 
@@ -215,11 +216,15 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					});
 
 				nodeEnter.append('circle')
-					.attr('r', function(d, i) {
-						return (d.pos == 'root') ? 5 : 10;
-					})
+					.attr('r', 10)
 					.style('stroke', function(d) {
 						return that.color(d.pos);
+					})
+					.style('fill', function(d) {
+						if (that.options.mode != 'create' && d.pos != 'root')	
+							return d3.rgb(that.color(d.pos)).brighter();
+						else
+							return '#FFF';
 					})
 					.on('click', click)
 					.on('dblclick', editProps)
@@ -270,7 +275,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 						return that.color(d.pos);
 					})
 					.style('fill', function(d) {
-						if (d3.select(this).classed('right'))
+						if (d3.select(this).classed('right') || that.options.mode != 'create')
 							return d3.rgb(that.color(d.pos)).brighter();
 						else
 							return '#FFF';
@@ -332,6 +337,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					if (_.where(legendNodes, { pos: n.pos }).length == 0)
 						legendNodes.push(n);	
 				});
+				legendNodes = _.sortBy(legendNodes, function(obj) {
+					return obj.pos;
+				});
 
 				legend.selectAll('rect')
 					.data(legendNodes, function(d, i) {
@@ -339,7 +347,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					})
 					.enter()
 					.append('rect')
-					.attr('x', 10)
+					.attr('x', 15)
 					.attr('y', function(d, i) {
 						return i * 20;
 					})
@@ -355,9 +363,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					})
 					.enter()
 					.append('text')
-					.attr('x', 23)
+					.attr('x', 30)
 					.attr('y', function(d, i) {
-						return (i * 20) + 9;
+						return (i * 20) + 11;
 					})
 					.text(function(d) {
 						return d.pos;
