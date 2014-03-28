@@ -1,6 +1,8 @@
 <div class="panel panel-default parse-tree">
 	<!-- Original Ancient Greek sentence -->
-	<div class="panel-heading greek-text sentence"><img src="/static/images/tree-loader.gif"> Loading Tree data!</div>
+	<div class="panel-heading">
+		<div class="greek-text sentence"><img src="/static/images/tree-loader.gif"> Loading Tree data!</div>
+	</div>
 
 	<!-- Container for SVG parse tree -->
 	<div class="tree-container panel-body" style="width: 100%"></div>
@@ -15,11 +17,12 @@
 				</div>
 				<div class="modal-body">
 					<form role="form">
-					<div class="form-group" data-group="adzefixnmtgrpuvl_">
+					<div class="form-group" data-group="adzefixnmtgrpuv l">
 						<label for="relation">Relationship to Parent</label>
 						<select class="form-control" name="relation">
-							<option value="unassigned">Select a Relationship</option>
+							<option value=" ">Select a Relationship</option>
 							<option value="PRED">PRED</option>
+							<option value="PRED_CO">PRED_CO</option>
 							<option value="SBJ">SBJ</option>
 							<option value="OBJ">OBJ</option>
 							<option value="ATR">ATR</option>
@@ -40,17 +43,19 @@
 							<option value="AuxV">AuxV</option>
 							<option value="AuxZ">AuxZ</option>
 							<option value="ExD">ExD</option>
+							<option value="COORD_ExD0_PRED_CO">COORD_ExD0_PRED_CO</option>
+							<option value="AuxP_ExD0_PRED_CO">AuxP_ExD0_PRED_CO</option>
 						</select>
 					</div>
 					<hr>
-					<div class="form-group" data-group="adzefixnmtgrpuvl_">
+					<div class="form-group" data-group="adzefixnmtgrpuv l">
 						<label for="lemma">Lemma</label>
 						<input type="text" class="form-control" name="lemma" placeholder="Nominative singular or first principle part">
 					</div>
-					<div class="form-group" data-group="adzefixnmtgrpuvl_">
+					<div class="form-group" data-group="adzefixnmtgrpuv l">
 						<label for="lemma">Part of Speech</label>
 						<select class="form-control" name="pos">
-							<option value="_" data-morpheus="">Select a Part of Speech</option>
+							<option value=" " data-morpheus=" ">Select a Part of Speech</option>
 							<option value="a" data-morpheus="adj">Adjective</option>
 							<option value="d" data-morpheus="adverb">Adverb</option>
 							<option value="l" data-morpheus="article">Article</option>
