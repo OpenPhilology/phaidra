@@ -730,7 +730,11 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/threeending.html"
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/3ending.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/2ending.html"
 					},
 					{
 						"type": "slide_info",
