@@ -10,8 +10,14 @@ from django.utils import timezone
 from datetime import datetime
 
 class AppUser(User):
+	
 	objects = UserManager()
-
+	
+	lang = models.StringProperty(max_length=200)
+	
+	section = models.IntegerProperty()
+	lesson = models.IntegerProperty()
+	
 	def property_names(self):
 		return ['first_name', 'last_name', 'username', 'email', 'is_staff']
 
@@ -151,12 +157,12 @@ class SubmissionManager(NodeModelManager):
 	# call the super method "create"
 	def create(self, **kwargs):
 		if None in kwargs.values() :
-			raise ValidationError('Submission attribute is empty.')
+			raise ValidationError("Submission attribute is empty. %s" %kwargs.values())
 		try:
-			date = isinstance(datetime.strptime(kwargs["started"], "%Y-%m-%dT%H:%M:%S"), datetime)
-			date = isinstance(datetime.strptime(kwargs["finished"], "%Y-%m-%dT%H:%M:%S"), datetime)
-			kwargs["started"] = datetime.strptime(kwargs["started"], "%Y-%m-%dT%H:%M:%S")
-			kwargs["finished"] = datetime.strptime(kwargs["finished"], "%Y-%m-%dT%H:%M:%S")
+			date = isinstance(datetime.strptime(kwargs["timestamp"], "%Y-%m-%dT%H:%M:%S"), datetime)
+			#date = isinstance(datetime.strptime(kwargs["finished"], "%Y-%m-%dT%H:%M:%S"), datetime)
+			kwargs["timestamp"] = datetime.strptime(kwargs["timestamp"], "%Y-%m-%dT%H:%M:%S")
+			#kwargs["finished"] = datetime.strptime(kwargs["finished"], "%Y-%m-%dT%H:%M:%S")
 		except:
 			raise ValidationError('Submission attribute could not be instantiated.')
 		return super(SubmissionManager, self).create(**kwargs)
@@ -166,16 +172,25 @@ class Submission(models.NodeModel):
 
 	objects = SubmissionManager()
 
-	value = models.ArrayProperty()
+	# the actual user answer
+	response = models.ArrayProperty()
+	# also contains some of Giuseppes mappings to morph specifiactions
+	tasktags = models.ArrayProperty()
 
 	# Set by the client, allows us to determine how must time the user spent
 	# on a particular slide.
-	started = models.DateTimeProperty()
-	finished = models.DateTimeProperty()
-
-	# Scale from 1-10 of accuracy. Necessary for exercises that aren't strictly
-	# binary questions.
+	speed = models.IntegerProperty()
+	# Set by the client. Scale from 1-100 of accuracy. Necessary for exercises that aren't strictly binary questions.
 	accuracy = models.IntegerProperty()
+	
+	# maybe an array of CTS references?! URL array?!
+	encounteredWords = models.ArrayProperty()
+	# static or dynamic (direct_select, multi_comp, tree) 
+	slideType = models.StringProperty()
+	
+	
+	timestamp = models.DateTimeProperty()
+	#finished = models.DateTimeProperty()
 
 	user = models.Relationship(AppUser,
 		rel_type='answered_by',
@@ -183,11 +198,11 @@ class Submission(models.NodeModel):
 		related_name='submissions'
 	)
 
-	slide = models.Relationship(Slide,
-		rel_type='response_to',
-		single=True,
-		related_name='submissions'
-	)
+	#slide = models.Relationship(Slide,
+	#	rel_type='response_to',
+	#	single=True,
+	#	related_name='submissions'
+	#)
 
 	class Meta:
 		app_label = 'models'

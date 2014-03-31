@@ -244,13 +244,13 @@ class SubmissionResource(ModelResource):
 		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
 		# Get the slide node that the user is answering before creation of the submission -- this also needs further checks (e.g. can they even submit to this slide yet?)
-		try:
-			slide_node = Slide.objects.get(pk=data.get("slide"))
-		except ObjectDoesNotExist as e:
-			return self.create_response(request, {
-				'success': False,
-				'error': e
-			})
+		#try:
+		#	slide_node = Slide.objects.get(pk=data.get("slide"))
+		#except ObjectDoesNotExist as e:
+		#	return self.create_response(request, {
+		#		'success': False,
+		#		'error': e
+		#	})
 
 		# Ensuring that the user is who s/he says s/he is, handled by user objs. auth.
 		try:
@@ -266,16 +266,20 @@ class SubmissionResource(ModelResource):
 		# on errors which are not caught in the manager class, the node will still be created because save is called (too?) soon
 		# look into django.db.models.Model save method for saving behaviour on error?!
 		node = Submission.objects.create(
-			value = data.get("value"),
-			started = data.get("started"),
-			finished = data.get("finished")
+			response = data.get("response"), # string array
+			tasktags = data.get("tasktags"), # string array
+			speed = int(data.get("speed")),		 # integer
+			accuracy = int(data.get("accuracy")), # integer
+			encounteredWords = data.get("encounteredWords"), # string array
+			slideType = data.get("slideType"), # string
+			timestamp = data.get("timestamp") # datetime
 		)
 		if node is None :
 			# in case an error wasn't already raised 			
-			raise ValidationError('Something went wrong with the submission creation.')
+			raise ValidationError('Submission node could not be created.')
 	
 		# Form the connections from the new Submission node to the existing slide and user nodes
-		node.slide = slide_node
+		#node.slide = slide_node
 		node.user = user_node
 
 		# create the body
