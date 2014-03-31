@@ -38,6 +38,44 @@ body {
 	margin-right: 0;
 	margin-left: 0;
 }
+.badge.point-tracker {
+	background-color: #04AFAF;
+	margin: 3px;
+	padding: 5px 7px 3px 7px;
+	border-radius: 15px;
+	font-size: 14px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+@-webkit-keyframes bounce {
+	0%   { top: 10px; animation-timing-function:ease-in;  }
+	37%  { top: 4px; animation-timing-function:ease-out; }
+	55%  { top: 10px; animation-timing-function:ease-in;  }
+	73%  { top: 7px; animation-timing-function:ease-out; }
+	82%  { top: 10px; animation-timing-function:ease-in;  }
+	91%  { top: 8px; animation-timing-function:ease-out; }
+	100% { top: 10px; animation-timing-function:ease-in; }
+}
+@keyframes bounce {
+	0%   { top: 10px; animation-timing-function:ease-in;  }
+	37%  { top: 4px; animation-timing-function:ease-out; }
+	55%  { top: 10px; animation-timing-function:ease-in;  }
+	73%  { top: 7px; animation-timing-function:ease-out; }
+	82%  { top: 10px; animation-timing-function:ease-in;  }
+	91%  { top: 8px; animation-timing-function:ease-out; }
+	100% { top: 10px; animation-timing-function:ease-in; }
+}
+.bounce {
+	position: absolute;
+	-webkit-animation: bounce .7s;
+	-moz-animation: bounce .7s;
+	-o-animation: bounce .7s;
+	animation: bounce .7s;
+}
+.sentence {
+	display: inline-block;
+}
 .sentence span {
 	padding: 3px;
 	margin: 2px;
@@ -50,7 +88,7 @@ body {
 	transition: background-color 700ms ease-out;
 }
 .sentence .selected {
-	background-color: #4E6087;
+	background-color: #0DAFAF;
 	color: #FFF;
 	-webkit-transition: background-color 500ms ease-in;
 	-moz-transition: background-color 500ms ease-in;
@@ -60,7 +98,6 @@ body {
 }
 	
 .node circle {
-	fill: #FFF;
 	stroke: #49A556;
 	stroke-width: 3px;
 }
@@ -106,14 +143,22 @@ body {
 	stroke: #ccc;
 	stroke-width: 2px;
 }
+.panel-heading {
+	position: relative;
+}
 .parse-tree .panel-body {
 	padding: 0;
 }
 .tree-container {
 	position: relative;
+	max-height: 0;
+	overflow: hidden;
+	-moz-transition: max-height 1s ease;
+	-webkit-transition: max-height 1s ease;
+	-o-transition: max-height 1s ease;
+	transition: max-height 1s ease;
 }
 .svg-container {
 	width: 100%;
 	overflow: scroll !important;
-	height: 700px;
 }

@@ -320,8 +320,9 @@ a {
     .main .lesson-right-menu a {
       color: #4e6087;
       position: absolute;
-      bottom: 0;
-      font-size: 70px; }
+      font-size: 70px;
+      top: 0;
+      left: 0; }
   .main strong {
     margin-left: 2px;
     margin-right: 2px;

@@ -11,6 +11,17 @@
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/static/css/phaidra.css" rel="stylesheet">
 		<link href="/static/css/parse-tree.css" rel="stylesheet">
+		<style>
+			.label-primary {
+				background-color: #1FADAD;
+			}
+			.label-info {
+				background-color: #4E6087;
+			}
+			.label-warning {
+				background-color: #FF881A;
+			}
+		</style>
 
 		<!-- JS -->
 		<script data-main="/static/js/tree-main" src="/static/js/lib/require.js"></script>
@@ -18,20 +29,87 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h1>Parse trees!</h1>
-				</div>
+			<div class="row" style="padding: 20px">
+				<h1>Parse Tree Builder Demo</h1>
+				Please be patient, as these trees are loading live on my small VM. The second two sentences are also being shortened from full-length Thucydides sentences,
+				to demonstrate how eLearners might get acquainted with treebanking early on. <strong style="color: #1FBEBE; letter-spacing: 1px">Keep scrolling for more demos, </strong> a list of features, known bugs, etc.
 			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="tree" data-mode="edit" data-url="/api/sentence/get_one_random_short/?format=json&lemma=κρατέω&tense=aor&voice=act&mood=ind&tbwid=48"></div>
-				</div>
-				<div class="col-md-4">
-					<div class="tree" data-mode="edit" data-url="/api/sentence/get_one_random_short/?format=json&number=pl&case=nom&lemma=οἰκία"></div>
-				</div>
-				<div class="col-md-4">
+		</div>
+		<div class="tree" data-mode="edit" data-url="/api/sentence/get_one_random/?format=json&cid=26874750" data-width="100%" data-height="550"></div>
+		<div class="container" style="width: 1000px !important">
+			<div style="overflow: auto; width: 100%;">
+				<div style="width: 45%; float: left">
+					<h3>BYOT <small>Build your own tree</small></h3>
+					<p>Doubleclick a node to edit its POS. Then, move a node to its parent node &mdash; if the node's color fills in, you got it right! <strong style="color: #1FBEBE; letter-spacing: 1px">Right now "Complete" only indicates tree structure</strong>, not other attributes such as morph, relationship, lemma, etc.)</p>
 					<div class="tree" data-mode="create" data-url="/api/sentence/get_one_random_short/?format=json&number=pl&case=nom&lemma=οἰκία"></div>
+					<span class="label label-primary">Coming Soon</span> Checking morphology, relation value, and lemma against gold standard, and giving the user points for right answers.
+
+					<hr>
+					<h3>Mystery Tree</h3>
+					<p>This loads a totally random short sentence. I hope you're nervous, too! (As the shortening algorithm is far from perfect, you may see errors in the sentence &mdash; which can also be reported on <a href="https://github.com/OpenPhilology/phaidra/issues?state=open" target="_blank">our project's github</a>)!!</p>
+					<p><strong>Don't forget!</strong> You can zoom and pan on the tree if it doesn't fit when it first loads &mdash; smarter sizes and scaling is on the roadmap.</p>
+					<div class="tree" data-mode="create" data-url="/api/sentence/get_one_random_short/?format=json"></div>
+				</div>
+				<div style="width: 45%; float: right">
+					<div class="well">
+						<h4>User-Oriented Features</h4>
+						<ul>
+							<li><strong>Move words via node circles</strong> &mdash; Provides users with a consistent area they can click to move a word, no matter if text is a giant word or a tiny punctuation mark. A click interaction rather than drag-n-drop is also more mobile-friendly.</li>
+							<li><strong>Zoom and pan</strong> &mdash; Ideal for building large trees which cannot fit on your monitor.</li>
+							<li><strong>Editor modal is draggable</strong> &mdash; This way, you can still see the word you're working on and the complete sentence while you're editing its part of speech, morphology, or relation attributes. It'll also continue popping up in the same place if you relocate it.</li> 
+							<li><strong>Answer-checking against gold-standard tree</strong> &mdash; On a tree in edit mode, the node fills in when a user has placed it under the correct parent.</li>
+							<li><strong>Node's corresponding word highlights in sentence</strong> &mdash; So it's clear which instance of a word in the sentence you're working with.
+							<li><strong>Part of Speech Legend</strong> &mdash; Handy, fixed position legend which tells users what the node colors indicate.</li>
+						</ul>
+
+						<hr style="border-color: #BBB">
+						
+						<h4>Technical Features</h4>
+						<ul>
+							<li><strong>Built on <a href="http://d3js.org">d3.js</a></strong> &mdash; Popular, well-supported, standards-compliant data visualization framework.</li>
+							<li><strong>Browser Compatibility</strong> &mdash; As a result, this parse tree editor works in Chrome, Safari, and Firefox (and hopefully, soon, a recent IE version).</li>
+							<li><strong>AMD Compliant</strong> &mdash; You can include this parse tree editor into your page easily with RequireJS.</li>
+							<li><strong>Flexible Word IDs</strong> &mdash; Word IDs do not have to be sequential, start from zero (including root), or even be integers. Useful for presenting automatically-shortened sentences without assigning words artifical ids.</li>
+						</ul>
+						<hr style="border-color: #BBB">
+
+						<h4>Known Bugs</h4>
+						<ul>
+							<li>The legend is all sorts of funky when updating trees.</li>
+							<li>I may have the wrong morph fields showing based on POS, I just did it roughly by guess.</li>
+							<li>Points circle sometimes overlaps the greek text, particularly when it indicates completion.</li>
+						</ul>
+
+						Please report reproducible bugs and feature requests via <a href="https://github.com/OpenPhilology/phaidra/issues?state=open" target="_blank">our project's github</a>.
+
+						<hr style="border-color: #BBB">
+
+						<h4>Future Plans &amp; Posibilities</h4>
+						<ul>
+							<li><span class="label label-warning">Priority</span> <strong>Gamification / eLearning enhancements</strong></li>
+							<ul>
+								<li><strong>Record information about <em>how</em> a user is using the tool</strong> &mdash; Which aspects they struggle with, what those indicate about gaps in their knowledge, etc.</li>
+								<li><strong>Assigning points/scores to users who complete a successful tree</strong> &mdash; Current implementation just assigns a point every time they do something right.</li>
+							</ul>
+							<li><span class="label label-primary">Near Future</span> <strong>Move nodes by clicking on words in the original sentence</strong>, which ties into the need for: </li>
+							<ul>
+								<li><strong>Error Recognition on Input Data</strong> &mdash; Inform users when they would be introducing a circular depdency into the tree, or detect if incoming data is incompatible and in which way(s).</li>
+							</ul>
+							<li><strong>Make SVG canvas size responsive</strong> &mdash; Accomodate more resolutions.</li>
+							<li><span class="label label-primary">Near Future</span> <strong>Move into independent Github repo</strong> &mdash; Generalize a couple of our project-specific requirements out of the codebase.</li>
+							<li><span class="label label-info">Pending Interest</span> <strong>"Real World" Treebanking Needs</strong>
+							<ul>
+								<li>Accept and output standard formats of XML. </li>
+								<li>Misc. stuff, e.g., ellipses, supplying elided forms, different types of annotation (e.g. named entities), checking against more than one gold standard, etc.</li>
+							</ul>
+							<li><strong>Optimize support for handheld devices</strong> &mdash; Basic functionality of the editor is present, but can be enhanced for our mobile users (e.g. optimizing default size and zoom based on device resolution).</li>
+							<li><strong>Undo/Redo</strong> &mdash; As well as other editing shortcuts (e.g. sending node and all its children to the root)</li>
+						</ul>
+
+						<hr style="border-color: #BBB">
+						<h4>Disclaimer!</h4>
+						Code's a bit rough at the moment, but has lots of comments :) You can take a peak at it <a href="https://github.com/OpenPhilology/phaidra/blob/master/static/js/views/parse_tree.js" target="_blank">here</a>.
+					</div>
 				</div>
 			</div>
 		</div>
