@@ -55,68 +55,92 @@ class Sentence(models.NodeModel):
 			array.append(obj)
 		return array
 	
-	# shortens a sentence by its morpho-syntactical information
 	def get_shortened(self, params = None):
 		
 		words = self.words.all()
 		critique_words = self.words.filter(**params)
-				
-		# get PRED and PRED_CO
+		
+		# save words within a map for faster lookup		
+		dataMap = dict((word.tbwid, word) for word in words)		
+		#build tree structure
+		dataTree = {0:'root','children':[]}
+		for word in words:
+			if word.head is 0:					
+				dataTree['children'].append(word)			
+			else:
+				head = dataMap[word.head]
+				if head is not None:
+						if head.children is not None:
+							head.children.append(word)
+						else:
+							head.children = []
+				else:
+					dataTree.append(word)
+									
+		# start here 
 		for verb in words:
-			
+						
 			# if no greek return None
 			if verb.relation is None or verb.relation == "":
 				return None
 			
-			aim_words = []
+			# get the verb
 			if verb.relation == "PRED" or verb.relation == "PRED_CO":
 				s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
-				
-				s.append(verb.tbwid)
-				aim_words.append(verb)
-				# group the words and make sure dependent grouping is resolved, save the selected words
-				for word in words:
-					if word.head in s and word.relation != "AuxC" and word.relation != "COORD" and word.pos != "participle":
+				aim_words = []
+				aim_words2 = []
+				aim_words3 = []
+				# group the words and make sure, save the selected words
+				for word in verb.children:
+					if word.relation != "AuxC" and word.relation != "COORD" and word.pos != "participle":
 						r.append(word.tbwid)
 						aim_words.append(word)
-					if word.head in s and word.relation == "COORD":
-						#u.append(word.tbwid)
-						aim_words.append(word)
-					if word.head in s and word.relation == "AuxP": 
+						for w in word.children:
+							if w.head in r and w.relation == "ATR" and w.pos != "verb":
+								g.append(w.tbwid)
+								aim_words.append(w)
+						
+					if word.relation == "COORD":
+						u.append(word.tbwid)
+						#aim_words.append(word)
+						for w in word.children:
+							if w.head in u and (w.relation == "OBJ_CO" or w.relation == "ADV_CO") and w.pos != "participle" and w.pos != "verb":
+								i.append(w.tbwid)
+								aim_words.append(w)
+					
+					if word.relation == "AuxP":
 						f.append(word.tbwid)
 						aim_words.append(word)
-				
-				for word in words:
-					if word.head in u and (word.relation == "OBJ_CO" or word.relation == "ADV_CO") and word.pos != "participle" and word.pos != "verb":
-						i.append(word.tbwid)
-						aim_words.append(word)
-					if word.head in f and word.relation != "AuxC" and word.pos != "participle": 
-						z.append(word.tbwid)
-						aim_words.append(word)
-					if word.head in r and word.relation == "ATR" and word.pos != "verb":
-						g.append(word.tbwid)
-						aim_words.append(word)
-						
-				for word in words:
-					if word.head in z and word.relation == "ATR" and word.pos != "verb":
-						a.append(word.id)
-						aim_words.append(word)
-				
+						for w in word.children:
+							if w.head in f and w.relation != "AuxC" and w.pos != "participle":
+								z.append(w.tbwid)
+								aim_words.append(w)
+					
+								for w2 in w.children:
+									if w2.head in z and w2.relation == "ATR" and w2.pos != "verb":
+										a.append(w2.id)
+										aim_words.append(w2)
+					
 				# refinement of u
 				for id in u:
-					w = self.words.get(tbwid = id)
-					if w.head in i:
-						aim_words.append(w)  
+					for id2 in i:
+						w = self.words.get(tbwid = id2)
+						if w.head is id:
+							aim_words.append(w)   
+						
+				aim_words.append(verb)
+				#aim_words = aim_words + aim_words2 + aim_words3
 				
 				# check if aim_words and critiques match asap
 				# check if not verbs only are returned
 				# set and order words
-				if len(list(set(aim_words) & set(critique_words))) > 0 and len(aim_words) > 1:
-					aim_words = set(aim_words)
+				aim_words = set(aim_words)
+				if len(list(aim_words & set(critique_words))) > 0 and len(aim_words) > 1:
 					return sorted(aim_words, key=lambda x: x.tbwid, reverse=False)
+						
 		
-		
-		return None
+		return None 
+	
 
 	# best this would be created while writing the backend not on calling the method
 	def __unicode__(self):
@@ -228,6 +252,7 @@ class Lemma(models.NodeModel):
 
 class Word(models.NodeModel):
 	
+	children = models.ArrayProperty()
 	internal = models.StringProperty(max_length=200)
 	CTS = models.StringProperty(max_length=200)
 	value = models.StringProperty(max_length=100)
@@ -280,3 +305,4 @@ class Word(models.NodeModel):
 	
 	def __unicode__(self):
 		return unicode(self.value) or u''
+

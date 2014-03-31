@@ -613,7 +613,7 @@ class SentenceShortResource(ModelResource):
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'get_one_random', trailing_slash()), self.wrap_view('get_one_random'), name="api_%s" % 'get_one_random'),
 			]
 
-	#/api/sentence/short/get_one_random/?format=json&case=gen&lemma=Λακεδαιμόνιος
+	#/api/sentence/short/get_one_random/?format=json&lemma=Λακεδαιμόνιος
 	def get_one_random(self, request, **kwargs):
 		
 		"""
@@ -727,7 +727,7 @@ class WordResource(ModelResource):
 		queryset = Word.objects.all()
 		resource_name = 'word'
 		always_return_data = True
-		excludes = ['require_all', 'sentence']
+		excludes = ['require_all', 'sentence', 'children']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'internal': ALL,
 					'CTS': ALL,
