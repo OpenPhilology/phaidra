@@ -257,6 +257,8 @@ class SubmissionResource(ModelResource):
 		# Ensuring that the user is who s/he says s/he is, handled by user objs. auth.
 		try:
 			user_node = AppUser.objects.get(username=data.get("user"))
+			user_node.lesson = user_node.lesson +1
+			user_node.save()
 		except ObjectDoesNotExist as e:
 			# Is it possible this could occur if the user passes authentication?
 			return self.create_response(request, {
