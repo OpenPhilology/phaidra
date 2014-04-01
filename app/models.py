@@ -9,6 +9,8 @@ from django.db import models as django_models
 from django.utils import timezone
 from datetime import datetime
 
+import time
+
 class AppUser(User):
 	
 	objects = UserManager()
@@ -56,16 +58,15 @@ class Sentence(models.NodeModel):
 		return array
 	
 	def get_shortened(self, params = None):
-		
+				
 		words = self.words.all()
 		critique_words = self.words.filter(**params)
-		
 		# save words within a map for faster lookup		
 		dataMap = dict((word.tbwid, word) for word in words)		
-		#build tree structure
+		#build tree structure		
 		dataTree = {0:'root','children':[]}
 		for word in words:
-			if word.head is 0:					
+			if word.head == 0 or word.relation == 'PRED' or word.relation == 'PRED_CO':					
 				dataTree['children'].append(word)			
 			else:
 				head = dataMap[word.head]
@@ -76,50 +77,54 @@ class Sentence(models.NodeModel):
 							head.children = []
 				else:
 					dataTree.append(word)
-									
+								
 		# start here 
-		for verb in words:
-						
+		for verb in dataTree['children']:
+					
 			# if no greek return None
 			if verb.relation is None or verb.relation == "":
 				return None
 			
 			# get the verb
 			if verb.relation == "PRED" or verb.relation == "PRED_CO":
-				s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
+				#s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
+				u, i = [], []
 				aim_words = []
-				aim_words2 = []
-				aim_words3 = []
 				# group the words and make sure, save the selected words
 				for word in verb.children:
-					if word.relation != "AuxC" and word.relation != "COORD" and word.pos != "participle":
-						r.append(word.tbwid)
-						aim_words.append(word)
-						for w in word.children:
-							if w.head in r and w.relation == "ATR" and w.pos != "verb":
-								g.append(w.tbwid)
-								aim_words.append(w)
-						
+											
 					if word.relation == "COORD":
 						u.append(word.tbwid)
 						#aim_words.append(word)
 						for w in word.children:
-							if w.head in u and (w.relation == "OBJ_CO" or w.relation == "ADV_CO") and w.pos != "participle" and w.pos != "verb":
+							#if w.head in u and (w.relation == "OBJ_CO" or w.relation == "ADV_CO") and w.pos != "participle" and w.pos != "verb":
+							if (w.relation == "OBJ_CO" or w.relation == "ADV_CO") and w.pos != "participle" and w.pos != "verb":
 								i.append(w.tbwid)
 								aim_words.append(w)
 					
-					if word.relation == "AuxP":
-						f.append(word.tbwid)
+					elif word.relation == "AuxP":
+						#f.append(word.tbwid)
 						aim_words.append(word)
 						for w in word.children:
-							if w.head in f and w.relation != "AuxC" and w.pos != "participle":
-								z.append(w.tbwid)
+							#if w.head in f and w.relation != "AuxC" and w.pos != "participle":
+							if w.relation != "AuxC" and w.pos != "participle":
+								#z.append(w.tbwid)
 								aim_words.append(w)
 					
 								for w2 in w.children:
-									if w2.head in z and w2.relation == "ATR" and w2.pos != "verb":
-										a.append(w2.id)
+									#if w2.head in z and w2.relation == "ATR" and w2.pos != "verb":
+									if w2.relation == "ATR" and w2.pos != "verb":
+										#a.append(w2.id)
 										aim_words.append(w2)
+										
+					elif word.relation != "AuxC" and word.relation != "COORD" and word.pos != "participle":
+						#r.append(word.tbwid)
+						aim_words.append(word)
+						for w in word.children:
+							#if w.head in r and w.relation == "ATR" and w.pos != "verb":
+							if w.relation == "ATR" and w.pos != "verb":
+								#g.append(w.tbwid)
+								aim_words.append(w)
 					
 				# refinement of u
 				for id in u:
@@ -135,10 +140,9 @@ class Sentence(models.NodeModel):
 				# check if not verbs only are returned
 				# set and order words
 				aim_words = set(aim_words)
-				if len(list(aim_words & set(critique_words))) > 0 and len(aim_words) > 1:
+				if len(list(aim_words & set(critique_words))) > 0 and len(aim_words) > 1:	
 					return sorted(aim_words, key=lambda x: x.tbwid, reverse=False)
 						
-		
 		return None 
 	
 
