@@ -747,5 +747,27 @@
 				]
 			}	
 		]
+	},
+	{	
+		"title": "Imperfect Indicative Active",
+		"modules": [
+			{
+				"title": "Imperfect Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/concl.html"
+					}
+				]
+			}	
+		]
 	}
 ]
