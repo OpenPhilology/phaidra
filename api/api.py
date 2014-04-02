@@ -30,6 +30,8 @@ import random
 from random import shuffle
 from neo4django.db.models import NodeModel
 
+import time
+
 class UserObjectsOnlyAuthorization(Authorization):
 	def read_list(self, object_list, bundle):
 		user_pk = bundle.request.user.pk
@@ -244,13 +246,13 @@ class SubmissionResource(ModelResource):
 		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
 		# Get the slide node that the user is answering before creation of the submission -- this also needs further checks (e.g. can they even submit to this slide yet?)
-		try:
-			slide_node = Slide.objects.get(pk=data.get("slide"))
-		except ObjectDoesNotExist as e:
-			return self.create_response(request, {
-				'success': False,
-				'error': e
-			})
+		#try:
+		#	slide_node = Slide.objects.get(pk=data.get("slide"))
+		#except ObjectDoesNotExist as e:
+		#	return self.create_response(request, {
+		#		'success': False,
+		#		'error': e
+		#	})
 
 		# Ensuring that the user is who s/he says s/he is, handled by user objs. auth.
 		try:
@@ -266,16 +268,20 @@ class SubmissionResource(ModelResource):
 		# on errors which are not caught in the manager class, the node will still be created because save is called (too?) soon
 		# look into django.db.models.Model save method for saving behaviour on error?!
 		node = Submission.objects.create(
-			value = data.get("value"),
-			started = data.get("started"),
-			finished = data.get("finished")
+			response = data.get("response"), # string array
+			tasktags = data.get("tasktags"), # string array
+			speed = int(data.get("speed")),		 # integer
+			accuracy = int(data.get("accuracy")), # integer
+			encounteredWords = data.get("encounteredWords"), # string array
+			slideType = data.get("slideType"), # string
+			timestamp = data.get("timestamp") # datetime
 		)
 		if node is None :
 			# in case an error wasn't already raised 			
-			raise ValidationError('Something went wrong with the submission creation.')
+			raise ValidationError('Submission node could not be created.')
 	
 		# Form the connections from the new Submission node to the existing slide and user nodes
-		node.slide = slide_node
+		#node.slide = slide_node
 		node.user = user_node
 
 		# create the body
@@ -339,41 +345,67 @@ class SentenceResource(ModelResource):
 			if obj in dir(Word) and request.GET.get(obj) is not None:
 				query_params[obj] = request.GET.get(obj)
 		
-		# filter on parameters asap brings kind of performance, shuffle result set 						
+		# filter on parameters 						
 		words = Word.objects.filter(**query_params)
-		
+				
 		# if ordinary filter behavior is required, put key default
 		if 'default' in request.GET.keys():		
 			return super(SentenceResource, self).get_list(request, **kwargs)
 		
 		#/api/sentence/?randomized=&short=&format=json&lemma=κρατέω
 		elif 'randomized' in request.GET.keys():
-			# TODO: object sentence?????
-			if 'short' in request.GET.keys():
 			
-				x = list(words)
-				words = sorted(x, key=lambda *args: random.random())
-		
-				data = {}
-				data['sentences'] = []
-				for word in words:
-					sentence = word.sentence
-					# asap check if the short sentence to a word's sentence returns a set with query params matching words
-					sentence = sentence.get_shortened(query_params)
+			if 'short' in request.GET.keys():
+				
+				# make this hack only for randomized/short for performance improvement; run over sentences instead of words
+				if len(query_params) < 1:
 					
-					if sentence is not None:
+					x = list(Sentence.objects.all())
+					sentences = sorted(x, key=lambda *args: random.random())
 						
-						tmp = {}
-						tmp['words'] = []
-						for word in sentence:
-							w = word.__dict__
-							tmp['words'].append(w['_prop_values'])
+					data = {}
+					data['sentences'] = []
+		
+					for sentence in sentences:
+						sentence = sentence.get_shortened(query_params)
+						# asap check if the short sentence to a word's sentence returns a set with query params matching words
+						if sentence is not None:
 							
-						data['sentences'].append(tmp)
-							
-						return self.create_response(request, data)
+							tmp = {}
+							tmp['words'] = []
+							for word in sentence:
+								w = word.__dict__
+								tmp['words'].append(w['_prop_values'])
+								
+							data['sentences'].append(tmp)												
+							return self.create_response(request, data)
+						
+					return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
 					
-				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
+				else:
+					
+					x = list(words)
+					words = sorted(x, key=lambda *args: random.random())
+							
+					data = {}
+					data['sentences'] = []
+		
+					for word in words:
+						sentence = word.sentence
+						sentence = sentence.get_shortened(query_params)
+						# asap check if the short sentence to a word's sentence returns a set with query params matching words
+						if sentence is not None:
+							
+							tmp = {}
+							tmp['words'] = []
+							for word in sentence:
+								w = word.__dict__
+								tmp['words'].append(w['_prop_values'])
+								
+							data['sentences'].append(tmp)														
+							return self.create_response(request, data)
+						
+					return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
 			
 			# randomized, long
 			#/api/sentence/?randomized=&format=json&lemma=κρατέω	
@@ -387,13 +419,11 @@ class SentenceResource(ModelResource):
 				tmp = {'sentence': sentence.__dict__}
 				tmp = tmp['sentence']['_prop_values']
 				tmp['words'] = []	
-				for word in reversed(sentence.words.all()):
-					
+				for word in reversed(sentence.words.all()):			
 					w = word.__dict__
 					tmp['words'].append(w['_prop_values'])
 				
 				data['sentences'].append(tmp)
-				
 				return self.create_response(request, data)
 		
 		# not randomized
@@ -417,8 +447,7 @@ class SentenceResource(ModelResource):
 					
 						if sentence is not None:
 							tmp = {}
-							tmp['words'] = []
-					
+							tmp['words'] = []	
 							for word in sentence:
 								w = word.__dict__
 								tmp['words'].append(w['_prop_values'])
@@ -442,8 +471,7 @@ class SentenceResource(ModelResource):
 						w = word.__dict__
 						tmp['words'].append(w['_prop_values'])
 						
-					data['sentences'].append(tmp)
-					
+					data['sentences'].append(tmp)					
 					return self.create_response(request, data)
 				
 				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
@@ -493,7 +521,6 @@ class SentenceResource(ModelResource):
 					
 					return self.create_response(request, data)
 			
-	
 	
 	
 	def prepend_urls(self, *args, **kwargs):	
@@ -609,7 +636,7 @@ class SentenceShortResource(ModelResource):
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'get_one_random', trailing_slash()), self.wrap_view('get_one_random'), name="api_%s" % 'get_one_random'),
 			]
 
-	#/api/sentence/short/get_one_random/?format=json&case=gen&lemma=Λακεδαιμόνιος
+	#/api/sentence/short/get_one_random/?format=json&lemma=Λακεδαιμόνιος
 	def get_one_random(self, request, **kwargs):
 		
 		"""
@@ -723,7 +750,7 @@ class WordResource(ModelResource):
 		queryset = Word.objects.all()
 		resource_name = 'word'
 		always_return_data = True
-		excludes = ['require_all', 'sentence']
+		excludes = ['require_all', 'sentence', 'children']
 		authorization = ReadOnlyAuthorization()
 		filtering = {'internal': ALL,
 					'CTS': ALL,

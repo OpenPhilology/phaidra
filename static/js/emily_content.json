@@ -62,15 +62,15 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/0.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/nouns.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/0.1.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/characteristics.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/1.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/gender.html"
 					},
 					{
 						"type": "slide_direct_select",
@@ -162,11 +162,11 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/2.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/number.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/3.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/case.html"
 					},
 					{
 						"type": "slide_info",
@@ -700,6 +700,10 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact3.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact_pent.html"
 					},
 					{
@@ -730,7 +734,11 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/threeending.html"
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/3ending.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/2ending.html"
 					},
 					{
 						"type": "slide_info",

@@ -9,9 +9,17 @@ from django.db import models as django_models
 from django.utils import timezone
 from datetime import datetime
 
-class AppUser(User):
-	objects = UserManager()
+import time
 
+class AppUser(User):
+	
+	objects = UserManager()
+	
+	lang = models.StringProperty(max_length=200)
+	
+	section = models.IntegerProperty()
+	lesson = models.IntegerProperty()
+	
 	def property_names(self):
 		return ['first_name', 'last_name', 'username', 'email', 'is_staff']
 
@@ -49,68 +57,94 @@ class Sentence(models.NodeModel):
 			array.append(obj)
 		return array
 	
-	# shortens a sentence by its morpho-syntactical information
 	def get_shortened(self, params = None):
-		
+				
 		words = self.words.all()
 		critique_words = self.words.filter(**params)
-				
-		# get PRED and PRED_CO
-		for verb in words:
-			
+		# save words within a map for faster lookup		
+		dataMap = dict((word.tbwid, word) for word in words)		
+		#build tree structure		
+		dataTree = {0:'root','children':[]}
+		for word in words:
+			if word.head == 0 or word.relation == 'PRED' or word.relation == 'PRED_CO':					
+				dataTree['children'].append(word)			
+			else:
+				head = dataMap[word.head]
+				if head is not None:
+						if head.children is not None:
+							head.children.append(word)
+						else:
+							head.children = []
+				else:
+					dataTree.append(word)
+								
+		# start here 
+		for verb in dataTree['children']:
+					
 			# if no greek return None
 			if verb.relation is None or verb.relation == "":
 				return None
 			
-			aim_words = []
+			# get the verb
 			if verb.relation == "PRED" or verb.relation == "PRED_CO":
-				s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
-				
-				s.append(verb.tbwid)
-				aim_words.append(verb)
-				# group the words and make sure dependent grouping is resolved, save the selected words
-				for word in words:
-					if word.head in s and word.relation != "AuxC" and word.relation != "COORD" and word.pos != "participle":
-						r.append(word.tbwid)
+				#s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
+				u, i = [], []
+				aim_words = []
+				# group the words and make sure, save the selected words
+				for word in verb.children:
+											
+					if word.relation == "COORD":
+						u.append(word.tbwid)
+						#aim_words.append(word)
+						for w in word.children:
+							#if w.head in u and (w.relation == "OBJ_CO" or w.relation == "ADV_CO") and w.pos != "participle" and w.pos != "verb":
+							if (w.relation == "OBJ_CO" or w.relation == "ADV_CO") and w.pos != "participle" and w.pos != "verb":
+								i.append(w.tbwid)
+								aim_words.append(w)
+					
+					elif word.relation == "AuxP":
+						#f.append(word.tbwid)
 						aim_words.append(word)
-					if word.head in s and word.relation == "COORD":
-						#u.append(word.tbwid)
+						for w in word.children:
+							#if w.head in f and w.relation != "AuxC" and w.pos != "participle":
+							if w.relation != "AuxC" and w.pos != "participle":
+								#z.append(w.tbwid)
+								aim_words.append(w)
+					
+								for w2 in w.children:
+									#if w2.head in z and w2.relation == "ATR" and w2.pos != "verb":
+									if w2.relation == "ATR" and w2.pos != "verb":
+										#a.append(w2.id)
+										aim_words.append(w2)
+										
+					elif word.relation != "AuxC" and word.relation != "COORD" and word.pos != "participle":
+						#r.append(word.tbwid)
 						aim_words.append(word)
-					if word.head in s and word.relation == "AuxP": 
-						f.append(word.tbwid)
-						aim_words.append(word)
-				
-				for word in words:
-					if word.head in u and (word.relation == "OBJ_CO" or word.relation == "ADV_CO") and word.pos != "participle" and word.pos != "verb":
-						i.append(word.tbwid)
-						aim_words.append(word)
-					if word.head in f and word.relation != "AuxC" and word.pos != "participle": 
-						z.append(word.tbwid)
-						aim_words.append(word)
-					if word.head in r and word.relation == "ATR" and word.pos != "verb":
-						g.append(word.tbwid)
-						aim_words.append(word)
-						
-				for word in words:
-					if word.head in z and word.relation == "ATR" and word.pos != "verb":
-						a.append(word.id)
-						aim_words.append(word)
-				
+						for w in word.children:
+							#if w.head in r and w.relation == "ATR" and w.pos != "verb":
+							if w.relation == "ATR" and w.pos != "verb":
+								#g.append(w.tbwid)
+								aim_words.append(w)
+					
 				# refinement of u
 				for id in u:
-					w = self.words.get(tbwid = id)
-					if w.head in i:
-						aim_words.append(w)  
+					for id2 in i:
+						w = self.words.get(tbwid = id2)
+						if w.head is id:
+							aim_words.append(w)   
+						
+				aim_words.append(verb)
+				#aim_words = aim_words + aim_words2 + aim_words3
 				
 				# check if aim_words and critiques match asap
 				# check if not verbs only are returned
 				# set and order words
-				if len(list(set(aim_words) & set(critique_words))) > 0 and len(aim_words) > 1:
-					aim_words = set(aim_words)
+				aim_words = set(aim_words)
+				if len(list(aim_words & set(critique_words))) > 0 and len(aim_words) > 1:	
 					return sorted(aim_words, key=lambda x: x.tbwid, reverse=False)
-		
-		
-		return None
+						
+		return None 
+	
 
 	# best this would be created while writing the backend not on calling the method
 	def __unicode__(self):
@@ -151,12 +185,12 @@ class SubmissionManager(NodeModelManager):
 	# call the super method "create"
 	def create(self, **kwargs):
 		if None in kwargs.values() :
-			raise ValidationError('Submission attribute is empty.')
+			raise ValidationError("Submission attribute is empty. %s" %kwargs.values())
 		try:
-			date = isinstance(datetime.strptime(kwargs["started"], "%Y-%m-%dT%H:%M:%S"), datetime)
-			date = isinstance(datetime.strptime(kwargs["finished"], "%Y-%m-%dT%H:%M:%S"), datetime)
-			kwargs["started"] = datetime.strptime(kwargs["started"], "%Y-%m-%dT%H:%M:%S")
-			kwargs["finished"] = datetime.strptime(kwargs["finished"], "%Y-%m-%dT%H:%M:%S")
+			date = isinstance(datetime.strptime(kwargs["timestamp"], "%Y-%m-%dT%H:%M:%S"), datetime)
+			#date = isinstance(datetime.strptime(kwargs["finished"], "%Y-%m-%dT%H:%M:%S"), datetime)
+			kwargs["timestamp"] = datetime.strptime(kwargs["timestamp"], "%Y-%m-%dT%H:%M:%S")
+			#kwargs["finished"] = datetime.strptime(kwargs["finished"], "%Y-%m-%dT%H:%M:%S")
 		except:
 			raise ValidationError('Submission attribute could not be instantiated.')
 		return super(SubmissionManager, self).create(**kwargs)
@@ -166,16 +200,25 @@ class Submission(models.NodeModel):
 
 	objects = SubmissionManager()
 
-	value = models.ArrayProperty()
+	# the actual user answer
+	response = models.ArrayProperty()
+	# also contains some of Giuseppes mappings to morph specifiactions
+	tasktags = models.ArrayProperty()
 
 	# Set by the client, allows us to determine how must time the user spent
 	# on a particular slide.
-	started = models.DateTimeProperty()
-	finished = models.DateTimeProperty()
-
-	# Scale from 1-10 of accuracy. Necessary for exercises that aren't strictly
-	# binary questions.
+	speed = models.IntegerProperty()
+	# Set by the client. Scale from 1-100 of accuracy. Necessary for exercises that aren't strictly binary questions.
 	accuracy = models.IntegerProperty()
+	
+	# maybe an array of CTS references?! URL array?!
+	encounteredWords = models.ArrayProperty()
+	# static or dynamic (direct_select, multi_comp, tree) 
+	slideType = models.StringProperty()
+	
+	
+	timestamp = models.DateTimeProperty()
+	#finished = models.DateTimeProperty()
 
 	user = models.Relationship(AppUser,
 		rel_type='answered_by',
@@ -183,11 +226,11 @@ class Submission(models.NodeModel):
 		related_name='submissions'
 	)
 
-	slide = models.Relationship(Slide,
-		rel_type='response_to',
-		single=True,
-		related_name='submissions'
-	)
+	#slide = models.Relationship(Slide,
+	#	rel_type='response_to',
+	#	single=True,
+	#	related_name='submissions'
+	#)
 
 	class Meta:
 		app_label = 'models'
@@ -213,6 +256,7 @@ class Lemma(models.NodeModel):
 
 class Word(models.NodeModel):
 	
+	children = models.ArrayProperty()
 	internal = models.StringProperty(max_length=200)
 	CTS = models.StringProperty(max_length=200)
 	value = models.StringProperty(max_length=100)
@@ -265,3 +309,4 @@ class Word(models.NodeModel):
 	
 	def __unicode__(self):
 		return unicode(self.value) or u''
+
