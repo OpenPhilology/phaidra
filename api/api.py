@@ -30,6 +30,8 @@ import random
 from random import shuffle
 from neo4django.db.models import NodeModel
 
+import time
+
 class UserObjectsOnlyAuthorization(Authorization):
 	def read_list(self, object_list, bundle):
 		user_pk = bundle.request.user.pk
@@ -343,41 +345,67 @@ class SentenceResource(ModelResource):
 			if obj in dir(Word) and request.GET.get(obj) is not None:
 				query_params[obj] = request.GET.get(obj)
 		
-		# filter on parameters asap brings kind of performance, shuffle result set 						
+		# filter on parameters 						
 		words = Word.objects.filter(**query_params)
-		
+				
 		# if ordinary filter behavior is required, put key default
 		if 'default' in request.GET.keys():		
 			return super(SentenceResource, self).get_list(request, **kwargs)
 		
 		#/api/sentence/?randomized=&short=&format=json&lemma=κρατέω
 		elif 'randomized' in request.GET.keys():
-			# TODO: object sentence?????
-			if 'short' in request.GET.keys():
 			
-				x = list(words)
-				words = sorted(x, key=lambda *args: random.random())
-		
-				data = {}
-				data['sentences'] = []
-				for word in words:
-					sentence = word.sentence
-					# asap check if the short sentence to a word's sentence returns a set with query params matching words
-					sentence = sentence.get_shortened(query_params)
+			if 'short' in request.GET.keys():
+				
+				# make this hack only for randomized/short for performance improvement; run over sentences instead of words
+				if len(query_params) < 1:
 					
-					if sentence is not None:
+					x = list(Sentence.objects.all())
+					sentences = sorted(x, key=lambda *args: random.random())
 						
-						tmp = {}
-						tmp['words'] = []
-						for word in sentence:
-							w = word.__dict__
-							tmp['words'].append(w['_prop_values'])
+					data = {}
+					data['sentences'] = []
+		
+					for sentence in sentences:
+						sentence = sentence.get_shortened(query_params)
+						# asap check if the short sentence to a word's sentence returns a set with query params matching words
+						if sentence is not None:
 							
-						data['sentences'].append(tmp)
-							
-						return self.create_response(request, data)
+							tmp = {}
+							tmp['words'] = []
+							for word in sentence:
+								w = word.__dict__
+								tmp['words'].append(w['_prop_values'])
+								
+							data['sentences'].append(tmp)												
+							return self.create_response(request, data)
+						
+					return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
 					
-				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
+				else:
+					
+					x = list(words)
+					words = sorted(x, key=lambda *args: random.random())
+							
+					data = {}
+					data['sentences'] = []
+		
+					for word in words:
+						sentence = word.sentence
+						sentence = sentence.get_shortened(query_params)
+						# asap check if the short sentence to a word's sentence returns a set with query params matching words
+						if sentence is not None:
+							
+							tmp = {}
+							tmp['words'] = []
+							for word in sentence:
+								w = word.__dict__
+								tmp['words'].append(w['_prop_values'])
+								
+							data['sentences'].append(tmp)														
+							return self.create_response(request, data)
+						
+					return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
 			
 			# randomized, long
 			#/api/sentence/?randomized=&format=json&lemma=κρατέω	
@@ -391,13 +419,11 @@ class SentenceResource(ModelResource):
 				tmp = {'sentence': sentence.__dict__}
 				tmp = tmp['sentence']['_prop_values']
 				tmp['words'] = []	
-				for word in reversed(sentence.words.all()):
-					
+				for word in reversed(sentence.words.all()):			
 					w = word.__dict__
 					tmp['words'].append(w['_prop_values'])
 				
 				data['sentences'].append(tmp)
-				
 				return self.create_response(request, data)
 		
 		# not randomized
@@ -421,8 +447,7 @@ class SentenceResource(ModelResource):
 					
 						if sentence is not None:
 							tmp = {}
-							tmp['words'] = []
-					
+							tmp['words'] = []	
 							for word in sentence:
 								w = word.__dict__
 								tmp['words'].append(w['_prop_values'])
@@ -446,8 +471,7 @@ class SentenceResource(ModelResource):
 						w = word.__dict__
 						tmp['words'].append(w['_prop_values'])
 						
-					data['sentences'].append(tmp)
-					
+					data['sentences'].append(tmp)					
 					return self.create_response(request, data)
 				
 				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
@@ -497,7 +521,6 @@ class SentenceResource(ModelResource):
 					
 					return self.create_response(request, data)
 			
-	
 	
 	
 	def prepend_urls(self, *args, **kwargs):	

@@ -359,6 +359,9 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					update the properties of their trees.
 				*/
 				function editProps(d, i) {
+
+					if (d.pos == 'root') return false;
+
 					var modal = that.$el.find('.modal');
 					modal.draggable({
 						handle: '.modal-header'
