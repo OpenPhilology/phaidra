@@ -764,6 +764,18 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/imperfindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/imperfindact1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/imperfindact2.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/concl.html"
 					}
 				]
