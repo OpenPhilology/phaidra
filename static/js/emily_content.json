@@ -781,5 +781,23 @@
 				]
 			}	
 		]
+	},
+	{	
+		"title": "Third Declension: Consonant Stem",
+		"modules": [
+			{
+				"title": "Third Declension: Consonant Stem",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/history.html"
+					}
+				]
+			}	
+		]
 	}
 ]
