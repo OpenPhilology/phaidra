@@ -926,6 +926,37 @@ div.module {
 	}
 }
 
+.word-breakdown {
+	text-align: center;
+
+	table {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	td.part {
+		
+		.greek-text {
+			font-size: 3em;
+		}
+		hr {
+			margin-bottom: 0;
+			border-top: 1px solid #888;
+		}
+		.caret {
+			color: #AAA;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+}
+
 table.inflection-table {
 	font-size: 0.9em;
 

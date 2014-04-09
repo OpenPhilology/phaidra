@@ -778,6 +778,24 @@ div.module {
       margin-right: 20px;
       margin-bottom: 20px; }
 
+.word-breakdown {
+  text-align: center; }
+  .word-breakdown table {
+    margin-left: auto;
+    margin-right: auto; }
+  .word-breakdown td {
+    padding: 10px; }
+  .word-breakdown td.part .greek-text {
+    font-size: 3em; }
+  .word-breakdown td.part hr {
+    margin-bottom: 0;
+    border-top: 1px solid #888; }
+  .word-breakdown td.part .caret {
+    color: #AAA;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
 table.inflection-table {
   font-size: 0.9em; }
   table.inflection-table tr.current {
