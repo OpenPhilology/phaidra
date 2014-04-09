@@ -679,6 +679,7 @@
 				"title": "Future Indicative Active",
 				"slides": [
 					{
+						"title": "Introduction to Future Indicative Active",
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/intro.html"
 					},
@@ -687,24 +688,33 @@
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/history.html"
 					},
 					{
+						"title": "What do 'future', 'active', and 'indicative' imply?",
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact.html"
 					},
 					{
+						"title": "Future Indicative Active of λύω",
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact1.html"
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact1.html",
+						"smyth": ["s532", "s533"]
 					},
 					{
+						"title": "Forming the Future Active Indicative for Stop Verbs",
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact2.html"
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact2.html",
+						"smyth": ["s537"]
 					},
 					{
+						"title": "Future Active Indicative of εἰμί",
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact3.html"
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact3.html",
+						"smyth": ["s768"]
 					},
 					{
+						"title": "The Future Indicative Active in the Pentecontaetia",
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact_pent.html"
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact_pent.html",
+						"smyth": ["s533", "s537"]
 					},
 					{
 						"type": "slide_info",
