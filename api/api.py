@@ -294,6 +294,64 @@ class SubmissionResource(ModelResource):
 		return self.create_response(request, body)
 
 
+class VisualizationResource(ModelResource):
+							
+	class Meta:
+		queryset = Word.objects.all()
+		resource_name = 'visualization'
+		#always_return_data = True
+		#excludes = ['require_order', 'require_all']
+		authorization = ReadOnlyAuthorization()
+
+	def prepend_urls(self, *args, **kwargs):	
+		
+		return [
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered')
+			]
+
+	#/api/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5:5-7&user=john
+	def encountered(self, request, **kwargs):
+		
+		"""
+		Start visualization...
+		"""
+		query_params = {}
+		for obj in request.GET.keys():
+			if obj in dir(Word) and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+		
+		# calculate CTSs of the word range (later look them up within submissions of the user)
+		# preparation
+		ctsArray = []
+		cts = request.GET.get('range')			 					
+		#rangeArray = cts.split(':')
+		# get the stem
+		endIndex = len(cts)-len(cts.split(':')[len(cts.split(':'))-1])
+		rangeStem = cts[0:endIndex]
+		
+		# get the numbers
+		numbersArray = cts.split(':')[len(cts.split(':'))-1].split('-')
+		for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
+			ctsArray.append(rangeStem + str(num))
+			
+		
+		#for word in words:
+		#	sentence = word.sentence
+		#	# asap check if the short sentence to a word's sentence returns a set with query params matching words
+		#	sentence = sentence.get_shortened(query_params)
+		#	if sentence is not None:
+		#
+		#		data = {}
+		#		data['words'] = []
+		#		for word in sentence:
+		#			w = word.__dict__
+		#			data['words'].append(w['_prop_values'])
+		#								
+		#		return self.create_response(request, data)
+		
+		return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)	
+
+
 
 class DocumentResource(ModelResource):
 	
@@ -344,9 +402,17 @@ class SentenceResource(ModelResource):
 		for obj in request.GET.keys():
 			if obj in dir(Word) and request.GET.get(obj) is not None:
 				query_params[obj] = request.GET.get(obj)
+			elif obj.split('__')[0] in dir(Word) and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
 		
 		# filter on parameters 						
 		words = Word.objects.filter(**query_params)
+		
+		if len(words) < 1:
+			return self.error_response(request, {'error': 'No sentences hit your query.'}, response_class=HttpBadRequest)	
+		
+		data = {}
+		data['sentences'] = []
 				
 		# if ordinary filter behavior is required, put key default
 		if 'default' in request.GET.keys():		
@@ -354,7 +420,7 @@ class SentenceResource(ModelResource):
 		
 		#/api/sentence/?randomized=&short=&format=json&lemma=κρατέω
 		elif 'randomized' in request.GET.keys():
-			
+						
 			if 'short' in request.GET.keys():
 				
 				# make this hack only for randomized/short for performance improvement; run over sentences instead of words
@@ -362,10 +428,7 @@ class SentenceResource(ModelResource):
 					
 					x = list(Sentence.objects.all())
 					sentences = sorted(x, key=lambda *args: random.random())
-						
-					data = {}
-					data['sentences'] = []
-		
+				
 					for sentence in sentences:
 						sentence = sentence.get_shortened(query_params)
 						# asap check if the short sentence to a word's sentence returns a set with query params matching words
@@ -386,9 +449,6 @@ class SentenceResource(ModelResource):
 					
 					x = list(words)
 					words = sorted(x, key=lambda *args: random.random())
-							
-					data = {}
-					data['sentences'] = []
 		
 					for word in words:
 						sentence = word.sentence
@@ -410,8 +470,6 @@ class SentenceResource(ModelResource):
 			# randomized, long
 			#/api/sentence/?randomized=&format=json&lemma=κρατέω	
 			else:
-				data = {}
-				data['sentences'] = []
 				
 				word = random.choice(words)
 				sentence = word.sentence
@@ -437,9 +495,6 @@ class SentenceResource(ModelResource):
 				# make it a set	
 				if CTS is None:
 					
-					data = {}
-					data['sentences'] = []
-					
 					for word in words:
 						sentence = word.sentence
 						# asap check if the short sentence to a word's sentence returns a set with query params matching words
@@ -463,8 +518,6 @@ class SentenceResource(ModelResource):
 					sentence = Sentence.objects.get(CTS = CTS)
 					sentence = sentence.get_shortened({})
 					
-					data = {}
-					data['sentences'] = []
 					tmp = {}
 					tmp['words'] = []				
 					for word in sentence:
@@ -480,11 +533,8 @@ class SentenceResource(ModelResource):
 			else:
 				CTS = request.GET.get('CTS')
 				# if CTS is missed all sentences containing words that hit the query are returned
-				#/api/sentence/?format=json&form=ἀπέβησαν
+				#/api/sentence/?format=json&form=ἀπέβησαν&lemma__endswith=νω
 				if CTS is None:
-					
-					data = {}
-					data['sentences'] = []	
 
 					for word in words:
 						
@@ -504,9 +554,7 @@ class SentenceResource(ModelResource):
 				# not randomized, long, CTS return one sentence
 				#/api/sentence/?format=json&CTS=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5
 				else:
-					data = {}
-					data['sentences'] = []
-					
+						
 					sentence = Sentence.objects.get(CTS = CTS)
 								
 					tmp = {'sentence': sentence.__dict__}
@@ -520,6 +568,8 @@ class SentenceResource(ModelResource):
 					data['sentences'].append(tmp)
 					
 					return self.create_response(request, data)
+				
+				return self.error_response(request, {'error': 'No sentences hit your query.'}, response_class=HttpBadRequest)
 			
 	
 	
@@ -610,8 +660,7 @@ class SentenceResource(ModelResource):
  		
 class SentenceShortResource(ModelResource):
 	"""
-	test resource for short sentence to parameter returns
-	Try short sentences to CTS
+	Test resource for short sentence to parameter returns.
 	"""
 	file = fields.ForeignKey(DocumentResource, 'document')
 	# expensive
@@ -637,11 +686,12 @@ class SentenceShortResource(ModelResource):
 			]
 
 	#/api/sentence/short/get_one_random/?format=json&lemma=Λακεδαιμόνιος
+	#/api/sentence/short/get_one_random/?format=json&lemmaEnd=γος
 	def get_one_random(self, request, **kwargs):
 		
 		"""
 		Gets one random sentence of sentences with provided morphological information to one word.
-		Makes sure the query params are still supported by the short sentence
+		Makes sure the query params are still supported by the short sentence.
 		"""
 		#query_params = {'case': 'gen', 'lemma': 'Λακεδαιμόνιος'}
 		query_params = {}
@@ -650,7 +700,8 @@ class SentenceShortResource(ModelResource):
 				query_params[obj] = request.GET.get(obj)
 		
 		# filter on params asap brings kinda performance, shuffle result set 						
-		x = list(Word.objects.filter(**query_params))
+		#x = list(Word.objects.filter(**query_params))
+		x = list(Word.objects.filter(lemma__ENDSWITH = request.GET.get('lemmaEnd')))
 		words = sorted(x, key=lambda *args: random.random())
 		
 		for word in words:

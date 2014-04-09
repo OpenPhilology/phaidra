@@ -15,6 +15,8 @@ from api.api import LemmaWordResource
 from api.api import SentenceShortResource
 from api.api import TranslationResource
 
+from api.api import VisualizationResource
+
 user_resource = UserResource()
 slide_resource = SlideResource()
 submission_resource = SubmissionResource()
@@ -28,12 +30,13 @@ lemma_word_resource = LemmaWordResource()
 sentence_short_resource = SentenceShortResource()
 translation_resource = TranslationResource()
 
+visualization_resource = VisualizationResource()
+
 #router = routers.DefaultRouter()
 #router.register(r'api/users', views.UserViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browseable API.
-
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -62,11 +65,14 @@ urlpatterns = patterns('',
     
     url(r'^api/', include(sentence_short_resource.urls)),
 	url(r'^api/', include(sentence_resource.urls)),
+    
+    url(r'^api/', include(visualization_resource.urls)),
 	url(r'^api/', include(word_resource.urls)),
     
     url(r'^api/', include(lemma_word_resource.urls)),
     url(r'^api/', include(lemma_resource.urls)),
     url(r'^api/', include(translation_resource.urls)),
+    
 
 	#url(r'^', include(router.urls)),
 	#url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
