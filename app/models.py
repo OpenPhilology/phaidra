@@ -58,13 +58,22 @@ class Sentence(models.NodeModel):
 		return array
 	
 	def get_shortened(self, params = None):
-				
+					
 		words = self.words.all()
-		critique_words = self.words.filter(**params)
-		# save words within a map for faster lookup		
-		dataMap = dict((word.tbwid, word) for word in words)		
+		
+		# interrupt as soon as possible if there is no according syntactical information available
+		if words[0].head is None:
+			return None
+			
+		fo = open("foo.txt", "wb")
+		#millis = int(round(time.time() * 1000))
+		#fo.write("%s filter words and build tree: \n" % millis)
+			
+		# save words within a map for faster lookup			
+		dataMap = dict((word.tbwid, word) for word in words)				
 		#build tree structure		
 		dataTree = {0:'root','children':[]}
+		
 		for word in words:
 			if word.head == 0 or word.relation == 'PRED' or word.relation == 'PRED_CO':					
 				dataTree['children'].append(word)			
@@ -77,16 +86,13 @@ class Sentence(models.NodeModel):
 							head.children = []
 				else:
 					dataTree.append(word)
-								
+			
 		# start here 
 		for verb in dataTree['children']:
-					
-			# if no greek return None
-			if verb.relation is None or verb.relation == "":
-				return None
-			
+						
 			# get the verb
 			if verb.relation == "PRED" or verb.relation == "PRED_CO":
+								
 				#s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
 				u, i = [], []
 				aim_words = []
@@ -101,6 +107,9 @@ class Sentence(models.NodeModel):
 							if (w.relation == "OBJ_CO" or w.relation == "ADV_CO") and w.pos != "participle" and w.pos != "verb":
 								i.append(w.tbwid)
 								aim_words.append(w)
+								
+						millis = int(round(time.time() * 1000))
+						fo.write("%s first branch done: \n" % millis)
 					
 					elif word.relation == "AuxP":
 						#f.append(word.tbwid)
@@ -117,6 +126,7 @@ class Sentence(models.NodeModel):
 										#a.append(w2.id)
 										aim_words.append(w2)
 										
+										
 					elif word.relation != "AuxC" and word.relation != "COORD" and word.pos != "participle":
 						#r.append(word.tbwid)
 						aim_words.append(word)
@@ -125,6 +135,9 @@ class Sentence(models.NodeModel):
 							if w.relation == "ATR" and w.pos != "verb":
 								#g.append(w.tbwid)
 								aim_words.append(w)
+								
+						millis = int(round(time.time() * 1000))
+						fo.write("%s 3rd branch done: \n" % millis)
 					
 				# refinement of u
 				for id in u:
@@ -132,16 +145,28 @@ class Sentence(models.NodeModel):
 						w = self.words.get(tbwid = id2)
 						if w.head is id:
 							aim_words.append(w)   
-						
+							
 				aim_words.append(verb)
-				#aim_words = aim_words + aim_words2 + aim_words3
-				
-				# check if aim_words and critiques match asap
-				# check if not verbs only are returned
-				# set and order words
 				aim_words = set(aim_words)
-				if len(list(aim_words & set(critique_words))) > 0 and len(aim_words) > 1:	
-					return sorted(aim_words, key=lambda x: x.tbwid, reverse=False)
+					
+				# check if not verbs only are returned
+				if len(aim_words) > 1:		
+					# consider params
+					if len(params) > 0:
+						# check if aim_words and parameter filtered intersect 
+						if len(list(aim_words & set(self.words.filter(**params)))) > 0:					
+							# set and order words
+							return sorted(aim_words, key=lambda x: x.tbwid, reverse=False)			
+					else:		
+						# set and order words
+						return sorted(aim_words, key=lambda x: x.tbwid, reverse=False)
+					
+			
+				
+
+						fo.close()
+					
+						
 						
 		return None 
 	
