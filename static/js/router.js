@@ -13,14 +13,14 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			// Create/Populate necessary models and collections
 			// User model
 
-			window.user = new Models.User();
+			/*window.user = new Models.User();
 			window.user.fetch({
 				success: function() {
 				},
 				error: function() {
 					//$('#user-info').html('Would you like to <a href="/login/">log in</a>?');
 				}
-			});
+			});*/
 		},
 		index: function() {
 			

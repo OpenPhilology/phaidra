@@ -3,28 +3,17 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 		tagName: 'div',
 		className: 'slide-unit',
 		events: {
-			"click .direct-select a" : "selectAnswer"
+			"click .direct-select a" : "selectAnswer",
 		},
 		initialize: function(options) {
-			this.$el.html(options.template(this.model.attributes));
+			this.options = options;
+			this.model.on('populated', this.draw, this);
 		},
 		render: function() {
-
-			if (this.model.get('task')) {
-				var div = this.$el.find('.responseText');
-				div.html("");
-				var words = this.model.get('responseText').words;
-				var that = this;
-
-				for (var i = 0; i < words.length; i++) {
-					var text = words[i]["value"];
-					var color = (words[i]["lemma"] == that.model.get('lemma')) ? '#EEE' : '#FFF'
-
-					div.append('<div class="greek-text" style="display: inline-block; padding: 10px; background-color: ' + color + '">' + text + '</div> ');
-				}
-			}
-
 			return this;	
+		},
+		draw: function() {
+			this.$el.html(this.options.template(this.model.attributes));
 		},
 		selectAnswer: function(e) {
 			e.preventDefault();

@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models'], function($, _, Backbone, Models) {
+define(['jquery', 'underscore', 'backbone', 'models', 'text!emily_content.json'], function($, _, Backbone, Models, Content) {
 
 	var Collections = {};
 
@@ -66,39 +66,42 @@ define(['jquery', 'underscore', 'backbone', 'models'], function($, _, Backbone, 
 		populate: function(collection) {
 			var that = this;
 
-			$.ajax({
-				url: '/static/js/emily_content.json',
-				dataType: 'text',
-				async: false,
-				success: function(data) {
-					// Get the data we care about -- specific section of a module
-					data = JSON.parse(data);
-					var slide_data = data[that.meta('module')]["modules"][that.meta('section')]["slides"];
+			// Get the data we care about -- specific section of a module
+			data = JSON.parse(Content);
+			var slide_data = data[that.meta('module')]["modules"][that.meta('section')]["slides"];
 
-					/*
-					Goes through and creates either an individual slide, or a cluster of slides,
-					based on data from the JSON file.
-					*/
+			/*
+			Goes through and creates either an individual slide, or a cluster of slides,
+			based on data from the JSON file.
+			*/
 
-					// Set attributes on this object
-					that.meta('title', data[that.meta('module')]["title"]);
-					that.meta('initLength', slide_data.length);
+			// Set attributes on this object
+			that.meta('title', data[that.meta('module')]["title"]);
+			that.meta('initLength', slide_data.length);
 
-					for (var i = 0; i < slide_data.length; i++) {
-						if (slide_data[i]["count"]) {
-							for (var j = 0; j < slide_data[i]["count"]; j++)
-								that.add(new Models.Slide(slide_data[i]));
-						}
-						else {
-							that.add(new Models.Slide(slide_data[i]));
-						}
-					}
-
-				},
-				error: function(xhr, status, error) {
-					console.log(xhr, status, error);
+			for (var i = 0; i < slide_data.length; i++) {
+				if (slide_data[i]["smyth"] && slide_data[i]["type"] == 'slide_info') {
+					// Create data needed for a an exercise
+					console.log("Adding an exercise for " + slide_data[i]["smyth"]);
+					var new_slide = {
+						"smyth": slide_data[i]["smyth"],
+						"task": slide_data[i]["tasks"][0]
+					};
+					/* For now, insert 4.
+					slide_data.splice(i, 0, new_slide);
+					slide_data.splice(i, 0, new_slide);
+					slide_data.splice(i, 0, new_slide);*/
+					slide_data.splice(i, 0, new_slide);
+					i++;
 				}
-			});
+			}
+
+			console.log(slide_data);
+
+			// Build with slide data
+			for (var i = 0; i < slide_data.length; i++) {
+				that.add(new Models.Slide(slide_data[i]));
+			}
 		}
 	});
 

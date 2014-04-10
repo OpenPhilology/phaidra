@@ -1,5 +1,6 @@
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
+define(['jquery', 'underscore', 'backbone', 'text!smyth.json'], function($, _, Backbone, Smyth) {
 	var Models = {};
+	Smyth = JSON.parse(Smyth);
 
 	Models.User = Backbone.Model.extend({
 		defaults: {
@@ -43,52 +44,36 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 			
 			var that = this;
 
+			// Attrs we care about: Smyth ref, task
+			this.set('query', Smyth[0][this.attributes.smyth]["query"])
+			this.set('type', 'slide_direct_select');
+
 			var taskMapper = {
-				/*
-					If the task is "identify_morph_noun", we expect the inputs:
-					* lemmas
-					* filter
-				*/
-				'identify_morph_noun': function() {
-
-					var index = Math.floor((Math.random() * attributes.inputs.lemmas.length));
-					var lemma = attributes.inputs.lemmas[index];
-
+				'identify_morph_person': function() {
 					$.ajax({
-						url: '/api/sentence/get_one_random/?format=json&lemma=' + lemma + '&' + attributes.inputs.filter,
-						async: false,
-						dataType: 'json',
-						success: function(response_text) {
-							that.set({
-								title: "Exercise: Identify the Case!",
-								responseText: response_text,
-								lemma: lemma,
-								content: response_text.sentence,
-								options: [
-									[
-										{
-											"value": "Nominative",
-											"display": "Nominative"
-										},
-										{
-											"value": "Genitive",
-											"display": "Genitive"
-										},
-										{
-											"value": "Dative",
-											"display": "Dative"
-										}
-									]
-								],
-								successMsg: "Right",
-								hintMsg: "Wrong",
-								failureMsg: "Correct was",
-								require_order: true,
-								require_all: true
-							});
+						'dataType': 'text',
+						//'async': false,
+						'url': '/api/word/?format=json&' + that.get('query'),
+						'success': function(response) {
+							response = JSON.parse(response);
+							var len = response.meta.total_count;
+							var words = response.objects;
+							var answer = words[0];
+							
+							that.set('content', 'What is the "person" of <span class="greek-text" data-cts="' + answer.CTS + '">' + answer.value + '</span>?');
+							that.set('title', 'Morph fun!');
+							that.set('options', [
+								[{ "value": "1st", "display": "1st" },
+								{ "value": "2nd", "display": "2nd" },
+								{ "value": "3rd", "display": "3rd" }]
+							]);
+							that.set('answers', answer.person);
+							that.set('require_all', true);
+							that.set('require_order', false);
+							that.trigger('populated');
 						},
-						error: function(xhr, status, error) {
-							console.log(xhr, status, error);
+						error: function(x, y, z) {
+							console.log(x, y, z);
 						}
 					});
 				}

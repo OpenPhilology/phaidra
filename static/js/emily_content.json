@@ -697,25 +697,27 @@
 						"title": "Future Indicative Active of λύω",
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact1.html",
-						"smyth": ["s532", "s533"]
+						"smyth": "s532",
+						"tasks": ["identify_morph_person"]
 					},
 					{
 						"title": "Forming the Future Active Indicative for Stop Verbs",
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact2.html",
-						"smyth": ["s537"]
+						"smyth": "s537",
+						"tasks": ["identify_morph_person"]
 					},
 					{
 						"title": "Future Active Indicative of εἰμί",
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact3.html",
-						"smyth": ["s768"]
+						"smyth": "s768b",
+						"tasks": ["identify_morph_person"]
 					},
 					{
 						"title": "The Future Indicative Active in the Pentecontaetia",
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact_pent.html",
-						"smyth": ["s533", "s537"]
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact_pent.html"
 					},
 					{
 						"type": "slide_info",

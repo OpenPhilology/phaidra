@@ -4,11 +4,7 @@
 	},
 	"s532": {
 		"title": "Intro to Future Active Indicative",
-		"query": "pos=verb&tense=fut&mood=ind&voice=act&posAdd__contains=reg_fut"
-	},
-	"s533": {
-		"title": "Forming the Future, Active, Indicative for Regular Verbs",
-		"query": "pos=verb&tense=fut&mood=ind&voice=act&posAdd__contains=reg_fut"
+		"query": "pos=verb&tense=fut&mood=ind&voice=act"
 	},
 	"s537": {
 		"title": "Forming the Future, Active, Indicative for Stop Verbs",
