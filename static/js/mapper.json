@@ -1,4 +1,4 @@
-[
+[{
 	"meta": {
 		"perseus": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s"
 	},
@@ -20,4 +20,4 @@
 		"title": "εἰμί in the Present and Future Tenses",
 		"query": "lemma=εἰμί"
 	}
-]
+}]
