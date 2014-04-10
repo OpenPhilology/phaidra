@@ -960,6 +960,12 @@ div.module {
 table.inflection-table {
 	font-size: 0.9em;
 
+	.greek-text strong {
+		color: $color-pri-two;
+		background-color: #f5f5f5;
+		padding: 3px;
+	}
+
 	tr.current {
 		background-color: $color-pri-one;
 		color: #FFF;
@@ -984,8 +990,6 @@ table.inflection-table {
 			color: #333;
 		}
 	}
-		
-
 }
 
 .label {
