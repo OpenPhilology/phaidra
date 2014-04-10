@@ -226,13 +226,13 @@ class Submission(models.NodeModel):
 	objects = SubmissionManager()
 
 	# the actual user answer
-	response = models.ArrayProperty()
+	response = models.StringProperty()
 	# also contains some of Giuseppes mappings to morph specifiactions
-	tasktags = models.ArrayProperty()
-
+	task = models.StringProperty()
+	smyth = models.StringProperty()
 	# Set by the client, allows us to determine how must time the user spent
 	# on a particular slide.
-	speed = models.IntegerProperty()
+	time = models.IntegerProperty()
 	# Set by the client. Scale from 1-100 of accuracy. Necessary for exercises that aren't strictly binary questions.
 	accuracy = models.IntegerProperty()
 	
@@ -240,7 +240,6 @@ class Submission(models.NodeModel):
 	encounteredWords = models.ArrayProperty()
 	# static or dynamic (direct_select, multi_comp, tree) 
 	slideType = models.StringProperty()
-	
 	
 	timestamp = models.DateTimeProperty()
 	#finished = models.DateTimeProperty()

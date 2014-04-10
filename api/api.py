@@ -25,6 +25,7 @@ from tastypie.resources import ModelResource, ALL, ALL_WITH_RELATIONS
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 
+import os
 import json
 import random
 from random import shuffle
@@ -320,6 +321,7 @@ class VisualizationResource(ModelResource):
 			if obj in dir(Word) and request.GET.get(obj) is not None:
 				query_params[obj] = request.GET.get(obj)
 		
+		user = AppUser.objects.get(username = request.GET.get('user'))
 		# calculate CTSs of the word range (later look them up within submissions of the user)
 		# preparation
 		ctsArray = []
@@ -334,6 +336,14 @@ class VisualizationResource(ModelResource):
 		for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
 			ctsArray.append(rangeStem + str(num))
 			
+		# get the morph intersected info to the words via submissions of a user and a file...
+		for sub in user.submissions.all():
+			# get the file entry:
+			with open('../static/js/smyth.json', 'r') as json_data:
+				d = json.load(json_data)
+				json_data.close()
+			
+		return self.create_response(request, d)
 		
 		#for word in words:
 		#	sentence = word.sentence
