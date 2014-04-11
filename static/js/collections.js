@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'text!emily_content.json'], function($, _, Backbone, Models, Content) {
+define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, Backbone, Models, Utils) {
 
 	var Collections = {};
 
@@ -67,8 +67,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'text!emily_content.json']
 			var that = this;
 
 			// Get the data we care about -- specific section of a module
-			data = JSON.parse(Content);
-			var slide_data = data[that.meta('module')]["modules"][that.meta('section')]["slides"];
+			var slide_data = Utils.Content[that.meta('module')]["modules"][that.meta('section')]["slides"];
 
 			/*
 			Goes through and creates either an individual slide, or a cluster of slides,
@@ -76,7 +75,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'text!emily_content.json']
 			*/
 
 			// Set attributes on this object
-			that.meta('title', data[that.meta('module')]["title"]);
+			that.meta('title', Utils.Content[that.meta('module')]["title"]);
 
 			for (var i = 0; i < slide_data.length; i++) {
 				if (slide_data[i]["smyth"] && slide_data[i]["type"] == 'slide_info') {
@@ -90,7 +89,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'text!emily_content.json']
 					slide_data.splice(i, 0, new_slide);
 					slide_data.splice(i, 0, new_slide);
 					slide_data.splice(i, 0, new_slide);*/
-					slide_data.splice(i, 0, new_slide);
+					slide_data.splice(i+1, 0, new_slide);
 					i++;
 				}
 			}

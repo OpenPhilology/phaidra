@@ -1,6 +1,5 @@
-define(['jquery', 'underscore', 'backbone', 'text!smyth.json'], function($, _, Backbone, Smyth) {
+define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, Utils) {
 	var Models = {};
-	Smyth = JSON.parse(Smyth);
 
 	Models.User = Backbone.Model.extend({
 		defaults: {
@@ -45,7 +44,7 @@ define(['jquery', 'underscore', 'backbone', 'text!smyth.json'], function($, _, B
 			var that = this;
 
 			// Attrs we care about: Smyth ref, task
-			this.set('query', Smyth[0][this.attributes.smyth]["query"])
+			this.set('query', Utils.Smyth[0][this.attributes.smyth]["query"])
 			this.set('type', 'slide_direct_select');
 
 			var taskMapper = {
@@ -58,7 +57,7 @@ define(['jquery', 'underscore', 'backbone', 'text!smyth.json'], function($, _, B
 							response = JSON.parse(response);
 							var len = response.meta.total_count;
 							var words = response.objects;
-							var answer = words[0];
+							var answer = words[1];
 							
 							that.set('content', 'What is the "person" of <span class="greek-text" data-cts="' + answer.CTS + '">' + answer.value + '</span>?');
 							that.set('title', 'Morph fun!');
@@ -67,7 +66,7 @@ define(['jquery', 'underscore', 'backbone', 'text!smyth.json'], function($, _, B
 								{ "value": "2nd", "display": "2nd" },
 								{ "value": "3rd", "display": "3rd" }]
 							]);
-							that.set('answers', answer.person);
+							that.set('answers', [answer.person]);
 							that.set('require_all', true);
 							that.set('require_order', false);
 							that.trigger('populated');
