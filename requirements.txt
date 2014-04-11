@@ -4,7 +4,7 @@ argparse==1.2.1
 decorator==3.4.0
 distribute==0.6.49
 django-filter==0.7
-django-tastypie==0.10.0
+-e git+https://github.com/mlent/django-tastypie.git#egg=django-tastypie 
 httplib2==0.8
 lucene-querybuilder==0.2
 meld3==0.6.10
