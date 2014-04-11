@@ -700,7 +700,6 @@ div.module {
           transition: background-color 0.2s ease-out; }
   .slide ul {
     display: block;
-    padding-left: 0;
     margin-bottom: 0;
     /* Corresponds to Multi Composition Slide options */ }
     .slide ul.short-multi li {
