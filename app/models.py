@@ -65,7 +65,7 @@ class Sentence(models.NodeModel):
 		if words[0].head is None:
 			return None
 			
-		fo = open("foo.txt", "wb")
+		#fo = open("foo.txt", "wb")
 		#millis = int(round(time.time() * 1000))
 		#fo.write("%s filter words and build tree: \n" % millis)
 			
@@ -88,11 +88,9 @@ class Sentence(models.NodeModel):
 					dataTree.append(word)
 			
 		# start here 
-		for verb in dataTree['children']:
-						
+		for verb in dataTree['children']:					
 			# get the verb
-			if verb.relation == "PRED" or verb.relation == "PRED_CO":
-								
+			if verb.relation == "PRED" or verb.relation == "PRED_CO":						
 				#s, r, u, i, f, z, g, a = [], [], [], [], [], [], [], []
 				u, i = [], []
 				aim_words = []
@@ -107,9 +105,6 @@ class Sentence(models.NodeModel):
 							if (w.relation == "OBJ_CO" or w.relation == "ADV_CO") and w.pos != "participle" and w.pos != "verb":
 								i.append(w.tbwid)
 								aim_words.append(w)
-								
-						millis = int(round(time.time() * 1000))
-						fo.write("%s first branch done: \n" % millis)
 					
 					elif word.relation == "AuxP":
 						#f.append(word.tbwid)
@@ -135,9 +130,6 @@ class Sentence(models.NodeModel):
 							if w.relation == "ATR" and w.pos != "verb":
 								#g.append(w.tbwid)
 								aim_words.append(w)
-								
-						millis = int(round(time.time() * 1000))
-						fo.write("%s 3rd branch done: \n" % millis)
 					
 				# refinement of u
 				for id in u:
@@ -160,13 +152,8 @@ class Sentence(models.NodeModel):
 					else:		
 						# set and order words
 						return sorted(aim_words, key=lambda x: x.tbwid, reverse=False)
-					
 			
-				
-
-						fo.close()
-					
-						
+						#fo.close()				
 						
 		return None 
 	
@@ -260,7 +247,7 @@ class Submission(models.NodeModel):
 		app_label = 'models'
 
 	def __unicode__(self):
-		return unicode(self.value) or u''	
+		return unicode(self.response) or u''	
 
 class Lemma(models.NodeModel):
 	

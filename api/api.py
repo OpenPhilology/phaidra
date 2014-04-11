@@ -310,40 +310,104 @@ class VisualizationResource(ModelResource):
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered')
 			]
 
-	#/api/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5:5-7&user=john
+	#/api/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.4:8-11&user=john
 	def encountered(self, request, **kwargs):
 		
 		"""
 		Start visualization...
 		"""
-		query_params = {}
-		for obj in request.GET.keys():
-			if obj in dir(Word) and request.GET.get(obj) is not None:
-				query_params[obj] = request.GET.get(obj)
-		
+		fo = open("foo.txt", "wb")
+		millis = int(round(time.time() * 1000))
+		fo.write("%s start encountered method: \n" % millis)
+
+		level = request.GET.get('level')
 		user = AppUser.objects.get(username = request.GET.get('user'))
-		# calculate CTSs of the word range (later look them up within submissions of the user)
-		# preparation
-		ctsArray = []
-		cts = request.GET.get('range')			 					
-		#rangeArray = cts.split(':')
-		# get the stem
-		endIndex = len(cts)-len(cts.split(':')[len(cts.split(':'))-1])
-		rangeStem = cts[0:endIndex]
+		params = {}
+		data = {}
 		
-		# get the numbers
-		numbersArray = cts.split(':')[len(cts.split(':'))-1].split('-')
-		for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
-			ctsArray.append(rangeStem + str(num))
+		if level == "word-level":
 			
-		# get the morph intersected info to the words via submissions of a user and a file...
-		for sub in user.submissions.all():
+			tmpWordRefs = []
+			seenDict = {}
+			knownDict = {}
+			data['words'] = []
+			
+			millis = int(round(time.time() * 1000))
+			fo.write("%s start calculating cts ranges: \n" % millis)
+			
+			# calculate CTSs of the word range (later look them up within submissions of the user)
+			# preparation
+			wordRangeArray = []
+			cts = request.GET.get('range')
+			# get the stem
+			endIndex = len(cts)-len(cts.split(':')[len(cts.split(':'))-1])
+			rangeStem = cts[0:endIndex]		
+			# get the numbers of the range and save the CTSs
+			numbersArray = cts.split(':')[len(cts.split(':'))-1].split('-')
+			for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
+				wordRangeArray.append(rangeStem + str(num))
+			
+			# get the morph info to the words via a file lookup..
 			# get the file entry:
-			with open('../static/js/smyth.json', 'r') as json_data:
-				d = json.load(json_data)
+			filename = os.path.join(os.path.dirname(__file__), '../static/js/smyth.json')
+			fileContent = {}
+			with open(filename, 'r') as json_data:
+				fileContent = json.load(json_data)
 				json_data.close()
+						
+			millis = int(round(time.time() * 1000))
+			fo.write("%s start running over submissions: \n" % millis)
 			
-		return self.create_response(request, d)
+			for wordRef in wordRangeArray:
+				
+				for sub in user.submissions.all():
+					# ... and submissions' smyth key, save params to test it on the encountered word of a submission
+					grammarParams = fileContent[0][sub.smyth]['query'].split('&')
+					for pair in grammarParams:
+						params[pair.split('=')[0]] = pair.split('=')[1]
+									
+					# get the encountered words of this submission's CTSs
+					for wordRef in sub.encounteredWords:
+						
+						# if word learnt already known don't apply filetr again
+						if wordRef in knownDict is None:
+							# if grammer of a word is checked
+							w =  Word.objects.get(CTS = wordRef)
+							matchingWords =  Word.objects.filter(**params)
+							if w in matchingWords:
+								knownDict[wordRef] = True
+						
+						# if word in requested range and in encountered
+						if wordRef in tmpWordRefs:
+							seenDict[wordRef] = seenDict[wordRef] + 1
+						else:
+							tmpWordRefs.append(wordRef)
+							seenDict[wordRef] = 1
+			
+			
+			millis = int(round(time.time() * 1000))
+			fo.write("%s subs done: \n" % millis)					
+			
+			for wordRef in wordRangeArray:
+				
+				w =  Word.objects.get(CTS = wordRef)
+				# if amongs encountered of the submissions, adapt bools
+				try:
+					seenDict[wordRef]
+					try:
+						knownDict[wordRef]
+						data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': True, 'synKnown': False, 'vocKnown': True, 'cts': w.CTS}) 
+					except :
+						data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': False, 'synKnown': False, 'vocKnown': True, 'cts': w.CTS})			
+				# if word neither encountered nor grammar was covered
+				except:
+					data['words'].append({'value': w.value, 'timesSeen' : 0, 'morphKnown': False, 'synKnown': False, 'vocKnown': False, 'cts': w.CTS})
+			
+			millis = int(round(time.time() * 1000))
+			fo.write("%s all done: \n" % millis)
+			fo.close()
+				
+			return self.create_response(request, data)
 		
 		#for word in words:
 		#	sentence = word.sentence
