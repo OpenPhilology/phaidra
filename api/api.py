@@ -316,9 +316,9 @@ class VisualizationResource(ModelResource):
 		"""
 		Start visualization...
 		"""
-		fo = open("foo.txt", "wb")
-		millis = int(round(time.time() * 1000))
-		fo.write("%s start encountered method: \n" % millis)
+		#fo = open("foo.txt", "wb")
+		#millis = int(round(time.time() * 1000))
+		#fo.write("%s start encountered method: \n" % millis)
 
 		level = request.GET.get('level')
 		user = AppUser.objects.get(username = request.GET.get('user'))
@@ -332,8 +332,8 @@ class VisualizationResource(ModelResource):
 			knownDict = {}
 			data['words'] = []
 			
-			millis = int(round(time.time() * 1000))
-			fo.write("%s start calculating cts ranges: \n" % millis)
+			#millis = int(round(time.time() * 1000))
+			#fo.write("%s start calculating cts ranges: \n" % millis)
 			
 			# calculate CTSs of the word range (later look them up within submissions of the user)
 			# preparation
@@ -355,8 +355,8 @@ class VisualizationResource(ModelResource):
 				fileContent = json.load(json_data)
 				json_data.close()
 						
-			millis = int(round(time.time() * 1000))
-			fo.write("%s start running over submissions: \n" % millis)
+			#millis = int(round(time.time() * 1000))
+			#fo.write("%s start running over submissions: \n" % millis)
 			
 			for wordRef in wordRangeArray:
 				
@@ -385,8 +385,8 @@ class VisualizationResource(ModelResource):
 							seenDict[wordRef] = 1
 			
 			
-			millis = int(round(time.time() * 1000))
-			fo.write("%s subs done: \n" % millis)					
+			#millis = int(round(time.time() * 1000))
+			#fo.write("%s subs done: \n" % millis)					
 			
 			for wordRef in wordRangeArray:
 				
@@ -403,9 +403,9 @@ class VisualizationResource(ModelResource):
 				except:
 					data['words'].append({'value': w.value, 'timesSeen' : 0, 'morphKnown': False, 'synKnown': False, 'vocKnown': False, 'cts': w.CTS})
 			
-			millis = int(round(time.time() * 1000))
-			fo.write("%s all done: \n" % millis)
-			fo.close()
+			#millis = int(round(time.time() * 1000))
+			#fo.write("%s all done: \n" % millis)
+			#fo.close()
 				
 			return self.create_response(request, data)
 		
