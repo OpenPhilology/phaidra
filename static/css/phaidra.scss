@@ -532,7 +532,10 @@ a {
 
 		display: inline-block;
 		height: 15px;
-		@include gradient(#FFF, 0, #EEE, 100);
+		background: linear-gradient(to left, #FFF 50%, $color-sec-two 50%);
+		background-size: 200% 100%;
+		background-position: right bottom;
+		transition: all 1s ease-out;
 
 		border: {
 			top: 1px solid $c;
@@ -551,12 +554,8 @@ a {
 		}
 
 		&.complete {
-			$b: $color-sec-two;
-
-			box-shadow: 1px 1px 0px lighten($b, 20%) inset;
-			@include gradient($b, 0, lighten($b, 10%), 100);
-			border: 1px solid darken($b, 10%);
-
+			$b: $color-pri-two;
+			background-position: left bottom;
 		}
 	}
 }

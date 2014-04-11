@@ -77,7 +77,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'text!emily_content.json']
 
 			// Set attributes on this object
 			that.meta('title', data[that.meta('module')]["title"]);
-			that.meta('initLength', slide_data.length);
 
 			for (var i = 0; i < slide_data.length; i++) {
 				if (slide_data[i]["smyth"] && slide_data[i]["type"] == 'slide_info') {
@@ -96,7 +95,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'text!emily_content.json']
 				}
 			}
 
-			console.log(slide_data);
+			that.meta('initLength', slide_data.length);
 
 			// Build with slide data
 			for (var i = 0; i < slide_data.length; i++) {

@@ -414,13 +414,10 @@ a {
   .lesson-progress .bar {
     display: inline-block;
     height: 15px;
-    background-image: linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -o-linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -moz-linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -webkit-linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -ms-linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #eeeeee));
-    background-color: white;
+    background: linear-gradient(to left, white 50%, #4e6087 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1s ease-out;
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     border-left: 1px solid #dddddd; }
@@ -432,15 +429,7 @@ a {
       border-bottom-right-radius: 3px;
       border-top-right-radius: 3px; }
     .lesson-progress .bar.complete {
-      box-shadow: 1px 1px 0px #8394b8 inset;
-      background-image: linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -o-linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -moz-linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -webkit-linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -ms-linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4e6087), color-stop(1, #6378a5));
-      background-color: #4e6087;
-      border: 1px solid #3b4967; }
+      background-position: left bottom; }
 
 .module-container {
   background: rgba(255, 255, 255, 0.7);
