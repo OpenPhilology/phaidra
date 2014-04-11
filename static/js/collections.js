@@ -81,16 +81,26 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				if (slide_data[i]["smyth"] && slide_data[i]["type"] == 'slide_info') {
 					// Create data needed for a an exercise
 					console.log("Adding an exercise for " + slide_data[i]["smyth"]);
-					var new_slide = {
+					
+					var j = Math.floor((Math.random() * slide_data[i]["tasks"].length) + 1);
+
+					slide_data.splice(i+1, 0, {
 						"smyth": slide_data[i]["smyth"],
-						"task": slide_data[i]["tasks"][0]
-					};
-					/* For now, insert 4.
-					slide_data.splice(i, 0, new_slide);
-					slide_data.splice(i, 0, new_slide);
-					slide_data.splice(i, 0, new_slide);*/
-					slide_data.splice(i+1, 0, new_slide);
-					i++;
+						"task": slide_data[i]["tasks"][j - 1]
+					});
+
+					j = Math.floor((Math.random() * slide_data[i]["tasks"].length) + 1);
+					slide_data.splice(i+1, 0, {
+						"smyth": slide_data[i]["smyth"],
+						"task": slide_data[i]["tasks"][j - 1]
+					});
+
+					j = Math.floor((Math.random() * slide_data[i]["tasks"].length) + 1);
+					slide_data.splice(i+1, 0, {
+						"smyth": slide_data[i]["smyth"],
+						"task": slide_data[i]["tasks"][j - 1]
+					});
+					i += 3;
 				}
 			}
 

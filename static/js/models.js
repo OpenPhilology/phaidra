@@ -51,24 +51,55 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				'identify_morph_person': function() {
 					$.ajax({
 						'dataType': 'text',
-						//'async': false,
 						'url': '/api/word/?format=json&' + that.get('query'),
 						'success': function(response) {
 							response = JSON.parse(response);
 							var len = response.meta.total_count;
 							var words = response.objects;
-							var answer = words[1];
+							var i = Math.floor((Math.random() * len) + 1);
+							var word = words[i - 1];
 							
-							that.set('content', 'What is the "person" of <span class="greek-text" data-cts="' + answer.CTS + '">' + answer.value + '</span>?');
+							that.set('question', 'What is the <strong>person</strong> of <span class="greek-text" data-cts="' + word.CTS + '">' + word.value + '</span>?');
 							that.set('title', 'Morph fun!');
 							that.set('options', [
 								[{ "value": "1st", "display": "1st" },
 								{ "value": "2nd", "display": "2nd" },
 								{ "value": "3rd", "display": "3rd" }]
 							]);
-							that.set('answers', [answer.person]);
+							that.set('answers', [word.person]);
 							that.set('require_all', true);
 							that.set('require_order', false);
+							that.set('successMsg', '<strong>CORRECT!</strong> <span class="greek-text">' + word.value + '</span> is in the ' + word.person + ' person.');
+							that.set('hintMsg', 'Not quite.');
+							that.trigger('populated');
+						},
+						error: function(x, y, z) {
+							console.log(x, y, z);
+						}
+					});
+				},
+				'identify_morph_number': function() {
+					$.ajax({
+						'dataType': 'text',
+						'url': '/api/word/?format=json&' + that.get('query'),
+						'success': function(response) {
+							response = JSON.parse(response);
+							var len = response.meta.total_count;
+							var words = response.objects;
+							var i = Math.floor((Math.random() * len) + 1);
+							var word = words[i - 1];
+							
+							that.set('question', 'What is the <strong>number</strong> of <span class="greek-text" data-cts="' + word.CTS + '">' + word.value + '</span>?');
+							that.set('title', 'Morph fun!');
+							that.set('options', [
+								[{ "value": "sg", "display": "Singular" },
+								{ "value" : "pl", "display": "Plural" }]
+							]);
+							that.set('answers', [word.number]);
+							that.set('require_all', true);
+							that.set('require_order', false);
+							that.set('successMsg', '<strong>CORRECT!</strong> <span class="greek-text">' + word.value + '</span> is ' + word.number + '.');
+							that.set('hintMsg', 'Not quite.');
 							that.trigger('populated');
 						},
 						error: function(x, y, z) {
@@ -79,7 +110,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			};
 
 			taskMapper[attributes.task]();
-
 		},
 		checkAnswer: function(attempt) {
 			if (typeof(attempt) == 'string')

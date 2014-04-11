@@ -2,12 +2,16 @@
 	"meta": {
 		"perseus": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s"
 	},
+	"s499": {
+		"title": "Form the Present, Active, Indicative for ω-stem Verbs",
+		"query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd=w_stem,reg_conj"
+	},
 	"s532": {
 		"title": "Intro to Future Active Indicative",
 		"query": "pos=verb&tense=fut&mood=ind&voice=act"
 	},
 	"s537": {
-		"title": "Forming the Future, Active, Indicative for Stop Verbs",
+		"title": "Form the Future, Active, Indicative for Stop Verbs",
 		"query": "pos=verb&tense=fut&mood=ind&voice=act",
 		"aspect": "morph",
 		"variants": ["lemma__endswith=πω", "lemma__endswith=βω", "lemma__endswidth=πτω", "lemma__endswith=ϕω", "lemma__endswith=κω", "lemma__endswith=γω", "lemma__endswith=ττω"], 
@@ -15,10 +19,10 @@
 	},
 	"s768a": {
 		"title": "εἰμί in the Present Tense",
-		"query": "lemma=εἰμί&tense=pres"
+		"query": "pos=verb&lemma=εἰμί&tense=pres"
 	},
 	"s768b": {
 		"title": "εἰμί in the Future Tense",
-		"query": "lemma=εἰμί&tense=fut"
+		"query": "pos=verb&lemma=εἰμί&tense=fut"
 	}
 }]

@@ -639,6 +639,7 @@
 		"modules": [
 			{
 				"title": "Present Indicative Active",
+				"vocab": [""],
 				"slides": [
 					{
 						"type": "slide_info",
@@ -654,11 +655,15 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact1.html"
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact1.html",
+						"smyth": "s499",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact2.html"
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact2.html",
+						"smyth": "s768a",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
 						"type": "slide_info",
@@ -698,21 +703,21 @@
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact1.html",
 						"smyth": "s532",
-						"tasks": ["identify_morph_person"]
+						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
 						"title": "Forming the Future Active Indicative for Stop Verbs",
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact2.html",
 						"smyth": "s537",
-						"tasks": ["identify_morph_person"]
+						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
 						"title": "Future Active Indicative of εἰμί",
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact3.html",
 						"smyth": "s768b",
-						"tasks": ["identify_morph_person"]
+						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
 						"title": "The Future Indicative Active in the Pentecontaetia",
