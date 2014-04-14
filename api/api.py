@@ -479,6 +479,10 @@ class SentenceResource(ModelResource):
 			elif obj.split('__')[0] in dir(Word) and request.GET.get(obj) is not None:
 				query_params[obj] = request.GET.get(obj)
 		
+		# if ordinary filter behavior is required, put key default
+		if 'default' in request.GET.keys():		
+			return super(SentenceResource, self).get_list(request, **kwargs)
+		
 		# filter on parameters 						
 		words = Word.objects.filter(**query_params)
 		
@@ -487,13 +491,9 @@ class SentenceResource(ModelResource):
 		
 		data = {}
 		data['sentences'] = []
-				
-		# if ordinary filter behavior is required, put key default
-		if 'default' in request.GET.keys():		
-			return super(SentenceResource, self).get_list(request, **kwargs)
 		
 		#/api/sentence/?randomized=&short=&format=json&lemma=κρατέω
-		elif 'randomized' in request.GET.keys():
+		if 'randomized' in request.GET.keys():
 						
 			if 'short' in request.GET.keys():
 				
