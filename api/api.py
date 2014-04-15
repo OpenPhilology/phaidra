@@ -322,22 +322,21 @@ class VisualizationResource(ModelResource):
 		"""
 		#fo = open("foo.txt", "wb")
 		#millis = int(round(time.time() * 1000))
-		#fo.write("%s start encountered method: \n" % millis)
+		#fo.write("%s start encountered method, get user: \n" % millis)
 
 		level = request.GET.get('level')
 		user = AppUser.objects.get(username = request.GET.get('user'))
-		params = {}
 		data = {}
 		
 		if level == "word-level":
 			
-			tmpWordRefs = []
+			#tmpWordRefs = []
 			seenDict = {}
 			knownDict = {}
 			data['words'] = []
 			
 			#millis = int(round(time.time() * 1000))
-			#fo.write("%s start calculating cts ranges: \n" % millis)
+			#fo.write("%s calculating cts ranges: \n" % millis)
 			
 			# calculate CTSs of the word range (later look them up within submissions of the user)
 			# preparation
@@ -351,7 +350,9 @@ class VisualizationResource(ModelResource):
 			for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
 				wordRangeArray.append(rangeStem + str(num))
 			
-			# get the morph info to the words via a file lookup..
+			#millis = int(round(time.time() * 1000))
+			#fo.write("%s reading smyth doc: \n" % millis)
+			
 			# get the file entry:
 			filename = os.path.join(os.path.dirname(__file__), '../static/js/smyth.json')
 			fileContent = {}
@@ -360,40 +361,50 @@ class VisualizationResource(ModelResource):
 				json_data.close()
 						
 			#millis = int(round(time.time() * 1000))
-			#fo.write("%s start running over submissions: \n" % millis)
-			
-			for wordRef in wordRangeArray:
+			#fo.write("%s start running over submissions: \n" % millis)		
+							
+			for sub in user.submissions.all():
 				
-				for sub in user.submissions.all():
-					# ... and submissions' smyth key, save params to test it on the encountered word of a submission
-					grammarParams = fileContent[0][sub.smyth]['query'].split('&')
-					for pair in grammarParams:
-						params[pair.split('=')[0]] = pair.split('=')[1]
-									
-					# get the encountered words of this submission's CTSs
-					for wordRef in sub.encounteredWords:
-						
+				# get the morph info to the words via a file lookup of submission's smyth key, save params to test it on the encountered word of a submission
+				params = {}
+				grammarParams = fileContent[0][sub.smyth]['query'].split('&')
+				for pair in grammarParams:
+					params[pair.split('=')[0]] = pair.split('=')[1]
+				
+				#millis = int(round(time.time() * 1000))
+				#fo.write("%s calc params done: \n" % millis)
+					
+				for wordRef in wordRangeArray:
+														
+					# get the encountered word's CTSs of this submission
+					if wordRef in sub.encounteredWords:			
+												
 						# if word learnt already known don't apply filter again
-						if wordRef in knownDict:
-							continue
-						else:
-							# if grammer of a word is checked
-							w =  Word.objects.get(CTS = wordRef)
-							matchingWords =  Word.objects.filter(**params)
-							if w in matchingWords:
-								knownDict[wordRef] = True
-						
-						# if word in requested range and in encountered
+						if wordRef not in knownDict:
+							
+							#millis = int(round(time.time() * 1000))
+							#fo.write("%s start calc if range word in morph hits and incr. seen: \n" % millis)	
+							
+							# loop over params to get morph known infos
+							w = Word.objects.get(CTS = wordRef)
+							badmatch = False
+							for p in params.keys():
+								if params[p] != getattr(w, p):
+									badmatch = True
+							if not badmatch:
+								knownDict[wordRef] = True					
+										
+						# if word in requested range and in encountered save times seen
 						try:
 							seenDict[wordRef]
 							seenDict[wordRef] = seenDict[wordRef] + 1
 						except:
 							seenDict[wordRef] = 1
 							
-			
-			
+					
 			#millis = int(round(time.time() * 1000))
-			#fo.write("%s subs done: \n" % millis)					
+			#fo.write("%s subs done: \n" % millis)
+			#fo.close()					
 			
 			for wordRef in wordRangeArray:
 				
@@ -403,16 +414,12 @@ class VisualizationResource(ModelResource):
 					seenDict[wordRef]
 					try:
 						knownDict[wordRef]
-						data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': True, 'synKnown': False, 'vocKnown': True, 'cts': w.CTS}) 
+						data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': True, 'synKnown': False, 'vocKnown': True, 'CTS': w.CTS}) 
 					except :
-						data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': False, 'synKnown': False, 'vocKnown': True, 'cts': w.CTS})			
+						data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': False, 'synKnown': False, 'vocKnown': True, 'CTS': w.CTS})			
 				# if word neither encountered nor grammar was covered
 				except:
-					data['words'].append({'value': w.value, 'timesSeen' : 0, 'morphKnown': False, 'synKnown': False, 'vocKnown': False, 'cts': w.CTS})
-			
-			#millis = int(round(time.time() * 1000))
-			#fo.write("%s all done: \n" % millis)
-			#fo.close()
+					data['words'].append({'value': w.value, 'timesSeen' : 0, 'morphKnown': False, 'synKnown': False, 'vocKnown': False, 'CTS': w.CTS})
 				
 			return self.create_response(request, data)
 		
