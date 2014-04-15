@@ -269,11 +269,12 @@ class SubmissionResource(ModelResource):
 		# on errors which are not caught in the manager class, the node will still be created because save is called (too?) soon
 		# look into django.db.models.Model save method for saving behaviour on error?!
 		node = Submission.objects.create(
-			response = data.get("response"), # string array
-			tasktags = data.get("tasktags"), # string array
-			speed = int(data.get("speed")),		 # integer
+			response = data.get("response"), # string 
+			task = data.get("task"), # string 
+			smyth = data.get("smyth"),	# string
+			time = int(data.get("time")),		 # integer
 			accuracy = int(data.get("accuracy")), # integer
-			encounteredWords = data.get("encounteredWords"), # string array
+			encounteredWords = data.get("encounteredWords"), # array
 			slideType = data.get("slideType"), # string
 			timestamp = data.get("timestamp") # datetime
 		)
@@ -311,6 +312,9 @@ class VisualizationResource(ModelResource):
 			]
 
 	#/api/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.4:8-11&user=john
+	#/api/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.090.4:15-19&user=john
+	# urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.090.4:19
+	# urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.091.3:12
 	def encountered(self, request, **kwargs):
 		
 		"""
@@ -369,8 +373,10 @@ class VisualizationResource(ModelResource):
 					# get the encountered words of this submission's CTSs
 					for wordRef in sub.encounteredWords:
 						
-						# if word learnt already known don't apply filetr again
-						if wordRef in knownDict is None:
+						# if word learnt already known don't apply filter again
+						if wordRef in knownDict:
+							continue
+						else:
 							# if grammer of a word is checked
 							w =  Word.objects.get(CTS = wordRef)
 							matchingWords =  Word.objects.filter(**params)
@@ -378,11 +384,12 @@ class VisualizationResource(ModelResource):
 								knownDict[wordRef] = True
 						
 						# if word in requested range and in encountered
-						if wordRef in tmpWordRefs:
+						try:
+							seenDict[wordRef]
 							seenDict[wordRef] = seenDict[wordRef] + 1
-						else:
-							tmpWordRefs.append(wordRef)
+						except:
 							seenDict[wordRef] = 1
+							
 			
 			
 			#millis = int(round(time.time() * 1000))
