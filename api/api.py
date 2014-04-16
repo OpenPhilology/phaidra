@@ -616,21 +616,27 @@ class SentenceResource(ModelResource):
 				# if CTS is missed all sentences containing words that hit the query are returned
 				#/api/sentence/?format=json&form=ἀπέβησαν&lemma__endswith=νω
 				if CTS is None:
-
-					for word in words:
-						
-						sentence = word.sentence
-						tmp = {'sentence': sentence.__dict__}
-						tmp = tmp['sentence']['_prop_values']
-						tmp['words'] = []	
-						for word in reversed(sentence.words.all()):
 					
-							w = word.__dict__
-							tmp['words'].append(w['_prop_values'])
+					# and no other params -> default
+					if len(query_params) < 1:	
+						return super(SentenceResource, self).get_list(request, **kwargs)
+				
+					else:
+
+						for word in words:
 							
-						data['sentences'].append(tmp)
+							sentence = word.sentence
+							tmp = {'sentence': sentence.__dict__}
+							tmp = tmp['sentence']['_prop_values']
+							tmp['words'] = []	
+							for word in reversed(sentence.words.all()):
 						
-					return self.create_response(request, data)
+								w = word.__dict__
+								tmp['words'].append(w['_prop_values'])
+								
+							data['sentences'].append(tmp)
+							
+						return self.create_response(request, data)
 				
 				# not randomized, long, CTS return one sentence
 				#/api/sentence/?format=json&CTS=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5
