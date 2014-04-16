@@ -11,7 +11,6 @@ from api.api import SentenceResource
 from api.api import WordResource
 from api.api import LemmaResource
 
-from api.api import LemmaWordResource
 from api.api import SentenceShortResource
 from api.api import TranslationResource
 
@@ -26,7 +25,6 @@ sentence_resource = SentenceResource()
 word_resource = WordResource()
 lemma_resource = LemmaResource()
 
-lemma_word_resource = LemmaWordResource()
 sentence_short_resource = SentenceShortResource()
 translation_resource = TranslationResource()
 
@@ -69,7 +67,6 @@ urlpatterns = patterns('',
     url(r'^api/', include(visualization_resource.urls)),
 	url(r'^api/', include(word_resource.urls)),
     
-    url(r'^api/', include(lemma_word_resource.urls)),
     url(r'^api/', include(lemma_resource.urls)),
     url(r'^api/', include(translation_resource.urls)),
     

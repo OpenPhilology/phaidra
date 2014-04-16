@@ -17,6 +17,8 @@ from django.middleware.csrf import _sanitize_token, constant_time_compare
 
 from app.models import Slide, Submission, AppUser, Document, Sentence, Word, Lemma
 
+from neo4django.db import connections
+
 from tastypie import fields
 from tastypie.authentication import BasicAuthentication, SessionAuthentication, MultiAuthentication, Authentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
@@ -311,10 +313,7 @@ class VisualizationResource(ModelResource):
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered')
 			]
 
-	#/api/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.4:8-11&user=john
-	#/api/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.090.4:15-19&user=john
-	# urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.090.4:19
-	# urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.091.3:12
+	#/api/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.090.4:11-19&user=john
 	def encountered(self, request, **kwargs):
 		
 		"""
@@ -323,14 +322,13 @@ class VisualizationResource(ModelResource):
 		#fo = open("foo.txt", "wb")
 		#millis = int(round(time.time() * 1000))
 		#fo.write("%s start encountered method, get user: \n" % millis)
-
+		
 		level = request.GET.get('level')
 		user = AppUser.objects.get(username = request.GET.get('user'))
 		data = {}
 		
 		if level == "word-level":
 			
-			#tmpWordRefs = []
 			seenDict = {}
 			knownDict = {}
 			data['words'] = []
@@ -339,7 +337,6 @@ class VisualizationResource(ModelResource):
 			#fo.write("%s calculating cts ranges: \n" % millis)
 			
 			# calculate CTSs of the word range (later look them up within submissions of the user)
-			# preparation
 			wordRangeArray = []
 			cts = request.GET.get('range')
 			# get the stem
@@ -361,38 +358,56 @@ class VisualizationResource(ModelResource):
 				json_data.close()
 						
 			#millis = int(round(time.time() * 1000))
-			#fo.write("%s start running over submissions: \n" % millis)		
-							
-			for sub in user.submissions.all():
-				
-				# get the morph info to the words via a file lookup of submission's smyth key, save params to test it on the encountered word of a submission
-				params = {}
-				grammarParams = fileContent[0][sub.smyth]['query'].split('&')
-				for pair in grammarParams:
-					params[pair.split('=')[0]] = pair.split('=')[1]
+			#fo.write("%s start running over range: \n" % millis)		
+			
+			for wordRef in wordRangeArray:
 				
 				#millis = int(round(time.time() * 1000))
-				#fo.write("%s calc params done: \n" % millis)
-					
-				for wordRef in wordRangeArray:
+				#fo.write("%s get the word obejct: \n" % millis)
+				
+				cypher_query = "START n=node(*) MATCH (n) WHERE HAS (n.CTS) AND n.CTS = '" +wordRef+ "' RETURN n"
+				table = connections['default'].cypher(cypher_query)
+				
+				#table.data[0][0]['data']['CTS']
+				#w = Word.objects.get(CTS = wordRef)
+				seenDict[wordRef] = 0
+				knownDict[wordRef] = False
+				
+				for sub in user.submissions.all():	
+				
+					# get the morph info to the words via a file lookup of submission's smyth key, save params to test it on the encountered word of a submission
+					params = {}
+					grammarParams = fileContent[0][sub.smyth]['query'].split('&')
+					for pair in grammarParams:
+						params[pair.split('=')[0]] = pair.split('=')[1]
 														
 					# get the encountered word's CTSs of this submission
 					if wordRef in sub.encounteredWords:			
 												
 						# if word learnt already known don't apply filter again
-						if wordRef not in knownDict:
+						if not knownDict[wordRef]:
 							
 							#millis = int(round(time.time() * 1000))
-							#fo.write("%s start calc if range word in morph hits and incr. seen: \n" % millis)	
+							#fo.write("%s range word in enc., check morph hits and incr. seen: \n" % millis)	
 							
-							# loop over params to get morph known infos
-							w = Word.objects.get(CTS = wordRef)
+							# loop over params to get morph known infos							
 							badmatch = False
+							#for p in params.keys():
+							#	if params[p] != getattr(w, p):
+							#		badmatch = True
+							#if not badmatch:
+							#	knownDict[wordRef] = True	
+							
 							for p in params.keys():
-								if params[p] != getattr(w, p):
+								try:
+									table.data[0][0]['data'][p]
+									if params[p] != table.data[0][0]['data'][p]:
+										badmatch = True
+								except:
 									badmatch = True
+									
 							if not badmatch:
-								knownDict[wordRef] = True					
+								knownDict[wordRef] = True				
 										
 						# if word in requested range and in encountered save times seen
 						try:
@@ -401,41 +416,19 @@ class VisualizationResource(ModelResource):
 						except:
 							seenDict[wordRef] = 1
 							
-					
-			#millis = int(round(time.time() * 1000))
-			#fo.write("%s subs done: \n" % millis)
-			#fo.close()					
-			
-			for wordRef in wordRangeArray:
-				
-				w =  Word.objects.get(CTS = wordRef)
-				# if amongs encountered of the submissions, adapt bools
-				try:
-					seenDict[wordRef]
-					try:
-						knownDict[wordRef]
-						data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': True, 'synKnown': False, 'vocKnown': True, 'CTS': w.CTS}) 
-					except :
-						data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': False, 'synKnown': False, 'vocKnown': True, 'CTS': w.CTS})			
-				# if word neither encountered nor grammar was covered
-				except:
-					data['words'].append({'value': w.value, 'timesSeen' : 0, 'morphKnown': False, 'synKnown': False, 'vocKnown': False, 'CTS': w.CTS})
-				
-			return self.create_response(request, data)
+				# save data
+				if seenDict[wordRef] > 0:
+					data['words'].append({'value': table.data[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': table.data[0][0]['data']['CTS']})
+					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.CTS})
+				else:
+					data['words'].append({'value': table.data[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': table.data[0][0]['data']['CTS']})
+					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.CTS})
 		
-		#for word in words:
-		#	sentence = word.sentence
-		#	# asap check if the short sentence to a word's sentence returns a set with query params matching words
-		#	sentence = sentence.get_shortened(query_params)
-		#	if sentence is not None:
-		#
-		#		data = {}
-		#		data['words'] = []
-		#		for word in sentence:
-		#			w = word.__dict__
-		#			data['words'].append(w['_prop_values'])
-		#								
-		#		return self.create_response(request, data)
+			#millis = int(round(time.time() * 1000))
+			#fo.write("%s all done: \n" % millis)
+			#fo.close()
+			
+			return self.create_response(request, data)
 		
 		return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)	
 
@@ -823,38 +816,6 @@ class LemmaResource(ModelResource):
 		filtering = {'value': ALL,
 					#'wordcount': ALL, # coming soon?
 					'words': ALL_WITH_RELATIONS}
-
-
-class LemmaWordResource(ModelResource):
-
-	"""
-	Returns a list of lemmas with special properties of a relative - words.
-	"""
-	words = fields.ToManyField('api.api.WordResource', lambda bundle: Word.objects.filter(lemma=bundle.obj), null=True, blank=True) 
-	
-	class Meta:
-		queryset = Lemma.objects.all()
-		resource_name = 'lemma/word'
-		always_return_data = True
-		excludes = ['require_order', 'require_all']
-		authorization = ReadOnlyAuthorization()
-		filtering = {'value': ALL}
-
-	def obj_get_list(self, bundle, **kwargs):
-		if 'word_number' in bundle.request.GET.keys() and 'posAdd' in bundle.request.GET.keys():
-			data = []
-			words = Word.objects.all()
-			## localhost:8000/api/lemma/word/?word_number=2&pos=verb&posAdd=o_stem&format=json
-			if 'pos' in bundle.request.GET.keys() :
-				words = Word.objects.filter(pos=bundle.request.GET['pos'])
-			if 'posAdd' in bundle.request.GET.keys() :
-				words = words.filter(posAdd__contains=bundle.request.GET['posAdd'])
-			for word in reversed(words):
-				if word.lemmas is not None and word.lemmas.valuesCount() >= int(bundle.request.GET['word_number']) :
-					data.append(word.lemmas)
-			if len(data) >= 1:
-				return data
-		return super(LemmaWordResource, self).obj_get_list(bundle, **kwargs).filter()
 
 
 class TranslationResource(ModelResource):
