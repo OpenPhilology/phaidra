@@ -4,8 +4,15 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-from api.api import TextbookResource
-textbook_resource = TextbookResource()
+from tastypie.api import Api
+from api.api import TextbookResource, UnitResource, LessonResource, SlideResource, UserResource 
+
+v1_api = Api(api_name='v1')
+v1_api.register(UserResource())
+v1_api.register(TextbookResource())
+v1_api.register(UnitResource())
+v1_api.register(LessonResource())
+v1_api.register(SlideResource())
 
 urlpatterns = patterns('',
 
@@ -15,7 +22,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-	url(r'api/', include(textbook_resource.urls)),
+	url(r'api/', include(v1_api.urls)),
 
 	url(r'^trees/', 'web.views.trees'),
 	url(r'^module/', 'web.views.module'),
