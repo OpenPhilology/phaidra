@@ -1,8 +1,12 @@
 from __future__ import unicode_literals
 # coding: utf8
-from django.core.management import setup_environ
-from phaidra import settings
-setup_environ(settings)
+import os
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
+from django.conf import settings
+
+from neo4jrestclient.client import GraphDatabase
+
 gdb = GraphDatabase("http://localhost:7474/db/data/")
 d = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1", author="Thucydides", name="The Pentekontaetia", lang="grc")
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.089.1", length=13)
