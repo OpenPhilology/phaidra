@@ -17,7 +17,8 @@ from django.middleware.csrf import _sanitize_token, constant_time_compare
 
 from app.models import Slide, Submission, AppUser, Document, Sentence, Word, Lemma
 
-from neo4django.db import connections
+from neo4jrestclient.client import GraphDatabase
+from neo4jrestclient import client
 
 from tastypie import fields
 from tastypie.authentication import BasicAuthentication, SessionAuthentication, MultiAuthentication, Authentication
@@ -301,7 +302,7 @@ class SubmissionResource(ModelResource):
 class VisualizationResource(ModelResource):
 							
 	class Meta:
-		queryset = Word.objects.all()
+		#queryset = Word.objects.all()
 		resource_name = 'visualization'
 		#always_return_data = True
 		#excludes = ['require_order', 'require_all']
@@ -323,9 +324,11 @@ class VisualizationResource(ModelResource):
 		#millis = int(round(time.time() * 1000))
 		#fo.write("%s start encountered method, get user: \n" % millis)
 		
+		gdb = GraphDatabase("http://localhost:7474/db/data/")
 		level = request.GET.get('level')
-		user = AppUser.objects.get(username = request.GET.get('user'))
-		data = {}
+		#user = AppUser.objects.get(username = request.GET.get('user'))
+		submissions = gdb.query("""START n=node(*) MATCH (s)-[:answered_by]->(n) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")	
+		data = {}	
 		
 		if level == "word-level":
 			
@@ -365,24 +368,23 @@ class VisualizationResource(ModelResource):
 				#millis = int(round(time.time() * 1000))
 				#fo.write("%s get the word obejct: \n" % millis)
 				
-				cypher_query = "START n=node(*) MATCH (n) WHERE HAS (n.CTS) AND n.CTS = '" +wordRef+ "' RETURN n"
-				table = connections['default'].cypher(cypher_query)
+				w = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CTS) AND n.CTS = '""" +wordRef+ """' RETURN n""")
 				
 				#table.data[0][0]['data']['CTS']
 				#w = Word.objects.get(CTS = wordRef)
 				seenDict[wordRef] = 0
 				knownDict[wordRef] = False
 				
-				for sub in user.submissions.all():	
+				for sub in submissions.elements:	
 				
 					# get the morph info to the words via a file lookup of submission's smyth key, save params to test it on the encountered word of a submission
 					params = {}
-					grammarParams = fileContent[0][sub.smyth]['query'].split('&')
+					grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
 					for pair in grammarParams:
 						params[pair.split('=')[0]] = pair.split('=')[1]
 														
 					# get the encountered word's CTSs of this submission
-					if wordRef in sub.encounteredWords:			
+					if wordRef in sub[0]['data']['encounteredWords']:			
 												
 						# if word learnt already known don't apply filter again
 						if not knownDict[wordRef]:
@@ -400,8 +402,8 @@ class VisualizationResource(ModelResource):
 							
 							for p in params.keys():
 								try:
-									table.data[0][0]['data'][p]
-									if params[p] != table.data[0][0]['data'][p]:
+									w.elements[0][0]['data'][p]
+									if params[p] != w.elements[0][0].data[p]:
 										badmatch = True
 								except:
 									badmatch = True
@@ -418,10 +420,10 @@ class VisualizationResource(ModelResource):
 							
 				# save data
 				if seenDict[wordRef] > 0:
-					data['words'].append({'value': table.data[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': table.data[0][0]['data']['CTS']})
+					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.elements[0][0]['data']['CTS']})
 					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.CTS})
 				else:
-					data['words'].append({'value': table.data[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': table.data[0][0]['data']['CTS']})
+					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.elements[0][0]['data']['CTS']})
 					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.CTS})
 		
 			#millis = int(round(time.time() * 1000))
