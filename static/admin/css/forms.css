@@ -99,7 +99,9 @@ form .aligned p.help {
 }
 
 .colM .aligned .vLargeTextField, .colM .aligned .vXMLLargeTextField {
-    width: 610px;
+    width: 100%;
+	height: 500px;
+	font-family: 'Monaco';
 }
 
 .checkbox-row p.help {
