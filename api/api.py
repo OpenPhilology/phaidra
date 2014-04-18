@@ -895,9 +895,10 @@ class SentenceShortResource(ModelResource):
 		for obj in request.GET.keys():
 			if obj in dir(Word) and request.GET.get(obj) is not None:
 				query_params[obj] = request.GET.get(obj)
-			# bel alter careful with contains, ends_with, startswith
-			elif obj.split('__')[0] in dir(Word) and request.GET.get(obj) is not None:
-				query_params[obj] = request.GET.get(obj)
+			#TODO: handl start with.. in cypher query
+			# be later careful with contains, ends_with, startswith, not handle for now
+			#elif obj.split('__')[0] in dir(Word) and request.GET.get(obj) is not None:
+				#query_params[obj] = request.GET.get(obj)
 		
 		# if ordinary filter behavior is required, put key default
 		if 'default' in request.GET.keys():		
@@ -957,7 +958,7 @@ class SentenceShortResource(ModelResource):
 						
 				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
 			
-			# randomized, long
+			# randomized, long FIRST HANDLE STARTS/ENDS...
 			#/api/sentence/?randomized=&format=json&lemma=κρατέω	
 			else:
 				
