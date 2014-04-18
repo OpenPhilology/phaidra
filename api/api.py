@@ -809,6 +809,231 @@ class SentenceShortResource(ModelResource):
 		
 		return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)	
 	
+	
+	class node():
+		def __init__(self, value):
+			self.value = value
+			self.children = []
+		
+		def add_child(self, obj):
+			self.children.append(obj)
+	
+	
+	def shorten(self, wordArray, params = None):
+		
+		words = wordArray		
+		# interrupt as soon as possible if there is no according syntactical information available
+		try:
+			words[0]['head']
+		except:
+			return None
+			
+		# save words within a map for faster lookup			
+		nodes = dict((word['tbwid'], self.node(word)) for word in words)
+		# build a "tree"
+		verbs = []
+		for w in words:
+			if w['head'] is not 0:
+	   			nodes[w['head']].add_child(nodes[w['tbwid']])
+	   		if w['relation'] == "PRED" or w['relation'] == "PRED_CO":
+	   			verbs.append(w)
+														
+		# start here 
+		for verb in verbs:					
+			# get the verb
+			if verb['relation'] == "PRED" or verb['relation'] == "PRED_CO":						
+				u, i = [], []
+				aim_words = []
+				# group the words and make sure, save the selected words
+				for word in nodes[verb['tbwid']].children:
+											
+					if word.value['relation'] == "COORD":
+						u.append(word.value['tbwid'])
+						#aim_words.append(word)
+						for w in nodes[word.value['tbwid']].children:
+							if (w.value['relation'] == "OBJ_CO" or w.value['relation'] == "ADV_CO") and w.value['pos'] != "participle" and w.value['pos'] != "verb":
+								i.append(w.value['tbwid'])
+								aim_words.append(w.value)
+					
+					elif word.value['relation'] == "AuxP":
+						aim_words.append(word.value)
+						for w in nodes[word.value['tbwid']].children:
+							if w.value['relation'] != "AuxC" and w.value['pos'] != "participle":
+								aim_words.append(w.value)
+					
+								for w2 in nodes[w.value['tbwid']].children:
+									if w2.value['relation'] == "ATR" and w2.value['pos'] != "verb":
+										aim_words.append(w2.value)
+										
+										
+					elif word.value['relation'] != "AuxC" and word.value['relation'] != "COORD" and word.value['pos'] != "participle":
+						aim_words.append(word.value)
+						for w in nodes[word.value['tbwid']].children:
+							if w.value['relation'] == "ATR" and w.value['pos'] != "verb":
+								aim_words.append(w.value)
+					
+				# refinement of u
+				for id in u:
+					for id2 in i:
+						w = nodes[id2].value
+						if w['head'] is id:
+							aim_words.append(w)   
+							
+				aim_words.append(verb)
+					
+				# check if not verbs only are returned
+				if len(aim_words) > 1:
+					# set and order words
+					return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)
+									
+		return None
+
+	
+	def get_list(self, request, **kwargs):
+		
+		query_params = {}
+		for obj in request.GET.keys():
+			if obj in dir(Word) and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+			# bel alter careful with contains, ends_with, startswith
+			elif obj.split('__')[0] in dir(Word) and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+		
+		# if ordinary filter behavior is required, put key default
+		if 'default' in request.GET.keys():		
+			return super(SentenceResource, self).get_list(request, **kwargs)
+		
+		# filter word on parameters 
+		#/api/sentence/?randomized=&format=json&lemma=κρατέω
+		gdb = GraphDatabase("http://localhost:7474/db/data/")
+		q = """START n=node(*) MATCH (w)-[:belongs_to]->(n) WHERE """
+		if len(query_params) > 0:
+			for key in query_params:
+				q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
+			q = q[:len(q)-4]
+			q = q + """RETURN w"""
+				
+		wordsTable = gdb.query(q)
+		words = []
+		# make it a nice table
+		counter = 0
+		for word in wordsTable.elements:
+			words.append(wordsTable.elements[counter][0]['data'])
+			counter+=1
+												
+		if len(wordsTable.elements) < 1:
+			return self.error_response(request, {'error': 'No sentences hit your query.'}, response_class=HttpBadRequest)	
+		
+		data = {}
+		data['sentences'] = []
+		
+		#/api/sentence/?randomized=&short=&format=json&lemma=κρατέω
+		if 'randomized' in request.GET.keys():
+						
+			if 'short' in request.GET.keys():
+				
+				#randomize the words table	
+						
+				x = list(words)
+				words = sorted(x, key=lambda *args: random.random())
+		
+				for word in words:
+					# now get the words of this sentence as dict array
+					sentTable = gdb.query("""START s=node(*) MATCH (w)-[:belongs_to]->(s) WHERE HAS (w.CTS) AND w.CTS = '""" +word['CTS']+ """' WITH s, w MATCH (w2)-[:belongs_to]->(s) RETURN w2""")
+					sentence = []
+					counter = 0
+					for word in sentTable.elements:
+						sentence.append(sentTable.elements[counter][0]['data'])
+						counter+=1
+					# and shorten it
+					sentence = self.shorten(sentence, None)
+					# asap check if the short sentence to a word's sentence returns a set with query params matching words
+					if sentence is not None:
+							
+						tmp = {}
+						tmp['words'] = sentence
+						data['sentences'].append(tmp)														
+						return self.create_response(request, data)
+						
+				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
+			
+			# randomized, long
+			#/api/sentence/?randomized=&format=json&lemma=κρατέω	
+			else:
+				
+				word = random.choice(words)
+				sentence = word.sentence
+				
+				tmp = {'sentence': sentence.__dict__}
+				tmp = tmp['sentence']['_prop_values']
+				tmp['words'] = []	
+				for word in reversed(sentence.words.all()):			
+					w = word.__dict__
+					tmp['words'].append(w['_prop_values'])
+				
+				data['sentences'].append(tmp)
+				return self.create_response(request, data)
+		
+		# not randomized -> CTS given
+		else:
+			# not randomized, short and CTS queries a sentence via CTS
+			if 'short' in request.GET.keys():
+				
+				CTS = request.GET.get('CTS')
+				#/api/sentence/?format=json&short=&form=ἀπέβησαν
+				if CTS is None:				
+					return self.error_response(request, {'error': 'CTS required.'}, response_class=HttpBadRequest)
+				
+				# not randomized, short with CTS
+				#/api/sentence/?format=json&short=&CTS=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5
+				else:
+					sentence = Sentence.objects.get(CTS = CTS)
+					sentence = sentence.get_shortened({})
+					
+					tmp = {}
+					tmp['words'] = []				
+					for word in sentence:
+						w = word.__dict__
+						tmp['words'].append(w['_prop_values'])
+						
+					data['sentences'].append(tmp)					
+					return self.create_response(request, data)
+				
+				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
+			
+			# not randomized, long, no CTS implies default or error
+			else:
+				CTS = request.GET.get('CTS')
+				# if CTS is missed all sentences containing words that hit the query are returned
+				#/api/sentence/?format=json&form=ἀπέβησαν&lemma__endswith=νω
+				if CTS is None:					
+					# and no other params -> default
+					if len(query_params) < 1:	
+						return super(SentenceResource, self).get_list(request, **kwargs)
+				
+					else:
+						return self.error_response(request, {'error': 'CTS required or sentence parameters.'}, response_class=HttpBadRequest)
+				
+				# not randomized, long, CTS return one sentence
+				#/api/sentence/?format=json&CTS=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5
+				else:
+						
+					sentence = Sentence.objects.get(CTS = CTS)
+								
+					tmp = {'sentence': sentence.__dict__}
+					tmp = tmp['sentence']['_prop_values']
+					tmp['words'] = []
+					for word in reversed(sentence.words.all()):
+						
+						w = word.__dict__
+						tmp['words'].append(w['_prop_values'])
+					
+					data['sentences'].append(tmp)
+					
+					return self.create_response(request, data)
+				
+				return self.error_response(request, {'error': 'No sentences hit your query.'}, response_class=HttpBadRequest)
+	
 		
 class LemmaResource(ModelResource):
 	
