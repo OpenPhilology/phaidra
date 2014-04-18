@@ -883,6 +883,28 @@ class SentenceShortResource(ModelResource):
 					
 				# check if not verbs only are returned
 				if len(aim_words) > 1:
+					# consider params
+					if len(params) > 0:
+						# check if aim_words and parameter filtered intersect 
+						cand = False
+						for w in aim_words:
+							for key in params:
+								if w[key] == params[key]:
+									cand = True
+								else:
+									cand = False
+									continue
+							
+							if cand:										
+								# set and order words
+								return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)	
+						
+						return None		
+					else:		
+						# set and order words
+						return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)
+					
+					
 					# set and order words
 					return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)
 									
@@ -947,7 +969,7 @@ class SentenceShortResource(ModelResource):
 						sentence.append(sentTable.elements[counter][0]['data'])
 						counter+=1
 					# and shorten it
-					sentence = self.shorten(sentence, None)
+					sentence = self.shorten(sentence, query_params)
 					# asap check if the short sentence to a word's sentence returns a set with query params matching words
 					if sentence is not None:
 							
