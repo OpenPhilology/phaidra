@@ -1,34 +1,5 @@
 from django.conf.urls import patterns, include, url
 
-<<<<<<< HEAD
-from api.api import UserResource
-from api.api import SlideResource
-from api.api import SubmissionResource
-
-from api.api import DocumentResource
-from api.api import SentenceResource
-from api.api import WordResource
-from api.api import LemmaResource
-
-from api.api import SentenceShortResource
-from api.api import TranslationResource
-
-from api.api import VisualizationResource
-
-user_resource = UserResource()
-slide_resource = SlideResource()
-submission_resource = SubmissionResource()
-
-document_resource = DocumentResource()
-sentence_resource = SentenceResource()
-word_resource = WordResource()
-lemma_resource = LemmaResource()
-
-sentence_short_resource = SentenceShortResource()
-translation_resource = TranslationResource()
-
-visualization_resource = VisualizationResource()
-
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
