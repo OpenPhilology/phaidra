@@ -1,7 +1,6 @@
 from django.conf.urls import patterns, include, url
-#from web import views
-#from rest_framework import routers
 
+<<<<<<< HEAD
 from api.api import UserResource
 from api.api import SlideResource
 from api.api import SubmissionResource
@@ -30,15 +29,19 @@ translation_resource = TranslationResource()
 
 visualization_resource = VisualizationResource()
 
-#router = routers.DefaultRouter()
-#router.register(r'api/users', views.UserViewSet)
-
-# Wire up our API using automatic URL routing.
-# Additionally, we include login URLs for the browseable API.
-
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
+
+from tastypie.api import Api
+from api.api import TextbookResource, UnitResource, LessonResource, SlideResource, UserResource 
+
+v1_api = Api(api_name='v1')
+v1_api.register(UserResource())
+v1_api.register(TextbookResource())
+v1_api.register(UnitResource())
+v1_api.register(LessonResource())
+v1_api.register(SlideResource())
 
 urlpatterns = patterns('',
 
@@ -46,31 +49,16 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
+
+	url(r'api/', include(v1_api.urls)),
 
 	url(r'^trees/', 'web.views.trees'),
+	url(r'^lessons/', 'web.views.lessons'),
 	url(r'^module/', 'web.views.module'),
 	url(r'^viz/', 'web.views.viz'),
 	url(r'^vocab/', 'web.views.vocab'),
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^login/', 'web.views.login'),
-	url(r'^$', 'web.views.index'),
-	url(r'^api/', include(user_resource.urls)),
-	url(r'^api/', include(slide_resource.urls)),
-	url(r'^api/', include(submission_resource.urls)),
-
-	url(r'^api/', include(document_resource.urls)),
-    
-    url(r'^api/', include(sentence_short_resource.urls)),
-	url(r'^api/', include(sentence_resource.urls)),
-    
-    url(r'^api/', include(visualization_resource.urls)),
-	url(r'^api/', include(word_resource.urls)),
-    
-    url(r'^api/', include(lemma_resource.urls)),
-    url(r'^api/', include(translation_resource.urls)),
-    
-
-	#url(r'^', include(router.urls)),
-	#url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+	url(r'^$', 'web.views.index')
 )

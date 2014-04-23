@@ -1,385 +1,100 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Historical Languages eLearning - by Open Philology Project
+	</title>
 
-	{# Determine which navigation element is 'active'  #}
-	{% block nav %}
-		{% with 'active' as lessons_active %}
-			{{ block.super }}
-		{% endwith %}
-	{% endblock %}
+	<!-- CSS -->
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/css/phaidra.css" rel="stylesheet">
+	<link href="/static/css/parse-tree.css" rel="stylesheet">
 
-	{% block content %}
+	<!-- JS -->
+	<!--<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>-->
 
-		<div class="col-md-4 col-md-push-8 feedback-container">
-			<div class="calls-to-action" style="text-align: center">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-flash"></span> <span class="hidden-inline-sm">Strengthen</span> Skills</button>
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-inbox"></span> <span class="hidden-inline-sm">Practice</span> Vocab</button>
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list-alt"></span> Grammar <span class="hidden-inline-sm">Guide</span></button>
-			</div>
+	<script src="/static/js/lib/jquery-2.0.3.js"></script>
 
-			<hr>
+	<script>
+		$(document).on('ready', function() {
+			$('#greeting-text a').on('click', function(e) {
+				e.preventDefault();
+				$('#greeting-text').slideUp('slow', function() {
+					$('#register-text').slideDown('slow');
+				});
+			});
+		});
+	</script>
 
-			<!-- High-level overview of user progress -->
-			<div class="hidden-sm hidden-xs">
-				<img src="/static/images/thuc.png" style="height: 100px; float: right">
-				<h2>TARGET TEXT</h2>
-				<p>
-					<strong>Author:</strong> Thucydides<br>
-					<strong>Work:</strong> <em>History of the Peloponnesian War</em>
+</head>
+<body>
+
+<div class="container" style="background: rgba(255, 255, 255, 0.7)">
+	<div class="row" id="splash">
+
+		<a class="btn btn-default" href="/login" id="login-link">Login</a>
+		<img src="/static/images/new_thuc.png" class="thuc">
+
+		<div class="col-md-8 col-md-push-4">
+			<div id="greeting-text">
+				<h1>Get your Greek on.</h1>
+
+				<p class="lead">
+					Learn Ancient Greek as you read Thucydides' harrowing tale of the war between <span class="greek-text masc">οἱ Λακεδαιμόνιοι</span>, the Spartans, and <span class="greek-text masc">οἱ ᾿Αθηναῖοι</span>, the Athenians. 
 				</p>
 
-				<div class="row" id="pies">
-					<div class="col-md-4">
-						<div id="vocab-pie"></div>
-						<h3>Vocabulary</h3> learned
-					</div>
-
-					<div class="col-md-4">
-						<div id="morph-pie"></div>
-						<h3>Morphology</h3> learned
-					</div>
-					
-					<div class="col-md-4">
-						<div id="syn-pie"></div>
-						<h3>Syntax</h3> learned
-					</div>
-				</div>
-
-				<hr>
-
-				<h2>RECORDS</h2>
-				<div id="records">
-					<div class="sparkline"></div>
-					10 lessons in a week
-				</div>
-				<hr>
-
-				<h2>RECENT ACTIVITY</h2>
-				<h3>Yesterday</h3>
-				<p>
-					<span class="badge lesson">+ 2</span> Completed 2 lessons<br>
-					<span class="badge vocab">+ 10</span> Learned 10 new words<br>
-				</p>
-				<h3>Last Week</h3>
-				<p>
-					<span class="badge treebank">+ 4</span> Treebanked 4 sentences<br>
+				<p class="text-align: center">
+					<a href="/register" class="register-link btn btn-primary btn-lg">Start Learning!</a>
 				</p>
 			</div>
+			<div id="register-text" style="display: none">
+				<h1>Sign up</h1>
+
+				<form role="form" style="max-width: 400px">
+					<div class="form-group">
+						<label for="name-input">Full Name</label>
+						<input type="text" class="form-control" id="first-name-input" placeholder="(Optional)">
+					</div>
+					<div class="form-group">
+						<label for="email-input">Email Address</label>
+						<input type="email" class="form-control" id="email-input">
+					</div>
+					<div class="form-group">
+						<label for="username-input">Username</label>
+						<input type="text" class="form-control" id="username-input">
+					</div>
+					<div class="form-group">
+						<label for="password-input">Password</label>
+						<input type="password" class="form-control" id="password-input">
+					</div>
+					<button type="submit" class="register-link btn">Create Account</button>
+				</form>
+			</div>
+
 		</div>
-		<div class="col-md-offset-1 col-md-7 col-md-pull-4 module-container">
-				<!-- <div class="row">
-					<div class="col-md-12">
-						<a class="module keep-learning" href="/module/3/section/1/slide/0" style="min-height: 60px">
-							<div>
-								<h3><span class="glyphicon glyphicon-flag"></span> Keep Learning Present, Active, Indicative Verbs!</h3>
-							</div>
-						</a>
-					</div>
-				</div>-->
-				<div class="row">
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/1/section/0/slide/0" class="module basics">
-							<img src="/static/images/icon_grk_amphora.png" alt="The Greek Alphabet">
-							<div>
-								<h3>Greek Alphabet</h3>
-								<span class="circle complete" title="Alphabet Table"></span>
-								<span class="circle complete" title="Punctuation"></span>
-							</div>
-						</a>
-					</div>
-					<!-- Modules a user cannot yet access should not be links -->
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/2/section/0/slide/0" class="module basics">
-							<!-- <img src="/static/images/icon_grk_alphabet.png" alt="Diacritics">-->
-							<div>
-								<h3>Greek Diacritics</h3>
-								<span class="circle complete" title="Breathings"></span>
-								<span class="circle complete" title="Syllables"></span>
-								<span class="circle complete" title="Elision"></span>
-								<span class="circle complete" title="Accent"></span>
-								<span class="circle complete" title="Punctuation"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/3/section/0/slide/0" class="module nouns">
-							<div>
-								<img src="/static/images/icon_grk_monster.png" alt="Introduction to Nouns">
-								<h3>Introduction to Nouns</h3>
-								<span class="circle complete" title="Nouns in Greek"></span>
-								<span class="circle complete" title="Gender"></span>
-								<span class="circle complete" title="Number"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/4/section/0/slide/0" class="module nouns">
-							<!--<img src="/static/images/icon_grk_nouns_intro.png" alt="Introduction to Alpha Declension">-->
-
-							<div>
-								<h3>Cases of Nouns</h3>
-								<span class="circle complete" title="Nominative Case"></span>
-								<span class="circle complete" title="Accusative Case"></span>
-								<span class="circle complete" title="Genitive Case"></span>
-								<span class="circle complete" title="Dative Case"></span>
-								<span class="circle complete" title="Vocative Case"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/5/section/0/slide/0" class="module nouns">
-							<!-- <img src="/static/images/icon_grk_amphora.png" alt="Introduction to First Declension">-->
-
-							<div>
-								<h3>First Declension</h3>
-								<span class="circle complete" title="Nouns in -α"></span>
-								<span class="circle complete" title="Nouns in -η"></span>
-								<span class="circle complete" title="Nouns in -η"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/6/section/0/slide/0" class="module nouns">
-
-							<!-- <img src="/static/images/icon_grk_nouns_first_dec.png" alt="Introduction to Second Declension">-->
-
-							<div>
-								<h3>Second Declension</h3>
-								<span class="circle complete" title="Nouns in -ο"></span>
-								<span class="circle complete" title="Nouns in -ον"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/7/section/0/slide/0" class="module verbs">
-
-							<img src="/static/images/icon_grk_parthenon.png" alt="Introduction to Verbs">
-
-							<div>
-								<h3>Introduction to Verbs</h3>
-								<span class="circle complete" title="Person"></span>
-								<span class="circle complete" title="Number"></span>
-								<span class="circle complete" title="Tense"></span>
-								<span class="circle complete" title="Mood"></span>
-								<span class="circle complete" title="Voice"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/8/section/0/slide/0" class="module verbs">
-
-							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
-
-							<div>
-								<h3>Present Indicative Active</h3>
-								<span class="circle complete" title="λύω"></span>
-								<span class="circle complete" title= "εἰμί"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/9/section/0/slide/0" class="module verbs">
-
-							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
-
-							<div>
-								<h3>Future Indicative Active</h3>
-								<span class="circle complete" title="λύσω"></span>
-								<span class="circle complete" title= "ἔσομαι"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/10/section/0/slide/0" class="module nouns">
-
-							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
-
-							<div>
-								<h3>Adjectives: First and Second Declension</h3>
-								<span class="circle complete" title= "Three-ending"></span>
-								<span class="circle complete" title= "Two-ending"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/11/section/0/slide/0" class="module verbs">
-
-							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
-
-							<div>
-								<h3>Imperfect Indicative Active</h3>
-								<span class="circle complete" title= "ἔλυον"></span>
-								<span class="circle complete" title= "ἧ"></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<a href="/module/10/section/0/slide/0" class="module nouns">
-
-							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
-
-							<div>
-								<h3>Third Declension: Consonant Stems</h3>
-								<span class="circle" title= ""></span>
-								<span class="circle" title= ""></span>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Secondary Tenses</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Demonstrative Pronouns</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Present and Imperfect of <span class="greek-text">εἰμί</span>, to be</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Introduction to the Middle Voice</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Continuing the Middle Voice</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Indicative Passive</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Perfect/Pluperfect Middle/Passive (Pt. I)</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Perfect/Pluperfect Middle/Passive (Pt. II)</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Prepositions</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Stems of the Consonant Declension (Pt. I)</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Stems of the Consonant Declension (Pt. II)</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3>Adjectives of the Consonant Declension</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3><span class="greek-text">-αω</span> Contract Verbs</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="module">
-							<div>
-								<h3><span class="greek-text">-εω, -οω</span> Contract Verbs</h3>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-								<span class="circle"></span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="col-md-4 col-md-pull-8" style="height: 300px;">
 		</div>
-
-{% endblock %}
+	</div>
+	<div class="row" style="padding: 30px;">
+		<div class="col-md-4">
+			<h2>Game your way through Greek.</h2>
+			<p>
+				Develop your mad Greek skillz through games and choose the path to Greek glory that suits your personal learning style. 
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h2>Keep it original.</h2>
+			<p>
+				Explore Classical texts in their original languages, the way they were intended to be read, enhanced by data contributed by people like you.
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h2>Be a scholar!</h2>
+			<p>
+				Contribute micropublications like translations and annotations to help create brand new, digital editions of Classical works!
+			</p>
+		</div>
+	</div>
+</div>
