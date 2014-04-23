@@ -25,7 +25,7 @@ $font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 @mixin transition($prop, $len, $style) {
 	$trans: $prop $len $style;
 
-	-webkix-transition: $trans;
+	-webkit-transition: $trans;
 	-moz-transition: $trans;
 	-o-transition: $trans;
 	-ms-transition: $trans;
@@ -123,6 +123,13 @@ a {
 }
 
 /* Override Bootstrap Styles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Garamond';
+}
+label {
+	font-weight: normal;
+	font-size: 1.2em;
+}
 .container {
 	max-width: none !important;
 	width: 100%;
@@ -176,6 +183,7 @@ a {
 	}
 }
 
+/* The speech bubble that Thuc uses to speak */
 .speech {
 	$color: lighten($color-sec-four, 15%);
 
@@ -214,6 +222,74 @@ a {
 		border-color: $color transparent;
 		display: block;
 		width: 0;
+	}
+}
+
+/* Styles related to the intro page */
+#splash {
+	background-color: $color-pri-two;
+	position: relative;
+	min-height: 300px;
+	padding: 20px;
+	color: #EEE;
+
+	.thuc {
+		position: absolute; 
+		left: 0; 
+		bottom: 0;
+	}
+
+	form {
+		width: 80%;
+	}
+
+	img {
+		height: 300px;
+	}
+
+	h1 {
+		display: inline-block;
+		font-family: 'Garamond';
+		font-size: 5em;
+	}
+
+	p {
+		font-size: 1.3em;
+		line-height: 1.7em;
+	}
+}
+#login-link {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	border: 0;
+	background-color: rgba(255, 255, 255, .4);
+	z-index: 10;
+	color: #FFF;
+	padding: 10px 20px;
+	@include transition(background-color, .2s, ease-out);
+
+	&:hover {
+		background-color: rgba(255, 255, 255, .6);
+		@include transition(background-color, .2s, ease-in);
+	}
+}
+.register-link {
+	border: 0;
+	border-radius: 3px;
+	font-size: 24px;
+	background-color: $color-pri-one;
+	padding: 10px 30px;
+	display: inline-block;
+	position: relative;
+	color: #FFF;
+	@include transition(background-color, .2s, ease-out);
+
+	&:hover {
+		@include transition(background-color, .2s, ease-in);
+		background-color: lighten($color-pri-one, 3%);
+		box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .1);
+		top: -2px;
 	}
 }
 

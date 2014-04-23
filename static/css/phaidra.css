@@ -55,6 +55,13 @@ a {
     color: #178282; }
 
 /* Override Bootstrap Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Garamond'; }
+
+label {
+  font-weight: normal;
+  font-size: 1.2em; }
+
 .container {
   max-width: none !important;
   width: 100%; }
@@ -117,6 +124,7 @@ a {
   .bg-primary strong {
     color: #178282 !important; }
 
+/* The speech bubble that Thuc uses to speak */
 .speech {
   position: relative;
   padding: 15px;
@@ -151,6 +159,75 @@ a {
     display: block;
     width: 0; }
 
+/* Styles related to the intro page */
+#splash {
+  background-color: #1fadad;
+  position: relative;
+  min-height: 300px;
+  padding: 20px;
+  color: #EEE; }
+  #splash .thuc {
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+  #splash form {
+    width: 80%; }
+  #splash img {
+    height: 300px; }
+  #splash h1 {
+    display: inline-block;
+    font-family: 'Garamond';
+    font-size: 5em; }
+  #splash p {
+    font-size: 1.3em;
+    line-height: 1.7em; }
+
+#login-link {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 10;
+  color: #FFF;
+  padding: 10px 20px;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out; }
+  #login-link:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-transition: background-color 0.2s ease-in;
+    -moz-transition: background-color 0.2s ease-in;
+    -o-transition: background-color 0.2s ease-in;
+    -ms-transition: background-color 0.2s ease-in;
+    transition: background-color 0.2s ease-in; }
+
+.register-link {
+  border: 0;
+  border-radius: 3px;
+  font-size: 24px;
+  background-color: #d15241;
+  padding: 10px 30px;
+  display: inline-block;
+  position: relative;
+  color: #FFF;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out; }
+  .register-link:hover {
+    -webkit-transition: background-color 0.2s ease-in;
+    -moz-transition: background-color 0.2s ease-in;
+    -o-transition: background-color 0.2s ease-in;
+    -ms-transition: background-color 0.2s ease-in;
+    transition: background-color 0.2s ease-in;
+    background-color: #d45d4d;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    top: -2px; }
+
 /* Header */
 .banner {
   color: #EEE;
@@ -179,21 +256,21 @@ a {
     padding: 20px 10px;
     cursor: pointer;
     text-decoration: none;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .navigation a:hover {
       background-color: #576b97;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
       transition: background-color 0.2s ease-in; }
     .navigation a.active {
       background-color: #6378a5;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -225,7 +302,7 @@ a {
     height: 16px;
     display: inline-block;
     margin-right: -4px;
-    -webkix-transition: background-color 0.3s cubic;
+    -webkit-transition: background-color 0.3s cubic;
     -moz-transition: background-color 0.3s cubic;
     -o-transition: background-color 0.3s cubic;
     -ms-transition: background-color 0.3s cubic;
@@ -234,7 +311,7 @@ a {
       background-color: #4e6087; }
       .progress-therm .sec.morph:hover {
         background-color: #576b97;
-        -webkix-transition: background-color 0.3s cubic;
+        -webkit-transition: background-color 0.3s cubic;
         -moz-transition: background-color 0.3s cubic;
         -o-transition: background-color 0.3s cubic;
         -ms-transition: background-color 0.3s cubic;
@@ -243,7 +320,7 @@ a {
       background-color: #1fadad; }
       .progress-therm .sec.syn:hover {
         background-color: #23c3c3;
-        -webkix-transition: background-color 0.3s cubic;
+        -webkit-transition: background-color 0.3s cubic;
         -moz-transition: background-color 0.3s cubic;
         -o-transition: background-color 0.3s cubic;
         -ms-transition: background-color 0.3s cubic;
@@ -252,7 +329,7 @@ a {
       background-color: #f4bc78; }
       .progress-therm .sec.voc:hover {
         background-color: #f6c890;
-        -webkix-transition: background-color 0.3s cubic;
+        -webkit-transition: background-color 0.3s cubic;
         -moz-transition: background-color 0.3s cubic;
         -o-transition: background-color 0.3s cubic;
         -ms-transition: background-color 0.3s cubic;
@@ -262,7 +339,7 @@ a {
       .progress-therm .sec.rem:hover {
         background-color: lighter(#fefefe, 5%); }
     .progress-therm .sec:hover {
-      -webkix-transition: background-color 0.3s cubic;
+      -webkit-transition: background-color 0.3s cubic;
       -moz-transition: background-color 0.3s cubic;
       -o-transition: background-color 0.3s cubic;
       -ms-transition: background-color 0.3s cubic;
@@ -290,7 +367,7 @@ a {
 .user-info a.username, .user-info a.log-in-link {
   border: 0;
   background-color: #3b4967;
-  -webkix-transition: background-color 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-out;
   -moz-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
   -ms-transition: background-color 0.2s ease-out;
@@ -301,7 +378,7 @@ a {
   margin: 0px 20px 0px 5px; }
   .user-info a.username:hover, .user-info a.log-in-link:hover {
     background-color: #6378a5;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
@@ -340,7 +417,7 @@ a {
   border: 0;
   background-color: #3b4967;
   color: #EEE;
-  -webkix-transition: background-color 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-out;
   -moz-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
   -ms-transition: background-color 0.2s ease-out;
@@ -348,7 +425,7 @@ a {
   margin-top: 3px; }
   .calls-to-action button:hover, .calls-to-action a:hover {
     background-color: #576b97;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
@@ -472,7 +549,7 @@ div.module {
     border-radius: 12px; }
   .module.keep-learning {
     background-color: #1fadad;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
@@ -480,7 +557,7 @@ div.module {
     margin-bottom: 20px; }
     .module.keep-learning:hover {
       background-color: #23c3c3;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -490,14 +567,14 @@ div.module {
       color: #FFF; }
   .module.nouns {
     background-color: #1fadad;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .module.nouns:hover {
       background-color: #23c3c3;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -509,14 +586,14 @@ div.module {
       color: #FFF; }
   .module.morph {
     background-color: #4e6087;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .module.morph:hover {
       background-color: #576b97;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -528,14 +605,14 @@ div.module {
       color: #FFF; }
   .module.verbs {
     background-color: #4e6087;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .module.verbs:hover {
       background-color: #576b97;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -547,14 +624,14 @@ div.module {
       color: #FFF; }
   .module.basics {
     background-color: #d15241;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .module.basics:hover {
       background-color: #d66556;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -635,7 +712,7 @@ div.module {
       left: 40%;
       top: 110%;
       border: 1px solid #FFF;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -675,7 +752,7 @@ div.module {
       border-radius: 3px;
       padding: 10px;
       margin: 5px;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -684,7 +761,7 @@ div.module {
         background-color: #1fadad;
         border: 1px solid transparent;
         color: #FFF;
-        -webkix-transition: background-color 0.2s ease-out;
+        -webkit-transition: background-color 0.2s ease-out;
         -moz-transition: background-color 0.2s ease-out;
         -o-transition: background-color 0.2s ease-out;
         -ms-transition: background-color 0.2s ease-out;
@@ -693,7 +770,7 @@ div.module {
         .slide .direct-select a:hover .badge {
           background-color: #d15241;
           color: #FFF;
-          -webkix-transition: background-color 0.2s ease-out;
+          -webkit-transition: background-color 0.2s ease-out;
           -moz-transition: background-color 0.2s ease-out;
           -o-transition: background-color 0.2s ease-out;
           -ms-transition: background-color 0.2s ease-out;
@@ -715,7 +792,7 @@ div.module {
       border-radius: 3px; }
     .slide ul.short-multi.options a {
       border: 1px solid #e1e1e1;
-      -webkix-transition: background-color 0.2s ease-out;
+      -webkit-transition: background-color 0.2s ease-out;
       -moz-transition: background-color 0.2s ease-out;
       -o-transition: background-color 0.2s ease-out;
       -ms-transition: background-color 0.2s ease-out;
@@ -739,7 +816,7 @@ div.module {
         color: #FFF; }
     .slide ul.short-multi.answers a {
       border: 1px solid #1b9797;
-      -webkix-transition: background-color 0.2s ease-out;
+      -webkit-transition: background-color 0.2s ease-out;
       -moz-transition: background-color 0.2s ease-out;
       -o-transition: background-color 0.2s ease-out;
       -ms-transition: background-color 0.2s ease-out;

@@ -9,13 +9,17 @@ from django.contrib.auth.models import User
 from app.models import Textbook, Unit, Lesson, Slide
 
 from tastypie import fields
-from tastypie.resources import ModelResource
+from tastypie.resources import ModelResource, Resource
+
+#from neo4j import GraphDatabase
 
 import json
 import random
 from random import shuffle
 
 import time
+
+#db = GraphDatabase('/var/lib/neo4j/data/graph.db/')
 
 class TextbookResource(ModelResource):
 	class Meta:

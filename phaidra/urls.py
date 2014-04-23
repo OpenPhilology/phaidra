@@ -25,11 +25,11 @@ urlpatterns = patterns('',
 	url(r'api/', include(v1_api.urls)),
 
 	url(r'^trees/', 'web.views.trees'),
+	url(r'^lessons/', 'web.views.lessons'),
 	url(r'^module/', 'web.views.module'),
 	url(r'^viz/', 'web.views.viz'),
 	url(r'^vocab/', 'web.views.vocab'),
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^login/', 'web.views.login'),
-	url(r'^$', 'web.views.index'),
-
+	url(r'^$', 'web.views.index')
 )
