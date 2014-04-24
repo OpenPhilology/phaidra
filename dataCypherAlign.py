@@ -83,8 +83,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1:13", ref="", lemma="", tbwid=13, form="", value=".", relation="AuxK", head=0, cid=26870738, pos="punct", length=1, )
 s.words(w)
-words = "οἱγὰρἈθηναῖοιτρόπῳτοιῷδεἦλθονἐπὶτὰπράγματαἐνοἷςηὐξήθησαν."
-s['sentence'] = "οἱγὰρἈθηναῖοιτρόπῳτοιῷδεἦλθονἐπὶτὰπράγματαἐνοἷςηὐξήθησαν."
+words = "οἱ γὰρ Ἀθηναῖοι τρόπῳ τοιῷδε ἦλθον ἐπὶ τὰ πράγματα ἐν οἷς ηὐξήθησαν . "
+s['sentence'] = "οἱ γὰρ Ἀθηναῖοι τρόπῳ τοιῷδε ἦλθον ἐπὶ τὰ πράγματα ἐν οἷς ηὐξήθησαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.2", length=85)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.2:1", ref="1.089.2-001", lemma="ἐπεί", tbwid=1, isIndecl="indeclform", form="ἐπειδή", dialect="", value="ἐπειδὴ", relation="AuxC", head=48, cid=26870739, posClass="N", pos="conj", length=6, )
@@ -569,8 +569,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.2:85", ref="", lemma="", tbwid=85, form="", value=".", relation="AuxK", head=0, cid=26870823, pos="punct", length=1, )
 s.words(w)
-words = "ἐπειδὴΜῆδοιἀνεχώρησανἐκτῆςΕὐρώπηςνικηθέντεςκαὶναυσὶκαὶπεζῷὑπὸἙλλήνωνκαὶοἱκαταφυγόντεςαὐτῶνταῖςναυσὶνἐςΜυκάληνδιεφθάρησαν,ΛεωτυχίδηςμὲνὁβασιλεὺςτῶνΛακεδαιμονίων,ὅσπερἡγεῖτοτῶνἐνΜυκάλῃἙλλήνων,ἀπεχώρησενἐπ'οἴκουἔχωντοὺςἀπὸΠελοποννήσουξυμμάχους,οἱδὲἈθηναῖοικαὶοἱἀπὸἸωνίαςκαὶἙλλησπόντουξύμμαχοιἤδηἀφεστηκότεςἀπὸβασιλέωςὑπομείναντεςΣηστὸνἐπολιόρκουνΜήδωνἐχόντων,καὶἐπιχειμάσαντεςεἷλοναὐτὴνἐκλιπόντωντῶνβαρβάρων,καὶμετὰτοῦτοἀπέπλευσανἐξἙλλησπόντουὡςἕκαστοικατὰπόλεις."
-s['sentence'] = "ἐπειδὴΜῆδοιἀνεχώρησανἐκτῆςΕὐρώπηςνικηθέντεςκαὶναυσὶκαὶπεζῷὑπὸἙλλήνωνκαὶοἱκαταφυγόντεςαὐτῶνταῖςναυσὶνἐςΜυκάληνδιεφθάρησαν,ΛεωτυχίδηςμὲνὁβασιλεὺςτῶνΛακεδαιμονίων,ὅσπερἡγεῖτοτῶνἐνΜυκάλῃἙλλήνων,ἀπεχώρησενἐπ'οἴκουἔχωντοὺςἀπὸΠελοποννήσουξυμμάχους,οἱδὲἈθηναῖοικαὶοἱἀπὸἸωνίαςκαὶἙλλησπόντουξύμμαχοιἤδηἀφεστηκότεςἀπὸβασιλέωςὑπομείναντεςΣηστὸνἐπολιόρκουνΜήδωνἐχόντων,καὶἐπιχειμάσαντεςεἷλοναὐτὴνἐκλιπόντωντῶνβαρβάρων,καὶμετὰτοῦτοἀπέπλευσανἐξἙλλησπόντουὡςἕκαστοικατὰπόλεις."
+words = "ἐπειδὴ Μῆδοι ἀνεχώρησαν ἐκ τῆς Εὐρώπης νικηθέντες καὶ ναυσὶ καὶ πεζῷ ὑπὸ Ἑλλήνων καὶ οἱ καταφυγόντες αὐτῶν ταῖς ναυσὶν ἐς Μυκάλην διεφθάρησαν , Λεωτυχίδης μὲν ὁ βασιλεὺς τῶν Λακεδαιμονίων , ὅσπερ ἡγεῖτο τῶν ἐν Μυκάλῃ Ἑλλήνων , ἀπεχώρησεν ἐπ' οἴκου ἔχων τοὺς ἀπὸ Πελοποννήσου ξυμμάχους , οἱ δὲ Ἀθηναῖοι καὶ οἱ ἀπὸ Ἰωνίας καὶ Ἑλλησπόντου ξύμμαχοι ἤδη ἀφεστηκότες ἀπὸ βασιλέως ὑπομείναντες Σηστὸν ἐπολιόρκουν Μήδων ἐχόντων , καὶ ἐπιχειμάσαντες εἷλον αὐτὴν ἐκλιπόντων τῶν βαρβάρων , καὶ μετὰ τοῦτο ἀπέπλευσαν ἐξ Ἑλλησπόντου ὡς ἕκαστοι κατὰ πόλεις . "
+s['sentence'] = "ἐπειδὴ Μῆδοι ἀνεχώρησαν ἐκ τῆς Εὐρώπης νικηθέντες καὶ ναυσὶ καὶ πεζῷ ὑπὸ Ἑλλήνων καὶ οἱ καταφυγόντες αὐτῶν ταῖς ναυσὶν ἐς Μυκάλην διεφθάρησαν , Λεωτυχίδης μὲν ὁ βασιλεὺς τῶν Λακεδαιμονίων , ὅσπερ ἡγεῖτο τῶν ἐν Μυκάλῃ Ἑλλήνων , ἀπεχώρησεν ἐπ' οἴκου ἔχων τοὺς ἀπὸ Πελοποννήσου ξυμμάχους , οἱ δὲ Ἀθηναῖοι καὶ οἱ ἀπὸ Ἰωνίας καὶ Ἑλλησπόντου ξύμμαχοι ἤδη ἀφεστηκότες ἀπὸ βασιλέως ὑπομείναντες Σηστὸν ἐπολιόρκουν Μήδων ἐχόντων , καὶ ἐπιχειμάσαντες εἷλον αὐτὴν ἐκλιπόντων τῶν βαρβάρων , καὶ μετὰ τοῦτο ἀπέπλευσαν ἐξ Ἑλλησπόντου ὡς ἕκαστοι κατὰ πόλεις . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.3", length=35)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.3:1", lemma="Ἀθηναῖος", form="Ἀθηναι_ων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26870824, posClass="N", pos="adj", ref="1.089.3-001", tbwid=1, degree="", value="Ἀθηναίων", gender="masc", posAdd="os_h_on", case="gen", head=4, length=8, )
@@ -767,8 +767,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.3:35", ref="", lemma="", tbwid=35, form="", value="·", relation="AuxK", head=0, cid=26870858, pos="punct", length=1, )
 s.words(w)
-words = "Ἀθηναίωνδὲτὸκοινόν,ἐπειδὴαὐτοῖςοἱβάρβαροιἐκτῆςχώραςἀπῆλθον,διεκομίζοντοεὐθὺςὅθενὑπεξέθεντοπαῖδαςκαὶγυναῖκαςκαὶτὴνπεριοῦσανκατασκευήν,καὶτὴνπόλινἀνοικοδομεῖνπαρεσκευάζοντοκαὶτὰτείχη·"
-s['sentence'] = "Ἀθηναίωνδὲτὸκοινόν,ἐπειδὴαὐτοῖςοἱβάρβαροιἐκτῆςχώραςἀπῆλθον,διεκομίζοντοεὐθὺςὅθενὑπεξέθεντοπαῖδαςκαὶγυναῖκαςκαὶτὴνπεριοῦσανκατασκευήν,καὶτὴνπόλινἀνοικοδομεῖνπαρεσκευάζοντοκαὶτὰτείχη·"
+words = "Ἀθηναίων δὲ τὸ κοινόν , ἐπειδὴ αὐτοῖς οἱ βάρβαροι ἐκ τῆς χώρας ἀπῆλθον , διεκομίζοντο εὐθὺς ὅθεν ὑπεξέθεντο παῖδας καὶ γυναῖκας καὶ τὴν περιοῦσαν κατασκευήν , καὶ τὴν πόλιν ἀνοικοδομεῖν παρεσκευάζοντο καὶ τὰ τείχη · "
+s['sentence'] = "Ἀθηναίων δὲ τὸ κοινόν , ἐπειδὴ αὐτοῖς οἱ βάρβαροι ἐκ τῆς χώρας ἀπῆλθον , διεκομίζοντο εὐθὺς ὅθεν ὑπεξέθεντο παῖδας καὶ γυναῖκας καὶ τὴν περιοῦσαν κατασκευήν , καὶ τὴν πόλιν ἀνοικοδομεῖν παρεσκευάζοντο καὶ τὰ τείχη · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.4", length=26)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.4:1", lemma="ὁ", form="τοῦ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26870859, posClass="N", pos="article", ref="1.089.3-035", tbwid=1, value="τοῦ", gender="masc", case="gen", head=4, length=3, )
@@ -915,8 +915,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.4:26", ref="", lemma="", tbwid=26, form="", value=".", relation="AuxK", head=0, cid=26870884, pos="punct", length=1, )
 s.words(w)
-words = "τοῦτεγὰρπεριβόλουβραχέαεἱστήκεικαὶοἰκίαιαἱμὲνπολλαὶἐπεπτώκεσαν,ὀλίγαιδὲπεριῆσαν,ἐναἷςαὐτοὶἐσκήνωσανοἱδυνατοὶτῶνΠερσῶν."
-s['sentence'] = "τοῦτεγὰρπεριβόλουβραχέαεἱστήκεικαὶοἰκίαιαἱμὲνπολλαὶἐπεπτώκεσαν,ὀλίγαιδὲπεριῆσαν,ἐναἷςαὐτοὶἐσκήνωσανοἱδυνατοὶτῶνΠερσῶν."
+words = "τοῦ τε γὰρ περιβόλου βραχέα εἱστήκει καὶ οἰκίαι αἱ μὲν πολλαὶ ἐπεπτώκεσαν , ὀλίγαι δὲ περιῆσαν , ἐν αἷς αὐτοὶ ἐσκήνωσαν οἱ δυνατοὶ τῶν Περσῶν . "
+s['sentence'] = "τοῦ τε γὰρ περιβόλου βραχέα εἱστήκει καὶ οἰκίαι αἱ μὲν πολλαὶ ἐπεπτώκεσαν , ὀλίγαι δὲ περιῆσαν , ἐν αἷς αὐτοὶ ἐσκήνωσαν οἱ δυνατοὶ τῶν Περσῶν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.1", length=52)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.1:1", lemma="Λακεδαιμόνιος", form="Λακεδαιμόνιοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26870885, posClass="N", pos="adj", ref="1.090.1-001", tbwid=1, degree="", value="Λακεδαιμόνιοι", gender="masc", posAdd="os_h_on", case="nom", head=6, length=13, )
@@ -1211,8 +1211,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.1:52", ref="", lemma="", tbwid=52, form="", value=".", relation="AuxK", head=0, cid=26870936, pos="punct", length=1, )
 s.words(w)
-words = "Λακεδαιμόνιοιδὲαἰσθόμενοιτὸμέλλονἦλθονπρεσβείᾳ,τὰμὲνκαὶαὐτοὶἥδιονἂνὁρῶντεςμήτ'ἐκείνουςμήτ'ἄλλονμηδένατεῖχοςἔχοντα,τὸδὲπλέοντῶνξυμμάχωνἐξοτρυνόντωνκαὶφοβουμένωντοῦτεναυτικοῦαὐτῶντὸπλῆθος,ὃπρὶνοὐχὑπῆρχε,καὶτὴνἐςτὸνΜηδικὸνπόλεμοντόλμανγενομένην."
-s['sentence'] = "Λακεδαιμόνιοιδὲαἰσθόμενοιτὸμέλλονἦλθονπρεσβείᾳ,τὰμὲνκαὶαὐτοὶἥδιονἂνὁρῶντεςμήτ'ἐκείνουςμήτ'ἄλλονμηδένατεῖχοςἔχοντα,τὸδὲπλέοντῶνξυμμάχωνἐξοτρυνόντωνκαὶφοβουμένωντοῦτεναυτικοῦαὐτῶντὸπλῆθος,ὃπρὶνοὐχὑπῆρχε,καὶτὴνἐςτὸνΜηδικὸνπόλεμοντόλμανγενομένην."
+words = "Λακεδαιμόνιοι δὲ αἰσθόμενοι τὸ μέλλον ἦλθον πρεσβείᾳ , τὰ μὲν καὶ αὐτοὶ ἥδιον ἂν ὁρῶντες μήτ' ἐκείνους μήτ' ἄλλον μηδένα τεῖχος ἔχοντα , τὸ δὲ πλέον τῶν ξυμμάχων ἐξοτρυνόντων καὶ φοβουμένων τοῦ τε ναυτικοῦ αὐτῶν τὸ πλῆθος , ὃ πρὶν οὐχ ὑπῆρχε , καὶ τὴν ἐς τὸν Μηδικὸν πόλεμον τόλμαν γενομένην . "
+s['sentence'] = "Λακεδαιμόνιοι δὲ αἰσθόμενοι τὸ μέλλον ἦλθον πρεσβείᾳ , τὰ μὲν καὶ αὐτοὶ ἥδιον ἂν ὁρῶντες μήτ' ἐκείνους μήτ' ἄλλον μηδένα τεῖχος ἔχοντα , τὸ δὲ πλέον τῶν ξυμμάχων ἐξοτρυνόντων καὶ φοβουμένων τοῦ τε ναυτικοῦ αὐτῶν τὸ πλῆθος , ὃ πρὶν οὐχ ὑπῆρχε , καὶ τὴν ἐς τὸν Μηδικὸν πόλεμον τόλμαν γενομένην . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.2", length=57)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.2:1", lemma="ἀξιόω", person="3rd", isIndecl="contr", voice="act", form="ἠξίουν", dialect="attic epic ionic", tense="imperf", relation="PRED", mood="ind", number="pl", cid=26870937, posClass="V", pos="verb", ref="1.090.2-001", tbwid=1, value="ἠξίουν", posAdd="ow_pr,ow_denom", head=0, length=6, )
@@ -1517,8 +1517,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.2:57", ref="", lemma="", tbwid=57, form="", value="·", relation="AuxK", head=0, cid=26870993, pos="punct", length=1, )
 s.words(w)
-words = "ἠξίουντεαὐτοὺςμὴτειχίζειν,ἀλλὰκαὶτῶνἔξωΠελοποννήσουμᾶλλονὅσοιςεἱστήκειξυγκαθελεῖνμετὰσφῶντοὺςπεριβόλους,τὸμὲνβουλόμενονκαὶὕποπτοντῆςγνώμηςοὐδηλοῦντεςἐςτοὺςἈθηναίους,ὡςδὲτοῦβαρβάρου,εἰαὖθιςἐπέλθοι,οὐκἂνἔχοντοςἀπὸἐχυροῦποθέν,ὥσπερνῦνἐκτῶνΘηβῶν,ὁρμᾶσθαι·"
-s['sentence'] = "ἠξίουντεαὐτοὺςμὴτειχίζειν,ἀλλὰκαὶτῶνἔξωΠελοποννήσουμᾶλλονὅσοιςεἱστήκειξυγκαθελεῖνμετὰσφῶντοὺςπεριβόλους,τὸμὲνβουλόμενονκαὶὕποπτοντῆςγνώμηςοὐδηλοῦντεςἐςτοὺςἈθηναίους,ὡςδὲτοῦβαρβάρου,εἰαὖθιςἐπέλθοι,οὐκἂνἔχοντοςἀπὸἐχυροῦποθέν,ὥσπερνῦνἐκτῶνΘηβῶν,ὁρμᾶσθαι·"
+words = "ἠξίουν τε αὐτοὺς μὴ τειχίζειν , ἀλλὰ καὶ τῶν ἔξω Πελοποννήσου μᾶλλον ὅσοις εἱστήκει ξυγκαθελεῖν μετὰ σφῶν τοὺς περιβόλους , τὸ μὲν βουλόμενον καὶ ὕποπτον τῆς γνώμης οὐ δηλοῦντες ἐς τοὺς Ἀθηναίους , ὡς δὲ τοῦ βαρβάρου , εἰ αὖθις ἐπέλθοι , οὐκ ἂν ἔχοντος ἀπὸ ἐχυροῦ ποθέν , ὥσπερ νῦν ἐκ τῶν Θηβῶν , ὁρμᾶσθαι · "
+s['sentence'] = "ἠξίουν τε αὐτοὺς μὴ τειχίζειν , ἀλλὰ καὶ τῶν ἔξω Πελοποννήσου μᾶλλον ὅσοις εἱστήκει ξυγκαθελεῖν μετὰ σφῶν τοὺς περιβόλους , τὸ μὲν βουλόμενον καὶ ὕποπτον τῆς γνώμης οὐ δηλοῦντες ἐς τοὺς Ἀθηναίους , ὡς δὲ τοῦ βαρβάρου , εἰ αὖθις ἐπέλθοι , οὐκ ἂν ἔχοντος ἀπὸ ἐχυροῦ ποθέν , ὥσπερ νῦν ἐκ τῶν Θηβῶν , ὁρμᾶσθαι · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3", length=12)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3:1", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26870994, posClass="N", pos="article", ref="1.090.2-057", tbwid=1, value="τήν", gender="fem", case="acc", head=3, length=3, )
@@ -1589,8 +1589,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3:12", ref="", lemma="", tbwid=12, form="", value=".", relation="AuxK", head=0, cid=26871005, pos="punct", length=1, )
 s.words(w)
-words = "τήντεΠελοπόννησονπᾶσινἔφασανἀναχώρησίντεκαὶἀφορμὴνἱκανὴνεἶναι."
-s['sentence'] = "τήντεΠελοπόννησονπᾶσινἔφασανἀναχώρησίντεκαὶἀφορμὴνἱκανὴνεἶναι."
+words = "τήν τε Πελοπόννησον πᾶσιν ἔφασαν ἀναχώρησίν τε καὶ ἀφορμὴν ἱκανὴν εἶναι . "
+s['sentence'] = "τήν τε Πελοπόννησον πᾶσιν ἔφασαν ἀναχώρησίν τε καὶ ἀφορμὴν ἱκανὴν εἶναι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4", length=22)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26871006, posClass="N", pos="article", ref="1.090.3-001", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -1721,8 +1721,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:22", ref="", lemma="", tbwid=22, form="", value="·", relation="AuxK", head=0, cid=26871027, pos="punct", length=1, )
 s.words(w)
-words = "οἱδ'ἈθηναῖοιΘεμιστοκλέουςγνώμῃτοὺςμὲνΛακεδαιμονίουςταῦτ'εἰπόνταςἀποκρινάμενοιὅτιπέμψουσινὡςαὐτοὺςπρέσβειςπερὶὧνλέγουσινεὐθὺςἀπήλλαξαν·"
-s['sentence'] = "οἱδ'ἈθηναῖοιΘεμιστοκλέουςγνώμῃτοὺςμὲνΛακεδαιμονίουςταῦτ'εἰπόνταςἀποκρινάμενοιὅτιπέμψουσινὡςαὐτοὺςπρέσβειςπερὶὧνλέγουσινεὐθὺςἀπήλλαξαν·"
+words = "οἱ δ' Ἀθηναῖοι Θεμιστοκλέους γνώμῃ τοὺς μὲν Λακεδαιμονίους ταῦτ' εἰπόντας ἀποκρινάμενοι ὅτι πέμψουσιν ὡς αὐτοὺς πρέσβεις περὶ ὧν λέγουσιν εὐθὺς ἀπήλλαξαν · "
+s['sentence'] = "οἱ δ' Ἀθηναῖοι Θεμιστοκλέους γνώμῃ τοὺς μὲν Λακεδαιμονίους ταῦτ' εἰπόντας ἀποκρινάμενοι ὅτι πέμψουσιν ὡς αὐτοὺς πρέσβεις περὶ ὧν λέγουσιν εὐθὺς ἀπήλλαξαν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.5", length=39)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.5:1", lemma="ἑαυτοῦ", form="ἑαυτόν", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26871028, posClass="N", pos="adj", ref="1.090.3-022", tbwid=1, degree="", value="ἑαυτὸν", gender="masc", posAdd="art_adj", case="acc", head=4, length=6, )
@@ -1935,8 +1935,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.5:39", ref="", lemma="", tbwid=39, form="", value="·", relation="AuxK", head=0, cid=26871066, pos="punct", length=1, )
 s.words(w)
-words = "ἑαυτὸνδ'ἐκέλευενἀποστέλλεινὡςτάχισταὁΘεμιστοκλῆςἐςτὴνΛακεδαίμονα,ἄλλουςδὲπρὸςἑαυτῷἑλομένουςπρέσβειςμὴεὐθὺςἐκπέμπειν,ἀλλ'ἐπισχεῖνμέχριτοσούτουἕωςἂντὸτεῖχοςἱκανὸνἄρωσινὥστεἀπομάχεσθαιἐκτοῦἀναγκαιοτάτουὕψους·"
-s['sentence'] = "ἑαυτὸνδ'ἐκέλευενἀποστέλλεινὡςτάχισταὁΘεμιστοκλῆςἐςτὴνΛακεδαίμονα,ἄλλουςδὲπρὸςἑαυτῷἑλομένουςπρέσβειςμὴεὐθὺςἐκπέμπειν,ἀλλ'ἐπισχεῖνμέχριτοσούτουἕωςἂντὸτεῖχοςἱκανὸνἄρωσινὥστεἀπομάχεσθαιἐκτοῦἀναγκαιοτάτουὕψους·"
+words = "ἑαυτὸν δ' ἐκέλευεν ἀποστέλλειν ὡς τάχιστα ὁ Θεμιστοκλῆς ἐς τὴν Λακεδαίμονα , ἄλλους δὲ πρὸς ἑαυτῷ ἑλομένους πρέσβεις μὴ εὐθὺς ἐκπέμπειν , ἀλλ' ἐπισχεῖν μέχρι τοσούτου ἕως ἂν τὸ τεῖχος ἱκανὸν ἄρωσιν ὥστε ἀπομάχεσθαι ἐκ τοῦ ἀναγκαιοτάτου ὕψους · "
+s['sentence'] = "ἑαυτὸν δ' ἐκέλευεν ἀποστέλλειν ὡς τάχιστα ὁ Θεμιστοκλῆς ἐς τὴν Λακεδαίμονα , ἄλλους δὲ πρὸς ἑαυτῷ ἑλομένους πρέσβεις μὴ εὐθὺς ἐκπέμπειν , ἀλλ' ἐπισχεῖν μέχρι τοσούτου ἕως ἂν τὸ τεῖχος ἱκανὸν ἄρωσιν ὥστε ἀπομάχεσθαι ἐκ τοῦ ἀναγκαιοτάτου ὕψους · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.6", length=34)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.6:1", lemma="τειχίζω", person="", isIndecl="contr", voice="act", form="τειχίζειν", dialect="attic epic", tense="pres", relation="OBJ_ExD0_PRED_CO", mood="inf", number="", cid=26871067, posClass="V", pos="verb", ref="1.090.3-060", tbwid=1, value="τειχίζειν", posAdd="w_stem,izw", head=2, length=9, )
@@ -2123,8 +2123,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.6:34", ref="", lemma="", tbwid=34, form="", value=".", relation="AuxK", head=0, cid=26871100, pos="punct", length=1, )
 s.words(w)
-words = "τειχίζεινδὲπάνταςπανδημεὶτοὺςἐντῇπόλεικαὶαὐτοὺςκαὶγυναῖκαςκαὶπαῖδας,φειδομένουςμήτεἰδίουμήτεδημοσίουοἰκοδομήματοςὅθεντιςὠφελίαἔσταιἐςτὸἔργον,ἀλλὰκαθαιροῦνταςπάντα."
-s['sentence'] = "τειχίζεινδὲπάνταςπανδημεὶτοὺςἐντῇπόλεικαὶαὐτοὺςκαὶγυναῖκαςκαὶπαῖδας,φειδομένουςμήτεἰδίουμήτεδημοσίουοἰκοδομήματοςὅθεντιςὠφελίαἔσταιἐςτὸἔργον,ἀλλὰκαθαιροῦνταςπάντα."
+words = "τειχίζειν δὲ πάντας πανδημεὶ τοὺς ἐν τῇ πόλει καὶ αὐτοὺς καὶ γυναῖκας καὶ παῖδας  , φειδομένους μήτε ἰδίου μήτε δημοσίου οἰκοδομήματος ὅθεν τις ὠφελία ἔσται ἐς τὸ ἔργον , ἀλλὰ καθαιροῦντας πάντα . "
+s['sentence'] = "τειχίζειν δὲ πάντας πανδημεὶ τοὺς ἐν τῇ πόλει καὶ αὐτοὺς καὶ γυναῖκας καὶ παῖδας  , φειδομένους μήτε ἰδίου μήτε δημοσίου οἰκοδομήματος ὅθεν τις ὠφελία ἔσται ἐς τὸ ἔργον , ἀλλὰ καθαιροῦντας πάντα . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.7", length=14)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.7:1", ref="1.090.4-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871101, posClass="N", pos="conj", length=3, )
@@ -2207,8 +2207,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.7:14", ref="", lemma="", tbwid=14, form="", value=".", relation="AuxK", head=0, cid=26871114, pos="punct", length=1, )
 s.words(w)
-words = "καὶὁμὲνταῦταδιδάξαςκαὶὑπειπὼντἆλλαὅτιαὐτὸςτἀκεῖπράξοιᾤχετο."
-s['sentence'] = "καὶὁμὲνταῦταδιδάξαςκαὶὑπειπὼντἆλλαὅτιαὐτὸςτἀκεῖπράξοιᾤχετο."
+words = "καὶ ὁ μὲν ταῦτα διδάξας καὶ ὑπειπὼν τἆλλα ὅτι αὐτὸς τἀκεῖ πράξοι ᾤχετο . "
+s['sentence'] = "καὶ ὁ μὲν ταῦτα διδάξας καὶ ὑπειπὼν τἆλλα ὅτι αὐτὸς τἀκεῖ πράξοι ᾤχετο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.8", length=16)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.8:1", ref="1.090.5-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871115, posClass="N", pos="conj", length=3, )
@@ -2295,8 +2295,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.8:16", ref="", lemma="", tbwid=16, form="", value=".", relation="AuxK", head=0, cid=26871130, pos="punct", length=1, )
 s.words(w)
-words = "καὶἐςτὴνΛακεδαίμοναἐλθὼνοὐπροσῄειπρὸςτὰςἀρχάς,ἀλλὰδιῆγεκαὶπρουφασίζετο."
-s['sentence'] = "καὶἐςτὴνΛακεδαίμοναἐλθὼνοὐπροσῄειπρὸςτὰςἀρχάς,ἀλλὰδιῆγεκαὶπρουφασίζετο."
+words = "καὶ ἐς τὴν Λακεδαίμονα ἐλθὼν οὐ προσῄει πρὸς τὰς ἀρχάς , ἀλλὰ διῆγε καὶ προυφασίζετο . "
+s['sentence'] = "καὶ ἐς τὴν Λακεδαίμονα ἐλθὼν οὐ προσῄει πρὸς τὰς ἀρχάς , ἀλλὰ διῆγε καὶ προυφασίζετο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.9", length=39)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.9:1", ref="1.090.5-016", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871131, posClass="N", pos="conj", length=3, )
@@ -2517,8 +2517,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.9:39", ref="", lemma="", tbwid=39, form="", value=".", relation="AuxK", head=0, cid=26871169, pos="punct", length=1, )
 s.words(w)
-words = "καὶὁπότετιςαὐτὸνἔροιτοτῶνἐντέλειὄντωνὅτιοὐκἐπέρχεταιἐπὶτὸκοινόν,ἔφητοὺςξυμπρέσβειςἀναμένειν,ἀσχολίαςδέτινοςοὔσηςαὐτοὺςὑπολειφθῆναι,προσδέχεσθαιμέντοιἐντάχειἥξεινκαὶθαυμάζεινὡςοὔπωπάρεισιν."
-s['sentence'] = "καὶὁπότετιςαὐτὸνἔροιτοτῶνἐντέλειὄντωνὅτιοὐκἐπέρχεταιἐπὶτὸκοινόν,ἔφητοὺςξυμπρέσβειςἀναμένειν,ἀσχολίαςδέτινοςοὔσηςαὐτοὺςὑπολειφθῆναι,προσδέχεσθαιμέντοιἐντάχειἥξεινκαὶθαυμάζεινὡςοὔπωπάρεισιν."
+words = "καὶ ὁπότε τις αὐτὸν ἔροιτο τῶν ἐν τέλει ὄντων ὅτι οὐκ ἐπέρχεται ἐπὶ τὸ κοινόν , ἔφη τοὺς ξυμπρέσβεις ἀναμένειν , ἀσχολίας δέ τινος οὔσης αὐτοὺς ὑπολειφθῆναι , προσδέχεσθαι μέντοι ἐν τάχει ἥξειν καὶ θαυμάζειν ὡς οὔπω πάρεισιν . "
+s['sentence'] = "καὶ ὁπότε τις αὐτὸν ἔροιτο τῶν ἐν τέλει ὄντων ὅτι οὐκ ἐπέρχεται ἐπὶ τὸ κοινόν , ἔφη τοὺς ξυμπρέσβεις ἀναμένειν , ἀσχολίας δέ τινος οὔσης αὐτοὺς ὑπολειφθῆναι , προσδέχεσθαι μέντοι ἐν τάχει ἥξειν καὶ θαυμάζειν ὡς οὔπω πάρεισιν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.1", length=32)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.1:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26871170, posClass="N", pos="pron", ref="1.091.1-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=13, length=2, )
@@ -2693,8 +2693,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.1:32", ref="", lemma="", tbwid=32, form="", value=".", relation="AuxK", head=0, cid=26871201, pos="punct", length=1, )
 s.words(w)
-words = "οἱδὲἀκούοντεςτῷμὲνΘεμιστοκλεῖἐπείθοντοδιὰφιλίαναὐτοῦ,τῶνδὲἄλλωνἀφικνουμένωνκαὶσαφῶςκατηγορούντωνὅτιτειχίζεταίτεκαὶἤδηὕψοςλαμβάνει,οὐκεἶχονὅπωςχρὴἀπιστῆσαι."
-s['sentence'] = "οἱδὲἀκούοντεςτῷμὲνΘεμιστοκλεῖἐπείθοντοδιὰφιλίαναὐτοῦ,τῶνδὲἄλλωνἀφικνουμένωνκαὶσαφῶςκατηγορούντωνὅτιτειχίζεταίτεκαὶἤδηὕψοςλαμβάνει,οὐκεἶχονὅπωςχρὴἀπιστῆσαι."
+words = "οἱ δὲ ἀκούοντες τῷ μὲν Θεμιστοκλεῖ ἐπείθοντο διὰ φιλίαν αὐτοῦ , τῶν δὲ ἄλλων ἀφικνουμένων καὶ σαφῶς κατηγορούντων ὅτι τειχίζεταί τε καὶ ἤδη ὕψος λαμβάνει , οὐκ εἶχον ὅπως χρὴ ἀπιστῆσαι . "
+s['sentence'] = "οἱ δὲ ἀκούοντες τῷ μὲν Θεμιστοκλεῖ ἐπείθοντο διὰ φιλίαν αὐτοῦ , τῶν δὲ ἄλλων ἀφικνουμένων καὶ σαφῶς κατηγορούντων ὅτι τειχίζεταί τε καὶ ἤδη ὕψος λαμβάνει , οὐκ εἶχον ὅπως χρὴ ἀπιστῆσαι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.2", length=21)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.2:1", lemma="γιγνώσκω", form="γνούς", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="sg", cid=26871202, posClass="P", pos="participle", ref="1.091.2-001", tbwid=1, value="γνοὺς", gender="masc", posAdd="ath_w_aor,o_stem", case="nom", head=4, length=5, )
@@ -2815,8 +2815,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.2:21", ref="", lemma="", tbwid=21, form="", value=".", relation="AuxK", head=0, cid=26871222, pos="punct", length=1, )
 s.words(w)
-words = "γνοὺςδὲἐκεῖνοςκελεύειαὐτοὺςμὴλόγοιςμᾶλλονπαράγεσθαιἢπέμψαισφῶναὐτῶνἄνδραςοἵτινεςχρηστοὶκαὶπιστῶςἀναγγελοῦσισκεψάμενοι."
-s['sentence'] = "γνοὺςδὲἐκεῖνοςκελεύειαὐτοὺςμὴλόγοιςμᾶλλονπαράγεσθαιἢπέμψαισφῶναὐτῶνἄνδραςοἵτινεςχρηστοὶκαὶπιστῶςἀναγγελοῦσισκεψάμενοι."
+words = "γνοὺς δὲ ἐκεῖνος κελεύει αὐτοὺς μὴ λόγοις μᾶλλον παράγεσθαι ἢ πέμψαι σφῶν αὐτῶν ἄνδρας οἵτινες χρηστοὶ καὶ πιστῶς ἀναγγελοῦσι σκεψάμενοι . "
+s['sentence'] = "γνοὺς δὲ ἐκεῖνος κελεύει αὐτοὺς μὴ λόγοις μᾶλλον παράγεσθαι ἢ πέμψαι σφῶν αὐτῶν ἄνδρας οἵτινες χρηστοὶ καὶ πιστῶς ἀναγγελοῦσι σκεψάμενοι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.3", length=63)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.3:1", lemma="ἀποστέλλω", person="3rd", isIndecl="nu_movable", voice="act", form="ἀποστέλλουσιν", dialect="attic epic doric ionic", tense="pres", relation="PRED_CO", mood="ind", number="pl", cid=26871223, posClass="V", pos="verb", ref="1.091.3-001", tbwid=1, value="ἀποστέλλουσιν", posAdd="w_stem,ellw", head=4, length=13, )
@@ -3145,8 +3145,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.3:63", ref="", lemma="", tbwid=63, form="", value=".", relation="AuxK", head=0, cid=26871285, pos="punct", length=1, )
 s.words(w)
-words = "ἀποστέλλουσινοὖν,καὶπερὶαὐτῶνὁΘεμιστοκλῆςτοῖςἈθηναίοιςκρύφαπέμπεικελεύωνὡςἥκισταἐπιφανῶςκατασχεῖνκαὶμὴἀφεῖναιπρὶνἂναὐτοὶπάλινκομισθῶσινἤδηγὰρκαὶἧκοναὐτῷοἱξυμπρέσβεις,ἉβρώνιχόςτεὁΛυσικλέουςκαὶἈριστείδηςὁΛυσιμάχου,ἀγγέλλοντεςἔχεινἱκανῶςτὸτεῖχοςἐφοβεῖτογὰρμὴοἱΛακεδαιμόνιοισφᾶς,ὁπότεσαφῶςἀκούσειαν,οὐκέτιἀφῶσιν."
-s['sentence'] = "ἀποστέλλουσινοὖν,καὶπερὶαὐτῶνὁΘεμιστοκλῆςτοῖςἈθηναίοιςκρύφαπέμπεικελεύωνὡςἥκισταἐπιφανῶςκατασχεῖνκαὶμὴἀφεῖναιπρὶνἂναὐτοὶπάλινκομισθῶσινἤδηγὰρκαὶἧκοναὐτῷοἱξυμπρέσβεις,ἉβρώνιχόςτεὁΛυσικλέουςκαὶἈριστείδηςὁΛυσιμάχου,ἀγγέλλοντεςἔχεινἱκανῶςτὸτεῖχοςἐφοβεῖτογὰρμὴοἱΛακεδαιμόνιοισφᾶς,ὁπότεσαφῶςἀκούσειαν,οὐκέτιἀφῶσιν."
+words = "ἀποστέλλουσιν οὖν , καὶ περὶ αὐτῶν ὁ Θεμιστοκλῆς τοῖς Ἀθηναίοις κρύφα πέμπει κελεύων ὡς ἥκιστα ἐπιφανῶς κατασχεῖν καὶ μὴ ἀφεῖναι πρὶν ἂν αὐτοὶ πάλιν κομισθῶσιν  ἤδη γὰρ καὶ ἧκον αὐτῷ οἱ ξυμπρέσβεις , Ἁβρώνιχός τε ὁ Λυσικλέους καὶ Ἀριστείδης ὁ Λυσιμάχου , ἀγγέλλοντες ἔχειν ἱκανῶς τὸ τεῖχος  ἐφοβεῖτο γὰρ μὴ οἱ Λακεδαιμόνιοι σφᾶς , ὁπότε σαφῶς ἀκούσειαν , οὐκέτι ἀφῶσιν . "
+s['sentence'] = "ἀποστέλλουσιν οὖν , καὶ περὶ αὐτῶν ὁ Θεμιστοκλῆς τοῖς Ἀθηναίοις κρύφα πέμπει κελεύων ὡς ἥκιστα ἐπιφανῶς κατασχεῖν καὶ μὴ ἀφεῖναι πρὶν ἂν αὐτοὶ πάλιν κομισθῶσιν  ἤδη γὰρ καὶ ἧκον αὐτῷ οἱ ξυμπρέσβεις , Ἁβρώνιχός τε ὁ Λυσικλέους καὶ Ἀριστείδης ὁ Λυσιμάχου , ἀγγέλλοντες ἔχειν ἱκανῶς τὸ τεῖχος  ἐφοβεῖτο γὰρ μὴ οἱ Λακεδαιμόνιοι σφᾶς , ὁπότε σαφῶς ἀκούσειαν , οὐκέτι ἀφῶσιν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.4", length=63)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.4:1", lemma="", isIndecl="proclitic indeclform", form="", dialect="", relation="ATR", number="pl", cid=26871286, pos="article", posClass="N", ref="1.091.4-001", tbwid=1, value="οἵ", gender="masc", case="nom", head=4, length=2, )
@@ -3491,8 +3491,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.4:63", ref="", lemma="", tbwid=63, form="", value=".", relation="AuxK", head=0, cid=26871348, pos="punct", length=1, )
 s.words(w)
-words = "οἵτεοὖνἈθηναῖοιτοὺςπρέσβεις,ὥσπερἐπεστάλη,κατεῖχον,καὶὁΘεμιστοκλῆςἐπελθὼντοῖςΛακεδαιμονίοιςἐνταῦθαδὴφανερῶςεἶπενὅτιἡμὲνπόλιςσφῶντετείχισταιἤδηὥστεἱκανὴεἶναισῴζειντοὺςἐνοικοῦντας,εἰδέτιβούλονταιΛακεδαιμόνιοιἢοἱξύμμαχοιπρεσβεύεσθαιπαρὰσφᾶς,ὡςπρὸςδιαγιγνώσκονταςτὸλοιπὸνἰέναιτάτεσφίσιναὐτοῖςξύμφορακαὶτὰκοινά."
-s['sentence'] = "οἵτεοὖνἈθηναῖοιτοὺςπρέσβεις,ὥσπερἐπεστάλη,κατεῖχον,καὶὁΘεμιστοκλῆςἐπελθὼντοῖςΛακεδαιμονίοιςἐνταῦθαδὴφανερῶςεἶπενὅτιἡμὲνπόλιςσφῶντετείχισταιἤδηὥστεἱκανὴεἶναισῴζειντοὺςἐνοικοῦντας,εἰδέτιβούλονταιΛακεδαιμόνιοιἢοἱξύμμαχοιπρεσβεύεσθαιπαρὰσφᾶς,ὡςπρὸςδιαγιγνώσκονταςτὸλοιπὸνἰέναιτάτεσφίσιναὐτοῖςξύμφορακαὶτὰκοινά."
+words = "οἵ τε οὖν Ἀθηναῖοι τοὺς πρέσβεις , ὥσπερ ἐπεστάλη , κατεῖχον , καὶ ὁ Θεμιστοκλῆς ἐπελθὼν τοῖς Λακεδαιμονίοις ἐνταῦθα δὴ φανερῶς εἶπεν ὅτι ἡ μὲν πόλις σφῶν τετείχισται ἤδη ὥστε ἱκανὴ εἶναι σῴζειν τοὺς ἐνοικοῦντας , εἰ δέ τι βούλονται Λακεδαιμόνιοι ἢ οἱ ξύμμαχοι πρεσβεύεσθαι παρὰ σφᾶς , ὡς πρὸς διαγιγνώσκοντας τὸ λοιπὸν ἰέναι τά τε σφίσιν αὐτοῖς ξύμφορα καὶ τὰ κοινά . "
+s['sentence'] = "οἵ τε οὖν Ἀθηναῖοι τοὺς πρέσβεις , ὥσπερ ἐπεστάλη , κατεῖχον , καὶ ὁ Θεμιστοκλῆς ἐπελθὼν τοῖς Λακεδαιμονίοις ἐνταῦθα δὴ φανερῶς εἶπεν ὅτι ἡ μὲν πόλις σφῶν τετείχισται ἤδη ὥστε ἱκανὴ εἶναι σῴζειν τοὺς ἐνοικοῦντας , εἰ δέ τι βούλονται Λακεδαιμόνιοι ἢ οἱ ξύμμαχοι πρεσβεύεσθαι παρὰ σφᾶς , ὡς πρὸς διαγιγνώσκοντας τὸ λοιπὸν ἰέναι τά τε σφίσιν αὐτοῖς ξύμφορα καὶ τὰ κοινά . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.5", length=33)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.5:1", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871349, posClass="N", pos="article", ref="1.091.5-001", tbwid=1, value="τήν", gender="fem", case="acc", head=4, length=3, )
@@ -3677,8 +3677,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.5:33", ref="", lemma="", tbwid=33, form="", value=".", relation="AuxK", head=0, cid=26871381, pos="punct", length=1, )
 s.words(w)
-words = "τήντεγὰρπόλινὅτεἐδόκειἐκλιπεῖνἄμεινονεἶναικαὶἐςτὰςναῦςἐσβῆναι,ἄνευἐκείνωνἔφασανγνόντεςτολμῆσαι,καὶὅσααὖμετ'ἐκείνωνβουλεύεσθαι,οὐδενὸςὕστεροιγνώμῃφανῆναι."
-s['sentence'] = "τήντεγὰρπόλινὅτεἐδόκειἐκλιπεῖνἄμεινονεἶναικαὶἐςτὰςναῦςἐσβῆναι,ἄνευἐκείνωνἔφασανγνόντεςτολμῆσαι,καὶὅσααὖμετ'ἐκείνωνβουλεύεσθαι,οὐδενὸςὕστεροιγνώμῃφανῆναι."
+words = "τήν τε γὰρ πόλιν ὅτε ἐδόκει ἐκλιπεῖν ἄμεινον εἶναι καὶ ἐς τὰς ναῦς ἐσβῆναι , ἄνευ ἐκείνων ἔφασαν γνόντες τολμῆσαι , καὶ ὅσα αὖ μετ' ἐκείνων βουλεύεσθαι , οὐδενὸς ὕστεροι γνώμῃ φανῆναι . "
+s['sentence'] = "τήν τε γὰρ πόλιν ὅτε ἐδόκει ἐκλιπεῖν ἄμεινον εἶναι καὶ ἐς τὰς ναῦς ἐσβῆναι , ἄνευ ἐκείνων ἔφασαν γνόντες τολμῆσαι , καὶ ὅσα αὖ μετ' ἐκείνων βουλεύεσθαι , οὐδενὸς ὕστεροι γνώμῃ φανῆναι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.6", length=25)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.6:1", lemma="δοκέω", person="", isIndecl="contr", voice="act", form="δοκεῖν", dialect="attic epic doric", tense="pres", relation="OBJ_ExD0_PRED", mood="inf", number="", cid=26871382, posClass="V", pos="verb", ref="1.091.6-001", tbwid=1, value="δοκεῖν", posAdd="ew_pr,ew_denom", head=0, length=6, )
@@ -3823,8 +3823,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.6:25", ref="", lemma="", tbwid=25, form="", value="·", relation="AuxK", head=0, cid=26871406, pos="punct", length=1, )
 s.words(w)
-words = "δοκεῖνοὖνσφίσικαὶνῦνἄμεινονεἶναιτὴνἑαυτῶνπόλιντεῖχοςἔχειν,καὶἰδίᾳτοῖςπολίταιςκαὶἐςτοὺςπάνταςξυμμάχουςὠφελιμώτερονἔσεσθαι·"
-s['sentence'] = "δοκεῖνοὖνσφίσικαὶνῦνἄμεινονεἶναιτὴνἑαυτῶνπόλιντεῖχοςἔχειν,καὶἰδίᾳτοῖςπολίταιςκαὶἐςτοὺςπάνταςξυμμάχουςὠφελιμώτερονἔσεσθαι·"
+words = "δοκεῖν οὖν σφίσι καὶ νῦν ἄμεινον εἶναι τὴν ἑαυτῶν πόλιν τεῖχος ἔχειν , καὶ ἰδίᾳ τοῖς πολίταις καὶ ἐς τοὺς πάντας ξυμμάχους ὠφελιμώτερον ἔσεσθαι · "
+s['sentence'] = "δοκεῖν οὖν σφίσι καὶ νῦν ἄμεινον εἶναι τὴν ἑαυτῶν πόλιν τεῖχος ἔχειν , καὶ ἰδίᾳ τοῖς πολίταις καὶ ἐς τοὺς πάντας ξυμμάχους ὠφελιμώτερον ἔσεσθαι · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.7", length=18)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.7:1", lemma="οὐ", form="οὐ", isIndecl="proclitic indeclform", dialect="", relation="AuxZ", cid=26871407, pos="adverb", posClass="N", tbwid=1, ref="1.091.7-001", degree="", value="οὐ", head=5, length=2, )
@@ -3931,8 +3931,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.7:18", ref="", lemma="", tbwid=18, form="", value=".", relation="AuxK", head=0, cid=26871424, pos="punct", length=1, )
 s.words(w)
-words = "οὐγὰροἷόντ'εἶναιμὴἀπὸἀντιπάλουπαρασκευῆςὁμοῖόντιἢἴσονἐςτὸκοινὸνβουλεύεσθαι."
-s['sentence'] = "οὐγὰροἷόντ'εἶναιμὴἀπὸἀντιπάλουπαρασκευῆςὁμοῖόντιἢἴσονἐςτὸκοινὸνβουλεύεσθαι."
+words = "οὐ γὰρ οἷόν τ' εἶναι μὴ ἀπὸ ἀντιπάλου παρασκευῆς ὁμοῖόν τι ἢ ἴσον ἐς τὸ κοινὸν βουλεύεσθαι . "
+s['sentence'] = "οὐ γὰρ οἷόν τ' εἶναι μὴ ἀπὸ ἀντιπάλου παρασκευῆς ὁμοῖόν τι ἢ ἴσον ἐς τὸ κοινὸν βουλεύεσθαι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.8", length=14)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.8:1", ref="1.091.7-018", lemma="ἤ1", tbwid=1, isIndecl="indeclform", form="ἤ", dialect="", value="ἢ", relation="AuxY", head=8, cid=26871425, posClass="N", pos="conj", length=1, )
@@ -4011,8 +4011,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.91.8:14", ref="", lemma="", tbwid=14, form="", value=".", relation="AuxK", head=0, cid=26871438, pos="punct", length=1, )
 s.words(w)
-words = "ἢπάνταςοὖνἀτειχίστουςἔφηχρῆναιξυμμαχεῖνἢκαὶτάδενομίζεινὀρθῶςἔχειν."
-s['sentence'] = "ἢπάνταςοὖνἀτειχίστουςἔφηχρῆναιξυμμαχεῖνἢκαὶτάδενομίζεινὀρθῶςἔχειν."
+words = "ἢ πάντας οὖν ἀτειχίστους ἔφη χρῆναι ξυμμαχεῖν ἢ καὶ τάδε νομίζειν ὀρθῶς ἔχειν . "
+s['sentence'] = "ἢ πάντας οὖν ἀτειχίστους ἔφη χρῆναι ξυμμαχεῖν ἢ καὶ τάδε νομίζειν ὀρθῶς ἔχειν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.92.1", length=53)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.92.1:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26871439, posClass="N", pos="article", ref="1.092.1-001", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -4293,8 +4293,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.92.1:53", ref="", lemma="", tbwid=53, form="", value=".", relation="AuxK", head=0, cid=26871490, pos="punct", length=1, )
 s.words(w)
-words = "οἱδὲΛακεδαιμόνιοιἀκούσαντεςὀργὴνμὲνφανερὰνοὐκἐποιοῦντοτοῖςἈθηναίοιςοὐδὲγὰρἐπὶκωλύμῃ,ἀλλὰγνώμηςπαραινέσειδῆθεντῷκοινῷἐπρεσβεύσαντο,ἅμαδὲκαὶπροσφιλεῖςὄντεςἐντῷτότεδιὰτὴνἐςτὸνΜῆδονπροθυμίαντὰμάλιστ'αὐτοῖςἐτύγχανον,τῆςμέντοιβουλήσεωςἁμαρτάνοντεςἀδήλωςἤχθοντο."
-s['sentence'] = "οἱδὲΛακεδαιμόνιοιἀκούσαντεςὀργὴνμὲνφανερὰνοὐκἐποιοῦντοτοῖςἈθηναίοιςοὐδὲγὰρἐπὶκωλύμῃ,ἀλλὰγνώμηςπαραινέσειδῆθεντῷκοινῷἐπρεσβεύσαντο,ἅμαδὲκαὶπροσφιλεῖςὄντεςἐντῷτότεδιὰτὴνἐςτὸνΜῆδονπροθυμίαντὰμάλιστ'αὐτοῖςἐτύγχανον,τῆςμέντοιβουλήσεωςἁμαρτάνοντεςἀδήλωςἤχθοντο."
+words = "οἱ δὲ Λακεδαιμόνιοι ἀκούσαντες ὀργὴν μὲν φανερὰν οὐκ ἐποιοῦντο τοῖς Ἀθηναίοις  οὐ δὲ γὰρ ἐπὶ κωλύμῃ , ἀλλὰ γνώμης παραινέσει δῆθεν τῷ κοινῷ ἐπρεσβεύσαντο , ἅμα δὲ καὶ προσφιλεῖς ὄντες ἐν τῷ τότε διὰ τὴν ἐς τὸν Μῆδον προθυμίαν τὰ μάλιστ' αὐτοῖς ἐτύγχανον  , τῆς μέντοι βουλήσεως ἁμαρτάνοντες ἀδήλως ἤχθοντο . "
+s['sentence'] = "οἱ δὲ Λακεδαιμόνιοι ἀκούσαντες ὀργὴν μὲν φανερὰν οὐκ ἐποιοῦντο τοῖς Ἀθηναίοις  οὐ δὲ γὰρ ἐπὶ κωλύμῃ , ἀλλὰ γνώμης παραινέσει δῆθεν τῷ κοινῷ ἐπρεσβεύσαντο , ἅμα δὲ καὶ προσφιλεῖς ὄντες ἐν τῷ τότε διὰ τὴν ἐς τὸν Μῆδον προθυμίαν τὰ μάλιστ' αὐτοῖς ἐτύγχανον  , τῆς μέντοι βουλήσεως ἁμαρτάνοντες ἀδήλως ἤχθοντο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.92.2", length=9)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.92.2:1", lemma="", isIndecl="proclitic indeclform", form="", dialect="", relation="ATR", number="pl", cid=26871491, pos="article", posClass="N", ref="1.092.1-050", tbwid=1, value="οἵ", gender="masc", case="nom", head=3, length=2, )
@@ -4339,8 +4339,8 @@ w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.92.2:8", ref="1
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.92.2:9", ref="", lemma="", tbwid=9, form="", value=".", relation="AuxK", head=0, cid=26871499, pos="punct", length=1, )
 s.words(w)
-words = "οἵτεπρέσβειςἑκατέρωνἀπῆλθονἐπ'οἴκουἀνεπικλήτως."
-s['sentence'] = "οἵτεπρέσβειςἑκατέρωνἀπῆλθονἐπ'οἴκουἀνεπικλήτως."
+words = "οἵ τε πρέσβεις ἑκατέρων ἀπῆλθον ἐπ' οἴκου ἀνεπικλήτως . "
+s['sentence'] = "οἵ τε πρέσβεις ἑκατέρων ἀπῆλθον ἐπ' οἴκου ἀνεπικλήτως . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.1", length=12)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.1:1", lemma="οὗτος", form="τούτῳ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871500, posClass="N", pos="adj", ref="1.093.1-001", tbwid=1, degree="", value="τούτῳ", gender="masc", posAdd="pron_adj1", case="dat", head=3, length=5, )
@@ -4411,584 +4411,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.1:12", ref="", lemma="", tbwid=12, form="", value=".", relation="AuxK", head=0, cid=26871511, pos="punct", length=1, )
 s.words(w)
-words = "τούτῳτῷτρόπῳοἱἈθηναῖοιτὴνπόλινἐτείχισανἐνὀλίγῳχρόνῳ."
-s['sentence'] = "τούτῳτῷτρόπῳοἱἈθηναῖοιτὴνπόλινἐτείχισανἐνὀλίγῳχρόνῳ."
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10", length=32)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:1", lemma="βούλομαι", person="3rd", isIndecl="", voice="mp", form="ἐβούλετο", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871697, posClass="V", pos="verb", ref="1.093.6-001", tbwid=1, value="ἐβούλετο", posAdd="w_stem,nw", head=15, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βούλομαι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="βούλομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βούλομαι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:2", ref="1.093.6-002", lemma="γάρ", tbwid=2, isIndecl="indeclform", form="γάρ", dialect="", value="γὰρ", relation="AuxY", head=1, cid=26871698, posClass="N", pos="particle", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="γάρ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:3", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871699, posClass="N", pos="article", ref="1.093.6-003", tbwid=3, value="τῷ", gender="neut", case="dat", head=4, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:4", lemma="μέγεθος", form="μεγέθει", isIndecl="", dialect="", relation="ADV_CO", number="sg", cid=26871700, posClass="N", pos="noun", ref="1.093.6-004", tbwid=4, value="μεγέθει", gender="neut", posAdd="hs_eos", case="dat", head=5, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέγεθος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="μέγεθος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέγεθος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:5", ref="1.093.6-005", lemma="καί", tbwid=5, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=8, cid=26871701, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:6", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871702, posClass="N", pos="article", ref="1.093.6-006", tbwid=6, value="τῷ", gender="neut", case="dat", head=7, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:7", lemma="πάχος", form="πάχει", isIndecl="", dialect="", relation="ADV_CO", number="sg", cid=26871703, posClass="N", pos="noun", ref="1.093.6-007", tbwid=7, value="πάχει", gender="neut", posAdd="hs_eos", case="dat", head=5, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάχος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="πάχος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάχος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:8", lemma="ἀφίστημι", person="", isIndecl="causal pres_redupl", voice="act", form="ἀφιστάναι", dialect="", tense="pres", relation="OBJ", mood="inf", number="", cid=26871704, posClass="V", pos="verb", ref="1.093.6-008", tbwid=8, value="ἀφιστάναι", posAdd="ami_pr", head=1, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀφίστημι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἀφίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀφίστημι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:9", lemma="ὁ", form="τα_ς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871705, posClass="N", pos="article", ref="1.093.6-009", tbwid=9, value="τὰς", gender="fem", case="acc", head=12, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:10", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871706, posClass="N", pos="article", ref="1.093.6-010", tbwid=10, value="τῶν", gender="masc", case="gen", head=11, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:11", lemma="πολέμιος", form="πολεμίων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871707, posClass="N", pos="adj", ref="1.093.6-011", tbwid=11, degree="", value="πολεμίων", gender="masc", posAdd="os_on", case="gen", head=12, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολέμιος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="πολέμιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολέμιος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:12", lemma="ἐπιβουλή", form="ἐπιβουλα_ς", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871708, posClass="N", pos="noun", ref="1.093.6-012", tbwid=12, value="ἐπιβουλάς", gender="fem", posAdd="h_hs", case="acc", head=8, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιβουλή"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐπιβουλή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιβουλή" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:13", ref="", lemma="", tbwid=13, form="", value=",", relation="AuxX", head=15, cid=26871709, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:14", lemma="ἄνθρωπος", form="ἀνθρώπων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871710, posClass="N", pos="noun", ref="1.093.6-014", tbwid=14, value="ἀνθρώπων", gender="masc", posAdd="os_ou", case="gen", head=23, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνθρωπος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἄνθρωπος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνθρωπος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:15", ref="1.093.6-015", lemma="τε", tbwid=15, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="COORD", head=0, cid=26871711, posClass="N", pos="particle", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:16", lemma="νομίζω", person="3rd", isIndecl="nu_movable", voice="act", form="ἐνόμιζεν", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871712, posClass="V", pos="verb", ref="1.093.6-016", tbwid=16, value="ἐνόμιζεν", posAdd="w_stem,izw", head=15, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:17", lemma="ὀλίγος", form="ὀλίγων", isIndecl="", dialect="", relation="ATR_CO", number="pl", cid=26871713, posClass="N", pos="adj", ref="1.093.6-017", tbwid=17, degree="", value="ὀλίγων", gender="masc", posAdd="os_h_on", case="gen", head=18, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὀλίγος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὀλίγος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὀλίγος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:18", ref="1.093.6-018", lemma="καί", tbwid=18, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=14, cid=26871714, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:19", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871715, posClass="N", pos="article", ref="1.093.6-019", tbwid=19, value="τῶν", gender="masc", case="gen", head=20, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:20", lemma="ἀχρεῖος", form="ἀχρειοτάτων", isIndecl="", dialect="", relation="ATR_CO", number="pl", cid=26871716, posClass="N", pos="adj", ref="1.093.6-020", tbwid=20, degree="superl", value="ἀχρειοτάτων", gender="masc", posAdd="os_on", case="gen", head=18, length=11, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀχρεῖος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἀχρεῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀχρεῖος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:21", lemma="ἀρκέω", person="", isIndecl="contr", voice="act", form="ἀρκέσειν", dialect="attic epic", tense="fut", relation="OBJ_CO", mood="inf", number="", cid=26871717, posClass="V", pos="verb", ref="1.093.6-021", tbwid=21, value="ἀρκέσειν", posAdd="reg_fut,e_stem", head=26, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀρκέω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἀρκέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀρκέω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:22", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871718, posClass="N", pos="article", ref="1.093.6-022", tbwid=22, value="τὴν", gender="fem", case="acc", head=23, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:23", lemma="φυλακή", form="φυλακήν", isIndecl="", dialect="attic epic ionic", relation="OBJ", number="sg", cid=26871719, posClass="N", pos="noun", ref="1.093.6-023", tbwid=23, value="φυλακήν", gender="fem", posAdd="h_hs", case="acc", head=21, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φυλακή"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="φυλακή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φυλακή" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:24", ref="", lemma="", tbwid=24, form="", value=",", relation="AuxX", head=26, cid=26871720, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:25", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871721, posClass="N", pos="article", ref="1.093.6-025", tbwid=25, value="τοὺς", gender="masc", case="acc", head=27, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:26", ref="1.093.6-026", lemma="δέ", tbwid=26, isIndecl="indeclform", form="δέ", dialect="", value="δ'", relation="COORD", head=16, cid=26871722, posClass="N", pos="particle", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:27", lemma="ἄλλος", form="ἄλλους", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26871723, posClass="N", pos="adj", ref="1.093.6-027", tbwid=27, degree="", value="ἄλλους", gender="masc", posAdd="art_adj", case="acc", head=31, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:28", ref="1.093.6-028", lemma="εἰς", tbwid=28, isIndecl="proclitic indeclform", form="ἐς", dialect="", value="ἐς", relation="AuxP", head=31, cid=26871724, posClass="N", pos="prep", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="εἰς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:29", lemma="ὁ", form="τα_ς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871725, posClass="N", pos="article", ref="1.093.6-029", tbwid=29, value="τὰς", gender="fem", case="acc", head=30, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:30", lemma="ναῦς", form="ναῦς", isIndecl="indeclform", dialect="attic", relation="OBJ", number="pl", cid=26871726, posClass="N", pos="noun", ref="1.093.6-030", tbwid=30, value="ναῦς", gender="fem", posAdd="irreg_decl3", case="acc", head=28, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:31", lemma="εἰσβαίνω", person="", isIndecl="short_eis", voice="mid", form="ἐσβήσεσθαι", dialect="", tense="fut", relation="OBJ_CO", mood="inf", number="", cid=26871727, posClass="V", pos="verb", ref="1.093.6-031", tbwid=31, value="ἐσβήσεσθαι", posAdd="reg_fut,a_stem", head=26, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰσβαίνω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="εἰσβαίνω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰσβαίνω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:32", ref="", lemma="", tbwid=32, form="", value=".", relation="AuxK", head=0, cid=26871728, pos="punct", length=1, )
-s.words(w)
-words = "ἐβούλετογὰρτῷμεγέθεικαὶτῷπάχειἀφιστάναιτὰςτῶνπολεμίωνἐπιβουλάς,ἀνθρώπωντεἐνόμιζενὀλίγωνκαὶτῶνἀχρειοτάτωνἀρκέσειντὴνφυλακήν,τοὺςδ'ἄλλουςἐςτὰςναῦςἐσβήσεσθαι."
-s['sentence'] = "ἐβούλετογὰρτῷμεγέθεικαὶτῷπάχειἀφιστάναιτὰςτῶνπολεμίωνἐπιβουλάς,ἀνθρώπωντεἐνόμιζενὀλίγωνκαὶτῶνἀχρειοτάτωνἀρκέσειντὴνφυλακήν,τοὺςδ'ἄλλουςἐςτὰςναῦςἐσβήσεσθαι."
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11", length=25)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:1", lemma="ὁ", form="ταῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871729, posClass="N", pos="article", ref="1.093.7-001", tbwid=1, value="ταῖς", gender="fem", case="dat", head=3, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:2", ref="1.093.7-002", lemma="γάρ", tbwid=2, isIndecl="indeclform", form="γάρ", dialect="", value="γὰρ", relation="AuxY", head=5, cid=26871730, posClass="N", pos="particle", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="γάρ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:3", lemma="ναῦς", form="ναυσί", isIndecl="indeclform", dialect="attic doric", relation="OBJ", number="pl", cid=26871731, posClass="N", pos="noun", ref="1.093.7-003", tbwid=3, value="ναυσὶ", gender="fem", posAdd="irreg_decl3", case="dat", head=5, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:4", lemma="μάλιστα", form="μάλιστα", isIndecl="indeclform", dialect="", relation="ADV", cid=26871732, pos="adverb", posClass="N", tbwid=4, ref="1.093.7-004", degree="superl", value="μάλιστα", head=5, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μάλιστα"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="μάλιστα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μάλιστα" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:5", lemma="πρόσκειμαι", person="3rd", isIndecl="", voice="mp", form="προσέκειτο", dialect="", tense="imperf", relation="PRED", mood="ind", number="sg", cid=26871733, posClass="V", pos="verb", ref="1.093.7-005", tbwid=5, value="προσέκειτο", posAdd="ath_primary", head=0, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρόσκειμαι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="πρόσκειμαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρόσκειμαι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:6", ref="", lemma="", tbwid=6, form="", value=",", relation="AuxX", head=7, cid=26871734, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:7", lemma="εἶδον", form="ἰδών", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="sg", cid=26871735, posClass="P", pos="participle", ref="1.093.7-007", tbwid=7, value="ἰδών", gender="masc", posAdd="aor2", case="nom", head=5, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἶδον"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="εἶδον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἶδον" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:8", ref="", lemma="", tbwid=8, form="", value=",", relation="AuxX", head=9, cid=26871736, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:9", ref="1.093.7-009", lemma="", tbwid=9, degree="", form="", value="ὡς", relation="AuxC", head=7, cid=26871737, pos="adverb", length=2, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:10", lemma="ἐγώ", person="1st", form="ἐμοί", isIndecl="indeclform", dialect="", relation="OBJ", number="sg", cid=26871738, posClass="N", pos="pron", ref="1.093.7-010", tbwid=10, value="ἐμοὶ", gender="masc", posAdd="pron1", case="dat", head=11, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐγώ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐγώ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐγώ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:11", lemma="δοκέω", person="3rd", isIndecl="contr", voice="act", form="δοκεῖ", dialect="attic epic doric ionic", tense="pres", relation="ADV", mood="ind", number="sg", cid=26871739, posClass="V", pos="verb", ref="1.093.7-011", tbwid=11, value="δοκεῖ", posAdd="ew_pr,ew_denom", head=9, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δοκέω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="δοκέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δοκέω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:12", ref="", lemma="", tbwid=12, form="", value=",", relation="AuxX", head=9, cid=26871740, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:13", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871741, posClass="N", pos="article", ref="1.093.7-013", tbwid=13, value="τῆς", gender="fem", case="gen", head=15, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:14", lemma="βασιλεύς", form="βασιλέω^ς", isIndecl="", dialect="attic ionic", relation="ATR", number="sg", cid=26871742, posClass="N", pos="noun", ref="1.093.7-014", tbwid=14, value="βασιλέως", gender="masc", posAdd="eus_ews", case="gen", head=15, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βασιλεύς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="βασιλεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βασιλεύς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:15", lemma="στρατιά", form="στρατιᾶς", isIndecl="", dialect="attic doric aeolic", relation="ATR", number="sg", cid=26871743, posClass="N", pos="noun", ref="1.093.7-015", tbwid=15, value="στρατιᾶς", gender="fem", posAdd="h_hs", case="gen", head=19, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:στρατιά"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="στρατιά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:στρατιά" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:16", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871744, posClass="N", pos="article", ref="1.093.7-016", tbwid=16, value="τὴν", gender="fem", case="acc", head=19, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:17", ref="1.093.7-017", lemma="κατά", tbwid=17, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=19, cid=26871745, posClass="N", pos="prep", length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:18", lemma="θάλασσα", form="θάλασσαν", isIndecl="", dialect="", relation="ATR", number="sg", cid=26871746, posClass="N", pos="noun", ref="1.093.7-018", tbwid=18, value="θάλασσαν", gender="fem", posAdd="a_hs", case="acc", head=17, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:θάλασσα"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="θάλασσα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:θάλασσα" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:19", lemma="ἔφοδοϲ", form="ἔφοδον", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26871747, posClass="N", pos="noun", ref="1.093.7-019", tbwid=19, value="ἔφοδον", gender="fem", posAdd="os_ou", case="acc", head=7, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔφοδοϲ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἔφοδοϲ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔφοδοϲ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:20", lemma="εὔπορος", form="εὐπορωτέρα_ν", isIndecl="", dialect="attic doric aeolic", relation="PNOM", number="sg", cid=26871748, posClass="N", pos="adj", ref="1.093.7-020", tbwid=20, degree="comp", value="εὐπορωτέραν", gender="fem", posAdd="os_on", case="acc", head=24, length=11, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὔπορος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="εὔπορος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὔπορος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:21", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ADV", number="sg", cid=26871749, posClass="N", pos="pron", ref="1.093.7-021", tbwid=21, value="τῆς", gender="fem", posAdd="article", case="gen", head=20, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:22", ref="1.093.7-022", lemma="κατά", tbwid=22, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=21, cid=26871750, posClass="N", pos="prep", length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:23", lemma="γῆ", form="γῆν", isIndecl="contr", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871751, posClass="N", pos="noun", ref="1.093.7-023", tbwid=23, value="γῆν", gender="fem", posAdd="eh_ehs", case="acc", head=22, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="γῆ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:24", lemma="εἰμί", form="οὖσαν", isIndecl="", voice="act", dialect="attic epic doric ionic", tense="pres", relation="ATV", mood="part", number="sg", cid=26871752, posClass="P", pos="participle", ref="1.093.7-024", tbwid=24, value="οὖσαν", gender="fem", posAdd="irreg_mi", case="acc", head=19, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰμί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="εἰμί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰμί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:25", ref="", lemma="", tbwid=25, form="", value="·", relation="AuxK", head=0, cid=26871753, pos="punct", length=1, )
-s.words(w)
-words = "ταῖςγὰρναυσὶμάλισταπροσέκειτο,ἰδών,ὡςἐμοὶδοκεῖ,τῆςβασιλέωςστρατιᾶςτὴνκατὰθάλασσανἔφοδονεὐπορωτέραντῆςκατὰγῆνοὖσαν·"
-s['sentence'] = "ταῖςγὰρναυσὶμάλισταπροσέκειτο,ἰδών,ὡςἐμοὶδοκεῖ,τῆςβασιλέωςστρατιᾶςτὴνκατὰθάλασσανἔφοδονεὐπορωτέραντῆςκατὰγῆνοὖσαν·"
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12", length=31)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:1", lemma="ὁ", form="τόν", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871754, posClass="N", pos="pron", ref="1.093.7-025", tbwid=1, value="τόν", gender="masc", posAdd="article", case="acc", head=3, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:2", ref="1.093.7-026", lemma="τε", tbwid=2, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="AuxY", head=10, cid=26871755, posClass="N", pos="particle", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:3", lemma="Πειραιεύς", form="Πειραιᾶ", isIndecl="contr r_e_i_alpha", dialect="attic", relation="OBJ", number="sg", cid=26871756, posClass="N", pos="noun", ref="1.093.7-027", tbwid=3, value="Πειραιᾶ", gender="masc", posAdd="eus_ews", case="acc", head=5, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Πειραιεύς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Πειραιεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Πειραιεύς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:4", lemma="ὠφέλιμος", form="ὠφελιμώτερον", isIndecl="", dialect="", relation="OCOMP", number="sg", cid=26871757, posClass="N", pos="adj", ref="1.093.7-028", tbwid=4, degree="comp", value="ὠφελιμώτερον", gender="masc", posAdd="os_on", case="acc", head=5, length=12, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὠφέλιμος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὠφέλιμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὠφέλιμος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:5", lemma="νομίζω", person="3rd", isIndecl="", voice="act", form="ἐνόμιζε", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871758, posClass="V", pos="verb", ref="1.093.7-029", tbwid=5, value="ἐνόμιζε", posAdd="w_stem,izw", head=10, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:6", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871759, posClass="N", pos="article", ref="1.093.7-030", tbwid=6, value="τῆς", gender="fem", case="gen", head=8, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:7", lemma="ἄνω2", form="ἄνω", isIndecl="indeclform", dialect="", relation="ATR", cid=26871760, pos="adverb", posClass="N", tbwid=7, ref="1.093.7-031", degree="", value="ἄνω", head=8, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνω2"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἄνω2", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνω2" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:8", lemma="πόλις", form="πόλεω^ς", isIndecl="", dialect="attic epic doric ionic", relation="ADV", number="sg", cid=26871761, posClass="N", pos="noun", ref="1.093.7-032", tbwid=8, value="πόλεως", gender="fem", posAdd="is_ews", case="gen", head=4, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλις"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="πόλις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλις" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:9", ref="", lemma="", tbwid=9, form="", value=",", relation="AuxX", head=10, cid=26871762, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:10", ref="1.093.7-034", lemma="καί", tbwid=10, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871763, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:11", lemma="πολλάκις", form="πολλάκις", isIndecl="indeclform", dialect="", relation="ADV", cid=26871764, pos="adverb", posClass="N", tbwid=11, ref="1.093.7-035", degree="", value="πολλάκις", head=14, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολλάκις"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="πολλάκις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολλάκις" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:12", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871765, posClass="N", pos="article", ref="1.093.7-036", tbwid=12, value="τοῖς", gender="masc", case="dat", head=13, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:13", lemma="Ἀθηναῖος", form="Ἀθηναι_οις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871766, posClass="N", pos="adj", ref="1.093.7-037", tbwid=13, degree="", value="Ἀθηναίοις", gender="masc", posAdd="os_h_on", case="dat", head=14, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:14", lemma="παραινέω", person="3rd", isIndecl="contr", voice="act", form="παρῄνει", dialect="attic epic", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871767, posClass="V", pos="verb", ref="1.093.7-038", tbwid=14, value="παρῄνει", posAdd="ew_pr,e_stem", head=10, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παραινέω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="παραινέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παραινέω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:15", ref="", lemma="", tbwid=15, form="", value=",", relation="AuxX", head=16, cid=26871768, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:16", ref="1.093.7-040", lemma="ἐάν", tbwid=16, isIndecl="contr indeclform", form="ἤν", dialect="", value="ἢν", relation="AuxC", head=30, cid=26871769, posClass="N", pos="conj", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐάν"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐάν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐάν" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:17", ref="1.093.7-041", lemma="ἄρα", tbwid=17, isIndecl="indeclform", form="ἄρα", dialect="", value="ἄρα", relation="AuxY", head=21, cid=26871770, posClass="N", pos="particle", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄρα"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἄρα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄρα" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:18", ref="1.093.7-042", lemma="ποτέ", tbwid=18, isIndecl="enclitic indeclform", form="ποτε", dialect="", value="ποτὲ", relation="AuxY", head=21, cid=26871771, posClass="N", pos="particle", length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ποτέ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ποτέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ποτέ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:19", ref="1.093.7-043", lemma="κατά", tbwid=19, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=21, cid=26871772, posClass="N", pos="prep", length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:20", lemma="γῆ", form="γῆν", isIndecl="contr", dialect="attic epic ionic", relation="ADV", number="sg", cid=26871773, posClass="N", pos="noun", ref="1.093.7-044", tbwid=20, value="γῆν", gender="fem", posAdd="eh_ehs", case="acc", head=19, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="γῆ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:21", lemma="βιάζω", person="3rd", isIndecl="contr", voice="pass", form="βιασθῶσι", dialect="attic epic doric", tense="aor", relation="ADV", mood="subj", number="pl", cid=26871774, posClass="V", pos="verb", ref="1.093.7-045", tbwid=21, value="βιασθῶσι", posAdd="aor_pass,azw", head=16, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βιάζω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="βιάζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βιάζω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:22", ref="", lemma="", tbwid=22, form="", value=",", relation="AuxX", head=16, cid=26871775, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:23", lemma="καταβαίνω", form="καταβάντας", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26871776, posClass="P", pos="participle", ref="1.093.7-047", tbwid=23, value="καταβάντας", gender="masc", posAdd="ath_h_aor", case="acc", head=30, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καταβαίνω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καταβαίνω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καταβαίνω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:24", ref="1.093.7-048", lemma="εἰς", tbwid=24, isIndecl="proclitic indeclform", form="ἐς", dialect="", value="ἐς", relation="AuxP", head=23, cid=26871777, posClass="N", pos="prep", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="εἰς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:25", lemma="αὐτός", form="αὐτόν", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26871778, posClass="N", pos="adj", ref="1.093.7-049", tbwid=25, degree="", value="αὐτὸν", gender="masc", posAdd="art_adj", case="acc", head=24, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="αὐτός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:26", lemma="ὁ", form="ταῖς", isIndecl="indeclform", dialect="", relation="ADV", number="pl", cid=26871779, posClass="N", pos="article", ref="1.093.7-050", tbwid=26, value="ταῖς", gender="fem", case="dat", head=27, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:27", lemma="ναῦς", form="ναυσί", isIndecl="indeclform", dialect="attic doric", relation="ADV", number="pl", cid=26871780, posClass="N", pos="noun", ref="1.093.7-051", tbwid=27, value="ναυσὶ", gender="fem", posAdd="irreg_decl3", case="dat", head=30, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:28", ref="1.093.7-052", lemma="πρός", tbwid=28, isIndecl="indeclform", form="πρός", dialect="", value="πρὸς", relation="AuxP", head=30, cid=26871781, posClass="N", pos="prep", length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρός"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="πρός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρός" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:29", lemma="ἅπας", form="ἅπαντας", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871782, posClass="N", pos="adj", ref="1.093.7-053", tbwid=29, degree="", value="ἅπαντας", gender="masc", posAdd="as_asa_an", case="acc", head=28, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἅπας"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἅπας", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἅπας" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:30", lemma="ἀνθίστημι", person="", isIndecl="elide_preverb causal pres_redupl", voice="mp", form="ἀνθίστασθαι", dialect="", tense="pres", relation="OBJ", mood="inf", number="", cid=26871783, posClass="V", pos="verb", ref="1.093.7-054", tbwid=30, value="ἀνθίστασθαι", posAdd="ami_pr", head=14, length=11, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀνθίστημι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἀνθίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀνθίστημι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:31", ref="", lemma="", tbwid=31, form="", value=".", relation="AuxK", head=0, cid=26871784, pos="punct", length=1, )
-s.words(w)
-words = "τόντεΠειραιᾶὠφελιμώτερονἐνόμιζετῆςἄνωπόλεως,καὶπολλάκιςτοῖςἈθηναίοιςπαρῄνει,ἢνἄραποτὲκατὰγῆνβιασθῶσι,καταβάνταςἐςαὐτὸνταῖςναυσὶπρὸςἅπανταςἀνθίστασθαι."
-s['sentence'] = "τόντεΠειραιᾶὠφελιμώτερονἐνόμιζετῆςἄνωπόλεως,καὶπολλάκιςτοῖςἈθηναίοιςπαρῄνει,ἢνἄραποτὲκατὰγῆνβιασθῶσι,καταβάνταςἐςαὐτὸνταῖςναυσὶπρὸςἅπανταςἀνθίστασθαι."
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13", length=14)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:1", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26871785, posClass="N", pos="adj", ref="1.093.8-001", tbwid=1, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=6, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:2", ref="1.093.8-002", lemma="μέν", tbwid=2, isIndecl="indeclform", form="μέν", dialect="", value="μὲν", relation="AuxY", head=6, cid=26871786, posClass="N", pos="particle", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέν"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="μέν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέν" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:3", ref="1.093.8-003", lemma="οὖν", tbwid=3, isIndecl="indeclform", form="οὖν", dialect="", value="οὖν", relation="AuxZ", head=2, cid=26871787, posClass="N", pos="particle", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὖν"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="οὖν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὖν" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:4", lemma="οὕτως", form="οὕτως", isIndecl="indeclform", dialect="", relation="ADV", cid=26871788, pos="adverb", posClass="N", tbwid=4, ref="1.093.8-004", degree="", value="οὕτως", head=6, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὕτως"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="οὕτως", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὕτως" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:5", lemma="τειχίζω", person="3rd", isIndecl="", voice="pass", form="ἐτειχίσθησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26871789, posClass="V", pos="verb", ref="1.093.8-005", tbwid=5, value="ἐτειχίσθησαν", posAdd="aor_pass,izw", head=6, length=12, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τειχίζω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="τειχίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τειχίζω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:6", ref="1.093.8-006", lemma="καί", tbwid=6, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871790, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:7", lemma="ἄλλος", form="ἄλλα", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871791, posClass="N", pos="adj", ref="1.093.8-007", tbwid=7, degree="", value="τἆλλα", gender="neut", posAdd="art_adj", case="acc", head=8, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:8", lemma="κατασκευάζω", person="3rd", isIndecl="", voice="mp", form="κατεσκευάζοντο", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="pl", cid=26871792, posClass="V", pos="verb", ref="1.093.8-008", tbwid=8, value="κατεσκευάζοντο", posAdd="w_stem,azw", head=6, length=14, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατασκευάζω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="κατασκευάζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατασκευάζω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:9", lemma="εὐθύς", form="εὐθύς", isIndecl="indeclform", dialect="", relation="ADV", cid=26871793, pos="adverb", posClass="N", tbwid=9, ref="1.093.8-009", degree="", value="εὐθὺς", head=8, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὐθύς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="εὐθύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὐθύς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:10", ref="1.093.8-010", lemma="μετά", tbwid=10, isIndecl="indeclform", form="μετά", dialect="", value="μετὰ", relation="AuxP", head=8, cid=26871794, posClass="N", pos="prep", length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μετά"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="μετά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μετά" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:11", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871795, posClass="N", pos="article", ref="1.093.8-011", tbwid=11, value="τὴν", gender="fem", case="acc", head=13, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:12", lemma="Μῆδος", form="Μήδων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871796, posClass="N", pos="noun", ref="1.093.8-012", tbwid=12, value="Μήδων", gender="masc", posAdd="os_ou", case="gen", head=13, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μῆδος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Μῆδος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μῆδος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:13", lemma="ἀναχώρησις", form="ἀναχώρησιν", isIndecl="", dialect="", relation="ADV", number="sg", cid=26871797, posClass="N", pos="noun", ref="1.093.8-013", tbwid=13, value="ἀναχώρησιν", gender="fem", posAdd="is_ews", case="acc", head=10, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀναχώρησις"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἀναχώρησις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀναχώρησις" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:14", ref="", lemma="", tbwid=14, form="", value=".", relation="AuxK", head=0, cid=26871798, pos="punct", length=1, )
-s.words(w)
-words = "ἈθηναῖοιμὲνοὖνοὕτωςἐτειχίσθησανκαὶτἆλλακατεσκευάζοντοεὐθὺςμετὰτὴνΜήδωνἀναχώρησιν."
-s['sentence'] = "ἈθηναῖοιμὲνοὖνοὕτωςἐτειχίσθησανκαὶτἆλλακατεσκευάζοντοεὐθὺςμετὰτὴνΜήδωνἀναχώρησιν."
+words = "τούτῳ τῷ τρόπῳ οἱ Ἀθηναῖοι τὴν πόλιν ἐτείχισαν ἐν ὀλίγῳ χρόνῳ . "
+s['sentence'] = "τούτῳ τῷ τρόπῳ οἱ Ἀθηναῖοι τὴν πόλιν ἐτείχισαν ἐν ὀλίγῳ χρόνῳ . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.2", length=13)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.2:1", ref="1.093.2-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871512, posClass="N", pos="conj", length=3, )
@@ -5065,8 +4489,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.2:13", ref="", lemma="", tbwid=13, form="", value="·", relation="AuxK", head=0, cid=26871524, pos="punct", length=1, )
 s.words(w)
-words = "καὶδήληἡοἰκοδομίαἔτικαὶνῦνἐστὶνὅτικατὰσπουδὴνἐγένετο·"
-s['sentence'] = "καὶδήληἡοἰκοδομίαἔτικαὶνῦνἐστὶνὅτικατὰσπουδὴνἐγένετο·"
+words = "καὶ δήλη ἡ οἰκοδομία ἔτι καὶ νῦν ἐστὶν ὅτι κατὰ σπουδὴν ἐγένετο · "
+s['sentence'] = "καὶ δήλη ἡ οἰκοδομία ἔτι καὶ νῦν ἐστὶν ὅτι κατὰ σπουδὴν ἐγένετο · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.3", length=28)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.3:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26871525, posClass="N", pos="article", ref="1.093.2-013", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -5213,8 +4637,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.3:28", ref="", lemma="", tbwid=28, form="", value=".", relation="AuxK", head=0, cid=26871552, pos="punct", length=1, )
 s.words(w)
-words = "οἱγὰρθεμέλιοιπαντοίωνλίθωνὑπόκεινταικαὶοὐξυνειργασμένωνἔστινᾗ,ἀλλ'ὡςἕκαστόνποτεπροσέφερον,πολλαίτεστῆλαιἀπὸσημάτωνκαὶλίθοιεἰργασμένοιἐγκατελέγησαν."
-s['sentence'] = "οἱγὰρθεμέλιοιπαντοίωνλίθωνὑπόκεινταικαὶοὐξυνειργασμένωνἔστινᾗ,ἀλλ'ὡςἕκαστόνποτεπροσέφερον,πολλαίτεστῆλαιἀπὸσημάτωνκαὶλίθοιεἰργασμένοιἐγκατελέγησαν."
+words = "οἱ γὰρ θεμέλιοι παντοίων λίθων ὑπόκεινται καὶ οὐ ξυνειργασμένων ἔστιν ᾗ , ἀλλ' ὡς ἕκαστόν ποτε προσέφερον , πολλαί τε στῆλαι ἀπὸ σημάτων καὶ λίθοι εἰργασμένοι ἐγκατελέγησαν . "
+s['sentence'] = "οἱ γὰρ θεμέλιοι παντοίων λίθων ὑπόκεινται καὶ οὐ ξυνειργασμένων ἔστιν ᾗ , ἀλλ' ὡς ἕκαστόν ποτε προσέφερον , πολλαί τε στῆλαι ἀπὸ σημάτων καὶ λίθοι εἰργασμένοι ἐγκατελέγησαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.4", length=17)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.4:1", lemma="μέγας", form="μείζων", isIndecl="", dialect="", relation="ATV", number="sg", cid=26871553, posClass="N", pos="adj", ref="1.093.2-040", tbwid=1, degree="comp", value="μείζων", gender="masc", posAdd="wn_on_comp", case="nom", head=4, length=6, )
@@ -5307,8 +4731,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.4:17", ref="", lemma="", tbwid=17, form="", value=".", relation="AuxK", head=0, cid=26871569, pos="punct", length=1, )
 s.words(w)
-words = "μείζωνγὰρὁπερίβολοςπανταχῇἐξήχθητῆςπόλεως,καὶδιὰτοῦτοπάνταὁμοίωςκινοῦντεςἠπείγοντο."
-s['sentence'] = "μείζωνγὰρὁπερίβολοςπανταχῇἐξήχθητῆςπόλεως,καὶδιὰτοῦτοπάνταὁμοίωςκινοῦντεςἠπείγοντο."
+words = "μείζων γὰρ ὁ περίβολος πανταχῇ ἐξήχθη τῆς πόλεως , καὶ διὰ τοῦτο πάντα ὁμοίως κινοῦντες ἠπείγοντο . "
+s['sentence'] = "μείζων γὰρ ὁ περίβολος πανταχῇ ἐξήχθη τῆς πόλεως , καὶ διὰ τοῦτο πάντα ὁμοίως κινοῦντες ἠπείγοντο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.5", length=66)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.5:1", lemma="πείθω", person="3rd", isIndecl="", voice="act", form="ἔπεισε", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="sg", cid=26871570, posClass="V", pos="verb", ref="1.093.3-001", tbwid=1, value="ἔπεισε", posAdd="aor1,reg_conj", head=61, length=6, )
@@ -5671,8 +5095,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.5:66", ref="", lemma="", tbwid=66, form="", value=".", relation="AuxK", head=0, cid=26871635, pos="punct", length=1, )
 s.words(w)
-words = "ἔπεισεδὲκαὶτοῦΠειραιῶςτὰλοιπὰὁΘεμιστοκλῆςοἰκοδομεῖνὑπῆρκτοδ'αὐτοῦπρότερονἐπὶτῆςἐκείνουἀρχῆςἧςκατ'ἐνιαυτὸνἈθηναίοιςἦρξενομίζωντότεχωρίονκαλὸνεἶναι,λιμέναςἔχοντρεῖςαὐτοφυεῖς,καὶαὐτοὺςναυτικοὺςγεγενημένουςμέγαπροφέρεινἐςτὸκτήσασθαιδύναμιντῆςγὰρδὴθαλάσσηςπρῶτοςἐτόλμησενεἰπεῖνὡςἀνθεκτέαἐστί,καὶτὴνἀρχὴνεὐθὺςξυγκατεσκεύαζεν."
-s['sentence'] = "ἔπεισεδὲκαὶτοῦΠειραιῶςτὰλοιπὰὁΘεμιστοκλῆςοἰκοδομεῖνὑπῆρκτοδ'αὐτοῦπρότερονἐπὶτῆςἐκείνουἀρχῆςἧςκατ'ἐνιαυτὸνἈθηναίοιςἦρξενομίζωντότεχωρίονκαλὸνεἶναι,λιμέναςἔχοντρεῖςαὐτοφυεῖς,καὶαὐτοὺςναυτικοὺςγεγενημένουςμέγαπροφέρεινἐςτὸκτήσασθαιδύναμιντῆςγὰρδὴθαλάσσηςπρῶτοςἐτόλμησενεἰπεῖνὡςἀνθεκτέαἐστί,καὶτὴνἀρχὴνεὐθὺςξυγκατεσκεύαζεν."
+words = "ἔπεισε δὲ καὶ τοῦ Πειραιῶς τὰ λοιπὰ ὁ Θεμιστοκλῆς οἰκοδομεῖν  ὑπῆρκτο δ' αὐτοῦ πρότερον ἐπὶ τῆς ἐκείνου ἀρχῆς ἧς κατ' ἐνιαυτὸν Ἀθηναίοις ἦρξε  νομίζων τό τε χωρίον καλὸν εἶναι , λιμένας ἔχον τρεῖς αὐτοφυεῖς , καὶ αὐτοὺς ναυτικοὺς γεγενημένους μέγα προφέρειν ἐς τὸ κτήσασθαι δύναμιν  τῆς γὰρ δὴ θαλάσσης πρῶτος ἐτόλμησεν εἰπεῖν ὡς ἀνθεκτέα ἐστί  , καὶ τὴν ἀρχὴν εὐθὺς ξυγκατεσκεύαζεν . "
+s['sentence'] = "ἔπεισε δὲ καὶ τοῦ Πειραιῶς τὰ λοιπὰ ὁ Θεμιστοκλῆς οἰκοδομεῖν  ὑπῆρκτο δ' αὐτοῦ πρότερον ἐπὶ τῆς ἐκείνου ἀρχῆς ἧς κατ' ἐνιαυτὸν Ἀθηναίοις ἦρξε  νομίζων τό τε χωρίον καλὸν εἶναι , λιμένας ἔχον τρεῖς αὐτοφυεῖς , καὶ αὐτοὺς ναυτικοὺς γεγενημένους μέγα προφέρειν ἐς τὸ κτήσασθαι δύναμιν  τῆς γὰρ δὴ θαλάσσης πρῶτος ἐτόλμησεν εἰπεῖν ὡς ἀνθεκτέα ἐστί  , καὶ τὴν ἀρχὴν εὐθὺς ξυγκατεσκεύαζεν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.6", length=18)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.6:1", ref="1.093.5-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871636, posClass="N", pos="conj", length=3, )
@@ -5779,8 +5203,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.6:18", ref="", lemma="", tbwid=18, form="", value="·", relation="AuxK", head=0, cid=26871653, pos="punct", length=1, )
 s.words(w)
-words = "καὶᾠκοδόμησαντῇἐκείνουγνώμῃτὸπάχοςτοῦτείχουςὅπερνῦνἔτιδῆλόνἐστιπερὶτὸνΠειραιᾶ·"
-s['sentence'] = "καὶᾠκοδόμησαντῇἐκείνουγνώμῃτὸπάχοςτοῦτείχουςὅπερνῦνἔτιδῆλόνἐστιπερὶτὸνΠειραιᾶ·"
+words = "καὶ ᾠκοδόμησαν τῇ ἐκείνου γνώμῃ τὸ πάχος τοῦ τείχους ὅπερ νῦν ἔτι δῆλόν ἐστι περὶ τὸν Πειραιᾶ · "
+s['sentence'] = "καὶ ᾠκοδόμησαν τῇ ἐκείνου γνώμῃ τὸ πάχος τοῦ τείχους ὅπερ νῦν ἔτι δῆλόν ἐστι περὶ τὸν Πειραιᾶ · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.7", length=9)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.7:1", lemma="δύο", form="δύο", isIndecl="indeclform", dialect="", relation="ATR", number="", cid=26871654, pos="numeral", posClass="N", tbwid=1, ref="1.093.5-018", value="δύο", head=3, length=3, )
@@ -5833,8 +5257,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.7:9", ref="", lemma="", tbwid=9, form="", value=".", relation="AuxK", head=0, cid=26871662, pos="punct", length=1, )
 s.words(w)
-words = "δύογὰρἅμαξαιἐναντίαιἀλλήλαιςτοὺςλίθουςἐπῆγον."
-s['sentence'] = "δύογὰρἅμαξαιἐναντίαιἀλλήλαιςτοὺςλίθουςἐπῆγον."
+words = "δύο γὰρ ἅμαξαι ἐναντίαι ἀλλήλαις τοὺς λίθους ἐπῆγον . "
+s['sentence'] = "δύο γὰρ ἅμαξαι ἐναντίαι ἀλλήλαις τοὺς λίθους ἐπῆγον . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.8", length=27)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.8:1", lemma="ἐντός", form="ἐντός", isIndecl="indeclform", dialect="", relation="ADV", cid=26871663, pos="adverb", posClass="N", tbwid=1, ref="1.093.5-026", degree="", value="ἐντὸς", head=9, length=5, )
@@ -5967,8 +5391,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.8:27", ref="", lemma="", tbwid=27, form="", value=".", relation="AuxK", head=0, cid=26871687, pos="punct", length=1, )
 s.words(w)
-words = "ἐντὸςδὲοὔτεχάλιξοὔτεπηλὸςἦν,ἀλλὰξυνῳκοδομημένοιμεγάλοιλίθοικαὶἐντομῇἐγγώνιοι,σιδήρῳπρὸςἀλλήλουςτὰἔξωθενκαὶμολύβδῳδεδεμένοι."
-s['sentence'] = "ἐντὸςδὲοὔτεχάλιξοὔτεπηλὸςἦν,ἀλλὰξυνῳκοδομημένοιμεγάλοιλίθοικαὶἐντομῇἐγγώνιοι,σιδήρῳπρὸςἀλλήλουςτὰἔξωθενκαὶμολύβδῳδεδεμένοι."
+words = "ἐντὸς δὲ οὔ τε χάλιξ οὔ τε πηλὸς ἦν , ἀλλὰ ξυνῳκοδομημένοι μεγάλοι λίθοι καὶ ἐντομῇ ἐγγώνιοι , σιδήρῳ πρὸς ἀλλήλους τὰ ἔξωθεν καὶ μολύβδῳ δεδεμένοι . "
+s['sentence'] = "ἐντὸς δὲ οὔ τε χάλιξ οὔ τε πηλὸς ἦν , ἀλλὰ ξυνῳκοδομημένοι μεγάλοι λίθοι καὶ ἐντομῇ ἐγγώνιοι , σιδήρῳ πρὸς ἀλλήλους τὰ ἔξωθεν καὶ μολύβδῳ δεδεμένοι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.9", length=9)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.9:1", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871688, posClass="N", pos="article", ref="1.093.5-050", tbwid=1, value="τὸ", gender="neut", case="acc", head=3, length=2, )
@@ -6021,8 +5445,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.9:9", ref="", lemma="", tbwid=9, form="", value=".", relation="AuxK", head=0, cid=26871696, pos="punct", length=1, )
 s.words(w)
-words = "τὸδὲὕψοςἥμισυμάλισταἐτελέσθηοὗδιενοεῖτο."
-s['sentence'] = "τὸδὲὕψοςἥμισυμάλισταἐτελέσθηοὗδιενοεῖτο."
+words = "τὸ δὲ ὕψος ἥμισυ μάλιστα ἐτελέσθη οὗ διενοεῖτο . "
+s['sentence'] = "τὸ δὲ ὕψος ἥμισυ μάλιστα ἐτελέσθη οὗ διενοεῖτο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.1", length=16)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.1:1", lemma="Παυσανίας", form="Παυσανία_ς", isIndecl="", dialect="attic epic doric aeolic", relation="SBJ", number="sg", cid=26871799, posClass="N", pos="noun", ref="1.094.1-001", tbwid=1, value="Παυσανίας", gender="masc", posAdd="hs_ou", case="nom", head=10, length=9, )
@@ -6117,8 +5541,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.1:16", ref="", lemma="", tbwid=16, form="", value="·", relation="AuxK", head=0, cid=26871814, pos="punct", length=1, )
 s.words(w)
-words = "ΠαυσανίαςδὲὁΚλεομβρότουἐκΛακεδαίμονοςστρατηγὸςτῶνἙλλήνωνἐξεπέμφθημετὰεἴκοσινεῶνἀπὸΠελοποννήσου·"
-s['sentence'] = "ΠαυσανίαςδὲὁΚλεομβρότουἐκΛακεδαίμονοςστρατηγὸςτῶνἙλλήνωνἐξεπέμφθημετὰεἴκοσινεῶνἀπὸΠελοποννήσου·"
+words = "Παυσανίας δὲ ὁ Κλεομβρότου ἐκ Λακεδαίμονος στρατηγὸς τῶν Ἑλλήνων ἐξεπέμφθη μετὰ εἴκοσι νεῶν ἀπὸ Πελοποννήσου · "
+s['sentence'] = "Παυσανίας δὲ ὁ Κλεομβρότου ἐκ Λακεδαίμονος στρατηγὸς τῶν Ἑλλήνων ἐξεπέμφθη μετὰ εἴκοσι νεῶν ἀπὸ Πελοποννήσου · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.2", length=12)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.2:1", lemma="συμπλέω", person="3rd", isIndecl="sig_to_ci", voice="act", form="ξυνέπλεον", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="pl", cid=26871815, posClass="V", pos="verb", ref="1.094.1-016", tbwid=1, value="ξυνέπλεον", posAdd="evw_pr,ev_stem", head=2, length=9, )
@@ -6189,8 +5613,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.2:12", ref="", lemma="", tbwid=12, form="", value=".", relation="AuxK", head=0, cid=26871826, pos="punct", length=1, )
 s.words(w)
-words = "ξυνέπλεονδὲκαὶἈθηναῖοιτριάκονταναυσὶκαὶτῶνἄλλωνξυμμάχωνπλῆθος."
-s['sentence'] = "ξυνέπλεονδὲκαὶἈθηναῖοιτριάκονταναυσὶκαὶτῶνἄλλωνξυμμάχωνπλῆθος."
+words = "ξυνέπλεον δὲ καὶ Ἀθηναῖοι τριάκοντα ναυσὶ καὶ τῶν ἄλλων ξυμμάχων πλῆθος . "
+s['sentence'] = "ξυνέπλεον δὲ καὶ Ἀθηναῖοι τριάκοντα ναυσὶ καὶ τῶν ἄλλων ξυμμάχων πλῆθος . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.3", length=24)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.3:1", ref="1.094.2-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxY", head=18, cid=26871827, posClass="N", pos="conj", length=3, )
@@ -6321,8 +5745,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.3:24", ref="", lemma="", tbwid=24, form="", value=".", relation="AuxK", head=0, cid=26871850, pos="punct", length=1, )
 s.words(w)
-words = "καὶἐστράτευσανἐςΚύπρονκαὶαὐτῆςτὰπολλὰκατεστρέψαντο,καὶὕστερονἐςΒυζάντιονΜήδωνἐχόντων,καὶἐξεπολιόρκησανἐντῇδετῇἡγεμονίᾳ."
-s['sentence'] = "καὶἐστράτευσανἐςΚύπρονκαὶαὐτῆςτὰπολλὰκατεστρέψαντο,καὶὕστερονἐςΒυζάντιονΜήδωνἐχόντων,καὶἐξεπολιόρκησανἐντῇδετῇἡγεμονίᾳ."
+words = "καὶ ἐστράτευσαν ἐς Κύπρον καὶ αὐτῆς τὰ πολλὰ κατεστρέψαντο , καὶ ὕστερον ἐς Βυζάντιον Μήδων ἐχόντων , καὶ ἐξεπολιόρκησαν ἐν τῇδε τῇ ἡγεμονίᾳ . "
+s['sentence'] = "καὶ ἐστράτευσαν ἐς Κύπρον καὶ αὐτῆς τὰ πολλὰ κατεστρέψαντο , καὶ ὕστερον ἐς Βυζάντιον Μήδων ἐχόντων , καὶ ἐξεπολιόρκησαν ἐν τῇδε τῇ ἡγεμονίᾳ . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.1", length=22)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.1:1", lemma="ἤδη", form="ἤδη", isIndecl="indeclform", dialect="", relation="ADV", cid=26871851, pos="adverb", posClass="N", tbwid=1, ref="1.095.1-001", degree="", value="ἤδη", head=4, length=3, )
@@ -6445,328 +5869,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.1:22", ref="", lemma="", tbwid=22, form="", value="·", relation="AuxK", head=0, cid=26871872, pos="punct", length=1, )
 s.words(w)
-words = "ἤδηδὲβιαίουὄντοςαὐτοῦοἵτεἄλλοιἝλληνεςἤχθοντοκαὶοὐχἥκισταοἱἼωνεςκαὶὅσοιἀπὸβασιλέωςνεωστὶἠλευθέρωντο·"
-s['sentence'] = "ἤδηδὲβιαίουὄντοςαὐτοῦοἵτεἄλλοιἝλληνεςἤχθοντοκαὶοὐχἥκισταοἱἼωνεςκαὶὅσοιἀπὸβασιλέωςνεωστὶἠλευθέρωντο·"
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10", length=8)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:1", lemma="ὅς", form="οἷς", isIndecl="indeclform", dialect="", relation="OBJ", number="pl", cid=26872019, posClass="N", pos="pron", ref="1.095.6-019", tbwid=1, value="οἷς", gender="masc", posAdd="relative", case="dat", head=3, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὅς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:2", lemma="οὐκέτι", form="οὐκέτι", isIndecl="indeclform", dialect="", relation="AuxZ", cid=26872020, pos="adverb", posClass="N", tbwid=2, ref="1.095.6-020", degree="", value="οὐκέτι", head=3, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="οὐκέτι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:3", lemma="ἐφίημι", person="3rd", isIndecl="", voice="act", form="ἐφι_εσαν", dialect="", tense="imperf", relation="PRED", mood="ind", number="pl", cid=26872021, posClass="V", pos="verb", ref="1.095.6-021", tbwid=3, value="ἐφίεσαν", posAdd="irreg_mi", head=0, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐφίημι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐφίημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐφίημι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:4", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872022, posClass="N", pos="article", ref="1.095.6-022", tbwid=4, value="οἱ", gender="masc", case="nom", head=5, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:5", lemma="σύμμαχος", form="ξύμμαχοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872023, posClass="N", pos="adj", ref="1.095.6-023", tbwid=5, degree="", value="ξύμμαχοι", gender="masc", posAdd="os_on", case="nom", head=3, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σύμμαχος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="σύμμαχος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σύμμαχος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:6", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26872024, posClass="N", pos="article", ref="1.095.6-024", tbwid=6, value="τὴν", gender="fem", case="acc", head=7, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:7", lemma="ἡγεμονία", form="ἡγεμονία_ν", isIndecl="", dialect="attic doric aeolic", relation="OBJ", number="sg", cid=26872025, posClass="N", pos="noun", ref="1.095.6-025", tbwid=7, value="ἡγεμονίαν", gender="fem", posAdd="h_hs", case="acc", head=3, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἡγεμονία"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἡγεμονία", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἡγεμονία" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:8", ref="", lemma="", tbwid=8, form="", value=".", relation="AuxK", head=0, cid=26872026, pos="punct", length=1, )
-s.words(w)
-words = "οἷςοὐκέτιἐφίεσανοἱξύμμαχοιτὴνἡγεμονίαν."
-s['sentence'] = "οἷςοὐκέτιἐφίεσανοἱξύμμαχοιτὴνἡγεμονίαν."
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11", length=48)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26872027, posClass="N", pos="pron", ref="1.095.7-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=4, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:2", ref="1.095.7-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="AuxY", head=6, cid=26872028, posClass="N", pos="particle", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:3", lemma="αἰσθάνομαι", form="αἰσθόμενοι", isIndecl="", voice="mid", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26872029, posClass="P", pos="participle", ref="1.095.7-003", tbwid=3, value="αἰσθόμενοι", gender="masc", posAdd="aor2,anw", case="nom", head=4, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αἰσθάνομαι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="αἰσθάνομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αἰσθάνομαι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:4", lemma="ἀπέρχομαι", person="3rd", isIndecl="", voice="act", form="ἀπῆλθον", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26872030, posClass="V", pos="verb", ref="1.095.7-004", tbwid=4, value="ἀπῆλθον", posAdd="aor2", head=6, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπέρχομαι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἀπέρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπέρχομαι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:5", ref="", lemma="", tbwid=5, form="", value=",", relation="AuxX", head=6, cid=26872031, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:6", ref="1.095.7-006", lemma="καί", tbwid=6, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26872032, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:7", lemma="ἄλλος", form="ἄλλους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26872033, posClass="N", pos="adj", ref="1.095.7-007", tbwid=7, degree="", value="ἄλλους", gender="masc", posAdd="art_adj", case="acc", head=10, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:8", lemma="οὐκέτι", form="οὐκέτι", isIndecl="indeclform", dialect="", relation="AuxZ", cid=26872034, pos="adverb", posClass="N", tbwid=8, ref="1.095.7-008", degree="", value="οὐκέτι", head=10, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="οὐκέτι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:9", lemma="ὕστερος", form="ὕστερον", isIndecl="irreg_comp", dialect="", relation="ADV", number="sg", cid=26872035, posClass="N", pos="noun", ref="1.095.7-009", tbwid=9, value="ὕστερον", gender="neut", posAdd="os_h_on", case="acc", head=10, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὕστερος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὕστερος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὕστερος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:10", lemma="ἐκπέμπω", person="3rd", isIndecl="", voice="act", form="ἐξέπεμψαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26872036, posClass="V", pos="verb", ref="1.095.7-010", tbwid=10, value="ἐξέπεμψαν", posAdd="aor1,reg_conj", head=6, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκπέμπω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐκπέμπω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκπέμπω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:11", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872037, posClass="N", pos="article", ref="1.095.7-011", tbwid=11, value="οἱ", gender="masc", case="nom", head=12, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:12", lemma="Λακεδαιμόνιος", form="Λακεδαιμόνιοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872038, posClass="N", pos="adj", ref="1.095.7-012", tbwid=12, degree="", value="Λακεδαιμόνιοι", gender="masc", posAdd="os_h_on", case="nom", head=10, length=13, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Λακεδαιμόνιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:13", ref="", lemma="", tbwid=13, form="", value=",", relation="AuxX", head=30, cid=26872039, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:14", lemma="φοβέω", form="φοβούμενοι", isIndecl="contr", voice="mp", dialect="attic epic doric", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872040, posClass="P", pos="participle", ref="1.095.7-014", tbwid=14, value="φοβούμενοι", gender="masc", posAdd="ew_pr,ew_denom", case="nom", head=30, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φοβέω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="φοβέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φοβέω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:15", ref="1.095.7-015", lemma="μή", tbwid=15, isIndecl="indeclform", form="μή", dialect="", value="μὴ", relation="AuxC", head=14, cid=26872041, posClass="N", pos="conj", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μή"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="μή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μή" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:16", lemma="σφεῖς", form="σφισιν", isIndecl="enclitic nu_movable indeclform", dialect="", relation="ADV", number="pl", cid=26872042, posClass="N", pos="pron", ref="1.095.7-016", tbwid=16, value="σφίσιν", gender="masc", posAdd="pron3", case="dat", head=20, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="σφεῖς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:17", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872043, posClass="N", pos="article", ref="1.095.7-017", tbwid=17, value="οἱ", gender="masc", case="nom", head=18, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:18", lemma="ἔξειμι1", form="ἐξιόντες", isIndecl="", voice="act", dialect="", tense="pres", relation="SBJ", mood="part", number="pl", cid=26872044, posClass="P", pos="participle", ref="1.095.7-018", tbwid=18, value="ἐξιόντες", gender="masc", posAdd="irreg_mi", case="nom", head=20, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔξειμι1"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἔξειμι1", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔξειμι1" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:19", lemma="χείρων", form="χείρους", isIndecl="contr", dialect="", relation="PNOM", number="pl", cid=26872045, posClass="N", pos="adj", ref="1.095.7-019", tbwid=19, degree="comp", value="χείρους", gender="masc", posAdd="wn_on_comp", case="acc", head=20, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:χείρων"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="χείρων", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:χείρων" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:20", lemma="γίγνομαι", person="3rd", isIndecl="pres_redupl", voice="mp", form="γίγνωνται", dialect="", tense="pres", relation="OBJ", mood="subj", number="pl", cid=26872046, posClass="V", pos="verb", ref="1.095.7-020", tbwid=20, value="γίγνωνται", posAdd="w_stem,reg_conj", head=15, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γίγνομαι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="γίγνομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γίγνομαι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:21", ref="", lemma="", tbwid=21, form="", value=",", relation="AuxX", head=27, cid=26872047, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:22", lemma="ὅσπερ", form="ὅπερ", isIndecl="indeclform", dialect="", relation="OBJ", number="sg", cid=26872048, posClass="N", pos="pron", ref="1.095.7-022", tbwid=22, value="ὅπερ", gender="neut", posAdd="relative", case="acc", head=27, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅσπερ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὅσπερ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅσπερ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:23", ref="1.095.7-023", lemma="καί", tbwid=23, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=24, cid=26872049, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:24", ref="1.095.7-024", lemma="ἐν", tbwid=24, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=27, cid=26872050, posClass="N", pos="prep", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:25", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872051, posClass="N", pos="article", ref="1.095.7-025", tbwid=25, value="τῷ", gender="masc", case="dat", head=26, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:26", lemma="Παυσανίας", form="Παυσανία_", isIndecl="", dialect="attic doric aeolic", relation="OBJ", number="sg", cid=26872052, posClass="N", pos="noun", ref="1.095.7-026", tbwid=26, value="Παυσανίᾳ", gender="masc", posAdd="hs_ou", case="dat", head=24, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Παυσανίας"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Παυσανίας", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Παυσανίας" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:27", lemma="ἐνεῖδον", person="3rd", isIndecl="syll_augment", voice="act", form="ἐνεῖδον", dialect="", tense="aor", relation="ATR", mood="ind", number="pl", cid=26872053, posClass="V", pos="verb", ref="1.095.7-027", tbwid=27, value="ἐνεῖδον", posAdd="aor2", head=20, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐνεῖδον"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐνεῖδον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐνεῖδον" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:28", ref="", lemma="", tbwid=28, form="", value=",", relation="AuxX", head=27, cid=26872054, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:29", lemma="ἀπαλλάσσω", form="ἀπαλλαξείοντες", isIndecl="desiderative", voice="act", dialect="", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872055, posClass="P", pos="participle", ref="1.095.7-029", tbwid=29, value="ἀπαλλαξείοντες", gender="masc", posAdd="w_stem", case="nom", head=35, length=14, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπαλλάσσω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἀπαλλάσσω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπαλλάσσω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:30", ref="1.095.7-030", lemma="δέ", tbwid=30, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="COORD", head=10, cid=26872056, posClass="N", pos="particle", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:31", ref="1.095.7-031", lemma="καί", tbwid=31, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=29, cid=26872057, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:32", lemma="ὁ", form="τοῦ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872058, posClass="N", pos="article", ref="1.095.7-032", tbwid=32, value="τοῦ", gender="masc", case="gen", head=34, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:33", lemma="Μηδικός", form="Μηδικοῦ", isIndecl="", dialect="", relation="ATR", number="sg", cid=26872059, posClass="N", pos="adj", ref="1.095.7-033", tbwid=33, degree="", value="Μηδικοῦ", gender="masc", posAdd="os_h_on", case="gen", head=34, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μηδικός"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Μηδικός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μηδικός" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:34", lemma="πόλεμος", form="πολέμου", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26872060, posClass="N", pos="noun", ref="1.095.7-034", tbwid=34, value="πολέμου", gender="masc", posAdd="os_ou", case="gen", head=29, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλεμος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="πόλεμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλεμος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:35", ref="1.095.7-035", lemma="καί", tbwid=35, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=30, cid=26872061, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:36", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26872062, posClass="N", pos="article", ref="1.095.7-036", tbwid=36, value="τοὺς", gender="masc", case="acc", head=37, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:37", lemma="Ἀθηναῖος", form="Ἀθηναι_ους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26872063, posClass="N", pos="adj", ref="1.095.7-037", tbwid=37, degree="", value="Ἀθηναίους", gender="masc", posAdd="os_h_on", case="acc", head=38, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:38", lemma="νομίζω", form="νομίζοντες", isIndecl="", voice="act", dialect="", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872064, posClass="P", pos="participle", ref="1.095.7-038", tbwid=38, value="νομίζοντες", gender="masc", posAdd="w_stem,izw", case="nom", head=35, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:39", lemma="ἱκανός", form="ἱκανούς", isIndecl="", dialect="", relation="OCOMP_CO", number="pl", cid=26872065, posClass="N", pos="adj", ref="1.095.7-039", tbwid=39, degree="", value="ἱκανοὺς", gender="masc", posAdd="os_h_on", case="acc", head=41, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱκανός"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἱκανός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱκανός" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:40", lemma="ἐξηγέομαι", person="", isIndecl="contr", voice="mid", form="ἐξηγεῖσθαι", dialect="attic epic", tense="pres", relation="ADV", mood="inf", number="", cid=26872066, posClass="V", pos="verb", ref="1.095.7-040", tbwid=40, value="ἐξηγεῖσθαι", posAdd="ew_pr,ew_denom", head=39, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐξηγέομαι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐξηγέομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐξηγέομαι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:41", ref="1.095.7-041", lemma="καί", tbwid=41, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=38, cid=26872067, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:42", lemma="σφεῖς", form="σφισιν", isIndecl="enclitic nu_movable indeclform", dialect="", relation="ADV", number="pl", cid=26872068, posClass="N", pos="pron", ref="1.095.7-042", tbwid=42, value="σφίσιν", gender="masc", posAdd="pron3", case="dat", head=47, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="σφεῖς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:43", ref="1.095.7-043", lemma="ἐν", tbwid=43, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=47, cid=26872069, posClass="N", pos="prep", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:44", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872070, posClass="N", pos="article", ref="1.095.7-044", tbwid=44, value="τῷ", gender="masc", case="dat", head=46, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:45", lemma="τότε", form="τότε", isIndecl="indeclform", dialect="", relation="ADV", cid=26872071, pos="adverb", posClass="N", tbwid=45, ref="1.095.7-045", degree="", value="τότε", head=46, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τότε"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="τότε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τότε" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:46", lemma="πάρειμι1", form="παρόντι", isIndecl="", voice="act", dialect="", tense="pres", relation="ADV", mood="part", number="sg", cid=26872072, posClass="P", pos="participle", ref="1.095.7-046", tbwid=46, value="παρόντι", gender="masc", posAdd="irreg_mi", case="dat", head=43, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάρειμι1"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="πάρειμι1", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάρειμι1" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:47", lemma="ἐπιτήδειος", form="ἐπιτηδείους", isIndecl="", dialect="", relation="OCOMP_CO", number="pl", cid=26872073, posClass="N", pos="adj", ref="1.095.7-047", tbwid=47, degree="", value="ἐπιτηδείους", gender="masc", posAdd="os_h_on", case="acc", head=41, length=11, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιτήδειος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐπιτήδειος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιτήδειος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:48", ref="", lemma="", tbwid=48, form="", value=".", relation="AuxK", head=0, cid=26872074, pos="punct", length=1, )
-s.words(w)
-words = "οἱδὲαἰσθόμενοιἀπῆλθον,καὶἄλλουςοὐκέτιὕστερονἐξέπεμψανοἱΛακεδαιμόνιοι,φοβούμενοιμὴσφίσινοἱἐξιόντεςχείρουςγίγνωνται,ὅπερκαὶἐντῷΠαυσανίᾳἐνεῖδον,ἀπαλλαξείοντεςδὲκαὶτοῦΜηδικοῦπολέμουκαὶτοὺςἈθηναίουςνομίζοντεςἱκανοὺςἐξηγεῖσθαικαὶσφίσινἐντῷτότεπαρόντιἐπιτηδείους."
-s['sentence'] = "οἱδὲαἰσθόμενοιἀπῆλθον,καὶἄλλουςοὐκέτιὕστερονἐξέπεμψανοἱΛακεδαιμόνιοι,φοβούμενοιμὴσφίσινοἱἐξιόντεςχείρουςγίγνωνται,ὅπερκαὶἐντῷΠαυσανίᾳἐνεῖδον,ἀπαλλαξείοντεςδὲκαὶτοῦΜηδικοῦπολέμουκαὶτοὺςἈθηναίουςνομίζοντεςἱκανοὺςἐξηγεῖσθαικαὶσφίσινἐντῷτότεπαρόντιἐπιτηδείους."
+words = "ἤδη δὲ βιαίου ὄντος αὐτοῦ οἵ τε ἄλλοι Ἕλληνες ἤχθοντο καὶ οὐχ ἥκιστα οἱ Ἴωνες καὶ ὅσοι ἀπὸ βασιλέως νεωστὶ ἠλευθέρωντο · "
+s['sentence'] = "ἤδη δὲ βιαίου ὄντος αὐτοῦ οἵ τε ἄλλοι Ἕλληνες ἤχθοντο καὶ οὐχ ἥκιστα οἱ Ἴωνες καὶ ὅσοι ἀπὸ βασιλέως νεωστὶ ἠλευθέρωντο · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.2", length=22)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.2:1", lemma="φοιτάω", form="φοιτῶντες", isIndecl="contr", voice="act", dialect="", tense="pres", relation="ADV", mood="part", number="pl", cid=26871873, posClass="P", pos="participle", ref="1.095.1-022", tbwid=1, value="φοιτῶντές", gender="masc", posAdd="aw_pr,a_stem", case="nom", head=6, length=9, )
@@ -6893,8 +5997,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.2:22", ref="", lemma="", tbwid=22, form="", value=".", relation="AuxK", head=0, cid=26871894, pos="punct", length=1, )
 s.words(w)
-words = "φοιτῶντέςτεπρὸςτοὺςἈθηναίουςἠξίουναὐτοὺςἡγεμόναςσφῶνγίγνεσθαικατὰτὸξυγγενὲςκαὶΠαυσανίᾳμὴἐπιτρέπειν,ἤνπουβιάζηται."
-s['sentence'] = "φοιτῶντέςτεπρὸςτοὺςἈθηναίουςἠξίουναὐτοὺςἡγεμόναςσφῶνγίγνεσθαικατὰτὸξυγγενὲςκαὶΠαυσανίᾳμὴἐπιτρέπειν,ἤνπουβιάζηται."
+words = "φοιτῶντές τε πρὸς τοὺς Ἀθηναίους ἠξίουν αὐτοὺς ἡγεμόνας σφῶν γίγνεσθαι κατὰ τὸ ξυγγενὲς καὶ Παυσανίᾳ μὴ ἐπιτρέπειν , ἤν που βιάζηται . "
+s['sentence'] = "φοιτῶντές τε πρὸς τοὺς Ἀθηναίους ἠξίουν αὐτοὺς ἡγεμόνας σφῶν γίγνεσθαι κατὰ τὸ ξυγγενὲς καὶ Παυσανίᾳ μὴ ἐπιτρέπειν , ἤν που βιάζηται . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.3", length=22)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.3:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26871895, posClass="N", pos="article", ref="1.095.2-001", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -7017,8 +6121,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.3:22", ref="", lemma="", tbwid=22, form="", value=".", relation="AuxK", head=0, cid=26871916, pos="punct", length=1, )
 s.words(w)
-words = "οἱδὲἈθηναῖοιἐδέξαντότετοὺςλόγουςκαὶπροσεῖχοντὴνγνώμηνὡςοὐπεριοψόμενοιτἆλλάτεκαταστησόμενοιᾗφαίνοιτοἄριστααὐτοῖς."
-s['sentence'] = "οἱδὲἈθηναῖοιἐδέξαντότετοὺςλόγουςκαὶπροσεῖχοντὴνγνώμηνὡςοὐπεριοψόμενοιτἆλλάτεκαταστησόμενοιᾗφαίνοιτοἄριστααὐτοῖς."
+words = "οἱ δὲ Ἀθηναῖοι ἐδέξαντό τε τοὺς λόγους καὶ προσεῖχον τὴν γνώμην ὡς οὐ περιοψόμενοι τἆλλά τε καταστησόμενοι ᾗ φαίνοιτο ἄριστα αὐτοῖς . "
+s['sentence'] = "οἱ δὲ Ἀθηναῖοι ἐδέξαντό τε τοὺς λόγους καὶ προσεῖχον τὴν γνώμην ὡς οὐ περιοψόμενοι τἆλλά τε καταστησόμενοι ᾗ φαίνοιτο ἄριστα αὐτοῖς . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.4", length=12)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.4:1", ref="1.095.3-001", lemma="ἐν", tbwid=1, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=6, cid=26871917, posClass="N", pos="prep", length=2, )
@@ -7089,8 +6193,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.4:12", ref="", lemma="", tbwid=12, form="", value="·", relation="AuxK", head=0, cid=26871928, pos="punct", length=1, )
 s.words(w)
-words = "ἐντούτῳδὲοἱΛακεδαιμόνιοιμετεπέμποντοΠαυσανίανἀνακρινοῦντεςὧνπέριἐπυνθάνοντο·"
-s['sentence'] = "ἐντούτῳδὲοἱΛακεδαιμόνιοιμετεπέμποντοΠαυσανίανἀνακρινοῦντεςὧνπέριἐπυνθάνοντο·"
+words = "ἐν τούτῳ δὲ οἱ Λακεδαιμόνιοι μετεπέμποντο Παυσανίαν ἀνακρινοῦντες ὧν πέρι ἐπυνθάνοντο · "
+s['sentence'] = "ἐν τούτῳ δὲ οἱ Λακεδαιμόνιοι μετεπέμποντο Παυσανίαν ἀνακρινοῦντες ὧν πέρι ἐπυνθάνοντο · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.5", length=20)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.5:1", ref="1.095.3-012", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=2, cid=26871929, posClass="N", pos="conj", length=3, )
@@ -7201,8 +6305,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.5:20", ref="", lemma="", tbwid=20, form="", value=".", relation="AuxK", head=0, cid=26871948, pos="punct", length=1, )
 s.words(w)
-words = "καὶγὰρἀδικίαπολλὴκατηγορεῖτοαὐτοῦὑπὸτῶνἙλλήνωντῶνἀφικνουμένων,καὶτυραννίδοςμᾶλλονἐφαίνετομίμησιςἢστρατηγία."
-s['sentence'] = "καὶγὰρἀδικίαπολλὴκατηγορεῖτοαὐτοῦὑπὸτῶνἙλλήνωντῶνἀφικνουμένων,καὶτυραννίδοςμᾶλλονἐφαίνετομίμησιςἢστρατηγία."
+words = "καὶ γὰρ ἀδικία πολλὴ κατηγορεῖτο αὐτοῦ ὑπὸ τῶν Ἑλλήνων τῶν ἀφικνουμένων , καὶ τυραννίδος μᾶλλον ἐφαίνετο μίμησις ἢ στρατηγία . "
+s['sentence'] = "καὶ γὰρ ἀδικία πολλὴ κατηγορεῖτο αὐτοῦ ὑπὸ τῶν Ἑλλήνων τῶν ἀφικνουμένων , καὶ τυραννίδος μᾶλλον ἐφαίνετο μίμησις ἢ στρατηγία . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.6", length=21)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.6:1", lemma="συμβαίνω", person="3rd", isIndecl="sig_to_ci", voice="act", form="ξυνέβη", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="sg", cid=26871949, posClass="V", pos="verb", ref="1.095.4-001", tbwid=1, value="ξυνέβη", posAdd="ath_h_aor", head=2, length=6, )
@@ -7327,8 +6431,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.6:21", ref="", lemma="", tbwid=21, form="", value=".", relation="AuxK", head=0, cid=26871969, pos="punct", length=1, )
 s.words(w)
-words = "ξυνέβητεαὐτῷκαλεῖσθαίτεἅμακαὶτοὺςξυμμάχουςτῷἐκείνουἔχθειπαρ'ἈθηναίουςμετατάξασθαιπλὴντῶνἀπὸΠελοποννήσουστρατιωτῶν."
-s['sentence'] = "ξυνέβητεαὐτῷκαλεῖσθαίτεἅμακαὶτοὺςξυμμάχουςτῷἐκείνουἔχθειπαρ'ἈθηναίουςμετατάξασθαιπλὴντῶνἀπὸΠελοποννήσουστρατιωτῶν."
+words = "ξυνέβη τε αὐτῷ καλεῖσθαί τε ἅμα καὶ τοὺς ξυμμάχους τῷ ἐκείνου ἔχθει παρ' Ἀθηναίους μετατάξασθαι πλὴν τῶν ἀπὸ Πελοποννήσου στρατιωτῶν . "
+s['sentence'] = "ξυνέβη τε αὐτῷ καλεῖσθαί τε ἅμα καὶ τοὺς ξυμμάχους τῷ ἐκείνου ἔχθει παρ' Ἀθηναίους μετατάξασθαι πλὴν τῶν ἀπὸ Πελοποννήσου στρατιωτῶν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.7", length=19)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.7:1", lemma="ἔρχομαι", form="ἐλθών", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="sg", cid=26871970, posClass="P", pos="participle", ref="1.095.5-001", tbwid=1, value="ἐλθὼν", gender="masc", posAdd="aor2", case="nom", head=14, length=5, )
@@ -7433,8 +6537,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.7:19", ref="", lemma="", tbwid=19, form="", value="·", relation="AuxK", head=0, cid=26871988, pos="punct", length=1, )
 s.words(w)
-words = "ἐλθὼνδὲἐςΛακεδαίμονατῶνμὲνἰδίᾳπρόςτιναἀδικημάτωνηὐθύνθη,τὰδὲμέγισταἀπολύεταιμὴἀδικεῖν·"
-s['sentence'] = "ἐλθὼνδὲἐςΛακεδαίμονατῶνμὲνἰδίᾳπρόςτιναἀδικημάτωνηὐθύνθη,τὰδὲμέγισταἀπολύεταιμὴἀδικεῖν·"
+words = "ἐλθὼν δὲ ἐς Λακεδαίμονα τῶν μὲν ἰδίᾳ πρός τινα ἀδικημάτων ηὐθύνθη , τὰ δὲ μέγιστα ἀπολύεται μὴ ἀδικεῖν · "
+s['sentence'] = "ἐλθὼν δὲ ἐς Λακεδαίμονα τῶν μὲν ἰδίᾳ πρός τινα ἀδικημάτων ηὐθύνθη , τὰ δὲ μέγιστα ἀπολύεται μὴ ἀδικεῖν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.8", length=11)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.8:1", lemma="κατηγορέω", person="3rd", isIndecl="comp_only contr", voice="mp", form="κατηγορεῖτο", dialect="attic epic", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871989, posClass="V", pos="verb", ref="1.095.5-019", tbwid=1, value="κατηγορεῖτο", posAdd="ew_pr,ew_denom", head=7, length=11, )
@@ -7495,8 +6599,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.8:11", ref="", lemma="", tbwid=11, form="", value=".", relation="AuxK", head=0, cid=26871999, pos="punct", length=1, )
 s.words(w)
-words = "κατηγορεῖτοδὲαὐτοῦοὐχἥκισταμηδισμὸςκαὶἐδόκεισαφέστατονεἶναι."
-s['sentence'] = "κατηγορεῖτοδὲαὐτοῦοὐχἥκισταμηδισμὸςκαὶἐδόκεισαφέστατονεἶναι."
+words = "κατηγορεῖτο δὲ αὐτοῦ οὐχ ἥκιστα μηδισμὸς καὶ ἐδόκει σαφέστατον εἶναι . "
+s['sentence'] = "κατηγορεῖτο δὲ αὐτοῦ οὐχ ἥκιστα μηδισμὸς καὶ ἐδόκει σαφέστατον εἶναι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.9", length=19)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.9:1", ref="1.095.6-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26872000, posClass="N", pos="conj", length=3, )
@@ -7601,8 +6705,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.9:19", ref="", lemma="", tbwid=19, form="", value="·", relation="AuxK", head=0, cid=26872018, pos="punct", length=1, )
 s.words(w)
-words = "καὶἐκεῖνονμὲνοὐκέτιἐκπέμπουσινἄρχοντα,Δόρκινδὲκαὶἄλλουςτινὰςμετ'αὐτοῦστρατιὰνἔχονταςοὐπολλήν·"
-s['sentence'] = "καὶἐκεῖνονμὲνοὐκέτιἐκπέμπουσινἄρχοντα,Δόρκινδὲκαὶἄλλουςτινὰςμετ'αὐτοῦστρατιὰνἔχονταςοὐπολλήν·"
+words = "καὶ ἐκεῖνον μὲν οὐκέτι ἐκπέμπουσιν ἄρχοντα , Δόρκιν δὲ καὶ ἄλλους τινὰς μετ' αὐτοῦ στρατιὰν ἔχοντας οὐ πολλήν · "
+s['sentence'] = "καὶ ἐκεῖνον μὲν οὐκέτι ἐκπέμπουσιν ἄρχοντα , Δόρκιν δὲ καὶ ἄλλους τινὰς μετ' αὐτοῦ στρατιὰν ἔχοντας οὐ πολλήν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.1", length=32)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.1:1", lemma="παραλαμβάνω", form="παραλαβόντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26872075, posClass="P", pos="participle", ref="1.096.1-001", tbwid=1, value="παραλαβόντες", gender="masc", posAdd="aor2,anw", case="nom", head=18, length=12, )
@@ -7789,8 +6893,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.1:32", ref="", lemma="", tbwid=32, form="", value="·", relation="AuxK", head=0, cid=26872106, pos="punct", length=1, )
 s.words(w)
-words = "παραλαβόντεςδὲοἱἈθηναῖοιτὴνἡγεμονίαντούτῳτῷτρόπῳἑκόντωντῶνξυμμάχωνδιὰτὸΠαυσανίουμῖσος,ἔταξανἅςτεἔδειπαρέχειντῶνπόλεωνχρήματαπρὸςτὸνβάρβαρονκαὶἃςναῦς·"
-s['sentence'] = "παραλαβόντεςδὲοἱἈθηναῖοιτὴνἡγεμονίαντούτῳτῷτρόπῳἑκόντωντῶνξυμμάχωνδιὰτὸΠαυσανίουμῖσος,ἔταξανἅςτεἔδειπαρέχειντῶνπόλεωνχρήματαπρὸςτὸνβάρβαρονκαὶἃςναῦς·"
+words = "παραλαβόντες δὲ οἱ Ἀθηναῖοι τὴν ἡγεμονίαν τούτῳ τῷ τρόπῳ ἑκόντων τῶν ξυμμάχων διὰ τὸ Παυσανίου μῖσος , ἔταξαν ἅς τε ἔδει παρέχειν τῶν πόλεων χρήματα πρὸς τὸν βάρβαρον καὶ ἃς ναῦς · "
+s['sentence'] = "παραλαβόντες δὲ οἱ Ἀθηναῖοι τὴν ἡγεμονίαν τούτῳ τῷ τρόπῳ ἑκόντων τῶν ξυμμάχων διὰ τὸ Παυσανίου μῖσος , ἔταξαν ἅς τε ἔδει παρέχειν τῶν πόλεων χρήματα πρὸς τὸν βάρβαρον καὶ ἃς ναῦς · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.2", length=11)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.2:1", lemma="πρόσχημα", form="πρόσχημα", isIndecl="", dialect="", relation="PNOM", number="sg", cid=26872107, posClass="N", pos="noun", ref="1.096.1-032", tbwid=1, value="πρόσχημα", gender="neut", posAdd="ma_matos", case="nom", head=3, length=8, )
@@ -7855,8 +6959,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.2:11", ref="", lemma="", tbwid=11, form="", value=".", relation="AuxK", head=0, cid=26872117, pos="punct", length=1, )
 s.words(w)
-words = "πρόσχημαγὰρἦνἀμύνεσθαιὧνἔπαθονδῃοῦνταςτὴνβασιλέωςχώραν."
-s['sentence'] = "πρόσχημαγὰρἦνἀμύνεσθαιὧνἔπαθονδῃοῦνταςτὴνβασιλέωςχώραν."
+words = "πρόσχημα γὰρ ἦν ἀμύνεσθαι ὧν ἔπαθον δῃοῦντας τὴν βασιλέως χώραν . "
+s['sentence'] = "πρόσχημα γὰρ ἦν ἀμύνεσθαι ὧν ἔπαθον δῃοῦντας τὴν βασιλέως χώραν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.3", length=13)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.3:1", ref="1.096.2-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26872118, posClass="N", pos="conj", length=3, )
@@ -7929,8 +7033,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.3:13", ref="", lemma="", tbwid=13, form="", value="·", relation="AuxK", head=0, cid=26872130, pos="punct", length=1, )
 s.words(w)
-words = "καὶἙλληνοταμίαιτότεπρῶτονἈθηναίοιςκατέστηἀρχή,οἳἐδέχοντοτὸνφόρον·"
-s['sentence'] = "καὶἙλληνοταμίαιτότεπρῶτονἈθηναίοιςκατέστηἀρχή,οἳἐδέχοντοτὸνφόρον·"
+words = "καὶ Ἑλληνοταμίαι τότε πρῶτον Ἀθηναίοις κατέστη ἀρχή , οἳ ἐδέχοντο τὸν φόρον · "
+s['sentence'] = "καὶ Ἑλληνοταμίαι τότε πρῶτον Ἀθηναίοις κατέστη ἀρχή , οἳ ἐδέχοντο τὸν φόρον · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.4", length=8)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.4:1", lemma="οὕτως", form="οὕτω", isIndecl="indeclform", dialect="", relation="ADV", cid=26872131, pos="adverb", posClass="N", tbwid=1, ref="1.096.2-013", degree="", value="οὕτω", head=3, length=4, )
@@ -7977,8 +7081,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.4:8", ref="", lemma="", tbwid=8, form="", value=".", relation="AuxK", head=0, cid=26872138, pos="punct", length=1, )
 s.words(w)
-words = "οὕτωγὰρὠνομάσθητῶνχρημάτωνἡφορά."
-s['sentence'] = "οὕτωγὰρὠνομάσθητῶνχρημάτωνἡφορά."
+words = "οὕτω γὰρ ὠνομάσθη τῶν χρημάτων ἡ φορά . "
+s['sentence'] = "οὕτω γὰρ ὠνομάσθη τῶν χρημάτων ἡ φορά . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.5", length=11)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.5:1", lemma="εἰμί", person="3rd", isIndecl="", voice="act", form="ἦν", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26872139, posClass="V", pos="verb", ref="1.096.2-020", tbwid=1, value="ἦν", posAdd="irreg_mi", head=2, length=2, )
@@ -8043,8 +7147,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.5:11", ref="", lemma="", tbwid=11, form="", value=".", relation="AuxK", head=0, cid=26872149, pos="punct", length=1, )
 s.words(w)
-words = "ἦνδ'ὁπρῶτοςφόροςταχθεὶςτετρακόσιατάλαντακαὶἑξήκοντα."
-s['sentence'] = "ἦνδ'ὁπρῶτοςφόροςταχθεὶςτετρακόσιατάλαντακαὶἑξήκοντα."
+words = "ἦν δ' ὁ πρῶτος φόρος ταχθεὶς τετρακόσια τάλαντα καὶ ἑξήκοντα . "
+s['sentence'] = "ἦν δ' ὁ πρῶτος φόρος ταχθεὶς τετρακόσια τάλαντα καὶ ἑξήκοντα . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.6", length=14)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.6:1", lemma="ταμιεῖον", form="ταμιεῖον", isIndecl="", dialect="", relation="PNOM", number="sg", cid=26872150, posClass="N", pos="noun", ref="1.096.2-030", tbwid=1, value="ταμιεῖόν", gender="neut", posAdd="os_ou", case="nom", head=4, length=8, )
@@ -8123,8 +7227,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.6:14", ref="", lemma="", tbwid=14, form="", value=".", relation="AuxK", head=0, cid=26872163, pos="punct", length=1, )
 s.words(w)
-words = "ταμιεῖόντεΔῆλοςἦναὐτοῖς,καὶαἱξύνοδοιἐςτὸἱερὸνἐγίγνοντο."
-s['sentence'] = "ταμιεῖόντεΔῆλοςἦναὐτοῖς,καὶαἱξύνοδοιἐςτὸἱερὸνἐγίγνοντο."
+words = "ταμιεῖόν τε Δῆλος ἦν αὐτοῖς , καὶ αἱ ξύνοδοι ἐς τὸ ἱερὸν ἐγίγνοντο . "
+s['sentence'] = "ταμιεῖόν τε Δῆλος ἦν αὐτοῖς , καὶ αἱ ξύνοδοι ἐς τὸ ἱερὸν ἐγίγνοντο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.1", length=48)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.1:1", lemma="ἡγέομαι", form="ἡγούμενοι", isIndecl="contr", voice="mid", dialect="attic epic doric", tense="pres", relation="ADV", mood="part", number="pl", cid=26872164, posClass="P", pos="participle", ref="1.097.1-001", tbwid=1, value="ἡγούμενοι", gender="masc", posAdd="ew_pr,ew_denom", case="nom", head=14, length=9, )
@@ -8407,8 +7511,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.1:48", ref="", lemma="", tbwid=48, form="", value=".", relation="AuxK", head=0, cid=26872211, pos="punct", length=1, )
 s.words(w)
-words = "ἡγούμενοιδὲαὐτονόμωντὸπρῶτοντῶνξυμμάχωνκαὶἀπὸκοινῶνξυνόδωνβουλευόντωντοσάδεἐπῆλθονπολέμῳτεκαὶδιαχειρίσειπραγμάτωνμεταξὺτοῦδετοῦπολέμουκαὶτοῦΜηδικοῦ,ἃἐγένετοπρόςτετὸνβάρβαροναὐτοῖςκαὶπρὸςτοὺςσφετέρουςξυμμάχουςνεωτερίζονταςκαὶΠελοποννησίωντοὺςαἰεὶπροστυγχάνονταςἐνἑκάστῳ."
-s['sentence'] = "ἡγούμενοιδὲαὐτονόμωντὸπρῶτοντῶνξυμμάχωνκαὶἀπὸκοινῶνξυνόδωνβουλευόντωντοσάδεἐπῆλθονπολέμῳτεκαὶδιαχειρίσειπραγμάτωνμεταξὺτοῦδετοῦπολέμουκαὶτοῦΜηδικοῦ,ἃἐγένετοπρόςτετὸνβάρβαροναὐτοῖςκαὶπρὸςτοὺςσφετέρουςξυμμάχουςνεωτερίζονταςκαὶΠελοποννησίωντοὺςαἰεὶπροστυγχάνονταςἐνἑκάστῳ."
+words = "ἡγούμενοι δὲ αὐτονόμων τὸ πρῶτον τῶν ξυμμάχων καὶ ἀπὸ κοινῶν ξυνόδων βουλευόντων τοσάδε ἐπῆλθον πολέμῳ τε καὶ διαχειρίσει πραγμάτων μεταξὺ τοῦδε τοῦ πολέμου καὶ τοῦ Μηδικοῦ , ἃ ἐγένετο πρός τε τὸν βάρβαρον αὐτοῖς καὶ πρὸς τοὺς σφετέρους ξυμμάχους νεωτερίζοντας καὶ Πελοποννησίων τοὺς αἰεὶ προστυγχάνοντας ἐν ἑκάστῳ . "
+s['sentence'] = "ἡγούμενοι δὲ αὐτονόμων τὸ πρῶτον τῶν ξυμμάχων καὶ ἀπὸ κοινῶν ξυνόδων βουλευόντων τοσάδε ἐπῆλθον πολέμῳ τε καὶ διαχειρίσει πραγμάτων μεταξὺ τοῦδε τοῦ πολέμου καὶ τοῦ Μηδικοῦ , ἃ ἐγένετο πρός τε τὸν βάρβαρον αὐτοῖς καὶ πρὸς τοὺς σφετέρους ξυμμάχους νεωτερίζοντας καὶ Πελοποννησίων τοὺς αἰεὶ προστυγχάνοντας ἐν ἑκάστῳ . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.2", length=35)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.2:1", lemma="γράφω", person="1st", isIndecl="", voice="act", form="ἔγραψα", dialect="", tense="aor", relation="PRED", mood="ind", number="sg", cid=26872212, posClass="V", pos="verb", ref="1.097.2-001", tbwid=1, value="ἔγραψα", posAdd="aor1,reg_conj", head=4, length=6, )
@@ -8613,8 +7717,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.2:35", ref="", lemma="", tbwid=35, form="", value="·", relation="AuxK", head=0, cid=26872246, pos="punct", length=1, )
 s.words(w)
-words = "ἔγραψαδὲαὐτὰκαὶτὴνἐκβολὴντοῦλόγουἐποιησάμηνδιὰτόδε,ὅτιτοῖςπρὸἐμοῦἅπασινἐκλιπὲςτοῦτοἦντὸχωρίονκαὶἢτὰπρὸτῶνΜηδικῶνἙλληνικὰξυνετίθεσανἢαὐτὰτὰΜηδικά·"
-s['sentence'] = "ἔγραψαδὲαὐτὰκαὶτὴνἐκβολὴντοῦλόγουἐποιησάμηνδιὰτόδε,ὅτιτοῖςπρὸἐμοῦἅπασινἐκλιπὲςτοῦτοἦντὸχωρίονκαὶἢτὰπρὸτῶνΜηδικῶνἙλληνικὰξυνετίθεσανἢαὐτὰτὰΜηδικά·"
+words = "ἔγραψα δὲ αὐτὰ καὶ τὴν ἐκβολὴν τοῦ λόγου ἐποιησάμην διὰ τόδε , ὅτι τοῖς πρὸ ἐμοῦ ἅπασιν ἐκλιπὲς τοῦτο ἦν τὸ χωρίον καὶ ἢ τὰ πρὸ τῶν Μηδικῶν Ἑλληνικὰ ξυνετίθεσαν ἢ αὐτὰ τὰ Μηδικά · "
+s['sentence'] = "ἔγραψα δὲ αὐτὰ καὶ τὴν ἐκβολὴν τοῦ λόγου ἐποιησάμην διὰ τόδε , ὅτι τοῖς πρὸ ἐμοῦ ἅπασιν ἐκλιπὲς τοῦτο ἦν τὸ χωρίον καὶ ἢ τὰ πρὸ τῶν Μηδικῶν Ἑλληνικὰ ξυνετίθεσαν ἢ αὐτὰ τὰ Μηδικά · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.3", length=20)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.3:1", lemma="οὗτος", form="τούτων", isIndecl="indeclform", dialect="", relation="OBJ", number="pl", cid=26872247, posClass="N", pos="adj", ref="1.097.2-035", tbwid=1, degree="", value="τούτων", gender="neut", posAdd="pron_adj1", case="gen", head=5, length=6, )
@@ -8725,8 +7829,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.3:20", ref="", lemma="", tbwid=20, form="", value=".", relation="AuxK", head=0, cid=26872266, pos="punct", length=1, )
 s.words(w)
-words = "τούτωνδὲὅσπερκαὶἥψατοἐντῇἈττικῇξυγγραφῇἙλλάνικος,βραχέωςτεκαὶτοῖςχρόνοιςοὐκἀκριβῶςἐπεμνήσθη."
-s['sentence'] = "τούτωνδὲὅσπερκαὶἥψατοἐντῇἈττικῇξυγγραφῇἙλλάνικος,βραχέωςτεκαὶτοῖςχρόνοιςοὐκἀκριβῶςἐπεμνήσθη."
+words = "τούτων δὲ ὅσπερ καὶ ἥψατο ἐν τῇ Ἀττικῇ ξυγγραφῇ Ἑλλάνικος , βραχέως τε καὶ τοῖς χρόνοις οὐκ ἀκριβῶς ἐπεμνήσθη . "
+s['sentence'] = "τούτων δὲ ὅσπερ καὶ ἥψατο ἐν τῇ Ἀττικῇ ξυγγραφῇ Ἑλλάνικος , βραχέως τε καὶ τοῖς χρόνοις οὐκ ἀκριβῶς ἐπεμνήσθη . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.4", length=15)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.4:1", lemma="ἅμα", form="ἅμα", isIndecl="indeclform", dialect="", relation="AuxY", cid=26872267, pos="adverb", posClass="N", tbwid=1, ref="1.097.2-054", degree="", value="ἅμα", head=7, length=3, )
@@ -8815,8 +7919,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.97.4:15", ref="", lemma="", tbwid=15, form="", value=".", relation="AuxK", head=0, cid=26872281, pos="punct", length=1, )
 s.words(w)
-words = "ἅμαδὲκαὶτῆςἀρχῆςἀπόδειξινἔχειτῆςτῶνἈθηναίωνἐνοἵῳτρόπῳκατέστη."
-s['sentence'] = "ἅμαδὲκαὶτῆςἀρχῆςἀπόδειξινἔχειτῆςτῶνἈθηναίωνἐνοἵῳτρόπῳκατέστη."
+words = "ἅμα δὲ καὶ τῆς ἀρχῆς ἀπόδειξιν ἔχει τῆς τῶν Ἀθηναίων ἐν οἵῳ τρόπῳ κατέστη . "
+s['sentence'] = "ἅμα δὲ καὶ τῆς ἀρχῆς ἀπόδειξιν ἔχει τῆς τῶν Ἀθηναίων ἐν οἵῳ τρόπῳ κατέστη . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.1", length=18)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.1:1", lemma="πρότερος", form="πρῶτον", isIndecl="", dialect="", relation="ADV", number="sg", cid=26872282, posClass="N", pos="adj", ref="1.098.1-001", tbwid=1, degree="superl", value="πρῶτον", gender="masc", posAdd="os_h_on", case="acc", head=11, length=6, )
@@ -8919,8 +8023,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.1:18", ref="", lemma="", tbwid=18, form="", value=".", relation="AuxK", head=0, cid=26872299, pos="punct", length=1, )
 s.words(w)
-words = "πρῶτονμὲνἨιόνατὴνἐπὶΣτρυμόνιΜήδωνἐχόντωνπολιορκίᾳεἷλονκαὶἠνδραπόδισαν,ΚίμωνοςτοῦΜιλτιάδουστρατηγοῦντος."
-s['sentence'] = "πρῶτονμὲνἨιόνατὴνἐπὶΣτρυμόνιΜήδωνἐχόντωνπολιορκίᾳεἷλονκαὶἠνδραπόδισαν,ΚίμωνοςτοῦΜιλτιάδουστρατηγοῦντος."
+words = "πρῶτον μὲν Ἠιόνα τὴν ἐπὶ Στρυμόνι Μήδων ἐχόντων πολιορκίᾳ εἷλον καὶ ἠνδραπόδισαν , Κίμωνος τοῦ Μιλτιάδου στρατηγοῦντος . "
+s['sentence'] = "πρῶτον μὲν Ἠιόνα τὴν ἐπὶ Στρυμόνι Μήδων ἐχόντων πολιορκίᾳ εἷλον καὶ ἠνδραπόδισαν , Κίμωνος τοῦ Μιλτιάδου στρατηγοῦντος . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.2", length=17)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.2:1", lemma="ἔπειτα", form="ἔπειτα", isIndecl="indeclform", dialect="", relation="ADV", cid=26872300, pos="adverb", posClass="N", tbwid=1, ref="1.098.2-001", degree="", value="ἔπειτα", head=14, length=6, )
@@ -9013,8 +8117,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.2:17", ref="", lemma="", tbwid=17, form="", value=".", relation="AuxK", head=0, cid=26872316, pos="punct", length=1, )
 s.words(w)
-words = "ἔπειταΣκῦροντὴνἐντῷΑἰγαίῳνῆσον,ἣνᾤκουνΔόλοπες,ἠνδραπόδισανκαὶᾤκισαναὐτοί."
-s['sentence'] = "ἔπειταΣκῦροντὴνἐντῷΑἰγαίῳνῆσον,ἣνᾤκουνΔόλοπες,ἠνδραπόδισανκαὶᾤκισαναὐτοί."
+words = "ἔπειτα Σκῦρον τὴν ἐν τῷ Αἰγαίῳ νῆσον , ἣν ᾤκουν Δόλοπες , ἠνδραπόδισαν καὶ ᾤκισαν αὐτοί . "
+s['sentence'] = "ἔπειτα Σκῦρον τὴν ἐν τῷ Αἰγαίῳ νῆσον , ἣν ᾤκουν Δόλοπες , ἠνδραπόδισαν καὶ ᾤκισαν αὐτοί . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.3", length=17)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.3:1", ref="1.098.3-001", lemma="πρός", tbwid=1, isIndecl="indeclform", form="πρός", dialect="", value="πρὸς", relation="AuxP", head=10, cid=26872317, posClass="N", pos="prep", length=4, )
@@ -9111,8 +8215,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.3:17", ref="", lemma="", tbwid=17, form="", value=".", relation="AuxK", head=0, cid=26872333, pos="punct", length=1, )
 s.words(w)
-words = "πρὸςδὲΚαρυστίουςαὐτοῖςἄνευτῶνἄλλωνΕὐβοέωνπόλεμοςἐγένετο,καὶχρόνῳξυνέβησανκαθ'ὁμολογίαν."
-s['sentence'] = "πρὸςδὲΚαρυστίουςαὐτοῖςἄνευτῶνἄλλωνΕὐβοέωνπόλεμοςἐγένετο,καὶχρόνῳξυνέβησανκαθ'ὁμολογίαν."
+words = "πρὸς δὲ Καρυστίους αὐτοῖς ἄνευ τῶν ἄλλων Εὐβοέων πόλεμος ἐγένετο , καὶ χρόνῳ ξυνέβησαν καθ' ὁμολογίαν . "
+s['sentence'] = "πρὸς δὲ Καρυστίους αὐτοῖς ἄνευ τῶν ἄλλων Εὐβοέων πόλεμος ἐγένετο , καὶ χρόνῳ ξυνέβησαν καθ' ὁμολογίαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.4", length=29)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.4:1", lemma="Νάξιος", form="Ναξίοις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26872334, posClass="N", pos="adj", ref="1.098.4-001", tbwid=1, degree="", value="Ναξίοις", gender="masc", posAdd="os_h_on", case="dat", head=6, length=7, )
@@ -9273,8 +8377,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.98.4:29", ref="", lemma="", tbwid=29, form="", value=".", relation="AuxK", head=0, cid=26872362, pos="punct", length=1, )
 s.words(w)
-words = "Ναξίοιςδὲἀποστᾶσιμετὰταῦταἐπολέμησανκαὶπολιορκίᾳπαρεστήσαντο,πρώτητεαὕτηπόλιςξυμμαχὶςπαρὰτὸκαθεστηκὸςἐδουλώθη,ἔπειταδὲκαὶτῶνἄλλωνὡςἑκάστῃξυνέβη."
-s['sentence'] = "Ναξίοιςδὲἀποστᾶσιμετὰταῦταἐπολέμησανκαὶπολιορκίᾳπαρεστήσαντο,πρώτητεαὕτηπόλιςξυμμαχὶςπαρὰτὸκαθεστηκὸςἐδουλώθη,ἔπειταδὲκαὶτῶνἄλλωνὡςἑκάστῃξυνέβη."
+words = "Ναξίοις δὲ ἀποστᾶσι μετὰ ταῦτα ἐπολέμησαν καὶ πολιορκίᾳ παρεστήσαντο , πρώτη τε αὕτη πόλις ξυμμαχὶς παρὰ τὸ καθεστηκὸς ἐδουλώθη , ἔπειτα δὲ καὶ τῶν ἄλλων ὡς ἑκάστῃ ξυνέβη . "
+s['sentence'] = "Ναξίοις δὲ ἀποστᾶσι μετὰ ταῦτα ἐπολέμησαν καὶ πολιορκίᾳ παρεστήσαντο , πρώτη τε αὕτη πόλις ξυμμαχὶς παρὰ τὸ καθεστηκὸς ἐδουλώθη , ἔπειτα δὲ καὶ τῶν ἄλλων ὡς ἑκάστῃ ξυνέβη . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.1", length=21)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.1:1", lemma="αἰτία", form="αἰτίαι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872363, posClass="N", pos="noun", ref="1.099.1-001", tbwid=1, value="αἰτίαι", gender="fem", posAdd="h_hs", case="nom", head=5, length=6, )
@@ -9399,8 +8503,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.1:21", ref="", lemma="", tbwid=21, form="", value="·", relation="AuxK", head=0, cid=26872383, pos="punct", length=1, )
 s.words(w)
-words = "αἰτίαιδὲἄλλαιτεἦσαντῶνἀποστάσεωνκαὶμέγισταιαἱτῶνφόρωνκαὶνεῶνἔκδειαικαὶλιποστράτιονεἴτῳἐγένετο·"
-s['sentence'] = "αἰτίαιδὲἄλλαιτεἦσαντῶνἀποστάσεωνκαὶμέγισταιαἱτῶνφόρωνκαὶνεῶνἔκδειαικαὶλιποστράτιονεἴτῳἐγένετο·"
+words = "αἰτίαι δὲ ἄλλαι τε ἦσαν τῶν ἀποστάσεων καὶ μέγισται αἱ τῶν φόρων καὶ νεῶν ἔκδειαι καὶ λιποστράτιον εἴ τῳ ἐγένετο · "
+s['sentence'] = "αἰτίαι δὲ ἄλλαι τε ἦσαν τῶν ἀποστάσεων καὶ μέγισται αἱ τῶν φόρων καὶ νεῶν ἔκδειαι καὶ λιποστράτιον εἴ τῳ ἐγένετο · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.2", length=18)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.2:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872384, posClass="N", pos="article", ref="1.099.1-021", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -9499,8 +8603,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.2:18", ref="", lemma="", tbwid=18, form="", value=".", relation="AuxK", head=0, cid=26872400, pos="punct", length=1, )
 s.words(w)
-words = "οἱγὰρἈθηναῖοιἀκριβῶςἔπρασσονκαὶλυπηροὶἦσανοὐκεἰωθόσινοὐδὲβουλομένοιςταλαιπωρεῖνπροσάγοντεςτὰςἀνάγκας."
-s['sentence'] = "οἱγὰρἈθηναῖοιἀκριβῶςἔπρασσονκαὶλυπηροὶἦσανοὐκεἰωθόσινοὐδὲβουλομένοιςταλαιπωρεῖνπροσάγοντεςτὰςἀνάγκας."
+words = "οἱ γὰρ Ἀθηναῖοι ἀκριβῶς ἔπρασσον καὶ λυπηροὶ ἦσαν οὐκ εἰωθόσιν οὐ δὲ βουλομένοις ταλαιπωρεῖν προσάγοντες τὰς ἀνάγκας . "
+s['sentence'] = "οἱ γὰρ Ἀθηναῖοι ἀκριβῶς ἔπρασσον καὶ λυπηροὶ ἦσαν οὐκ εἰωθόσιν οὐ δὲ βουλομένοις ταλαιπωρεῖν προσάγοντες τὰς ἀνάγκας . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.3", length=28)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.3:1", lemma="εἰμί", person="3rd", isIndecl="", voice="act", form="ἦσαν", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="pl", cid=26872401, posClass="V", pos="verb", ref="1.099.2-001", tbwid=1, value="ἦσαν", posAdd="irreg_mi", head=22, length=4, )
@@ -9651,8 +8755,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.3:28", ref="", lemma="", tbwid=28, form="", value=".", relation="AuxK", head=0, cid=26872427, pos="punct", length=1, )
 s.words(w)
-words = "ἦσανδέπωςκαὶἄλλωςοἱἈθηναῖοιοὐκέτιὁμοίωςἐνἡδονῇἄρχοντες,καὶοὔτεξυνεστράτευονἀπὸτοῦἴσουῥᾴδιόντεπροσάγεσθαιἦναὐτοῖςτοὺςἀφισταμένους."
-s['sentence'] = "ἦσανδέπωςκαὶἄλλωςοἱἈθηναῖοιοὐκέτιὁμοίωςἐνἡδονῇἄρχοντες,καὶοὔτεξυνεστράτευονἀπὸτοῦἴσουῥᾴδιόντεπροσάγεσθαιἦναὐτοῖςτοὺςἀφισταμένους."
+words = "ἦσαν δέ πως καὶ ἄλλως οἱ Ἀθηναῖοι οὐκέτι ὁμοίως ἐν ἡδονῇ ἄρχοντες , καὶ οὔ τε ξυνεστράτευον ἀπὸ τοῦ ἴσου ῥᾴδιόν τε προσάγεσθαι ἦν αὐτοῖς τοὺς ἀφισταμένους . "
+s['sentence'] = "ἦσαν δέ πως καὶ ἄλλως οἱ Ἀθηναῖοι οὐκέτι ὁμοίως ἐν ἡδονῇ ἄρχοντες , καὶ οὔ τε ξυνεστράτευον ἀπὸ τοῦ ἴσου ῥᾴδιόν τε προσάγεσθαι ἦν αὐτοῖς τοὺς ἀφισταμένους . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.4", length=7)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.4:1", lemma="ὅς", form="ὧν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26872428, posClass="N", pos="pron", ref="1.099.3-001", tbwid=1, value="ὧν", gender="neut", posAdd="relative", case="gen", head=3, length=2, )
@@ -9693,8 +8797,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.4:7", ref="", lemma="", tbwid=7, form="", value="·", relation="AuxK", head=0, cid=26872434, pos="punct", length=1, )
 s.words(w)
-words = "ὧναὐτοὶαἴτιοιἐγένοντοοἱξύμμαχοι·"
-s['sentence'] = "ὧναὐτοὶαἴτιοιἐγένοντοοἱξύμμαχοι·"
+words = "ὧν αὐτοὶ αἴτιοι ἐγένοντο οἱ ξύμμαχοι · "
+s['sentence'] = "ὧν αὐτοὶ αἴτιοι ἐγένοντο οἱ ξύμμαχοι · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.5", length=55)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.5:1", ref="1.099.3-007", lemma="διά", tbwid=1, isIndecl="indeclform", form="διά", dialect="", value="διὰ", relation="AuxP", head=19, cid=26872435, posClass="N", pos="prep", length=3, )
@@ -9999,8 +9103,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.99.5:55", ref="", lemma="", tbwid=55, form="", value=".", relation="AuxK", head=0, cid=26872489, pos="punct", length=1, )
 s.words(w)
-words = "διὰγὰρτὴνἀπόκνησινταύτηντῶνστρατειῶνοἱπλείουςαὐτῶν,ἵναμὴἀπ'οἴκουὦσι,χρήματαἐτάξαντοἀντὶτῶννεῶντὸἱκνούμενονἀνάλωμαφέρειν,καὶτοῖςμὲνἈθηναίοιςηὔξετοτὸναυτικὸνἀπὸτῆςδαπάνηςἣνἐκεῖνοιξυμφέροιεν,αὐτοὶδέ,ὁπότεἀποσταῖεν,ἀπαράσκευοικαὶἄπειροιἐςτὸνπόλεμονκαθίσταντο."
-s['sentence'] = "διὰγὰρτὴνἀπόκνησινταύτηντῶνστρατειῶνοἱπλείουςαὐτῶν,ἵναμὴἀπ'οἴκουὦσι,χρήματαἐτάξαντοἀντὶτῶννεῶντὸἱκνούμενονἀνάλωμαφέρειν,καὶτοῖςμὲνἈθηναίοιςηὔξετοτὸναυτικὸνἀπὸτῆςδαπάνηςἣνἐκεῖνοιξυμφέροιεν,αὐτοὶδέ,ὁπότεἀποσταῖεν,ἀπαράσκευοικαὶἄπειροιἐςτὸνπόλεμονκαθίσταντο."
+words = "διὰ γὰρ τὴν ἀπόκνησιν ταύτην τῶν στρατειῶν οἱ πλείους αὐτῶν , ἵνα μὴ ἀπ' οἴκου ὦσι , χρήματα ἐτάξαντο ἀντὶ τῶν νεῶν τὸ ἱκνούμενον ἀνάλωμα φέρειν , καὶ τοῖς μὲν Ἀθηναίοις ηὔξετο τὸ ναυτικὸν ἀπὸ τῆς δαπάνης ἣν ἐκεῖνοι ξυμφέροιεν , αὐτοὶ δέ , ὁπότε ἀποσταῖεν , ἀπαράσκευοι καὶ ἄπειροι ἐς τὸν πόλεμον καθίσταντο . "
+s['sentence'] = "διὰ γὰρ τὴν ἀπόκνησιν ταύτην τῶν στρατειῶν οἱ πλείους αὐτῶν , ἵνα μὴ ἀπ' οἴκου ὦσι , χρήματα ἐτάξαντο ἀντὶ τῶν νεῶν τὸ ἱκνούμενον ἀνάλωμα φέρειν , καὶ τοῖς μὲν Ἀθηναίοις ηὔξετο τὸ ναυτικὸν ἀπὸ τῆς δαπάνης ἣν ἐκεῖνοι ξυμφέροιεν , αὐτοὶ δέ , ὁπότε ἀποσταῖεν , ἀπαράσκευοι καὶ ἄπειροι ἐς τὸν πόλεμον καθίσταντο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.100.1", length=44)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.100.1:1", lemma="γίγνομαι", person="3rd", isIndecl="", voice="mid", form="ἐγένετο", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="sg", cid=26872490, posClass="V", pos="verb", ref="1.100.1-001", tbwid=1, value="ἐγένετο", posAdd="aor2", head=34, length=7, )
@@ -10255,8 +9359,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.100.1:44", ref="", lemma="", tbwid=44, form="", value=".", relation="AuxK", head=0, cid=26872533, pos="punct", length=1, )
 s.words(w)
-words = "ἐγένετοδὲμετὰταῦτακαὶἡἐπ'ΕὐρυμέδοντιποταμῷἐνΠαμφυλίᾳπεζομαχίακαὶναυμαχίαἈθηναίωνκαὶτῶνξυμμάχωνπρὸςΜήδους,καὶἐνίκωντῇαὐτῇἡμέρᾳἀμφότεραἈθηναῖοιΚίμωνοςτοῦΜιλτιάδουστρατηγοῦντος,καὶεἷλοντριήρειςΦοινίκωνκαὶδιέφθειραντὰςπάσαςἐςδιακοσίας."
-s['sentence'] = "ἐγένετοδὲμετὰταῦτακαὶἡἐπ'ΕὐρυμέδοντιποταμῷἐνΠαμφυλίᾳπεζομαχίακαὶναυμαχίαἈθηναίωνκαὶτῶνξυμμάχωνπρὸςΜήδους,καὶἐνίκωντῇαὐτῇἡμέρᾳἀμφότεραἈθηναῖοιΚίμωνοςτοῦΜιλτιάδουστρατηγοῦντος,καὶεἷλοντριήρειςΦοινίκωνκαὶδιέφθειραντὰςπάσαςἐςδιακοσίας."
+words = "ἐγένετο δὲ μετὰ ταῦτα καὶ ἡ ἐπ' Εὐρυμέδοντι ποταμῷ ἐν Παμφυλίᾳ πεζομαχία καὶ ναυμαχία Ἀθηναίων καὶ τῶν ξυμμάχων πρὸς Μήδους , καὶ ἐνίκων τῇ αὐτῇ ἡμέρᾳ ἀμφότερα Ἀθηναῖοι Κίμωνος τοῦ Μιλτιάδου στρατηγοῦντος , καὶ εἷλον τριήρεις Φοινίκων καὶ διέφθειραν τὰς πάσας ἐς διακοσίας . "
+s['sentence'] = "ἐγένετο δὲ μετὰ ταῦτα καὶ ἡ ἐπ' Εὐρυμέδοντι ποταμῷ ἐν Παμφυλίᾳ πεζομαχία καὶ ναυμαχία Ἀθηναίων καὶ τῶν ξυμμάχων πρὸς Μήδους , καὶ ἐνίκων τῇ αὐτῇ ἡμέρᾳ ἀμφότερα Ἀθηναῖοι Κίμωνος τοῦ Μιλτιάδου στρατηγοῦντος , καὶ εἷλον τριήρεις Φοινίκων καὶ διέφθειραν τὰς πάσας ἐς διακοσίας . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.100.2", length=22)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.100.2:1", lemma="χρόνος", form="χρόνῳ", isIndecl="", dialect="", relation="ADV", number="sg", cid=26872534, posClass="N", pos="noun", ref="1.100.2-001", tbwid=1, value="χρόνῳ", gender="masc", posAdd="os_ou", case="dat", head=3, length=5, )
@@ -10383,8 +9487,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.100.2:22", ref="", lemma="", tbwid=22, form="", value=".", relation="AuxK", head=0, cid=26872555, pos="punct", length=1, )
 s.words(w)
-words = "χρόνῳδὲὕστερονξυνέβηΘασίουςαὐτῶνἀποστῆναι,διενεχθένταςπερὶτῶνἐντῇἀντιπέραςΘρᾴκῃἐμπορίωνκαὶτοῦμετάλλουἃἐνέμοντο."
-s['sentence'] = "χρόνῳδὲὕστερονξυνέβηΘασίουςαὐτῶνἀποστῆναι,διενεχθένταςπερὶτῶνἐντῇἀντιπέραςΘρᾴκῃἐμπορίωνκαὶτοῦμετάλλουἃἐνέμοντο."
+words = "χρόνῳ δὲ ὕστερον ξυνέβη Θασίους αὐτῶν ἀποστῆναι , διενεχθέντας περὶ τῶν ἐν τῇ ἀντιπέρας Θρᾴκῃ ἐμπορίων καὶ τοῦ μετάλλου ἃ ἐνέμοντο . "
+s['sentence'] = "χρόνῳ δὲ ὕστερον ξυνέβη Θασίους αὐτῶν ἀποστῆναι , διενεχθέντας περὶ τῶν ἐν τῇ ἀντιπέρας Θρᾴκῃ ἐμπορίων καὶ τοῦ μετάλλου ἃ ἐνέμοντο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.100.3", length=79)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.100.3:1", ref="1.100.2-022", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26872556, posClass="N", pos="conj", length=3, )
@@ -10817,8 +9921,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.100.3:79", ref="", lemma="", tbwid=79, form="", value=".", relation="AuxK", head=0, cid=26872634, pos="punct", length=1, )
 s.words(w)
-words = "καὶναυσὶμὲνἐπὶΘάσονπλεύσαντεςοἱἈθηναῖοιναυμαχίᾳἐκράτησανκαὶἐςτὴνγῆνἀπέβησαν,ἐπὶδὲΣτρυμόναπέμψαντεςμυρίουςοἰκήτοραςαὑτῶνκαὶτῶνξυμμάχωνὑπὸτοὺςαὐτοὺςχρόνουςὡςοἰκιοῦντεςτὰςτότεκαλουμέναςἘννέαὁδούς,νῦνδὲἈμφίπολιν,τῶνμὲνἘννέαὁδῶναὐτοὶἐκράτησαν,ἃςεἶχονἨδωνοί,προελθόντεςδὲτῆςΘρᾴκηςἐςμεσόγειανδιεφθάρησανἐνΔραβησκῷτῇἨδωνικῇὑπὸτῶνΘρᾳκῶνξυμπάντων,οἷςπολέμιονἦντὸχωρίοναἱἘννέαὁδοὶκτιζόμενον."
-s['sentence'] = "καὶναυσὶμὲνἐπὶΘάσονπλεύσαντεςοἱἈθηναῖοιναυμαχίᾳἐκράτησανκαὶἐςτὴνγῆνἀπέβησαν,ἐπὶδὲΣτρυμόναπέμψαντεςμυρίουςοἰκήτοραςαὑτῶνκαὶτῶνξυμμάχωνὑπὸτοὺςαὐτοὺςχρόνουςὡςοἰκιοῦντεςτὰςτότεκαλουμέναςἘννέαὁδούς,νῦνδὲἈμφίπολιν,τῶνμὲνἘννέαὁδῶναὐτοὶἐκράτησαν,ἃςεἶχονἨδωνοί,προελθόντεςδὲτῆςΘρᾴκηςἐςμεσόγειανδιεφθάρησανἐνΔραβησκῷτῇἨδωνικῇὑπὸτῶνΘρᾳκῶνξυμπάντων,οἷςπολέμιονἦντὸχωρίοναἱἘννέαὁδοὶκτιζόμενον."
+words = "καὶ ναυσὶ μὲν ἐπὶ Θάσον πλεύσαντες οἱ Ἀθηναῖοι ναυμαχίᾳ ἐκράτησαν καὶ ἐς τὴν γῆν ἀπέβησαν , ἐπὶ δὲ Στρυμόνα πέμψαντες μυρίους οἰκήτορας αὑτῶν καὶ τῶν ξυμμάχων ὑπὸ τοὺς αὐτοὺς χρόνους ὡς οἰκιοῦντες τὰς τότε καλουμένας Ἐννέα ὁδούς , νῦν δὲ Ἀμφίπολιν , τῶν μὲν Ἐννέα ὁδῶν αὐτοὶ ἐκράτησαν , ἃς εἶχον Ἠδωνοί , προελθόντες δὲ τῆς Θρᾴκης ἐς μεσόγειαν διεφθάρησαν ἐν Δραβησκῷ τῇ Ἠδωνικῇ ὑπὸ τῶν Θρᾳκῶν ξυμπάντων , οἷς πολέμιον ἦν τὸ χωρίον αἱ Ἐννέα ὁδοὶ κτιζόμενον . "
+s['sentence'] = "καὶ ναυσὶ μὲν ἐπὶ Θάσον πλεύσαντες οἱ Ἀθηναῖοι ναυμαχίᾳ ἐκράτησαν καὶ ἐς τὴν γῆν ἀπέβησαν , ἐπὶ δὲ Στρυμόνα πέμψαντες μυρίους οἰκήτορας αὑτῶν καὶ τῶν ξυμμάχων ὑπὸ τοὺς αὐτοὺς χρόνους ὡς οἰκιοῦντες τὰς τότε καλουμένας Ἐννέα ὁδούς , νῦν δὲ Ἀμφίπολιν , τῶν μὲν Ἐννέα ὁδῶν αὐτοὶ ἐκράτησαν , ἃς εἶχον Ἠδωνοί , προελθόντες δὲ τῆς Θρᾴκης ἐς μεσόγειαν διεφθάρησαν ἐν Δραβησκῷ τῇ Ἠδωνικῇ ὑπὸ τῶν Θρᾳκῶν ξυμπάντων , οἷς πολέμιον ἦν τὸ χωρίον αἱ Ἐννέα ὁδοὶ κτιζόμενον . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.1", length=16)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.1:1", lemma="Θάσιος", form="Θάσιοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872635, posClass="N", pos="adj", ref="1.101.1-001", tbwid=1, degree="", value="Θάσιοι", gender="masc", posAdd="os_h_on", case="nom", head=9, length=6, )
@@ -10913,8 +10017,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.1:16", ref="", lemma="", tbwid=16, form="", value=".", relation="AuxK", head=0, cid=26872650, pos="punct", length=1, )
 s.words(w)
-words = "ΘάσιοιδὲνικηθέντεςμάχῃκαὶπολιορκούμενοιΛακεδαιμονίουςἐπεκαλοῦντοκαὶἐπαμύνεινἐκέλευονἐσβαλόνταςἐςτὴνἈττικήν."
-s['sentence'] = "ΘάσιοιδὲνικηθέντεςμάχῃκαὶπολιορκούμενοιΛακεδαιμονίουςἐπεκαλοῦντοκαὶἐπαμύνεινἐκέλευονἐσβαλόνταςἐςτὴνἈττικήν."
+words = "Θάσιοι δὲ νικηθέντες μάχῃ καὶ πολιορκούμενοι Λακεδαιμονίους ἐπεκαλοῦντο καὶ ἐπαμύνειν ἐκέλευον ἐσβαλόντας ἐς τὴν Ἀττικήν . "
+s['sentence'] = "Θάσιοι δὲ νικηθέντες μάχῃ καὶ πολιορκούμενοι Λακεδαιμονίους ἐπεκαλοῦντο καὶ ἐπαμύνειν ἐκέλευον ἐσβαλόντας ἐς τὴν Ἀττικήν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.2", length=34)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.2:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26872651, posClass="N", pos="pron", ref="1.101.2-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=12, length=2, )
@@ -11105,8 +10209,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.2:34", ref="", lemma="", tbwid=34, form="", value=".", relation="AuxK", head=0, cid=26872684, pos="punct", length=1, )
 s.words(w)
-words = "οἱδὲὑπέσχοντομὲνκρύφατῶνἈθηναίωνκαὶἔμελλον,διεκωλύθησανδὲὑπὸτοῦγενομένουσεισμοῦ,ἐνᾧκαὶοἱΕἵλωτεςαὐτοῖςκαὶτῶνπεριοίκωνΘουριᾶταίτεκαὶΑἰθαιῆςἐςἸθώμηνἀπέστησαν."
-s['sentence'] = "οἱδὲὑπέσχοντομὲνκρύφατῶνἈθηναίωνκαὶἔμελλον,διεκωλύθησανδὲὑπὸτοῦγενομένουσεισμοῦ,ἐνᾧκαὶοἱΕἵλωτεςαὐτοῖςκαὶτῶνπεριοίκωνΘουριᾶταίτεκαὶΑἰθαιῆςἐςἸθώμηνἀπέστησαν."
+words = "οἱ δὲ ὑπέσχοντο μὲν κρύφα τῶν Ἀθηναίων καὶ ἔμελλον , διεκωλύθησαν δὲ ὑπὸ τοῦ γενομένου σεισμοῦ , ἐν ᾧ καὶ οἱ Εἵλωτες αὐτοῖς καὶ τῶν περιοίκων Θουριᾶταί τε καὶ Αἰθαιῆς ἐς Ἰθώμην ἀπέστησαν . "
+s['sentence'] = "οἱ δὲ ὑπέσχοντο μὲν κρύφα τῶν Ἀθηναίων καὶ ἔμελλον , διεκωλύθησαν δὲ ὑπὸ τοῦ γενομένου σεισμοῦ , ἐν ᾧ καὶ οἱ Εἵλωτες αὐτοῖς καὶ τῶν περιοίκων Θουριᾶταί τε καὶ Αἰθαιῆς ἐς Ἰθώμην ἀπέστησαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.3", length=13)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.3:1", lemma="πλεῖστος", form="πλεῖστοι", isIndecl="irreg_superl", dialect="", relation="SBJ", number="pl", cid=26872685, posClass="N", pos="adj", ref="1.101.2-034", tbwid=1, degree="superl", value="πλεῖστοι", gender="masc", posAdd="os_h_on", case="nom", head=5, length=8, )
@@ -11183,8 +10287,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.3:13", ref="", lemma="", tbwid=13, form="", value="·", relation="AuxK", head=0, cid=26872697, pos="punct", length=1, )
 s.words(w)
-words = "πλεῖστοιδὲτῶνΕἱλώτωνἐγένοντοοἱτῶνπαλαιῶνΜεσσηνίωντότεδουλωθέντωνἀπόγονοι·"
-s['sentence'] = "πλεῖστοιδὲτῶνΕἱλώτωνἐγένοντοοἱτῶνπαλαιῶνΜεσσηνίωντότεδουλωθέντωνἀπόγονοι·"
+words = "πλεῖστοι δὲ τῶν Εἱλώτων ἐγένοντο οἱ τῶν παλαιῶν Μεσσηνίων τότε δουλωθέντων ἀπόγονοι · "
+s['sentence'] = "πλεῖστοι δὲ τῶν Εἱλώτων ἐγένοντο οἱ τῶν παλαιῶν Μεσσηνίων τότε δουλωθέντων ἀπόγονοι · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.4", length=7)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.4:1", ref="1.101.2-046", lemma="", tbwid=1, degree="", form="", value="ᾗ", relation="ADV", head=4, cid=26872698, pos="adverb", length=1, )
@@ -11221,8 +10325,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.4:7", ref="", lemma="", tbwid=7, form="", value=".", relation="AuxK", head=0, cid=26872704, pos="punct", length=1, )
 s.words(w)
-words = "ᾗκαὶΜεσσήνιοιἐκλήθησανοἱπάντες."
-s['sentence'] = "ᾗκαὶΜεσσήνιοιἐκλήθησανοἱπάντες."
+words = "ᾗ καὶ Μεσσήνιοι ἐκλήθησαν οἱ πάντες . "
+s['sentence'] = "ᾗ καὶ Μεσσήνιοι ἐκλήθησαν οἱ πάντες . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.5", length=44)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.5:1", ref="1.101.3-001", lemma="πρός", tbwid=1, isIndecl="indeclform", form="πρός", dialect="", value="πρὸς", relation="AuxP", head=8, cid=26872705, posClass="N", pos="prep", length=4, )
@@ -11473,8 +10577,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.101.5:44", ref="", lemma="", tbwid=44, form="", value=".", relation="AuxK", head=0, cid=26872748, pos="punct", length=1, )
 s.words(w)
-words = "πρὸςμὲνοὖντοὺςἐνἸθώμῃπόλεμοςκαθειστήκειΛακεδαιμονίοις,ΘάσιοιδὲτρίτῳἔτειπολιορκούμενοιὡμολόγησανἈθηναίοιςτεῖχόςτεκαθελόντεςκαὶναῦςπαραδόντες,χρήματάτεὅσαἔδειἀποδοῦναιαὐτίκαταξάμενοικαὶτὸλοιπὸνφέρειν,τήντεἤπειρονκαὶτὸμέταλλονἀφέντες."
-s['sentence'] = "πρὸςμὲνοὖντοὺςἐνἸθώμῃπόλεμοςκαθειστήκειΛακεδαιμονίοις,ΘάσιοιδὲτρίτῳἔτειπολιορκούμενοιὡμολόγησανἈθηναίοιςτεῖχόςτεκαθελόντεςκαὶναῦςπαραδόντες,χρήματάτεὅσαἔδειἀποδοῦναιαὐτίκαταξάμενοικαὶτὸλοιπὸνφέρειν,τήντεἤπειρονκαὶτὸμέταλλονἀφέντες."
+words = "πρὸς μὲν οὖν τοὺς ἐν Ἰθώμῃ πόλεμος καθειστήκει Λακεδαιμονίοις , Θάσιοι δὲ τρίτῳ ἔτει πολιορκούμενοι ὡμολόγησαν Ἀθηναίοις τεῖχός τε καθελόντες καὶ ναῦς παραδόντες , χρήματά τε ὅσα ἔδει ἀποδοῦναι αὐτίκα ταξάμενοι καὶ τὸ λοιπὸν φέρειν , τήν τε ἤπειρον καὶ τὸ μέταλλον ἀφέντες . "
+s['sentence'] = "πρὸς μὲν οὖν τοὺς ἐν Ἰθώμῃ πόλεμος καθειστήκει Λακεδαιμονίοις , Θάσιοι δὲ τρίτῳ ἔτει πολιορκούμενοι ὡμολόγησαν Ἀθηναίοις τεῖχός τε καθελόντες καὶ ναῦς παραδόντες , χρήματά τε ὅσα ἔδει ἀποδοῦναι αὐτίκα ταξάμενοι καὶ τὸ λοιπὸν φέρειν , τήν τε ἤπειρον καὶ τὸ μέταλλον ἀφέντες . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.1", length=20)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.1:1", lemma="Λακεδαιμόνιος", form="Λακεδαιμόνιοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872749, posClass="N", pos="adj", ref="1.102.1-001", tbwid=1, degree="", value="Λακεδαιμόνιοι", gender="masc", posAdd="os_h_on", case="nom", head=16, length=13, )
@@ -11585,8 +10689,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.1:20", ref="", lemma="", tbwid=20, form="", value="·", relation="AuxK", head=0, cid=26872768, pos="punct", length=1, )
 s.words(w)
-words = "Λακεδαιμόνιοιδέ,ὡςαὐτοῖςπρὸςτοὺςἐνἸθώμῃἐμηκύνετοὁπόλεμος,ἄλλουςτεἐπεκαλέσαντοξυμμάχουςκαὶἈθηναίους·"
-s['sentence'] = "Λακεδαιμόνιοιδέ,ὡςαὐτοῖςπρὸςτοὺςἐνἸθώμῃἐμηκύνετοὁπόλεμος,ἄλλουςτεἐπεκαλέσαντοξυμμάχουςκαὶἈθηναίους·"
+words = "Λακεδαιμόνιοι δέ , ὡς αὐτοῖς πρὸς τοὺς ἐν Ἰθώμῃ ἐμηκύνετο ὁ πόλεμος , ἄλλους τε ἐπεκαλέσαντο ξυμμάχους καὶ Ἀθηναίους · "
+s['sentence'] = "Λακεδαιμόνιοι δέ , ὡς αὐτοῖς πρὸς τοὺς ἐν Ἰθώμῃ ἐμηκύνετο ὁ πόλεμος , ἄλλους τε ἐπεκαλέσαντο ξυμμάχους καὶ Ἀθηναίους · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.2", length=9)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.2:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26872769, posClass="N", pos="pron", ref="1.102.1-020", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=3, length=2, )
@@ -11639,8 +10743,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.2:9", ref="", lemma="", tbwid=9, form="", value=".", relation="AuxK", head=0, cid=26872777, pos="punct", length=1, )
 s.words(w)
-words = "οἱδ'ἦλθονΚίμωνοςστρατηγοῦντοςπλήθειοὐκὀλίγῳ."
-s['sentence'] = "οἱδ'ἦλθονΚίμωνοςστρατηγοῦντοςπλήθειοὐκὀλίγῳ."
+words = "οἱ δ' ἦλθον Κίμωνος στρατηγοῦντος πλήθει οὐκ ὀλίγῳ . "
+s['sentence'] = "οἱ δ' ἦλθον Κίμωνος στρατηγοῦντος πλήθει οὐκ ὀλίγῳ . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.3", length=19)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.3:1", lemma="μάλιστα", form="μάλιστα", isIndecl="indeclform", dialect="", relation="AuxY", cid=26872778, pos="adverb", posClass="N", tbwid=1, ref="1.102.2-001", degree="superl", value="μάλιστα", head=4, length=7, )
@@ -11749,8 +10853,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.3:19", ref="", lemma="", tbwid=19, form="", value="·", relation="AuxK", head=0, cid=26872796, pos="punct", length=1, )
 s.words(w)
-words = "μάλισταδ'αὐτοὺςἐπεκαλέσαντοὅτιτειχομαχεῖνἐδόκουνδυνατοὶεἶναι,τοῖςδὲπολιορκίαςμακρᾶςκαθεστηκυίαςτούτουἐνδεᾶἐφαίνετο·"
-s['sentence'] = "μάλισταδ'αὐτοὺςἐπεκαλέσαντοὅτιτειχομαχεῖνἐδόκουνδυνατοὶεἶναι,τοῖςδὲπολιορκίαςμακρᾶςκαθεστηκυίαςτούτουἐνδεᾶἐφαίνετο·"
+words = "μάλιστα δ' αὐτοὺς ἐπεκαλέσαντο ὅτι τειχομαχεῖν ἐδόκουν δυνατοὶ εἶναι , τοῖς δὲ πολιορκίας μακρᾶς καθεστηκυίας τούτου ἐνδεᾶ ἐφαίνετο · "
+s['sentence'] = "μάλιστα δ' αὐτοὺς ἐπεκαλέσαντο ὅτι τειχομαχεῖν ἐδόκουν δυνατοὶ εἶναι , τοῖς δὲ πολιορκίας μακρᾶς καθεστηκυίας τούτου ἐνδεᾶ ἐφαίνετο · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.4", length=7)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.4:1", lemma="βία", form="βία_", isIndecl="", dialect="attic doric aeolic", relation="ADV", number="sg", cid=26872797, posClass="N", pos="noun", ref="1.102.2-019", tbwid=1, value="βίᾳ", gender="fem", posAdd="h_hs", case="dat", head=4, length=3, )
@@ -11791,8 +10895,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.4:7", ref="", lemma="", tbwid=7, form="", value=".", relation="AuxK", head=0, cid=26872803, pos="punct", length=1, )
 s.words(w)
-words = "βίᾳγὰρἂνεἷλοντὸχωρίον."
-s['sentence'] = "βίᾳγὰρἂνεἷλοντὸχωρίον."
+words = "βίᾳ γὰρ ἂν εἷλον τὸ χωρίον . "
+s['sentence'] = "βίᾳ γὰρ ἂν εἷλον τὸ χωρίον . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.5", length=13)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.5:1", ref="1.102.3-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26872804, posClass="N", pos="conj", length=3, )
@@ -11869,8 +10973,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.5:13", ref="", lemma="", tbwid=13, form="", value=".", relation="AuxK", head=0, cid=26872816, pos="punct", length=1, )
 s.words(w)
-words = "καὶδιαφορὰἐκταύτηςτῆςστρατείαςπρῶτονΛακεδαιμονίοιςκαὶἈθηναίοιςφανερὰἐγένετο."
-s['sentence'] = "καὶδιαφορὰἐκταύτηςτῆςστρατείαςπρῶτονΛακεδαιμονίοιςκαὶἈθηναίοιςφανερὰἐγένετο."
+words = "καὶ διαφορὰ ἐκ ταύτης τῆς στρατείας πρῶτον Λακεδαιμονίοις καὶ Ἀθηναίοις φανερὰ ἐγένετο . "
+s['sentence'] = "καὶ διαφορὰ ἐκ ταύτης τῆς στρατείας πρῶτον Λακεδαιμονίοις καὶ Ἀθηναίοις φανερὰ ἐγένετο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.6", length=57)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.6:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872817, posClass="N", pos="article", ref="1.102.3-013", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -12175,8 +11279,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.6:57", ref="", lemma="", tbwid=57, form="", value=".", relation="AuxK", head=0, cid=26872873, pos="punct", length=1, )
 s.words(w)
-words = "οἱγὰρΛακεδαιμόνιοι,ἐπειδὴτὸχωρίονβίᾳοὐχἡλίσκετο,δείσαντεςτῶνἈθηναίωντὸτολμηρὸνκαὶτὴννεωτεροποιίαν,καὶἀλλοφύλουςἅμαἡγησάμενοι,μήτι,ἢνπαραμείνωσιν,ὑπὸτῶνἐνἸθώμῃπεισθέντεςνεωτερίσωσι,μόνουςτῶνξυμμάχωνἀπέπεμψαν,τὴνμὲνὑποψίανοὐδηλοῦντες,εἰπόντεςδὲὅτιοὐδὲνπροσδέονταιαὐτῶνἔτι."
-s['sentence'] = "οἱγὰρΛακεδαιμόνιοι,ἐπειδὴτὸχωρίονβίᾳοὐχἡλίσκετο,δείσαντεςτῶνἈθηναίωντὸτολμηρὸνκαὶτὴννεωτεροποιίαν,καὶἀλλοφύλουςἅμαἡγησάμενοι,μήτι,ἢνπαραμείνωσιν,ὑπὸτῶνἐνἸθώμῃπεισθέντεςνεωτερίσωσι,μόνουςτῶνξυμμάχωνἀπέπεμψαν,τὴνμὲνὑποψίανοὐδηλοῦντες,εἰπόντεςδὲὅτιοὐδὲνπροσδέονταιαὐτῶνἔτι."
+words = "οἱ γὰρ Λακεδαιμόνιοι , ἐπειδὴ τὸ χωρίον βίᾳ οὐχ ἡλίσκετο , δείσαντες τῶν Ἀθηναίων τὸ τολμηρὸν καὶ τὴν νεωτεροποιίαν , καὶ ἀλλοφύλους ἅμα ἡγησάμενοι , μή τι , ἢν παραμείνωσιν , ὑπὸ τῶν ἐν Ἰθώμῃ πεισθέντες νεωτερίσωσι , μόνους τῶν ξυμμάχων ἀπέπεμψαν , τὴν μὲν ὑποψίαν οὐ δηλοῦντες , εἰπόντες δὲ ὅτι οὐδὲν προσδέονται αὐτῶν ἔτι . "
+s['sentence'] = "οἱ γὰρ Λακεδαιμόνιοι , ἐπειδὴ τὸ χωρίον βίᾳ οὐχ ἡλίσκετο , δείσαντες τῶν Ἀθηναίων τὸ τολμηρὸν καὶ τὴν νεωτεροποιίαν , καὶ ἀλλοφύλους ἅμα ἡγησάμενοι , μή τι , ἢν παραμείνωσιν , ὑπὸ τῶν ἐν Ἰθώμῃ πεισθέντες νεωτερίσωσι , μόνους τῶν ξυμμάχων ἀπέπεμψαν , τὴν μὲν ὑποψίαν οὐ δηλοῦντες , εἰπόντες δὲ ὅτι οὐδὲν προσδέονται αὐτῶν ἔτι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.7", length=59)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.7:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872874, posClass="N", pos="article", ref="1.102.4-001", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -12505,8 +11609,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.7:59", ref="", lemma="", tbwid=59, form="", value=".", relation="AuxK", head=0, cid=26872932, pos="punct", length=1, )
 s.words(w)
-words = "οἱδ'Ἀθηναῖοιἔγνωσανοὐκἐπὶτῷβελτίονιλόγῳἀποπεμπόμενοι,ἀλλάτινοςὑπόπτουγενομένου,καὶδεινὸνποιησάμενοικαὶοὐκἀξιώσαντεςὑπὸΛακεδαιμονίωντοῦτοπαθεῖν,εὐθὺςἐπειδὴἀνεχώρησαν,ἀφέντεςτὴνγενομένηνἐπὶτῷΜήδῳξυμμαχίανπρὸςαὐτοὺςἈργείοιςτοῖςἐκείνωνπολεμίοιςξύμμαχοιἐγένοντο,καὶπρὸςΘεσσαλοὺςἅμαἀμφοτέροιςοἱαὐτοὶὅρκοικαὶξυμμαχίακατέστη."
-s['sentence'] = "οἱδ'Ἀθηναῖοιἔγνωσανοὐκἐπὶτῷβελτίονιλόγῳἀποπεμπόμενοι,ἀλλάτινοςὑπόπτουγενομένου,καὶδεινὸνποιησάμενοικαὶοὐκἀξιώσαντεςὑπὸΛακεδαιμονίωντοῦτοπαθεῖν,εὐθὺςἐπειδὴἀνεχώρησαν,ἀφέντεςτὴνγενομένηνἐπὶτῷΜήδῳξυμμαχίανπρὸςαὐτοὺςἈργείοιςτοῖςἐκείνωνπολεμίοιςξύμμαχοιἐγένοντο,καὶπρὸςΘεσσαλοὺςἅμαἀμφοτέροιςοἱαὐτοὶὅρκοικαὶξυμμαχίακατέστη."
+words = "οἱ δ' Ἀθηναῖοι ἔγνωσαν οὐκ ἐπὶ τῷ βελτίονι λόγῳ ἀποπεμπόμενοι , ἀλλά τινος ὑπόπτου γενομένου , καὶ δεινὸν ποιησάμενοι καὶ οὐκ ἀξιώσαντες ὑπὸ Λακεδαιμονίων τοῦτο παθεῖν , εὐθὺς ἐπειδὴ ἀνεχώρησαν , ἀφέντες τὴν γενομένην ἐπὶ τῷ Μήδῳ ξυμμαχίαν πρὸς αὐτοὺς Ἀργείοις τοῖς ἐκείνων πολεμίοις ξύμμαχοι ἐγένοντο , καὶ πρὸς Θεσσαλοὺς ἅμα ἀμφοτέροις οἱ αὐτοὶ ὅρκοι καὶ ξυμμαχία κατέστη . "
+s['sentence'] = "οἱ δ' Ἀθηναῖοι ἔγνωσαν οὐκ ἐπὶ τῷ βελτίονι λόγῳ ἀποπεμπόμενοι , ἀλλά τινος ὑπόπτου γενομένου , καὶ δεινὸν ποιησάμενοι καὶ οὐκ ἀξιώσαντες ὑπὸ Λακεδαιμονίων τοῦτο παθεῖν , εὐθὺς ἐπειδὴ ἀνεχώρησαν , ἀφέντες τὴν γενομένην ἐπὶ τῷ Μήδῳ ξυμμαχίαν πρὸς αὐτοὺς Ἀργείοις τοῖς ἐκείνων πολεμίοις ξύμμαχοι ἐγένοντο , καὶ πρὸς Θεσσαλοὺς ἅμα ἀμφοτέροις οἱ αὐτοὶ ὅρκοι καὶ ξυμμαχία κατέστη . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.1", length=27)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.1:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26872933, posClass="N", pos="pron", ref="1.103.1-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=13, length=2, )
@@ -12659,8 +11763,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.1:27", ref="", lemma="", tbwid=27, form="", value="·", relation="AuxK", head=0, cid=26872959, pos="punct", length=1, )
 s.words(w)
-words = "οἱδ'ἐνἸθώμῃδεκάτῳἔτει,ὡςοὐκέτιἐδύναντοἀντέχειν,ξυνέβησανπρὸςτοὺςΛακεδαιμονίουςἐφ'ᾧἐξίασινἐκΠελοποννήσουὑπόσπονδοικαὶμηδέποτεἐπιβήσονταιαὐτῆς·"
-s['sentence'] = "οἱδ'ἐνἸθώμῃδεκάτῳἔτει,ὡςοὐκέτιἐδύναντοἀντέχειν,ξυνέβησανπρὸςτοὺςΛακεδαιμονίουςἐφ'ᾧἐξίασινἐκΠελοποννήσουὑπόσπονδοικαὶμηδέποτεἐπιβήσονταιαὐτῆς·"
+words = "οἱ δ' ἐν Ἰθώμῃ δεκάτῳ ἔτει , ὡς οὐκέτι ἐδύναντο ἀντέχειν , ξυνέβησαν πρὸς τοὺς Λακεδαιμονίους ἐφ' ᾧ ἐξίασιν ἐκ Πελοποννήσου ὑπόσπονδοι καὶ μηδέποτε ἐπιβήσονται αὐτῆς · "
+s['sentence'] = "οἱ δ' ἐν Ἰθώμῃ δεκάτῳ ἔτει , ὡς οὐκέτι ἐδύναντο ἀντέχειν , ξυνέβησαν πρὸς τοὺς Λακεδαιμονίους ἐφ' ᾧ ἐξίασιν ἐκ Πελοποννήσου ὑπόσπονδοι καὶ μηδέποτε ἐπιβήσονται αὐτῆς · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.2", length=10)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.2:1", ref="1.103.1-027", lemma="ἐάν", tbwid=1, isIndecl="contr indeclform", form="ἤν", dialect="", value="ἢν", relation="AuxC", head=8, cid=26872960, posClass="N", pos="conj", length=2, )
@@ -12715,8 +11819,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.2:10", ref="", lemma="", tbwid=10, form="", value=".", relation="AuxK", head=0, cid=26872969, pos="punct", length=1, )
 s.words(w)
-words = "ἢνδέτιςἁλίσκηται,τοῦλαβόντοςεἶναιδοῦλον."
-s['sentence'] = "ἢνδέτιςἁλίσκηται,τοῦλαβόντοςεἶναιδοῦλον."
+words = "ἢν δέ τις ἁλίσκηται , τοῦ λαβόντος εἶναι δοῦλον . "
+s['sentence'] = "ἢν δέ τις ἁλίσκηται , τοῦ λαβόντος εἶναι δοῦλον . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.3", length=19)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.3:1", lemma="εἰμί", person="3rd", isIndecl="", voice="act", form="ἦν", dialect="", tense="imperf", relation="PRED", mood="ind", number="sg", cid=26872970, posClass="V", pos="verb", ref="1.103.2-001", tbwid=1, value="ἦν", posAdd="irreg_mi", head=0, length=2, )
@@ -12825,8 +11929,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.3:19", ref="", lemma="", tbwid=19, form="", value=".", relation="AuxK", head=0, cid=26872988, pos="punct", length=1, )
 s.words(w)
-words = "ἦνδέτικαὶχρηστήριοντοῖςΛακεδαιμονίοιςΠυθικὸνπρὸτοῦ,τὸνἱκέτηντοῦΔιὸςτοῦἸθωμήταἀφιέναι."
-s['sentence'] = "ἦνδέτικαὶχρηστήριοντοῖςΛακεδαιμονίοιςΠυθικὸνπρὸτοῦ,τὸνἱκέτηντοῦΔιὸςτοῦἸθωμήταἀφιέναι."
+words = "ἦν δέ τι καὶ χρηστήριον τοῖς Λακεδαιμονίοις Πυθικὸν πρὸ τοῦ , τὸν ἱκέτην τοῦ Διὸς τοῦ Ἰθωμήτα ἀφιέναι . "
+s['sentence'] = "ἦν δέ τι καὶ χρηστήριον τοῖς Λακεδαιμονίοις Πυθικὸν πρὸ τοῦ , τὸν ἱκέτην τοῦ Διὸς τοῦ Ἰθωμήτα ἀφιέναι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.4", length=31)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.4:1", lemma="ἐξέρχομαι", person="3rd", isIndecl="", voice="act", form="ἐξῆλθον", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26872989, posClass="V", pos="verb", ref="1.103.3-001", tbwid=1, value="ἐξῆλθον", posAdd="aor2", head=9, length=7, )
@@ -13003,8 +12107,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.4:31", ref="", lemma="", tbwid=31, form="", value=".", relation="AuxK", head=0, cid=26873019, pos="punct", length=1, )
 s.words(w)
-words = "ἐξῆλθονδὲαὐτοὶκαὶπαῖδεςκαὶγυναῖκες,καὶαὐτοὺςοἱἈθηναῖοιδεξάμενοικατ'ἔχθοςἤδητὸΛακεδαιμονίωνἐςΝαύπακτονκατῴκισαν,ἣνἔτυχονᾑρηκότεςνεωστὶΛοκρῶντῶνὈζολῶνἐχόντων."
-s['sentence'] = "ἐξῆλθονδὲαὐτοὶκαὶπαῖδεςκαὶγυναῖκες,καὶαὐτοὺςοἱἈθηναῖοιδεξάμενοικατ'ἔχθοςἤδητὸΛακεδαιμονίωνἐςΝαύπακτονκατῴκισαν,ἣνἔτυχονᾑρηκότεςνεωστὶΛοκρῶντῶνὈζολῶνἐχόντων."
+words = "ἐξῆλθον δὲ αὐτοὶ καὶ παῖδες καὶ γυναῖκες , καὶ αὐτοὺς οἱ Ἀθηναῖοι δεξάμενοι κατ' ἔχθος ἤδη τὸ Λακεδαιμονίων ἐς Ναύπακτον κατῴκισαν , ἣν ἔτυχον ᾑρηκότες νεωστὶ Λοκρῶν τῶν Ὀζολῶν ἐχόντων . "
+s['sentence'] = "ἐξῆλθον δὲ αὐτοὶ καὶ παῖδες καὶ γυναῖκες , καὶ αὐτοὺς οἱ Ἀθηναῖοι δεξάμενοι κατ' ἔχθος ἤδη τὸ Λακεδαιμονίων ἐς Ναύπακτον κατῴκισαν , ἣν ἔτυχον ᾑρηκότες νεωστὶ Λοκρῶν τῶν Ὀζολῶν ἐχόντων . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.5", length=19)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.5:1", lemma="προσχωρέω", person="3rd", isIndecl="", voice="act", form="προσεχώρησαν", dialect="", tense="aor", relation="PRED", mood="ind", number="pl", cid=26873020, posClass="V", pos="verb", ref="1.103.4-001", tbwid=1, value="προσεχώρησαν", posAdd="aor1,ew_denom", head=0, length=12, )
@@ -13113,8 +12217,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.5:19", ref="", lemma="", tbwid=19, form="", value="·", relation="AuxK", head=0, cid=26873038, pos="punct", length=1, )
 s.words(w)
-words = "προσεχώρησανδὲκαὶΜεγαρῆςἈθηναίοιςἐςξυμμαχίανΛακεδαιμονίωνἀποστάντες,ὅτιαὐτοὺςΚορίνθιοιπερὶγῆςὅρωνπολέμῳκατεῖχον·"
-s['sentence'] = "προσεχώρησανδὲκαὶΜεγαρῆςἈθηναίοιςἐςξυμμαχίανΛακεδαιμονίωνἀποστάντες,ὅτιαὐτοὺςΚορίνθιοιπερὶγῆςὅρωνπολέμῳκατεῖχον·"
+words = "προσεχώρησαν δὲ καὶ Μεγαρῆς Ἀθηναίοις ἐς ξυμμαχίαν Λακεδαιμονίων ἀποστάντες , ὅτι αὐτοὺς Κορίνθιοι περὶ γῆς ὅρων πολέμῳ κατεῖχον · "
+s['sentence'] = "προσεχώρησαν δὲ καὶ Μεγαρῆς Ἀθηναίοις ἐς ξυμμαχίαν Λακεδαιμονίων ἀποστάντες , ὅτι αὐτοὺς Κορίνθιοι περὶ γῆς ὅρων πολέμῳ κατεῖχον · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.6", length=23)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.6:1", ref="1.103.4-019", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873039, posClass="N", pos="conj", length=3, )
@@ -13247,8 +12351,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.6:23", ref="", lemma="", tbwid=23, form="", value=".", relation="AuxK", head=0, cid=26873061, pos="punct", length=1, )
 s.words(w)
-words = "καὶἔσχονἈθηναῖοιΜέγαρακαὶΠηγάς,καὶτὰμακρὰτείχηᾠκοδόμησανΜεγαρεῦσιτὰἀπὸτῆςπόλεωςἐςΝίσαιανκαὶἐφρούρουναὐτοί."
-s['sentence'] = "καὶἔσχονἈθηναῖοιΜέγαρακαὶΠηγάς,καὶτὰμακρὰτείχηᾠκοδόμησανΜεγαρεῦσιτὰἀπὸτῆςπόλεωςἐςΝίσαιανκαὶἐφρούρουναὐτοί."
+words = "καὶ ἔσχον Ἀθηναῖοι Μέγαρα καὶ Πηγάς , καὶ τὰ μακρὰ τείχη ᾠκοδόμησαν Μεγαρεῦσι τὰ ἀπὸ τῆς πόλεως ἐς Νίσαιαν καὶ ἐφρούρουν αὐτοί . "
+s['sentence'] = "καὶ ἔσχον Ἀθηναῖοι Μέγαρα καὶ Πηγάς , καὶ τὰ μακρὰ τείχη ᾠκοδόμησαν Μεγαρεῦσι τὰ ἀπὸ τῆς πόλεως ἐς Νίσαιαν καὶ ἐφρούρουν αὐτοί . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.7", length=16)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.7:1", ref="1.103.4-041", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873062, posClass="N", pos="conj", length=3, )
@@ -13343,8 +12447,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.103.7:16", ref="", lemma="", tbwid=16, form="", value=".", relation="AuxK", head=0, cid=26873077, pos="punct", length=1, )
 s.words(w)
-words = "καὶΚορινθίοιςμὲνοὐχἥκισταἀπὸτοῦδετὸσφοδρὸνμῖσοςἤρξατοπρῶτονἐςἈθηναίουςγενέσθαι."
-s['sentence'] = "καὶΚορινθίοιςμὲνοὐχἥκισταἀπὸτοῦδετὸσφοδρὸνμῖσοςἤρξατοπρῶτονἐςἈθηναίουςγενέσθαι."
+words = "καὶ Κορινθίοις μὲν οὐχ ἥκιστα ἀπὸ τοῦδε τὸ σφοδρὸν μῖσος ἤρξατο πρῶτον ἐς Ἀθηναίους γενέσθαι . "
+s['sentence'] = "καὶ Κορινθίοις μὲν οὐχ ἥκιστα ἀπὸ τοῦδε τὸ σφοδρὸν μῖσος ἤρξατο πρῶτον ἐς Ἀθηναίους γενέσθαι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.104.1", length=35)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.104.1:1", lemma="Ἰνάρως", isIndecl="", form="Ἰνάρως", dialect="", relation="SBJ_AP", number="sg", cid=26873078, tbwid=1, ref="1.104.1-001", value="Ἰνάρως", gender="masc", case="nom", head=7, length=6, )
@@ -13537,8 +12641,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.104.1:35", ref="", lemma="", tbwid=35, form="", value=".", relation="AuxK", head=0, cid=26873112, pos="punct", length=1, )
 s.words(w)
-words = "ἸνάρωςδὲὁΨαμμητίχου,Λίβυς,βασιλεὺςΛιβύωντῶνπρὸςΑἰγύπτῳ,ὁρμώμενοςἐκΜαρείαςτῆςὑπὲρΦάρουπόλεωςἀπέστησενΑἰγύπτουτὰπλείωἀπὸβασιλέωςἈρταξέρξου,καὶαὐτὸςἄρχωνγενόμενοςἈθηναίουςἐπηγάγετο."
-s['sentence'] = "ἸνάρωςδὲὁΨαμμητίχου,Λίβυς,βασιλεὺςΛιβύωντῶνπρὸςΑἰγύπτῳ,ὁρμώμενοςἐκΜαρείαςτῆςὑπὲρΦάρουπόλεωςἀπέστησενΑἰγύπτουτὰπλείωἀπὸβασιλέωςἈρταξέρξου,καὶαὐτὸςἄρχωνγενόμενοςἈθηναίουςἐπηγάγετο."
+words = "Ἰνάρως δὲ ὁ Ψαμμητίχου , Λίβυς , βασιλεὺς Λιβύων τῶν πρὸς Αἰγύπτῳ , ὁρμώμενος ἐκ Μαρείας τῆς ὑπὲρ Φάρου πόλεως ἀπέστησεν Αἰγύπτου τὰ πλείω ἀπὸ βασιλέως Ἀρταξέρξου , καὶ αὐτὸς ἄρχων γενόμενος Ἀθηναίους ἐπηγάγετο . "
+s['sentence'] = "Ἰνάρως δὲ ὁ Ψαμμητίχου , Λίβυς , βασιλεὺς Λιβύων τῶν πρὸς Αἰγύπτῳ , ὁρμώμενος ἐκ Μαρείας τῆς ὑπὲρ Φάρου πόλεως ἀπέστησεν Αἰγύπτου τὰ πλείω ἀπὸ βασιλέως Ἀρταξέρξου , καὶ αὐτὸς ἄρχων γενόμενος Ἀθηναίους ἐπηγάγετο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.104.2", length=48)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.104.2:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26873113, posClass="N", pos="pron", ref="1.104.2-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=22, length=2, )
@@ -13813,8 +12917,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.104.2:48", ref="", lemma="", tbwid=48, form="", value="·", relation="AuxK", head=0, cid=26873160, pos="punct", length=1, )
 s.words(w)
-words = "οἱδέἔτυχονγὰρἐςΚύπρονστρατευόμενοιναυσὶδιακοσίαιςαὑτῶντεκαὶτῶνξυμμάχωνἦλθονἀπολιπόντεςτὴνΚύπρον,καὶἀναπλεύσαντεςἀπὸθαλάσσηςἐςτὸνΝεῖλοντοῦτεποταμοῦκρατοῦντεςκαὶτῆςΜέμφιδοςτῶνδύομερῶνπρὸςτὸτρίτονμέροςὃκαλεῖταιΛευκὸντεῖχοςἐπολέμουν·"
-s['sentence'] = "οἱδέἔτυχονγὰρἐςΚύπρονστρατευόμενοιναυσὶδιακοσίαιςαὑτῶντεκαὶτῶνξυμμάχωνἦλθονἀπολιπόντεςτὴνΚύπρον,καὶἀναπλεύσαντεςἀπὸθαλάσσηςἐςτὸνΝεῖλοντοῦτεποταμοῦκρατοῦντεςκαὶτῆςΜέμφιδοςτῶνδύομερῶνπρὸςτὸτρίτονμέροςὃκαλεῖταιΛευκὸντεῖχοςἐπολέμουν·"
+words = "οἱ δέ  ἔτυχον γὰρ ἐς Κύπρον στρατευόμενοι ναυσὶ διακοσίαις αὑτῶν τε καὶ τῶν ξυμμάχων  ἦλθον ἀπολιπόντες τὴν Κύπρον , καὶ ἀναπλεύσαντες ἀπὸ θαλάσσης ἐς τὸν Νεῖλον τοῦ τε ποταμοῦ κρατοῦντες καὶ τῆς Μέμφιδος τῶν δύο μερῶν πρὸς τὸ τρίτον μέρος ὃ καλεῖται Λευκὸν τεῖχος ἐπολέμουν · "
+s['sentence'] = "οἱ δέ  ἔτυχον γὰρ ἐς Κύπρον στρατευόμενοι ναυσὶ διακοσίαις αὑτῶν τε καὶ τῶν ξυμμάχων  ἦλθον ἀπολιπόντες τὴν Κύπρον , καὶ ἀναπλεύσαντες ἀπὸ θαλάσσης ἐς τὸν Νεῖλον τοῦ τε ποταμοῦ κρατοῦντες καὶ τῆς Μέμφιδος τῶν δύο μερῶν πρὸς τὸ τρίτον μέρος ὃ καλεῖται Λευκὸν τεῖχος ἐπολέμουν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.104.3", length=14)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.104.3:1", lemma="ἔνειμι", person="3rd", isIndecl="", voice="act", form="ἐνῆσαν", dialect="", tense="imperf", relation="PRED", mood="ind", number="pl", cid=26873161, posClass="V", pos="verb", ref="1.104.2-046", tbwid=1, value="ἐνῆσαν", posAdd="irreg_mi", head=0, length=6, )
@@ -13897,8 +13001,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.104.3:14", ref="", lemma="", tbwid=14, form="", value=".", relation="AuxK", head=0, cid=26873174, pos="punct", length=1, )
 s.words(w)
-words = "ἐνῆσανδὲαὐτόθιΠερσῶνκαὶΜήδωνοἱκαταφυγόντεςκαὶΑἰγυπτίωνοἱμὴξυναποστάντες."
-s['sentence'] = "ἐνῆσανδὲαὐτόθιΠερσῶνκαὶΜήδωνοἱκαταφυγόντεςκαὶΑἰγυπτίωνοἱμὴξυναποστάντες."
+words = "ἐνῆσαν δὲ αὐτόθι Περσῶν καὶ Μήδων οἱ καταφυγόντες καὶ Αἰγυπτίων οἱ μὴ ξυναποστάντες . "
+s['sentence'] = "ἐνῆσαν δὲ αὐτόθι Περσῶν καὶ Μήδων οἱ καταφυγόντες καὶ Αἰγυπτίων οἱ μὴ ξυναποστάντες . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.1", length=17)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.1:1", lemma="Ἀθηναῖος", form="Ἀθηναι_οις", isIndecl="", dialect="", relation="PNOM", number="pl", cid=26873175, posClass="N", pos="adj", ref="1.105.1-001", tbwid=1, degree="", value="Ἀθηναίοις", gender="masc", posAdd="os_h_on", case="dat", head=12, length=9, )
@@ -13995,122 +13099,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.1:17", ref="", lemma="", tbwid=17, form="", value=".", relation="AuxK", head=0, cid=26873191, pos="punct", length=1, )
 s.words(w)
-words = "ἈθηναίοιςδὲναυσὶνἀποβᾶσινἐςἉλιᾶςπρὸςΚορινθίουςκαὶἘπιδαυρίουςμάχηἐγένετο,καὶἐνίκωνΚορίνθιοι."
-s['sentence'] = "ἈθηναίοιςδὲναυσὶνἀποβᾶσινἐςἉλιᾶςπρὸςΚορινθίουςκαὶἘπιδαυρίουςμάχηἐγένετο,καὶἐνίκωνΚορίνθιοι."
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10", length=19)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:1", ref="1.105.6-038", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873401, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:2", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26873402, posClass="N", pos="article", ref="1.105.6-039", tbwid=2, value="οἱ", gender="masc", case="nom", head=3, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:3", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26873403, posClass="N", pos="adj", ref="1.105.6-040", tbwid=3, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=14, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:4", lemma="ἐκβοηθέω", form="ἐκβοηθήσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26873404, posClass="P", pos="participle", ref="1.105.6-041", tbwid=4, value="ἐκβοηθήσαντες", gender="masc", posAdd="aor1,ew_denom", case="nom", head=14, length=13, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκβοηθέω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐκβοηθέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκβοηθέω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:5", ref="1.105.6-042", lemma="ἐκ", tbwid=5, isIndecl="proclitic indeclform", form="ἐκ", dialect="", value="ἐκ", relation="AuxP", head=4, cid=26873405, posClass="N", pos="prep", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐκ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:6", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873406, posClass="N", pos="article", ref="1.105.6-043", tbwid=6, value="τῶν", gender="masc", case="gen", head=7, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:7", lemma="Μέγαρα", form="Μεγάρων", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873407, posClass="N", pos="noun", ref="1.105.6-044", tbwid=7, value="Μεγάρων", gender="neut", posAdd="os_ou", case="gen", head=5, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μέγαρα"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Μέγαρα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μέγαρα" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:8", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873408, posClass="N", pos="pron", ref="1.105.6-045", tbwid=8, value="τούς", gender="masc", posAdd="article", case="acc", head=12, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:9", ref="1.105.6-046", lemma="τε", tbwid=9, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="AuxY", head=14, cid=26873409, posClass="N", pos="particle", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:10", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873410, posClass="N", pos="article", ref="1.105.6-047", tbwid=10, value="τὸ", gender="neut", case="acc", head=11, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:11", lemma="τροπαῖος", form="τροπαῖον", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26873411, posClass="N", pos="noun", ref="1.105.6-048", tbwid=11, value="τροπαῖον", gender="neut", posAdd="os_h_on", case="acc", head=12, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τροπαῖος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="τροπαῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τροπαῖος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:12", lemma="ἵστημι", form="ἱστάντας", isIndecl="causal pres_redupl", voice="act", dialect="", tense="pres", relation="OBJ", mood="part", number="pl", cid=26873412, posClass="P", pos="participle", ref="1.105.6-049", tbwid=12, value="ἱστάντας", gender="masc", posAdd="ami_pr", case="acc", head=13, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἵστημι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἵστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἵστημι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:13", lemma="διαφθείρω", person="3rd", isIndecl="", voice="act", form="διαφθείρουσι", dialect="attic epic doric ionic", tense="pres", relation="PRED_CO", mood="ind", number="pl", cid=26873413, posClass="V", pos="verb", ref="1.105.6-050", tbwid=13, value="διαφθείρουσι", posAdd="w_stem,eirw", head=14, length=12, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διαφθείρω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="διαφθείρω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διαφθείρω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:14", ref="1.105.6-051", lemma="καί", tbwid=14, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=1, cid=26873414, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:15", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873415, posClass="N", pos="article", ref="1.105.6-052", tbwid=15, value="τοῖς", gender="masc", case="dat", head=16, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:16", lemma="ἄλλος", form="ἄλλοις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873416, posClass="N", pos="adj", ref="1.105.6-053", tbwid=16, degree="", value="ἄλλοις", gender="masc", posAdd="art_adj", case="dat", head=17, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:17", lemma="συμβάλλω", form="ξυμβαλόντες", isIndecl="sig_to_ci", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26873417, posClass="P", pos="participle", ref="1.105.6-054", tbwid=17, value="ξυμβαλόντες", gender="masc", posAdd="aor2", case="nom", head=18, length=11, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμβάλλω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="συμβάλλω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμβάλλω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:18", lemma="κρατέω", person="3rd", isIndecl="", voice="act", form="ἐκράτησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873418, posClass="V", pos="verb", ref="1.105.6-055", tbwid=18, value="ἐκράτησαν", posAdd="aor1,ew_denom", head=14, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κρατέω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="κρατέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κρατέω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:19", ref="", lemma="", tbwid=19, form="", value=".", relation="AuxK", head=0, cid=26873419, pos="punct", length=1, )
-s.words(w)
-words = "καὶοἱἈθηναῖοιἐκβοηθήσαντεςἐκτῶνΜεγάρωντούςτετὸτροπαῖονἱστάνταςδιαφθείρουσικαὶτοῖςἄλλοιςξυμβαλόντεςἐκράτησαν."
-s['sentence'] = "καὶοἱἈθηναῖοιἐκβοηθήσαντεςἐκτῶνΜεγάρωντούςτετὸτροπαῖονἱστάνταςδιαφθείρουσικαὶτοῖςἄλλοιςξυμβαλόντεςἐκράτησαν."
+words = "Ἀθηναίοις δὲ ναυσὶν ἀποβᾶσιν ἐς Ἁλιᾶς πρὸς Κορινθίους καὶ Ἐπιδαυρίους μάχη ἐγένετο , καὶ ἐνίκων Κορίνθιοι . "
+s['sentence'] = "Ἀθηναίοις δὲ ναυσὶν ἀποβᾶσιν ἐς Ἁλιᾶς πρὸς Κορινθίους καὶ Ἐπιδαυρίους μάχη ἐγένετο , καὶ ἐνίκων Κορίνθιοι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.2", length=13)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.2:1", ref="1.105.1-017", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxY", head=10, cid=26873192, posClass="N", pos="conj", length=3, )
@@ -14183,8 +13173,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.2:13", ref="", lemma="", tbwid=13, form="", value=".", relation="AuxK", head=0, cid=26873204, pos="punct", length=1, )
 s.words(w)
-words = "καὶὕστερονἈθηναῖοιἐναυμάχησανἐπὶΚεκρυφαλείᾳΠελοποννησίωνναυσί,καὶἐνίκωνἈθηναῖοι."
-s['sentence'] = "καὶὕστερονἈθηναῖοιἐναυμάχησανἐπὶΚεκρυφαλείᾳΠελοποννησίωνναυσί,καὶἐνίκωνἈθηναῖοι."
+words = "καὶ ὕστερον Ἀθηναῖοι ἐναυμάχησαν ἐπὶ Κεκρυφαλείᾳ Πελοποννησίων ναυσί , καὶ ἐνίκων Ἀθηναῖοι . "
+s['sentence'] = "καὶ ὕστερον Ἀθηναῖοι ἐναυμάχησαν ἐπὶ Κεκρυφαλείᾳ Πελοποννησίων ναυσί , καὶ ἐνίκων Ἀθηναῖοι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.3", length=43)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.3:1", lemma="πόλεμος", form="πολέμου", isIndecl="", dialect="", relation="SBJ", number="sg", cid=26873205, posClass="N", pos="noun", ref="1.105.2-001", tbwid=1, value="πολέμου", gender="masc", posAdd="os_ou", case="gen", head=3, length=7, )
@@ -14429,8 +13419,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.3:43", ref="", lemma="", tbwid=43, form="", value=".", relation="AuxK", head=0, cid=26873247, pos="punct", length=1, )
 s.words(w)
-words = "πολέμουδὲκαταστάντοςπρὸςΑἰγινήταςἈθηναίοιςμετὰταῦταναυμαχίαγίγνεταιἐπ'ΑἰγίνῃμεγάληἈθηναίωνκαὶΑἰγινητῶν,καὶοἱξύμμαχοιἑκατέροιςπαρῆσαν,καὶἐνίκωνἈθηναῖοικαὶναῦςἑβδομήκονταλαβόντεςαὐτῶνἐςτὴνγῆνἀπέβησανκαὶἐπολιόρκουν,ΛεωκράτουςτοῦΣτροίβουστρατηγοῦντος."
-s['sentence'] = "πολέμουδὲκαταστάντοςπρὸςΑἰγινήταςἈθηναίοιςμετὰταῦταναυμαχίαγίγνεταιἐπ'ΑἰγίνῃμεγάληἈθηναίωνκαὶΑἰγινητῶν,καὶοἱξύμμαχοιἑκατέροιςπαρῆσαν,καὶἐνίκωνἈθηναῖοικαὶναῦςἑβδομήκονταλαβόντεςαὐτῶνἐςτὴνγῆνἀπέβησανκαὶἐπολιόρκουν,ΛεωκράτουςτοῦΣτροίβουστρατηγοῦντος."
+words = "πολέμου δὲ καταστάντος πρὸς Αἰγινήτας Ἀθηναίοις μετὰ ταῦτα ναυμαχία γίγνεται ἐπ' Αἰγίνῃ μεγάλη Ἀθηναίων καὶ Αἰγινητῶν , καὶ οἱ ξύμμαχοι ἑκατέροις παρῆσαν , καὶ ἐνίκων Ἀθηναῖοι καὶ ναῦς ἑβδομήκοντα λαβόντες αὐτῶν ἐς τὴν γῆν ἀπέβησαν καὶ ἐπολιόρκουν , Λεωκράτους τοῦ Στροίβου στρατηγοῦντος . "
+s['sentence'] = "πολέμου δὲ καταστάντος πρὸς Αἰγινήτας Ἀθηναίοις μετὰ ταῦτα ναυμαχία γίγνεται ἐπ' Αἰγίνῃ μεγάλη Ἀθηναίων καὶ Αἰγινητῶν , καὶ οἱ ξύμμαχοι ἑκατέροις παρῆσαν , καὶ ἐνίκων Ἀθηναῖοι καὶ ναῦς ἑβδομήκοντα λαβόντες αὐτῶν ἐς τὴν γῆν ἀπέβησαν καὶ ἐπολιόρκουν , Λεωκράτους τοῦ Στροίβου στρατηγοῦντος . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.4", length=51)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.4:1", lemma="ἔπειτα", form="ἔπειτα", isIndecl="indeclform", dialect="", relation="ADV", cid=26873248, pos="adverb", posClass="N", tbwid=1, ref="1.105.3-001", degree="", value="ἔπειτα", head=17, length=6, )
@@ -14727,8 +13717,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.4:51", ref="", lemma="", tbwid=51, form="", value="·", relation="AuxK", head=0, cid=26873298, pos="punct", length=1, )
 s.words(w)
-words = "ἔπειταΠελοποννήσιοιἀμύνεινβουλόμενοιΑἰγινήταιςἐςμὲντὴνΑἴγιναντριακοσίουςὁπλίταςπρότερονΚορινθίωνκαὶἘπιδαυρίωνἐπικούρουςδιεβίβασαν,τὰδὲἄκρατῆςΓερανείαςκατέλαβονκαὶἐςτὴνΜεγαρίδακατέβησανΚορίνθιοιμετὰτῶνξυμμάχων,νομίζοντεςἀδυνάτουςἔσεσθαιἈθηναίουςβοηθεῖντοῖςΜεγαρεῦσινἔντεΑἰγίνῃἀπούσηςστρατιᾶςπολλῆςκαὶἐνΑἰγύπτῳ·"
-s['sentence'] = "ἔπειταΠελοποννήσιοιἀμύνεινβουλόμενοιΑἰγινήταιςἐςμὲντὴνΑἴγιναντριακοσίουςὁπλίταςπρότερονΚορινθίωνκαὶἘπιδαυρίωνἐπικούρουςδιεβίβασαν,τὰδὲἄκρατῆςΓερανείαςκατέλαβονκαὶἐςτὴνΜεγαρίδακατέβησανΚορίνθιοιμετὰτῶνξυμμάχων,νομίζοντεςἀδυνάτουςἔσεσθαιἈθηναίουςβοηθεῖντοῖςΜεγαρεῦσινἔντεΑἰγίνῃἀπούσηςστρατιᾶςπολλῆςκαὶἐνΑἰγύπτῳ·"
+words = "ἔπειτα Πελοποννήσιοι ἀμύνειν βουλόμενοι Αἰγινήταις ἐς μὲν τὴν Αἴγιναν τριακοσίους ὁπλίτας πρότερον Κορινθίων καὶ Ἐπιδαυρίων ἐπικούρους διεβίβασαν , τὰ δὲ ἄκρα τῆς Γερανείας κατέλαβον καὶ ἐς τὴν Μεγαρίδα κατέβησαν Κορίνθιοι μετὰ τῶν ξυμμάχων , νομίζοντες ἀδυνάτους ἔσεσθαι Ἀθηναίους βοηθεῖν τοῖς Μεγαρεῦσιν ἔν τε Αἰγίνῃ ἀπούσης στρατιᾶς πολλῆς καὶ ἐν Αἰγύπτῳ · "
+s['sentence'] = "ἔπειτα Πελοποννήσιοι ἀμύνειν βουλόμενοι Αἰγινήταις ἐς μὲν τὴν Αἴγιναν τριακοσίους ὁπλίτας πρότερον Κορινθίων καὶ Ἐπιδαυρίων ἐπικούρους διεβίβασαν , τὰ δὲ ἄκρα τῆς Γερανείας κατέλαβον καὶ ἐς τὴν Μεγαρίδα κατέβησαν Κορίνθιοι μετὰ τῶν ξυμμάχων , νομίζοντες ἀδυνάτους ἔσεσθαι Ἀθηναίους βοηθεῖν τοῖς Μεγαρεῦσιν ἔν τε Αἰγίνῃ ἀπούσης στρατιᾶς πολλῆς καὶ ἐν Αἰγύπτῳ · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.5", length=10)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.5:1", ref="1.105.3-051", lemma="ἐάν", tbwid=1, isIndecl="contr indeclform", form="ἤν", dialect="", value="ἢν", relation="AuxC_ExD0_PRED", head=0, cid=26873299, posClass="N", pos="conj", length=2, )
@@ -14783,8 +13773,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.5:10", ref="", lemma="", tbwid=10, form="", value=".", relation="AuxK", head=0, cid=26873308, pos="punct", length=1, )
 s.words(w)
-words = "ἢνδὲκαὶβοηθῶσιν,ἀπ'Αἰγίνηςἀναστήσεσθαιαὐτούς."
-s['sentence'] = "ἢνδὲκαὶβοηθῶσιν,ἀπ'Αἰγίνηςἀναστήσεσθαιαὐτούς."
+words = "ἢν δὲ καὶ βοηθῶσιν , ἀπ' Αἰγίνης ἀναστήσεσθαι αὐτούς . "
+s['sentence'] = "ἢν δὲ καὶ βοηθῶσιν , ἀπ' Αἰγίνης ἀναστήσεσθαι αὐτούς . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.6", length=30)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.6:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26873309, posClass="N", pos="article", ref="1.105.4-001", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -14955,8 +13945,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.6:30", ref="", lemma="", tbwid=30, form="", value=".", relation="AuxK", head=0, cid=26873338, pos="punct", length=1, )
 s.words(w)
-words = "οἱδὲἈθηναῖοιτὸμὲνπρὸςΑἰγίνῃστράτευμαοὐκἐκίνησαν,τῶνδ'ἐκτῆςπόλεωςὑπολοίπωνοἵτεπρεσβύτατοικαὶοἱνεώτατοιἀφικνοῦνταιἐςτὰΜέγαραΜυρωνίδουστρατηγοῦντος."
-s['sentence'] = "οἱδὲἈθηναῖοιτὸμὲνπρὸςΑἰγίνῃστράτευμαοὐκἐκίνησαν,τῶνδ'ἐκτῆςπόλεωςὑπολοίπωνοἵτεπρεσβύτατοικαὶοἱνεώτατοιἀφικνοῦνταιἐςτὰΜέγαραΜυρωνίδουστρατηγοῦντος."
+words = "οἱ δὲ Ἀθηναῖοι τὸ μὲν πρὸς Αἰγίνῃ στράτευμα οὐκ ἐκίνησαν , τῶν δ' ἐκ τῆς πόλεως ὑπολοίπων οἵ τε πρεσβύτατοι καὶ οἱ νεώτατοι ἀφικνοῦνται ἐς τὰ Μέγαρα Μυρωνίδου στρατηγοῦντος . "
+s['sentence'] = "οἱ δὲ Ἀθηναῖοι τὸ μὲν πρὸς Αἰγίνῃ στράτευμα οὐκ ἐκίνησαν , τῶν δ' ἐκ τῆς πόλεως ὑπολοίπων οἵ τε πρεσβύτατοι καὶ οἱ νεώτατοι ἀφικνοῦνται ἐς τὰ Μέγαρα Μυρωνίδου στρατηγοῦντος . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.7", length=21)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.7:1", ref="1.105.5-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873339, posClass="N", pos="conj", length=3, )
@@ -15077,8 +14067,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.7:21", ref="", lemma="", tbwid=21, form="", value=".", relation="AuxK", head=0, cid=26873359, pos="punct", length=1, )
 s.words(w)
-words = "καὶμάχηςγενομένηςἰσορρόπουπρὸςΚορινθίουςδιεκρίθησανἀπ'ἀλλήλων,καὶἐνόμισαναὐτοὶἑκάτεροιοὐκἔλασσονἔχεινἐντῷἔργῳ."
-s['sentence'] = "καὶμάχηςγενομένηςἰσορρόπουπρὸςΚορινθίουςδιεκρίθησανἀπ'ἀλλήλων,καὶἐνόμισαναὐτοὶἑκάτεροιοὐκἔλασσονἔχεινἐντῷἔργῳ."
+words = "καὶ μάχης γενομένης ἰσορρόπου πρὸς Κορινθίους διεκρίθησαν ἀπ' ἀλλήλων , καὶ ἐνόμισαν αὐτοὶ ἑκάτεροι οὐκ ἔλασσον ἔχειν ἐν τῷ ἔργῳ . "
+s['sentence'] = "καὶ μάχης γενομένης ἰσορρόπου πρὸς Κορινθίους διεκρίθησαν ἀπ' ἀλλήλων , καὶ ἐνόμισαν αὐτοὶ ἑκάτεροι οὐκ ἔλασσον ἔχειν ἐν τῷ ἔργῳ . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.8", length=16)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.8:1", ref="1.105.6-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873360, posClass="N", pos="conj", length=3, )
@@ -15161,8 +14151,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.8:16", ref="", lemma="", tbwid=16, form="", value="·", relation="AuxK", head=0, cid=26873375, pos="punct", length=1, )
 s.words(w)
-words = "καὶοἱμὲνἈθηναῖοιἐκράτησανγὰρὅμωςμᾶλλονἀπελθόντωντῶνΚορινθίωντροπαῖονἔστησαν·"
-s['sentence'] = "καὶοἱμὲνἈθηναῖοιἐκράτησανγὰρὅμωςμᾶλλονἀπελθόντωντῶνΚορινθίωντροπαῖονἔστησαν·"
+words = "καὶ οἱ μὲν Ἀθηναῖοι  ἐκράτησαν γὰρ ὅμως μᾶλλον  ἀπελθόντων τῶν Κορινθίων τροπαῖον ἔστησαν · "
+s['sentence'] = "καὶ οἱ μὲν Ἀθηναῖοι  ἐκράτησαν γὰρ ὅμως μᾶλλον  ἀπελθόντων τῶν Κορινθίων τροπαῖον ἔστησαν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.9", length=25)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.9:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26873376, posClass="N", pos="article", ref="1.105.6-014", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -15307,8 +14297,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.9:25", ref="", lemma="", tbwid=25, form="", value=".", relation="AuxK", head=0, cid=26873400, pos="punct", length=1, )
 s.words(w)
-words = "οἱδὲΚορίνθιοικακιζόμενοιὑπὸτῶνἐντῇπόλειπρεσβυτέρωνκαὶπαρασκευασάμενοι,ἡμέραιςὕστερονδώδεκαμάλισταἐλθόντεςἀνθίστασαντροπαῖονκαὶαὐτοὶὡςνικήσαντες."
-s['sentence'] = "οἱδὲΚορίνθιοικακιζόμενοιὑπὸτῶνἐντῇπόλειπρεσβυτέρωνκαὶπαρασκευασάμενοι,ἡμέραιςὕστερονδώδεκαμάλισταἐλθόντεςἀνθίστασαντροπαῖονκαὶαὐτοὶὡςνικήσαντες."
+words = "οἱ δὲ Κορίνθιοι κακιζόμενοι ὑπὸ τῶν ἐν τῇ πόλει πρεσβυτέρων καὶ παρασκευασάμενοι , ἡμέραις ὕστερον δώδεκα μάλιστα ἐλθόντες ἀνθίστασαν τροπαῖον καὶ αὐτοὶ ὡς νικήσαντες . "
+s['sentence'] = "οἱ δὲ Κορίνθιοι κακιζόμενοι ὑπὸ τῶν ἐν τῇ πόλει πρεσβυτέρων καὶ παρασκευασάμενοι , ἡμέραις ὕστερον δώδεκα μάλιστα ἐλθόντες ἀνθίστασαν τροπαῖον καὶ αὐτοὶ ὡς νικήσαντες . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.1", length=32)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.1:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26873420, posClass="N", pos="pron", ref="1.106.1-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=4, length=2, )
@@ -15491,8 +14481,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.1:32", ref="", lemma="", tbwid=32, form="", value=".", relation="AuxK", head=0, cid=26873451, pos="punct", length=1, )
 s.words(w)
-words = "οἱδὲνικώμενοιὑπεχώρουν,καίτιαὐτῶνμέροςοὐκὀλίγονπροσβιασθὲνκαὶδιαμαρτὸντῆςὁδοῦἐσέπεσενἔςτουχωρίονἰδιώτου,ᾧἔτυχενὄρυγμαμέγαπεριεῖργονκαὶοὐκἦνἔξοδος."
-s['sentence'] = "οἱδὲνικώμενοιὑπεχώρουν,καίτιαὐτῶνμέροςοὐκὀλίγονπροσβιασθὲνκαὶδιαμαρτὸντῆςὁδοῦἐσέπεσενἔςτουχωρίονἰδιώτου,ᾧἔτυχενὄρυγμαμέγαπεριεῖργονκαὶοὐκἦνἔξοδος."
+words = "οἱ δὲ νικώμενοι ὑπεχώρουν , καί τι αὐτῶν μέρος οὐκ ὀλίγον προσβιασθὲν καὶ διαμαρτὸν τῆς ὁδοῦ ἐσέπεσεν ἔς του χωρίον ἰδιώτου , ᾧ ἔτυχεν ὄρυγμα μέγα περιεῖργον καὶ οὐκ ἦν ἔξοδος . "
+s['sentence'] = "οἱ δὲ νικώμενοι ὑπεχώρουν , καί τι αὐτῶν μέρος οὐκ ὀλίγον προσβιασθὲν καὶ διαμαρτὸν τῆς ὁδοῦ ἐσέπεσεν ἔς του χωρίον ἰδιώτου , ᾧ ἔτυχεν ὄρυγμα μέγα περιεῖργον καὶ οὐκ ἦν ἔξοδος . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.2", length=27)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.2:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26873452, posClass="N", pos="article", ref="1.106.2-001", tbwid=1, value="οἱ", gender="masc", case="nom", head=3, length=2, )
@@ -15649,8 +14639,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.2:27", ref="", lemma="", tbwid=27, form="", value=".", relation="AuxK", head=0, cid=26873478, pos="punct", length=1, )
 s.words(w)
-words = "οἱδὲἈθηναῖοιγνόντεςκατὰπρόσωπόντεεἶργοντοῖςὁπλίταιςκαὶπεριστήσαντεςκύκλῳτοὺςψιλοὺςκατέλευσανπάνταςτοὺςἐσελθόντας,καὶπάθοςμέγατοῦτοΚορινθίοιςἐγένετο."
-s['sentence'] = "οἱδὲἈθηναῖοιγνόντεςκατὰπρόσωπόντεεἶργοντοῖςὁπλίταιςκαὶπεριστήσαντεςκύκλῳτοὺςψιλοὺςκατέλευσανπάνταςτοὺςἐσελθόντας,καὶπάθοςμέγατοῦτοΚορινθίοιςἐγένετο."
+words = "οἱ δὲ Ἀθηναῖοι γνόντες κατὰ πρόσωπόν τε εἶργον τοῖς ὁπλίταις καὶ περιστήσαντες κύκλῳ τοὺς ψιλοὺς κατέλευσαν πάντας τοὺς ἐσελθόντας , καὶ πάθος μέγα τοῦτο Κορινθίοις ἐγένετο . "
+s['sentence'] = "οἱ δὲ Ἀθηναῖοι γνόντες κατὰ πρόσωπόν τε εἶργον τοῖς ὁπλίταις καὶ περιστήσαντες κύκλῳ τοὺς ψιλοὺς κατέλευσαν πάντας τοὺς ἐσελθόντας , καὶ πάθος μέγα τοῦτο Κορινθίοις ἐγένετο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.3", length=10)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.3:1", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873479, posClass="N", pos="article", ref="1.106.2-027", tbwid=1, value="τὸ", gender="neut", case="nom", head=3, length=2, )
@@ -15709,8 +14699,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.3:10", ref="", lemma="", tbwid=10, form="", value=".", relation="AuxK", head=0, cid=26873488, pos="punct", length=1, )
 s.words(w)
-words = "τὸδὲπλῆθοςἀπεχώρησεναὐτοῖςτῆςστρατιᾶςἐπ'οἴκου."
-s['sentence'] = "τὸδὲπλῆθοςἀπεχώρησεναὐτοῖςτῆςστρατιᾶςἐπ'οἴκου."
+words = "τὸ δὲ πλῆθος ἀπεχώρησεν αὐτοῖς τῆς στρατιᾶς ἐπ' οἴκου . "
+s['sentence'] = "τὸ δὲ πλῆθος ἀπεχώρησεν αὐτοῖς τῆς στρατιᾶς ἐπ' οἴκου . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.1", length=23)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.1:1", lemma="ἄρχω", person="3rd", isIndecl="", voice="mid", form="ἤρξαντο", dialect="attic epic ionic", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873489, posClass="V", pos="verb", ref="1.107.1-001", tbwid=1, value="ἤρξαντο", posAdd="aor1,reg_conj", head=2, length=7, )
@@ -15843,216 +14833,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.1:23", ref="", lemma="", tbwid=23, form="", value=".", relation="AuxK", head=0, cid=26873511, pos="punct", length=1, )
 s.words(w)
-words = "ἤρξαντοδὲκατὰτοὺςχρόνουςτούτουςκαὶτὰμακρὰτείχηἈθηναῖοιἐςθάλασσανοἰκοδομεῖν,τότεΦαληρόνδεκαὶτὸἐςΠειραιᾶ."
-s['sentence'] = "ἤρξαντοδὲκατὰτοὺςχρόνουςτούτουςκαὶτὰμακρὰτείχηἈθηναῖοιἐςθάλασσανοἰκοδομεῖν,τότεΦαληρόνδεκαὶτὸἐςΠειραιᾶ."
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10", length=16)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:1", lemma="νομίζω", form="νομίσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV_CO", mood="part", number="pl", cid=26873685, posClass="P", pos="participle", ref="1.107.6-001", tbwid=1, value="νομίσαντες", gender="masc", posAdd="aor1,izw", case="nom", head=9, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:2", ref="1.107.6-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="AuxY", head=6, cid=26873686, posClass="N", pos="particle", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:3", lemma="ἀπορέω", person="", isIndecl="contr", voice="act", form="ἀπορεῖν", dialect="attic epic doric", tense="pres", relation="OBJ", mood="inf", number="", cid=26873687, posClass="V", pos="verb", ref="1.107.6-003", tbwid=3, value="ἀπορεῖν", posAdd="ew_pr,ew_denom", head=1, length=7, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπορέω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἀπορέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπορέω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:4", lemma="ὅπη", form="ὅπῃ", isIndecl="indeclform", dialect="", relation="OBJ", cid=26873688, pos="adverb", posClass="N", tbwid=4, ref="1.107.6-004", degree="", value="ὅπῃ", head=5, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅπη"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὅπη", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅπη" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:5", lemma="διέρχομαι", person="3rd", isIndecl="nu_movable", voice="act", form="διέλθωσιν", dialect="", tense="aor", relation="OBJ", mood="subj", number="pl", cid=26873689, posClass="V", pos="verb", ref="1.107.6-005", tbwid=5, value="διέλθωσιν", posAdd="aor2", head=3, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διέρχομαι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="διέρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διέρχομαι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:6", lemma="ἐπιστρατεύω", person="3rd", isIndecl="", voice="act", form="ἐπεστράτευσαν", dialect="", tense="aor", relation="PRED", mood="ind", number="pl", cid=26873690, posClass="V", pos="verb", ref="1.107.6-006", tbwid=6, value="ἐπεστράτευσαν", posAdd="aor1,euw", head=0, length=13, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιστρατεύω"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐπιστρατεύω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιστρατεύω" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:7", lemma="αὐτός", form="αὐτοῖς", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873691, posClass="N", pos="adj", ref="1.107.6-007", tbwid=7, degree="", value="αὐτοῖς", gender="masc", posAdd="art_adj", case="dat", head=6, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="αὐτός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:8", ref="", lemma="", tbwid=8, form="", value=",", relation="AuxX", head=9, cid=26873692, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:9", ref="1.107.6-009", lemma="καί", tbwid=9, isIndecl="indeclform", form="καί", dialect="", value="καί", relation="COORD", head=6, cid=26873693, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:10", lemma="τις", form="τι", isIndecl="enclitic indeclform", dialect="", relation="AuxZ", number="sg", cid=26873694, posClass="N", pos="pron", ref="1.107.6-010", tbwid=10, value="τι", gender="neut", posAdd="indef", case="acc", head=9, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τις"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="τις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τις" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:11", ref="1.107.6-011", lemma="καί", tbwid=11, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=9, cid=26873695, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:12", lemma="ὁ", form="τοῦ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873696, posClass="N", pos="article", ref="1.107.6-012", tbwid=12, value="τοῦ", gender="masc", case="gen", head=13, length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:13", lemma="δῆμος", form="δη_μου", isIndecl="", dialect="", relation="ATR", number="sg", cid=26873697, posClass="N", pos="noun", ref="1.107.6-013", tbwid=13, value="δήμου", gender="masc", posAdd="os_ou", case="gen", head=14, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δῆμος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="δῆμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δῆμος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:14", lemma="κατάλυσις", form="καταλύσεω^ς", isIndecl="", dialect="attic", relation="ATR", number="sg", cid=26873698, posClass="N", pos="noun", ref="1.107.6-014", tbwid=14, value="καταλύσεως", gender="fem", posAdd="is_ews", case="gen", head=15, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατάλυσις"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="κατάλυσις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατάλυσις" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:15", lemma="ὑποψία", form="ὑποψία_", isIndecl="", dialect="attic doric aeolic", relation="ADV_CO", number="sg", cid=26873699, posClass="N", pos="noun", ref="1.107.6-015", tbwid=15, value="ὑποψίᾳ", gender="fem", posAdd="h_hs", case="dat", head=9, length=6, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὑποψία"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὑποψία", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὑποψία" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:16", ref="", lemma="", tbwid=16, form="", value=".", relation="AuxK", head=0, cid=26873700, pos="punct", length=1, )
-s.words(w)
-words = "νομίσαντεςδὲἀπορεῖνὅπῃδιέλθωσινἐπεστράτευσαναὐτοῖς,καίτικαὶτοῦδήμουκαταλύσεωςὑποψίᾳ."
-s['sentence'] = "νομίσαντεςδὲἀπορεῖνὅπῃδιέλθωσινἐπεστράτευσαναὐτοῖς,καίτικαὶτοῦδήμουκαταλύσεωςὑποψίᾳ."
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11", length=20)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:1", lemma="ἔρχομαι", person="3rd", isIndecl="", voice="act", form="ἦλθον", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873701, posClass="V", pos="verb", ref="1.107.7-001", tbwid=1, value="ἦλθον", posAdd="aor2", head=2, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔρχομαι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἔρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔρχομαι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:2", ref="1.107.7-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="COORD", head=0, cid=26873702, posClass="N", pos="particle", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:3", ref="1.107.7-003", lemma="καί", tbwid=3, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=5, cid=26873703, posClass="N", pos="conj", length=3, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:4", lemma="Θεσσαλός", form="Θεσσαλῶν", isIndecl="", dialect="", relation="ATR", number="pl", cid=26873704, posClass="N", pos="adj", ref="1.107.7-004", tbwid=4, degree="", value="Θεσσαλῶν", gender="masc", posAdd="os_ou", case="gen", head=5, length=8, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Θεσσαλός"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Θεσσαλός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Θεσσαλός" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:5", lemma="ἱππεύς", form="ἱππῆς", isIndecl="contr", dialect="", relation="SBJ", number="pl", cid=26873705, posClass="N", pos="noun", ref="1.107.7-005", tbwid=5, value="ἱππῆς", gender="masc", posAdd="eus_ews", case="nom", head=1, length=5, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱππεύς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἱππεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱππεύς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:6", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873706, posClass="N", pos="article", ref="1.107.7-006", tbwid=6, value="τοῖς", gender="masc", case="dat", head=7, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:7", lemma="Ἀθηναῖος", form="Ἀθηναι_οις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873707, posClass="N", pos="adj", ref="1.107.7-007", tbwid=7, degree="", value="Ἀθηναίοις", gender="masc", posAdd="os_h_on", case="dat", head=1, length=9, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:8", ref="1.107.7-008", lemma="κατά", tbwid=8, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=1, cid=26873708, posClass="N", pos="prep", length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:9", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873709, posClass="N", pos="article", ref="1.107.7-009", tbwid=9, value="τὸ", gender="neut", case="acc", head=10, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:10", lemma="συμμαχικός", form="συμμαχικόν", isIndecl="", dialect="", relation="ADV", number="sg", cid=26873710, posClass="N", pos="adj", ref="1.107.7-010", tbwid=10, degree="", value="ξυμμαχικόν", gender="neut", posAdd="os_h_on", case="acc", head=8, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμμαχικός"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="συμμαχικός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμμαχικός" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:11", ref="", lemma="", tbwid=11, form="", value=",", relation="AuxX", head=13, cid=26873711, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:12", lemma="ὅς", form="οἵ", isIndecl="indeclform", dialect="", relation="SBJ", number="pl", cid=26873712, posClass="N", pos="pron", ref="1.107.7-012", tbwid=12, value="οἳ", gender="masc", posAdd="relative", case="nom", head=13, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὅς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:13", lemma="μεθίστημι", person="3rd", isIndecl="causal", voice="act", form="μετέστησαν", dialect="", tense="aor", relation="ATR", mood="ind", number="pl", cid=26873713, posClass="V", pos="verb", ref="1.107.7-013", tbwid=13, value="μετέστησαν", posAdd="aor1,a_stem", head=5, length=10, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μεθίστημι"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="μεθίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μεθίστημι" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:14", ref="1.107.7-014", lemma="ἐν", tbwid=14, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=13, cid=26873714, posClass="N", pos="prep", length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:15", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873715, posClass="N", pos="article", ref="1.107.7-015", tbwid=15, value="τῷ", gender="neut", case="dat", head=16, length=2, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:16", lemma="ἔργον", form="ἔργῳ", isIndecl="", dialect="", relation="ADV", number="sg", cid=26873716, posClass="N", pos="noun", ref="1.107.7-016", tbwid=16, value="ἔργῳ", gender="neut", posAdd="os_ou", case="dat", head=13, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔργον"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ἔργον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔργον" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:17", ref="1.107.7-017", lemma="παρά", tbwid=17, isIndecl="indeclform", form="παρά", dialect="", value="παρὰ", relation="AuxP", head=13, cid=26873717, posClass="N", pos="prep", length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παρά"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="παρά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παρά" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:18", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873718, posClass="N", pos="article", ref="1.107.7-018", tbwid=18, value="τοὺς", gender="masc", case="acc", head=19, length=4, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:19", lemma="Λακεδαιμόνιος", form="Λακεδαιμονίους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873719, posClass="N", pos="adj", ref="1.107.7-019", tbwid=19, degree="", value="Λακεδαιμονίους", gender="masc", posAdd="os_h_on", case="acc", head=17, length=14, )
-lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος"), start=nodes)[0]
-if lemma is None:
-  lemma = gdb.node(value="Λακεδαιμόνιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος" )
-lemma.values(w)
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:20", ref="", lemma="", tbwid=20, form="", value=".", relation="AuxK", head=0, cid=26873720, pos="punct", length=1, )
-s.words(w)
-words = "ἦλθονδὲκαὶΘεσσαλῶνἱππῆςτοῖςἈθηναίοιςκατὰτὸξυμμαχικόν,οἳμετέστησανἐντῷἔργῳπαρὰτοὺςΛακεδαιμονίους."
-s['sentence'] = "ἦλθονδὲκαὶΘεσσαλῶνἱππῆςτοῖςἈθηναίοιςκατὰτὸξυμμαχικόν,οἳμετέστησανἐντῷἔργῳπαρὰτοὺςΛακεδαιμονίους."
+words = "ἤρξαντο δὲ κατὰ τοὺς χρόνους τούτους καὶ τὰ μακρὰ τείχη Ἀθηναῖοι ἐς θάλασσαν οἰκοδομεῖν , τό τε Φαληρόνδε καὶ τὸ ἐς Πειραιᾶ . "
+s['sentence'] = "ἤρξαντο δὲ κατὰ τοὺς χρόνους τούτους καὶ τὰ μακρὰ τείχη Ἀθηναῖοι ἐς θάλασσαν οἰκοδομεῖν , τό τε Φαληρόνδε καὶ τὸ ἐς Πειραιᾶ . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.2", length=61)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.2:1", ref="1.107.2-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873512, posClass="N", pos="conj", length=3, )
@@ -16401,8 +15183,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.2:61", ref="", lemma="", tbwid=61, form="", value=".", relation="AuxK", head=0, cid=26873572, pos="punct", length=1, )
 s.words(w)
-words = "καὶΦωκέωνστρατευσάντωνἐςΔωριᾶςτὴνΛακεδαιμονίωνμητρόπολιν,ΒοιὸνκαὶΚυτίνιονκαὶἘρινεόν,καὶἑλόντωνἓντῶνπολισμάτωντούτων,οἱΛακεδαιμόνιοιΝικομήδουςτοῦΚλεομβρότουὑπὲρΠλειστοάνακτοςτοῦΠαυσανίουβασιλέωςνέουὄντοςἔτιἡγουμένουἐβοήθησαντοῖςΔωριεῦσινἑαυτῶντεπεντακοσίοιςκαὶχιλίοιςὁπλίταιςκαὶτῶνξυμμάχωνμυρίοις,καὶτοὺςΦωκέαςὁμολογίᾳἀναγκάσαντεςἀποδοῦναιτὴνπόλινἀπεχώρουνπάλιν."
-s['sentence'] = "καὶΦωκέωνστρατευσάντωνἐςΔωριᾶςτὴνΛακεδαιμονίωνμητρόπολιν,ΒοιὸνκαὶΚυτίνιονκαὶἘρινεόν,καὶἑλόντωνἓντῶνπολισμάτωντούτων,οἱΛακεδαιμόνιοιΝικομήδουςτοῦΚλεομβρότουὑπὲρΠλειστοάνακτοςτοῦΠαυσανίουβασιλέωςνέουὄντοςἔτιἡγουμένουἐβοήθησαντοῖςΔωριεῦσινἑαυτῶντεπεντακοσίοιςκαὶχιλίοιςὁπλίταιςκαὶτῶνξυμμάχωνμυρίοις,καὶτοὺςΦωκέαςὁμολογίᾳἀναγκάσαντεςἀποδοῦναιτὴνπόλινἀπεχώρουνπάλιν."
+words = "καὶ Φωκέων στρατευσάντων ἐς Δωριᾶς τὴν Λακεδαιμονίων μητρόπολιν , Βοιὸν καὶ Κυτίνιον καὶ Ἐρινεόν , καὶ ἑλόντων ἓν τῶν πολισμάτων τούτων , οἱ Λακεδαιμόνιοι Νικομήδους τοῦ Κλεομβρότου ὑπὲρ Πλειστοάνακτος τοῦ Παυσανίου βασιλέως νέου ὄντος ἔτι ἡγουμένου ἐβοήθησαν τοῖς Δωριεῦσιν ἑαυτῶν τε πεντακοσίοις καὶ χιλίοις ὁπλίταις καὶ τῶν ξυμμάχων μυρίοις , καὶ τοὺς Φωκέας ὁμολογίᾳ ἀναγκάσαντες ἀποδοῦναι τὴν πόλιν ἀπεχώρουν πάλιν . "
+s['sentence'] = "καὶ Φωκέων στρατευσάντων ἐς Δωριᾶς τὴν Λακεδαιμονίων μητρόπολιν , Βοιὸν καὶ Κυτίνιον καὶ Ἐρινεόν , καὶ ἑλόντων ἓν τῶν πολισμάτων τούτων , οἱ Λακεδαιμόνιοι Νικομήδους τοῦ Κλεομβρότου ὑπὲρ Πλειστοάνακτος τοῦ Παυσανίου βασιλέως νέου ὄντος ἔτι ἡγουμένου ἐβοήθησαν τοῖς Δωριεῦσιν ἑαυτῶν τε πεντακοσίοις καὶ χιλίοις ὁπλίταις καὶ τῶν ξυμμάχων μυρίοις , καὶ τοὺς Φωκέας ὁμολογίᾳ ἀναγκάσαντες ἀποδοῦναι τὴν πόλιν ἀπεχώρουν πάλιν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.3", length=20)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.3:1", ref="1.107.3-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873573, posClass="N", pos="conj", length=3, )
@@ -16513,8 +15295,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.3:20", ref="", lemma="", tbwid=20, form="", value="·", relation="AuxK", head=0, cid=26873592, pos="punct", length=1, )
 s.words(w)
-words = "καὶκατὰθάλασσανμὲναὐτούς,διὰτοῦΚρισαίουκόλπουεἰβούλοιντοπεραιοῦσθαι,Ἀθηναῖοιναυσὶπεριπλεύσαντεςἔμελλονκωλύσειν·"
-s['sentence'] = "καὶκατὰθάλασσανμὲναὐτούς,διὰτοῦΚρισαίουκόλπουεἰβούλοιντοπεραιοῦσθαι,Ἀθηναῖοιναυσὶπεριπλεύσαντεςἔμελλονκωλύσειν·"
+words = "καὶ κατὰ θάλασσαν μὲν αὐτούς , διὰ τοῦ Κρισαίου κόλπου εἰ βούλοιντο περαιοῦσθαι , Ἀθηναῖοι ναυσὶ περιπλεύσαντες ἔμελλον κωλύσειν · "
+s['sentence'] = "καὶ κατὰ θάλασσαν μὲν αὐτούς , διὰ τοῦ Κρισαίου κόλπου εἰ βούλοιντο περαιοῦσθαι , Ἀθηναῖοι ναυσὶ περιπλεύσαντες ἔμελλον κωλύσειν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.4", length=15)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.4:1", ref="1.107.3-020", lemma="διά", tbwid=1, isIndecl="indeclform", form="διά", dialect="", value="διὰ", relation="AuxP", head=14, cid=26873593, posClass="N", pos="prep", length=3, )
@@ -16603,8 +15385,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.4:15", ref="", lemma="", tbwid=15, form="", value=".", relation="AuxK", head=0, cid=26873607, pos="punct", length=1, )
 s.words(w)
-words = "διὰδὲτῆςΓερανείαςοὐκἀσφαλὲςαὐτοῖςἐφαίνετοἈθηναίωνἐχόντωνΜέγαρακαὶΠηγὰςπορεύεσθαι."
-s['sentence'] = "διὰδὲτῆςΓερανείαςοὐκἀσφαλὲςαὐτοῖςἐφαίνετοἈθηναίωνἐχόντωνΜέγαρακαὶΠηγὰςπορεύεσθαι."
+words = "διὰ δὲ τῆς Γερανείας οὐκ ἀσφαλὲς αὐτοῖς ἐφαίνετο Ἀθηναίων ἐχόντων Μέγαρα καὶ Πηγὰς πορεύεσθαι . "
+s['sentence'] = "διὰ δὲ τῆς Γερανείας οὐκ ἀσφαλὲς αὐτοῖς ἐφαίνετο Ἀθηναίων ἐχόντων Μέγαρα καὶ Πηγὰς πορεύεσθαι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.5", length=20)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.5:1", lemma="δύσοδος", form="δύσοδος", isIndecl="", dialect="", relation="PNOM_ExD0_PRED_CO", number="sg", cid=26873608, posClass="N", pos="adj", ref="1.107.3-034", tbwid=1, degree="", value="δύσοδός", gender="fem", posAdd="os_on", case="nom", head=6, length=7, )
@@ -16715,8 +15497,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.5:20", ref="", lemma="", tbwid=20, form="", value=".", relation="AuxK", head=0, cid=26873627, pos="punct", length=1, )
 s.words(w)
-words = "δύσοδόςτεγὰρἡΓερανείακαὶἐφρουρεῖτοαἰεὶὑπὸἈθηναίων,καὶτότεᾐσθάνοντοαὐτοὺςμέλλονταςκαὶταύτῃκωλύσειν."
-s['sentence'] = "δύσοδόςτεγὰρἡΓερανείακαὶἐφρουρεῖτοαἰεὶὑπὸἈθηναίων,καὶτότεᾐσθάνοντοαὐτοὺςμέλλονταςκαὶταύτῃκωλύσειν."
+words = "δύσοδός τε γὰρ ἡ Γερανεία καὶ ἐφρουρεῖτο αἰεὶ ὑπὸ Ἀθηναίων , καὶ τότε ᾐσθάνοντο αὐτοὺς μέλλοντας καὶ ταύτῃ κωλύσειν . "
+s['sentence'] = "δύσοδός τε γὰρ ἡ Γερανεία καὶ ἐφρουρεῖτο αἰεὶ ὑπὸ Ἀθηναίων , καὶ τότε ᾐσθάνοντο αὐτοὺς μέλλοντας καὶ ταύτῃ κωλύσειν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.6", length=12)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.6:1", lemma="δοκέω", person="3rd", isIndecl="", voice="act", form="ἔδοξε", dialect="", tense="aor", relation="PRED", mood="ind", number="sg", cid=26873628, posClass="V", pos="verb", ref="1.107.4-001", tbwid=1, value="ἔδοξε", posAdd="aor1,reg_conj", head=0, length=5, )
@@ -16787,8 +15569,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.6:12", ref="", lemma="", tbwid=12, form="", value=".", relation="AuxK", head=0, cid=26873639, pos="punct", length=1, )
 s.words(w)
-words = "ἔδοξεδ'αὐτοῖςἐνΒοιωτοῖςπεριμείνασισκέψασθαιὅτῳτρόπῳἀσφαλέσταταδιαπορεύσονται."
-s['sentence'] = "ἔδοξεδ'αὐτοῖςἐνΒοιωτοῖςπεριμείνασισκέψασθαιὅτῳτρόπῳἀσφαλέσταταδιαπορεύσονται."
+words = "ἔδοξε δ' αὐτοῖς ἐν Βοιωτοῖς περιμείνασι σκέψασθαι ὅτῳ τρόπῳ ἀσφαλέστατα διαπορεύσονται . "
+s['sentence'] = "ἔδοξε δ' αὐτοῖς ἐν Βοιωτοῖς περιμείνασι σκέψασθαι ὅτῳ τρόπῳ ἀσφαλέστατα διαπορεύσονται . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.7", length=21)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.7:1", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="AuxY", number="sg", cid=26873640, posClass="N", pos="pron", ref="1.107.4-012", tbwid=1, value="τὸ", gender="neut", posAdd="article", case="acc", head=8, length=2, )
@@ -16909,8 +15691,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.7:21", ref="", lemma="", tbwid=21, form="", value=".", relation="AuxK", head=0, cid=26873660, pos="punct", length=1, )
 s.words(w)
-words = "τὸδέτικαὶἄνδρεςτῶνἈθηναίωνἐπῆγοναὐτοὺςκρύφα,ἐλπίσαντεςδῆμόντεκαταπαύσεινκαὶτὰμακρὰτείχηοἰκοδομούμενα."
-s['sentence'] = "τὸδέτικαὶἄνδρεςτῶνἈθηναίωνἐπῆγοναὐτοὺςκρύφα,ἐλπίσαντεςδῆμόντεκαταπαύσεινκαὶτὰμακρὰτείχηοἰκοδομούμενα."
+words = "τὸ δέ τι καὶ ἄνδρες τῶν Ἀθηναίων ἐπῆγον αὐτοὺς κρύφα , ἐλπίσαντες δῆμόν τε καταπαύσειν καὶ τὰ μακρὰ τείχη οἰκοδομούμενα . "
+s['sentence'] = "τὸ δέ τι καὶ ἄνδρες τῶν Ἀθηναίων ἐπῆγον αὐτοὺς κρύφα , ἐλπίσαντες δῆμόν τε καταπαύσειν καὶ τὰ μακρὰ τείχη οἰκοδομούμενα . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.8", length=17)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.8:1", lemma="βοηθέω", person="3rd", isIndecl="", voice="act", form="ἐβοήθησαν", dialect="", tense="aor", relation="PRED", mood="ind", number="pl", cid=26873661, posClass="V", pos="verb", ref="1.107.5-001", tbwid=1, value="ἐβοήθησαν", posAdd="aor1,ew_denom", head=0, length=9, )
@@ -17007,8 +15789,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.8:17", ref="", lemma="", tbwid=17, form="", value="·", relation="AuxK", head=0, cid=26873677, pos="punct", length=1, )
 s.words(w)
-words = "ἐβοήθησανδὲἐπ'αὐτοὺςοἱἈθηναῖοιπανδημεὶκαὶἈργείωνχίλιοικαὶτῶνἄλλωνξυμμάχωνὡςἕκαστοι·"
-s['sentence'] = "ἐβοήθησανδὲἐπ'αὐτοὺςοἱἈθηναῖοιπανδημεὶκαὶἈργείωνχίλιοικαὶτῶνἄλλωνξυμμάχωνὡςἕκαστοι·"
+words = "ἐβοήθησαν δὲ ἐπ' αὐτοὺς οἱ Ἀθηναῖοι πανδημεὶ καὶ Ἀργείων χίλιοι καὶ τῶν ἄλλων ξυμμάχων ὡς ἕκαστοι · "
+s['sentence'] = "ἐβοήθησαν δὲ ἐπ' αὐτοὺς οἱ Ἀθηναῖοι πανδημεὶ καὶ Ἀργείων χίλιοι καὶ τῶν ἄλλων ξυμμάχων ὡς ἕκαστοι · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.9", length=7)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.9:1", lemma="σύμπας", form="ξύμπαντες", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26873678, posClass="N", pos="adj", ref="1.107.5-017", tbwid=1, degree="", value="ξύμπαντες", gender="masc", posAdd="as_asa_an", case="nom", head=3, length=9, )
@@ -17049,8 +15831,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.9:7", ref="", lemma="", tbwid=7, form="", value=".", relation="AuxK", head=0, cid=26873684, pos="punct", length=1, )
 s.words(w)
-words = "ξύμπαντεςδὲἐγένοντοτετρακισχίλιοικαὶμύριοι."
-s['sentence'] = "ξύμπαντεςδὲἐγένοντοτετρακισχίλιοικαὶμύριοι."
+words = "ξύμπαντες δὲ ἐγένοντο τετρακισχίλιοι καὶ μύριοι . "
+s['sentence'] = "ξύμπαντες δὲ ἐγένοντο τετρακισχίλιοι καὶ μύριοι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.1", length=19)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.1:1", lemma="γίγνομαι", form="γενομένης", isIndecl="", voice="mid", dialect="attic epic ionic", tense="aor", relation="ADV", mood="part", number="sg", cid=26873721, posClass="P", pos="participle", ref="1.108.1-001", tbwid=1, value="γενομένης", gender="fem", posAdd="aor2", case="gen", head=8, length=9, )
@@ -17159,8 +15941,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.1:19", ref="", lemma="", tbwid=19, form="", value=".", relation="AuxK", head=0, cid=26873739, pos="punct", length=1, )
 s.words(w)
-words = "γενομένηςδὲμάχηςἐνΤανάγρᾳτῆςΒοιωτίαςἐνίκωνΛακεδαιμόνιοικαὶοἱξύμμαχοι,καὶφόνοςἐγένετοἀμφοτέρωνπολύς."
-s['sentence'] = "γενομένηςδὲμάχηςἐνΤανάγρᾳτῆςΒοιωτίαςἐνίκωνΛακεδαιμόνιοικαὶοἱξύμμαχοι,καὶφόνοςἐγένετοἀμφοτέρωνπολύς."
+words = "γενομένης δὲ μάχης ἐν Τανάγρᾳ τῆς Βοιωτίας ἐνίκων Λακεδαιμόνιοι καὶ οἱ ξύμμαχοι , καὶ φόνος ἐγένετο ἀμφοτέρων πολύς . "
+s['sentence'] = "γενομένης δὲ μάχης ἐν Τανάγρᾳ τῆς Βοιωτίας ἐνίκων Λακεδαιμόνιοι καὶ οἱ ξύμμαχοι , καὶ φόνος ἐγένετο ἀμφοτέρων πολύς . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.2", length=18)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.2:1", ref="1.108.2-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873740, posClass="N", pos="conj", length=3, )
@@ -17267,8 +16049,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.2:18", ref="", lemma="", tbwid=18, form="", value="·", relation="AuxK", head=0, cid=26873757, pos="punct", length=1, )
 s.words(w)
-words = "καὶΛακεδαιμόνιοιμὲνἐςτὴνΜεγαρίδαἐλθόντεςκαὶδενδροτομήσαντεςπάλινἀπῆλθονἐπ'οἴκουδιὰΓερανείαςκαὶἸσθμοῦ·"
-s['sentence'] = "καὶΛακεδαιμόνιοιμὲνἐςτὴνΜεγαρίδαἐλθόντεςκαὶδενδροτομήσαντεςπάλινἀπῆλθονἐπ'οἴκουδιὰΓερανείαςκαὶἸσθμοῦ·"
+words = "καὶ Λακεδαιμόνιοι μὲν ἐς τὴν Μεγαρίδα ἐλθόντες καὶ δενδροτομήσαντες πάλιν ἀπῆλθον ἐπ' οἴκου διὰ Γερανείας καὶ Ἰσθμοῦ · "
+s['sentence'] = "καὶ Λακεδαιμόνιοι μὲν ἐς τὴν Μεγαρίδα ἐλθόντες καὶ δενδροτομήσαντες πάλιν ἀπῆλθον ἐπ' οἴκου διὰ Γερανείας καὶ Ἰσθμοῦ · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.3", length=54)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.3:1", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26873758, posClass="N", pos="adj", ref="1.108.2-018", tbwid=1, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=48, length=8, )
@@ -17579,8 +16361,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.3:54", ref="", lemma="", tbwid=54, form="", value=".", relation="AuxK", head=0, cid=26873811, pos="punct", length=1, )
 s.words(w)
-words = "ἈθηναῖοιδὲδευτέρᾳκαὶἑξηκοστῇἡμέρᾳμετὰτὴνμάχηνἐστράτευσανἐςΒοιωτοὺςΜυρωνίδουστρατηγοῦντος,καὶμάχῃἐνΟἰνοφύτοιςτοὺςΒοιωτοὺςνικήσαντεςτῆςτεχώραςἐκράτησαντῆςΒοιωτίαςκαὶΦωκίδοςκαὶΤαναγραίωντὸτεῖχοςπεριεῖλονκαὶΛοκρῶντῶνὈπουντίωνἑκατὸνἄνδραςὁμήρουςτοὺςπλουσιωτάτουςἔλαβον,τάτετείχηἑαυτῶντὰμακρὰἀπετέλεσαν."
-s['sentence'] = "ἈθηναῖοιδὲδευτέρᾳκαὶἑξηκοστῇἡμέρᾳμετὰτὴνμάχηνἐστράτευσανἐςΒοιωτοὺςΜυρωνίδουστρατηγοῦντος,καὶμάχῃἐνΟἰνοφύτοιςτοὺςΒοιωτοὺςνικήσαντεςτῆςτεχώραςἐκράτησαντῆςΒοιωτίαςκαὶΦωκίδοςκαὶΤαναγραίωντὸτεῖχοςπεριεῖλονκαὶΛοκρῶντῶνὈπουντίωνἑκατὸνἄνδραςὁμήρουςτοὺςπλουσιωτάτουςἔλαβον,τάτετείχηἑαυτῶντὰμακρὰἀπετέλεσαν."
+words = "Ἀθηναῖοι δὲ δευτέρᾳ καὶ ἑξηκοστῇ ἡμέρᾳ μετὰ τὴν μάχην ἐστράτευσαν ἐς Βοιωτοὺς Μυρωνίδου στρατηγοῦντος , καὶ μάχῃ ἐν Οἰνοφύτοις τοὺς Βοιωτοὺς νικήσαντες τῆς τε χώρας ἐκράτησαν τῆς Βοιωτίας καὶ Φωκίδος καὶ Ταναγραίων τὸ τεῖχος περιεῖλον καὶ Λοκρῶν τῶν Ὀπουντίων ἑκατὸν ἄνδρας ὁμήρους τοὺς πλουσιωτάτους ἔλαβον , τά τε τείχη ἑαυτῶν τὰ μακρὰ ἀπετέλεσαν . "
+s['sentence'] = "Ἀθηναῖοι δὲ δευτέρᾳ καὶ ἑξηκοστῇ ἡμέρᾳ μετὰ τὴν μάχην ἐστράτευσαν ἐς Βοιωτοὺς Μυρωνίδου στρατηγοῦντος , καὶ μάχῃ ἐν Οἰνοφύτοις τοὺς Βοιωτοὺς νικήσαντες τῆς τε χώρας ἐκράτησαν τῆς Βοιωτίας καὶ Φωκίδος καὶ Ταναγραίων τὸ τεῖχος περιεῖλον καὶ Λοκρῶν τῶν Ὀπουντίων ἑκατὸν ἄνδρας ὁμήρους τοὺς πλουσιωτάτους ἔλαβον , τά τε τείχη ἑαυτῶν τὰ μακρὰ ἀπετέλεσαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.4", length=24)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.4:1", lemma="ὁμολογέω", person="3rd", isIndecl="", voice="act", form="ὡμολόγησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873812, posClass="V", pos="verb", ref="1.108.4-001", tbwid=1, value="ὡμολόγησαν", posAdd="aor1,ew_denom", head=2, length=10, )
@@ -17719,8 +16501,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.4:24", ref="", lemma="", tbwid=24, form="", value=".", relation="AuxK", head=0, cid=26873835, pos="punct", length=1, )
 s.words(w)
-words = "ὡμολόγησανδὲκαὶοἱΑἰγινῆταιμετὰταῦτατοῖςἈθηναίοις,τείχητεπεριελόντεςκαὶναῦςπαραδόντεςφόροντεταξάμενοιἐςτὸνἔπειταχρόνον."
-s['sentence'] = "ὡμολόγησανδὲκαὶοἱΑἰγινῆταιμετὰταῦτατοῖςἈθηναίοις,τείχητεπεριελόντεςκαὶναῦςπαραδόντεςφόροντεταξάμενοιἐςτὸνἔπειταχρόνον."
+words = "ὡμολόγησαν δὲ καὶ οἱ Αἰγινῆται μετὰ ταῦτα τοῖς Ἀθηναίοις , τείχη τε περιελόντες καὶ ναῦς παραδόντες φόρον τε ταξάμενοι ἐς τὸν ἔπειτα χρόνον . "
+s['sentence'] = "ὡμολόγησαν δὲ καὶ οἱ Αἰγινῆται μετὰ ταῦτα τοῖς Ἀθηναίοις , τείχη τε περιελόντες καὶ ναῦς παραδόντες φόρον τε ταξάμενοι ἐς τὸν ἔπειτα χρόνον . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5", length=29)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5:1", ref="1.108.5-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873836, posClass="N", pos="conj", length=3, )
@@ -17889,8 +16671,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5:29", ref="", lemma="", tbwid=29, form="", value=".", relation="AuxK", head=0, cid=26873864, pos="punct", length=1, )
 s.words(w)
-words = "καὶΠελοπόννησονπεριέπλευσανἈθηναῖοιΤολμίδουτοῦΤολμαίουστρατηγοῦντος,καὶτὸνεώριοντῶνΛακεδαιμονίωνἐνέπρησανκαὶΧαλκίδαΚορινθίωνπόλινεἷλονκαὶΣικυωνίουςἐνἀποβάσειτῆςγῆςμάχῃἐκράτησαν."
-s['sentence'] = "καὶΠελοπόννησονπεριέπλευσανἈθηναῖοιΤολμίδουτοῦΤολμαίουστρατηγοῦντος,καὶτὸνεώριοντῶνΛακεδαιμονίωνἐνέπρησανκαὶΧαλκίδαΚορινθίωνπόλινεἷλονκαὶΣικυωνίουςἐνἀποβάσειτῆςγῆςμάχῃἐκράτησαν."
+words = "καὶ Πελοπόννησον περιέπλευσαν Ἀθηναῖοι Τολμίδου τοῦ Τολμαίου στρατηγοῦντος , καὶ τὸ νεώριον τῶν Λακεδαιμονίων ἐνέπρησαν καὶ Χαλκίδα Κορινθίων πόλιν εἷλον καὶ Σικυωνίους ἐν ἀποβάσει τῆς γῆς μάχῃ ἐκράτησαν . "
+s['sentence'] = "καὶ Πελοπόννησον περιέπλευσαν Ἀθηναῖοι Τολμίδου τοῦ Τολμαίου στρατηγοῦντος , καὶ τὸ νεώριον τῶν Λακεδαιμονίων ἐνέπρησαν καὶ Χαλκίδα Κορινθίων πόλιν εἷλον καὶ Σικυωνίους ἐν ἀποβάσει τῆς γῆς μάχῃ ἐκράτησαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.1", length=18)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.1:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26873865, posClass="N", pos="article", ref="1.109.1-001", tbwid=1, value="οἱ", gender="masc", case="nom", head=6, length=2, )
@@ -17993,8 +16775,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.1:18", ref="", lemma="", tbwid=18, form="", value=".", relation="AuxK", head=0, cid=26873882, pos="punct", length=1, )
 s.words(w)
-words = "οἱδ'ἐντῇΑἰγύπτῳἈθηναῖοικαὶοἱξύμμαχοιἐπέμενον,καὶαὐτοῖςπολλαὶἰδέαιπολέμωνκατέστησαν."
-s['sentence'] = "οἱδ'ἐντῇΑἰγύπτῳἈθηναῖοικαὶοἱξύμμαχοιἐπέμενον,καὶαὐτοῖςπολλαὶἰδέαιπολέμωνκατέστησαν."
+words = "οἱ δ' ἐν τῇ Αἰγύπτῳ Ἀθηναῖοι καὶ οἱ ξύμμαχοι ἐπέμενον , καὶ αὐτοῖς πολλαὶ ἰδέαι πολέμων κατέστησαν . "
+s['sentence'] = "οἱ δ' ἐν τῇ Αἰγύπτῳ Ἀθηναῖοι καὶ οἱ ξύμμαχοι ἐπέμενον , καὶ αὐτοῖς πολλαὶ ἰδέαι πολέμων κατέστησαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.2", length=34)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.2:1", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873883, posClass="N", pos="article", ref="1.109.2-001", tbwid=1, value="τὸ", gender="neut", case="acc", head=4, length=2, )
@@ -18189,8 +16971,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.2:34", ref="", lemma="", tbwid=34, form="", value=".", relation="AuxK", head=0, cid=26873916, pos="punct", length=1, )
 s.words(w)
-words = "τὸμὲνγὰρπρῶτονἐκράτουντῆςΑἰγύπτουοἱἈθηναῖοι,καὶβασιλεὺςπέμπειἐςΛακεδαίμοναΜεγάβαζονἄνδραΠέρσηνχρήματαἔχοντα,ὅπωςἐςτὴνἈττικὴνἐσβαλεῖνπεισθέντωντῶνΠελοποννησίωνἀπ'ΑἰγύπτουἀπαγάγοιἈθηναίους."
-s['sentence'] = "τὸμὲνγὰρπρῶτονἐκράτουντῆςΑἰγύπτουοἱἈθηναῖοι,καὶβασιλεὺςπέμπειἐςΛακεδαίμοναΜεγάβαζονἄνδραΠέρσηνχρήματαἔχοντα,ὅπωςἐςτὴνἈττικὴνἐσβαλεῖνπεισθέντωντῶνΠελοποννησίωνἀπ'ΑἰγύπτουἀπαγάγοιἈθηναίους."
+words = "τὸ μὲν γὰρ πρῶτον ἐκράτουν τῆς Αἰγύπτου οἱ Ἀθηναῖοι , καὶ βασιλεὺς πέμπει ἐς Λακεδαίμονα Μεγάβαζον ἄνδρα Πέρσην χρήματα ἔχοντα , ὅπως ἐς τὴν Ἀττικὴν ἐσβαλεῖν πεισθέντων τῶν Πελοποννησίων ἀπ' Αἰγύπτου ἀπαγάγοι Ἀθηναίους . "
+s['sentence'] = "τὸ μὲν γὰρ πρῶτον ἐκράτουν τῆς Αἰγύπτου οἱ Ἀθηναῖοι , καὶ βασιλεὺς πέμπει ἐς Λακεδαίμονα Μεγάβαζον ἄνδρα Πέρσην χρήματα ἔχοντα , ὅπως ἐς τὴν Ἀττικὴν ἐσβαλεῖν πεισθέντων τῶν Πελοποννησίων ἀπ' Αἰγύπτου ἀπαγάγοι Ἀθηναίους . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.3", length=36)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.3:1", ref="1.109.3-001", lemma="ὡς", tbwid=1, isIndecl="proclitic indeclform", form="ὡς", dialect="", value="ὡς", relation="AuxC", head=27, cid=26873917, posClass="N", pos="conj", length=2, )
@@ -18397,8 +17179,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.3:36", ref="", lemma="", tbwid=36, form="", value="·", relation="AuxK", head=0, cid=26873952, pos="punct", length=1, )
 s.words(w)
-words = "ὡςδὲαὐτῷοὐπρουχώρεικαὶτὰχρήματαἄλλωςἀνηλοῦτο,ὁμὲνΜεγάβαζοςκαὶτὰλοιπὰτῶνχρημάτωνπάλινἐςτὴνἈσίανἀνεκομίσθη,ΜεγάβυζονδὲτὸνΖωπύρουπέμπειἄνδραΠέρσηνμετὰστρατιᾶςπολλῆς·"
-s['sentence'] = "ὡςδὲαὐτῷοὐπρουχώρεικαὶτὰχρήματαἄλλωςἀνηλοῦτο,ὁμὲνΜεγάβαζοςκαὶτὰλοιπὰτῶνχρημάτωνπάλινἐςτὴνἈσίανἀνεκομίσθη,ΜεγάβυζονδὲτὸνΖωπύρουπέμπειἄνδραΠέρσηνμετὰστρατιᾶςπολλῆς·"
+words = "ὡς δὲ αὐτῷ οὐ προυχώρει καὶ τὰ χρήματα ἄλλως ἀνηλοῦτο , ὁ μὲν Μεγάβαζος καὶ τὰ λοιπὰ τῶν χρημάτων πάλιν ἐς τὴν Ἀσίαν ἀνεκομίσθη , Μεγάβυζον δὲ τὸν Ζωπύρου πέμπει ἄνδρα Πέρσην μετὰ στρατιᾶς πολλῆς · "
+s['sentence'] = "ὡς δὲ αὐτῷ οὐ προυχώρει καὶ τὰ χρήματα ἄλλως ἀνηλοῦτο , ὁ μὲν Μεγάβαζος καὶ τὰ λοιπὰ τῶν χρημάτων πάλιν ἐς τὴν Ἀσίαν ἀνεκομίσθη , Μεγάβυζον δὲ τὸν Ζωπύρου πέμπει ἄνδρα Πέρσην μετὰ στρατιᾶς πολλῆς · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.4", length=66)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.4:1", lemma="ὅς", form="ὅς", isIndecl="indeclform", dialect="", relation="SBJ", number="sg", cid=26873953, posClass="N", pos="pron", ref="1.109.4-001", tbwid=1, value="ὃς", gender="masc", posAdd="relative", case="nom", head=20, length=2, )
@@ -18781,8 +17563,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.109.4:66", ref="", lemma="", tbwid=66, form="", value=".", relation="AuxK", head=0, cid=26874018, pos="punct", length=1, )
 s.words(w)
-words = "ὃςἀφικόμενοςκατὰγῆντούςτεΑἰγυπτίουςκαὶτοὺςξυμμάχουςμάχῃἐκράτησεκαὶἐκτῆςΜέμφιδοςἐξήλασετοὺςἝλληναςκαὶτέλοςἐςΠροσωπίτιδατὴννῆσονκατέκλῃσεκαὶἐπολιόρκειἐναὐτῇἐνιαυτὸνκαὶἓξμῆνας,μέχριοὗξηράναςτὴνδιώρυχακαὶπαρατρέψαςἄλλῃτὸὕδωρτάςτεναῦςἐπὶτοῦξηροῦἐποίησεκαὶτῆςνήσουτὰπολλὰἤπειρον,καὶδιαβὰςεἷλετὴννῆσονπεζῇ."
-s['sentence'] = "ὃςἀφικόμενοςκατὰγῆντούςτεΑἰγυπτίουςκαὶτοὺςξυμμάχουςμάχῃἐκράτησεκαὶἐκτῆςΜέμφιδοςἐξήλασετοὺςἝλληναςκαὶτέλοςἐςΠροσωπίτιδατὴννῆσονκατέκλῃσεκαὶἐπολιόρκειἐναὐτῇἐνιαυτὸνκαὶἓξμῆνας,μέχριοὗξηράναςτὴνδιώρυχακαὶπαρατρέψαςἄλλῃτὸὕδωρτάςτεναῦςἐπὶτοῦξηροῦἐποίησεκαὶτῆςνήσουτὰπολλὰἤπειρον,καὶδιαβὰςεἷλετὴννῆσονπεζῇ."
+words = "ὃς ἀφικόμενος κατὰ γῆν τούς τε Αἰγυπτίους καὶ τοὺς ξυμμάχους μάχῃ ἐκράτησε καὶ ἐκ τῆς Μέμφιδος ἐξήλασε τοὺς Ἕλληνας καὶ τέλος ἐς Προσωπίτιδα τὴν νῆσον κατέκλῃσε καὶ ἐπολιόρκει ἐν αὐτῇ ἐνιαυτὸν καὶ ἓξ μῆνας , μέχρι οὗ ξηράνας τὴν διώρυχα καὶ παρατρέψας ἄλλῃ τὸ ὕδωρ τάς τε ναῦς ἐπὶ τοῦ ξηροῦ ἐποίησε καὶ τῆς νήσου τὰ πολλὰ ἤπειρον , καὶ διαβὰς εἷλε τὴν νῆσον πεζῇ . "
+s['sentence'] = "ὃς ἀφικόμενος κατὰ γῆν τούς τε Αἰγυπτίους καὶ τοὺς ξυμμάχους μάχῃ ἐκράτησε καὶ ἐκ τῆς Μέμφιδος ἐξήλασε τοὺς Ἕλληνας καὶ τέλος ἐς Προσωπίτιδα τὴν νῆσον κατέκλῃσε καὶ ἐπολιόρκει ἐν αὐτῇ ἐνιαυτὸν καὶ ἓξ μῆνας , μέχρι οὗ ξηράνας τὴν διώρυχα καὶ παρατρέψας ἄλλῃ τὸ ὕδωρ τάς τε ναῦς ἐπὶ τοῦ ξηροῦ ἐποίησε καὶ τῆς νήσου τὰ πολλὰ ἤπειρον , καὶ διαβὰς εἷλε τὴν νῆσον πεζῇ . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.1", length=11)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.1:1", lemma="οὕτως", form="οὕτω", isIndecl="indeclform", dialect="", relation="ADV", cid=26874019, pos="adverb", posClass="N", tbwid=1, ref="1.110.1-001", degree="", value="οὕτω", head=7, length=4, )
@@ -18847,8 +17629,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.1:11", ref="", lemma="", tbwid=11, form="", value="·", relation="AuxK", head=0, cid=26874029, pos="punct", length=1, )
 s.words(w)
-words = "οὕτωμὲντὰτῶνἙλλήνωνπράγματαἐφθάρηἓξἔτηπολεμήσαντα·"
-s['sentence'] = "οὕτωμὲντὰτῶνἙλλήνωνπράγματαἐφθάρηἓξἔτηπολεμήσαντα·"
+words = "οὕτω μὲν τὰ τῶν Ἑλλήνων πράγματα ἐφθάρη ἓξ ἔτη πολεμήσαντα · "
+s['sentence'] = "οὕτω μὲν τὰ τῶν Ἑλλήνων πράγματα ἐφθάρη ἓξ ἔτη πολεμήσαντα · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.2", length=17)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.2:1", ref="1.110.1-011", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874030, posClass="N", pos="conj", length=3, )
@@ -18945,8 +17727,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.2:17", ref="", lemma="", tbwid=17, form="", value=".", relation="AuxK", head=0, cid=26874046, pos="punct", length=1, )
 s.words(w)
-words = "καὶὀλίγοιἀπὸπολλῶνπορευόμενοιδιὰτῆςΛιβύηςἐςΚυρήνηνἐσώθησαν,οἱδὲπλεῖστοιἀπώλοντο."
-s['sentence'] = "καὶὀλίγοιἀπὸπολλῶνπορευόμενοιδιὰτῆςΛιβύηςἐςΚυρήνηνἐσώθησαν,οἱδὲπλεῖστοιἀπώλοντο."
+words = "καὶ ὀλίγοι ἀπὸ πολλῶν πορευόμενοι διὰ τῆς Λιβύης ἐς Κυρήνην ἐσώθησαν , οἱ δὲ πλεῖστοι ἀπώλοντο . "
+s['sentence'] = "καὶ ὀλίγοι ἀπὸ πολλῶν πορευόμενοι διὰ τῆς Λιβύης ἐς Κυρήνην ἐσώθησαν , οἱ δὲ πλεῖστοι ἀπώλοντο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.3", length=14)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.3:1", lemma="Αἴγυπτος", form="Αἴγυπτος", isIndecl="", dialect="", relation="SBJ", number="sg", cid=26874047, posClass="N", pos="noun", ref="1.110.2-001", tbwid=1, value="Αἴγυπτος", gender="masc", posAdd="os_ou", case="nom", head=6, length=8, )
@@ -19025,8 +17807,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.3:14", ref="", lemma="", tbwid=14, form="", value="·", relation="AuxK", head=0, cid=26874060, pos="punct", length=1, )
 s.words(w)
-words = "ΑἴγυπτοςδὲπάλινὑπὸβασιλέαἐγένετοπλὴνἈμυρταίουτοῦἐντοῖςἕλεσιβασιλέως·"
-s['sentence'] = "ΑἴγυπτοςδὲπάλινὑπὸβασιλέαἐγένετοπλὴνἈμυρταίουτοῦἐντοῖςἕλεσιβασιλέως·"
+words = "Αἴγυπτος δὲ πάλιν ὑπὸ βασιλέα ἐγένετο πλὴν Ἀμυρταίου τοῦ ἐν τοῖς ἕλεσι βασιλέως · "
+s['sentence'] = "Αἴγυπτος δὲ πάλιν ὑπὸ βασιλέα ἐγένετο πλὴν Ἀμυρταίου τοῦ ἐν τοῖς ἕλεσι βασιλέως · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.4", length=20)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.4:1", lemma="οὗτος", form="τοῦτον", isIndecl="indeclform", dialect="", relation="OBJ", number="sg", cid=26874061, posClass="N", pos="adj", ref="1.110.2-014", tbwid=1, degree="", value="τοῦτον", gender="masc", posAdd="pron_adj1", case="acc", head=10, length=6, )
@@ -19141,8 +17923,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.4:20", ref="", lemma="", tbwid=20, form="", value=".", relation="AuxK", head=0, cid=26874080, pos="punct", length=1, )
 s.words(w)
-words = "τοῦτονδὲδιὰμέγεθόςτετοῦἕλουςοὐκἐδύναντοἑλεῖν,καὶἅμαμαχιμώτατοίεἰσιτῶνΑἰγυπτίωνοἱἕλειοι."
-s['sentence'] = "τοῦτονδὲδιὰμέγεθόςτετοῦἕλουςοὐκἐδύναντοἑλεῖν,καὶἅμαμαχιμώτατοίεἰσιτῶνΑἰγυπτίωνοἱἕλειοι."
+words = "τοῦτον δὲ διὰ μέγεθός τε τοῦ ἕλους οὐκ ἐδύναντο ἑλεῖν , καὶ ἅμα μαχιμώτατοί εἰσι τῶν Αἰγυπτίων οἱ ἕλειοι . "
+s['sentence'] = "τοῦτον δὲ διὰ μέγεθός τε τοῦ ἕλους οὐκ ἐδύναντο ἑλεῖν , καὶ ἅμα μαχιμώτατοί εἰσι τῶν Αἰγυπτίων οἱ ἕλειοι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.5", length=18)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.5:1", lemma="Ἰνάρως", isIndecl="", form="Ἰνάρως", dialect="", relation="SBJ", number="sg", cid=26874081, tbwid=1, ref="1.110.3-001", value="Ἰνάρως", gender="masc", case="nom", head=17, length=6, )
@@ -19241,8 +18023,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.5:18", ref="", lemma="", tbwid=18, form="", value=".", relation="AuxK", head=0, cid=26874098, pos="punct", length=1, )
 s.words(w)
-words = "ἸνάρωςδὲὁΛιβύωνβασιλεύς,ὃςτὰπάνταἔπραξεπερὶτῆςΑἰγύπτου,προδοσίᾳληφθεὶςἀνεσταυρώθη."
-s['sentence'] = "ἸνάρωςδὲὁΛιβύωνβασιλεύς,ὃςτὰπάνταἔπραξεπερὶτῆςΑἰγύπτου,προδοσίᾳληφθεὶςἀνεσταυρώθη."
+words = "Ἰνάρως δὲ ὁ Λιβύων βασιλεύς , ὃς τὰ πάντα ἔπραξε περὶ τῆς Αἰγύπτου , προδοσίᾳ ληφθεὶς ἀνεσταυρώθη . "
+s['sentence'] = "Ἰνάρως δὲ ὁ Λιβύων βασιλεύς , ὃς τὰ πάντα ἔπραξε περὶ τῆς Αἰγύπτου , προδοσίᾳ ληφθεὶς ἀνεσταυρώθη . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.6", length=26)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.6:1", ref="1.110.4-001", lemma="ἐκ", tbwid=1, isIndecl="proclitic indeclform", form="ἐκ", dialect="", value="ἐκ", relation="AuxP", head=12, cid=26874099, posClass="N", pos="prep", length=2, )
@@ -19393,8 +18175,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.6:26", ref="", lemma="", tbwid=26, form="", value="·", relation="AuxK", head=0, cid=26874124, pos="punct", length=1, )
 s.words(w)
-words = "ἐκδὲτῶνἈθηνῶνκαὶτῆςἄλληςξυμμαχίδοςπεντήκοντατριήρειςδιάδοχοιπλέουσαιἐςΑἴγυπτονἔσχονκατὰτὸΜενδήσιονκέρας,οὐκεἰδότεςτῶνγεγονότωνοὐδέν·"
-s['sentence'] = "ἐκδὲτῶνἈθηνῶνκαὶτῆςἄλληςξυμμαχίδοςπεντήκοντατριήρειςδιάδοχοιπλέουσαιἐςΑἴγυπτονἔσχονκατὰτὸΜενδήσιονκέρας,οὐκεἰδότεςτῶνγεγονότωνοὐδέν·"
+words = "ἐκ δὲ τῶν Ἀθηνῶν καὶ τῆς ἄλλης ξυμμαχίδος πεντήκοντα τριήρεις διάδοχοι πλέουσαι ἐς Αἴγυπτον ἔσχον κατὰ τὸ Μενδήσιον κέρας , οὐκ εἰδότες τῶν γεγονότων οὐδέν · "
+s['sentence'] = "ἐκ δὲ τῶν Ἀθηνῶν καὶ τῆς ἄλλης ξυμμαχίδος πεντήκοντα τριήρεις διάδοχοι πλέουσαι ἐς Αἴγυπτον ἔσχον κατὰ τὸ Μενδήσιον κέρας , οὐκ εἰδότες τῶν γεγονότων οὐδέν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.7", length=24)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.7:1", ref="1.110.4-026", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874125, posClass="N", pos="conj", length=3, )
@@ -19533,8 +18315,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.7:24", ref="", lemma="", tbwid=24, form="", value=".", relation="AuxK", head=0, cid=26874148, pos="punct", length=1, )
 s.words(w)
-words = "καὶαὐτοῖςἔκτεγῆςἐπιπεσόντεςπεζοὶκαὶἐκθαλάσσηςΦοινίκωνναυτικὸνδιέφθειραντὰςπολλὰςτῶννεῶν,αἱδ'ἐλάσσουςδιέφυγονπάλιν."
-s['sentence'] = "καὶαὐτοῖςἔκτεγῆςἐπιπεσόντεςπεζοὶκαὶἐκθαλάσσηςΦοινίκωνναυτικὸνδιέφθειραντὰςπολλὰςτῶννεῶν,αἱδ'ἐλάσσουςδιέφυγονπάλιν."
+words = "καὶ αὐτοῖς ἔκ τε γῆς ἐπιπεσόντες πεζοὶ καὶ ἐκ θαλάσσης Φοινίκων ναυτικὸν διέφθειραν τὰς πολλὰς τῶν νεῶν , αἱ δ' ἐλάσσους διέφυγον πάλιν . "
+s['sentence'] = "καὶ αὐτοῖς ἔκ τε γῆς ἐπιπεσόντες πεζοὶ καὶ ἐκ θαλάσσης Φοινίκων ναυτικὸν διέφθειραν τὰς πολλὰς τῶν νεῶν , αἱ δ' ἐλάσσους διέφυγον πάλιν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.8", length=15)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.8:1", lemma="ὁ", form="τά", isIndecl="indeclform", dialect="", relation="SBJ", number="pl", cid=26874149, posClass="N", pos="pron", ref="1.110.4-049", tbwid=1, value="τὰ", gender="neut", posAdd="article", case="nom", head=14, length=2, )
@@ -19623,8 +18405,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.110.8:15", ref="", lemma="", tbwid=15, form="", value=".", relation="AuxK", head=0, cid=26874163, pos="punct", length=1, )
 s.words(w)
-words = "τὰμὲνκατὰτὴνμεγάληνστρατείανἈθηναίωνκαὶτῶνξυμμάχωνἐςΑἴγυπτονοὕτωςἐτελεύτησεν."
-s['sentence'] = "τὰμὲνκατὰτὴνμεγάληνστρατείανἈθηναίωνκαὶτῶνξυμμάχωνἐςΑἴγυπτονοὕτωςἐτελεύτησεν."
+words = "τὰ μὲν κατὰ τὴν μεγάλην στρατείαν Ἀθηναίων καὶ τῶν ξυμμάχων ἐς Αἴγυπτον οὕτως ἐτελεύτησεν . "
+s['sentence'] = "τὰ μὲν κατὰ τὴν μεγάλην στρατείαν Ἀθηναίων καὶ τῶν ξυμμάχων ἐς Αἴγυπτον οὕτως ἐτελεύτησεν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.1", length=16)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.1:1", ref="1.111.1-001", lemma="ἐκ", tbwid=1, isIndecl="proclitic indeclform", form="ἐκ", dialect="", value="ἐκ", relation="AuxP", head=11, cid=26874164, posClass="N", pos="prep", length=2, )
@@ -19719,8 +18501,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.1:16", ref="", lemma="", tbwid=16, form="", value="·", relation="AuxK", head=0, cid=26874179, pos="punct", length=1, )
 s.words(w)
-words = "ἐκδὲΘεσσαλίαςὈρέστηςὁἘχεκρατίδουυἱὸςτοῦΘεσσαλῶνβασιλέωςφεύγωνἔπεισενἈθηναίουςἑαυτὸνκατάγειν·"
-s['sentence'] = "ἐκδὲΘεσσαλίαςὈρέστηςὁἘχεκρατίδουυἱὸςτοῦΘεσσαλῶνβασιλέωςφεύγωνἔπεισενἈθηναίουςἑαυτὸνκατάγειν·"
+words = "ἐκ δὲ Θεσσαλίας Ὀρέστης ὁ Ἐχεκρατίδου υἱὸς τοῦ Θεσσαλῶν βασιλέως φεύγων ἔπεισεν Ἀθηναίους ἑαυτὸν κατάγειν · "
+s['sentence'] = "ἐκ δὲ Θεσσαλίας Ὀρέστης ὁ Ἐχεκρατίδου υἱὸς τοῦ Θεσσαλῶν βασιλέως φεύγων ἔπεισεν Ἀθηναίους ἑαυτὸν κατάγειν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.2", length=15)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.2:1", ref="1.111.1-016", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874180, posClass="N", pos="conj", length=3, )
@@ -19809,8 +18591,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.2:15", ref="", lemma="", tbwid=15, form="", value=".", relation="AuxK", head=0, cid=26874194, pos="punct", length=1, )
 s.words(w)
-words = "καὶπαραλαβόντεςΒοιωτοὺςκαὶΦωκέαςὄνταςξυμμάχουςοἱἈθηναῖοιἐστράτευσαντῆςΘεσσαλίαςἐπὶΦάρσαλον."
-s['sentence'] = "καὶπαραλαβόντεςΒοιωτοὺςκαὶΦωκέαςὄνταςξυμμάχουςοἱἈθηναῖοιἐστράτευσαντῆςΘεσσαλίαςἐπὶΦάρσαλον."
+words = "καὶ παραλαβόντες Βοιωτοὺς καὶ Φωκέας ὄντας ξυμμάχους οἱ Ἀθηναῖοι ἐστράτευσαν τῆς Θεσσαλίας ἐπὶ Φάρσαλον . "
+s['sentence'] = "καὶ παραλαβόντες Βοιωτοὺς καὶ Φωκέας ὄντας ξυμμάχους οἱ Ἀθηναῖοι ἐστράτευσαν τῆς Θεσσαλίας ἐπὶ Φάρσαλον . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.3", length=44)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.3:1", ref="1.111.1-030", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874195, posClass="N", pos="conj", length=3, )
@@ -20041,8 +18823,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.3:44", ref="", lemma="", tbwid=44, form="", value=".", relation="AuxK", head=0, cid=26874237, pos="punct", length=1, )
 s.words(w)
-words = "καὶτῆςμὲνγῆςἐκράτουνὅσαμὴπροϊόντεςπολὺἐκτῶνὅπλωνοἱγὰρἱππῆςτῶνΘεσσαλῶνεἶργον,τὴνδὲπόλινοὐχεἷλον,οὐδ'ἄλλοπρουχώρειαὐτοῖςοὐδὲνὧνἕνεκαἐστράτευσαν,ἀλλ'ἀπεχώρησανπάλινὈρέστηνἔχοντεςἄπρακτοι."
-s['sentence'] = "καὶτῆςμὲνγῆςἐκράτουνὅσαμὴπροϊόντεςπολὺἐκτῶνὅπλωνοἱγὰρἱππῆςτῶνΘεσσαλῶνεἶργον,τὴνδὲπόλινοὐχεἷλον,οὐδ'ἄλλοπρουχώρειαὐτοῖςοὐδὲνὧνἕνεκαἐστράτευσαν,ἀλλ'ἀπεχώρησανπάλινὈρέστηνἔχοντεςἄπρακτοι."
+words = "καὶ τῆς μὲν γῆς ἐκράτουν ὅσα μὴ προϊόντες πολὺ ἐκ τῶν ὅπλων  οἱ γὰρ ἱππῆς τῶν Θεσσαλῶν εἶργον  , τὴν δὲ πόλιν οὐχ εἷλον , οὐ δ' ἄλλο προυχώρει αὐτοῖς οὐδὲν ὧν ἕνεκα ἐστράτευσαν , ἀλλ' ἀπεχώρησαν πάλιν Ὀρέστην ἔχοντες ἄπρακτοι . "
+s['sentence'] = "καὶ τῆς μὲν γῆς ἐκράτουν ὅσα μὴ προϊόντες πολὺ ἐκ τῶν ὅπλων  οἱ γὰρ ἱππῆς τῶν Θεσσαλῶν εἶργον  , τὴν δὲ πόλιν οὐχ εἷλον , οὐ δ' ἄλλο προυχώρει αὐτοῖς οὐδὲν ὧν ἕνεκα ἐστράτευσαν , ἀλλ' ἀπεχώρησαν πάλιν Ὀρέστην ἔχοντες ἄπρακτοι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.4", length=38)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.4:1", ref="1.111.2-001", lemma="μετά", tbwid=1, isIndecl="indeclform", form="μετά", dialect="", value="μετὰ", relation="AuxP", head=6, cid=26874238, posClass="N", pos="prep", length=4, )
@@ -20253,8 +19035,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.4:38", ref="", lemma="", tbwid=38, form="", value=".", relation="AuxK", head=0, cid=26874275, pos="punct", length=1, )
 s.words(w)
-words = "μετὰδὲταῦταοὐπολλῷὕστερονχίλιοιἈθηναίωνἐπὶτὰςναῦςτὰςἐνΠηγαῖςἐπιβάντεςεἶχονδ'αὐτοὶτὰςΠηγάςπαρέπλευσανἐςΣικυῶναΠερικλέουςτοῦΞανθίππουστρατηγοῦντος,καὶἀποβάντεςΣικυωνίωντοὺςπροσμείξανταςμάχῃἐκράτησαν."
-s['sentence'] = "μετὰδὲταῦταοὐπολλῷὕστερονχίλιοιἈθηναίωνἐπὶτὰςναῦςτὰςἐνΠηγαῖςἐπιβάντεςεἶχονδ'αὐτοὶτὰςΠηγάςπαρέπλευσανἐςΣικυῶναΠερικλέουςτοῦΞανθίππουστρατηγοῦντος,καὶἀποβάντεςΣικυωνίωντοὺςπροσμείξανταςμάχῃἐκράτησαν."
+words = "μετὰ δὲ ταῦτα οὐ πολλῷ ὕστερον χίλιοι Ἀθηναίων ἐπὶ τὰς ναῦς τὰς ἐν Πηγαῖς ἐπιβάντες  εἶχον δ' αὐτοὶ τὰς Πηγάς  παρέπλευσαν ἐς Σικυῶνα Περικλέους τοῦ Ξανθίππου στρατηγοῦντος , καὶ ἀποβάντες Σικυωνίων τοὺς προσμείξαντας μάχῃ ἐκράτησαν . "
+s['sentence'] = "μετὰ δὲ ταῦτα οὐ πολλῷ ὕστερον χίλιοι Ἀθηναίων ἐπὶ τὰς ναῦς τὰς ἐν Πηγαῖς ἐπιβάντες  εἶχον δ' αὐτοὶ τὰς Πηγάς  παρέπλευσαν ἐς Σικυῶνα Περικλέους τοῦ Ξανθίππου στρατηγοῦντος , καὶ ἀποβάντες Σικυωνίων τοὺς προσμείξαντας μάχῃ ἐκράτησαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.5", length=25)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.5:1", ref="1.111.3-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874276, posClass="N", pos="conj", length=3, )
@@ -20391,8 +19173,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.111.5:25", ref="", lemma="", tbwid=25, form="", value=".", relation="AuxK", head=0, cid=26874300, pos="punct", length=1, )
 s.words(w)
-words = "καὶεὐθὺςπαραλαβόντεςἈχαιοὺςκαὶδιαπλεύσαντεςπέραντῆςἈκαρνανίαςἐςΟἰνιάδαςἐστράτευσανκαὶἐπολιόρκουν,οὐμέντοιεἷλόνγε,ἀλλ'ἀπεχώρησανἐπ'οἴκου."
-s['sentence'] = "καὶεὐθὺςπαραλαβόντεςἈχαιοὺςκαὶδιαπλεύσαντεςπέραντῆςἈκαρνανίαςἐςΟἰνιάδαςἐστράτευσανκαὶἐπολιόρκουν,οὐμέντοιεἷλόνγε,ἀλλ'ἀπεχώρησανἐπ'οἴκου."
+words = "καὶ εὐθὺς παραλαβόντες Ἀχαιοὺς καὶ διαπλεύσαντες πέραν τῆς Ἀκαρνανίας ἐς Οἰνιάδας ἐστράτευσαν καὶ ἐπολιόρκουν , οὐ μέντοι εἷλόν γε , ἀλλ' ἀπεχώρησαν ἐπ' οἴκου . "
+s['sentence'] = "καὶ εὐθὺς παραλαβόντες Ἀχαιοὺς καὶ διαπλεύσαντες πέραν τῆς Ἀκαρνανίας ἐς Οἰνιάδας ἐστράτευσαν καὶ ἐπολιόρκουν , οὐ μέντοι εἷλόν γε , ἀλλ' ἀπεχώρησαν ἐπ' οἴκου . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.1", length=12)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.1:1", lemma="ὕστερος", form="ὕστερον", isIndecl="irreg_comp", dialect="", relation="ADV", number="sg", cid=26874301, posClass="N", pos="adj", ref="1.112.1-001", tbwid=1, degree="", value="ὕστερον", gender="neut", posAdd="os_h_on", case="acc", head=7, length=7, )
@@ -20463,8 +19245,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.1:12", ref="", lemma="", tbwid=12, form="", value=".", relation="AuxK", head=0, cid=26874312, pos="punct", length=1, )
 s.words(w)
-words = "ὕστερονδὲδιαλιπόντωνἐτῶντριῶνσπονδαὶγίγνονταιΠελοποννησίοιςκαὶἈθηναίοιςπεντέτεις."
-s['sentence'] = "ὕστερονδὲδιαλιπόντωνἐτῶντριῶνσπονδαὶγίγνονταιΠελοποννησίοιςκαὶἈθηναίοιςπεντέτεις."
+words = "ὕστερον δὲ διαλιπόντων ἐτῶν τριῶν σπονδαὶ γίγνονται Πελοποννησίοις καὶ Ἀθηναίοις πεντέτεις . "
+s['sentence'] = "ὕστερον δὲ διαλιπόντων ἐτῶν τριῶν σπονδαὶ γίγνονται Πελοποννησίοις καὶ Ἀθηναίοις πεντέτεις . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.2", length=22)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.2:1", ref="1.112.2-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874313, posClass="N", pos="conj", length=3, )
@@ -20591,8 +19373,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.2:22", ref="", lemma="", tbwid=22, form="", value=".", relation="AuxK", head=0, cid=26874334, pos="punct", length=1, )
 s.words(w)
-words = "καὶἙλληνικοῦμὲνπολέμουἔσχονοἱἈθηναῖοι,ἐςδὲΚύπρονἐστρατεύοντοναυσὶδιακοσίαιςαὑτῶντεκαὶτῶνξυμμάχωνΚίμωνοςστρατηγοῦντος."
-s['sentence'] = "καὶἙλληνικοῦμὲνπολέμουἔσχονοἱἈθηναῖοι,ἐςδὲΚύπρονἐστρατεύοντοναυσὶδιακοσίαιςαὑτῶντεκαὶτῶνξυμμάχωνΚίμωνοςστρατηγοῦντος."
+words = "καὶ Ἑλληνικοῦ μὲν πολέμου ἔσχον οἱ Ἀθηναῖοι , ἐς δὲ Κύπρον ἐστρατεύοντο ναυσὶ διακοσίαις αὑτῶν τε καὶ τῶν ξυμμάχων Κίμωνος στρατηγοῦντος . "
+s['sentence'] = "καὶ Ἑλληνικοῦ μὲν πολέμου ἔσχον οἱ Ἀθηναῖοι , ἐς δὲ Κύπρον ἐστρατεύοντο ναυσὶ διακοσίαις αὑτῶν τε καὶ τῶν ξυμμάχων Κίμωνος στρατηγοῦντος . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.3", length=24)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.3:1", ref="1.112.3-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874335, posClass="N", pos="conj", length=3, )
@@ -20723,8 +19505,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.3:24", ref="", lemma="", tbwid=24, form="", value=".", relation="AuxK", head=0, cid=26874358, pos="punct", length=1, )
 s.words(w)
-words = "καὶἑξήκονταμὲννῆεςἐςΑἴγυπτονἀπ'αὐτῶνἔπλευσαν,Ἀμυρταίουμεταπέμποντοςτοῦἐντοῖςἕλεσιβασιλέως,αἱδὲἄλλαιΚίτιονἐπολιόρκουν."
-s['sentence'] = "καὶἑξήκονταμὲννῆεςἐςΑἴγυπτονἀπ'αὐτῶνἔπλευσαν,Ἀμυρταίουμεταπέμποντοςτοῦἐντοῖςἕλεσιβασιλέως,αἱδὲἄλλαιΚίτιονἐπολιόρκουν."
+words = "καὶ ἑξήκοντα μὲν νῆες ἐς Αἴγυπτον ἀπ' αὐτῶν ἔπλευσαν , Ἀμυρταίου μεταπέμποντος τοῦ ἐν τοῖς ἕλεσι βασιλέως , αἱ δὲ ἄλλαι Κίτιον ἐπολιόρκουν . "
+s['sentence'] = "καὶ ἑξήκοντα μὲν νῆες ἐς Αἴγυπτον ἀπ' αὐτῶν ἔπλευσαν , Ἀμυρταίου μεταπέμποντος τοῦ ἐν τοῖς ἕλεσι βασιλέως , αἱ δὲ ἄλλαι Κίτιον ἐπολιόρκουν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.4", length=44)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.4:1", lemma="Κίμων", form="Κίμωνος", isIndecl="", dialect="", relation="SBJ", number="sg", cid=26874359, posClass="N", pos="noun", ref="1.112.4-001", tbwid=1, value="Κίμωνος", gender="masc", posAdd="n_nos", case="gen", head=3, length=7, )
@@ -20975,8 +19757,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.4:44", ref="", lemma="", tbwid=44, form="", value=".", relation="AuxK", head=0, cid=26874402, pos="punct", length=1, )
 s.words(w)
-words = "ΚίμωνοςδὲἀποθανόντοςκαὶλιμοῦγενομένουἀπεχώρησανἀπὸΚιτίου,καὶπλεύσαντεςὑπὲρΣαλαμῖνοςτῆςἐνΚύπρῳΦοίνιξικαὶΚυπρίοιςκαὶΚίλιξινἐναυμάχησανκαὶἐπεζομάχησανἅμα,καὶνικήσαντεςἀμφότεραἀπεχώρησανἐπ'οἴκουκαὶαἱἐξΑἰγύπτουνῆεςπάλιναἱἐλθοῦσαιμετ'αὐτῶν."
-s['sentence'] = "ΚίμωνοςδὲἀποθανόντοςκαὶλιμοῦγενομένουἀπεχώρησανἀπὸΚιτίου,καὶπλεύσαντεςὑπὲρΣαλαμῖνοςτῆςἐνΚύπρῳΦοίνιξικαὶΚυπρίοιςκαὶΚίλιξινἐναυμάχησανκαὶἐπεζομάχησανἅμα,καὶνικήσαντεςἀμφότεραἀπεχώρησανἐπ'οἴκουκαὶαἱἐξΑἰγύπτουνῆεςπάλιναἱἐλθοῦσαιμετ'αὐτῶν."
+words = "Κίμωνος δὲ ἀποθανόντος καὶ λιμοῦ γενομένου ἀπεχώρησαν ἀπὸ Κιτίου , καὶ πλεύσαντες ὑπὲρ Σαλαμῖνος τῆς ἐν Κύπρῳ Φοίνιξι καὶ Κυπρίοις καὶ Κίλιξιν ἐναυμάχησαν καὶ ἐπεζομάχησαν ἅμα , καὶ νικήσαντες ἀμφότερα ἀπεχώρησαν ἐπ' οἴκου καὶ αἱ ἐξ Αἰγύπτου νῆες πάλιν αἱ ἐλθοῦσαι μετ' αὐτῶν . "
+s['sentence'] = "Κίμωνος δὲ ἀποθανόντος καὶ λιμοῦ γενομένου ἀπεχώρησαν ἀπὸ Κιτίου , καὶ πλεύσαντες ὑπὲρ Σαλαμῖνος τῆς ἐν Κύπρῳ Φοίνιξι καὶ Κυπρίοις καὶ Κίλιξιν ἐναυμάχησαν καὶ ἐπεζομάχησαν ἅμα , καὶ νικήσαντες ἀμφότερα ἀπεχώρησαν ἐπ' οἴκου καὶ αἱ ἐξ Αἰγύπτου νῆες πάλιν αἱ ἐλθοῦσαι μετ' αὐτῶν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.5", length=19)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.5:1", lemma="Λακεδαιμόνιος", form="Λακεδαιμόνιοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26874403, posClass="N", pos="adj", ref="1.112.5-001", tbwid=1, degree="", value="Λακεδαιμόνιοι", gender="masc", posAdd="os_h_on", case="nom", head=11, length=13, )
@@ -21085,8 +19867,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.5:19", ref="", lemma="", tbwid=19, form="", value="·", relation="AuxK", head=0, cid=26874421, pos="punct", length=1, )
 s.words(w)
-words = "Λακεδαιμόνιοιδὲμετὰταῦτατὸνἱερὸνκαλούμενονπόλεμονἐστράτευσαν,καὶκρατήσαντεςτοῦἐνΔελφοῖςἱεροῦπαρέδοσανΔελφοῖς·"
-s['sentence'] = "Λακεδαιμόνιοιδὲμετὰταῦτατὸνἱερὸνκαλούμενονπόλεμονἐστράτευσαν,καὶκρατήσαντεςτοῦἐνΔελφοῖςἱεροῦπαρέδοσανΔελφοῖς·"
+words = "Λακεδαιμόνιοι δὲ μετὰ ταῦτα τὸν ἱερὸν καλούμενον πόλεμον ἐστράτευσαν , καὶ κρατήσαντες τοῦ ἐν Δελφοῖς ἱεροῦ παρέδοσαν Δελφοῖς · "
+s['sentence'] = "Λακεδαιμόνιοι δὲ μετὰ ταῦτα τὸν ἱερὸν καλούμενον πόλεμον ἐστράτευσαν , καὶ κρατήσαντες τοῦ ἐν Δελφοῖς ἱεροῦ παρέδοσαν Δελφοῖς · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.6", length=12)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.6:1", ref="1.112.5-019", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874422, posClass="N", pos="conj", length=3, )
@@ -21157,8 +19939,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.112.6:12", ref="", lemma="", tbwid=12, form="", value=".", relation="AuxK", head=0, cid=26874433, pos="punct", length=1, )
 s.words(w)
-words = "καὶαὖθιςὕστερονἈθηναῖοιἀποχωρησάντωναὐτῶνστρατεύσαντεςκαὶκρατήσαντεςπαρέδοσανΦωκεῦσιν."
-s['sentence'] = "καὶαὖθιςὕστερονἈθηναῖοιἀποχωρησάντωναὐτῶνστρατεύσαντεςκαὶκρατήσαντεςπαρέδοσανΦωκεῦσιν."
+words = "καὶ αὖθις ὕστερον Ἀθηναῖοι ἀποχωρησάντων αὐτῶν στρατεύσαντες καὶ κρατήσαντες παρέδοσαν Φωκεῦσιν . "
+s['sentence'] = "καὶ αὖθις ὕστερον Ἀθηναῖοι ἀποχωρησάντων αὐτῶν στρατεύσαντες καὶ κρατήσαντες παρέδοσαν Φωκεῦσιν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.1", length=44)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.1:1", ref="1.113.1-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874434, posClass="N", pos="conj", length=3, )
@@ -21397,8 +20179,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.1:44", ref="", lemma="", tbwid=44, form="", value=".", relation="AuxK", head=0, cid=26874477, pos="punct", length=1, )
 s.words(w)
-words = "καὶχρόνουἐγγενομένουμετὰταῦταἈθηναῖοι,ΒοιωτῶντῶνφευγόντωνἐχόντωνὈρχομενὸνκαὶΧαιρώνειανκαὶἄλλ'ἄτταχωρίατῆςΒοιωτίας,ἐστράτευσανἑαυτῶνμὲνχιλίοιςὁπλίταις,τῶνδὲξυμμάχωνὡςἑκάστοιςἐπὶτὰχωρίαταῦταπολέμιαὄντα,ΤολμίδουτοῦΤολμαίουστρατηγοῦντος."
-s['sentence'] = "καὶχρόνουἐγγενομένουμετὰταῦταἈθηναῖοι,ΒοιωτῶντῶνφευγόντωνἐχόντωνὈρχομενὸνκαὶΧαιρώνειανκαὶἄλλ'ἄτταχωρίατῆςΒοιωτίας,ἐστράτευσανἑαυτῶνμὲνχιλίοιςὁπλίταις,τῶνδὲξυμμάχωνὡςἑκάστοιςἐπὶτὰχωρίαταῦταπολέμιαὄντα,ΤολμίδουτοῦΤολμαίουστρατηγοῦντος."
+words = "καὶ χρόνου ἐγγενομένου μετὰ ταῦτα Ἀθηναῖοι , Βοιωτῶν τῶν φευγόντων ἐχόντων Ὀρχομενὸν καὶ Χαιρώνειαν καὶ ἄλλ' ἄττα χωρία τῆς Βοιωτίας , ἐστράτευσαν ἑαυτῶν μὲν χιλίοις ὁπλίταις , τῶν δὲ ξυμμάχων ὡς ἑκάστοις ἐπὶ τὰ χωρία ταῦτα πολέμια ὄντα , Τολμίδου τοῦ Τολμαίου στρατηγοῦντος . "
+s['sentence'] = "καὶ χρόνου ἐγγενομένου μετὰ ταῦτα Ἀθηναῖοι , Βοιωτῶν τῶν φευγόντων ἐχόντων Ὀρχομενὸν καὶ Χαιρώνειαν καὶ ἄλλ' ἄττα χωρία τῆς Βοιωτίας , ἐστράτευσαν ἑαυτῶν μὲν χιλίοις ὁπλίταις , τῶν δὲ ξυμμάχων ὡς ἑκάστοις ἐπὶ τὰ χωρία ταῦτα πολέμια ὄντα , Τολμίδου τοῦ Τολμαίου στρατηγοῦντος . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.2", length=9)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.2:1", ref="1.113.1-044", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874478, posClass="N", pos="conj", length=3, )
@@ -21451,8 +20233,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.2:9", ref="", lemma="", tbwid=9, form="", value=".", relation="AuxK", head=0, cid=26874486, pos="punct", length=1, )
 s.words(w)
-words = "καὶΧαιρώνειανἑλόντεςκαὶἀνδραποδίσαντεςἀπεχώρουνφυλακὴνκαταστήσαντες."
-s['sentence'] = "καὶΧαιρώνειανἑλόντεςκαὶἀνδραποδίσαντεςἀπεχώρουνφυλακὴνκαταστήσαντες."
+words = "καὶ Χαιρώνειαν ἑλόντες καὶ ἀνδραποδίσαντες ἀπεχώρουν φυλακὴν καταστήσαντες . "
+s['sentence'] = "καὶ Χαιρώνειαν ἑλόντες καὶ ἀνδραποδίσαντες ἀπεχώρουν φυλακὴν καταστήσαντες . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.3", length=41)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.3:1", lemma="πορεύω", form="πορευομένοις", isIndecl="", voice="mp", dialect="", tense="pres", relation="ADV", mood="part", number="pl", cid=26874487, posClass="P", pos="participle", ref="1.113.2-001", tbwid=1, value="πορευομένοις", gender="masc", posAdd="w_stem,euw", case="dat", head=14, length=12, )
@@ -21685,8 +20467,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.3:41", ref="", lemma="", tbwid=41, form="", value=".", relation="AuxK", head=0, cid=26874527, pos="punct", length=1, )
 s.words(w)
-words = "πορευομένοιςδ'αὐτοῖςἐνΚορωνείᾳἐπιτίθενταιοἵτεἐκτῆςὈρχομενοῦφυγάδεςΒοιωτῶνκαὶΛοκροὶμετ'αὐτῶνκαὶΕὐβοέωνφυγάδεςκαὶὅσοιτῆςαὐτῆςγνώμηςἦσαν,καὶμάχῃκρατήσαντεςτοὺςμὲνδιέφθειραντῶνἈθηναίων,τοὺςδὲζῶνταςἔλαβον."
-s['sentence'] = "πορευομένοιςδ'αὐτοῖςἐνΚορωνείᾳἐπιτίθενταιοἵτεἐκτῆςὈρχομενοῦφυγάδεςΒοιωτῶνκαὶΛοκροὶμετ'αὐτῶνκαὶΕὐβοέωνφυγάδεςκαὶὅσοιτῆςαὐτῆςγνώμηςἦσαν,καὶμάχῃκρατήσαντεςτοὺςμὲνδιέφθειραντῶνἈθηναίων,τοὺςδὲζῶνταςἔλαβον."
+words = "πορευομένοις δ' αὐτοῖς ἐν Κορωνείᾳ ἐπιτίθενται οἵ τε ἐκ τῆς Ὀρχομενοῦ φυγάδες Βοιωτῶν καὶ Λοκροὶ μετ' αὐτῶν καὶ Εὐβοέων φυγάδες καὶ ὅσοι τῆς αὐτῆς γνώμης ἦσαν , καὶ μάχῃ κρατήσαντες τοὺς μὲν διέφθειραν τῶν Ἀθηναίων , τοὺς δὲ ζῶντας ἔλαβον . "
+s['sentence'] = "πορευομένοις δ' αὐτοῖς ἐν Κορωνείᾳ ἐπιτίθενται οἵ τε ἐκ τῆς Ὀρχομενοῦ φυγάδες Βοιωτῶν καὶ Λοκροὶ μετ' αὐτῶν καὶ Εὐβοέων φυγάδες καὶ ὅσοι τῆς αὐτῆς γνώμης ἦσαν , καὶ μάχῃ κρατήσαντες τοὺς μὲν διέφθειραν τῶν Ἀθηναίων , τοὺς δὲ ζῶντας ἔλαβον . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.4", length=15)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.4:1", ref="1.113.3-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874528, posClass="N", pos="conj", length=3, )
@@ -21771,8 +20553,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.4:15", ref="", lemma="", tbwid=15, form="", value=".", relation="AuxK", head=0, cid=26874542, pos="punct", length=1, )
 s.words(w)
-words = "καὶτὴνΒοιωτίανἐξέλιπονἈθηναῖοιπᾶσαν,σπονδὰςποιησάμενοιἐφ'ᾧτοὺςἄνδραςκομιοῦνται."
-s['sentence'] = "καὶτὴνΒοιωτίανἐξέλιπονἈθηναῖοιπᾶσαν,σπονδὰςποιησάμενοιἐφ'ᾧτοὺςἄνδραςκομιοῦνται."
+words = "καὶ τὴν Βοιωτίαν ἐξέλιπον Ἀθηναῖοι πᾶσαν , σπονδὰς ποιησάμενοι ἐφ' ᾧ τοὺς ἄνδρας κομιοῦνται . "
+s['sentence'] = "καὶ τὴν Βοιωτίαν ἐξέλιπον Ἀθηναῖοι πᾶσαν , σπονδὰς ποιησάμενοι ἐφ' ᾧ τοὺς ἄνδρας κομιοῦνται . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.5", length=13)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.5:1", ref="1.113.4-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874543, posClass="N", pos="conj", length=3, )
@@ -21849,8 +20631,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.113.5:13", ref="", lemma="", tbwid=13, form="", value=".", relation="AuxK", head=0, cid=26874555, pos="punct", length=1, )
 s.words(w)
-words = "καὶοἱφεύγοντεςΒοιωτῶνκατελθόντεςκαὶοἱἄλλοιπάντεςαὐτόνομοιπάλινἐγένοντο."
-s['sentence'] = "καὶοἱφεύγοντεςΒοιωτῶνκατελθόντεςκαὶοἱἄλλοιπάντεςαὐτόνομοιπάλινἐγένοντο."
+words = "καὶ οἱ φεύγοντες Βοιωτῶν κατελθόντες καὶ οἱ ἄλλοι πάντες αὐτόνομοι πάλιν ἐγένοντο . "
+s['sentence'] = "καὶ οἱ φεύγοντες Βοιωτῶν κατελθόντες καὶ οἱ ἄλλοι πάντες αὐτόνομοι πάλιν ἐγένοντο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.1", length=46)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.1:1", ref="1.114.1-001", lemma="μετά", tbwid=1, isIndecl="indeclform", form="μετά", dialect="", value="μετὰ", relation="AuxP", head=6, cid=26874556, posClass="N", pos="prep", length=4, )
@@ -22117,8 +20899,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.1:46", ref="", lemma="", tbwid=46, form="", value="·", relation="AuxK", head=0, cid=26874601, pos="punct", length=1, )
 s.words(w)
-words = "μετὰδὲταῦταοὐπολλῷὕστερονΕὔβοιαἀπέστηἀπὸἈθηναίων,καὶἐςαὐτὴνδιαβεβηκότοςἤδηΠερικλέουςστρατιᾷἈθηναίωνἠγγέλθηαὐτῷὅτιΜέγαραἀφέστηκεκαὶΠελοποννήσιοιμέλλουσινἐσβαλεῖνἐςτὴνἈττικὴνκαὶοἱφρουροὶἈθηναίωνδιεφθαρμένοιεἰσὶνὑπὸΜεγαρέων,πλὴνὅσοιἐςΝίσαιανἀπέφυγον·"
-s['sentence'] = "μετὰδὲταῦταοὐπολλῷὕστερονΕὔβοιαἀπέστηἀπὸἈθηναίων,καὶἐςαὐτὴνδιαβεβηκότοςἤδηΠερικλέουςστρατιᾷἈθηναίωνἠγγέλθηαὐτῷὅτιΜέγαραἀφέστηκεκαὶΠελοποννήσιοιμέλλουσινἐσβαλεῖνἐςτὴνἈττικὴνκαὶοἱφρουροὶἈθηναίωνδιεφθαρμένοιεἰσὶνὑπὸΜεγαρέων,πλὴνὅσοιἐςΝίσαιανἀπέφυγον·"
+words = "μετὰ δὲ ταῦτα οὐ πολλῷ ὕστερον Εὔβοια ἀπέστη ἀπὸ Ἀθηναίων , καὶ ἐς αὐτὴν διαβεβηκότος ἤδη Περικλέους στρατιᾷ Ἀθηναίων ἠγγέλθη αὐτῷ ὅτι Μέγαρα ἀφέστηκε καὶ Πελοποννήσιοι μέλλουσιν ἐσβαλεῖν ἐς τὴν Ἀττικὴν καὶ οἱ φρουροὶ Ἀθηναίων διεφθαρμένοι εἰσὶν ὑπὸ Μεγαρέων , πλὴν ὅσοι ἐς Νίσαιαν ἀπέφυγον · "
+s['sentence'] = "μετὰ δὲ ταῦτα οὐ πολλῷ ὕστερον Εὔβοια ἀπέστη ἀπὸ Ἀθηναίων , καὶ ἐς αὐτὴν διαβεβηκότος ἤδη Περικλέους στρατιᾷ Ἀθηναίων ἠγγέλθη αὐτῷ ὅτι Μέγαρα ἀφέστηκε καὶ Πελοποννήσιοι μέλλουσιν ἐσβαλεῖν ἐς τὴν Ἀττικὴν καὶ οἱ φρουροὶ Ἀθηναίων διεφθαρμένοι εἰσὶν ὑπὸ Μεγαρέων , πλὴν ὅσοι ἐς Νίσαιαν ἀπέφυγον · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.2", length=11)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.2:1", lemma="ἐπάγω", form="ἐπαγαγόμενοι", isIndecl="redupl", voice="mid", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26874602, posClass="P", pos="participle", ref="1.114.1-046", tbwid=1, value="ἐπαγαγόμενοι", gender="masc", posAdd="aor2", case="nom", head=8, length=12, )
@@ -22183,8 +20965,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.2:11", ref="", lemma="", tbwid=11, form="", value=".", relation="AuxK", head=0, cid=26874612, pos="punct", length=1, )
 s.words(w)
-words = "ἐπαγαγόμενοιδὲΚορινθίουςκαὶΣικυωνίουςκαὶἘπιδαυρίουςἀπέστησανοἱΜεγαρῆς."
-s['sentence'] = "ἐπαγαγόμενοιδὲΚορινθίουςκαὶΣικυωνίουςκαὶἘπιδαυρίουςἀπέστησανοἱΜεγαρῆς."
+words = "ἐπαγαγόμενοι δὲ Κορινθίους καὶ Σικυωνίους καὶ Ἐπιδαυρίους ἀπέστησαν οἱ Μεγαρῆς . "
+s['sentence'] = "ἐπαγαγόμενοι δὲ Κορινθίους καὶ Σικυωνίους καὶ Ἐπιδαυρίους ἀπέστησαν οἱ Μεγαρῆς . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.3", length=13)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.3:1", lemma="ὁ", form="ὁ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="sg", cid=26874613, posClass="N", pos="article", ref="1.114.1-056", tbwid=1, value="ὁ", gender="masc", case="nom", head=3, length=1, )
@@ -22261,8 +21043,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.3:13", ref="", lemma="", tbwid=13, form="", value=".", relation="AuxK", head=0, cid=26874625, pos="punct", length=1, )
 s.words(w)
-words = "ὁδὲΠερικλῆςπάλινκατὰτάχοςἐκόμιζετὴνστρατιὰνἐκτῆςΕὐβοίας."
-s['sentence'] = "ὁδὲΠερικλῆςπάλινκατὰτάχοςἐκόμιζετὴνστρατιὰνἐκτῆςΕὐβοίας."
+words = "ὁ δὲ Περικλῆς πάλιν κατὰ τάχος ἐκόμιζε τὴν στρατιὰν ἐκ τῆς Εὐβοίας . "
+s['sentence'] = "ὁ δὲ Περικλῆς πάλιν κατὰ τάχος ἐκόμιζε τὴν στρατιὰν ἐκ τῆς Εὐβοίας . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.4", length=29)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.4:1", ref="1.114.2-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874626, posClass="N", pos="conj", length=3, )
@@ -22431,8 +21213,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.4:29", ref="", lemma="", tbwid=29, form="", value=".", relation="AuxK", head=0, cid=26874654, pos="punct", length=1, )
 s.words(w)
-words = "καὶμετὰτοῦτοοἱΠελοποννήσιοιτῆςἈττικῆςἐςἘλευσῖνακαὶΘριῶζεἐσβαλόντεςἐδῄωσανΠλειστοάνακτοςτοῦΠαυσανίουβασιλέωςΛακεδαιμονίωνἡγουμένου,καὶτὸπλέονοὐκέτιπροελθόντεςἀπεχώρησανἐπ'οἴκου."
-s['sentence'] = "καὶμετὰτοῦτοοἱΠελοποννήσιοιτῆςἈττικῆςἐςἘλευσῖνακαὶΘριῶζεἐσβαλόντεςἐδῄωσανΠλειστοάνακτοςτοῦΠαυσανίουβασιλέωςΛακεδαιμονίωνἡγουμένου,καὶτὸπλέονοὐκέτιπροελθόντεςἀπεχώρησανἐπ'οἴκου."
+words = "καὶ μετὰ τοῦτο οἱ Πελοποννήσιοι τῆς Ἀττικῆς ἐς Ἐλευσῖνα καὶ Θριῶζε ἐσβαλόντες ἐδῄωσαν Πλειστοάνακτος τοῦ Παυσανίου βασιλέως Λακεδαιμονίων ἡγουμένου , καὶ τὸ πλέον οὐκέτι προελθόντες ἀπεχώρησαν ἐπ' οἴκου . "
+s['sentence'] = "καὶ μετὰ τοῦτο οἱ Πελοποννήσιοι τῆς Ἀττικῆς ἐς Ἐλευσῖνα καὶ Θριῶζε ἐσβαλόντες ἐδῄωσαν Πλειστοάνακτος τοῦ Παυσανίου βασιλέως Λακεδαιμονίων ἡγουμένου , καὶ τὸ πλέον οὐκέτι προελθόντες ἀπεχώρησαν ἐπ' οἴκου . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.5", length=26)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.5:1", ref="1.114.3-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26874655, posClass="N", pos="conj", length=3, )
@@ -22575,8 +21357,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.114.5:26", ref="", lemma="", tbwid=26, form="", value=".", relation="AuxK", head=0, cid=26874680, pos="punct", length=1, )
 s.words(w)
-words = "καὶἈθηναῖοιπάλινἐςΕὔβοιανδιαβάντεςΠερικλέουςστρατηγοῦντοςκατεστρέψαντοπᾶσαν,καὶτὴνμὲνἄλληνὁμολογίᾳκατεστήσαντο,Ἑστιαιᾶςδὲἐξοικίσαντεςαὐτοὶτὴνγῆνἔσχον."
-s['sentence'] = "καὶἈθηναῖοιπάλινἐςΕὔβοιανδιαβάντεςΠερικλέουςστρατηγοῦντοςκατεστρέψαντοπᾶσαν,καὶτὴνμὲνἄλληνὁμολογίᾳκατεστήσαντο,Ἑστιαιᾶςδὲἐξοικίσαντεςαὐτοὶτὴνγῆνἔσχον."
+words = "καὶ Ἀθηναῖοι πάλιν ἐς Εὔβοιαν διαβάντες Περικλέους στρατηγοῦντος κατεστρέψαντο πᾶσαν , καὶ τὴν μὲν ἄλλην ὁμολογίᾳ κατεστήσαντο , Ἑστιαιᾶς δὲ ἐξοικίσαντες αὐτοὶ τὴν γῆν ἔσχον . "
+s['sentence'] = "καὶ Ἀθηναῖοι πάλιν ἐς Εὔβοιαν διαβάντες Περικλέους στρατηγοῦντος κατεστρέψαντο πᾶσαν , καὶ τὴν μὲν ἄλλην ὁμολογίᾳ κατεστήσαντο , Ἑστιαιᾶς δὲ ἐξοικίσαντες αὐτοὶ τὴν γῆν ἔσχον . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.1", length=25)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.1:1", lemma="ἀναχωρέω", form="ἀναχωρήσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26874681, posClass="P", pos="participle", ref="1.115.1-001", tbwid=1, value="ἀναχωρήσαντες", gender="masc", posAdd="aor1,ew_denom", case="nom", head=9, length=13, )
@@ -22721,8 +21503,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.1:25", ref="", lemma="", tbwid=25, form="", value="·", relation="AuxK", head=0, cid=26874705, pos="punct", length=1, )
 s.words(w)
-words = "ἀναχωρήσαντεςδὲἀπ'ΕὐβοίαςοὐπολλῷὕστερονσπονδὰςἐποιήσαντοπρὸςΛακεδαιμονίουςκαὶτοὺςξυμμάχουςτριακοντούτεις,ἀποδόντεςΝίσαιανκαὶΠηγὰςκαὶΤροιζῆνακαὶἈχαΐαν·"
-s['sentence'] = "ἀναχωρήσαντεςδὲἀπ'ΕὐβοίαςοὐπολλῷὕστερονσπονδὰςἐποιήσαντοπρὸςΛακεδαιμονίουςκαὶτοὺςξυμμάχουςτριακοντούτεις,ἀποδόντεςΝίσαιανκαὶΠηγὰςκαὶΤροιζῆνακαὶἈχαΐαν·"
+words = "ἀναχωρήσαντες δὲ ἀπ' Εὐβοίας οὐ πολλῷ ὕστερον σπονδὰς ἐποιήσαντο πρὸς Λακεδαιμονίους καὶ τοὺς ξυμμάχους τριακοντούτεις , ἀποδόντες Νίσαιαν καὶ Πηγὰς καὶ Τροιζῆνα καὶ Ἀχαΐαν · "
+s['sentence'] = "ἀναχωρήσαντες δὲ ἀπ' Εὐβοίας οὐ πολλῷ ὕστερον σπονδὰς ἐποιήσαντο πρὸς Λακεδαιμονίους καὶ τοὺς ξυμμάχους τριακοντούτεις , ἀποδόντες Νίσαιαν καὶ Πηγὰς καὶ Τροιζῆνα καὶ Ἀχαΐαν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.2", length=6)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.2:1", lemma="οὗτος", form="ταῦτα", isIndecl="indeclform", dialect="", relation="OBJ", number="pl", cid=26874706, posClass="N", pos="adj", ref="1.115.1-025", tbwid=1, degree="", value="ταῦτα", gender="neut", posAdd="pron_adj1", case="acc", head=3, length=5, )
@@ -22757,8 +21539,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.2:6", ref="", lemma="", tbwid=6, form="", value=".", relation="AuxK", head=0, cid=26874711, pos="punct", length=1, )
 s.words(w)
-words = "ταῦταγὰρεἶχονἈθηναῖοιΠελοποννησίων."
-s['sentence'] = "ταῦταγὰρεἶχονἈθηναῖοιΠελοποννησίων."
+words = "ταῦτα γὰρ εἶχον Ἀθηναῖοι Πελοποννησίων . "
+s['sentence'] = "ταῦτα γὰρ εἶχον Ἀθηναῖοι Πελοποννησίων . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.3", length=24)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.3:1", lemma="ἕκτος", form="ἕκτῳ", isIndecl="", dialect="", relation="ATR", number="sg", cid=26874712, posClass="N", pos="adj", ref="1.115.2-001", tbwid=1, degree="", value="ἕκτῳ", gender="neut", posAdd="os_h_on", case="dat", head=3, length=4, )
@@ -22897,8 +21679,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.3:24", ref="", lemma="", tbwid=24, form="", value=".", relation="AuxK", head=0, cid=26874735, pos="punct", length=1, )
 s.words(w)
-words = "ἕκτῳδὲἔτειΣαμίοιςκαὶΜιλησίοιςπόλεμοςἐγένετοπερὶΠριήνης,καὶοἱΜιλήσιοιἐλασσούμενοιτῷπολέμῳπαρ'ἈθηναίουςἐλθόντεςκατεβόωντῶνΣαμίων."
-s['sentence'] = "ἕκτῳδὲἔτειΣαμίοιςκαὶΜιλησίοιςπόλεμοςἐγένετοπερὶΠριήνης,καὶοἱΜιλήσιοιἐλασσούμενοιτῷπολέμῳπαρ'ἈθηναίουςἐλθόντεςκατεβόωντῶνΣαμίων."
+words = "ἕκτῳ δὲ ἔτει Σαμίοις καὶ Μιλησίοις πόλεμος ἐγένετο περὶ Πριήνης , καὶ οἱ Μιλήσιοι ἐλασσούμενοι τῷ πολέμῳ παρ' Ἀθηναίους ἐλθόντες κατεβόων τῶν Σαμίων . "
+s['sentence'] = "ἕκτῳ δὲ ἔτει Σαμίοις καὶ Μιλησίοις πόλεμος ἐγένετο περὶ Πριήνης , καὶ οἱ Μιλήσιοι ἐλασσούμενοι τῷ πολέμῳ παρ' Ἀθηναίους ἐλθόντες κατεβόων τῶν Σαμίων . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.4", length=14)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.4:1", lemma="συνεπιλαμβάνομαι", person="3rd", isIndecl="sig_to_ci", voice="mid", form="ξυνεπελάβοντο", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26874736, posClass="V", pos="verb", ref="1.115.2-024", tbwid=1, value="ξυνεπελάβοντο", posAdd="aor2,anw", head=2, length=13, )
@@ -22981,8 +21763,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.4:14", ref="", lemma="", tbwid=14, form="", value=".", relation="AuxK", head=0, cid=26874749, pos="punct", length=1, )
 s.words(w)
-words = "ξυνεπελάβοντοδὲκαὶἐξαὐτῆςτῆςΣάμουἄνδρεςἰδιῶταινεωτερίσαιβουλόμενοιτὴνπολιτείαν."
-s['sentence'] = "ξυνεπελάβοντοδὲκαὶἐξαὐτῆςτῆςΣάμουἄνδρεςἰδιῶταινεωτερίσαιβουλόμενοιτὴνπολιτείαν."
+words = "ξυνεπελάβοντο δὲ καὶ ἐξ αὐτῆς τῆς Σάμου ἄνδρες ἰδιῶται νεωτερίσαι βουλόμενοι τὴν πολιτείαν . "
+s['sentence'] = "ξυνεπελάβοντο δὲ καὶ ἐξ αὐτῆς τῆς Σάμου ἄνδρες ἰδιῶται νεωτερίσαι βουλόμενοι τὴν πολιτείαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.5", length=33)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.5:1", lemma="πλέω", form="πλεύσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26874750, posClass="P", pos="participle", ref="1.115.3-001", tbwid=1, value="πλεύσαντες", gender="masc", posAdd="aor1,ev_stem", case="nom", head=29, length=10, )
@@ -23163,8 +21945,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.5:33", ref="", lemma="", tbwid=33, form="", value=".", relation="AuxK", head=0, cid=26874782, pos="punct", length=1, )
 s.words(w)
-words = "πλεύσαντεςοὖνἈθηναῖοιἐςΣάμονναυσὶτεσσαράκονταδημοκρατίανκατέστησαν,καὶὁμήρουςἔλαβοντῶνΣαμίωνπεντήκονταμὲνπαῖδας,ἴσουςδὲἄνδρας,καὶκατέθεντοἐςΛῆμνον,καὶφρουρὰνἐγκαταλιπόντεςἀνεχώρησαν."
-s['sentence'] = "πλεύσαντεςοὖνἈθηναῖοιἐςΣάμονναυσὶτεσσαράκονταδημοκρατίανκατέστησαν,καὶὁμήρουςἔλαβοντῶνΣαμίωνπεντήκονταμὲνπαῖδας,ἴσουςδὲἄνδρας,καὶκατέθεντοἐςΛῆμνον,καὶφρουρὰνἐγκαταλιπόντεςἀνεχώρησαν."
+words = "πλεύσαντες οὖν Ἀθηναῖοι ἐς Σάμον ναυσὶ τεσσαράκοντα δημοκρατίαν κατέστησαν , καὶ ὁμήρους ἔλαβον τῶν Σαμίων πεντήκοντα μὲν παῖδας , ἴσους δὲ ἄνδρας , καὶ κατέθεντο ἐς Λῆμνον , καὶ φρουρὰν ἐγκαταλιπόντες ἀνεχώρησαν . "
+s['sentence'] = "πλεύσαντες οὖν Ἀθηναῖοι ἐς Σάμον ναυσὶ τεσσαράκοντα δημοκρατίαν κατέστησαν , καὶ ὁμήρους ἔλαβον τῶν Σαμίων πεντήκοντα μὲν παῖδας , ἴσους δὲ ἄνδρας , καὶ κατέθεντο ἐς Λῆμνον , καὶ φρουρὰν ἐγκαταλιπόντες ἀνεχώρησαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.6", length=89)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.6:1", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26874783, posClass="N", pos="article", ref="1.115.4-001", tbwid=1, value="τῶν", gender="masc", case="gen", head=3, length=3, )
@@ -23661,8 +22443,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.6:89", ref="", lemma="", tbwid=89, form="", value=".", relation="AuxK", head=0, cid=26874871, pos="punct", length=1, )
 s.words(w)
-words = "τῶνδὲΣαμίωνἦσανγάρτινεςοἳοὐχὑπέμειναν,ἀλλ'ἔφυγονἐςτὴνἤπειρον,ξυνθέμενοιτῶνἐντῇπόλειτοῖςδυνατωτάτοιςκαὶΠισσούθνῃτῷὙστάσπουξυμμαχίαν,ὃςεἶχεΣάρδειςτότε,ἐπικούρουςτεξυλλέξαντεςἐςἑπτακοσίουςδιέβησανὑπὸνύκταἐςτὴνΣάμον,καὶπρῶτονμὲντῷδήμῳἐπανέστησανκαὶἐκράτησαντῶνπλείστων,ἔπειτατοὺςὁμήρουςἐκκλέψαντεςἐκΛήμνουτοὺςαὑτῶνἀπέστησαν,καὶτοὺςφρουροὺςτοὺςἈθηναίωνκαὶτοὺςἄρχονταςοἳἦσανπαρὰσφίσινἐξέδοσανΠισσούθνῃ,ἐπίτεΜίλητονεὐθὺςπαρεσκευάζοντοστρατεύειν."
-s['sentence'] = "τῶνδὲΣαμίωνἦσανγάρτινεςοἳοὐχὑπέμειναν,ἀλλ'ἔφυγονἐςτὴνἤπειρον,ξυνθέμενοιτῶνἐντῇπόλειτοῖςδυνατωτάτοιςκαὶΠισσούθνῃτῷὙστάσπουξυμμαχίαν,ὃςεἶχεΣάρδειςτότε,ἐπικούρουςτεξυλλέξαντεςἐςἑπτακοσίουςδιέβησανὑπὸνύκταἐςτὴνΣάμον,καὶπρῶτονμὲντῷδήμῳἐπανέστησανκαὶἐκράτησαντῶνπλείστων,ἔπειτατοὺςὁμήρουςἐκκλέψαντεςἐκΛήμνουτοὺςαὑτῶνἀπέστησαν,καὶτοὺςφρουροὺςτοὺςἈθηναίωνκαὶτοὺςἄρχονταςοἳἦσανπαρὰσφίσινἐξέδοσανΠισσούθνῃ,ἐπίτεΜίλητονεὐθὺςπαρεσκευάζοντοστρατεύειν."
+words = "τῶν δὲ Σαμίων ἦσαν γάρ τινες οἳ οὐχ ὑπέμειναν , ἀλλ' ἔφυγον ἐς τὴν ἤπειρον , ξυνθέμενοι τῶν ἐν τῇ πόλει τοῖς δυνατωτάτοις καὶ Πισσούθνῃ τῷ Ὑστάσπου ξυμμαχίαν , ὃς εἶχε Σάρδεις τότε , ἐπικούρους τε ξυλλέξαντες ἐς ἑπτακοσίους διέβησαν ὑπὸ νύκτα ἐς τὴν Σάμον , καὶ πρῶτον μὲν τῷ δήμῳ ἐπανέστησαν καὶ ἐκράτησαν τῶν πλείστων , ἔπειτα τοὺς ὁμήρους ἐκκλέψαντες ἐκ Λήμνου τοὺς αὑτῶν ἀπέστησαν , καὶ τοὺς φρουροὺς τοὺς Ἀθηναίων καὶ τοὺς ἄρχοντας οἳ ἦσαν παρὰ σφίσιν ἐξέδοσαν Πισσούθνῃ , ἐπί τε Μίλητον εὐθὺς παρεσκευάζοντο στρατεύειν . "
+s['sentence'] = "τῶν δὲ Σαμίων ἦσαν γάρ τινες οἳ οὐχ ὑπέμειναν , ἀλλ' ἔφυγον ἐς τὴν ἤπειρον , ξυνθέμενοι τῶν ἐν τῇ πόλει τοῖς δυνατωτάτοις καὶ Πισσούθνῃ τῷ Ὑστάσπου ξυμμαχίαν , ὃς εἶχε Σάρδεις τότε , ἐπικούρους τε ξυλλέξαντες ἐς ἑπτακοσίους διέβησαν ὑπὸ νύκτα ἐς τὴν Σάμον , καὶ πρῶτον μὲν τῷ δήμῳ ἐπανέστησαν καὶ ἐκράτησαν τῶν πλείστων , ἔπειτα τοὺς ὁμήρους ἐκκλέψαντες ἐκ Λήμνου τοὺς αὑτῶν ἀπέστησαν , καὶ τοὺς φρουροὺς τοὺς Ἀθηναίων καὶ τοὺς ἄρχοντας οἳ ἦσαν παρὰ σφίσιν ἐξέδοσαν Πισσούθνῃ , ἐπί τε Μίλητον εὐθὺς παρεσκευάζοντο στρατεύειν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.7", length=6)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.7:1", lemma="συναφίστημι", person="3rd", isIndecl="causal sig_to_ci", voice="act", form="ξυναπέστησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26874872, posClass="V", pos="verb", ref="1.115.5-043", tbwid=1, value="ξυναπέστησαν", posAdd="aor1,a_stem", head=2, length=12, )
@@ -23697,8 +22479,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.115.7:6", ref="", lemma="", tbwid=6, form="", value=".", relation="AuxK", head=0, cid=26874877, pos="punct", length=1, )
 s.words(w)
-words = "ξυναπέστησανδ'αὐτοῖςκαὶΒυζάντιοι."
-s['sentence'] = "ξυναπέστησανδ'αὐτοῖςκαὶΒυζάντιοι."
+words = "ξυναπέστησαν δ' αὐτοῖς καὶ Βυζάντιοι . "
+s['sentence'] = "ξυναπέστησαν δ' αὐτοῖς καὶ Βυζάντιοι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.1", length=78)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.1:1", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26874878, posClass="N", pos="adj", ref="1.116.1-001", tbwid=1, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=43, length=8, )
@@ -24125,8 +22907,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.1:78", ref="", lemma="", tbwid=78, form="", value=".", relation="AuxK", head=0, cid=26874955, pos="punct", length=1, )
 s.words(w)
-words = "Ἀθηναῖοιδὲὡςᾔσθοντο,πλεύσαντεςναυσὶνἑξήκονταἐπὶΣάμουταῖςμὲνἑκκαίδεκατῶννεῶνοὐκἐχρήσαντοἔτυχονγὰραἱμὲνἐπὶΚαρίαςἐςπροσκοπὴντῶνΦοινισσῶννεῶνοἰχόμεναι,αἱδὲἐπὶΧίουκαὶΛέσβουπεριαγγέλλουσαιβοηθεῖν,τεσσαράκονταδὲναυσὶκαὶτέσσαρσιΠερικλέουςδεκάτουαὐτοῦστρατηγοῦντοςἐναυμάχησανπρὸςΤραγίᾳτῇνήσῳΣαμίωνναυσὶνἑβδομήκοντα,ὧνἦσαναἱεἴκοσιστρατιώτιδεςἔτυχονδὲαἱπᾶσαιἀπὸΜιλήτουπλέουσαι,καὶἐνίκωνἈθηναῖοι."
-s['sentence'] = "Ἀθηναῖοιδὲὡςᾔσθοντο,πλεύσαντεςναυσὶνἑξήκονταἐπὶΣάμουταῖςμὲνἑκκαίδεκατῶννεῶνοὐκἐχρήσαντοἔτυχονγὰραἱμὲνἐπὶΚαρίαςἐςπροσκοπὴντῶνΦοινισσῶννεῶνοἰχόμεναι,αἱδὲἐπὶΧίουκαὶΛέσβουπεριαγγέλλουσαιβοηθεῖν,τεσσαράκονταδὲναυσὶκαὶτέσσαρσιΠερικλέουςδεκάτουαὐτοῦστρατηγοῦντοςἐναυμάχησανπρὸςΤραγίᾳτῇνήσῳΣαμίωνναυσὶνἑβδομήκοντα,ὧνἦσαναἱεἴκοσιστρατιώτιδεςἔτυχονδὲαἱπᾶσαιἀπὸΜιλήτουπλέουσαι,καὶἐνίκωνἈθηναῖοι."
+words = "Ἀθηναῖοι δὲ ὡς ᾔσθοντο , πλεύσαντες ναυσὶν ἑξήκοντα ἐπὶ Σάμου ταῖς μὲν ἑκκαίδεκα τῶν νεῶν οὐκ ἐχρήσαντο  ἔτυχον γὰρ αἱ μὲν ἐπὶ Καρίας ἐς προσκοπὴν τῶν Φοινισσῶν νεῶν οἰχόμεναι , αἱ δὲ ἐπὶ Χίου καὶ Λέσβου περιαγγέλλουσαι βοηθεῖν  , τεσσαράκοντα δὲ ναυσὶ καὶ τέσσαρσι Περικλέους δεκάτου αὐτοῦ στρατηγοῦντος ἐναυμάχησαν πρὸς Τραγίᾳ τῇ νήσῳ Σαμίων ναυσὶν ἑβδομήκοντα , ὧν ἦσαν αἱ εἴκοσι στρατιώτιδες  ἔτυχον δὲ αἱ πᾶσαι ἀπὸ Μιλήτου πλέουσαι  , καὶ ἐνίκων Ἀθηναῖοι . "
+s['sentence'] = "Ἀθηναῖοι δὲ ὡς ᾔσθοντο , πλεύσαντες ναυσὶν ἑξήκοντα ἐπὶ Σάμου ταῖς μὲν ἑκκαίδεκα τῶν νεῶν οὐκ ἐχρήσαντο  ἔτυχον γὰρ αἱ μὲν ἐπὶ Καρίας ἐς προσκοπὴν τῶν Φοινισσῶν νεῶν οἰχόμεναι , αἱ δὲ ἐπὶ Χίου καὶ Λέσβου περιαγγέλλουσαι βοηθεῖν  , τεσσαράκοντα δὲ ναυσὶ καὶ τέσσαρσι Περικλέους δεκάτου αὐτοῦ στρατηγοῦντος ἐναυμάχησαν πρὸς Τραγίᾳ τῇ νήσῳ Σαμίων ναυσὶν ἑβδομήκοντα , ὧν ἦσαν αἱ εἴκοσι στρατιώτιδες  ἔτυχον δὲ αἱ πᾶσαι ἀπὸ Μιλήτου πλέουσαι  , καὶ ἐνίκων Ἀθηναῖοι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.2", length=33)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.2:1", lemma="ὕστερος", form="ὕστερον", isIndecl="irreg_comp", dialect="", relation="ADV", number="sg", cid=26874956, posClass="N", pos="adj", ref="1.116.2-001", tbwid=1, degree="", value="ὕστερον", gender="neut", posAdd="os_h_on", case="acc", head=18, length=7, )
@@ -24319,8 +23101,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.2:33", ref="", lemma="", tbwid=33, form="", value=".", relation="AuxK", head=0, cid=26874988, pos="punct", length=1, )
 s.words(w)
-words = "ὕστερονδὲαὐτοῖςἐβοήθησανἐκτῶνἈθηνῶννῆεςτεσσαράκοντακαὶΧίωνκαὶΛεσβίωνπέντεκαὶεἴκοσι,καὶἀποβάντεςκαὶκρατοῦντεςτῷπεζῷἐπολιόρκουντρισὶτείχεσιτὴνπόλινκαὶἐκθαλάσσηςἅμα."
-s['sentence'] = "ὕστερονδὲαὐτοῖςἐβοήθησανἐκτῶνἈθηνῶννῆεςτεσσαράκοντακαὶΧίωνκαὶΛεσβίωνπέντεκαὶεἴκοσι,καὶἀποβάντεςκαὶκρατοῦντεςτῷπεζῷἐπολιόρκουντρισὶτείχεσιτὴνπόλινκαὶἐκθαλάσσηςἅμα."
+words = "ὕστερον δὲ αὐτοῖς ἐβοήθησαν ἐκ τῶν Ἀθηνῶν νῆες τεσσαράκοντα καὶ Χίων καὶ Λεσβίων πέντε καὶ εἴκοσι , καὶ ἀποβάντες καὶ κρατοῦντες τῷ πεζῷ ἐπολιόρκουν τρισὶ τείχεσι τὴν πόλιν καὶ ἐκ θαλάσσης ἅμα . "
+s['sentence'] = "ὕστερον δὲ αὐτοῖς ἐβοήθησαν ἐκ τῶν Ἀθηνῶν νῆες τεσσαράκοντα καὶ Χίων καὶ Λεσβίων πέντε καὶ εἴκοσι , καὶ ἀποβάντες καὶ κρατοῦντες τῷ πεζῷ ἐπολιόρκουν τρισὶ τείχεσι τὴν πόλιν καὶ ἐκ θαλάσσης ἅμα . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.3", length=24)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.3:1", lemma="Περικλῆς", form="Περικλῆς", isIndecl="contr", dialect="", relation="SBJ", number="sg", cid=26874989, posClass="N", pos="noun", ref="1.116.3-001", tbwid=1, value="Περικλῆς", gender="masc", posAdd="klehs_kleous", case="nom", head=9, length=8, )
@@ -24459,8 +23241,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.3:24", ref="", lemma="", tbwid=24, form="", value="·", relation="AuxK", head=0, cid=26875012, pos="punct", length=1, )
 s.words(w)
-words = "ΠερικλῆςδὲλαβὼνἑξήκονταναῦςἀπὸτῶνἐφορμουσῶνᾤχετοκατὰτάχοςἐπὶΚαύνουκαὶΚαρίας,ἐσαγγελθέντωνὅτιΦοίνισσαινῆεςἐπ'αὐτοὺςπλέουσιν·"
-s['sentence'] = "ΠερικλῆςδὲλαβὼνἑξήκονταναῦςἀπὸτῶνἐφορμουσῶνᾤχετοκατὰτάχοςἐπὶΚαύνουκαὶΚαρίας,ἐσαγγελθέντωνὅτιΦοίνισσαινῆεςἐπ'αὐτοὺςπλέουσιν·"
+words = "Περικλῆς δὲ λαβὼν ἑξήκοντα ναῦς ἀπὸ τῶν ἐφορμουσῶν ᾤχετο κατὰ τάχος ἐπὶ Καύνου καὶ Καρίας , ἐσαγγελθέντων ὅτι Φοίνισσαι νῆες ἐπ' αὐτοὺς πλέουσιν · "
+s['sentence'] = "Περικλῆς δὲ λαβὼν ἑξήκοντα ναῦς ἀπὸ τῶν ἐφορμουσῶν ᾤχετο κατὰ τάχος ἐπὶ Καύνου καὶ Καρίας , ἐσαγγελθέντων ὅτι Φοίνισσαι νῆες ἐπ' αὐτοὺς πλέουσιν · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.4", length=15)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.4:1", lemma="οἴχομαι", person="3rd", isIndecl="", voice="mp", form="ᾤχετο", dialect="", tense="imperf", relation="PRED", mood="ind", number="sg", cid=26875013, posClass="V", pos="verb", ref="1.116.3-024", tbwid=1, value="ᾤχετο", posAdd="w_stem", head=0, length=5, )
@@ -24549,8 +23331,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.116.4:15", ref="", lemma="", tbwid=15, form="", value=".", relation="AuxK", head=0, cid=26875027, pos="punct", length=1, )
 s.words(w)
-words = "ᾤχετογὰρκαὶἐκτῆςΣάμουπέντεναυσὶΣτησαγόραςκαὶἄλλοιἐπὶτὰςΦοινίσσας."
-s['sentence'] = "ᾤχετογὰρκαὶἐκτῆςΣάμουπέντεναυσὶΣτησαγόραςκαὶἄλλοιἐπὶτὰςΦοινίσσας."
+words = "ᾤχετο γὰρ καὶ ἐκ τῆς Σάμου πέντε ναυσὶ Στησαγόρας καὶ ἄλλοι ἐπὶ τὰς Φοινίσσας . "
+s['sentence'] = "ᾤχετο γὰρ καὶ ἐκ τῆς Σάμου πέντε ναυσὶ Στησαγόρας καὶ ἄλλοι ἐπὶ τὰς Φοινίσσας . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.1", length=43)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.1:1", ref="1.117.1-001", lemma="ἐν", tbwid=1, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=8, cid=26875028, posClass="N", pos="prep", length=2, )
@@ -24795,8 +23577,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.1:43", ref="", lemma="", tbwid=43, form="", value=".", relation="AuxK", head=0, cid=26875070, pos="punct", length=1, )
 s.words(w)
-words = "ἐντούτῳδὲοἱΣάμιοιἐξαπιναίωςἔκπλουνποιησάμενοιἀφάρκτῳτῷστρατοπέδῳἐπιπεσόντεςτάςτεπροφυλακίδαςναῦςδιέφθειρανκαὶναυμαχοῦντεςτὰςἀνταναγομέναςἐνίκησαν,καὶτῆςθαλάσσηςτῆςκαθ'ἑαυτοὺςἐκράτησανἡμέραςπερὶτέσσαραςκαὶδέκα,καὶἐσεκομίσαντοκαὶἐξεκομίσαντοἃἐβούλοντο."
-s['sentence'] = "ἐντούτῳδὲοἱΣάμιοιἐξαπιναίωςἔκπλουνποιησάμενοιἀφάρκτῳτῷστρατοπέδῳἐπιπεσόντεςτάςτεπροφυλακίδαςναῦςδιέφθειρανκαὶναυμαχοῦντεςτὰςἀνταναγομέναςἐνίκησαν,καὶτῆςθαλάσσηςτῆςκαθ'ἑαυτοὺςἐκράτησανἡμέραςπερὶτέσσαραςκαὶδέκα,καὶἐσεκομίσαντοκαὶἐξεκομίσαντοἃἐβούλοντο."
+words = "ἐν τούτῳ δὲ οἱ Σάμιοι ἐξαπιναίως ἔκπλουν ποιησάμενοι ἀφάρκτῳ τῷ στρατοπέδῳ ἐπιπεσόντες τάς τε προφυλακίδας ναῦς διέφθειραν καὶ ναυμαχοῦντες τὰς ἀνταναγομένας ἐνίκησαν , καὶ τῆς θαλάσσης τῆς καθ' ἑαυτοὺς ἐκράτησαν ἡμέρας περὶ τέσσαρας καὶ δέκα , καὶ ἐσεκομίσαντο καὶ ἐξεκομίσαντο ἃ ἐβούλοντο . "
+s['sentence'] = "ἐν τούτῳ δὲ οἱ Σάμιοι ἐξαπιναίως ἔκπλουν ποιησάμενοι ἀφάρκτῳ τῷ στρατοπέδῳ ἐπιπεσόντες τάς τε προφυλακίδας ναῦς διέφθειραν καὶ ναυμαχοῦντες τὰς ἀνταναγομένας ἐνίκησαν , καὶ τῆς θαλάσσης τῆς καθ' ἑαυτοὺς ἐκράτησαν ἡμέρας περὶ τέσσαρας καὶ δέκα , καὶ ἐσεκομίσαντο καὶ ἐξεκομίσαντο ἃ ἐβούλοντο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.2", length=8)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.2:1", lemma="ἔρχομαι", form="ἐλθόντος", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="sg", cid=26875071, posClass="P", pos="participle", ref="1.117.2-001", tbwid=1, value="ἐλθόντος", gender="masc", posAdd="aor2", case="gen", head=7, length=8, )
@@ -24843,8 +23625,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.2:8", ref="", lemma="", tbwid=8, form="", value=".", relation="AuxK", head=0, cid=26875078, pos="punct", length=1, )
 s.words(w)
-words = "ἐλθόντοςδὲΠερικλέουςπάλινταῖςναυσὶκατεκλῄσθησαν."
-s['sentence'] = "ἐλθόντοςδὲΠερικλέουςπάλινταῖςναυσὶκατεκλῄσθησαν."
+words = "ἐλθόντος δὲ Περικλέους πάλιν ταῖς ναυσὶ κατεκλῄσθησαν . "
+s['sentence'] = "ἐλθόντος δὲ Περικλέους πάλιν ταῖς ναυσὶ κατεκλῄσθησαν . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.3", length=32)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.3:1", ref="1.117.2-008", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26875079, posClass="N", pos="conj", length=3, )
@@ -25027,8 +23809,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.3:32", ref="", lemma="", tbwid=32, form="", value=".", relation="AuxK", head=0, cid=26875110, pos="punct", length=1, )
 s.words(w)
-words = "καὶἐκτῶνἈθηνῶνὕστερονπροσεβοήθησαντεσσαράκονταμὲναἱμετὰΘουκυδίδουκαὶἍγνωνοςκαὶΦορμίωνοςνῆες,εἴκοσιδὲαἱμετὰΤληπολέμουκαὶἈντικλέους,ἐκδὲΧίουκαὶΛέσβουτριάκοντα."
-s['sentence'] = "καὶἐκτῶνἈθηνῶνὕστερονπροσεβοήθησαντεσσαράκονταμὲναἱμετὰΘουκυδίδουκαὶἍγνωνοςκαὶΦορμίωνοςνῆες,εἴκοσιδὲαἱμετὰΤληπολέμουκαὶἈντικλέους,ἐκδὲΧίουκαὶΛέσβουτριάκοντα."
+words = "καὶ ἐκ τῶν Ἀθηνῶν ὕστερον προσεβοήθησαν τεσσαράκοντα μὲν αἱ μετὰ Θουκυδίδου καὶ Ἅγνωνος καὶ Φορμίωνος νῆες , εἴκοσι δὲ αἱ μετὰ Τληπολέμου καὶ Ἀντικλέους , ἐκ δὲ Χίου καὶ Λέσβου τριάκοντα . "
+s['sentence'] = "καὶ ἐκ τῶν Ἀθηνῶν ὕστερον προσεβοήθησαν τεσσαράκοντα μὲν αἱ μετὰ Θουκυδίδου καὶ Ἅγνωνος καὶ Φορμίωνος νῆες , εἴκοσι δὲ αἱ μετὰ Τληπολέμου καὶ Ἀντικλέους , ἐκ δὲ Χίου καὶ Λέσβου τριάκοντα . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.4", length=38)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.4:1", ref="1.117.3-001", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26875111, posClass="N", pos="conj", length=3, )
@@ -25243,8 +24025,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.4:38", ref="", lemma="", tbwid=38, form="", value=".", relation="AuxK", head=0, cid=26875148, pos="punct", length=1, )
 s.words(w)
-words = "καὶναυμαχίανμέντιναβραχεῖανἐποιήσαντοοἱΣάμιοι,ἀδύνατοιδὲὄντεςἀντίσχεινἐξεπολιορκήθησανἐνάτῳμηνὶκαὶπροσεχώρησανὁμολογίᾳ,τεῖχόςτεκαθελόντεςκαὶὁμήρουςδόντεςκαὶναῦςπαραδόντεςκαὶχρήματατὰἀναλωθένταταξάμενοικατὰχρόνουςἀποδοῦναι."
-s['sentence'] = "καὶναυμαχίανμέντιναβραχεῖανἐποιήσαντοοἱΣάμιοι,ἀδύνατοιδὲὄντεςἀντίσχεινἐξεπολιορκήθησανἐνάτῳμηνὶκαὶπροσεχώρησανὁμολογίᾳ,τεῖχόςτεκαθελόντεςκαὶὁμήρουςδόντεςκαὶναῦςπαραδόντεςκαὶχρήματατὰἀναλωθένταταξάμενοικατὰχρόνουςἀποδοῦναι."
+words = "καὶ ναυμαχίαν μέν τινα βραχεῖαν ἐποιήσαντο οἱ Σάμιοι , ἀδύνατοι δὲ ὄντες ἀντίσχειν ἐξεπολιορκήθησαν ἐνάτῳ μηνὶ καὶ προσεχώρησαν ὁμολογίᾳ , τεῖχός τε καθελόντες καὶ ὁμήρους δόντες καὶ ναῦς παραδόντες καὶ χρήματα τὰ ἀναλωθέντα ταξάμενοι κατὰ χρόνους ἀποδοῦναι . "
+s['sentence'] = "καὶ ναυμαχίαν μέν τινα βραχεῖαν ἐποιήσαντο οἱ Σάμιοι , ἀδύνατοι δὲ ὄντες ἀντίσχειν ἐξεπολιορκήθησαν ἐνάτῳ μηνὶ καὶ προσεχώρησαν ὁμολογίᾳ , τεῖχός τε καθελόντες καὶ ὁμήρους δόντες καὶ ναῦς παραδόντες καὶ χρήματα τὰ ἀναλωθέντα ταξάμενοι κατὰ χρόνους ἀποδοῦναι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.5", length=10)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.5:1", lemma="συμβαίνω", person="3rd", isIndecl="causal sig_to_ci", voice="act", form="ξυνέβησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26875149, posClass="V", pos="verb", ref="1.117.3-038", tbwid=1, value="ξυνέβησαν", posAdd="aor1,a_stem", head=2, length=9, )
@@ -25303,8 +24085,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.117.5:10", ref="", lemma="", tbwid=10, form="", value=".", relation="AuxK", head=0, cid=26875158, pos="punct", length=1, )
 s.words(w)
-words = "ξυνέβησανδὲκαὶΒυζάντιοιὥσπερκαὶπρότερονὑπήκοοιεἶναι."
-s['sentence'] = "ξυνέβησανδὲκαὶΒυζάντιοιὥσπερκαὶπρότερονὑπήκοοιεἶναι."
+words = "ξυνέβησαν δὲ καὶ Βυζάντιοι ὥσπερ καὶ πρότερον ὑπήκοοι εἶναι . "
+s['sentence'] = "ξυνέβησαν δὲ καὶ Βυζάντιοι ὥσπερ καὶ πρότερον ὑπήκοοι εἶναι . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.1", length=26)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.1:1", ref="1.118.1-001", lemma="μετά", tbwid=1, isIndecl="indeclform", form="μετά", dialect="", value="μετὰ", relation="AuxP", head=5, cid=26875159, posClass="N", pos="prep", length=4, )
@@ -25455,8 +24237,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.1:26", ref="", lemma="", tbwid=26, form="", value=".", relation="AuxK", head=0, cid=26875184, pos="punct", length=1, )
 s.words(w)
-words = "μετὰταῦταδὲἤδηγίγνεταιοὐπολλοῖςἔτεσινὕστεροντὰπροειρημένα,τάτεΚερκυραϊκὰκαὶτὰΠοτειδεατικὰκαὶὅσαπρόφασιςτοῦδετοῦπολέμουκατέστη."
-s['sentence'] = "μετὰταῦταδὲἤδηγίγνεταιοὐπολλοῖςἔτεσινὕστεροντὰπροειρημένα,τάτεΚερκυραϊκὰκαὶτὰΠοτειδεατικὰκαὶὅσαπρόφασιςτοῦδετοῦπολέμουκατέστη."
+words = "μετὰ ταῦτα δὲ ἤδη γίγνεται οὐ πολλοῖς ἔτεσιν ὕστερον τὰ προειρημένα , τά τε Κερκυραϊκὰ καὶ τὰ Ποτειδεατικὰ καὶ ὅσα πρόφασις τοῦδε τοῦ πολέμου κατέστη . "
+s['sentence'] = "μετὰ ταῦτα δὲ ἤδη γίγνεται οὐ πολλοῖς ἔτεσιν ὕστερον τὰ προειρημένα , τά τε Κερκυραϊκὰ καὶ τὰ Ποτειδεατικὰ καὶ ὅσα πρόφασις τοῦδε τοῦ πολέμου κατέστη . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.2", length=30)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.2:1", lemma="οὗτος", form="ταῦτα", isIndecl="indeclform", dialect="", relation="SBJ", number="pl", cid=26875185, posClass="N", pos="adj", ref="1.118.2-001", tbwid=1, degree="", value="ταῦτα", gender="neut", posAdd="pron_adj1", case="nom", head=14, length=5, )
@@ -25635,8 +24417,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.2:30", ref="", lemma="", tbwid=30, form="", value="·", relation="AuxK", head=0, cid=26875214, pos="punct", length=1, )
 s.words(w)
-words = "ταῦταδὲξύμπανταὅσαἔπραξανοἱἝλληνεςπρόςτεἀλλήλουςκαὶτὸνβάρβαρονἐγένετοἐνἔτεσιπεντήκονταμάλισταμεταξὺτῆςτεΞέρξουἀναχωρήσεωςκαὶτῆςἀρχῆςτοῦδετοῦπολέμου·"
-s['sentence'] = "ταῦταδὲξύμπανταὅσαἔπραξανοἱἝλληνεςπρόςτεἀλλήλουςκαὶτὸνβάρβαρονἐγένετοἐνἔτεσιπεντήκονταμάλισταμεταξὺτῆςτεΞέρξουἀναχωρήσεωςκαὶτῆςἀρχῆςτοῦδετοῦπολέμου·"
+words = "ταῦτα δὲ ξύμπαντα ὅσα ἔπραξαν οἱ Ἕλληνες πρός τε ἀλλήλους καὶ τὸν βάρβαρον ἐγένετο ἐν ἔτεσι πεντήκοντα μάλιστα μεταξὺ τῆς τε Ξέρξου ἀναχωρήσεως καὶ τῆς ἀρχῆς τοῦδε τοῦ πολέμου · "
+s['sentence'] = "ταῦτα δὲ ξύμπαντα ὅσα ἔπραξαν οἱ Ἕλληνες πρός τε ἀλλήλους καὶ τὸν βάρβαρον ἐγένετο ἐν ἔτεσι πεντήκοντα μάλιστα μεταξὺ τῆς τε Ξέρξου ἀναχωρήσεως καὶ τῆς ἀρχῆς τοῦδε τοῦ πολέμου · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.3", length=73)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.3:1", ref="1.118.2-030", lemma="ἐν", tbwid=1, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=18, cid=26875215, posClass="N", pos="prep", length=2, )
@@ -26033,8 +24815,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.3:73", ref="", lemma="", tbwid=73, form="", value=".", relation="AuxK", head=0, cid=26875286, pos="punct", length=1, )
 s.words(w)
-words = "ἐνοἷςοἱἈθηναῖοιτήντεἀρχὴνἐγκρατεστέρανκατεστήσαντοκαὶαὐτοὶἐπὶμέγαἐχώρησανδυνάμεως,οἱδὲΛακεδαιμόνιοιαἰσθόμενοιοὔτεἐκώλυονεἰμὴἐπὶβραχύ,ἡσύχαζόντετὸπλέοντοῦχρόνου,ὄντεςμὲνκαὶπρὸτοῦμὴταχεῖςἰέναιἐςτοὺςπολέμους,ἢνμὴἀναγκάζωνται,τὸδέτικαὶπολέμοιςοἰκείοιςἐξειργόμενοι,πρὶνδὴἡδύναμιςτῶνἈθηναίωνσαφῶςᾔρετοκαὶτῆςξυμμαχίαςαὐτῶνἥπτοντο."
-s['sentence'] = "ἐνοἷςοἱἈθηναῖοιτήντεἀρχὴνἐγκρατεστέρανκατεστήσαντοκαὶαὐτοὶἐπὶμέγαἐχώρησανδυνάμεως,οἱδὲΛακεδαιμόνιοιαἰσθόμενοιοὔτεἐκώλυονεἰμὴἐπὶβραχύ,ἡσύχαζόντετὸπλέοντοῦχρόνου,ὄντεςμὲνκαὶπρὸτοῦμὴταχεῖςἰέναιἐςτοὺςπολέμους,ἢνμὴἀναγκάζωνται,τὸδέτικαὶπολέμοιςοἰκείοιςἐξειργόμενοι,πρὶνδὴἡδύναμιςτῶνἈθηναίωνσαφῶςᾔρετοκαὶτῆςξυμμαχίαςαὐτῶνἥπτοντο."
+words = "ἐν οἷς οἱ Ἀθηναῖοι τήν τε ἀρχὴν ἐγκρατεστέραν κατεστήσαντο καὶ αὐτοὶ ἐπὶ μέγα ἐχώρησαν δυνάμεως , οἱ δὲ Λακεδαιμόνιοι αἰσθόμενοι οὔ τε ἐκώλυον εἰ μὴ ἐπὶ βραχύ , ἡσύχαζόν τε τὸ πλέον τοῦ χρόνου , ὄντες μὲν καὶ πρὸ τοῦ μὴ ταχεῖς ἰέναι ἐς τοὺς πολέμους , ἢν μὴ ἀναγκάζωνται , τὸ δέ τι καὶ πολέμοις οἰκείοις ἐξειργόμενοι , πρὶν δὴ ἡ δύναμις τῶν Ἀθηναίων σαφῶς ᾔρετο καὶ τῆς ξυμμαχίας αὐτῶν ἥπτοντο . "
+s['sentence'] = "ἐν οἷς οἱ Ἀθηναῖοι τήν τε ἀρχὴν ἐγκρατεστέραν κατεστήσαντο καὶ αὐτοὶ ἐπὶ μέγα ἐχώρησαν δυνάμεως , οἱ δὲ Λακεδαιμόνιοι αἰσθόμενοι οὔ τε ἐκώλυον εἰ μὴ ἐπὶ βραχύ , ἡσύχαζόν τε τὸ πλέον τοῦ χρόνου , ὄντες μὲν καὶ πρὸ τοῦ μὴ ταχεῖς ἰέναι ἐς τοὺς πολέμους , ἢν μὴ ἀναγκάζωνται , τὸ δέ τι καὶ πολέμοις οἰκείοις ἐξειργόμενοι , πρὶν δὴ ἡ δύναμις τῶν Ἀθηναίων σαφῶς ᾔρετο καὶ τῆς ξυμμαχίας αὐτῶν ἥπτοντο . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.4", length=25)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.4:1", lemma="τότε", form="τότε", isIndecl="indeclform", dialect="", relation="ADV", cid=26875287, pos="adverb", posClass="N", tbwid=1, ref="1.118.2-101", degree="", value="τότε", head=7, length=4, )
@@ -26167,8 +24949,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.4:25", ref="", lemma="", tbwid=25, form="", value=".", relation="AuxK", head=0, cid=26875311, pos="punct", length=1, )
 s.words(w)
-words = "τότεδὲοὐκέτιἀνασχετὸνἐποιοῦντο,ἀλλ'ἐπιχειρητέαἐδόκειεἶναιπάσῃπροθυμίᾳκαὶκαθαιρετέαἡἰσχύς,ἢνδύνωνται,ἀραμένοιςτόνδετὸνπόλεμον."
-s['sentence'] = "τότεδὲοὐκέτιἀνασχετὸνἐποιοῦντο,ἀλλ'ἐπιχειρητέαἐδόκειεἶναιπάσῃπροθυμίᾳκαὶκαθαιρετέαἡἰσχύς,ἢνδύνωνται,ἀραμένοιςτόνδετὸνπόλεμον."
+words = "τότε δὲ οὐκέτι ἀνασχετὸν ἐποιοῦντο , ἀλλ' ἐπιχειρητέα ἐδόκει εἶναι πάσῃ προθυμίᾳ καὶ καθαιρετέα ἡ ἰσχύς , ἢν δύνωνται , ἀραμένοις τόνδε τὸν πόλεμον . "
+s['sentence'] = "τότε δὲ οὐκέτι ἀνασχετὸν ἐποιοῦντο , ἀλλ' ἐπιχειρητέα ἐδόκει εἶναι πάσῃ προθυμίᾳ καὶ καθαιρετέα ἡ ἰσχύς , ἢν δύνωνται , ἀραμένοις τόνδε τὸν πόλεμον . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.5", length=27)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.5:1", lemma="αὐτός", form="αὐτοῖς", isIndecl="", dialect="", relation="ATV", number="pl", cid=26875312, posClass="N", pos="adj", ref="1.118.3-001", tbwid=1, degree="", value="αὐτοῖς", gender="masc", posAdd="art_adj", case="dat", head=5, length=6, )
@@ -26321,8 +25103,8 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.5:27", ref="", lemma="", tbwid=27, form="", value="·", relation="AuxK", head=0, cid=26875338, pos="punct", length=1, )
 s.words(w)
-words = "αὐτοῖςμὲνοὖντοῖςΛακεδαιμονίοιςδιέγνωστολελύσθαιτετὰςσπονδὰςκαὶτοὺςἈθηναίουςἀδικεῖν,πέμψαντεςδὲἐςΔελφοὺςἐπηρώτωντὸνθεὸνεἰπολεμοῦσινἄμεινονἔσται·"
-s['sentence'] = "αὐτοῖςμὲνοὖντοῖςΛακεδαιμονίοιςδιέγνωστολελύσθαιτετὰςσπονδὰςκαὶτοὺςἈθηναίουςἀδικεῖν,πέμψαντεςδὲἐςΔελφοὺςἐπηρώτωντὸνθεὸνεἰπολεμοῦσινἄμεινονἔσται·"
+words = "αὐτοῖς μὲν οὖν τοῖς Λακεδαιμονίοις διέγνωστο λελύσθαι τε τὰς σπονδὰς καὶ τοὺς Ἀθηναίους ἀδικεῖν , πέμψαντες δὲ ἐς Δελφοὺς ἐπηρώτων τὸν θεὸν εἰ πολεμοῦσιν ἄμεινον ἔσται · "
+s['sentence'] = "αὐτοῖς μὲν οὖν τοῖς Λακεδαιμονίοις διέγνωστο λελύσθαι τε τὰς σπονδὰς καὶ τοὺς Ἀθηναίους ἀδικεῖν , πέμψαντες δὲ ἐς Δελφοὺς ἐπηρώτων τὸν θεὸν εἰ πολεμοῦσιν ἄμεινον ἔσται · "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.6", length=23)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.6:1", lemma="ὁ", form="ὁ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="sg", cid=26875339, posClass="N", pos="pron", ref="1.118.3-027", tbwid=1, value="ὁ", gender="masc", posAdd="article", case="nom", head=3, length=1, )
@@ -26443,8 +25225,1226 @@ lemma.values(w)
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.6:23", ref="", lemma="", tbwid=23, form="", value=".", relation="AuxK", head=0, cid=26875361, pos="punct", length=1, )
 s.words(w)
-words = "ὁδὲἀνεῖλεναὐτοῖς,ὡςλέγεται,κατὰκράτοςπολεμοῦσινίκηνἔσεσθαι,καὶαὐτὸςἔφηξυλλήψεσθαικαὶπαρακαλούμενοςκαὶἄκλητος."
-s['sentence'] = "ὁδὲἀνεῖλεναὐτοῖς,ὡςλέγεται,κατὰκράτοςπολεμοῦσινίκηνἔσεσθαι,καὶαὐτὸςἔφηξυλλήψεσθαικαὶπαρακαλούμενοςκαὶἄκλητος."
+words = "ὁ δὲ ἀνεῖλεν αὐτοῖς , ὡς λέγεται , κατὰ κράτος πολεμοῦσι νίκην ἔσεσθαι , καὶ αὐτὸς ἔφη ξυλλήψεσθαι καὶ παρακαλούμενος καὶ ἄκλητος . "
+s['sentence'] = "ὁ δὲ ἀνεῖλεν αὐτοῖς , ὡς λέγεται , κατὰ κράτος πολεμοῦσι νίκην ἔσεσθαι , καὶ αὐτὸς ἔφη ξυλλήψεσθαι καὶ παρακαλούμενος καὶ ἄκλητος . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10", length=32)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:1", lemma="βούλομαι", person="3rd", isIndecl="", voice="mp", form="ἐβούλετο", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871697, posClass="V", pos="verb", ref="1.093.6-001", tbwid=1, value="ἐβούλετο", posAdd="w_stem,nw", head=15, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βούλομαι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="βούλομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βούλομαι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:2", ref="1.093.6-002", lemma="γάρ", tbwid=2, isIndecl="indeclform", form="γάρ", dialect="", value="γὰρ", relation="AuxY", head=1, cid=26871698, posClass="N", pos="particle", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="γάρ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:3", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871699, posClass="N", pos="article", ref="1.093.6-003", tbwid=3, value="τῷ", gender="neut", case="dat", head=4, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:4", lemma="μέγεθος", form="μεγέθει", isIndecl="", dialect="", relation="ADV_CO", number="sg", cid=26871700, posClass="N", pos="noun", ref="1.093.6-004", tbwid=4, value="μεγέθει", gender="neut", posAdd="hs_eos", case="dat", head=5, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέγεθος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="μέγεθος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέγεθος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:5", ref="1.093.6-005", lemma="καί", tbwid=5, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=8, cid=26871701, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:6", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871702, posClass="N", pos="article", ref="1.093.6-006", tbwid=6, value="τῷ", gender="neut", case="dat", head=7, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:7", lemma="πάχος", form="πάχει", isIndecl="", dialect="", relation="ADV_CO", number="sg", cid=26871703, posClass="N", pos="noun", ref="1.093.6-007", tbwid=7, value="πάχει", gender="neut", posAdd="hs_eos", case="dat", head=5, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάχος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="πάχος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάχος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:8", lemma="ἀφίστημι", person="", isIndecl="causal pres_redupl", voice="act", form="ἀφιστάναι", dialect="", tense="pres", relation="OBJ", mood="inf", number="", cid=26871704, posClass="V", pos="verb", ref="1.093.6-008", tbwid=8, value="ἀφιστάναι", posAdd="ami_pr", head=1, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀφίστημι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἀφίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀφίστημι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:9", lemma="ὁ", form="τα_ς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871705, posClass="N", pos="article", ref="1.093.6-009", tbwid=9, value="τὰς", gender="fem", case="acc", head=12, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:10", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871706, posClass="N", pos="article", ref="1.093.6-010", tbwid=10, value="τῶν", gender="masc", case="gen", head=11, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:11", lemma="πολέμιος", form="πολεμίων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871707, posClass="N", pos="adj", ref="1.093.6-011", tbwid=11, degree="", value="πολεμίων", gender="masc", posAdd="os_on", case="gen", head=12, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολέμιος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="πολέμιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολέμιος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:12", lemma="ἐπιβουλή", form="ἐπιβουλα_ς", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871708, posClass="N", pos="noun", ref="1.093.6-012", tbwid=12, value="ἐπιβουλάς", gender="fem", posAdd="h_hs", case="acc", head=8, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιβουλή"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐπιβουλή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιβουλή" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:13", ref="", lemma="", tbwid=13, form="", value=",", relation="AuxX", head=15, cid=26871709, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:14", lemma="ἄνθρωπος", form="ἀνθρώπων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871710, posClass="N", pos="noun", ref="1.093.6-014", tbwid=14, value="ἀνθρώπων", gender="masc", posAdd="os_ou", case="gen", head=23, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνθρωπος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἄνθρωπος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνθρωπος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:15", ref="1.093.6-015", lemma="τε", tbwid=15, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="COORD", head=0, cid=26871711, posClass="N", pos="particle", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:16", lemma="νομίζω", person="3rd", isIndecl="nu_movable", voice="act", form="ἐνόμιζεν", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871712, posClass="V", pos="verb", ref="1.093.6-016", tbwid=16, value="ἐνόμιζεν", posAdd="w_stem,izw", head=15, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:17", lemma="ὀλίγος", form="ὀλίγων", isIndecl="", dialect="", relation="ATR_CO", number="pl", cid=26871713, posClass="N", pos="adj", ref="1.093.6-017", tbwid=17, degree="", value="ὀλίγων", gender="masc", posAdd="os_h_on", case="gen", head=18, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὀλίγος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὀλίγος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὀλίγος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:18", ref="1.093.6-018", lemma="καί", tbwid=18, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=14, cid=26871714, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:19", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871715, posClass="N", pos="article", ref="1.093.6-019", tbwid=19, value="τῶν", gender="masc", case="gen", head=20, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:20", lemma="ἀχρεῖος", form="ἀχρειοτάτων", isIndecl="", dialect="", relation="ATR_CO", number="pl", cid=26871716, posClass="N", pos="adj", ref="1.093.6-020", tbwid=20, degree="superl", value="ἀχρειοτάτων", gender="masc", posAdd="os_on", case="gen", head=18, length=11, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀχρεῖος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἀχρεῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀχρεῖος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:21", lemma="ἀρκέω", person="", isIndecl="contr", voice="act", form="ἀρκέσειν", dialect="attic epic", tense="fut", relation="OBJ_CO", mood="inf", number="", cid=26871717, posClass="V", pos="verb", ref="1.093.6-021", tbwid=21, value="ἀρκέσειν", posAdd="reg_fut,e_stem", head=26, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀρκέω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἀρκέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀρκέω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:22", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871718, posClass="N", pos="article", ref="1.093.6-022", tbwid=22, value="τὴν", gender="fem", case="acc", head=23, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:23", lemma="φυλακή", form="φυλακήν", isIndecl="", dialect="attic epic ionic", relation="OBJ", number="sg", cid=26871719, posClass="N", pos="noun", ref="1.093.6-023", tbwid=23, value="φυλακήν", gender="fem", posAdd="h_hs", case="acc", head=21, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φυλακή"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="φυλακή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φυλακή" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:24", ref="", lemma="", tbwid=24, form="", value=",", relation="AuxX", head=26, cid=26871720, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:25", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871721, posClass="N", pos="article", ref="1.093.6-025", tbwid=25, value="τοὺς", gender="masc", case="acc", head=27, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:26", ref="1.093.6-026", lemma="δέ", tbwid=26, isIndecl="indeclform", form="δέ", dialect="", value="δ'", relation="COORD", head=16, cid=26871722, posClass="N", pos="particle", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:27", lemma="ἄλλος", form="ἄλλους", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26871723, posClass="N", pos="adj", ref="1.093.6-027", tbwid=27, degree="", value="ἄλλους", gender="masc", posAdd="art_adj", case="acc", head=31, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:28", ref="1.093.6-028", lemma="εἰς", tbwid=28, isIndecl="proclitic indeclform", form="ἐς", dialect="", value="ἐς", relation="AuxP", head=31, cid=26871724, posClass="N", pos="prep", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="εἰς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:29", lemma="ὁ", form="τα_ς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871725, posClass="N", pos="article", ref="1.093.6-029", tbwid=29, value="τὰς", gender="fem", case="acc", head=30, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:30", lemma="ναῦς", form="ναῦς", isIndecl="indeclform", dialect="attic", relation="OBJ", number="pl", cid=26871726, posClass="N", pos="noun", ref="1.093.6-030", tbwid=30, value="ναῦς", gender="fem", posAdd="irreg_decl3", case="acc", head=28, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:31", lemma="εἰσβαίνω", person="", isIndecl="short_eis", voice="mid", form="ἐσβήσεσθαι", dialect="", tense="fut", relation="OBJ_CO", mood="inf", number="", cid=26871727, posClass="V", pos="verb", ref="1.093.6-031", tbwid=31, value="ἐσβήσεσθαι", posAdd="reg_fut,a_stem", head=26, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰσβαίνω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="εἰσβαίνω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰσβαίνω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:32", ref="", lemma="", tbwid=32, form="", value=".", relation="AuxK", head=0, cid=26871728, pos="punct", length=1, )
+s.words(w)
+words = "ἐβούλετο γὰρ τῷ μεγέθει καὶ τῷ πάχει ἀφιστάναι τὰς τῶν πολεμίων ἐπιβουλάς , ἀνθρώπων τε ἐνόμιζεν ὀλίγων καὶ τῶν ἀχρειοτάτων ἀρκέσειν τὴν φυλακήν , τοὺς δ' ἄλλους ἐς τὰς ναῦς ἐσβήσεσθαι . "
+s['sentence'] = "ἐβούλετο γὰρ τῷ μεγέθει καὶ τῷ πάχει ἀφιστάναι τὰς τῶν πολεμίων ἐπιβουλάς , ἀνθρώπων τε ἐνόμιζεν ὀλίγων καὶ τῶν ἀχρειοτάτων ἀρκέσειν τὴν φυλακήν , τοὺς δ' ἄλλους ἐς τὰς ναῦς ἐσβήσεσθαι . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11", length=25)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:1", lemma="ὁ", form="ταῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871729, posClass="N", pos="article", ref="1.093.7-001", tbwid=1, value="ταῖς", gender="fem", case="dat", head=3, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:2", ref="1.093.7-002", lemma="γάρ", tbwid=2, isIndecl="indeclform", form="γάρ", dialect="", value="γὰρ", relation="AuxY", head=5, cid=26871730, posClass="N", pos="particle", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="γάρ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:3", lemma="ναῦς", form="ναυσί", isIndecl="indeclform", dialect="attic doric", relation="OBJ", number="pl", cid=26871731, posClass="N", pos="noun", ref="1.093.7-003", tbwid=3, value="ναυσὶ", gender="fem", posAdd="irreg_decl3", case="dat", head=5, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:4", lemma="μάλιστα", form="μάλιστα", isIndecl="indeclform", dialect="", relation="ADV", cid=26871732, pos="adverb", posClass="N", tbwid=4, ref="1.093.7-004", degree="superl", value="μάλιστα", head=5, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μάλιστα"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="μάλιστα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μάλιστα" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:5", lemma="πρόσκειμαι", person="3rd", isIndecl="", voice="mp", form="προσέκειτο", dialect="", tense="imperf", relation="PRED", mood="ind", number="sg", cid=26871733, posClass="V", pos="verb", ref="1.093.7-005", tbwid=5, value="προσέκειτο", posAdd="ath_primary", head=0, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρόσκειμαι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="πρόσκειμαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρόσκειμαι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:6", ref="", lemma="", tbwid=6, form="", value=",", relation="AuxX", head=7, cid=26871734, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:7", lemma="εἶδον", form="ἰδών", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="sg", cid=26871735, posClass="P", pos="participle", ref="1.093.7-007", tbwid=7, value="ἰδών", gender="masc", posAdd="aor2", case="nom", head=5, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἶδον"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="εἶδον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἶδον" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:8", ref="", lemma="", tbwid=8, form="", value=",", relation="AuxX", head=9, cid=26871736, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:9", ref="1.093.7-009", lemma="", tbwid=9, degree="", form="", value="ὡς", relation="AuxC", head=7, cid=26871737, pos="adverb", length=2, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:10", lemma="ἐγώ", person="1st", form="ἐμοί", isIndecl="indeclform", dialect="", relation="OBJ", number="sg", cid=26871738, posClass="N", pos="pron", ref="1.093.7-010", tbwid=10, value="ἐμοὶ", gender="masc", posAdd="pron1", case="dat", head=11, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐγώ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐγώ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐγώ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:11", lemma="δοκέω", person="3rd", isIndecl="contr", voice="act", form="δοκεῖ", dialect="attic epic doric ionic", tense="pres", relation="ADV", mood="ind", number="sg", cid=26871739, posClass="V", pos="verb", ref="1.093.7-011", tbwid=11, value="δοκεῖ", posAdd="ew_pr,ew_denom", head=9, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δοκέω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="δοκέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δοκέω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:12", ref="", lemma="", tbwid=12, form="", value=",", relation="AuxX", head=9, cid=26871740, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:13", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871741, posClass="N", pos="article", ref="1.093.7-013", tbwid=13, value="τῆς", gender="fem", case="gen", head=15, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:14", lemma="βασιλεύς", form="βασιλέω^ς", isIndecl="", dialect="attic ionic", relation="ATR", number="sg", cid=26871742, posClass="N", pos="noun", ref="1.093.7-014", tbwid=14, value="βασιλέως", gender="masc", posAdd="eus_ews", case="gen", head=15, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βασιλεύς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="βασιλεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βασιλεύς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:15", lemma="στρατιά", form="στρατιᾶς", isIndecl="", dialect="attic doric aeolic", relation="ATR", number="sg", cid=26871743, posClass="N", pos="noun", ref="1.093.7-015", tbwid=15, value="στρατιᾶς", gender="fem", posAdd="h_hs", case="gen", head=19, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:στρατιά"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="στρατιά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:στρατιά" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:16", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871744, posClass="N", pos="article", ref="1.093.7-016", tbwid=16, value="τὴν", gender="fem", case="acc", head=19, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:17", ref="1.093.7-017", lemma="κατά", tbwid=17, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=19, cid=26871745, posClass="N", pos="prep", length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:18", lemma="θάλασσα", form="θάλασσαν", isIndecl="", dialect="", relation="ATR", number="sg", cid=26871746, posClass="N", pos="noun", ref="1.093.7-018", tbwid=18, value="θάλασσαν", gender="fem", posAdd="a_hs", case="acc", head=17, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:θάλασσα"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="θάλασσα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:θάλασσα" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:19", lemma="ἔφοδοϲ", form="ἔφοδον", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26871747, posClass="N", pos="noun", ref="1.093.7-019", tbwid=19, value="ἔφοδον", gender="fem", posAdd="os_ou", case="acc", head=7, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔφοδοϲ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἔφοδοϲ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔφοδοϲ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:20", lemma="εὔπορος", form="εὐπορωτέρα_ν", isIndecl="", dialect="attic doric aeolic", relation="PNOM", number="sg", cid=26871748, posClass="N", pos="adj", ref="1.093.7-020", tbwid=20, degree="comp", value="εὐπορωτέραν", gender="fem", posAdd="os_on", case="acc", head=24, length=11, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὔπορος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="εὔπορος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὔπορος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:21", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ADV", number="sg", cid=26871749, posClass="N", pos="pron", ref="1.093.7-021", tbwid=21, value="τῆς", gender="fem", posAdd="article", case="gen", head=20, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:22", ref="1.093.7-022", lemma="κατά", tbwid=22, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=21, cid=26871750, posClass="N", pos="prep", length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:23", lemma="γῆ", form="γῆν", isIndecl="contr", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871751, posClass="N", pos="noun", ref="1.093.7-023", tbwid=23, value="γῆν", gender="fem", posAdd="eh_ehs", case="acc", head=22, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="γῆ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:24", lemma="εἰμί", form="οὖσαν", isIndecl="", voice="act", dialect="attic epic doric ionic", tense="pres", relation="ATV", mood="part", number="sg", cid=26871752, posClass="P", pos="participle", ref="1.093.7-024", tbwid=24, value="οὖσαν", gender="fem", posAdd="irreg_mi", case="acc", head=19, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰμί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="εἰμί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰμί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:25", ref="", lemma="", tbwid=25, form="", value="·", relation="AuxK", head=0, cid=26871753, pos="punct", length=1, )
+s.words(w)
+words = "ταῖς γὰρ ναυσὶ μάλιστα προσέκειτο , ἰδών , ὡς ἐμοὶ δοκεῖ , τῆς βασιλέως στρατιᾶς τὴν κατὰ θάλασσαν ἔφοδον εὐπορωτέραν τῆς κατὰ γῆν οὖσαν · "
+s['sentence'] = "ταῖς γὰρ ναυσὶ μάλιστα προσέκειτο , ἰδών , ὡς ἐμοὶ δοκεῖ , τῆς βασιλέως στρατιᾶς τὴν κατὰ θάλασσαν ἔφοδον εὐπορωτέραν τῆς κατὰ γῆν οὖσαν · "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12", length=31)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:1", lemma="ὁ", form="τόν", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871754, posClass="N", pos="pron", ref="1.093.7-025", tbwid=1, value="τόν", gender="masc", posAdd="article", case="acc", head=3, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:2", ref="1.093.7-026", lemma="τε", tbwid=2, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="AuxY", head=10, cid=26871755, posClass="N", pos="particle", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:3", lemma="Πειραιεύς", form="Πειραιᾶ", isIndecl="contr r_e_i_alpha", dialect="attic", relation="OBJ", number="sg", cid=26871756, posClass="N", pos="noun", ref="1.093.7-027", tbwid=3, value="Πειραιᾶ", gender="masc", posAdd="eus_ews", case="acc", head=5, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Πειραιεύς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Πειραιεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Πειραιεύς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:4", lemma="ὠφέλιμος", form="ὠφελιμώτερον", isIndecl="", dialect="", relation="OCOMP", number="sg", cid=26871757, posClass="N", pos="adj", ref="1.093.7-028", tbwid=4, degree="comp", value="ὠφελιμώτερον", gender="masc", posAdd="os_on", case="acc", head=5, length=12, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὠφέλιμος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὠφέλιμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὠφέλιμος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:5", lemma="νομίζω", person="3rd", isIndecl="", voice="act", form="ἐνόμιζε", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871758, posClass="V", pos="verb", ref="1.093.7-029", tbwid=5, value="ἐνόμιζε", posAdd="w_stem,izw", head=10, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:6", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871759, posClass="N", pos="article", ref="1.093.7-030", tbwid=6, value="τῆς", gender="fem", case="gen", head=8, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:7", lemma="ἄνω2", form="ἄνω", isIndecl="indeclform", dialect="", relation="ATR", cid=26871760, pos="adverb", posClass="N", tbwid=7, ref="1.093.7-031", degree="", value="ἄνω", head=8, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνω2"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἄνω2", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνω2" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:8", lemma="πόλις", form="πόλεω^ς", isIndecl="", dialect="attic epic doric ionic", relation="ADV", number="sg", cid=26871761, posClass="N", pos="noun", ref="1.093.7-032", tbwid=8, value="πόλεως", gender="fem", posAdd="is_ews", case="gen", head=4, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλις"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="πόλις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλις" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:9", ref="", lemma="", tbwid=9, form="", value=",", relation="AuxX", head=10, cid=26871762, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:10", ref="1.093.7-034", lemma="καί", tbwid=10, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871763, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:11", lemma="πολλάκις", form="πολλάκις", isIndecl="indeclform", dialect="", relation="ADV", cid=26871764, pos="adverb", posClass="N", tbwid=11, ref="1.093.7-035", degree="", value="πολλάκις", head=14, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολλάκις"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="πολλάκις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολλάκις" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:12", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871765, posClass="N", pos="article", ref="1.093.7-036", tbwid=12, value="τοῖς", gender="masc", case="dat", head=13, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:13", lemma="Ἀθηναῖος", form="Ἀθηναι_οις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871766, posClass="N", pos="adj", ref="1.093.7-037", tbwid=13, degree="", value="Ἀθηναίοις", gender="masc", posAdd="os_h_on", case="dat", head=14, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:14", lemma="παραινέω", person="3rd", isIndecl="contr", voice="act", form="παρῄνει", dialect="attic epic", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871767, posClass="V", pos="verb", ref="1.093.7-038", tbwid=14, value="παρῄνει", posAdd="ew_pr,e_stem", head=10, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παραινέω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="παραινέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παραινέω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:15", ref="", lemma="", tbwid=15, form="", value=",", relation="AuxX", head=16, cid=26871768, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:16", ref="1.093.7-040", lemma="ἐάν", tbwid=16, isIndecl="contr indeclform", form="ἤν", dialect="", value="ἢν", relation="AuxC", head=30, cid=26871769, posClass="N", pos="conj", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐάν"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐάν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐάν" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:17", ref="1.093.7-041", lemma="ἄρα", tbwid=17, isIndecl="indeclform", form="ἄρα", dialect="", value="ἄρα", relation="AuxY", head=21, cid=26871770, posClass="N", pos="particle", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄρα"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἄρα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄρα" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:18", ref="1.093.7-042", lemma="ποτέ", tbwid=18, isIndecl="enclitic indeclform", form="ποτε", dialect="", value="ποτὲ", relation="AuxY", head=21, cid=26871771, posClass="N", pos="particle", length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ποτέ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ποτέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ποτέ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:19", ref="1.093.7-043", lemma="κατά", tbwid=19, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=21, cid=26871772, posClass="N", pos="prep", length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:20", lemma="γῆ", form="γῆν", isIndecl="contr", dialect="attic epic ionic", relation="ADV", number="sg", cid=26871773, posClass="N", pos="noun", ref="1.093.7-044", tbwid=20, value="γῆν", gender="fem", posAdd="eh_ehs", case="acc", head=19, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="γῆ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:21", lemma="βιάζω", person="3rd", isIndecl="contr", voice="pass", form="βιασθῶσι", dialect="attic epic doric", tense="aor", relation="ADV", mood="subj", number="pl", cid=26871774, posClass="V", pos="verb", ref="1.093.7-045", tbwid=21, value="βιασθῶσι", posAdd="aor_pass,azw", head=16, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βιάζω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="βιάζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βιάζω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:22", ref="", lemma="", tbwid=22, form="", value=",", relation="AuxX", head=16, cid=26871775, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:23", lemma="καταβαίνω", form="καταβάντας", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26871776, posClass="P", pos="participle", ref="1.093.7-047", tbwid=23, value="καταβάντας", gender="masc", posAdd="ath_h_aor", case="acc", head=30, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καταβαίνω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καταβαίνω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καταβαίνω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:24", ref="1.093.7-048", lemma="εἰς", tbwid=24, isIndecl="proclitic indeclform", form="ἐς", dialect="", value="ἐς", relation="AuxP", head=23, cid=26871777, posClass="N", pos="prep", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="εἰς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:25", lemma="αὐτός", form="αὐτόν", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26871778, posClass="N", pos="adj", ref="1.093.7-049", tbwid=25, degree="", value="αὐτὸν", gender="masc", posAdd="art_adj", case="acc", head=24, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="αὐτός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:26", lemma="ὁ", form="ταῖς", isIndecl="indeclform", dialect="", relation="ADV", number="pl", cid=26871779, posClass="N", pos="article", ref="1.093.7-050", tbwid=26, value="ταῖς", gender="fem", case="dat", head=27, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:27", lemma="ναῦς", form="ναυσί", isIndecl="indeclform", dialect="attic doric", relation="ADV", number="pl", cid=26871780, posClass="N", pos="noun", ref="1.093.7-051", tbwid=27, value="ναυσὶ", gender="fem", posAdd="irreg_decl3", case="dat", head=30, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:28", ref="1.093.7-052", lemma="πρός", tbwid=28, isIndecl="indeclform", form="πρός", dialect="", value="πρὸς", relation="AuxP", head=30, cid=26871781, posClass="N", pos="prep", length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρός"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="πρός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρός" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:29", lemma="ἅπας", form="ἅπαντας", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871782, posClass="N", pos="adj", ref="1.093.7-053", tbwid=29, degree="", value="ἅπαντας", gender="masc", posAdd="as_asa_an", case="acc", head=28, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἅπας"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἅπας", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἅπας" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:30", lemma="ἀνθίστημι", person="", isIndecl="elide_preverb causal pres_redupl", voice="mp", form="ἀνθίστασθαι", dialect="", tense="pres", relation="OBJ", mood="inf", number="", cid=26871783, posClass="V", pos="verb", ref="1.093.7-054", tbwid=30, value="ἀνθίστασθαι", posAdd="ami_pr", head=14, length=11, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀνθίστημι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἀνθίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀνθίστημι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:31", ref="", lemma="", tbwid=31, form="", value=".", relation="AuxK", head=0, cid=26871784, pos="punct", length=1, )
+s.words(w)
+words = "τόν τε Πειραιᾶ ὠφελιμώτερον ἐνόμιζε τῆς ἄνω πόλεως , καὶ πολλάκις τοῖς Ἀθηναίοις παρῄνει , ἢν ἄρα ποτὲ κατὰ γῆν βιασθῶσι , καταβάντας ἐς αὐτὸν ταῖς ναυσὶ πρὸς ἅπαντας ἀνθίστασθαι . "
+s['sentence'] = "τόν τε Πειραιᾶ ὠφελιμώτερον ἐνόμιζε τῆς ἄνω πόλεως , καὶ πολλάκις τοῖς Ἀθηναίοις παρῄνει , ἢν ἄρα ποτὲ κατὰ γῆν βιασθῶσι , καταβάντας ἐς αὐτὸν ταῖς ναυσὶ πρὸς ἅπαντας ἀνθίστασθαι . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13", length=14)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:1", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26871785, posClass="N", pos="adj", ref="1.093.8-001", tbwid=1, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=6, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:2", ref="1.093.8-002", lemma="μέν", tbwid=2, isIndecl="indeclform", form="μέν", dialect="", value="μὲν", relation="AuxY", head=6, cid=26871786, posClass="N", pos="particle", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέν"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="μέν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέν" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:3", ref="1.093.8-003", lemma="οὖν", tbwid=3, isIndecl="indeclform", form="οὖν", dialect="", value="οὖν", relation="AuxZ", head=2, cid=26871787, posClass="N", pos="particle", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὖν"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="οὖν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὖν" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:4", lemma="οὕτως", form="οὕτως", isIndecl="indeclform", dialect="", relation="ADV", cid=26871788, pos="adverb", posClass="N", tbwid=4, ref="1.093.8-004", degree="", value="οὕτως", head=6, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὕτως"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="οὕτως", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὕτως" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:5", lemma="τειχίζω", person="3rd", isIndecl="", voice="pass", form="ἐτειχίσθησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26871789, posClass="V", pos="verb", ref="1.093.8-005", tbwid=5, value="ἐτειχίσθησαν", posAdd="aor_pass,izw", head=6, length=12, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τειχίζω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="τειχίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τειχίζω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:6", ref="1.093.8-006", lemma="καί", tbwid=6, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871790, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:7", lemma="ἄλλος", form="ἄλλα", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871791, posClass="N", pos="adj", ref="1.093.8-007", tbwid=7, degree="", value="τἆλλα", gender="neut", posAdd="art_adj", case="acc", head=8, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:8", lemma="κατασκευάζω", person="3rd", isIndecl="", voice="mp", form="κατεσκευάζοντο", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="pl", cid=26871792, posClass="V", pos="verb", ref="1.093.8-008", tbwid=8, value="κατεσκευάζοντο", posAdd="w_stem,azw", head=6, length=14, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατασκευάζω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="κατασκευάζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατασκευάζω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:9", lemma="εὐθύς", form="εὐθύς", isIndecl="indeclform", dialect="", relation="ADV", cid=26871793, pos="adverb", posClass="N", tbwid=9, ref="1.093.8-009", degree="", value="εὐθὺς", head=8, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὐθύς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="εὐθύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὐθύς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:10", ref="1.093.8-010", lemma="μετά", tbwid=10, isIndecl="indeclform", form="μετά", dialect="", value="μετὰ", relation="AuxP", head=8, cid=26871794, posClass="N", pos="prep", length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μετά"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="μετά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μετά" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:11", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871795, posClass="N", pos="article", ref="1.093.8-011", tbwid=11, value="τὴν", gender="fem", case="acc", head=13, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:12", lemma="Μῆδος", form="Μήδων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871796, posClass="N", pos="noun", ref="1.093.8-012", tbwid=12, value="Μήδων", gender="masc", posAdd="os_ou", case="gen", head=13, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μῆδος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Μῆδος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μῆδος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:13", lemma="ἀναχώρησις", form="ἀναχώρησιν", isIndecl="", dialect="", relation="ADV", number="sg", cid=26871797, posClass="N", pos="noun", ref="1.093.8-013", tbwid=13, value="ἀναχώρησιν", gender="fem", posAdd="is_ews", case="acc", head=10, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀναχώρησις"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἀναχώρησις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀναχώρησις" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:14", ref="", lemma="", tbwid=14, form="", value=".", relation="AuxK", head=0, cid=26871798, pos="punct", length=1, )
+s.words(w)
+words = "Ἀθηναῖοι μὲν οὖν οὕτως ἐτειχίσθησαν καὶ τἆλλα κατεσκευάζοντο εὐθὺς μετὰ τὴν Μήδων ἀναχώρησιν . "
+s['sentence'] = "Ἀθηναῖοι μὲν οὖν οὕτως ἐτειχίσθησαν καὶ τἆλλα κατεσκευάζοντο εὐθὺς μετὰ τὴν Μήδων ἀναχώρησιν . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10", length=8)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:1", lemma="ὅς", form="οἷς", isIndecl="indeclform", dialect="", relation="OBJ", number="pl", cid=26872019, posClass="N", pos="pron", ref="1.095.6-019", tbwid=1, value="οἷς", gender="masc", posAdd="relative", case="dat", head=3, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὅς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:2", lemma="οὐκέτι", form="οὐκέτι", isIndecl="indeclform", dialect="", relation="AuxZ", cid=26872020, pos="adverb", posClass="N", tbwid=2, ref="1.095.6-020", degree="", value="οὐκέτι", head=3, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="οὐκέτι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:3", lemma="ἐφίημι", person="3rd", isIndecl="", voice="act", form="ἐφι_εσαν", dialect="", tense="imperf", relation="PRED", mood="ind", number="pl", cid=26872021, posClass="V", pos="verb", ref="1.095.6-021", tbwid=3, value="ἐφίεσαν", posAdd="irreg_mi", head=0, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐφίημι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐφίημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐφίημι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:4", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872022, posClass="N", pos="article", ref="1.095.6-022", tbwid=4, value="οἱ", gender="masc", case="nom", head=5, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:5", lemma="σύμμαχος", form="ξύμμαχοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872023, posClass="N", pos="adj", ref="1.095.6-023", tbwid=5, degree="", value="ξύμμαχοι", gender="masc", posAdd="os_on", case="nom", head=3, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σύμμαχος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="σύμμαχος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σύμμαχος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:6", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26872024, posClass="N", pos="article", ref="1.095.6-024", tbwid=6, value="τὴν", gender="fem", case="acc", head=7, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:7", lemma="ἡγεμονία", form="ἡγεμονία_ν", isIndecl="", dialect="attic doric aeolic", relation="OBJ", number="sg", cid=26872025, posClass="N", pos="noun", ref="1.095.6-025", tbwid=7, value="ἡγεμονίαν", gender="fem", posAdd="h_hs", case="acc", head=3, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἡγεμονία"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἡγεμονία", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἡγεμονία" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:8", ref="", lemma="", tbwid=8, form="", value=".", relation="AuxK", head=0, cid=26872026, pos="punct", length=1, )
+s.words(w)
+words = "οἷς οὐκέτι ἐφίεσαν οἱ ξύμμαχοι τὴν ἡγεμονίαν . "
+s['sentence'] = "οἷς οὐκέτι ἐφίεσαν οἱ ξύμμαχοι τὴν ἡγεμονίαν . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11", length=48)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26872027, posClass="N", pos="pron", ref="1.095.7-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=4, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:2", ref="1.095.7-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="AuxY", head=6, cid=26872028, posClass="N", pos="particle", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:3", lemma="αἰσθάνομαι", form="αἰσθόμενοι", isIndecl="", voice="mid", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26872029, posClass="P", pos="participle", ref="1.095.7-003", tbwid=3, value="αἰσθόμενοι", gender="masc", posAdd="aor2,anw", case="nom", head=4, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αἰσθάνομαι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="αἰσθάνομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αἰσθάνομαι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:4", lemma="ἀπέρχομαι", person="3rd", isIndecl="", voice="act", form="ἀπῆλθον", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26872030, posClass="V", pos="verb", ref="1.095.7-004", tbwid=4, value="ἀπῆλθον", posAdd="aor2", head=6, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπέρχομαι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἀπέρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπέρχομαι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:5", ref="", lemma="", tbwid=5, form="", value=",", relation="AuxX", head=6, cid=26872031, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:6", ref="1.095.7-006", lemma="καί", tbwid=6, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26872032, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:7", lemma="ἄλλος", form="ἄλλους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26872033, posClass="N", pos="adj", ref="1.095.7-007", tbwid=7, degree="", value="ἄλλους", gender="masc", posAdd="art_adj", case="acc", head=10, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:8", lemma="οὐκέτι", form="οὐκέτι", isIndecl="indeclform", dialect="", relation="AuxZ", cid=26872034, pos="adverb", posClass="N", tbwid=8, ref="1.095.7-008", degree="", value="οὐκέτι", head=10, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="οὐκέτι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:9", lemma="ὕστερος", form="ὕστερον", isIndecl="irreg_comp", dialect="", relation="ADV", number="sg", cid=26872035, posClass="N", pos="noun", ref="1.095.7-009", tbwid=9, value="ὕστερον", gender="neut", posAdd="os_h_on", case="acc", head=10, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὕστερος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὕστερος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὕστερος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:10", lemma="ἐκπέμπω", person="3rd", isIndecl="", voice="act", form="ἐξέπεμψαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26872036, posClass="V", pos="verb", ref="1.095.7-010", tbwid=10, value="ἐξέπεμψαν", posAdd="aor1,reg_conj", head=6, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκπέμπω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐκπέμπω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκπέμπω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:11", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872037, posClass="N", pos="article", ref="1.095.7-011", tbwid=11, value="οἱ", gender="masc", case="nom", head=12, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:12", lemma="Λακεδαιμόνιος", form="Λακεδαιμόνιοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872038, posClass="N", pos="adj", ref="1.095.7-012", tbwid=12, degree="", value="Λακεδαιμόνιοι", gender="masc", posAdd="os_h_on", case="nom", head=10, length=13, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Λακεδαιμόνιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:13", ref="", lemma="", tbwid=13, form="", value=",", relation="AuxX", head=30, cid=26872039, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:14", lemma="φοβέω", form="φοβούμενοι", isIndecl="contr", voice="mp", dialect="attic epic doric", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872040, posClass="P", pos="participle", ref="1.095.7-014", tbwid=14, value="φοβούμενοι", gender="masc", posAdd="ew_pr,ew_denom", case="nom", head=30, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φοβέω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="φοβέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φοβέω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:15", ref="1.095.7-015", lemma="μή", tbwid=15, isIndecl="indeclform", form="μή", dialect="", value="μὴ", relation="AuxC", head=14, cid=26872041, posClass="N", pos="conj", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μή"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="μή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μή" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:16", lemma="σφεῖς", form="σφισιν", isIndecl="enclitic nu_movable indeclform", dialect="", relation="ADV", number="pl", cid=26872042, posClass="N", pos="pron", ref="1.095.7-016", tbwid=16, value="σφίσιν", gender="masc", posAdd="pron3", case="dat", head=20, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="σφεῖς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:17", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872043, posClass="N", pos="article", ref="1.095.7-017", tbwid=17, value="οἱ", gender="masc", case="nom", head=18, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:18", lemma="ἔξειμι1", form="ἐξιόντες", isIndecl="", voice="act", dialect="", tense="pres", relation="SBJ", mood="part", number="pl", cid=26872044, posClass="P", pos="participle", ref="1.095.7-018", tbwid=18, value="ἐξιόντες", gender="masc", posAdd="irreg_mi", case="nom", head=20, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔξειμι1"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἔξειμι1", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔξειμι1" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:19", lemma="χείρων", form="χείρους", isIndecl="contr", dialect="", relation="PNOM", number="pl", cid=26872045, posClass="N", pos="adj", ref="1.095.7-019", tbwid=19, degree="comp", value="χείρους", gender="masc", posAdd="wn_on_comp", case="acc", head=20, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:χείρων"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="χείρων", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:χείρων" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:20", lemma="γίγνομαι", person="3rd", isIndecl="pres_redupl", voice="mp", form="γίγνωνται", dialect="", tense="pres", relation="OBJ", mood="subj", number="pl", cid=26872046, posClass="V", pos="verb", ref="1.095.7-020", tbwid=20, value="γίγνωνται", posAdd="w_stem,reg_conj", head=15, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γίγνομαι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="γίγνομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γίγνομαι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:21", ref="", lemma="", tbwid=21, form="", value=",", relation="AuxX", head=27, cid=26872047, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:22", lemma="ὅσπερ", form="ὅπερ", isIndecl="indeclform", dialect="", relation="OBJ", number="sg", cid=26872048, posClass="N", pos="pron", ref="1.095.7-022", tbwid=22, value="ὅπερ", gender="neut", posAdd="relative", case="acc", head=27, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅσπερ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὅσπερ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅσπερ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:23", ref="1.095.7-023", lemma="καί", tbwid=23, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=24, cid=26872049, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:24", ref="1.095.7-024", lemma="ἐν", tbwid=24, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=27, cid=26872050, posClass="N", pos="prep", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:25", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872051, posClass="N", pos="article", ref="1.095.7-025", tbwid=25, value="τῷ", gender="masc", case="dat", head=26, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:26", lemma="Παυσανίας", form="Παυσανία_", isIndecl="", dialect="attic doric aeolic", relation="OBJ", number="sg", cid=26872052, posClass="N", pos="noun", ref="1.095.7-026", tbwid=26, value="Παυσανίᾳ", gender="masc", posAdd="hs_ou", case="dat", head=24, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Παυσανίας"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Παυσανίας", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Παυσανίας" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:27", lemma="ἐνεῖδον", person="3rd", isIndecl="syll_augment", voice="act", form="ἐνεῖδον", dialect="", tense="aor", relation="ATR", mood="ind", number="pl", cid=26872053, posClass="V", pos="verb", ref="1.095.7-027", tbwid=27, value="ἐνεῖδον", posAdd="aor2", head=20, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐνεῖδον"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐνεῖδον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐνεῖδον" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:28", ref="", lemma="", tbwid=28, form="", value=",", relation="AuxX", head=27, cid=26872054, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:29", lemma="ἀπαλλάσσω", form="ἀπαλλαξείοντες", isIndecl="desiderative", voice="act", dialect="", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872055, posClass="P", pos="participle", ref="1.095.7-029", tbwid=29, value="ἀπαλλαξείοντες", gender="masc", posAdd="w_stem", case="nom", head=35, length=14, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπαλλάσσω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἀπαλλάσσω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπαλλάσσω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:30", ref="1.095.7-030", lemma="δέ", tbwid=30, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="COORD", head=10, cid=26872056, posClass="N", pos="particle", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:31", ref="1.095.7-031", lemma="καί", tbwid=31, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=29, cid=26872057, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:32", lemma="ὁ", form="τοῦ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872058, posClass="N", pos="article", ref="1.095.7-032", tbwid=32, value="τοῦ", gender="masc", case="gen", head=34, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:33", lemma="Μηδικός", form="Μηδικοῦ", isIndecl="", dialect="", relation="ATR", number="sg", cid=26872059, posClass="N", pos="adj", ref="1.095.7-033", tbwid=33, degree="", value="Μηδικοῦ", gender="masc", posAdd="os_h_on", case="gen", head=34, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μηδικός"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Μηδικός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μηδικός" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:34", lemma="πόλεμος", form="πολέμου", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26872060, posClass="N", pos="noun", ref="1.095.7-034", tbwid=34, value="πολέμου", gender="masc", posAdd="os_ou", case="gen", head=29, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλεμος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="πόλεμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλεμος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:35", ref="1.095.7-035", lemma="καί", tbwid=35, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=30, cid=26872061, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:36", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26872062, posClass="N", pos="article", ref="1.095.7-036", tbwid=36, value="τοὺς", gender="masc", case="acc", head=37, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:37", lemma="Ἀθηναῖος", form="Ἀθηναι_ους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26872063, posClass="N", pos="adj", ref="1.095.7-037", tbwid=37, degree="", value="Ἀθηναίους", gender="masc", posAdd="os_h_on", case="acc", head=38, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:38", lemma="νομίζω", form="νομίζοντες", isIndecl="", voice="act", dialect="", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872064, posClass="P", pos="participle", ref="1.095.7-038", tbwid=38, value="νομίζοντες", gender="masc", posAdd="w_stem,izw", case="nom", head=35, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:39", lemma="ἱκανός", form="ἱκανούς", isIndecl="", dialect="", relation="OCOMP_CO", number="pl", cid=26872065, posClass="N", pos="adj", ref="1.095.7-039", tbwid=39, degree="", value="ἱκανοὺς", gender="masc", posAdd="os_h_on", case="acc", head=41, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱκανός"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἱκανός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱκανός" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:40", lemma="ἐξηγέομαι", person="", isIndecl="contr", voice="mid", form="ἐξηγεῖσθαι", dialect="attic epic", tense="pres", relation="ADV", mood="inf", number="", cid=26872066, posClass="V", pos="verb", ref="1.095.7-040", tbwid=40, value="ἐξηγεῖσθαι", posAdd="ew_pr,ew_denom", head=39, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐξηγέομαι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐξηγέομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐξηγέομαι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:41", ref="1.095.7-041", lemma="καί", tbwid=41, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=38, cid=26872067, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:42", lemma="σφεῖς", form="σφισιν", isIndecl="enclitic nu_movable indeclform", dialect="", relation="ADV", number="pl", cid=26872068, posClass="N", pos="pron", ref="1.095.7-042", tbwid=42, value="σφίσιν", gender="masc", posAdd="pron3", case="dat", head=47, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="σφεῖς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:43", ref="1.095.7-043", lemma="ἐν", tbwid=43, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=47, cid=26872069, posClass="N", pos="prep", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:44", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872070, posClass="N", pos="article", ref="1.095.7-044", tbwid=44, value="τῷ", gender="masc", case="dat", head=46, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:45", lemma="τότε", form="τότε", isIndecl="indeclform", dialect="", relation="ADV", cid=26872071, pos="adverb", posClass="N", tbwid=45, ref="1.095.7-045", degree="", value="τότε", head=46, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τότε"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="τότε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τότε" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:46", lemma="πάρειμι1", form="παρόντι", isIndecl="", voice="act", dialect="", tense="pres", relation="ADV", mood="part", number="sg", cid=26872072, posClass="P", pos="participle", ref="1.095.7-046", tbwid=46, value="παρόντι", gender="masc", posAdd="irreg_mi", case="dat", head=43, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάρειμι1"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="πάρειμι1", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάρειμι1" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:47", lemma="ἐπιτήδειος", form="ἐπιτηδείους", isIndecl="", dialect="", relation="OCOMP_CO", number="pl", cid=26872073, posClass="N", pos="adj", ref="1.095.7-047", tbwid=47, degree="", value="ἐπιτηδείους", gender="masc", posAdd="os_h_on", case="acc", head=41, length=11, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιτήδειος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐπιτήδειος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιτήδειος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:48", ref="", lemma="", tbwid=48, form="", value=".", relation="AuxK", head=0, cid=26872074, pos="punct", length=1, )
+s.words(w)
+words = "οἱ δὲ αἰσθόμενοι ἀπῆλθον , καὶ ἄλλους οὐκέτι ὕστερον ἐξέπεμψαν οἱ Λακεδαιμόνιοι , φοβούμενοι μὴ σφίσιν οἱ ἐξιόντες χείρους γίγνωνται , ὅπερ καὶ ἐν τῷ Παυσανίᾳ ἐνεῖδον , ἀπαλλαξείοντες δὲ καὶ τοῦ Μηδικοῦ πολέμου καὶ τοὺς Ἀθηναίους νομίζοντες ἱκανοὺς ἐξηγεῖσθαι καὶ σφίσιν ἐν τῷ τότε παρόντι ἐπιτηδείους . "
+s['sentence'] = "οἱ δὲ αἰσθόμενοι ἀπῆλθον , καὶ ἄλλους οὐκέτι ὕστερον ἐξέπεμψαν οἱ Λακεδαιμόνιοι , φοβούμενοι μὴ σφίσιν οἱ ἐξιόντες χείρους γίγνωνται , ὅπερ καὶ ἐν τῷ Παυσανίᾳ ἐνεῖδον , ἀπαλλαξείοντες δὲ καὶ τοῦ Μηδικοῦ πολέμου καὶ τοὺς Ἀθηναίους νομίζοντες ἱκανοὺς ἐξηγεῖσθαι καὶ σφίσιν ἐν τῷ τότε παρόντι ἐπιτηδείους . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10", length=19)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:1", ref="1.105.6-038", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873401, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:2", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26873402, posClass="N", pos="article", ref="1.105.6-039", tbwid=2, value="οἱ", gender="masc", case="nom", head=3, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:3", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26873403, posClass="N", pos="adj", ref="1.105.6-040", tbwid=3, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=14, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:4", lemma="ἐκβοηθέω", form="ἐκβοηθήσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26873404, posClass="P", pos="participle", ref="1.105.6-041", tbwid=4, value="ἐκβοηθήσαντες", gender="masc", posAdd="aor1,ew_denom", case="nom", head=14, length=13, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκβοηθέω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐκβοηθέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκβοηθέω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:5", ref="1.105.6-042", lemma="ἐκ", tbwid=5, isIndecl="proclitic indeclform", form="ἐκ", dialect="", value="ἐκ", relation="AuxP", head=4, cid=26873405, posClass="N", pos="prep", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐκ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:6", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873406, posClass="N", pos="article", ref="1.105.6-043", tbwid=6, value="τῶν", gender="masc", case="gen", head=7, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:7", lemma="Μέγαρα", form="Μεγάρων", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873407, posClass="N", pos="noun", ref="1.105.6-044", tbwid=7, value="Μεγάρων", gender="neut", posAdd="os_ou", case="gen", head=5, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μέγαρα"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Μέγαρα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μέγαρα" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:8", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873408, posClass="N", pos="pron", ref="1.105.6-045", tbwid=8, value="τούς", gender="masc", posAdd="article", case="acc", head=12, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:9", ref="1.105.6-046", lemma="τε", tbwid=9, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="AuxY", head=14, cid=26873409, posClass="N", pos="particle", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:10", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873410, posClass="N", pos="article", ref="1.105.6-047", tbwid=10, value="τὸ", gender="neut", case="acc", head=11, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:11", lemma="τροπαῖος", form="τροπαῖον", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26873411, posClass="N", pos="noun", ref="1.105.6-048", tbwid=11, value="τροπαῖον", gender="neut", posAdd="os_h_on", case="acc", head=12, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τροπαῖος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="τροπαῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τροπαῖος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:12", lemma="ἵστημι", form="ἱστάντας", isIndecl="causal pres_redupl", voice="act", dialect="", tense="pres", relation="OBJ", mood="part", number="pl", cid=26873412, posClass="P", pos="participle", ref="1.105.6-049", tbwid=12, value="ἱστάντας", gender="masc", posAdd="ami_pr", case="acc", head=13, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἵστημι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἵστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἵστημι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:13", lemma="διαφθείρω", person="3rd", isIndecl="", voice="act", form="διαφθείρουσι", dialect="attic epic doric ionic", tense="pres", relation="PRED_CO", mood="ind", number="pl", cid=26873413, posClass="V", pos="verb", ref="1.105.6-050", tbwid=13, value="διαφθείρουσι", posAdd="w_stem,eirw", head=14, length=12, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διαφθείρω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="διαφθείρω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διαφθείρω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:14", ref="1.105.6-051", lemma="καί", tbwid=14, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=1, cid=26873414, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:15", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873415, posClass="N", pos="article", ref="1.105.6-052", tbwid=15, value="τοῖς", gender="masc", case="dat", head=16, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:16", lemma="ἄλλος", form="ἄλλοις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873416, posClass="N", pos="adj", ref="1.105.6-053", tbwid=16, degree="", value="ἄλλοις", gender="masc", posAdd="art_adj", case="dat", head=17, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:17", lemma="συμβάλλω", form="ξυμβαλόντες", isIndecl="sig_to_ci", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26873417, posClass="P", pos="participle", ref="1.105.6-054", tbwid=17, value="ξυμβαλόντες", gender="masc", posAdd="aor2", case="nom", head=18, length=11, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμβάλλω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="συμβάλλω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμβάλλω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:18", lemma="κρατέω", person="3rd", isIndecl="", voice="act", form="ἐκράτησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873418, posClass="V", pos="verb", ref="1.105.6-055", tbwid=18, value="ἐκράτησαν", posAdd="aor1,ew_denom", head=14, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κρατέω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="κρατέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κρατέω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:19", ref="", lemma="", tbwid=19, form="", value=".", relation="AuxK", head=0, cid=26873419, pos="punct", length=1, )
+s.words(w)
+words = "καὶ οἱ Ἀθηναῖοι ἐκβοηθήσαντες ἐκ τῶν Μεγάρων τούς τε τὸ τροπαῖον ἱστάντας διαφθείρουσι καὶ τοῖς ἄλλοις ξυμβαλόντες ἐκράτησαν . "
+s['sentence'] = "καὶ οἱ Ἀθηναῖοι ἐκβοηθήσαντες ἐκ τῶν Μεγάρων τούς τε τὸ τροπαῖον ἱστάντας διαφθείρουσι καὶ τοῖς ἄλλοις ξυμβαλόντες ἐκράτησαν . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10", length=16)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:1", lemma="νομίζω", form="νομίσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV_CO", mood="part", number="pl", cid=26873685, posClass="P", pos="participle", ref="1.107.6-001", tbwid=1, value="νομίσαντες", gender="masc", posAdd="aor1,izw", case="nom", head=9, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:2", ref="1.107.6-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="AuxY", head=6, cid=26873686, posClass="N", pos="particle", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:3", lemma="ἀπορέω", person="", isIndecl="contr", voice="act", form="ἀπορεῖν", dialect="attic epic doric", tense="pres", relation="OBJ", mood="inf", number="", cid=26873687, posClass="V", pos="verb", ref="1.107.6-003", tbwid=3, value="ἀπορεῖν", posAdd="ew_pr,ew_denom", head=1, length=7, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπορέω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἀπορέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπορέω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:4", lemma="ὅπη", form="ὅπῃ", isIndecl="indeclform", dialect="", relation="OBJ", cid=26873688, pos="adverb", posClass="N", tbwid=4, ref="1.107.6-004", degree="", value="ὅπῃ", head=5, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅπη"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὅπη", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅπη" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:5", lemma="διέρχομαι", person="3rd", isIndecl="nu_movable", voice="act", form="διέλθωσιν", dialect="", tense="aor", relation="OBJ", mood="subj", number="pl", cid=26873689, posClass="V", pos="verb", ref="1.107.6-005", tbwid=5, value="διέλθωσιν", posAdd="aor2", head=3, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διέρχομαι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="διέρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διέρχομαι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:6", lemma="ἐπιστρατεύω", person="3rd", isIndecl="", voice="act", form="ἐπεστράτευσαν", dialect="", tense="aor", relation="PRED", mood="ind", number="pl", cid=26873690, posClass="V", pos="verb", ref="1.107.6-006", tbwid=6, value="ἐπεστράτευσαν", posAdd="aor1,euw", head=0, length=13, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιστρατεύω"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐπιστρατεύω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιστρατεύω" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:7", lemma="αὐτός", form="αὐτοῖς", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873691, posClass="N", pos="adj", ref="1.107.6-007", tbwid=7, degree="", value="αὐτοῖς", gender="masc", posAdd="art_adj", case="dat", head=6, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="αὐτός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:8", ref="", lemma="", tbwid=8, form="", value=",", relation="AuxX", head=9, cid=26873692, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:9", ref="1.107.6-009", lemma="καί", tbwid=9, isIndecl="indeclform", form="καί", dialect="", value="καί", relation="COORD", head=6, cid=26873693, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:10", lemma="τις", form="τι", isIndecl="enclitic indeclform", dialect="", relation="AuxZ", number="sg", cid=26873694, posClass="N", pos="pron", ref="1.107.6-010", tbwid=10, value="τι", gender="neut", posAdd="indef", case="acc", head=9, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τις"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="τις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τις" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:11", ref="1.107.6-011", lemma="καί", tbwid=11, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=9, cid=26873695, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:12", lemma="ὁ", form="τοῦ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873696, posClass="N", pos="article", ref="1.107.6-012", tbwid=12, value="τοῦ", gender="masc", case="gen", head=13, length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:13", lemma="δῆμος", form="δη_μου", isIndecl="", dialect="", relation="ATR", number="sg", cid=26873697, posClass="N", pos="noun", ref="1.107.6-013", tbwid=13, value="δήμου", gender="masc", posAdd="os_ou", case="gen", head=14, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δῆμος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="δῆμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δῆμος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:14", lemma="κατάλυσις", form="καταλύσεω^ς", isIndecl="", dialect="attic", relation="ATR", number="sg", cid=26873698, posClass="N", pos="noun", ref="1.107.6-014", tbwid=14, value="καταλύσεως", gender="fem", posAdd="is_ews", case="gen", head=15, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατάλυσις"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="κατάλυσις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατάλυσις" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:15", lemma="ὑποψία", form="ὑποψία_", isIndecl="", dialect="attic doric aeolic", relation="ADV_CO", number="sg", cid=26873699, posClass="N", pos="noun", ref="1.107.6-015", tbwid=15, value="ὑποψίᾳ", gender="fem", posAdd="h_hs", case="dat", head=9, length=6, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὑποψία"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὑποψία", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὑποψία" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:16", ref="", lemma="", tbwid=16, form="", value=".", relation="AuxK", head=0, cid=26873700, pos="punct", length=1, )
+s.words(w)
+words = "νομίσαντες δὲ ἀπορεῖν ὅπῃ διέλθωσιν ἐπεστράτευσαν αὐτοῖς , καί τι καὶ τοῦ δήμου καταλύσεως ὑποψίᾳ . "
+s['sentence'] = "νομίσαντες δὲ ἀπορεῖν ὅπῃ διέλθωσιν ἐπεστράτευσαν αὐτοῖς , καί τι καὶ τοῦ δήμου καταλύσεως ὑποψίᾳ . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11", length=20)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:1", lemma="ἔρχομαι", person="3rd", isIndecl="", voice="act", form="ἦλθον", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873701, posClass="V", pos="verb", ref="1.107.7-001", tbwid=1, value="ἦλθον", posAdd="aor2", head=2, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔρχομαι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἔρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔρχομαι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:2", ref="1.107.7-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="COORD", head=0, cid=26873702, posClass="N", pos="particle", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:3", ref="1.107.7-003", lemma="καί", tbwid=3, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=5, cid=26873703, posClass="N", pos="conj", length=3, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:4", lemma="Θεσσαλός", form="Θεσσαλῶν", isIndecl="", dialect="", relation="ATR", number="pl", cid=26873704, posClass="N", pos="adj", ref="1.107.7-004", tbwid=4, degree="", value="Θεσσαλῶν", gender="masc", posAdd="os_ou", case="gen", head=5, length=8, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Θεσσαλός"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Θεσσαλός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Θεσσαλός" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:5", lemma="ἱππεύς", form="ἱππῆς", isIndecl="contr", dialect="", relation="SBJ", number="pl", cid=26873705, posClass="N", pos="noun", ref="1.107.7-005", tbwid=5, value="ἱππῆς", gender="masc", posAdd="eus_ews", case="nom", head=1, length=5, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱππεύς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἱππεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱππεύς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:6", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873706, posClass="N", pos="article", ref="1.107.7-006", tbwid=6, value="τοῖς", gender="masc", case="dat", head=7, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:7", lemma="Ἀθηναῖος", form="Ἀθηναι_οις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873707, posClass="N", pos="adj", ref="1.107.7-007", tbwid=7, degree="", value="Ἀθηναίοις", gender="masc", posAdd="os_h_on", case="dat", head=1, length=9, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:8", ref="1.107.7-008", lemma="κατά", tbwid=8, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=1, cid=26873708, posClass="N", pos="prep", length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:9", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873709, posClass="N", pos="article", ref="1.107.7-009", tbwid=9, value="τὸ", gender="neut", case="acc", head=10, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:10", lemma="συμμαχικός", form="συμμαχικόν", isIndecl="", dialect="", relation="ADV", number="sg", cid=26873710, posClass="N", pos="adj", ref="1.107.7-010", tbwid=10, degree="", value="ξυμμαχικόν", gender="neut", posAdd="os_h_on", case="acc", head=8, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμμαχικός"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="συμμαχικός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμμαχικός" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:11", ref="", lemma="", tbwid=11, form="", value=",", relation="AuxX", head=13, cid=26873711, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:12", lemma="ὅς", form="οἵ", isIndecl="indeclform", dialect="", relation="SBJ", number="pl", cid=26873712, posClass="N", pos="pron", ref="1.107.7-012", tbwid=12, value="οἳ", gender="masc", posAdd="relative", case="nom", head=13, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὅς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:13", lemma="μεθίστημι", person="3rd", isIndecl="causal", voice="act", form="μετέστησαν", dialect="", tense="aor", relation="ATR", mood="ind", number="pl", cid=26873713, posClass="V", pos="verb", ref="1.107.7-013", tbwid=13, value="μετέστησαν", posAdd="aor1,a_stem", head=5, length=10, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μεθίστημι"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="μεθίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μεθίστημι" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:14", ref="1.107.7-014", lemma="ἐν", tbwid=14, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=13, cid=26873714, posClass="N", pos="prep", length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:15", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873715, posClass="N", pos="article", ref="1.107.7-015", tbwid=15, value="τῷ", gender="neut", case="dat", head=16, length=2, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:16", lemma="ἔργον", form="ἔργῳ", isIndecl="", dialect="", relation="ADV", number="sg", cid=26873716, posClass="N", pos="noun", ref="1.107.7-016", tbwid=16, value="ἔργῳ", gender="neut", posAdd="os_ou", case="dat", head=13, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔργον"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ἔργον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔργον" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:17", ref="1.107.7-017", lemma="παρά", tbwid=17, isIndecl="indeclform", form="παρά", dialect="", value="παρὰ", relation="AuxP", head=13, cid=26873717, posClass="N", pos="prep", length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παρά"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="παρά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παρά" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:18", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873718, posClass="N", pos="article", ref="1.107.7-018", tbwid=18, value="τοὺς", gender="masc", case="acc", head=19, length=4, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:19", lemma="Λακεδαιμόνιος", form="Λακεδαιμονίους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873719, posClass="N", pos="adj", ref="1.107.7-019", tbwid=19, degree="", value="Λακεδαιμονίους", gender="masc", posAdd="os_h_on", case="acc", head=17, length=14, )
+lemma = gdb.nodes.filter(Q("CITE", exact="urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος"), start=nodes)[0]
+if lemma is None:
+  lemma = gdb.node(value="Λακεδαιμόνιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος" )
+lemma.values(w)
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:20", ref="", lemma="", tbwid=20, form="", value=".", relation="AuxK", head=0, cid=26873720, pos="punct", length=1, )
+s.words(w)
+words = "ἦλθον δὲ καὶ Θεσσαλῶν ἱππῆς τοῖς Ἀθηναίοις κατὰ τὸ ξυμμαχικόν , οἳ μετέστησαν ἐν τῷ ἔργῳ παρὰ τοὺς Λακεδαιμονίους . "
+s['sentence'] = "ἦλθον δὲ καὶ Θεσσαλῶν ἱππῆς τοῖς Ἀθηναίοις κατὰ τὸ ξυμμαχικόν , οἳ μετέστησαν ἐν τῷ ἔργῳ παρὰ τοὺς Λακεδαιμονίους . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.1", length=18)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.1:1", value= "زیرا", length=4)
@@ -26483,8 +26483,8 @@ w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.1:17", value=
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.1:18", value= ".", length=1)
 s.words(w)
-words = "زیراآتنیهابهاینمسیرآمدندتادرشرایطیباشند،تادرآنقدرتشانافزایشیابد."
-s['sentence'] = "زیراآتنیهابهاینمسیرآمدندتادرشرایطیباشند،تادرآنقدرتشانافزایشیابد."
+words = "زیرا آتنی ها به این مسیر آمدند تا در شرایطی باشند، تا در آن قدرتشان افزایش یابد . "
+s['sentence'] = "زیرا آتنی ها به این مسیر آمدند تا در شرایطی باشند، تا در آن قدرتشان افزایش یابد . "
 d2.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.3", length=46)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.3:1", value= "اما", length=3)
@@ -26579,8 +26579,8 @@ w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.3:45", value=
 s.words(w)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.3:46", value= ".", length=1)
 s.words(w)
-words = "امامردمآتن،بعدازآنکهخودبیگانگانازکشوربیرونرفتند،بلافاصلهانتقالدادندازآنجاوبهیکجایامنبردندبچههاوزنهاوباقیماندهوسایلرا،ودوبارهساختندشهرراوگسترشدادنددیواررا."
-s['sentence'] = "امامردمآتن،بعدازآنکهخودبیگانگانازکشوربیرونرفتند،بلافاصلهانتقالدادندازآنجاوبهیکجایامنبردندبچههاوزنهاوباقیماندهوسایلرا،ودوبارهساختندشهرراوگسترشدادنددیواررا."
+words = "اما مردم آتن ، بعد از آنکه خود بیگانگان از کشور بیرون رفتند ، بلافاصله انتقال دادند از آنجا و به یک جای امن بردند بچه ها و زن ها و باقیمانده وسایل را ، و دوباره ساختند شهر را و گسترش دادند دیوار را . "
+s['sentence'] = "اما مردم آتن ، بعد از آنکه خود بیگانگان از کشور بیرون رفتند ، بلافاصله انتقال دادند از آنجا و به یک جای امن بردند بچه ها و زن ها و باقیمانده وسایل را ، و دوباره ساختند شهر را و گسترش دادند دیوار را . "
 d2.sentences(s)
 w = gdb.nodes.filter(Q("CTS", exact="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.1:1"), start=nodes)[0]
 relatedWord = gdb.nodes.filter(Q("CTS", exact="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1:2"), start=nodes)[0]
