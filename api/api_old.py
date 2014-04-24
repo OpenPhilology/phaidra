@@ -327,7 +327,7 @@ class VisualizationResource(ModelResource):
 		gdb = GraphDatabase("http://localhost:7474/db/data/")
 		level = request.GET.get('level')
 		#user = AppUser.objects.get(username = request.GET.get('user'))
-		submissions = gdb.query("""START n=node(*) MATCH (s)-[:answered_by]->(n) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")	
+		submissions = gdb.query("""START n=node(*) MATCH (n)-[:user_submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")	
 		data = {}	
 		
 		if level == "word-level":
@@ -929,7 +929,7 @@ class SentenceShortResource(ModelResource):
 		# filter word on parameters 
 		#/api/sentence/?randomized=&format=json&lemma=κρατέω
 		gdb = GraphDatabase("http://localhost:7474/db/data/")
-		q = """START n=node(*) MATCH (w)-[:belongs_to]->(n) WHERE """
+		q = """START n=node(*) MATCH (n)-[:words]->(w) WHERE """
 		if len(query_params) > 0:
 			for key in query_params:
 				q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
@@ -962,7 +962,7 @@ class SentenceShortResource(ModelResource):
 		
 				for word in words:
 					# now get the words of this sentence as dict array
-					sentTable = gdb.query("""START s=node(*) MATCH (w)-[:belongs_to]->(s) WHERE HAS (w.CTS) AND w.CTS = '""" +word['CTS']+ """' WITH s, w MATCH (w2)-[:belongs_to]->(s) RETURN w2""")
+					sentTable = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE HAS (w.CTS) AND w.CTS = '""" +word['CTS']+ """' WITH s, w MATCH (s)-[:words]->(w2) RETURN w2""")
 					sentence = []
 					counter = 0
 					for word in sentTable.elements:
@@ -980,7 +980,7 @@ class SentenceShortResource(ModelResource):
 						
 				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
 			
-			# randomized, long FIRST HANDLE STARTS/ENDS...
+			# randomized, long FIRST HANDLE STARTS/ENDS... ###### Noch umschreiben
 			#/api/sentence/?randomized=&format=json&lemma=κρατέω	
 			else:
 				
@@ -1007,7 +1007,7 @@ class SentenceShortResource(ModelResource):
 				if CTS is None:				
 					return self.error_response(request, {'error': 'CTS required.'}, response_class=HttpBadRequest)
 				
-				# not randomized, short with CTS
+				# not randomized, short with CTS ###### Noch umschreiben
 				#/api/sentence/?format=json&short=&CTS=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5
 				else:
 					sentence = Sentence.objects.get(CTS = CTS)
@@ -1024,7 +1024,7 @@ class SentenceShortResource(ModelResource):
 				
 				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
 			
-			# not randomized, long, no CTS implies default or error
+			# not randomized, long, no CTS implies default or error 
 			else:
 				CTS = request.GET.get('CTS')
 				# if CTS is missed all sentences containing words that hit the query are returned
@@ -1037,7 +1037,7 @@ class SentenceShortResource(ModelResource):
 					else:
 						return self.error_response(request, {'error': 'CTS required or sentence parameters.'}, response_class=HttpBadRequest)
 				
-				# not randomized, long, CTS return one sentence
+				# not randomized, long, CTS return one sentence ###### Noch umschreiben
 				#/api/sentence/?format=json&CTS=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.5
 				else:
 						
