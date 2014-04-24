@@ -7130,6 +7130,760 @@ s.words(w)
 words = "τὸ δὲ ὕψος ἥμισυ μάλιστα ἐτελέσθη οὗ διενοεῖτο . "
 s['sentence'] = "τὸ δὲ ὕψος ἥμισυ μάλιστα ἐτελέσθη οὗ διενοεῖτο . "
 d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10", length=32)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:1", lemma="βούλομαι", person="3rd", isIndecl="", voice="mp", form="ἐβούλετο", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871697, posClass="V", pos="verb", ref="1.093.6-001", tbwid=1, value="ἐβούλετο", posAdd="w_stem,nw", head=15, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βούλομαι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="βούλομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βούλομαι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:2", ref="1.093.6-002", lemma="γάρ", tbwid=2, isIndecl="indeclform", form="γάρ", dialect="", value="γὰρ", relation="AuxY", head=1, cid=26871698, posClass="N", pos="particle", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="γάρ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:3", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871699, posClass="N", pos="article", ref="1.093.6-003", tbwid=3, value="τῷ", gender="neut", case="dat", head=4, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:4", lemma="μέγεθος", form="μεγέθει", isIndecl="", dialect="", relation="ADV_CO", number="sg", cid=26871700, posClass="N", pos="noun", ref="1.093.6-004", tbwid=4, value="μεγέθει", gender="neut", posAdd="hs_eos", case="dat", head=5, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέγεθος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="μέγεθος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέγεθος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:5", ref="1.093.6-005", lemma="καί", tbwid=5, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=8, cid=26871701, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:6", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871702, posClass="N", pos="article", ref="1.093.6-006", tbwid=6, value="τῷ", gender="neut", case="dat", head=7, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:7", lemma="πάχος", form="πάχει", isIndecl="", dialect="", relation="ADV_CO", number="sg", cid=26871703, posClass="N", pos="noun", ref="1.093.6-007", tbwid=7, value="πάχει", gender="neut", posAdd="hs_eos", case="dat", head=5, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάχος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="πάχος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάχος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:8", lemma="ἀφίστημι", person="", isIndecl="causal pres_redupl", voice="act", form="ἀφιστάναι", dialect="", tense="pres", relation="OBJ", mood="inf", number="", cid=26871704, posClass="V", pos="verb", ref="1.093.6-008", tbwid=8, value="ἀφιστάναι", posAdd="ami_pr", head=1, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀφίστημι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἀφίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀφίστημι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:9", lemma="ὁ", form="τα_ς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871705, posClass="N", pos="article", ref="1.093.6-009", tbwid=9, value="τὰς", gender="fem", case="acc", head=12, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:10", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871706, posClass="N", pos="article", ref="1.093.6-010", tbwid=10, value="τῶν", gender="masc", case="gen", head=11, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:11", lemma="πολέμιος", form="πολεμίων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871707, posClass="N", pos="adj", ref="1.093.6-011", tbwid=11, degree="", value="πολεμίων", gender="masc", posAdd="os_on", case="gen", head=12, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολέμιος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="πολέμιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολέμιος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:12", lemma="ἐπιβουλή", form="ἐπιβουλα_ς", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871708, posClass="N", pos="noun", ref="1.093.6-012", tbwid=12, value="ἐπιβουλάς", gender="fem", posAdd="h_hs", case="acc", head=8, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιβουλή' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐπιβουλή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιβουλή" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:13", ref="", lemma="", tbwid=13, form="", value=",", relation="AuxX", head=15, cid=26871709, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:14", lemma="ἄνθρωπος", form="ἀνθρώπων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871710, posClass="N", pos="noun", ref="1.093.6-014", tbwid=14, value="ἀνθρώπων", gender="masc", posAdd="os_ou", case="gen", head=23, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνθρωπος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἄνθρωπος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνθρωπος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:15", ref="1.093.6-015", lemma="τε", tbwid=15, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="COORD", head=0, cid=26871711, posClass="N", pos="particle", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:16", lemma="νομίζω", person="3rd", isIndecl="nu_movable", voice="act", form="ἐνόμιζεν", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871712, posClass="V", pos="verb", ref="1.093.6-016", tbwid=16, value="ἐνόμιζεν", posAdd="w_stem,izw", head=15, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:17", lemma="ὀλίγος", form="ὀλίγων", isIndecl="", dialect="", relation="ATR_CO", number="pl", cid=26871713, posClass="N", pos="adj", ref="1.093.6-017", tbwid=17, degree="", value="ὀλίγων", gender="masc", posAdd="os_h_on", case="gen", head=18, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὀλίγος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὀλίγος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὀλίγος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:18", ref="1.093.6-018", lemma="καί", tbwid=18, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=14, cid=26871714, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:19", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871715, posClass="N", pos="article", ref="1.093.6-019", tbwid=19, value="τῶν", gender="masc", case="gen", head=20, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:20", lemma="ἀχρεῖος", form="ἀχρειοτάτων", isIndecl="", dialect="", relation="ATR_CO", number="pl", cid=26871716, posClass="N", pos="adj", ref="1.093.6-020", tbwid=20, degree="superl", value="ἀχρειοτάτων", gender="masc", posAdd="os_on", case="gen", head=18, length=11, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀχρεῖος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἀχρεῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀχρεῖος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:21", lemma="ἀρκέω", person="", isIndecl="contr", voice="act", form="ἀρκέσειν", dialect="attic epic", tense="fut", relation="OBJ_CO", mood="inf", number="", cid=26871717, posClass="V", pos="verb", ref="1.093.6-021", tbwid=21, value="ἀρκέσειν", posAdd="reg_fut,e_stem", head=26, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀρκέω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἀρκέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀρκέω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:22", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871718, posClass="N", pos="article", ref="1.093.6-022", tbwid=22, value="τὴν", gender="fem", case="acc", head=23, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:23", lemma="φυλακή", form="φυλακήν", isIndecl="", dialect="attic epic ionic", relation="OBJ", number="sg", cid=26871719, posClass="N", pos="noun", ref="1.093.6-023", tbwid=23, value="φυλακήν", gender="fem", posAdd="h_hs", case="acc", head=21, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φυλακή' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="φυλακή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φυλακή" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:24", ref="", lemma="", tbwid=24, form="", value=",", relation="AuxX", head=26, cid=26871720, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:25", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871721, posClass="N", pos="article", ref="1.093.6-025", tbwid=25, value="τοὺς", gender="masc", case="acc", head=27, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:26", ref="1.093.6-026", lemma="δέ", tbwid=26, isIndecl="indeclform", form="δέ", dialect="", value="δ'", relation="COORD", head=16, cid=26871722, posClass="N", pos="particle", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:27", lemma="ἄλλος", form="ἄλλους", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26871723, posClass="N", pos="adj", ref="1.093.6-027", tbwid=27, degree="", value="ἄλλους", gender="masc", posAdd="art_adj", case="acc", head=31, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:28", ref="1.093.6-028", lemma="εἰς", tbwid=28, isIndecl="proclitic indeclform", form="ἐς", dialect="", value="ἐς", relation="AuxP", head=31, cid=26871724, posClass="N", pos="prep", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="εἰς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:29", lemma="ὁ", form="τα_ς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871725, posClass="N", pos="article", ref="1.093.6-029", tbwid=29, value="τὰς", gender="fem", case="acc", head=30, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:30", lemma="ναῦς", form="ναῦς", isIndecl="indeclform", dialect="attic", relation="OBJ", number="pl", cid=26871726, posClass="N", pos="noun", ref="1.093.6-030", tbwid=30, value="ναῦς", gender="fem", posAdd="irreg_decl3", case="acc", head=28, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:31", lemma="εἰσβαίνω", person="", isIndecl="short_eis", voice="mid", form="ἐσβήσεσθαι", dialect="", tense="fut", relation="OBJ_CO", mood="inf", number="", cid=26871727, posClass="V", pos="verb", ref="1.093.6-031", tbwid=31, value="ἐσβήσεσθαι", posAdd="reg_fut,a_stem", head=26, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰσβαίνω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="εἰσβαίνω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰσβαίνω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:32", ref="", lemma="", tbwid=32, form="", value=".", relation="AuxK", head=0, cid=26871728, pos="punct", length=1, )
+s.words(w)
+words = "ἐβούλετο γὰρ τῷ μεγέθει καὶ τῷ πάχει ἀφιστάναι τὰς τῶν πολεμίων ἐπιβουλάς , ἀνθρώπων τε ἐνόμιζεν ὀλίγων καὶ τῶν ἀχρειοτάτων ἀρκέσειν τὴν φυλακήν , τοὺς δ' ἄλλους ἐς τὰς ναῦς ἐσβήσεσθαι . "
+s['sentence'] = "ἐβούλετο γὰρ τῷ μεγέθει καὶ τῷ πάχει ἀφιστάναι τὰς τῶν πολεμίων ἐπιβουλάς , ἀνθρώπων τε ἐνόμιζεν ὀλίγων καὶ τῶν ἀχρειοτάτων ἀρκέσειν τὴν φυλακήν , τοὺς δ' ἄλλους ἐς τὰς ναῦς ἐσβήσεσθαι . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11", length=25)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:1", lemma="ὁ", form="ταῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871729, posClass="N", pos="article", ref="1.093.7-001", tbwid=1, value="ταῖς", gender="fem", case="dat", head=3, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:2", ref="1.093.7-002", lemma="γάρ", tbwid=2, isIndecl="indeclform", form="γάρ", dialect="", value="γὰρ", relation="AuxY", head=5, cid=26871730, posClass="N", pos="particle", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="γάρ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:3", lemma="ναῦς", form="ναυσί", isIndecl="indeclform", dialect="attic doric", relation="OBJ", number="pl", cid=26871731, posClass="N", pos="noun", ref="1.093.7-003", tbwid=3, value="ναυσὶ", gender="fem", posAdd="irreg_decl3", case="dat", head=5, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:4", lemma="μάλιστα", form="μάλιστα", isIndecl="indeclform", dialect="", relation="ADV", cid=26871732, pos="adverb", posClass="N", tbwid=4, ref="1.093.7-004", degree="superl", value="μάλιστα", head=5, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μάλιστα' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="μάλιστα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μάλιστα" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:5", lemma="πρόσκειμαι", person="3rd", isIndecl="", voice="mp", form="προσέκειτο", dialect="", tense="imperf", relation="PRED", mood="ind", number="sg", cid=26871733, posClass="V", pos="verb", ref="1.093.7-005", tbwid=5, value="προσέκειτο", posAdd="ath_primary", head=0, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρόσκειμαι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="πρόσκειμαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρόσκειμαι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:6", ref="", lemma="", tbwid=6, form="", value=",", relation="AuxX", head=7, cid=26871734, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:7", lemma="εἶδον", form="ἰδών", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="sg", cid=26871735, posClass="P", pos="participle", ref="1.093.7-007", tbwid=7, value="ἰδών", gender="masc", posAdd="aor2", case="nom", head=5, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἶδον' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="εἶδον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἶδον" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:8", ref="", lemma="", tbwid=8, form="", value=",", relation="AuxX", head=9, cid=26871736, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:9", ref="1.093.7-009", lemma="", tbwid=9, degree="", form="", value="ὡς", relation="AuxC", head=7, cid=26871737, pos="adverb", length=2, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:10", lemma="ἐγώ", person="1st", form="ἐμοί", isIndecl="indeclform", dialect="", relation="OBJ", number="sg", cid=26871738, posClass="N", pos="pron", ref="1.093.7-010", tbwid=10, value="ἐμοὶ", gender="masc", posAdd="pron1", case="dat", head=11, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐγώ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐγώ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐγώ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:11", lemma="δοκέω", person="3rd", isIndecl="contr", voice="act", form="δοκεῖ", dialect="attic epic doric ionic", tense="pres", relation="ADV", mood="ind", number="sg", cid=26871739, posClass="V", pos="verb", ref="1.093.7-011", tbwid=11, value="δοκεῖ", posAdd="ew_pr,ew_denom", head=9, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δοκέω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="δοκέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δοκέω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:12", ref="", lemma="", tbwid=12, form="", value=",", relation="AuxX", head=9, cid=26871740, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:13", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871741, posClass="N", pos="article", ref="1.093.7-013", tbwid=13, value="τῆς", gender="fem", case="gen", head=15, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:14", lemma="βασιλεύς", form="βασιλέω^ς", isIndecl="", dialect="attic ionic", relation="ATR", number="sg", cid=26871742, posClass="N", pos="noun", ref="1.093.7-014", tbwid=14, value="βασιλέως", gender="masc", posAdd="eus_ews", case="gen", head=15, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βασιλεύς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="βασιλεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βασιλεύς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:15", lemma="στρατιά", form="στρατιᾶς", isIndecl="", dialect="attic doric aeolic", relation="ATR", number="sg", cid=26871743, posClass="N", pos="noun", ref="1.093.7-015", tbwid=15, value="στρατιᾶς", gender="fem", posAdd="h_hs", case="gen", head=19, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:στρατιά' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="στρατιά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:στρατιά" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:16", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871744, posClass="N", pos="article", ref="1.093.7-016", tbwid=16, value="τὴν", gender="fem", case="acc", head=19, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:17", ref="1.093.7-017", lemma="κατά", tbwid=17, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=19, cid=26871745, posClass="N", pos="prep", length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:18", lemma="θάλασσα", form="θάλασσαν", isIndecl="", dialect="", relation="ATR", number="sg", cid=26871746, posClass="N", pos="noun", ref="1.093.7-018", tbwid=18, value="θάλασσαν", gender="fem", posAdd="a_hs", case="acc", head=17, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:θάλασσα' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="θάλασσα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:θάλασσα" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:19", lemma="ἔφοδοϲ", form="ἔφοδον", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26871747, posClass="N", pos="noun", ref="1.093.7-019", tbwid=19, value="ἔφοδον", gender="fem", posAdd="os_ou", case="acc", head=7, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔφοδοϲ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἔφοδοϲ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔφοδοϲ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:20", lemma="εὔπορος", form="εὐπορωτέρα_ν", isIndecl="", dialect="attic doric aeolic", relation="PNOM", number="sg", cid=26871748, posClass="N", pos="adj", ref="1.093.7-020", tbwid=20, degree="comp", value="εὐπορωτέραν", gender="fem", posAdd="os_on", case="acc", head=24, length=11, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὔπορος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="εὔπορος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὔπορος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:21", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ADV", number="sg", cid=26871749, posClass="N", pos="pron", ref="1.093.7-021", tbwid=21, value="τῆς", gender="fem", posAdd="article", case="gen", head=20, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:22", ref="1.093.7-022", lemma="κατά", tbwid=22, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=21, cid=26871750, posClass="N", pos="prep", length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:23", lemma="γῆ", form="γῆν", isIndecl="contr", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871751, posClass="N", pos="noun", ref="1.093.7-023", tbwid=23, value="γῆν", gender="fem", posAdd="eh_ehs", case="acc", head=22, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="γῆ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:24", lemma="εἰμί", form="οὖσαν", isIndecl="", voice="act", dialect="attic epic doric ionic", tense="pres", relation="ATV", mood="part", number="sg", cid=26871752, posClass="P", pos="participle", ref="1.093.7-024", tbwid=24, value="οὖσαν", gender="fem", posAdd="irreg_mi", case="acc", head=19, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰμί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="εἰμί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰμί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:25", ref="", lemma="", tbwid=25, form="", value="·", relation="AuxK", head=0, cid=26871753, pos="punct", length=1, )
+s.words(w)
+words = "ταῖς γὰρ ναυσὶ μάλιστα προσέκειτο , ἰδών , ὡς ἐμοὶ δοκεῖ , τῆς βασιλέως στρατιᾶς τὴν κατὰ θάλασσαν ἔφοδον εὐπορωτέραν τῆς κατὰ γῆν οὖσαν · "
+s['sentence'] = "ταῖς γὰρ ναυσὶ μάλιστα προσέκειτο , ἰδών , ὡς ἐμοὶ δοκεῖ , τῆς βασιλέως στρατιᾶς τὴν κατὰ θάλασσαν ἔφοδον εὐπορωτέραν τῆς κατὰ γῆν οὖσαν · "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12", length=31)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:1", lemma="ὁ", form="τόν", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871754, posClass="N", pos="pron", ref="1.093.7-025", tbwid=1, value="τόν", gender="masc", posAdd="article", case="acc", head=3, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:2", ref="1.093.7-026", lemma="τε", tbwid=2, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="AuxY", head=10, cid=26871755, posClass="N", pos="particle", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:3", lemma="Πειραιεύς", form="Πειραιᾶ", isIndecl="contr r_e_i_alpha", dialect="attic", relation="OBJ", number="sg", cid=26871756, posClass="N", pos="noun", ref="1.093.7-027", tbwid=3, value="Πειραιᾶ", gender="masc", posAdd="eus_ews", case="acc", head=5, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Πειραιεύς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Πειραιεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Πειραιεύς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:4", lemma="ὠφέλιμος", form="ὠφελιμώτερον", isIndecl="", dialect="", relation="OCOMP", number="sg", cid=26871757, posClass="N", pos="adj", ref="1.093.7-028", tbwid=4, degree="comp", value="ὠφελιμώτερον", gender="masc", posAdd="os_on", case="acc", head=5, length=12, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὠφέλιμος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὠφέλιμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὠφέλιμος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:5", lemma="νομίζω", person="3rd", isIndecl="", voice="act", form="ἐνόμιζε", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871758, posClass="V", pos="verb", ref="1.093.7-029", tbwid=5, value="ἐνόμιζε", posAdd="w_stem,izw", head=10, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:6", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871759, posClass="N", pos="article", ref="1.093.7-030", tbwid=6, value="τῆς", gender="fem", case="gen", head=8, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:7", lemma="ἄνω2", form="ἄνω", isIndecl="indeclform", dialect="", relation="ATR", cid=26871760, pos="adverb", posClass="N", tbwid=7, ref="1.093.7-031", degree="", value="ἄνω", head=8, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνω2' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἄνω2", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνω2" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:8", lemma="πόλις", form="πόλεω^ς", isIndecl="", dialect="attic epic doric ionic", relation="ADV", number="sg", cid=26871761, posClass="N", pos="noun", ref="1.093.7-032", tbwid=8, value="πόλεως", gender="fem", posAdd="is_ews", case="gen", head=4, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλις' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="πόλις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλις" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:9", ref="", lemma="", tbwid=9, form="", value=",", relation="AuxX", head=10, cid=26871762, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:10", ref="1.093.7-034", lemma="καί", tbwid=10, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871763, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:11", lemma="πολλάκις", form="πολλάκις", isIndecl="indeclform", dialect="", relation="ADV", cid=26871764, pos="adverb", posClass="N", tbwid=11, ref="1.093.7-035", degree="", value="πολλάκις", head=14, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολλάκις' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="πολλάκις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολλάκις" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:12", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871765, posClass="N", pos="article", ref="1.093.7-036", tbwid=12, value="τοῖς", gender="masc", case="dat", head=13, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:13", lemma="Ἀθηναῖος", form="Ἀθηναι_οις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871766, posClass="N", pos="adj", ref="1.093.7-037", tbwid=13, degree="", value="Ἀθηναίοις", gender="masc", posAdd="os_h_on", case="dat", head=14, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:14", lemma="παραινέω", person="3rd", isIndecl="contr", voice="act", form="παρῄνει", dialect="attic epic", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871767, posClass="V", pos="verb", ref="1.093.7-038", tbwid=14, value="παρῄνει", posAdd="ew_pr,e_stem", head=10, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παραινέω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="παραινέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παραινέω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:15", ref="", lemma="", tbwid=15, form="", value=",", relation="AuxX", head=16, cid=26871768, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:16", ref="1.093.7-040", lemma="ἐάν", tbwid=16, isIndecl="contr indeclform", form="ἤν", dialect="", value="ἢν", relation="AuxC", head=30, cid=26871769, posClass="N", pos="conj", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐάν' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐάν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐάν" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:17", ref="1.093.7-041", lemma="ἄρα", tbwid=17, isIndecl="indeclform", form="ἄρα", dialect="", value="ἄρα", relation="AuxY", head=21, cid=26871770, posClass="N", pos="particle", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄρα' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἄρα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄρα" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:18", ref="1.093.7-042", lemma="ποτέ", tbwid=18, isIndecl="enclitic indeclform", form="ποτε", dialect="", value="ποτὲ", relation="AuxY", head=21, cid=26871771, posClass="N", pos="particle", length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ποτέ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ποτέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ποτέ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:19", ref="1.093.7-043", lemma="κατά", tbwid=19, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=21, cid=26871772, posClass="N", pos="prep", length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:20", lemma="γῆ", form="γῆν", isIndecl="contr", dialect="attic epic ionic", relation="ADV", number="sg", cid=26871773, posClass="N", pos="noun", ref="1.093.7-044", tbwid=20, value="γῆν", gender="fem", posAdd="eh_ehs", case="acc", head=19, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="γῆ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:21", lemma="βιάζω", person="3rd", isIndecl="contr", voice="pass", form="βιασθῶσι", dialect="attic epic doric", tense="aor", relation="ADV", mood="subj", number="pl", cid=26871774, posClass="V", pos="verb", ref="1.093.7-045", tbwid=21, value="βιασθῶσι", posAdd="aor_pass,azw", head=16, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βιάζω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="βιάζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βιάζω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:22", ref="", lemma="", tbwid=22, form="", value=",", relation="AuxX", head=16, cid=26871775, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:23", lemma="καταβαίνω", form="καταβάντας", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26871776, posClass="P", pos="participle", ref="1.093.7-047", tbwid=23, value="καταβάντας", gender="masc", posAdd="ath_h_aor", case="acc", head=30, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καταβαίνω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καταβαίνω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καταβαίνω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:24", ref="1.093.7-048", lemma="εἰς", tbwid=24, isIndecl="proclitic indeclform", form="ἐς", dialect="", value="ἐς", relation="AuxP", head=23, cid=26871777, posClass="N", pos="prep", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="εἰς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:25", lemma="αὐτός", form="αὐτόν", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26871778, posClass="N", pos="adj", ref="1.093.7-049", tbwid=25, degree="", value="αὐτὸν", gender="masc", posAdd="art_adj", case="acc", head=24, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="αὐτός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:26", lemma="ὁ", form="ταῖς", isIndecl="indeclform", dialect="", relation="ADV", number="pl", cid=26871779, posClass="N", pos="article", ref="1.093.7-050", tbwid=26, value="ταῖς", gender="fem", case="dat", head=27, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:27", lemma="ναῦς", form="ναυσί", isIndecl="indeclform", dialect="attic doric", relation="ADV", number="pl", cid=26871780, posClass="N", pos="noun", ref="1.093.7-051", tbwid=27, value="ναυσὶ", gender="fem", posAdd="irreg_decl3", case="dat", head=30, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:28", ref="1.093.7-052", lemma="πρός", tbwid=28, isIndecl="indeclform", form="πρός", dialect="", value="πρὸς", relation="AuxP", head=30, cid=26871781, posClass="N", pos="prep", length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρός' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="πρός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρός" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:29", lemma="ἅπας", form="ἅπαντας", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871782, posClass="N", pos="adj", ref="1.093.7-053", tbwid=29, degree="", value="ἅπαντας", gender="masc", posAdd="as_asa_an", case="acc", head=28, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἅπας' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἅπας", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἅπας" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:30", lemma="ἀνθίστημι", person="", isIndecl="elide_preverb causal pres_redupl", voice="mp", form="ἀνθίστασθαι", dialect="", tense="pres", relation="OBJ", mood="inf", number="", cid=26871783, posClass="V", pos="verb", ref="1.093.7-054", tbwid=30, value="ἀνθίστασθαι", posAdd="ami_pr", head=14, length=11, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀνθίστημι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἀνθίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀνθίστημι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:31", ref="", lemma="", tbwid=31, form="", value=".", relation="AuxK", head=0, cid=26871784, pos="punct", length=1, )
+s.words(w)
+words = "τόν τε Πειραιᾶ ὠφελιμώτερον ἐνόμιζε τῆς ἄνω πόλεως , καὶ πολλάκις τοῖς Ἀθηναίοις παρῄνει , ἢν ἄρα ποτὲ κατὰ γῆν βιασθῶσι , καταβάντας ἐς αὐτὸν ταῖς ναυσὶ πρὸς ἅπαντας ἀνθίστασθαι . "
+s['sentence'] = "τόν τε Πειραιᾶ ὠφελιμώτερον ἐνόμιζε τῆς ἄνω πόλεως , καὶ πολλάκις τοῖς Ἀθηναίοις παρῄνει , ἢν ἄρα ποτὲ κατὰ γῆν βιασθῶσι , καταβάντας ἐς αὐτὸν ταῖς ναυσὶ πρὸς ἅπαντας ἀνθίστασθαι . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13", length=14)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:1", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26871785, posClass="N", pos="adj", ref="1.093.8-001", tbwid=1, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=6, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:2", ref="1.093.8-002", lemma="μέν", tbwid=2, isIndecl="indeclform", form="μέν", dialect="", value="μὲν", relation="AuxY", head=6, cid=26871786, posClass="N", pos="particle", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέν' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="μέν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέν" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:3", ref="1.093.8-003", lemma="οὖν", tbwid=3, isIndecl="indeclform", form="οὖν", dialect="", value="οὖν", relation="AuxZ", head=2, cid=26871787, posClass="N", pos="particle", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὖν' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="οὖν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὖν" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:4", lemma="οὕτως", form="οὕτως", isIndecl="indeclform", dialect="", relation="ADV", cid=26871788, pos="adverb", posClass="N", tbwid=4, ref="1.093.8-004", degree="", value="οὕτως", head=6, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὕτως' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="οὕτως", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὕτως" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:5", lemma="τειχίζω", person="3rd", isIndecl="", voice="pass", form="ἐτειχίσθησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26871789, posClass="V", pos="verb", ref="1.093.8-005", tbwid=5, value="ἐτειχίσθησαν", posAdd="aor_pass,izw", head=6, length=12, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τειχίζω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="τειχίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τειχίζω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:6", ref="1.093.8-006", lemma="καί", tbwid=6, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871790, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:7", lemma="ἄλλος", form="ἄλλα", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871791, posClass="N", pos="adj", ref="1.093.8-007", tbwid=7, degree="", value="τἆλλα", gender="neut", posAdd="art_adj", case="acc", head=8, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:8", lemma="κατασκευάζω", person="3rd", isIndecl="", voice="mp", form="κατεσκευάζοντο", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="pl", cid=26871792, posClass="V", pos="verb", ref="1.093.8-008", tbwid=8, value="κατεσκευάζοντο", posAdd="w_stem,azw", head=6, length=14, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατασκευάζω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="κατασκευάζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατασκευάζω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:9", lemma="εὐθύς", form="εὐθύς", isIndecl="indeclform", dialect="", relation="ADV", cid=26871793, pos="adverb", posClass="N", tbwid=9, ref="1.093.8-009", degree="", value="εὐθὺς", head=8, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὐθύς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="εὐθύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὐθύς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:10", ref="1.093.8-010", lemma="μετά", tbwid=10, isIndecl="indeclform", form="μετά", dialect="", value="μετὰ", relation="AuxP", head=8, cid=26871794, posClass="N", pos="prep", length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μετά' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="μετά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μετά" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:11", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871795, posClass="N", pos="article", ref="1.093.8-011", tbwid=11, value="τὴν", gender="fem", case="acc", head=13, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:12", lemma="Μῆδος", form="Μήδων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871796, posClass="N", pos="noun", ref="1.093.8-012", tbwid=12, value="Μήδων", gender="masc", posAdd="os_ou", case="gen", head=13, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μῆδος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Μῆδος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μῆδος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:13", lemma="ἀναχώρησις", form="ἀναχώρησιν", isIndecl="", dialect="", relation="ADV", number="sg", cid=26871797, posClass="N", pos="noun", ref="1.093.8-013", tbwid=13, value="ἀναχώρησιν", gender="fem", posAdd="is_ews", case="acc", head=10, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀναχώρησις' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἀναχώρησις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀναχώρησις" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:14", ref="", lemma="", tbwid=14, form="", value=".", relation="AuxK", head=0, cid=26871798, pos="punct", length=1, )
+s.words(w)
+words = "Ἀθηναῖοι μὲν οὖν οὕτως ἐτειχίσθησαν καὶ τἆλλα κατεσκευάζοντο εὐθὺς μετὰ τὴν Μήδων ἀναχώρησιν . "
+s['sentence'] = "Ἀθηναῖοι μὲν οὖν οὕτως ἐτειχίσθησαν καὶ τἆλλα κατεσκευάζοντο εὐθὺς μετὰ τὴν Μήδων ἀναχώρησιν . "
+d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.1", length=16)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.94.1:1", lemma="Παυσανίας", form="Παυσανία_ς", isIndecl="", dialect="attic epic doric aeolic", relation="SBJ", number="sg", cid=26871799, posClass="N", pos="noun", ref="1.094.1-001", tbwid=1, value="Παυσανίας", gender="masc", posAdd="hs_ou", case="nom", head=10, length=9, )
 lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Παυσανίας' RETURN n""")
@@ -8775,6 +9529,426 @@ w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.9:19", ref="
 s.words(w)
 words = "καὶ ἐκεῖνον μὲν οὐκέτι ἐκπέμπουσιν ἄρχοντα , Δόρκιν δὲ καὶ ἄλλους τινὰς μετ' αὐτοῦ στρατιὰν ἔχοντας οὐ πολλήν · "
 s['sentence'] = "καὶ ἐκεῖνον μὲν οὐκέτι ἐκπέμπουσιν ἄρχοντα , Δόρκιν δὲ καὶ ἄλλους τινὰς μετ' αὐτοῦ στρατιὰν ἔχοντας οὐ πολλήν · "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10", length=8)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:1", lemma="ὅς", form="οἷς", isIndecl="indeclform", dialect="", relation="OBJ", number="pl", cid=26872019, posClass="N", pos="pron", ref="1.095.6-019", tbwid=1, value="οἷς", gender="masc", posAdd="relative", case="dat", head=3, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὅς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:2", lemma="οὐκέτι", form="οὐκέτι", isIndecl="indeclform", dialect="", relation="AuxZ", cid=26872020, pos="adverb", posClass="N", tbwid=2, ref="1.095.6-020", degree="", value="οὐκέτι", head=3, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="οὐκέτι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:3", lemma="ἐφίημι", person="3rd", isIndecl="", voice="act", form="ἐφι_εσαν", dialect="", tense="imperf", relation="PRED", mood="ind", number="pl", cid=26872021, posClass="V", pos="verb", ref="1.095.6-021", tbwid=3, value="ἐφίεσαν", posAdd="irreg_mi", head=0, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐφίημι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐφίημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐφίημι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:4", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872022, posClass="N", pos="article", ref="1.095.6-022", tbwid=4, value="οἱ", gender="masc", case="nom", head=5, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:5", lemma="σύμμαχος", form="ξύμμαχοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872023, posClass="N", pos="adj", ref="1.095.6-023", tbwid=5, degree="", value="ξύμμαχοι", gender="masc", posAdd="os_on", case="nom", head=3, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σύμμαχος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="σύμμαχος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σύμμαχος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:6", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26872024, posClass="N", pos="article", ref="1.095.6-024", tbwid=6, value="τὴν", gender="fem", case="acc", head=7, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:7", lemma="ἡγεμονία", form="ἡγεμονία_ν", isIndecl="", dialect="attic doric aeolic", relation="OBJ", number="sg", cid=26872025, posClass="N", pos="noun", ref="1.095.6-025", tbwid=7, value="ἡγεμονίαν", gender="fem", posAdd="h_hs", case="acc", head=3, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἡγεμονία' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἡγεμονία", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἡγεμονία" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:8", ref="", lemma="", tbwid=8, form="", value=".", relation="AuxK", head=0, cid=26872026, pos="punct", length=1, )
+s.words(w)
+words = "οἷς οὐκέτι ἐφίεσαν οἱ ξύμμαχοι τὴν ἡγεμονίαν . "
+s['sentence'] = "οἷς οὐκέτι ἐφίεσαν οἱ ξύμμαχοι τὴν ἡγεμονίαν . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11", length=48)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26872027, posClass="N", pos="pron", ref="1.095.7-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=4, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:2", ref="1.095.7-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="AuxY", head=6, cid=26872028, posClass="N", pos="particle", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:3", lemma="αἰσθάνομαι", form="αἰσθόμενοι", isIndecl="", voice="mid", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26872029, posClass="P", pos="participle", ref="1.095.7-003", tbwid=3, value="αἰσθόμενοι", gender="masc", posAdd="aor2,anw", case="nom", head=4, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αἰσθάνομαι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="αἰσθάνομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αἰσθάνομαι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:4", lemma="ἀπέρχομαι", person="3rd", isIndecl="", voice="act", form="ἀπῆλθον", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26872030, posClass="V", pos="verb", ref="1.095.7-004", tbwid=4, value="ἀπῆλθον", posAdd="aor2", head=6, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπέρχομαι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἀπέρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπέρχομαι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:5", ref="", lemma="", tbwid=5, form="", value=",", relation="AuxX", head=6, cid=26872031, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:6", ref="1.095.7-006", lemma="καί", tbwid=6, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26872032, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:7", lemma="ἄλλος", form="ἄλλους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26872033, posClass="N", pos="adj", ref="1.095.7-007", tbwid=7, degree="", value="ἄλλους", gender="masc", posAdd="art_adj", case="acc", head=10, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:8", lemma="οὐκέτι", form="οὐκέτι", isIndecl="indeclform", dialect="", relation="AuxZ", cid=26872034, pos="adverb", posClass="N", tbwid=8, ref="1.095.7-008", degree="", value="οὐκέτι", head=10, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="οὐκέτι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:9", lemma="ὕστερος", form="ὕστερον", isIndecl="irreg_comp", dialect="", relation="ADV", number="sg", cid=26872035, posClass="N", pos="noun", ref="1.095.7-009", tbwid=9, value="ὕστερον", gender="neut", posAdd="os_h_on", case="acc", head=10, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὕστερος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὕστερος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὕστερος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:10", lemma="ἐκπέμπω", person="3rd", isIndecl="", voice="act", form="ἐξέπεμψαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26872036, posClass="V", pos="verb", ref="1.095.7-010", tbwid=10, value="ἐξέπεμψαν", posAdd="aor1,reg_conj", head=6, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκπέμπω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐκπέμπω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκπέμπω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:11", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872037, posClass="N", pos="article", ref="1.095.7-011", tbwid=11, value="οἱ", gender="masc", case="nom", head=12, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:12", lemma="Λακεδαιμόνιος", form="Λακεδαιμόνιοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872038, posClass="N", pos="adj", ref="1.095.7-012", tbwid=12, degree="", value="Λακεδαιμόνιοι", gender="masc", posAdd="os_h_on", case="nom", head=10, length=13, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Λακεδαιμόνιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:13", ref="", lemma="", tbwid=13, form="", value=",", relation="AuxX", head=30, cid=26872039, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:14", lemma="φοβέω", form="φοβούμενοι", isIndecl="contr", voice="mp", dialect="attic epic doric", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872040, posClass="P", pos="participle", ref="1.095.7-014", tbwid=14, value="φοβούμενοι", gender="masc", posAdd="ew_pr,ew_denom", case="nom", head=30, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φοβέω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="φοβέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φοβέω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:15", ref="1.095.7-015", lemma="μή", tbwid=15, isIndecl="indeclform", form="μή", dialect="", value="μὴ", relation="AuxC", head=14, cid=26872041, posClass="N", pos="conj", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μή' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="μή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μή" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:16", lemma="σφεῖς", form="σφισιν", isIndecl="enclitic nu_movable indeclform", dialect="", relation="ADV", number="pl", cid=26872042, posClass="N", pos="pron", ref="1.095.7-016", tbwid=16, value="σφίσιν", gender="masc", posAdd="pron3", case="dat", head=20, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="σφεῖς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:17", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872043, posClass="N", pos="article", ref="1.095.7-017", tbwid=17, value="οἱ", gender="masc", case="nom", head=18, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:18", lemma="ἔξειμι1", form="ἐξιόντες", isIndecl="", voice="act", dialect="", tense="pres", relation="SBJ", mood="part", number="pl", cid=26872044, posClass="P", pos="participle", ref="1.095.7-018", tbwid=18, value="ἐξιόντες", gender="masc", posAdd="irreg_mi", case="nom", head=20, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔξειμι1' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἔξειμι1", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔξειμι1" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:19", lemma="χείρων", form="χείρους", isIndecl="contr", dialect="", relation="PNOM", number="pl", cid=26872045, posClass="N", pos="adj", ref="1.095.7-019", tbwid=19, degree="comp", value="χείρους", gender="masc", posAdd="wn_on_comp", case="acc", head=20, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:χείρων' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="χείρων", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:χείρων" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:20", lemma="γίγνομαι", person="3rd", isIndecl="pres_redupl", voice="mp", form="γίγνωνται", dialect="", tense="pres", relation="OBJ", mood="subj", number="pl", cid=26872046, posClass="V", pos="verb", ref="1.095.7-020", tbwid=20, value="γίγνωνται", posAdd="w_stem,reg_conj", head=15, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γίγνομαι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="γίγνομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γίγνομαι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:21", ref="", lemma="", tbwid=21, form="", value=",", relation="AuxX", head=27, cid=26872047, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:22", lemma="ὅσπερ", form="ὅπερ", isIndecl="indeclform", dialect="", relation="OBJ", number="sg", cid=26872048, posClass="N", pos="pron", ref="1.095.7-022", tbwid=22, value="ὅπερ", gender="neut", posAdd="relative", case="acc", head=27, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅσπερ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὅσπερ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅσπερ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:23", ref="1.095.7-023", lemma="καί", tbwid=23, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=24, cid=26872049, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:24", ref="1.095.7-024", lemma="ἐν", tbwid=24, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=27, cid=26872050, posClass="N", pos="prep", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:25", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872051, posClass="N", pos="article", ref="1.095.7-025", tbwid=25, value="τῷ", gender="masc", case="dat", head=26, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:26", lemma="Παυσανίας", form="Παυσανία_", isIndecl="", dialect="attic doric aeolic", relation="OBJ", number="sg", cid=26872052, posClass="N", pos="noun", ref="1.095.7-026", tbwid=26, value="Παυσανίᾳ", gender="masc", posAdd="hs_ou", case="dat", head=24, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Παυσανίας' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Παυσανίας", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Παυσανίας" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:27", lemma="ἐνεῖδον", person="3rd", isIndecl="syll_augment", voice="act", form="ἐνεῖδον", dialect="", tense="aor", relation="ATR", mood="ind", number="pl", cid=26872053, posClass="V", pos="verb", ref="1.095.7-027", tbwid=27, value="ἐνεῖδον", posAdd="aor2", head=20, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐνεῖδον' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐνεῖδον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐνεῖδον" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:28", ref="", lemma="", tbwid=28, form="", value=",", relation="AuxX", head=27, cid=26872054, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:29", lemma="ἀπαλλάσσω", form="ἀπαλλαξείοντες", isIndecl="desiderative", voice="act", dialect="", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872055, posClass="P", pos="participle", ref="1.095.7-029", tbwid=29, value="ἀπαλλαξείοντες", gender="masc", posAdd="w_stem", case="nom", head=35, length=14, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπαλλάσσω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἀπαλλάσσω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπαλλάσσω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:30", ref="1.095.7-030", lemma="δέ", tbwid=30, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="COORD", head=10, cid=26872056, posClass="N", pos="particle", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:31", ref="1.095.7-031", lemma="καί", tbwid=31, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=29, cid=26872057, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:32", lemma="ὁ", form="τοῦ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872058, posClass="N", pos="article", ref="1.095.7-032", tbwid=32, value="τοῦ", gender="masc", case="gen", head=34, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:33", lemma="Μηδικός", form="Μηδικοῦ", isIndecl="", dialect="", relation="ATR", number="sg", cid=26872059, posClass="N", pos="adj", ref="1.095.7-033", tbwid=33, degree="", value="Μηδικοῦ", gender="masc", posAdd="os_h_on", case="gen", head=34, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μηδικός' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Μηδικός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μηδικός" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:34", lemma="πόλεμος", form="πολέμου", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26872060, posClass="N", pos="noun", ref="1.095.7-034", tbwid=34, value="πολέμου", gender="masc", posAdd="os_ou", case="gen", head=29, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλεμος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="πόλεμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλεμος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:35", ref="1.095.7-035", lemma="καί", tbwid=35, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=30, cid=26872061, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:36", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26872062, posClass="N", pos="article", ref="1.095.7-036", tbwid=36, value="τοὺς", gender="masc", case="acc", head=37, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:37", lemma="Ἀθηναῖος", form="Ἀθηναι_ους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26872063, posClass="N", pos="adj", ref="1.095.7-037", tbwid=37, degree="", value="Ἀθηναίους", gender="masc", posAdd="os_h_on", case="acc", head=38, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:38", lemma="νομίζω", form="νομίζοντες", isIndecl="", voice="act", dialect="", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872064, posClass="P", pos="participle", ref="1.095.7-038", tbwid=38, value="νομίζοντες", gender="masc", posAdd="w_stem,izw", case="nom", head=35, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:39", lemma="ἱκανός", form="ἱκανούς", isIndecl="", dialect="", relation="OCOMP_CO", number="pl", cid=26872065, posClass="N", pos="adj", ref="1.095.7-039", tbwid=39, degree="", value="ἱκανοὺς", gender="masc", posAdd="os_h_on", case="acc", head=41, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱκανός' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἱκανός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱκανός" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:40", lemma="ἐξηγέομαι", person="", isIndecl="contr", voice="mid", form="ἐξηγεῖσθαι", dialect="attic epic", tense="pres", relation="ADV", mood="inf", number="", cid=26872066, posClass="V", pos="verb", ref="1.095.7-040", tbwid=40, value="ἐξηγεῖσθαι", posAdd="ew_pr,ew_denom", head=39, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐξηγέομαι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐξηγέομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐξηγέομαι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:41", ref="1.095.7-041", lemma="καί", tbwid=41, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=38, cid=26872067, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:42", lemma="σφεῖς", form="σφισιν", isIndecl="enclitic nu_movable indeclform", dialect="", relation="ADV", number="pl", cid=26872068, posClass="N", pos="pron", ref="1.095.7-042", tbwid=42, value="σφίσιν", gender="masc", posAdd="pron3", case="dat", head=47, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="σφεῖς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:43", ref="1.095.7-043", lemma="ἐν", tbwid=43, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=47, cid=26872069, posClass="N", pos="prep", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:44", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872070, posClass="N", pos="article", ref="1.095.7-044", tbwid=44, value="τῷ", gender="masc", case="dat", head=46, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:45", lemma="τότε", form="τότε", isIndecl="indeclform", dialect="", relation="ADV", cid=26872071, pos="adverb", posClass="N", tbwid=45, ref="1.095.7-045", degree="", value="τότε", head=46, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τότε' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="τότε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τότε" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:46", lemma="πάρειμι1", form="παρόντι", isIndecl="", voice="act", dialect="", tense="pres", relation="ADV", mood="part", number="sg", cid=26872072, posClass="P", pos="participle", ref="1.095.7-046", tbwid=46, value="παρόντι", gender="masc", posAdd="irreg_mi", case="dat", head=43, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάρειμι1' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="πάρειμι1", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάρειμι1" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:47", lemma="ἐπιτήδειος", form="ἐπιτηδείους", isIndecl="", dialect="", relation="OCOMP_CO", number="pl", cid=26872073, posClass="N", pos="adj", ref="1.095.7-047", tbwid=47, degree="", value="ἐπιτηδείους", gender="masc", posAdd="os_h_on", case="acc", head=41, length=11, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιτήδειος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐπιτήδειος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιτήδειος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:48", ref="", lemma="", tbwid=48, form="", value=".", relation="AuxK", head=0, cid=26872074, pos="punct", length=1, )
+s.words(w)
+words = "οἱ δὲ αἰσθόμενοι ἀπῆλθον , καὶ ἄλλους οὐκέτι ὕστερον ἐξέπεμψαν οἱ Λακεδαιμόνιοι , φοβούμενοι μὴ σφίσιν οἱ ἐξιόντες χείρους γίγνωνται , ὅπερ καὶ ἐν τῷ Παυσανίᾳ ἐνεῖδον , ἀπαλλαξείοντες δὲ καὶ τοῦ Μηδικοῦ πολέμου καὶ τοὺς Ἀθηναίους νομίζοντες ἱκανοὺς ἐξηγεῖσθαι καὶ σφίσιν ἐν τῷ τότε παρόντι ἐπιτηδείους . "
+s['sentence'] = "οἱ δὲ αἰσθόμενοι ἀπῆλθον , καὶ ἄλλους οὐκέτι ὕστερον ἐξέπεμψαν οἱ Λακεδαιμόνιοι , φοβούμενοι μὴ σφίσιν οἱ ἐξιόντες χείρους γίγνωνται , ὅπερ καὶ ἐν τῷ Παυσανίᾳ ἐνεῖδον , ἀπαλλαξείοντες δὲ καὶ τοῦ Μηδικοῦ πολέμου καὶ τοὺς Ἀθηναίους νομίζοντες ἱκανοὺς ἐξηγεῖσθαι καὶ σφίσιν ἐν τῷ τότε παρόντι ἐπιτηδείους . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.1", length=32)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.96.1:1", lemma="παραλαμβάνω", form="παραλαβόντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26872075, posClass="P", pos="participle", ref="1.096.1-001", tbwid=1, value="παραλαβόντες", gender="masc", posAdd="aor2,anw", case="nom", head=18, length=12, )
@@ -18730,6 +19904,156 @@ s.words(w)
 words = "οἱ δὲ Κορίνθιοι κακιζόμενοι ὑπὸ τῶν ἐν τῇ πόλει πρεσβυτέρων καὶ παρασκευασάμενοι , ἡμέραις ὕστερον δώδεκα μάλιστα ἐλθόντες ἀνθίστασαν τροπαῖον καὶ αὐτοὶ ὡς νικήσαντες . "
 s['sentence'] = "οἱ δὲ Κορίνθιοι κακιζόμενοι ὑπὸ τῶν ἐν τῇ πόλει πρεσβυτέρων καὶ παρασκευασάμενοι , ἡμέραις ὕστερον δώδεκα μάλιστα ἐλθόντες ἀνθίστασαν τροπαῖον καὶ αὐτοὶ ὡς νικήσαντες . "
 d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10", length=19)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:1", ref="1.105.6-038", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873401, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:2", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26873402, posClass="N", pos="article", ref="1.105.6-039", tbwid=2, value="οἱ", gender="masc", case="nom", head=3, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:3", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26873403, posClass="N", pos="adj", ref="1.105.6-040", tbwid=3, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=14, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:4", lemma="ἐκβοηθέω", form="ἐκβοηθήσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26873404, posClass="P", pos="participle", ref="1.105.6-041", tbwid=4, value="ἐκβοηθήσαντες", gender="masc", posAdd="aor1,ew_denom", case="nom", head=14, length=13, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκβοηθέω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐκβοηθέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκβοηθέω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:5", ref="1.105.6-042", lemma="ἐκ", tbwid=5, isIndecl="proclitic indeclform", form="ἐκ", dialect="", value="ἐκ", relation="AuxP", head=4, cid=26873405, posClass="N", pos="prep", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐκ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:6", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873406, posClass="N", pos="article", ref="1.105.6-043", tbwid=6, value="τῶν", gender="masc", case="gen", head=7, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:7", lemma="Μέγαρα", form="Μεγάρων", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873407, posClass="N", pos="noun", ref="1.105.6-044", tbwid=7, value="Μεγάρων", gender="neut", posAdd="os_ou", case="gen", head=5, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μέγαρα' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Μέγαρα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μέγαρα" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:8", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873408, posClass="N", pos="pron", ref="1.105.6-045", tbwid=8, value="τούς", gender="masc", posAdd="article", case="acc", head=12, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:9", ref="1.105.6-046", lemma="τε", tbwid=9, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="AuxY", head=14, cid=26873409, posClass="N", pos="particle", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:10", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873410, posClass="N", pos="article", ref="1.105.6-047", tbwid=10, value="τὸ", gender="neut", case="acc", head=11, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:11", lemma="τροπαῖος", form="τροπαῖον", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26873411, posClass="N", pos="noun", ref="1.105.6-048", tbwid=11, value="τροπαῖον", gender="neut", posAdd="os_h_on", case="acc", head=12, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τροπαῖος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="τροπαῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τροπαῖος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:12", lemma="ἵστημι", form="ἱστάντας", isIndecl="causal pres_redupl", voice="act", dialect="", tense="pres", relation="OBJ", mood="part", number="pl", cid=26873412, posClass="P", pos="participle", ref="1.105.6-049", tbwid=12, value="ἱστάντας", gender="masc", posAdd="ami_pr", case="acc", head=13, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἵστημι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἵστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἵστημι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:13", lemma="διαφθείρω", person="3rd", isIndecl="", voice="act", form="διαφθείρουσι", dialect="attic epic doric ionic", tense="pres", relation="PRED_CO", mood="ind", number="pl", cid=26873413, posClass="V", pos="verb", ref="1.105.6-050", tbwid=13, value="διαφθείρουσι", posAdd="w_stem,eirw", head=14, length=12, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διαφθείρω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="διαφθείρω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διαφθείρω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:14", ref="1.105.6-051", lemma="καί", tbwid=14, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=1, cid=26873414, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:15", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873415, posClass="N", pos="article", ref="1.105.6-052", tbwid=15, value="τοῖς", gender="masc", case="dat", head=16, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:16", lemma="ἄλλος", form="ἄλλοις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873416, posClass="N", pos="adj", ref="1.105.6-053", tbwid=16, degree="", value="ἄλλοις", gender="masc", posAdd="art_adj", case="dat", head=17, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:17", lemma="συμβάλλω", form="ξυμβαλόντες", isIndecl="sig_to_ci", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26873417, posClass="P", pos="participle", ref="1.105.6-054", tbwid=17, value="ξυμβαλόντες", gender="masc", posAdd="aor2", case="nom", head=18, length=11, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμβάλλω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="συμβάλλω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμβάλλω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:18", lemma="κρατέω", person="3rd", isIndecl="", voice="act", form="ἐκράτησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873418, posClass="V", pos="verb", ref="1.105.6-055", tbwid=18, value="ἐκράτησαν", posAdd="aor1,ew_denom", head=14, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κρατέω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="κρατέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κρατέω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:19", ref="", lemma="", tbwid=19, form="", value=".", relation="AuxK", head=0, cid=26873419, pos="punct", length=1, )
+s.words(w)
+words = "καὶ οἱ Ἀθηναῖοι ἐκβοηθήσαντες ἐκ τῶν Μεγάρων τούς τε τὸ τροπαῖον ἱστάντας διαφθείρουσι καὶ τοῖς ἄλλοις ξυμβαλόντες ἐκράτησαν . "
+s['sentence'] = "καὶ οἱ Ἀθηναῖοι ἐκβοηθήσαντες ἐκ τῶν Μεγάρων τούς τε τὸ τροπαῖον ἱστάντας διαφθείρουσι καὶ τοῖς ἄλλοις ξυμβαλόντες ἐκράτησαν . "
+d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.1", length=32)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.106.1:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26873420, posClass="N", pos="pron", ref="1.106.1-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=4, length=2, )
 lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
@@ -20741,6 +22065,278 @@ w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.9:7", ref="
 s.words(w)
 words = "ξύμπαντες δὲ ἐγένοντο τετρακισχίλιοι καὶ μύριοι . "
 s['sentence'] = "ξύμπαντες δὲ ἐγένοντο τετρακισχίλιοι καὶ μύριοι . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10", length=16)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:1", lemma="νομίζω", form="νομίσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV_CO", mood="part", number="pl", cid=26873685, posClass="P", pos="participle", ref="1.107.6-001", tbwid=1, value="νομίσαντες", gender="masc", posAdd="aor1,izw", case="nom", head=9, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:2", ref="1.107.6-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="AuxY", head=6, cid=26873686, posClass="N", pos="particle", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:3", lemma="ἀπορέω", person="", isIndecl="contr", voice="act", form="ἀπορεῖν", dialect="attic epic doric", tense="pres", relation="OBJ", mood="inf", number="", cid=26873687, posClass="V", pos="verb", ref="1.107.6-003", tbwid=3, value="ἀπορεῖν", posAdd="ew_pr,ew_denom", head=1, length=7, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπορέω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἀπορέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπορέω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:4", lemma="ὅπη", form="ὅπῃ", isIndecl="indeclform", dialect="", relation="OBJ", cid=26873688, pos="adverb", posClass="N", tbwid=4, ref="1.107.6-004", degree="", value="ὅπῃ", head=5, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅπη' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὅπη", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅπη" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:5", lemma="διέρχομαι", person="3rd", isIndecl="nu_movable", voice="act", form="διέλθωσιν", dialect="", tense="aor", relation="OBJ", mood="subj", number="pl", cid=26873689, posClass="V", pos="verb", ref="1.107.6-005", tbwid=5, value="διέλθωσιν", posAdd="aor2", head=3, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διέρχομαι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="διέρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διέρχομαι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:6", lemma="ἐπιστρατεύω", person="3rd", isIndecl="", voice="act", form="ἐπεστράτευσαν", dialect="", tense="aor", relation="PRED", mood="ind", number="pl", cid=26873690, posClass="V", pos="verb", ref="1.107.6-006", tbwid=6, value="ἐπεστράτευσαν", posAdd="aor1,euw", head=0, length=13, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιστρατεύω' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐπιστρατεύω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιστρατεύω" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:7", lemma="αὐτός", form="αὐτοῖς", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873691, posClass="N", pos="adj", ref="1.107.6-007", tbwid=7, degree="", value="αὐτοῖς", gender="masc", posAdd="art_adj", case="dat", head=6, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="αὐτός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:8", ref="", lemma="", tbwid=8, form="", value=",", relation="AuxX", head=9, cid=26873692, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:9", ref="1.107.6-009", lemma="καί", tbwid=9, isIndecl="indeclform", form="καί", dialect="", value="καί", relation="COORD", head=6, cid=26873693, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:10", lemma="τις", form="τι", isIndecl="enclitic indeclform", dialect="", relation="AuxZ", number="sg", cid=26873694, posClass="N", pos="pron", ref="1.107.6-010", tbwid=10, value="τι", gender="neut", posAdd="indef", case="acc", head=9, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τις' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="τις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τις" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:11", ref="1.107.6-011", lemma="καί", tbwid=11, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=9, cid=26873695, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:12", lemma="ὁ", form="τοῦ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873696, posClass="N", pos="article", ref="1.107.6-012", tbwid=12, value="τοῦ", gender="masc", case="gen", head=13, length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:13", lemma="δῆμος", form="δη_μου", isIndecl="", dialect="", relation="ATR", number="sg", cid=26873697, posClass="N", pos="noun", ref="1.107.6-013", tbwid=13, value="δήμου", gender="masc", posAdd="os_ou", case="gen", head=14, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δῆμος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="δῆμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δῆμος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:14", lemma="κατάλυσις", form="καταλύσεω^ς", isIndecl="", dialect="attic", relation="ATR", number="sg", cid=26873698, posClass="N", pos="noun", ref="1.107.6-014", tbwid=14, value="καταλύσεως", gender="fem", posAdd="is_ews", case="gen", head=15, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατάλυσις' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="κατάλυσις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατάλυσις" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:15", lemma="ὑποψία", form="ὑποψία_", isIndecl="", dialect="attic doric aeolic", relation="ADV_CO", number="sg", cid=26873699, posClass="N", pos="noun", ref="1.107.6-015", tbwid=15, value="ὑποψίᾳ", gender="fem", posAdd="h_hs", case="dat", head=9, length=6, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὑποψία' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὑποψία", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὑποψία" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:16", ref="", lemma="", tbwid=16, form="", value=".", relation="AuxK", head=0, cid=26873700, pos="punct", length=1, )
+s.words(w)
+words = "νομίσαντες δὲ ἀπορεῖν ὅπῃ διέλθωσιν ἐπεστράτευσαν αὐτοῖς , καί τι καὶ τοῦ δήμου καταλύσεως ὑποψίᾳ . "
+s['sentence'] = "νομίσαντες δὲ ἀπορεῖν ὅπῃ διέλθωσιν ἐπεστράτευσαν αὐτοῖς , καί τι καὶ τοῦ δήμου καταλύσεως ὑποψίᾳ . "
+d.sentences(s)
+s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11", length=20)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:1", lemma="ἔρχομαι", person="3rd", isIndecl="", voice="act", form="ἦλθον", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873701, posClass="V", pos="verb", ref="1.107.7-001", tbwid=1, value="ἦλθον", posAdd="aor2", head=2, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔρχομαι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἔρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔρχομαι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:2", ref="1.107.7-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="COORD", head=0, cid=26873702, posClass="N", pos="particle", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:3", ref="1.107.7-003", lemma="καί", tbwid=3, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=5, cid=26873703, posClass="N", pos="conj", length=3, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:4", lemma="Θεσσαλός", form="Θεσσαλῶν", isIndecl="", dialect="", relation="ATR", number="pl", cid=26873704, posClass="N", pos="adj", ref="1.107.7-004", tbwid=4, degree="", value="Θεσσαλῶν", gender="masc", posAdd="os_ou", case="gen", head=5, length=8, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Θεσσαλός' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Θεσσαλός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Θεσσαλός" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:5", lemma="ἱππεύς", form="ἱππῆς", isIndecl="contr", dialect="", relation="SBJ", number="pl", cid=26873705, posClass="N", pos="noun", ref="1.107.7-005", tbwid=5, value="ἱππῆς", gender="masc", posAdd="eus_ews", case="nom", head=1, length=5, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱππεύς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἱππεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱππεύς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:6", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873706, posClass="N", pos="article", ref="1.107.7-006", tbwid=6, value="τοῖς", gender="masc", case="dat", head=7, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:7", lemma="Ἀθηναῖος", form="Ἀθηναι_οις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873707, posClass="N", pos="adj", ref="1.107.7-007", tbwid=7, degree="", value="Ἀθηναίοις", gender="masc", posAdd="os_h_on", case="dat", head=1, length=9, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:8", ref="1.107.7-008", lemma="κατά", tbwid=8, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=1, cid=26873708, posClass="N", pos="prep", length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:9", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873709, posClass="N", pos="article", ref="1.107.7-009", tbwid=9, value="τὸ", gender="neut", case="acc", head=10, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:10", lemma="συμμαχικός", form="συμμαχικόν", isIndecl="", dialect="", relation="ADV", number="sg", cid=26873710, posClass="N", pos="adj", ref="1.107.7-010", tbwid=10, degree="", value="ξυμμαχικόν", gender="neut", posAdd="os_h_on", case="acc", head=8, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμμαχικός' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="συμμαχικός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμμαχικός" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:11", ref="", lemma="", tbwid=11, form="", value=",", relation="AuxX", head=13, cid=26873711, pos="punct", length=1, )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:12", lemma="ὅς", form="οἵ", isIndecl="indeclform", dialect="", relation="SBJ", number="pl", cid=26873712, posClass="N", pos="pron", ref="1.107.7-012", tbwid=12, value="οἳ", gender="masc", posAdd="relative", case="nom", head=13, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὅς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:13", lemma="μεθίστημι", person="3rd", isIndecl="causal", voice="act", form="μετέστησαν", dialect="", tense="aor", relation="ATR", mood="ind", number="pl", cid=26873713, posClass="V", pos="verb", ref="1.107.7-013", tbwid=13, value="μετέστησαν", posAdd="aor1,a_stem", head=5, length=10, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μεθίστημι' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="μεθίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μεθίστημι" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:14", ref="1.107.7-014", lemma="ἐν", tbwid=14, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=13, cid=26873714, posClass="N", pos="prep", length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:15", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873715, posClass="N", pos="article", ref="1.107.7-015", tbwid=15, value="τῷ", gender="neut", case="dat", head=16, length=2, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:16", lemma="ἔργον", form="ἔργῳ", isIndecl="", dialect="", relation="ADV", number="sg", cid=26873716, posClass="N", pos="noun", ref="1.107.7-016", tbwid=16, value="ἔργῳ", gender="neut", posAdd="os_ou", case="dat", head=13, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔργον' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ἔργον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔργον" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:17", ref="1.107.7-017", lemma="παρά", tbwid=17, isIndecl="indeclform", form="παρά", dialect="", value="παρὰ", relation="AuxP", head=13, cid=26873717, posClass="N", pos="prep", length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παρά' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="παρά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παρά" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:18", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873718, posClass="N", pos="article", ref="1.107.7-018", tbwid=18, value="τοὺς", gender="masc", case="acc", head=19, length=4, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:19", lemma="Λακεδαιμόνιος", form="Λακεδαιμονίους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873719, posClass="N", pos="adj", ref="1.107.7-019", tbwid=19, degree="", value="Λακεδαιμονίους", gender="masc", posAdd="os_h_on", case="acc", head=17, length=14, )
+lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος' RETURN n""")
+try:
+	lemma = gdb.nodes.get(lemma[0][0]['self'])
+	lemma.values(w)
+except:
+	lemma = gdb.node(value="Λακεδαιμόνιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος" )
+s.words(w)
+w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:20", ref="", lemma="", tbwid=20, form="", value=".", relation="AuxK", head=0, cid=26873720, pos="punct", length=1, )
+s.words(w)
+words = "ἦλθον δὲ καὶ Θεσσαλῶν ἱππῆς τοῖς Ἀθηναίοις κατὰ τὸ ξυμμαχικόν , οἳ μετέστησαν ἐν τῷ ἔργῳ παρὰ τοὺς Λακεδαιμονίους . "
+s['sentence'] = "ἦλθον δὲ καὶ Θεσσαλῶν ἱππῆς τοῖς Ἀθηναίοις κατὰ τὸ ξυμμαχικόν , οἳ μετέστησαν ἐν τῷ ἔργῳ παρὰ τοὺς Λακεδαιμονίους . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.1", length=19)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.108.1:1", lemma="γίγνομαι", form="γενομένης", isIndecl="", voice="mid", dialect="attic epic ionic", tense="aor", relation="ADV", mood="part", number="sg", cid=26873721, posClass="P", pos="participle", ref="1.108.1-001", tbwid=1, value="γενομένης", gender="fem", posAdd="aor2", case="gen", head=8, length=9, )
@@ -33069,1602 +34665,6 @@ w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.118.6:23", ref=
 s.words(w)
 words = "ὁ δὲ ἀνεῖλεν αὐτοῖς , ὡς λέγεται , κατὰ κράτος πολεμοῦσι νίκην ἔσεσθαι , καὶ αὐτὸς ἔφη ξυλλήψεσθαι καὶ παρακαλούμενος καὶ ἄκλητος . "
 s['sentence'] = "ὁ δὲ ἀνεῖλεν αὐτοῖς , ὡς λέγεται , κατὰ κράτος πολεμοῦσι νίκην ἔσεσθαι , καὶ αὐτὸς ἔφη ξυλλήψεσθαι καὶ παρακαλούμενος καὶ ἄκλητος . "
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10", length=32)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:1", lemma="βούλομαι", person="3rd", isIndecl="", voice="mp", form="ἐβούλετο", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871697, posClass="V", pos="verb", ref="1.093.6-001", tbwid=1, value="ἐβούλετο", posAdd="w_stem,nw", head=15, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βούλομαι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="βούλομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βούλομαι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:2", ref="1.093.6-002", lemma="γάρ", tbwid=2, isIndecl="indeclform", form="γάρ", dialect="", value="γὰρ", relation="AuxY", head=1, cid=26871698, posClass="N", pos="particle", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="γάρ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:3", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871699, posClass="N", pos="article", ref="1.093.6-003", tbwid=3, value="τῷ", gender="neut", case="dat", head=4, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:4", lemma="μέγεθος", form="μεγέθει", isIndecl="", dialect="", relation="ADV_CO", number="sg", cid=26871700, posClass="N", pos="noun", ref="1.093.6-004", tbwid=4, value="μεγέθει", gender="neut", posAdd="hs_eos", case="dat", head=5, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέγεθος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="μέγεθος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέγεθος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:5", ref="1.093.6-005", lemma="καί", tbwid=5, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=8, cid=26871701, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:6", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871702, posClass="N", pos="article", ref="1.093.6-006", tbwid=6, value="τῷ", gender="neut", case="dat", head=7, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:7", lemma="πάχος", form="πάχει", isIndecl="", dialect="", relation="ADV_CO", number="sg", cid=26871703, posClass="N", pos="noun", ref="1.093.6-007", tbwid=7, value="πάχει", gender="neut", posAdd="hs_eos", case="dat", head=5, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάχος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="πάχος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάχος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:8", lemma="ἀφίστημι", person="", isIndecl="causal pres_redupl", voice="act", form="ἀφιστάναι", dialect="", tense="pres", relation="OBJ", mood="inf", number="", cid=26871704, posClass="V", pos="verb", ref="1.093.6-008", tbwid=8, value="ἀφιστάναι", posAdd="ami_pr", head=1, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀφίστημι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἀφίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀφίστημι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:9", lemma="ὁ", form="τα_ς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871705, posClass="N", pos="article", ref="1.093.6-009", tbwid=9, value="τὰς", gender="fem", case="acc", head=12, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:10", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871706, posClass="N", pos="article", ref="1.093.6-010", tbwid=10, value="τῶν", gender="masc", case="gen", head=11, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:11", lemma="πολέμιος", form="πολεμίων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871707, posClass="N", pos="adj", ref="1.093.6-011", tbwid=11, degree="", value="πολεμίων", gender="masc", posAdd="os_on", case="gen", head=12, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολέμιος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="πολέμιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολέμιος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:12", lemma="ἐπιβουλή", form="ἐπιβουλα_ς", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871708, posClass="N", pos="noun", ref="1.093.6-012", tbwid=12, value="ἐπιβουλάς", gender="fem", posAdd="h_hs", case="acc", head=8, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιβουλή' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐπιβουλή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιβουλή" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:13", ref="", lemma="", tbwid=13, form="", value=",", relation="AuxX", head=15, cid=26871709, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:14", lemma="ἄνθρωπος", form="ἀνθρώπων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871710, posClass="N", pos="noun", ref="1.093.6-014", tbwid=14, value="ἀνθρώπων", gender="masc", posAdd="os_ou", case="gen", head=23, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνθρωπος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἄνθρωπος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνθρωπος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:15", ref="1.093.6-015", lemma="τε", tbwid=15, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="COORD", head=0, cid=26871711, posClass="N", pos="particle", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:16", lemma="νομίζω", person="3rd", isIndecl="nu_movable", voice="act", form="ἐνόμιζεν", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871712, posClass="V", pos="verb", ref="1.093.6-016", tbwid=16, value="ἐνόμιζεν", posAdd="w_stem,izw", head=15, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:17", lemma="ὀλίγος", form="ὀλίγων", isIndecl="", dialect="", relation="ATR_CO", number="pl", cid=26871713, posClass="N", pos="adj", ref="1.093.6-017", tbwid=17, degree="", value="ὀλίγων", gender="masc", posAdd="os_h_on", case="gen", head=18, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὀλίγος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὀλίγος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὀλίγος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:18", ref="1.093.6-018", lemma="καί", tbwid=18, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=14, cid=26871714, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:19", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871715, posClass="N", pos="article", ref="1.093.6-019", tbwid=19, value="τῶν", gender="masc", case="gen", head=20, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:20", lemma="ἀχρεῖος", form="ἀχρειοτάτων", isIndecl="", dialect="", relation="ATR_CO", number="pl", cid=26871716, posClass="N", pos="adj", ref="1.093.6-020", tbwid=20, degree="superl", value="ἀχρειοτάτων", gender="masc", posAdd="os_on", case="gen", head=18, length=11, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀχρεῖος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἀχρεῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀχρεῖος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:21", lemma="ἀρκέω", person="", isIndecl="contr", voice="act", form="ἀρκέσειν", dialect="attic epic", tense="fut", relation="OBJ_CO", mood="inf", number="", cid=26871717, posClass="V", pos="verb", ref="1.093.6-021", tbwid=21, value="ἀρκέσειν", posAdd="reg_fut,e_stem", head=26, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀρκέω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἀρκέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀρκέω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:22", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871718, posClass="N", pos="article", ref="1.093.6-022", tbwid=22, value="τὴν", gender="fem", case="acc", head=23, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:23", lemma="φυλακή", form="φυλακήν", isIndecl="", dialect="attic epic ionic", relation="OBJ", number="sg", cid=26871719, posClass="N", pos="noun", ref="1.093.6-023", tbwid=23, value="φυλακήν", gender="fem", posAdd="h_hs", case="acc", head=21, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φυλακή' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="φυλακή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φυλακή" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:24", ref="", lemma="", tbwid=24, form="", value=",", relation="AuxX", head=26, cid=26871720, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:25", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871721, posClass="N", pos="article", ref="1.093.6-025", tbwid=25, value="τοὺς", gender="masc", case="acc", head=27, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:26", ref="1.093.6-026", lemma="δέ", tbwid=26, isIndecl="indeclform", form="δέ", dialect="", value="δ'", relation="COORD", head=16, cid=26871722, posClass="N", pos="particle", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:27", lemma="ἄλλος", form="ἄλλους", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26871723, posClass="N", pos="adj", ref="1.093.6-027", tbwid=27, degree="", value="ἄλλους", gender="masc", posAdd="art_adj", case="acc", head=31, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:28", ref="1.093.6-028", lemma="εἰς", tbwid=28, isIndecl="proclitic indeclform", form="ἐς", dialect="", value="ἐς", relation="AuxP", head=31, cid=26871724, posClass="N", pos="prep", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="εἰς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:29", lemma="ὁ", form="τα_ς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871725, posClass="N", pos="article", ref="1.093.6-029", tbwid=29, value="τὰς", gender="fem", case="acc", head=30, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:30", lemma="ναῦς", form="ναῦς", isIndecl="indeclform", dialect="attic", relation="OBJ", number="pl", cid=26871726, posClass="N", pos="noun", ref="1.093.6-030", tbwid=30, value="ναῦς", gender="fem", posAdd="irreg_decl3", case="acc", head=28, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:31", lemma="εἰσβαίνω", person="", isIndecl="short_eis", voice="mid", form="ἐσβήσεσθαι", dialect="", tense="fut", relation="OBJ_CO", mood="inf", number="", cid=26871727, posClass="V", pos="verb", ref="1.093.6-031", tbwid=31, value="ἐσβήσεσθαι", posAdd="reg_fut,a_stem", head=26, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰσβαίνω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="εἰσβαίνω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰσβαίνω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.10:32", ref="", lemma="", tbwid=32, form="", value=".", relation="AuxK", head=0, cid=26871728, pos="punct", length=1, )
-s.words(w)
-words = "ἐβούλετο γὰρ τῷ μεγέθει καὶ τῷ πάχει ἀφιστάναι τὰς τῶν πολεμίων ἐπιβουλάς , ἀνθρώπων τε ἐνόμιζεν ὀλίγων καὶ τῶν ἀχρειοτάτων ἀρκέσειν τὴν φυλακήν , τοὺς δ' ἄλλους ἐς τὰς ναῦς ἐσβήσεσθαι . "
-s['sentence'] = "ἐβούλετο γὰρ τῷ μεγέθει καὶ τῷ πάχει ἀφιστάναι τὰς τῶν πολεμίων ἐπιβουλάς , ἀνθρώπων τε ἐνόμιζεν ὀλίγων καὶ τῶν ἀχρειοτάτων ἀρκέσειν τὴν φυλακήν , τοὺς δ' ἄλλους ἐς τὰς ναῦς ἐσβήσεσθαι . "
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11", length=25)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:1", lemma="ὁ", form="ταῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871729, posClass="N", pos="article", ref="1.093.7-001", tbwid=1, value="ταῖς", gender="fem", case="dat", head=3, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:2", ref="1.093.7-002", lemma="γάρ", tbwid=2, isIndecl="indeclform", form="γάρ", dialect="", value="γὰρ", relation="AuxY", head=5, cid=26871730, posClass="N", pos="particle", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="γάρ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γάρ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:3", lemma="ναῦς", form="ναυσί", isIndecl="indeclform", dialect="attic doric", relation="OBJ", number="pl", cid=26871731, posClass="N", pos="noun", ref="1.093.7-003", tbwid=3, value="ναυσὶ", gender="fem", posAdd="irreg_decl3", case="dat", head=5, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:4", lemma="μάλιστα", form="μάλιστα", isIndecl="indeclform", dialect="", relation="ADV", cid=26871732, pos="adverb", posClass="N", tbwid=4, ref="1.093.7-004", degree="superl", value="μάλιστα", head=5, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μάλιστα' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="μάλιστα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μάλιστα" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:5", lemma="πρόσκειμαι", person="3rd", isIndecl="", voice="mp", form="προσέκειτο", dialect="", tense="imperf", relation="PRED", mood="ind", number="sg", cid=26871733, posClass="V", pos="verb", ref="1.093.7-005", tbwid=5, value="προσέκειτο", posAdd="ath_primary", head=0, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρόσκειμαι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="πρόσκειμαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρόσκειμαι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:6", ref="", lemma="", tbwid=6, form="", value=",", relation="AuxX", head=7, cid=26871734, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:7", lemma="εἶδον", form="ἰδών", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="sg", cid=26871735, posClass="P", pos="participle", ref="1.093.7-007", tbwid=7, value="ἰδών", gender="masc", posAdd="aor2", case="nom", head=5, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἶδον' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="εἶδον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἶδον" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:8", ref="", lemma="", tbwid=8, form="", value=",", relation="AuxX", head=9, cid=26871736, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:9", ref="1.093.7-009", lemma="", tbwid=9, degree="", form="", value="ὡς", relation="AuxC", head=7, cid=26871737, pos="adverb", length=2, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:10", lemma="ἐγώ", person="1st", form="ἐμοί", isIndecl="indeclform", dialect="", relation="OBJ", number="sg", cid=26871738, posClass="N", pos="pron", ref="1.093.7-010", tbwid=10, value="ἐμοὶ", gender="masc", posAdd="pron1", case="dat", head=11, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐγώ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐγώ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐγώ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:11", lemma="δοκέω", person="3rd", isIndecl="contr", voice="act", form="δοκεῖ", dialect="attic epic doric ionic", tense="pres", relation="ADV", mood="ind", number="sg", cid=26871739, posClass="V", pos="verb", ref="1.093.7-011", tbwid=11, value="δοκεῖ", posAdd="ew_pr,ew_denom", head=9, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δοκέω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="δοκέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δοκέω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:12", ref="", lemma="", tbwid=12, form="", value=",", relation="AuxX", head=9, cid=26871740, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:13", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871741, posClass="N", pos="article", ref="1.093.7-013", tbwid=13, value="τῆς", gender="fem", case="gen", head=15, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:14", lemma="βασιλεύς", form="βασιλέω^ς", isIndecl="", dialect="attic ionic", relation="ATR", number="sg", cid=26871742, posClass="N", pos="noun", ref="1.093.7-014", tbwid=14, value="βασιλέως", gender="masc", posAdd="eus_ews", case="gen", head=15, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βασιλεύς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="βασιλεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βασιλεύς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:15", lemma="στρατιά", form="στρατιᾶς", isIndecl="", dialect="attic doric aeolic", relation="ATR", number="sg", cid=26871743, posClass="N", pos="noun", ref="1.093.7-015", tbwid=15, value="στρατιᾶς", gender="fem", posAdd="h_hs", case="gen", head=19, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:στρατιά' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="στρατιά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:στρατιά" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:16", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871744, posClass="N", pos="article", ref="1.093.7-016", tbwid=16, value="τὴν", gender="fem", case="acc", head=19, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:17", ref="1.093.7-017", lemma="κατά", tbwid=17, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=19, cid=26871745, posClass="N", pos="prep", length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:18", lemma="θάλασσα", form="θάλασσαν", isIndecl="", dialect="", relation="ATR", number="sg", cid=26871746, posClass="N", pos="noun", ref="1.093.7-018", tbwid=18, value="θάλασσαν", gender="fem", posAdd="a_hs", case="acc", head=17, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:θάλασσα' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="θάλασσα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:θάλασσα" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:19", lemma="ἔφοδοϲ", form="ἔφοδον", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26871747, posClass="N", pos="noun", ref="1.093.7-019", tbwid=19, value="ἔφοδον", gender="fem", posAdd="os_ou", case="acc", head=7, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔφοδοϲ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἔφοδοϲ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔφοδοϲ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:20", lemma="εὔπορος", form="εὐπορωτέρα_ν", isIndecl="", dialect="attic doric aeolic", relation="PNOM", number="sg", cid=26871748, posClass="N", pos="adj", ref="1.093.7-020", tbwid=20, degree="comp", value="εὐπορωτέραν", gender="fem", posAdd="os_on", case="acc", head=24, length=11, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὔπορος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="εὔπορος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὔπορος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:21", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ADV", number="sg", cid=26871749, posClass="N", pos="pron", ref="1.093.7-021", tbwid=21, value="τῆς", gender="fem", posAdd="article", case="gen", head=20, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:22", ref="1.093.7-022", lemma="κατά", tbwid=22, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=21, cid=26871750, posClass="N", pos="prep", length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:23", lemma="γῆ", form="γῆν", isIndecl="contr", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871751, posClass="N", pos="noun", ref="1.093.7-023", tbwid=23, value="γῆν", gender="fem", posAdd="eh_ehs", case="acc", head=22, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="γῆ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:24", lemma="εἰμί", form="οὖσαν", isIndecl="", voice="act", dialect="attic epic doric ionic", tense="pres", relation="ATV", mood="part", number="sg", cid=26871752, posClass="P", pos="participle", ref="1.093.7-024", tbwid=24, value="οὖσαν", gender="fem", posAdd="irreg_mi", case="acc", head=19, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰμί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="εἰμί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰμί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.11:25", ref="", lemma="", tbwid=25, form="", value="·", relation="AuxK", head=0, cid=26871753, pos="punct", length=1, )
-s.words(w)
-words = "ταῖς γὰρ ναυσὶ μάλιστα προσέκειτο , ἰδών , ὡς ἐμοὶ δοκεῖ , τῆς βασιλέως στρατιᾶς τὴν κατὰ θάλασσαν ἔφοδον εὐπορωτέραν τῆς κατὰ γῆν οὖσαν · "
-s['sentence'] = "ταῖς γὰρ ναυσὶ μάλιστα προσέκειτο , ἰδών , ὡς ἐμοὶ δοκεῖ , τῆς βασιλέως στρατιᾶς τὴν κατὰ θάλασσαν ἔφοδον εὐπορωτέραν τῆς κατὰ γῆν οὖσαν · "
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12", length=31)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:1", lemma="ὁ", form="τόν", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26871754, posClass="N", pos="pron", ref="1.093.7-025", tbwid=1, value="τόν", gender="masc", posAdd="article", case="acc", head=3, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:2", ref="1.093.7-026", lemma="τε", tbwid=2, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="AuxY", head=10, cid=26871755, posClass="N", pos="particle", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:3", lemma="Πειραιεύς", form="Πειραιᾶ", isIndecl="contr r_e_i_alpha", dialect="attic", relation="OBJ", number="sg", cid=26871756, posClass="N", pos="noun", ref="1.093.7-027", tbwid=3, value="Πειραιᾶ", gender="masc", posAdd="eus_ews", case="acc", head=5, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Πειραιεύς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Πειραιεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Πειραιεύς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:4", lemma="ὠφέλιμος", form="ὠφελιμώτερον", isIndecl="", dialect="", relation="OCOMP", number="sg", cid=26871757, posClass="N", pos="adj", ref="1.093.7-028", tbwid=4, degree="comp", value="ὠφελιμώτερον", gender="masc", posAdd="os_on", case="acc", head=5, length=12, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὠφέλιμος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὠφέλιμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὠφέλιμος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:5", lemma="νομίζω", person="3rd", isIndecl="", voice="act", form="ἐνόμιζε", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871758, posClass="V", pos="verb", ref="1.093.7-029", tbwid=5, value="ἐνόμιζε", posAdd="w_stem,izw", head=10, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:6", lemma="ὁ", form="τῆς", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871759, posClass="N", pos="article", ref="1.093.7-030", tbwid=6, value="τῆς", gender="fem", case="gen", head=8, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:7", lemma="ἄνω2", form="ἄνω", isIndecl="indeclform", dialect="", relation="ATR", cid=26871760, pos="adverb", posClass="N", tbwid=7, ref="1.093.7-031", degree="", value="ἄνω", head=8, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνω2' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἄνω2", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄνω2" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:8", lemma="πόλις", form="πόλεω^ς", isIndecl="", dialect="attic epic doric ionic", relation="ADV", number="sg", cid=26871761, posClass="N", pos="noun", ref="1.093.7-032", tbwid=8, value="πόλεως", gender="fem", posAdd="is_ews", case="gen", head=4, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλις' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="πόλις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλις" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:9", ref="", lemma="", tbwid=9, form="", value=",", relation="AuxX", head=10, cid=26871762, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:10", ref="1.093.7-034", lemma="καί", tbwid=10, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871763, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:11", lemma="πολλάκις", form="πολλάκις", isIndecl="indeclform", dialect="", relation="ADV", cid=26871764, pos="adverb", posClass="N", tbwid=11, ref="1.093.7-035", degree="", value="πολλάκις", head=14, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολλάκις' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="πολλάκις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πολλάκις" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:12", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26871765, posClass="N", pos="article", ref="1.093.7-036", tbwid=12, value="τοῖς", gender="masc", case="dat", head=13, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:13", lemma="Ἀθηναῖος", form="Ἀθηναι_οις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871766, posClass="N", pos="adj", ref="1.093.7-037", tbwid=13, degree="", value="Ἀθηναίοις", gender="masc", posAdd="os_h_on", case="dat", head=14, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:14", lemma="παραινέω", person="3rd", isIndecl="contr", voice="act", form="παρῄνει", dialect="attic epic", tense="imperf", relation="PRED_CO", mood="ind", number="sg", cid=26871767, posClass="V", pos="verb", ref="1.093.7-038", tbwid=14, value="παρῄνει", posAdd="ew_pr,e_stem", head=10, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παραινέω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="παραινέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παραινέω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:15", ref="", lemma="", tbwid=15, form="", value=",", relation="AuxX", head=16, cid=26871768, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:16", ref="1.093.7-040", lemma="ἐάν", tbwid=16, isIndecl="contr indeclform", form="ἤν", dialect="", value="ἢν", relation="AuxC", head=30, cid=26871769, posClass="N", pos="conj", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐάν' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐάν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐάν" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:17", ref="1.093.7-041", lemma="ἄρα", tbwid=17, isIndecl="indeclform", form="ἄρα", dialect="", value="ἄρα", relation="AuxY", head=21, cid=26871770, posClass="N", pos="particle", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄρα' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἄρα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄρα" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:18", ref="1.093.7-042", lemma="ποτέ", tbwid=18, isIndecl="enclitic indeclform", form="ποτε", dialect="", value="ποτὲ", relation="AuxY", head=21, cid=26871771, posClass="N", pos="particle", length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ποτέ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ποτέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ποτέ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:19", ref="1.093.7-043", lemma="κατά", tbwid=19, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=21, cid=26871772, posClass="N", pos="prep", length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:20", lemma="γῆ", form="γῆν", isIndecl="contr", dialect="attic epic ionic", relation="ADV", number="sg", cid=26871773, posClass="N", pos="noun", ref="1.093.7-044", tbwid=20, value="γῆν", gender="fem", posAdd="eh_ehs", case="acc", head=19, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="γῆ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γῆ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:21", lemma="βιάζω", person="3rd", isIndecl="contr", voice="pass", form="βιασθῶσι", dialect="attic epic doric", tense="aor", relation="ADV", mood="subj", number="pl", cid=26871774, posClass="V", pos="verb", ref="1.093.7-045", tbwid=21, value="βιασθῶσι", posAdd="aor_pass,azw", head=16, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βιάζω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="βιάζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:βιάζω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:22", ref="", lemma="", tbwid=22, form="", value=",", relation="AuxX", head=16, cid=26871775, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:23", lemma="καταβαίνω", form="καταβάντας", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26871776, posClass="P", pos="participle", ref="1.093.7-047", tbwid=23, value="καταβάντας", gender="masc", posAdd="ath_h_aor", case="acc", head=30, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καταβαίνω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καταβαίνω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καταβαίνω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:24", ref="1.093.7-048", lemma="εἰς", tbwid=24, isIndecl="proclitic indeclform", form="ἐς", dialect="", value="ἐς", relation="AuxP", head=23, cid=26871777, posClass="N", pos="prep", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="εἰς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εἰς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:25", lemma="αὐτός", form="αὐτόν", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26871778, posClass="N", pos="adj", ref="1.093.7-049", tbwid=25, degree="", value="αὐτὸν", gender="masc", posAdd="art_adj", case="acc", head=24, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="αὐτός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:26", lemma="ὁ", form="ταῖς", isIndecl="indeclform", dialect="", relation="ADV", number="pl", cid=26871779, posClass="N", pos="article", ref="1.093.7-050", tbwid=26, value="ταῖς", gender="fem", case="dat", head=27, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:27", lemma="ναῦς", form="ναυσί", isIndecl="indeclform", dialect="attic doric", relation="ADV", number="pl", cid=26871780, posClass="N", pos="noun", ref="1.093.7-051", tbwid=27, value="ναυσὶ", gender="fem", posAdd="irreg_decl3", case="dat", head=30, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ναῦς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ναῦς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:28", ref="1.093.7-052", lemma="πρός", tbwid=28, isIndecl="indeclform", form="πρός", dialect="", value="πρὸς", relation="AuxP", head=30, cid=26871781, posClass="N", pos="prep", length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρός' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="πρός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πρός" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:29", lemma="ἅπας", form="ἅπαντας", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871782, posClass="N", pos="adj", ref="1.093.7-053", tbwid=29, degree="", value="ἅπαντας", gender="masc", posAdd="as_asa_an", case="acc", head=28, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἅπας' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἅπας", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἅπας" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:30", lemma="ἀνθίστημι", person="", isIndecl="elide_preverb causal pres_redupl", voice="mp", form="ἀνθίστασθαι", dialect="", tense="pres", relation="OBJ", mood="inf", number="", cid=26871783, posClass="V", pos="verb", ref="1.093.7-054", tbwid=30, value="ἀνθίστασθαι", posAdd="ami_pr", head=14, length=11, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀνθίστημι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἀνθίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀνθίστημι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.12:31", ref="", lemma="", tbwid=31, form="", value=".", relation="AuxK", head=0, cid=26871784, pos="punct", length=1, )
-s.words(w)
-words = "τόν τε Πειραιᾶ ὠφελιμώτερον ἐνόμιζε τῆς ἄνω πόλεως , καὶ πολλάκις τοῖς Ἀθηναίοις παρῄνει , ἢν ἄρα ποτὲ κατὰ γῆν βιασθῶσι , καταβάντας ἐς αὐτὸν ταῖς ναυσὶ πρὸς ἅπαντας ἀνθίστασθαι . "
-s['sentence'] = "τόν τε Πειραιᾶ ὠφελιμώτερον ἐνόμιζε τῆς ἄνω πόλεως , καὶ πολλάκις τοῖς Ἀθηναίοις παρῄνει , ἢν ἄρα ποτὲ κατὰ γῆν βιασθῶσι , καταβάντας ἐς αὐτὸν ταῖς ναυσὶ πρὸς ἅπαντας ἀνθίστασθαι . "
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13", length=14)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:1", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26871785, posClass="N", pos="adj", ref="1.093.8-001", tbwid=1, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=6, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:2", ref="1.093.8-002", lemma="μέν", tbwid=2, isIndecl="indeclform", form="μέν", dialect="", value="μὲν", relation="AuxY", head=6, cid=26871786, posClass="N", pos="particle", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέν' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="μέν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μέν" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:3", ref="1.093.8-003", lemma="οὖν", tbwid=3, isIndecl="indeclform", form="οὖν", dialect="", value="οὖν", relation="AuxZ", head=2, cid=26871787, posClass="N", pos="particle", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὖν' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="οὖν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὖν" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:4", lemma="οὕτως", form="οὕτως", isIndecl="indeclform", dialect="", relation="ADV", cid=26871788, pos="adverb", posClass="N", tbwid=4, ref="1.093.8-004", degree="", value="οὕτως", head=6, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὕτως' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="οὕτως", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὕτως" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:5", lemma="τειχίζω", person="3rd", isIndecl="", voice="pass", form="ἐτειχίσθησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26871789, posClass="V", pos="verb", ref="1.093.8-005", tbwid=5, value="ἐτειχίσθησαν", posAdd="aor_pass,izw", head=6, length=12, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τειχίζω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="τειχίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τειχίζω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:6", ref="1.093.8-006", lemma="καί", tbwid=6, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26871790, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:7", lemma="ἄλλος", form="ἄλλα", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26871791, posClass="N", pos="adj", ref="1.093.8-007", tbwid=7, degree="", value="τἆλλα", gender="neut", posAdd="art_adj", case="acc", head=8, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:8", lemma="κατασκευάζω", person="3rd", isIndecl="", voice="mp", form="κατεσκευάζοντο", dialect="", tense="imperf", relation="PRED_CO", mood="ind", number="pl", cid=26871792, posClass="V", pos="verb", ref="1.093.8-008", tbwid=8, value="κατεσκευάζοντο", posAdd="w_stem,azw", head=6, length=14, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατασκευάζω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="κατασκευάζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατασκευάζω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:9", lemma="εὐθύς", form="εὐθύς", isIndecl="indeclform", dialect="", relation="ADV", cid=26871793, pos="adverb", posClass="N", tbwid=9, ref="1.093.8-009", degree="", value="εὐθὺς", head=8, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὐθύς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="εὐθύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:εὐθύς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:10", ref="1.093.8-010", lemma="μετά", tbwid=10, isIndecl="indeclform", form="μετά", dialect="", value="μετὰ", relation="AuxP", head=8, cid=26871794, posClass="N", pos="prep", length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μετά' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="μετά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μετά" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:11", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26871795, posClass="N", pos="article", ref="1.093.8-011", tbwid=11, value="τὴν", gender="fem", case="acc", head=13, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:12", lemma="Μῆδος", form="Μήδων", isIndecl="", dialect="", relation="ATR", number="pl", cid=26871796, posClass="N", pos="noun", ref="1.093.8-012", tbwid=12, value="Μήδων", gender="masc", posAdd="os_ou", case="gen", head=13, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μῆδος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Μῆδος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μῆδος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:13", lemma="ἀναχώρησις", form="ἀναχώρησιν", isIndecl="", dialect="", relation="ADV", number="sg", cid=26871797, posClass="N", pos="noun", ref="1.093.8-013", tbwid=13, value="ἀναχώρησιν", gender="fem", posAdd="is_ews", case="acc", head=10, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀναχώρησις' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἀναχώρησις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀναχώρησις" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.93.13:14", ref="", lemma="", tbwid=14, form="", value=".", relation="AuxK", head=0, cid=26871798, pos="punct", length=1, )
-s.words(w)
-words = "Ἀθηναῖοι μὲν οὖν οὕτως ἐτειχίσθησαν καὶ τἆλλα κατεσκευάζοντο εὐθὺς μετὰ τὴν Μήδων ἀναχώρησιν . "
-s['sentence'] = "Ἀθηναῖοι μὲν οὖν οὕτως ἐτειχίσθησαν καὶ τἆλλα κατεσκευάζοντο εὐθὺς μετὰ τὴν Μήδων ἀναχώρησιν . "
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10", length=8)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:1", lemma="ὅς", form="οἷς", isIndecl="indeclform", dialect="", relation="OBJ", number="pl", cid=26872019, posClass="N", pos="pron", ref="1.095.6-019", tbwid=1, value="οἷς", gender="masc", posAdd="relative", case="dat", head=3, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὅς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:2", lemma="οὐκέτι", form="οὐκέτι", isIndecl="indeclform", dialect="", relation="AuxZ", cid=26872020, pos="adverb", posClass="N", tbwid=2, ref="1.095.6-020", degree="", value="οὐκέτι", head=3, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="οὐκέτι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:3", lemma="ἐφίημι", person="3rd", isIndecl="", voice="act", form="ἐφι_εσαν", dialect="", tense="imperf", relation="PRED", mood="ind", number="pl", cid=26872021, posClass="V", pos="verb", ref="1.095.6-021", tbwid=3, value="ἐφίεσαν", posAdd="irreg_mi", head=0, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐφίημι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐφίημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐφίημι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:4", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872022, posClass="N", pos="article", ref="1.095.6-022", tbwid=4, value="οἱ", gender="masc", case="nom", head=5, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:5", lemma="σύμμαχος", form="ξύμμαχοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872023, posClass="N", pos="adj", ref="1.095.6-023", tbwid=5, degree="", value="ξύμμαχοι", gender="masc", posAdd="os_on", case="nom", head=3, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σύμμαχος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="σύμμαχος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σύμμαχος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:6", lemma="ὁ", form="τήν", isIndecl="indeclform", dialect="attic epic ionic", relation="ATR", number="sg", cid=26872024, posClass="N", pos="article", ref="1.095.6-024", tbwid=6, value="τὴν", gender="fem", case="acc", head=7, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:7", lemma="ἡγεμονία", form="ἡγεμονία_ν", isIndecl="", dialect="attic doric aeolic", relation="OBJ", number="sg", cid=26872025, posClass="N", pos="noun", ref="1.095.6-025", tbwid=7, value="ἡγεμονίαν", gender="fem", posAdd="h_hs", case="acc", head=3, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἡγεμονία' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἡγεμονία", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἡγεμονία" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.10:8", ref="", lemma="", tbwid=8, form="", value=".", relation="AuxK", head=0, cid=26872026, pos="punct", length=1, )
-s.words(w)
-words = "οἷς οὐκέτι ἐφίεσαν οἱ ξύμμαχοι τὴν ἡγεμονίαν . "
-s['sentence'] = "οἷς οὐκέτι ἐφίεσαν οἱ ξύμμαχοι τὴν ἡγεμονίαν . "
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11", length=48)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:1", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="SBJ", number="pl", cid=26872027, posClass="N", pos="pron", ref="1.095.7-001", tbwid=1, value="οἱ", gender="masc", posAdd="article", case="nom", head=4, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:2", ref="1.095.7-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="AuxY", head=6, cid=26872028, posClass="N", pos="particle", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:3", lemma="αἰσθάνομαι", form="αἰσθόμενοι", isIndecl="", voice="mid", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26872029, posClass="P", pos="participle", ref="1.095.7-003", tbwid=3, value="αἰσθόμενοι", gender="masc", posAdd="aor2,anw", case="nom", head=4, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αἰσθάνομαι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="αἰσθάνομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αἰσθάνομαι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:4", lemma="ἀπέρχομαι", person="3rd", isIndecl="", voice="act", form="ἀπῆλθον", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26872030, posClass="V", pos="verb", ref="1.095.7-004", tbwid=4, value="ἀπῆλθον", posAdd="aor2", head=6, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπέρχομαι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἀπέρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπέρχομαι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:5", ref="", lemma="", tbwid=5, form="", value=",", relation="AuxX", head=6, cid=26872031, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:6", ref="1.095.7-006", lemma="καί", tbwid=6, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26872032, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:7", lemma="ἄλλος", form="ἄλλους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26872033, posClass="N", pos="adj", ref="1.095.7-007", tbwid=7, degree="", value="ἄλλους", gender="masc", posAdd="art_adj", case="acc", head=10, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:8", lemma="οὐκέτι", form="οὐκέτι", isIndecl="indeclform", dialect="", relation="AuxZ", cid=26872034, pos="adverb", posClass="N", tbwid=8, ref="1.095.7-008", degree="", value="οὐκέτι", head=10, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="οὐκέτι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:οὐκέτι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:9", lemma="ὕστερος", form="ὕστερον", isIndecl="irreg_comp", dialect="", relation="ADV", number="sg", cid=26872035, posClass="N", pos="noun", ref="1.095.7-009", tbwid=9, value="ὕστερον", gender="neut", posAdd="os_h_on", case="acc", head=10, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὕστερος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὕστερος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὕστερος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:10", lemma="ἐκπέμπω", person="3rd", isIndecl="", voice="act", form="ἐξέπεμψαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26872036, posClass="V", pos="verb", ref="1.095.7-010", tbwid=10, value="ἐξέπεμψαν", posAdd="aor1,reg_conj", head=6, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκπέμπω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐκπέμπω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκπέμπω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:11", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872037, posClass="N", pos="article", ref="1.095.7-011", tbwid=11, value="οἱ", gender="masc", case="nom", head=12, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:12", lemma="Λακεδαιμόνιος", form="Λακεδαιμόνιοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26872038, posClass="N", pos="adj", ref="1.095.7-012", tbwid=12, degree="", value="Λακεδαιμόνιοι", gender="masc", posAdd="os_h_on", case="nom", head=10, length=13, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Λακεδαιμόνιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:13", ref="", lemma="", tbwid=13, form="", value=",", relation="AuxX", head=30, cid=26872039, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:14", lemma="φοβέω", form="φοβούμενοι", isIndecl="contr", voice="mp", dialect="attic epic doric", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872040, posClass="P", pos="participle", ref="1.095.7-014", tbwid=14, value="φοβούμενοι", gender="masc", posAdd="ew_pr,ew_denom", case="nom", head=30, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φοβέω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="φοβέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:φοβέω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:15", ref="1.095.7-015", lemma="μή", tbwid=15, isIndecl="indeclform", form="μή", dialect="", value="μὴ", relation="AuxC", head=14, cid=26872041, posClass="N", pos="conj", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μή' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="μή", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μή" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:16", lemma="σφεῖς", form="σφισιν", isIndecl="enclitic nu_movable indeclform", dialect="", relation="ADV", number="pl", cid=26872042, posClass="N", pos="pron", ref="1.095.7-016", tbwid=16, value="σφίσιν", gender="masc", posAdd="pron3", case="dat", head=20, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="σφεῖς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:17", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26872043, posClass="N", pos="article", ref="1.095.7-017", tbwid=17, value="οἱ", gender="masc", case="nom", head=18, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:18", lemma="ἔξειμι1", form="ἐξιόντες", isIndecl="", voice="act", dialect="", tense="pres", relation="SBJ", mood="part", number="pl", cid=26872044, posClass="P", pos="participle", ref="1.095.7-018", tbwid=18, value="ἐξιόντες", gender="masc", posAdd="irreg_mi", case="nom", head=20, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔξειμι1' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἔξειμι1", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔξειμι1" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:19", lemma="χείρων", form="χείρους", isIndecl="contr", dialect="", relation="PNOM", number="pl", cid=26872045, posClass="N", pos="adj", ref="1.095.7-019", tbwid=19, degree="comp", value="χείρους", gender="masc", posAdd="wn_on_comp", case="acc", head=20, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:χείρων' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="χείρων", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:χείρων" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:20", lemma="γίγνομαι", person="3rd", isIndecl="pres_redupl", voice="mp", form="γίγνωνται", dialect="", tense="pres", relation="OBJ", mood="subj", number="pl", cid=26872046, posClass="V", pos="verb", ref="1.095.7-020", tbwid=20, value="γίγνωνται", posAdd="w_stem,reg_conj", head=15, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γίγνομαι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="γίγνομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:γίγνομαι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:21", ref="", lemma="", tbwid=21, form="", value=",", relation="AuxX", head=27, cid=26872047, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:22", lemma="ὅσπερ", form="ὅπερ", isIndecl="indeclform", dialect="", relation="OBJ", number="sg", cid=26872048, posClass="N", pos="pron", ref="1.095.7-022", tbwid=22, value="ὅπερ", gender="neut", posAdd="relative", case="acc", head=27, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅσπερ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὅσπερ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅσπερ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:23", ref="1.095.7-023", lemma="καί", tbwid=23, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=24, cid=26872049, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:24", ref="1.095.7-024", lemma="ἐν", tbwid=24, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=27, cid=26872050, posClass="N", pos="prep", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:25", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872051, posClass="N", pos="article", ref="1.095.7-025", tbwid=25, value="τῷ", gender="masc", case="dat", head=26, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:26", lemma="Παυσανίας", form="Παυσανία_", isIndecl="", dialect="attic doric aeolic", relation="OBJ", number="sg", cid=26872052, posClass="N", pos="noun", ref="1.095.7-026", tbwid=26, value="Παυσανίᾳ", gender="masc", posAdd="hs_ou", case="dat", head=24, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Παυσανίας' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Παυσανίας", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Παυσανίας" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:27", lemma="ἐνεῖδον", person="3rd", isIndecl="syll_augment", voice="act", form="ἐνεῖδον", dialect="", tense="aor", relation="ATR", mood="ind", number="pl", cid=26872053, posClass="V", pos="verb", ref="1.095.7-027", tbwid=27, value="ἐνεῖδον", posAdd="aor2", head=20, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐνεῖδον' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐνεῖδον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐνεῖδον" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:28", ref="", lemma="", tbwid=28, form="", value=",", relation="AuxX", head=27, cid=26872054, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:29", lemma="ἀπαλλάσσω", form="ἀπαλλαξείοντες", isIndecl="desiderative", voice="act", dialect="", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872055, posClass="P", pos="participle", ref="1.095.7-029", tbwid=29, value="ἀπαλλαξείοντες", gender="masc", posAdd="w_stem", case="nom", head=35, length=14, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπαλλάσσω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἀπαλλάσσω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπαλλάσσω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:30", ref="1.095.7-030", lemma="δέ", tbwid=30, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="COORD", head=10, cid=26872056, posClass="N", pos="particle", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:31", ref="1.095.7-031", lemma="καί", tbwid=31, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=29, cid=26872057, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:32", lemma="ὁ", form="τοῦ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872058, posClass="N", pos="article", ref="1.095.7-032", tbwid=32, value="τοῦ", gender="masc", case="gen", head=34, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:33", lemma="Μηδικός", form="Μηδικοῦ", isIndecl="", dialect="", relation="ATR", number="sg", cid=26872059, posClass="N", pos="adj", ref="1.095.7-033", tbwid=33, degree="", value="Μηδικοῦ", gender="masc", posAdd="os_h_on", case="gen", head=34, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μηδικός' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Μηδικός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μηδικός" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:34", lemma="πόλεμος", form="πολέμου", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26872060, posClass="N", pos="noun", ref="1.095.7-034", tbwid=34, value="πολέμου", gender="masc", posAdd="os_ou", case="gen", head=29, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλεμος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="πόλεμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πόλεμος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:35", ref="1.095.7-035", lemma="καί", tbwid=35, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=30, cid=26872061, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:36", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26872062, posClass="N", pos="article", ref="1.095.7-036", tbwid=36, value="τοὺς", gender="masc", case="acc", head=37, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:37", lemma="Ἀθηναῖος", form="Ἀθηναι_ους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26872063, posClass="N", pos="adj", ref="1.095.7-037", tbwid=37, degree="", value="Ἀθηναίους", gender="masc", posAdd="os_h_on", case="acc", head=38, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:38", lemma="νομίζω", form="νομίζοντες", isIndecl="", voice="act", dialect="", tense="pres", relation="ADV_CO", mood="part", number="pl", cid=26872064, posClass="P", pos="participle", ref="1.095.7-038", tbwid=38, value="νομίζοντες", gender="masc", posAdd="w_stem,izw", case="nom", head=35, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:39", lemma="ἱκανός", form="ἱκανούς", isIndecl="", dialect="", relation="OCOMP_CO", number="pl", cid=26872065, posClass="N", pos="adj", ref="1.095.7-039", tbwid=39, degree="", value="ἱκανοὺς", gender="masc", posAdd="os_h_on", case="acc", head=41, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱκανός' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἱκανός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱκανός" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:40", lemma="ἐξηγέομαι", person="", isIndecl="contr", voice="mid", form="ἐξηγεῖσθαι", dialect="attic epic", tense="pres", relation="ADV", mood="inf", number="", cid=26872066, posClass="V", pos="verb", ref="1.095.7-040", tbwid=40, value="ἐξηγεῖσθαι", posAdd="ew_pr,ew_denom", head=39, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐξηγέομαι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐξηγέομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐξηγέομαι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:41", ref="1.095.7-041", lemma="καί", tbwid=41, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=38, cid=26872067, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:42", lemma="σφεῖς", form="σφισιν", isIndecl="enclitic nu_movable indeclform", dialect="", relation="ADV", number="pl", cid=26872068, posClass="N", pos="pron", ref="1.095.7-042", tbwid=42, value="σφίσιν", gender="masc", posAdd="pron3", case="dat", head=47, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="σφεῖς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:σφεῖς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:43", ref="1.095.7-043", lemma="ἐν", tbwid=43, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=47, cid=26872069, posClass="N", pos="prep", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:44", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26872070, posClass="N", pos="article", ref="1.095.7-044", tbwid=44, value="τῷ", gender="masc", case="dat", head=46, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:45", lemma="τότε", form="τότε", isIndecl="indeclform", dialect="", relation="ADV", cid=26872071, pos="adverb", posClass="N", tbwid=45, ref="1.095.7-045", degree="", value="τότε", head=46, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τότε' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="τότε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τότε" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:46", lemma="πάρειμι1", form="παρόντι", isIndecl="", voice="act", dialect="", tense="pres", relation="ADV", mood="part", number="sg", cid=26872072, posClass="P", pos="participle", ref="1.095.7-046", tbwid=46, value="παρόντι", gender="masc", posAdd="irreg_mi", case="dat", head=43, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάρειμι1' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="πάρειμι1", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:πάρειμι1" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:47", lemma="ἐπιτήδειος", form="ἐπιτηδείους", isIndecl="", dialect="", relation="OCOMP_CO", number="pl", cid=26872073, posClass="N", pos="adj", ref="1.095.7-047", tbwid=47, degree="", value="ἐπιτηδείους", gender="masc", posAdd="os_h_on", case="acc", head=41, length=11, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιτήδειος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐπιτήδειος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιτήδειος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.95.11:48", ref="", lemma="", tbwid=48, form="", value=".", relation="AuxK", head=0, cid=26872074, pos="punct", length=1, )
-s.words(w)
-words = "οἱ δὲ αἰσθόμενοι ἀπῆλθον , καὶ ἄλλους οὐκέτι ὕστερον ἐξέπεμψαν οἱ Λακεδαιμόνιοι , φοβούμενοι μὴ σφίσιν οἱ ἐξιόντες χείρους γίγνωνται , ὅπερ καὶ ἐν τῷ Παυσανίᾳ ἐνεῖδον , ἀπαλλαξείοντες δὲ καὶ τοῦ Μηδικοῦ πολέμου καὶ τοὺς Ἀθηναίους νομίζοντες ἱκανοὺς ἐξηγεῖσθαι καὶ σφίσιν ἐν τῷ τότε παρόντι ἐπιτηδείους . "
-s['sentence'] = "οἱ δὲ αἰσθόμενοι ἀπῆλθον , καὶ ἄλλους οὐκέτι ὕστερον ἐξέπεμψαν οἱ Λακεδαιμόνιοι , φοβούμενοι μὴ σφίσιν οἱ ἐξιόντες χείρους γίγνωνται , ὅπερ καὶ ἐν τῷ Παυσανίᾳ ἐνεῖδον , ἀπαλλαξείοντες δὲ καὶ τοῦ Μηδικοῦ πολέμου καὶ τοὺς Ἀθηναίους νομίζοντες ἱκανοὺς ἐξηγεῖσθαι καὶ σφίσιν ἐν τῷ τότε παρόντι ἐπιτηδείους . "
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10", length=19)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:1", ref="1.105.6-038", lemma="καί", tbwid=1, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=0, cid=26873401, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:2", lemma="ὁ", form="οἱ", isIndecl="proclitic indeclform", dialect="", relation="ATR", number="pl", cid=26873402, posClass="N", pos="article", ref="1.105.6-039", tbwid=2, value="οἱ", gender="masc", case="nom", head=3, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:3", lemma="Ἀθηναῖος", form="Ἀθηναῖοι", isIndecl="", dialect="", relation="SBJ", number="pl", cid=26873403, posClass="N", pos="adj", ref="1.105.6-040", tbwid=3, degree="", value="Ἀθηναῖοι", gender="masc", posAdd="os_h_on", case="nom", head=14, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:4", lemma="ἐκβοηθέω", form="ἐκβοηθήσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26873404, posClass="P", pos="participle", ref="1.105.6-041", tbwid=4, value="ἐκβοηθήσαντες", gender="masc", posAdd="aor1,ew_denom", case="nom", head=14, length=13, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκβοηθέω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐκβοηθέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκβοηθέω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:5", ref="1.105.6-042", lemma="ἐκ", tbwid=5, isIndecl="proclitic indeclform", form="ἐκ", dialect="", value="ἐκ", relation="AuxP", head=4, cid=26873405, posClass="N", pos="prep", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐκ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐκ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:6", lemma="ὁ", form="τῶν", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873406, posClass="N", pos="article", ref="1.105.6-043", tbwid=6, value="τῶν", gender="masc", case="gen", head=7, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:7", lemma="Μέγαρα", form="Μεγάρων", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873407, posClass="N", pos="noun", ref="1.105.6-044", tbwid=7, value="Μεγάρων", gender="neut", posAdd="os_ou", case="gen", head=5, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μέγαρα' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Μέγαρα", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Μέγαρα" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:8", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873408, posClass="N", pos="pron", ref="1.105.6-045", tbwid=8, value="τούς", gender="masc", posAdd="article", case="acc", head=12, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:9", ref="1.105.6-046", lemma="τε", tbwid=9, isIndecl="enclitic indeclform", form="τε", dialect="", value="τε", relation="AuxY", head=14, cid=26873409, posClass="N", pos="particle", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="τε", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τε" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:10", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873410, posClass="N", pos="article", ref="1.105.6-047", tbwid=10, value="τὸ", gender="neut", case="acc", head=11, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:11", lemma="τροπαῖος", form="τροπαῖον", isIndecl="", dialect="", relation="OBJ", number="sg", cid=26873411, posClass="N", pos="noun", ref="1.105.6-048", tbwid=11, value="τροπαῖον", gender="neut", posAdd="os_h_on", case="acc", head=12, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τροπαῖος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="τροπαῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τροπαῖος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:12", lemma="ἵστημι", form="ἱστάντας", isIndecl="causal pres_redupl", voice="act", dialect="", tense="pres", relation="OBJ", mood="part", number="pl", cid=26873412, posClass="P", pos="participle", ref="1.105.6-049", tbwid=12, value="ἱστάντας", gender="masc", posAdd="ami_pr", case="acc", head=13, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἵστημι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἵστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἵστημι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:13", lemma="διαφθείρω", person="3rd", isIndecl="", voice="act", form="διαφθείρουσι", dialect="attic epic doric ionic", tense="pres", relation="PRED_CO", mood="ind", number="pl", cid=26873413, posClass="V", pos="verb", ref="1.105.6-050", tbwid=13, value="διαφθείρουσι", posAdd="w_stem,eirw", head=14, length=12, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διαφθείρω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="διαφθείρω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διαφθείρω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:14", ref="1.105.6-051", lemma="καί", tbwid=14, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="COORD", head=1, cid=26873414, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:15", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873415, posClass="N", pos="article", ref="1.105.6-052", tbwid=15, value="τοῖς", gender="masc", case="dat", head=16, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:16", lemma="ἄλλος", form="ἄλλοις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873416, posClass="N", pos="adj", ref="1.105.6-053", tbwid=16, degree="", value="ἄλλοις", gender="masc", posAdd="art_adj", case="dat", head=17, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἄλλος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἄλλος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:17", lemma="συμβάλλω", form="ξυμβαλόντες", isIndecl="sig_to_ci", voice="act", dialect="", tense="aor", relation="ADV", mood="part", number="pl", cid=26873417, posClass="P", pos="participle", ref="1.105.6-054", tbwid=17, value="ξυμβαλόντες", gender="masc", posAdd="aor2", case="nom", head=18, length=11, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμβάλλω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="συμβάλλω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμβάλλω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:18", lemma="κρατέω", person="3rd", isIndecl="", voice="act", form="ἐκράτησαν", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873418, posClass="V", pos="verb", ref="1.105.6-055", tbwid=18, value="ἐκράτησαν", posAdd="aor1,ew_denom", head=14, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κρατέω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="κρατέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κρατέω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.105.10:19", ref="", lemma="", tbwid=19, form="", value=".", relation="AuxK", head=0, cid=26873419, pos="punct", length=1, )
-s.words(w)
-words = "καὶ οἱ Ἀθηναῖοι ἐκβοηθήσαντες ἐκ τῶν Μεγάρων τούς τε τὸ τροπαῖον ἱστάντας διαφθείρουσι καὶ τοῖς ἄλλοις ξυμβαλόντες ἐκράτησαν . "
-s['sentence'] = "καὶ οἱ Ἀθηναῖοι ἐκβοηθήσαντες ἐκ τῶν Μεγάρων τούς τε τὸ τροπαῖον ἱστάντας διαφθείρουσι καὶ τοῖς ἄλλοις ξυμβαλόντες ἐκράτησαν . "
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10", length=16)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:1", lemma="νομίζω", form="νομίσαντες", isIndecl="", voice="act", dialect="", tense="aor", relation="ADV_CO", mood="part", number="pl", cid=26873685, posClass="P", pos="participle", ref="1.107.6-001", tbwid=1, value="νομίσαντες", gender="masc", posAdd="aor1,izw", case="nom", head=9, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="νομίζω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:νομίζω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:2", ref="1.107.6-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="AuxY", head=6, cid=26873686, posClass="N", pos="particle", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:3", lemma="ἀπορέω", person="", isIndecl="contr", voice="act", form="ἀπορεῖν", dialect="attic epic doric", tense="pres", relation="OBJ", mood="inf", number="", cid=26873687, posClass="V", pos="verb", ref="1.107.6-003", tbwid=3, value="ἀπορεῖν", posAdd="ew_pr,ew_denom", head=1, length=7, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπορέω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἀπορέω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἀπορέω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:4", lemma="ὅπη", form="ὅπῃ", isIndecl="indeclform", dialect="", relation="OBJ", cid=26873688, pos="adverb", posClass="N", tbwid=4, ref="1.107.6-004", degree="", value="ὅπῃ", head=5, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅπη' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὅπη", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅπη" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:5", lemma="διέρχομαι", person="3rd", isIndecl="nu_movable", voice="act", form="διέλθωσιν", dialect="", tense="aor", relation="OBJ", mood="subj", number="pl", cid=26873689, posClass="V", pos="verb", ref="1.107.6-005", tbwid=5, value="διέλθωσιν", posAdd="aor2", head=3, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διέρχομαι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="διέρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:διέρχομαι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:6", lemma="ἐπιστρατεύω", person="3rd", isIndecl="", voice="act", form="ἐπεστράτευσαν", dialect="", tense="aor", relation="PRED", mood="ind", number="pl", cid=26873690, posClass="V", pos="verb", ref="1.107.6-006", tbwid=6, value="ἐπεστράτευσαν", posAdd="aor1,euw", head=0, length=13, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιστρατεύω' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐπιστρατεύω", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐπιστρατεύω" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:7", lemma="αὐτός", form="αὐτοῖς", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873691, posClass="N", pos="adj", ref="1.107.6-007", tbwid=7, degree="", value="αὐτοῖς", gender="masc", posAdd="art_adj", case="dat", head=6, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="αὐτός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:αὐτός" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:8", ref="", lemma="", tbwid=8, form="", value=",", relation="AuxX", head=9, cid=26873692, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:9", ref="1.107.6-009", lemma="καί", tbwid=9, isIndecl="indeclform", form="καί", dialect="", value="καί", relation="COORD", head=6, cid=26873693, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:10", lemma="τις", form="τι", isIndecl="enclitic indeclform", dialect="", relation="AuxZ", number="sg", cid=26873694, posClass="N", pos="pron", ref="1.107.6-010", tbwid=10, value="τι", gender="neut", posAdd="indef", case="acc", head=9, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τις' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="τις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:τις" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:11", ref="1.107.6-011", lemma="καί", tbwid=11, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=9, cid=26873695, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:12", lemma="ὁ", form="τοῦ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873696, posClass="N", pos="article", ref="1.107.6-012", tbwid=12, value="τοῦ", gender="masc", case="gen", head=13, length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:13", lemma="δῆμος", form="δη_μου", isIndecl="", dialect="", relation="ATR", number="sg", cid=26873697, posClass="N", pos="noun", ref="1.107.6-013", tbwid=13, value="δήμου", gender="masc", posAdd="os_ou", case="gen", head=14, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δῆμος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="δῆμος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δῆμος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:14", lemma="κατάλυσις", form="καταλύσεω^ς", isIndecl="", dialect="attic", relation="ATR", number="sg", cid=26873698, posClass="N", pos="noun", ref="1.107.6-014", tbwid=14, value="καταλύσεως", gender="fem", posAdd="is_ews", case="gen", head=15, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατάλυσις' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="κατάλυσις", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατάλυσις" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:15", lemma="ὑποψία", form="ὑποψία_", isIndecl="", dialect="attic doric aeolic", relation="ADV_CO", number="sg", cid=26873699, posClass="N", pos="noun", ref="1.107.6-015", tbwid=15, value="ὑποψίᾳ", gender="fem", posAdd="h_hs", case="dat", head=9, length=6, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὑποψία' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὑποψία", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὑποψία" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.10:16", ref="", lemma="", tbwid=16, form="", value=".", relation="AuxK", head=0, cid=26873700, pos="punct", length=1, )
-s.words(w)
-words = "νομίσαντες δὲ ἀπορεῖν ὅπῃ διέλθωσιν ἐπεστράτευσαν αὐτοῖς , καί τι καὶ τοῦ δήμου καταλύσεως ὑποψίᾳ . "
-s['sentence'] = "νομίσαντες δὲ ἀπορεῖν ὅπῃ διέλθωσιν ἐπεστράτευσαν αὐτοῖς , καί τι καὶ τοῦ δήμου καταλύσεως ὑποψίᾳ . "
-d.sentences(s)
-s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11", length=20)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:1", lemma="ἔρχομαι", person="3rd", isIndecl="", voice="act", form="ἦλθον", dialect="", tense="aor", relation="PRED_CO", mood="ind", number="pl", cid=26873701, posClass="V", pos="verb", ref="1.107.7-001", tbwid=1, value="ἦλθον", posAdd="aor2", head=2, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔρχομαι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἔρχομαι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔρχομαι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:2", ref="1.107.7-002", lemma="δέ", tbwid=2, isIndecl="indeclform", form="δέ", dialect="", value="δὲ", relation="COORD", head=0, cid=26873702, posClass="N", pos="particle", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="δέ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:δέ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:3", ref="1.107.7-003", lemma="καί", tbwid=3, isIndecl="indeclform", form="καί", dialect="", value="καὶ", relation="AuxZ", head=5, cid=26873703, posClass="N", pos="conj", length=3, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="καί", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:καί" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:4", lemma="Θεσσαλός", form="Θεσσαλῶν", isIndecl="", dialect="", relation="ATR", number="pl", cid=26873704, posClass="N", pos="adj", ref="1.107.7-004", tbwid=4, degree="", value="Θεσσαλῶν", gender="masc", posAdd="os_ou", case="gen", head=5, length=8, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Θεσσαλός' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Θεσσαλός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Θεσσαλός" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:5", lemma="ἱππεύς", form="ἱππῆς", isIndecl="contr", dialect="", relation="SBJ", number="pl", cid=26873705, posClass="N", pos="noun", ref="1.107.7-005", tbwid=5, value="ἱππῆς", gender="masc", posAdd="eus_ews", case="nom", head=1, length=5, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱππεύς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἱππεύς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἱππεύς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:6", lemma="ὁ", form="τοῖς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873706, posClass="N", pos="article", ref="1.107.7-006", tbwid=6, value="τοῖς", gender="masc", case="dat", head=7, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:7", lemma="Ἀθηναῖος", form="Ἀθηναι_οις", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873707, posClass="N", pos="adj", ref="1.107.7-007", tbwid=7, degree="", value="Ἀθηναίοις", gender="masc", posAdd="os_h_on", case="dat", head=1, length=9, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Ἀθηναῖος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Ἀθηναῖος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:8", ref="1.107.7-008", lemma="κατά", tbwid=8, isIndecl="indeclform", form="κατά", dialect="", value="κατὰ", relation="AuxP", head=1, cid=26873708, posClass="N", pos="prep", length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="κατά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:κατά" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:9", lemma="ὁ", form="τό", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873709, posClass="N", pos="article", ref="1.107.7-009", tbwid=9, value="τὸ", gender="neut", case="acc", head=10, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:10", lemma="συμμαχικός", form="συμμαχικόν", isIndecl="", dialect="", relation="ADV", number="sg", cid=26873710, posClass="N", pos="adj", ref="1.107.7-010", tbwid=10, degree="", value="ξυμμαχικόν", gender="neut", posAdd="os_h_on", case="acc", head=8, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμμαχικός' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="συμμαχικός", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:συμμαχικός" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:11", ref="", lemma="", tbwid=11, form="", value=",", relation="AuxX", head=13, cid=26873711, pos="punct", length=1, )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:12", lemma="ὅς", form="οἵ", isIndecl="indeclform", dialect="", relation="SBJ", number="pl", cid=26873712, posClass="N", pos="pron", ref="1.107.7-012", tbwid=12, value="οἳ", gender="masc", posAdd="relative", case="nom", head=13, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὅς", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὅς" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:13", lemma="μεθίστημι", person="3rd", isIndecl="causal", voice="act", form="μετέστησαν", dialect="", tense="aor", relation="ATR", mood="ind", number="pl", cid=26873713, posClass="V", pos="verb", ref="1.107.7-013", tbwid=13, value="μετέστησαν", posAdd="aor1,a_stem", head=5, length=10, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μεθίστημι' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="μεθίστημι", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:μεθίστημι" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:14", ref="1.107.7-014", lemma="ἐν", tbwid=14, isIndecl="proclitic indeclform", form="ἐν", dialect="", value="ἐν", relation="AuxP", head=13, cid=26873714, posClass="N", pos="prep", length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἐν", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἐν" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:15", lemma="ὁ", form="τῷ", isIndecl="indeclform", dialect="", relation="ATR", number="sg", cid=26873715, posClass="N", pos="article", ref="1.107.7-015", tbwid=15, value="τῷ", gender="neut", case="dat", head=16, length=2, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:16", lemma="ἔργον", form="ἔργῳ", isIndecl="", dialect="", relation="ADV", number="sg", cid=26873716, posClass="N", pos="noun", ref="1.107.7-016", tbwid=16, value="ἔργῳ", gender="neut", posAdd="os_ou", case="dat", head=13, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔργον' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ἔργον", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ἔργον" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:17", ref="1.107.7-017", lemma="παρά", tbwid=17, isIndecl="indeclform", form="παρά", dialect="", value="παρὰ", relation="AuxP", head=13, cid=26873717, posClass="N", pos="prep", length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παρά' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="παρά", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:παρά" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:18", lemma="ὁ", form="τούς", isIndecl="indeclform", dialect="", relation="ATR", number="pl", cid=26873718, posClass="N", pos="article", ref="1.107.7-018", tbwid=18, value="τοὺς", gender="masc", case="acc", head=19, length=4, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="ὁ", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:ὁ" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:19", lemma="Λακεδαιμόνιος", form="Λακεδαιμονίους", isIndecl="", dialect="", relation="OBJ", number="pl", cid=26873719, posClass="N", pos="adj", ref="1.107.7-019", tbwid=19, degree="", value="Λακεδαιμονίους", gender="masc", posAdd="os_h_on", case="acc", head=17, length=14, )
-lemma = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CITE) AND n.CITE = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος' RETURN n""")
-try:
-	lemma = gdb.nodes.get(lemma[0][0]['self'])
-	lemma.values(w)
-except:
-	lemma = gdb.node(value="Λακεδαιμόνιος", CITE = "urn:cite:greekLit:tlg0003.tlg001.perseus-grc1:lemma:Λακεδαιμόνιος" )
-s.words(w)
-w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.107.11:20", ref="", lemma="", tbwid=20, form="", value=".", relation="AuxK", head=0, cid=26873720, pos="punct", length=1, )
-s.words(w)
-words = "ἦλθον δὲ καὶ Θεσσαλῶν ἱππῆς τοῖς Ἀθηναίοις κατὰ τὸ ξυμμαχικόν , οἳ μετέστησαν ἐν τῷ ἔργῳ παρὰ τοὺς Λακεδαιμονίους . "
-s['sentence'] = "ἦλθον δὲ καὶ Θεσσαλῶν ἱππῆς τοῖς Ἀθηναίοις κατὰ τὸ ξυμμαχικόν , οἳ μετέστησαν ἐν τῷ ἔργῳ παρὰ τοὺς Λακεδαιμονίους . "
 d.sentences(s)
 s = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.1", length=18)
 w = gdb.node(CTS="urn:cts:greekLit:tlg0003.tlg001.perseus-fas:1.89.1:1", value= "زیرا", length=4)
