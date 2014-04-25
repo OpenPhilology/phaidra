@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 from tastypie.api import Api
-from api.api import TextbookResource, UnitResource, LessonResource, SlideResource, UserResource 
+from api.api import TextbookResource, UnitResource, LessonResource, SlideResource, UserResource, WordResource 
 
 v1_api = Api(api_name='v1')
 v1_api.register(UserResource())
@@ -13,6 +13,8 @@ v1_api.register(TextbookResource())
 v1_api.register(UnitResource())
 v1_api.register(LessonResource())
 v1_api.register(SlideResource())
+
+v1_api.register(WordResource())
 
 urlpatterns = patterns('',
 
