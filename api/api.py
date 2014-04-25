@@ -89,6 +89,31 @@ class WordResource(Resource):
 	
 	CTS = fields.CharField(attribute='CTS')
 	value = fields.CharField(attribute='value')
+	form = fields.CharField(attribute='form', null = True, blank = True)
+	lemma = fields.CharField(attribute='lemma', null = True, blank = True)
+	
+	length = fields.IntegerField(attribute='length', null = True, blank = True)
+	tbwid = fields.IntegerField(attribute='tbwid')
+	head = fields.IntegerField(attribute='head')
+	cid = fields.IntegerField(attribute='cid', null = True, blank = True)
+	
+	pos = fields.CharField(attribute='pos', null = True, blank = True)
+	person = fields.CharField(attribute='person', null = True, blank = True)
+	number = fields.CharField(attribute='number', null = True, blank = True)
+	tense = fields.CharField(attribute='tense', null = True, blank = True)
+	mood = fields.CharField(attribute='mood', null = True, blank = True)
+	voice = fields.CharField(attribute='voice', null = True, blank = True)
+	gender = fields.CharField(attribute='gender', null = True, blank = True)
+	case = fields.CharField(attribute='case', null = True, blank = True)
+	degree = fields.CharField(attribute='degree', null = True, blank = True)
+	
+	relation = fields.CharField(attribute='relation', null = True, blank = True)	
+	
+	dialect = fields.CharField(attribute='dialect', null = True, blank = True)
+	posClass = fields.CharField(attribute='posClass', null = True, blank = True)
+	posAdd = fields.CharField(attribute='posAdd', null = True, blank = True)
+	isIndecl = fields.CharField(attribute='isIndecl', null = True, blank = True)
+	
 	
 	class Meta:
 	
@@ -113,7 +138,7 @@ class WordResource(Resource):
 	def get_object_list(self, request):
 		
 		gdb = GraphDatabase("http://localhost:7474/db/data/")	
-		attrlist = ['CTS', 'length', 'case', 'dialect', 'head', 'form', 'posClass', 'cid', 'gender', 'tbwid', 'pos', 'value', 'number','lemma', 'relation', 'isIndecl', 'ref', 'posAdd', 'mood', 'tense', 'voice']
+		attrlist = ['CTS', 'length', 'case', 'dialect', 'head', 'form', 'posClass', 'cid', 'gender', 'tbwid', 'pos', 'value', 'degree', 'number','lemma', 'relation', 'isIndecl', 'ref', 'posAdd', 'mood', 'tense', 'voice', 'person']
 		words = []
 		
 		query_params = {}
