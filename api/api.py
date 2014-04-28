@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 # coding: utf8
 from phaidra import settings
+from phaidra.urls import v1_api
 
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
@@ -92,6 +93,8 @@ class WordResource(Resource):
 	form = fields.CharField(attribute='form', null = True, blank = True)
 	lemma = fields.CharField(attribute='lemma', null = True, blank = True)
 	
+	sentence = fields.CharField(attribute='sentence', null = True, blank = True)
+	
 	length = fields.IntegerField(attribute='length', null = True, blank = True)
 	tbwid = fields.IntegerField(attribute='tbwid')
 	head = fields.IntegerField(attribute='head')
@@ -152,7 +155,7 @@ class WordResource(Resource):
 		if len(query_params) > 0:
 			
 			# generate query
-			q = """START n=node(*) MATCH (n)-[:words]->(w) WHERE """
+			q = """START s=node(*) MATCH (s)-[:words]->(w) WHERE """
 			
 			# filter word on parameters
 			for key in query_params:
@@ -166,21 +169,24 @@ class WordResource(Resource):
 				else:
 					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
-			q = q + """RETURN w"""
+			q = q + """RETURN w, s"""
 			
-			wordsTable = gdb.query(q)
+			table = gdb.query(q)
 		
 		# default querying	
 		else:	
-			wordsTable = gdb.query("""START n=node(*) MATCH (n)-[:words]->(w) WHERE HAS (w.CTS) RETURN w""")
+			table = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE HAS (w.CTS) RETURN w, s""")
 			
 		# create the objects which was queried for and set all necessary attributes
-		for w in wordsTable:
-			word = w[0]
+		for t in table:
+			word = t[0]
+			sentence = t[1]
 			new_obj = DataObject(id=None, cts=None)
 			new_obj.__dict__['_data'] = word['data']
 			url = word['self'].split('/')
+			urlSent = sentence['self'].split('/')
 			new_obj.__dict__['_data']['id'] = url[len(url)-1]
+			new_obj.__dict__['_data']['sentence'] =  '/api/' +  v1_api.api_name + '/sentence/' + urlSent[len(urlSent)-1] +'/'
 			words.append(new_obj)
 				
 		return words
