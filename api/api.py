@@ -145,39 +145,43 @@ class WordResource(Resource):
 		for obj in request.GET.keys():
 			if obj in attrlist and request.GET.get(obj) is not None:
 				query_params[obj] = request.GET.get(obj)
-			# TODO:
-			#elif obj.split('__')[0] in dir(Word) and request.GET.get(obj) is not None:
-				#query_params[obj] = request.GET.get(obj)
+			elif obj.split('__')[0] in attrlist and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
 		
 		# implement filtering
 		if len(query_params) > 0:
 			
-			# filter word on parameters
+			# generate query
 			q = """START n=node(*) MATCH (n)-[:words]->(w) WHERE """
 			
+			# filter word on parameters
 			for key in query_params:
-				q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
+				if len(key.split('__')) > 1:
+					if key.split('__')[1] == 'contains':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'startswith':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'endswith':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+				else:
+					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
 			q = q + """RETURN w"""
 			
 			wordsTable = gdb.query(q)
-			for w in wordsTable:
-				word = w[0]
-				new_obj = DataObject(id=None, cts=None)
-				new_obj.__dict__['_data'] = word['data']
-				url = word['self'].split('/')
-				new_obj.__dict__['_data']['id'] = url[len(url)-1]
-				words.append(new_obj)
-			
+		
+		# default querying	
 		else:	
 			wordsTable = gdb.query("""START n=node(*) MATCH (n)-[:words]->(w) WHERE HAS (w.CTS) RETURN w""")
-			for w in wordsTable:
-				word = w[0]
-				new_obj = DataObject(id=None, cts=None)
-				new_obj.__dict__['_data'] = word['data']
-				url = word['self'].split('/')
-				new_obj.__dict__['_data']['id'] = url[len(url)-1]
-				words.append(new_obj)
+			
+		# create the objects which was queried for and set all necessary attributes
+		for w in wordsTable:
+			word = w[0]
+			new_obj = DataObject(id=None, cts=None)
+			new_obj.__dict__['_data'] = word['data']
+			url = word['self'].split('/')
+			new_obj.__dict__['_data']['id'] = url[len(url)-1]
+			words.append(new_obj)
 				
 		return words
 	
