@@ -545,14 +545,12 @@ label {
 	background: rgba(255, 255, 255, 0.7);
 	border-radius: 2px;
 
-	h2 {
+	h3 {
 		color: lighten($color-pri-three, 10%);
-		font-size: 14px;
 		letter-spacing: 0.1em;
 	}
-	h3 {
+	h4 {
 		color: $color-pri-three;
-		font-size: 13px;
 		letter-spacing: 0.1em;
 		font-weight: normal;
 	}
@@ -574,16 +572,16 @@ label {
 		text-align: center;
 	}
 	#vocab-pie {
-		& + h3 {
+		& + h4 {
 			color: $color-pri-two;
 			margin-bottom: 0px;
 		}
 	}
-	#morph-pie + h3 {
+	#morph-pie + h4 {
 		color: $color-sec-four;
 		margin-bottom: 0px;
 	}
-	#syn-pie + h3 {
+	#syn-pie + h4 {
 		color: $color-pri-one;		
 		margin-bottom: 0px;
 	}

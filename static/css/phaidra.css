@@ -451,13 +451,11 @@ label {
   padding: 20px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 2px; }
-  .feedback-container h2 {
-    color: #6e517a;
-    font-size: 14px;
-    letter-spacing: 0.1em; }
   .feedback-container h3 {
+    color: #6e517a;
+    letter-spacing: 0.1em; }
+  .feedback-container h4 {
     color: #523d5b;
-    font-size: 13px;
     letter-spacing: 0.1em;
     font-weight: normal; }
   .feedback-container .badge {
@@ -470,13 +468,13 @@ label {
       background-color: #49a556; }
   .feedback-container #pies {
     text-align: center; }
-  .feedback-container #vocab-pie + h3 {
+  .feedback-container #vocab-pie + h4 {
     color: #1fadad;
     margin-bottom: 0px; }
-  .feedback-container #morph-pie + h3 {
+  .feedback-container #morph-pie + h4 {
     color: #f4bc78;
     margin-bottom: 0px; }
-  .feedback-container #syn-pie + h3 {
+  .feedback-container #syn-pie + h4 {
     color: #d15241;
     margin-bottom: 0px; }
   .feedback-container #records .sparkline {

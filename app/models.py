@@ -13,7 +13,8 @@ class Unit(models.Model):
 	textbook = models.ForeignKey('TextBook')
 	name = models.CharField(max_length=200)
 	color = models.CharField(max_length=7)
-	graphic = models.FileField(upload_to='units')
+	graphic = models.FileField(upload_to='units', blank=True)
+	order = models.IntegerField()
 
 	def __unicode__(self):
 		return self.name
@@ -22,6 +23,8 @@ class Unit(models.Model):
 class Lesson(models.Model):
 	unit = models.ForeignKey('Unit')
 	name = models.CharField(max_length=200)
+	order = models.IntegerField()
+
 	def __unicode__(self):
 		return self.name
 
@@ -30,8 +33,9 @@ class Slide(models.Model):
 	lesson = models.ForeignKey('Lesson')
 	name = models.CharField(max_length=200)
 	content = models.TextField()
-	smyth = models.CharField(max_length=10)
-	tasks = models.CharField(max_length=200)
+	smyth = models.CharField(max_length=10, blank=True)
+	task = models.CharField(max_length=200, blank=True)
+	order = models.IntegerField()
 
 	def __unicode__(self):
 		return self.name
