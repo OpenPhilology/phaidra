@@ -1,5 +1,4 @@
 Django==1.6.2
-JPype==0.5.4.2
 Markdown==2.3.1
 South==0.8.4
 argparse==1.2.1
