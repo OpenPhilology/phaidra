@@ -170,3 +170,10 @@ LOGGING = {
         },
     }
 }
+
+# The url on which the Neo4j rest client works
+GRAPH_DATABASE_REST_URL = 'http://localhost:7474/db/data/'
+
+# The current api path
+API_PATH = '/api/v1/'
+

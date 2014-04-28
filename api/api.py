@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 # coding: utf8
 from phaidra import settings
-from phaidra.urls import v1_api
+from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH
 
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
@@ -71,10 +71,11 @@ class DataObject(object):
     	
     	if not hasattr(id, 'id') and id is not None:
     		
-    		gdb = GraphDatabase("http://localhost:7474/db/data/")
-        	word = gdb.nodes.get("http://localhost:7474/db/data/node/" + id)
+    		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+        	word = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + id + '/')
         	self.__dict__['_data'] = word.properties
-         	self.__dict__['_data']['id'] = id       	
+         	self.__dict__['_data']['id'] = id
+         	self.__dict__['_data']['sentence'] = API_PATH + 'sentence/' + str(word.relationships.incoming(types=["words"])[0].start.id) + '/'      	
 
     def __getattr__(self, name):
         return self._data.get(name, None)
@@ -140,7 +141,7 @@ class WordResource(Resource):
 	#/api/word/?randomized=&format=json&lemma=κρατέω
 	def get_object_list(self, request):
 		
-		gdb = GraphDatabase("http://localhost:7474/db/data/")	
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
 		attrlist = ['CTS', 'length', 'case', 'dialect', 'head', 'form', 'posClass', 'cid', 'gender', 'tbwid', 'pos', 'value', 'degree', 'number','lemma', 'relation', 'isIndecl', 'ref', 'posAdd', 'mood', 'tense', 'voice', 'person']
 		words = []
 		
@@ -186,7 +187,7 @@ class WordResource(Resource):
 			url = word['self'].split('/')
 			urlSent = sentence['self'].split('/')
 			new_obj.__dict__['_data']['id'] = url[len(url)-1]
-			new_obj.__dict__['_data']['sentence'] =  '/api/' +  v1_api.api_name + '/sentence/' + urlSent[len(urlSent)-1] +'/'
+			new_obj.__dict__['_data']['sentence'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
 			words.append(new_obj)
 				
 		return words
