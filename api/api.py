@@ -65,18 +65,14 @@ class UserResource(ModelResource):
 		
 class DataObject(object):
 	
-    def __init__(self, id=None, cts=None):
+    def __init__(self, id=None):
     	
     	self.__dict__['_data'] = {}
     	
     	if not hasattr(id, 'id') and id is not None:
     		
-    		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
-        	word = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + id + '/')
-        	self.__dict__['_data'] = word.properties
-         	self.__dict__['_data']['id'] = id
-         	self.__dict__['_data']['sentence'] = API_PATH + 'sentence/' + str(word.relationships.incoming(types=["words"])[0].start.id) + '/'      	
-
+    		self.__dict__['_data']['id'] = id
+         	
     def __getattr__(self, name):
         return self._data.get(name, None)
 
@@ -117,8 +113,7 @@ class WordResource(Resource):
 	posClass = fields.CharField(attribute='posClass', null = True, blank = True)
 	posAdd = fields.CharField(attribute='posAdd', null = True, blank = True)
 	isIndecl = fields.CharField(attribute='isIndecl', null = True, blank = True)
-	
-	
+		
 	class Meta:
 	
 		resource_name = 'word'
@@ -181,11 +176,12 @@ class WordResource(Resource):
 		# create the objects which was queried for and set all necessary attributes
 		for t in table:
 			word = t[0]
-			sentence = t[1]
-			new_obj = DataObject(id=None, cts=None)
-			new_obj.__dict__['_data'] = word['data']
+			sentence = t[1]		
 			url = word['self'].split('/')
-			urlSent = sentence['self'].split('/')
+			urlSent = sentence['self'].split('/')		
+				
+			new_obj = DataObject(url[len(url)-1])
+			new_obj.__dict__['_data'] = word['data']		
 			new_obj.__dict__['_data']['id'] = url[len(url)-1]
 			new_obj.__dict__['_data']['sentence'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
 			words.append(new_obj)
@@ -199,8 +195,125 @@ class WordResource(Resource):
 	
 	def obj_get(self, bundle, **kwargs):
 		
-		return DataObject(id=kwargs['pk'])
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		word = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
+		
+		new_obj = DataObject(kwargs['pk'])
+		new_obj.__dict__['_data'] = word.properties
+		new_obj.__dict__['_data']['id'] = kwargs['pk']
+		new_obj.__dict__['_data']['sentence'] = API_PATH + 'sentence/' + str(word.relationships.incoming(types=["words"])[0].start.id) + '/'
+
+		return new_obj
+
+
+class SentenceResource(Resource):
 	
+	CTS = fields.CharField(attribute='CTS')
+	sentence = fields.CharField(attribute='sentence', null = True, blank = True)	
+	length = fields.IntegerField(attribute='length', null = True, blank = True)
+	document = fields.CharField(attribute='document', null = True, blank = True)
+	words = fields.ListField(attribute='words', null = True, blank = True)
+	
+	
+	class Meta:
+		
+		resource_name = 'sentence'
+		object_class = DataObject
+		authorization = ReadOnlyAuthorization()
+	
+	def detail_uri_kwargs(self, bundle_or_obj):
+		
+		kwargs = {}
+		
+		if isinstance(bundle_or_obj, Bundle):
+			kwargs['pk'] = bundle_or_obj.obj.id
+			
+		else:
+			kwargs['pk'] = bundle_or_obj.id
+			
+		return kwargs
+	
+	#/api/word/?randomized=&format=json&lemma=κρατέω
+	def get_object_list(self, request):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		attrlist = ['CTS', 'length', 'sentence']
+		sentences = []
+		
+		query_params = {}
+		for obj in request.GET.keys():
+			if obj in attrlist and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+			elif obj.split('__')[0] in attrlist and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+		
+		# implement filtering
+		if len(query_params) > 0:
+			
+			# generate query
+			q = """START d=node(*) MATCH (d)-[:sentences]->(s) WHERE """
+			
+			# filter word on parameters
+			for key in query_params:
+				if len(key.split('__')) > 1:
+					if key.split('__')[1] == 'contains':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'startswith':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'endswith':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+				else:
+					q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
+			q = q[:len(q)-4]
+			q = q + """RETURN s, d"""
+			
+			table = gdb.query(q)
+		
+		# default querying	
+		else:	
+			table = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) WHERE HAS (s.CTS) RETURN s, d""")
+			
+		# create the objects which was queried for and set all necessary attributes
+		for t in table:
+			sentence = t[0]
+			document = t[1]		
+			url = sentence['self'].split('/')
+			urlDoc = document['self'].split('/')		
+				
+			new_obj = DataObject(url[len(url)-1])
+			new_obj.__dict__['_data'] = sentence['data']		
+			new_obj.__dict__['_data']['id'] = url[len(url)-1]
+			new_obj.__dict__['_data']['document'] = API_PATH + 'document/' + urlDoc[len(urlDoc)-1] +'/'
+			sentences.append(new_obj)
+				
+		return sentences
+	
+	
+	def obj_get_list(self, bundle, **kwargs):
+		
+		return self.get_object_list(bundle.request)
+	
+	def obj_get(self, bundle, **kwargs):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		sentence = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
+		
+		new_obj = DataObject(kwargs['pk'])
+		new_obj.__dict__['_data'] = sentence.properties
+		new_obj.__dict__['_data']['id'] = kwargs['pk']
+		new_obj.__dict__['_data']['document'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
+		words = sentence.relationships.outgoing(types=["words"])
+		wordArray = []
+		for w in words:
+			word = w.end
+			# this might seems a little hacky, but API resources are very decoupled,
+			# which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
+			word.properties['resource_uri'] = API_PATH + 'word/' + word.url.split('/')[len(word.url.split('/'))-1] + '/'
+			wordArray.append(word.properties)
+		
+		new_obj.__dict__['_data']['words'] = reversed(wordArray)
+
+		return new_obj
 	
 	class node(object):
 		
@@ -210,8 +323,7 @@ class WordResource(Resource):
 			
 		def add_child(self, obj):
 			self.children.append(obj)
-			
-			
+					
 	"""
 	Function for shortening a sentence
 	"""	
@@ -298,8 +410,7 @@ class WordResource(Resource):
 						return None		
 					else:		
 						# set and order words
-						return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)
-					
+						return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)				
 					
 					# set and order words
 					return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)
