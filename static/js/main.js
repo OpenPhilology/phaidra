@@ -36,5 +36,7 @@ require(['jquery', 'underscore', 'backbone', 'router', 'd3', 'bootstrap'], funct
 		// Activate Bootstrap JS Components
 		//$('.sec').tooltip();
 		$('.module .circle').tooltip({ container: 'body'});
+		$('div').tooltip();
+		$('a').tooltip();
 	});
 });
