@@ -106,6 +106,9 @@ $font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	}
 }
 
+html, body {
+	height: 100%;
+}
 body {
 	color: #666;
 	font-family: $font-family;
@@ -129,10 +132,16 @@ h1, h2, h3, h4, h5, h6 {
 label {
 	font-weight: normal;
 	font-size: 1.2em;
+
 }
 .container {
 	max-width: none !important;
 	width: 100%;
+	padding: 0;
+	height: 100%;
+}
+.row {
+	margin: 0;
 }
 .alert {
 	&.alert-success {
@@ -299,6 +308,7 @@ label {
 	//@include gradient($color-pri-two, 0, lighten($color-pri-two, 5%), 100);
 	background-color: $color-sec-two;
 	position: relative;
+	height: 81px;
 	z-index: 1;
 
 	#search-form {
@@ -472,8 +482,10 @@ label {
 }
 
 .main {
-	overflow: hidden;
-	position: relative;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	padding-top: 81px;
 	
 	.lesson-right-menu {
 		position: relative;
@@ -1066,8 +1078,23 @@ table.inflection-table {
 
 .label {
 	padding: 0.4em 0.6em 0.3em;
-	background-color: #BBB;
 	margin: 0px 3px;
+	
+	&.label-default {
+		background-color: #BBB;
+	}
+	&.label-primary {
+		background-color: $color-pri-two;
+	}
+	&.label-danger {
+		background-color: $color-pri-one;
+	}
+	&.label-success {
+		background-color: $color-light-green;
+	}
+	&.label-info {
+		background-color: $color-sec-two;
+	}
 }
 
 .greek-text {
@@ -1108,31 +1135,118 @@ p .greek-text {
 	margin-right: 3px;
 }
 
-.work {
-	width: 3000px;
-	position: relative;
+#reader {
+	background-color: rgba(255, 255, 255, .8);
+	min-height: 100%;
 
-	div {
-		display: inline-block;
-		vertical-align: top;
-		border: 2px solid #FFF;
+	.col-md-6 {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
-		span {
-			display: inline-block;
-			width: 2px;
-			height: 2px;
-			background-color: #FFF;
+	.greek-text {
+		font-size: 1.1em;
+	}
+
+	.page-container {
+		//overflow-y: auto;
+	}
+	.page {
+		padding: 10px 20px;
+		position: relative;
+		margin-top: 0;
+
+		h1 {
+			text-align: center;
+		}
+	}
+
+	.corner {
+		content: "";
+		position: absolute;
+		border-style: solid;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
+
+		&.left {
+			top: 0;
+			left: 0;
+			border-color: #EEE #FFF;
+			border-width: 60px 60px 0 0;
+
+			a {
+				top: -60px;
+				border-width: 0 0 60px 60px;
+				border-color: #FFF $color-pri-one;
+
+				&::after {
+					left: -55px;
+					top: 1px;
+					content: "\e091";
+				}
+				&:hover {
+					border-color: #FFF lighten($color-pri-one, 5%);
+				}
+			}
+		}
+		&.right {
+			top: 0;
+			right: 0;
+			border-color: #EEE #FFF;
+			border-width: 0 60px 60px 0;
+
+			a {
+				right: -60px;
+				border-width: 60px 0 0 60px;
+				border-color: $color-pri-one #FFF;
+
+				&::after {
+					right: 5px;
+					top: -57px;
+					content: "\e092";
+				}
+				&:hover {
+					border-color: lighten($color-pri-one, 5%) #FFF;
+				}
+			}
 		}
 
-		/* Colors for types of knowledge of text */ 
-		span.r {
-			background-color: #BE1E2D;
+		a {
+			top: 0;
+			position: absolute;
+			border-style: solid;
+			color: #FFF;
+
+			&::after {
+				font-family: 'Glyphicons Halflings';
+				font-size: 24px;
+				position: absolute;
+			}
+
 		}
-		span.g {
-			background-color: #1FADAD;
+	}
+
+	.notes-container {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+
+		.notes {
+			background-color: #EEE;
+			border-top: 1px solid #AAA;
+			box-shadow: 0 0 8px 0 rgba(0, 0, 0, .3);
+			padding: 10px;
+
+			p {
+				margin: 0;
+			}
 		}
-		span.b {
-			background-color: #F5BC78;
+		.note-nav {
+			float: right;
+			font-size: 24px;
+
+			span {
+				padding: 10px;
+			}
 		}
 	}
 }
