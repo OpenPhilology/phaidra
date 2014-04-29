@@ -106,6 +106,9 @@ $font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	}
 }
 
+html, body {
+	height: 100%;
+}
 body {
 	color: #666;
 	font-family: $font-family;
@@ -133,6 +136,11 @@ label {
 .container {
 	max-width: none !important;
 	width: 100%;
+	padding: 0;
+	height: 100%;
+}
+.row {
+	margin: 0;
 }
 .alert {
 	&.alert-success {
@@ -472,8 +480,8 @@ label {
 }
 
 .main {
-	overflow: hidden;
 	position: relative;
+	height: 100%;
 	
 	.lesson-right-menu {
 		position: relative;
@@ -1108,31 +1116,94 @@ p .greek-text {
 	margin-right: 3px;
 }
 
-.work {
-	width: 3000px;
-	position: relative;
+#reader {
+	background-color: rgba(255, 255, 255, .8);
+	min-height: 100%;
 
-	div {
-		display: inline-block;
-		vertical-align: top;
-		border: 2px solid #FFF;
+	.col-md-6 {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
-		span {
-			display: inline-block;
-			width: 2px;
-			height: 2px;
-			background-color: #FFF;
+	.greek-text {
+		font-size: 1.1em;
+	}
+
+	.page {
+		border-right: 1px solid #CCC;
+		padding: 10px 80px;
+		position: relative;
+		background-color: #EEE;
+		margin-top: 0;
+	}
+
+	.corner {
+		content: "";
+		position: absolute;
+		border-style: solid;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
+
+		&.left {
+			top: 0;
+			left: 0;
+			border-color: #EEE #FFF;
+			border-width: 60px 60px 0 0;
+
+			a {
+				top: -60px;
+				border-width: 0 0 60px 60px;
+				border-color: #FFF $color-pri-one;
+
+				&::after {
+					left: -55px;
+					top: 1px;
+					content: "\e091";
+				}
+				&:hover {
+					border-color: #FFF lighten($color-pri-one, 5%);
+				}
+			}
+		}
+		&.right {
+			top: 0;
+			right: -1px;
+			border-color: #EEE #FFF;
+			border-width: 0 60px 60px 0;
+
+			a {
+				right: -60px;
+				border-width: 60px 0 0 60px;
+				border-color: $color-pri-one #FFF;
+
+				&::after {
+					right: 5px;
+					top: -57px;
+					content: "\e092";
+				}
+				&:hover {
+					border-color: lighten($color-pri-one, 5%) #FFF;
+				}
+			}
 		}
 
-		/* Colors for types of knowledge of text */ 
-		span.r {
-			background-color: #BE1E2D;
+		a {
+			top: 0;
+			position: absolute;
+			border-style: solid;
+			color: #FFF;
+
+			&::after {
+				font-family: 'Glyphicons Halflings';
+				font-size: 24px;
+				position: absolute;
+			}
+
 		}
-		span.g {
-			background-color: #1FADAD;
-		}
-		span.b {
-			background-color: #F5BC78;
-		}
+	}
+
+	.notes {
+		background-color: #DDD;
+		border-top: 1px solid #CCC;
+		padding: 10px;
 	}
 }

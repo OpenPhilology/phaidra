@@ -41,6 +41,9 @@
   100% {
     transform: rotateZ(2deg); } }
 
+html, body {
+  height: 100%; }
+
 body {
   color: #666;
   font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -64,7 +67,12 @@ label {
 
 .container {
   max-width: none !important;
-  width: 100%; }
+  width: 100%;
+  padding: 0;
+  height: 100%; }
+
+.row {
+  margin: 0; }
 
 .alert.alert-success strong {
   color: #19641A !important; }
@@ -389,8 +397,8 @@ label {
       box-shadow: 2px 2px 3px #455577; }
 
 .main {
-  overflow: hidden;
-  position: relative; }
+  position: relative;
+  height: 100%; }
   .main .lesson-right-menu {
     position: relative;
     height: 40%; }
@@ -917,22 +925,65 @@ p .greek-text {
   margin-left: 3px;
   margin-right: 3px; }
 
-.work {
-  width: 3000px;
-  position: relative; }
-  .work div {
-    display: inline-block;
-    vertical-align: top;
-    border: 2px solid #FFF;
-    /* Colors for types of knowledge of text */ }
-    .work div span {
-      display: inline-block;
-      width: 2px;
-      height: 2px;
-      background-color: #FFF; }
-    .work div span.r {
-      background-color: #BE1E2D; }
-    .work div span.g {
-      background-color: #1FADAD; }
-    .work div span.b {
-      background-color: #F5BC78; }
+#reader {
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 100%; }
+  #reader .col-md-6 {
+    padding-left: 0;
+    padding-right: 0; }
+  #reader .greek-text {
+    font-size: 1.1em; }
+  #reader .page {
+    border-right: 1px solid #CCC;
+    padding: 10px 80px;
+    position: relative;
+    background-color: #EEE;
+    margin-top: 0; }
+  #reader .corner {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3); }
+    #reader .corner.left {
+      top: 0;
+      left: 0;
+      border-color: #EEE #FFF;
+      border-width: 60px 60px 0 0; }
+      #reader .corner.left a {
+        top: -60px;
+        border-width: 0 0 60px 60px;
+        border-color: white #d15241; }
+        #reader .corner.left a::after {
+          left: -55px;
+          top: 1px;
+          content: "\e091"; }
+        #reader .corner.left a:hover {
+          border-color: white #d66556; }
+    #reader .corner.right {
+      top: 0;
+      right: -1px;
+      border-color: #EEE #FFF;
+      border-width: 0 60px 60px 0; }
+      #reader .corner.right a {
+        right: -60px;
+        border-width: 60px 0 0 60px;
+        border-color: #d15241 white; }
+        #reader .corner.right a::after {
+          right: 5px;
+          top: -57px;
+          content: "\e092"; }
+        #reader .corner.right a:hover {
+          border-color: #d66556 white; }
+    #reader .corner a {
+      top: 0;
+      position: absolute;
+      border-style: solid;
+      color: #FFF; }
+      #reader .corner a::after {
+        font-family: 'Glyphicons Halflings';
+        font-size: 24px;
+        position: absolute; }
+  #reader .notes {
+    background-color: #DDD;
+    border-top: 1px solid #CCC;
+    padding: 10px; }
