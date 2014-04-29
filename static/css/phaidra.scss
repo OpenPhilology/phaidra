@@ -132,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 label {
 	font-weight: normal;
 	font-size: 1.2em;
+
 }
 .container {
 	max-width: none !important;
@@ -307,6 +308,7 @@ label {
 	//@include gradient($color-pri-two, 0, lighten($color-pri-two, 5%), 100);
 	background-color: $color-sec-two;
 	position: relative;
+	height: 81px;
 	z-index: 1;
 
 	#search-form {
@@ -480,8 +482,10 @@ label {
 }
 
 .main {
-	position: relative;
+	position: absolute;
 	height: 100%;
+	top: 0;
+	padding-top: 81px;
 	
 	.lesson-right-menu {
 		position: relative;
@@ -1074,8 +1078,23 @@ table.inflection-table {
 
 .label {
 	padding: 0.4em 0.6em 0.3em;
-	background-color: #BBB;
 	margin: 0px 3px;
+	
+	&.label-default {
+		background-color: #BBB;
+	}
+	&.label-primary {
+		background-color: $color-pri-two;
+	}
+	&.label-danger {
+		background-color: $color-pri-one;
+	}
+	&.label-success {
+		background-color: $color-light-green;
+	}
+	&.label-info {
+		background-color: $color-sec-two;
+	}
 }
 
 .greek-text {
@@ -1129,12 +1148,17 @@ p .greek-text {
 		font-size: 1.1em;
 	}
 
+	.page-container {
+		//overflow-y: auto;
+	}
 	.page {
-		border-right: 1px solid #CCC;
-		padding: 10px 80px;
+		padding: 10px 20px;
 		position: relative;
-		background-color: #EEE;
 		margin-top: 0;
+
+		h1 {
+			text-align: center;
+		}
 	}
 
 	.corner {
@@ -1166,7 +1190,7 @@ p .greek-text {
 		}
 		&.right {
 			top: 0;
-			right: -1px;
+			right: 0;
 			border-color: #EEE #FFF;
 			border-width: 0 60px 60px 0;
 
@@ -1201,9 +1225,28 @@ p .greek-text {
 		}
 	}
 
-	.notes {
-		background-color: #DDD;
-		border-top: 1px solid #CCC;
-		padding: 10px;
+	.notes-container {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+
+		.notes {
+			background-color: #EEE;
+			border-top: 1px solid #AAA;
+			box-shadow: 0 0 8px 0 rgba(0, 0, 0, .3);
+			padding: 10px;
+
+			p {
+				margin: 0;
+			}
+		}
+		.note-nav {
+			float: right;
+			font-size: 24px;
+
+			span {
+				padding: 10px;
+			}
+		}
 	}
 }

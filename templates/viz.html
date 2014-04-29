@@ -10,7 +10,7 @@
 	{% block content %}
 
 	<div id="reader">
-		<div class="row">
+		<div class="row page-container">
 			<div class="col-md-6">
 				<div class="page">
 					<div class="corner left">
@@ -34,7 +34,13 @@
 		</div>
 		<div class="row notes-container">
 			<div class="col-md-12 notes">
-				<p><span class="badge">10</span> Annotations</p>
+				<div class="note-nav">
+					<a href="#" title="Add an Annotation"><span class="glyphicon glyphicon-plus-sign"></span></a> 
+					<a href="#" title="View Resources for this Text"><span class="glyphicon glyphicon-chevron-up"></span></a> 
+				</div>
+
+				<p>Hover over a sentence in the text to see available annotations, or to add your own!
+				</p>
 			</div>
 		</div>
 	</div>

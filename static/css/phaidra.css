@@ -241,6 +241,7 @@ label {
   color: #EEE;
   background-color: #4e6087;
   position: relative;
+  height: 81px;
   z-index: 1; }
   .banner #search-form {
     margin: 7px 0px; }
@@ -397,8 +398,10 @@ label {
       box-shadow: 2px 2px 3px #455577; }
 
 .main {
-  position: relative;
-  height: 100%; }
+  position: absolute;
+  height: 100%;
+  top: 0;
+  padding-top: 81px; }
   .main .lesson-right-menu {
     position: relative;
     height: 40%; }
@@ -890,8 +893,17 @@ table.inflection-table {
 
 .label {
   padding: 0.4em 0.6em 0.3em;
-  background-color: #BBB;
   margin: 0px 3px; }
+  .label.label-default {
+    background-color: #BBB; }
+  .label.label-primary {
+    background-color: #1fadad; }
+  .label.label-danger {
+    background-color: #d15241; }
+  .label.label-success {
+    background-color: #a3d55f; }
+  .label.label-info {
+    background-color: #4e6087; }
 
 .greek-text {
   font-family: 'Cambria', 'Times New Romans';
@@ -934,11 +946,11 @@ p .greek-text {
   #reader .greek-text {
     font-size: 1.1em; }
   #reader .page {
-    border-right: 1px solid #CCC;
-    padding: 10px 80px;
+    padding: 10px 20px;
     position: relative;
-    background-color: #EEE;
     margin-top: 0; }
+    #reader .page h1 {
+      text-align: center; }
   #reader .corner {
     content: "";
     position: absolute;
@@ -961,7 +973,7 @@ p .greek-text {
           border-color: white #d66556; }
     #reader .corner.right {
       top: 0;
-      right: -1px;
+      right: 0;
       border-color: #EEE #FFF;
       border-width: 0 60px 60px 0; }
       #reader .corner.right a {
@@ -983,7 +995,19 @@ p .greek-text {
         font-family: 'Glyphicons Halflings';
         font-size: 24px;
         position: absolute; }
-  #reader .notes {
-    background-color: #DDD;
-    border-top: 1px solid #CCC;
-    padding: 10px; }
+  #reader .notes-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0; }
+    #reader .notes-container .notes {
+      background-color: #EEE;
+      border-top: 1px solid #AAA;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+      padding: 10px; }
+      #reader .notes-container .notes p {
+        margin: 0; }
+    #reader .notes-container .note-nav {
+      float: right;
+      font-size: 24px; }
+      #reader .notes-container .note-nav span {
+        padding: 10px; }
