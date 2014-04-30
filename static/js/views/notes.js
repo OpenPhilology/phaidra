@@ -23,7 +23,7 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/notes.html'], functi
 			if (model.get('hovered') && !model.get('selected') && (this.collection.findWhere({ selected: true }) == undefined)) {
 				this.$el.find('p').html('Information about <span lang="' + model.get('lang') +'">' + model.get('value') + '</span>');
 				this.$el.animate({
-					height: '60px'
+					height: '75px'
 				}, 200, "linear");
 			}
 

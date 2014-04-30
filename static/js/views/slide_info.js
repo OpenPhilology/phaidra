@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/parse_tree', 'views/table_inflections'], function($, _, Backbone, Models, Collections, parseTreeView, inflectionTableView) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/parse_tree'], function($, _, Backbone, Models, Collections, parseTreeView) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',

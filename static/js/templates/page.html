@@ -13,7 +13,9 @@
 	<!-- Greek goes here! -->
 	<span class="page-content">
 		<% _.each(words, function(word) { %>
-			<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('CTS') %>"><%= word.get('value') %></span> 
+			<% if (word.get('CTS').indexOf(cts + ':') != -1) { %>
+				<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('CTS') %>"><%= word.get('value') %></span> 
+			<% } %>
 		<% }) %>
 	</span>
 

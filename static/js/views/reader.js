@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/notes'], function($, _, Backbone, Collections, PageView, NotesView) { 
+define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/notes', 'views/knowledge-book-level'], function($, _, Backbone, Collections, PageView, NotesView, KnowledgeView) { 
 
 	var View = Backbone.View.extend({
 		events: { },
@@ -13,17 +13,19 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 				this.pages = {};
 				this.pages.left = new PageView({ 
 					collection: that.words, 
-					side: 'right' 
+					cts: 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.3',
+					side: 'left' 
 				}).render()
 					.$el
 					.appendTo(this.$el.find('.page-container'));
 
-				/*this.pages.right = new PageView({ 
+				this.pages.right = new PageView({ 
 					collection: that.words,
+					cts: 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.4',
 					side: 'right' 
 				}).render()
 					.$el
-					.appendTo(this.$el.find('.page-container'));*/
+					.appendTo(this.$el.find('.page-container'));
 			}
 
 			// Render the notes viewer at the bottom of the screen
@@ -35,7 +37,15 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 					.appendTo(this.$el.find('.notes-container'));
 			}
 
-			// TODO: Make work-level progress visible 
+			// Knowledge Meter at bottom of reader
+			if (!this.knowledge) {
+				this.knowledge = new KnowledgeView()
+					.render()
+					.$el
+					.appendTo(this.$el);
+
+				console.log(this.knowledge);
+			}
 		},
 		render: function() {
 			return this;	

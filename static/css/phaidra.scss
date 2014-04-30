@@ -1183,12 +1183,11 @@ p span[lang="grc"] {
 		bottom: 0;
 
 		.notes {
-			background-color: #EEE;
+			background-color: #F7F7F7;
 			border-top: 1px solid #AAA;
 			box-shadow: 0 0 8px 0 rgba(0, 0, 0, .3);
 			padding: 10px;
-			height: 60px;
-			overflow: auto;
+			height: 75px;
 		}
 		.note-nav {
 			float: right;
