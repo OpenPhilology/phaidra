@@ -349,7 +349,8 @@ label {
   position: absolute;
   height: 100%;
   top: 0;
-  padding-top: 81px; }
+  padding-top: 81px;
+  width: 100%; }
   .main .lesson-right-menu {
     position: relative;
     height: 40%; }
