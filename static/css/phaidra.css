@@ -906,7 +906,9 @@ p span[lang="grc"] {
       cursor: pointer;
       padding: 5px; }
       #reader .page-content span[lang="grc"]:hover {
-        background-color: #f8d3a7; }
+        background-color: #fcebd6; }
+    #reader .page-content .selected, #reader .page-content .selected:hover {
+      background-color: #f8d3a7 !important; }
   #reader .corner {
     content: "";
     position: absolute;
@@ -956,10 +958,11 @@ p span[lang="grc"] {
     width: 100%;
     bottom: 0; }
     #reader .notes-container .notes {
-      background-color: #EEE;
+      background-color: #F7F7F7;
       border-top: 1px solid #AAA;
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
-      padding: 10px; }
+      padding: 10px;
+      height: 75px; }
     #reader .notes-container .note-nav {
       float: right;
       font-size: 24px; }

@@ -4,25 +4,33 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		events: { 
 			'click .corner a': 'turnPage',
 			'mouseenter .page-content span': 'hoverWord',
-			'mouseleave .page-content span': 'unhoverWord'
+			'mouseleave .page-content span': 'hoverWord',
+			'click .page-content span': 'clickWord'
 		},
 		tagName: 'div',
-		className: 'col-md-12',
+		className: 'col-md-6',
 		template: _.template(PageTemplate),
 		initialize: function(options) {
 			this.options = options;
 			this.render();
-			this.turnPage();
+			this.turnPage(options.cts);
 		},
 		render: function() {
-			this.$el.html(this.template({ side: this.options.side, words: this.collection.models })); 
+			// Pass in CTS of sentence so only words in that sentence appear on this page  
+			this.$el.html(this.template({ 
+				side: this.options.side, 
+				words: this.collection.models,
+				cts: this.options.cts
+			})); 
+
 			return this;	
 		},
 		turnPage: function(cts) {
 			var that = this;
 
+			// Let's start at the very beginning, a very good place to staaaart!
 			if (typeof(cts) == 'undefined')
-				cts = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.2';
+				cts = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1';
 
 			$.ajax({
 				url: '/api/v1/sentence/?format=json&CTS=' + cts,
@@ -55,19 +63,48 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 
 			this.render();
 		},
+
+		// TODO: Delegate these responsibilities to a super tiny word view 
+		// Will fix the problem of allowing two words on separate pages to be simultaneously selected
+
+		/*
+		*	Change the 'hover' state of the model appropriately.
+		*/
 		hoverWord: function(e) {
-			var cts = $(e.target).attr('data-cts');
+			var model = this.collection.findWhere({ 
+				CTS: $(e.target).attr('data-cts') 
+			});
 
-			// Get model related to hovered word and mark as 'hovered'
-			var hoveredWord = this.collection.findWhere({ CTS: cts });
-			hoveredWord.set('hovered', true);
+			var hovered = (e.type == 'mouseenter') ? true : false;
+			model.set('hovered', hovered);
 		},
-		unhoverWord: function(e) {
-			var cts = $(e.target).attr('data-cts');
+		clickWord: function(e) {
+			// See if any word is previously selected
+			var prev = this.collection.findWhere({
+				selected: true
+			});
+			var model = this.collection.findWhere({ 
+				CTS: $(e.target).attr('data-cts') 
+			});
 
-			// Get model related to hovered word and mark as 'hovered'
-			var hoveredWord = this.collection.findWhere({ CTS: cts });
-			hoveredWord.set('hovered', false);
+			// If this word is the same as current word, deselect
+			if (model == prev) {
+				prev.set('selected', false);
+				this.$el.find('.page-content span[data-cts="' + prev.get('CTS') + '"]').removeClass('selected');
+				this.$el.parent().css('padding-bottom', '0');
+			}
+			else if (typeof(prev) != 'undefined') {
+				prev.set('selected', false);
+				this.$el.find('.page-content span[data-cts="' + prev.get('CTS') + '"]').removeClass('selected');
+				model.set('selected', true);
+				$(e.target).addClass('selected');
+				this.$el.parent().css('padding-bottom', '200px');
+			}
+			else {
+				model.set('selected', true);
+				$(e.target).addClass('selected');
+				this.$el.parent().css('padding-bottom', '200px');
+			}
 		}
 	});
 
