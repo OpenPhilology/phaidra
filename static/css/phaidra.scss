@@ -424,6 +424,7 @@ label {
 	height: 100%;
 	top: 0;
 	padding-top: 81px;
+	width: 100%;
 	
 	.lesson-right-menu {
 		position: relative;
@@ -962,7 +963,7 @@ div.module {
 
 	td.part {
 		
-		.greek-text {
+		span[lang="grc"] {
 			font-size: 3em;
 		}
 		hr {
@@ -982,7 +983,7 @@ div.module {
 table.inflection-table {
 	font-size: 0.9em;
 
-	.greek-text strong {
+	span[lang="grc"] strong {
 		color: $color-pri-two;
 		background-color: #f5f5f5;
 		padding: 3px;
@@ -992,7 +993,7 @@ table.inflection-table {
 		background-color: $color-pri-one;
 		color: #FFF;
 
-		.greek-text {
+		span[lang="grc"] {
 			color: #FFF;
 
 			em {
@@ -1002,13 +1003,13 @@ table.inflection-table {
 		}
 	}
 	tr.future {
-		.greek-text {
+		span[lang="grc"] {
 			color: #CCC;
 		}
 	}
 	tr.past {
 		color: #333;
-		.greek-text {
+		span[lang="grc"] {
 			color: #333;
 		}
 	}
@@ -1035,7 +1036,7 @@ table.inflection-table {
 	}
 }
 
-.greek-text {
+span[lang="grc"] {
 	font-family: 'Cambria', 'Times New Romans';
 	font-size: 1.3em;
 	letter-spacing: 0.1em;
@@ -1064,7 +1065,7 @@ p {
 	line-height: 3em;
 }
 
-p .greek-text {
+p span[lang="grc"] {
 	border: 1px solid #EEE;
 	padding: 2px;
 	border-radius: 3px;
@@ -1082,13 +1083,6 @@ p .greek-text {
 		padding-right: 0;
 	}
 
-	.greek-text {
-		//font-size: 1.1em;
-	}
-
-	.page-container {
-		//overflow-y: auto;
-	}
 	.page {
 		padding: 10px 80px;
 		position: relative;

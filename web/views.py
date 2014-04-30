@@ -41,8 +41,8 @@ def login(request):
 
 	return HttpResponse(template.render(context))
 
-def viz(request):
-	template = loader.get_template('viz.html')
+def reader(request):
+	template = loader.get_template('reader.html')
 	context = RequestContext(request, {
 		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
 	})
