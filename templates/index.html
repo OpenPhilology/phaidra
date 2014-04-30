@@ -13,20 +13,8 @@
 	<link href="/static/css/parse-tree.css" rel="stylesheet">
 
 	<!-- JS -->
-	<!--<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>-->
-
+	<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
 	<script src="/static/js/lib/jquery-2.0.3.js"></script>
-
-	<script>
-		$(document).on('ready', function() {
-			$('#greeting-text a').on('click', function(e) {
-				e.preventDefault();
-				$('#greeting-text').slideUp('slow', function() {
-					$('#register-text').slideDown('slow');
-				});
-			});
-		});
-	</script>
 
 </head>
 <body>
