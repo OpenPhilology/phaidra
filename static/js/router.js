@@ -57,7 +57,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 				this.showReader();
 
 			this.reader_view.turnToPage(cts);
-		}
+		},
 		/*
 		*	Router functions related to displaying the correct lesson content -- 
 		*	will be replaced by sys. serving content from the backend

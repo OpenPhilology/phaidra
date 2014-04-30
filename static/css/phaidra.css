@@ -808,7 +808,7 @@ div.module {
     margin-right: auto; }
   .word-breakdown td {
     padding: 10px; }
-  .word-breakdown td.part .greek-text {
+  .word-breakdown td.part span[lang="grc"] {
     font-size: 3em; }
   .word-breakdown td.part hr {
     margin-bottom: 0;
@@ -821,23 +821,23 @@ div.module {
 
 table.inflection-table {
   font-size: 0.9em; }
-  table.inflection-table .greek-text strong {
+  table.inflection-table span[lang="grc"] strong {
     color: #1fadad;
     background-color: #f5f5f5;
     padding: 3px; }
   table.inflection-table tr.current {
     background-color: #d15241;
     color: #FFF; }
-    table.inflection-table tr.current .greek-text {
+    table.inflection-table tr.current span[lang="grc"] {
       color: #FFF; }
-      table.inflection-table tr.current .greek-text em {
+      table.inflection-table tr.current span[lang="grc"] em {
         color: #1fadad;
         background-color: #FFF; }
-  table.inflection-table tr.future .greek-text {
+  table.inflection-table tr.future span[lang="grc"] {
     color: #CCC; }
   table.inflection-table tr.past {
     color: #333; }
-    table.inflection-table tr.past .greek-text {
+    table.inflection-table tr.past span[lang="grc"] {
       color: #333; }
 
 .label {
@@ -854,16 +854,16 @@ table.inflection-table {
   .label.label-info {
     background-color: #4e6087; }
 
-.greek-text {
+span[lang="grc"] {
   font-family: 'Cambria', 'Times New Romans';
   font-size: 1.3em;
   letter-spacing: 0.1em; }
-  .greek-text em {
+  span[lang="grc"] em {
     background-color: #FFF0A3;
     border-radius: 3px;
     padding: 3px;
     font-style: normal; }
-  .greek-text em[data-toggle="tooltip"] {
+  span[lang="grc"] em[data-toggle="tooltip"] {
     cursor: pointer; }
 
 .masc {
@@ -878,7 +878,7 @@ table.inflection-table {
 p {
   line-height: 3em; }
 
-p .greek-text {
+p span[lang="grc"] {
   border: 1px solid #EEE;
   padding: 2px;
   border-radius: 3px;

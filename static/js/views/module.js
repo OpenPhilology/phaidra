@@ -1,5 +1,5 @@
 define(
-	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition','views/FrankTestView','views/SimpleVocabView', 'views/slide_direct_select'], 
+	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition', 'views/slide_direct_select'], 
 	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView, FrankTestView, SimpleVocabView, DirectSelectSlideView) { 
 
 		var View = Backbone.View.extend({
