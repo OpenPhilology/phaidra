@@ -82,6 +82,131 @@ class DataObject(object):
     def to_dict(self):
         return self._data
 
+class LemmaResource(Resource):
+	
+	CITE = fields.CharField(attribute='CITE')
+	value = fields.CharField(attribute='value')
+	posAdd = fields.CharField(attribute='posAdd', null = True, blank = True)
+	frequency = fields.IntegerField(attribute='frequency', null = True, blank = True)
+	
+	values = fields.ListField(attribute='values', null = True, blank = True)
+	
+	class Meta:
+	
+		resource_name = 'lemma'
+		object_class = DataObject
+		authorization = ReadOnlyAuthorization()
+	
+	def detail_uri_kwargs(self, bundle_or_obj):
+		
+		kwargs = {}
+		
+		if isinstance(bundle_or_obj, Bundle):
+			kwargs['pk'] = bundle_or_obj.obj.id
+			
+		else:
+			kwargs['pk'] = bundle_or_obj.id
+			
+		return kwargs
+	
+	#/api/word/?randomized=&format=json&lemma=κρατέω
+	def get_object_list(self, request):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		attrlist = ['CITE', 'value', 'posAdd', 'frequency']
+		lemmas = []
+		
+		query_params = {}
+		for obj in request.GET.keys():
+			if obj in attrlist and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+			elif obj.split('__')[0] in attrlist and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+		
+		# implement filtering
+		if len(query_params) > 0:
+			
+			# generate query
+			q = """START l=node(*) MATCH (l)-[:values]->(w) WHERE """
+			
+			# filter word on parameters
+			for key in query_params:
+				if len(key.split('__')) > 1:
+					if key.split('__')[1] == 'contains':
+						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'startswith':
+						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'endswith':
+						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					elif key.split('__')[1] == 'gt':
+						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """>""" +query_params[key]+ """ AND """
+					elif key.split('__')[1] == 'lt':
+						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """<""" +query_params[key]+ """ AND """
+				else:
+					if key == 'frequency':
+						q = q + """HAS (l.""" +key+ """) AND l.""" +key+ """=""" +query_params[key]+ """ AND """
+					else:
+						q = q + """HAS (l.""" +key+ """) AND l.""" +key+ """='""" +query_params[key]+ """' AND """
+			q = q[:len(q)-4]
+			q = q + """RETURN DISTINCT l"""
+			
+			table = gdb.query(q)
+		
+		# default querying	
+		else:	
+			table = gdb.query("""START l=node(*) MATCH (l)-[:values]->(w) WHERE HAS (l.CITE) RETURN DISTINCT l""")
+			
+		# create the objects which was queried for and set all necessary attributes
+		for t in table:
+			lemma = t[0]	
+			url = lemma['self'].split('/')		
+				
+			new_obj = DataObject(url[len(url)-1])
+			new_obj.__dict__['_data'] = lemma['data']		
+			new_obj.__dict__['_data']['id'] = url[len(url)-1]
+			
+			# get the word as a node to query relations
+			lemmaNode = gdb.nodes.get(lemma['self'])
+			
+			values = lemmaNode.relationships.outgoing(types=["values"])	
+			valuesArray = []
+			for v in values:
+				val = v.end
+				val.properties['resource_uri'] = API_PATH + 'word/' + str(val.id) + '/'
+				valuesArray.append(val.properties)
+				
+			new_obj.__dict__['_data']['values'] = reversed(valuesArray)			
+			lemmas.append(new_obj)
+				
+		return lemmas
+	
+	
+	def obj_get_list(self, bundle, **kwargs):
+		
+		return self.get_object_list(bundle.request)
+	
+	def obj_get(self, bundle, **kwargs):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		lemma = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
+		
+		# ge the data of the word
+		new_obj = DataObject(kwargs['pk'])
+		new_obj.__dict__['_data'] = lemma.properties
+		new_obj.__dict__['_data']['id'] = kwargs['pk']
+		
+		# get the values	
+		values = lemma.relationships.outgoing(types=["values"])			
+		valuesArray = []
+		for v in values:
+			val = v.end
+			val.properties['resource_uri'] = API_PATH + 'word/' + str(val.id) + '/'
+			valuesArray.append(val.properties)
+			
+		new_obj.__dict__['_data']['values'] = reversed(valuesArray)
+
+		return new_obj
+
 
 class WordResource(Resource):
 	
@@ -90,7 +215,7 @@ class WordResource(Resource):
 	form = fields.CharField(attribute='form', null = True, blank = True)
 	lemma = fields.CharField(attribute='lemma', null = True, blank = True)
 	
-	sentence = fields.CharField(attribute='sentence', null = True, blank = True)
+	sentence_resource_uri = fields.CharField(attribute='sentence_resource_uri', null = True, blank = True)
 	
 	length = fields.IntegerField(attribute='length', null = True, blank = True)
 	tbwid = fields.IntegerField(attribute='tbwid', null = True, blank = True)
@@ -114,15 +239,14 @@ class WordResource(Resource):
 	posAdd = fields.CharField(attribute='posAdd', null = True, blank = True)
 	isIndecl = fields.CharField(attribute='isIndecl', null = True, blank = True)
 	
-	lemma_resource = fields.CharField(attribute='lemma_resource', null = True, blank = True)
+	lemma_resource_uri = fields.CharField(attribute='lemma_resource_uri', null = True, blank = True)
 	translations = fields.ListField(attribute='translations', null = True, blank = True)
-		
+	
 	class Meta:
 	
 		resource_name = 'word'
 		object_class = DataObject
 		authorization = ReadOnlyAuthorization()
-	
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -186,16 +310,18 @@ class WordResource(Resource):
 			new_obj = DataObject(url[len(url)-1])
 			new_obj.__dict__['_data'] = word['data']		
 			new_obj.__dict__['_data']['id'] = url[len(url)-1]
-			new_obj.__dict__['_data']['sentence'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
+			new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
 			
-			# too expensive here, put in into detail view
+			# get the word as a node to query relations
 			#wordNode = gdb.nodes.get(word['self'])
+			
+			# get the lemma -> too expensive here, put in into detail view			
 			#lemmaRels = word.relationships.incoming(types=["values"])
 			#if len(lemmaRels) > 0:
 				#new_obj.__dict__['_data']['lemma_resource'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
 			
-			#translations = wordNode.relationships.outgoing(types=["translation"])
-			
+			# get the translations -> too expensive here, put in into detail view	
+			#translations = wordNode.relationships.outgoing(types=["translation"])	
 			#translationArray = []
 			#for t in translations:
 				#trans = t.end
@@ -217,15 +343,18 @@ class WordResource(Resource):
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		word = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
 		
+		# ge the data of the word
 		new_obj = DataObject(kwargs['pk'])
 		new_obj.__dict__['_data'] = word.properties
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
-		new_obj.__dict__['_data']['sentence'] = API_PATH + 'sentence/' + str(word.relationships.incoming(types=["words"])[0].start.id) + '/'
+		new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + str(word.relationships.incoming(types=["words"])[0].start.id) + '/'
 		
+		# get the lemma
 		lemmaRels = word.relationships.incoming(types=["values"])
 		if len(lemmaRels) > 0:
-			new_obj.__dict__['_data']['lemma_resource'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
-			
+			new_obj.__dict__['_data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
+		
+		# get the translations	
 		translations = word.relationships.outgoing(types=["translation"])			
 		translationArray = []
 		for t in translations:
@@ -243,9 +372,8 @@ class SentenceResource(Resource):
 	CTS = fields.CharField(attribute='CTS')
 	sentence = fields.CharField(attribute='sentence', null = True, blank = True)	
 	length = fields.IntegerField(attribute='length', null = True, blank = True)
-	document = fields.CharField(attribute='document', null = True, blank = True)
+	document_resource_uri = fields.CharField(attribute='document_resource_uri', null = True, blank = True)
 	words = fields.ListField(attribute='words', null = True, blank = True)
-	
 	
 	class Meta:
 		
@@ -315,7 +443,7 @@ class SentenceResource(Resource):
 			new_obj = DataObject(url[len(url)-1])
 			new_obj.__dict__['_data'] = sentence['data']		
 			new_obj.__dict__['_data']['id'] = url[len(url)-1]
-			new_obj.__dict__['_data']['document'] = API_PATH + 'document/' + urlDoc[len(urlDoc)-1] +'/'
+			new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + urlDoc[len(urlDoc)-1] +'/'
 			sentences.append(new_obj)
 				
 		return sentences
@@ -335,14 +463,17 @@ class SentenceResource(Resource):
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		new_obj.__dict__['_data']['document'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
 		
+		# get the words
 		words = sentence.relationships.outgoing(types=["words"])
-		wordArray = []
-		new_obj.__dict__['_data']['words'] = {}		
-		
+		wordArray = []		
 		for w in words:
 			word = w.end
-			# this might seems a little hacky, but API resources are very decoupled,
-			# which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
+			# get the lemma
+			lemmaRels = word.relationships.incoming(types=["values"])
+			if len(lemmaRels) > 0:
+				word.properties['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
+
+			# create the resource uri
 			word.properties['resource_uri'] = API_PATH + 'word/' + word.url.split('/')[len(word.url.split('/'))-1] + '/'		
 			wordArray.append(word.properties)	
 		
@@ -544,7 +675,6 @@ class DocumentResource(Resource):
 			documents.append(new_obj)		
 				
 		return documents
-	
 	
 	def obj_get_list(self, bundle, **kwargs):
 		
