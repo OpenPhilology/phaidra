@@ -1105,8 +1105,11 @@ p span[lang="grc"] {
 			padding: 5px;
 
 			&:hover {
-				background-color: lighten($color-sec-four, 10%);
+				background-color: lighten($color-sec-four, 20%);
 			}
+		}
+		.selected, .selected:hover {
+			background-color: lighten($color-sec-four, 10%) !important;
 		}
 	}
 
@@ -1184,7 +1187,8 @@ p span[lang="grc"] {
 			border-top: 1px solid #AAA;
 			box-shadow: 0 0 8px 0 rgba(0, 0, 0, .3);
 			padding: 10px;
-
+			height: 60px;
+			overflow: auto;
 		}
 		.note-nav {
 			float: right;

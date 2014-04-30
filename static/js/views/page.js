@@ -4,7 +4,8 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		events: { 
 			'click .corner a': 'turnPage',
 			'mouseenter .page-content span': 'hoverWord',
-			'mouseleave .page-content span': 'unhoverWord'
+			'mouseleave .page-content span': 'hoverWord',
+			'click .page-content span': 'clickWord'
 		},
 		tagName: 'div',
 		className: 'col-md-12',
@@ -55,19 +56,44 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 
 			this.render();
 		},
+
+		// TODO: Delegate these responsibilities to a super tiny word view 
+
+		/*
+		*	Change the 'hover' state of the model appropriately.
+		*/
 		hoverWord: function(e) {
-			var cts = $(e.target).attr('data-cts');
+			var model = this.collection.findWhere({ 
+				CTS: $(e.target).attr('data-cts') 
+			});
 
-			// Get model related to hovered word and mark as 'hovered'
-			var hoveredWord = this.collection.findWhere({ CTS: cts });
-			hoveredWord.set('hovered', true);
+			var hovered = (e.type == 'mouseenter') ? true : false;
+			model.set('hovered', hovered);
 		},
-		unhoverWord: function(e) {
-			var cts = $(e.target).attr('data-cts');
+		clickWord: function(e) {
+			// See if any word is previously selected
+			var prev = this.collection.findWhere({
+				selected: true
+			});
+			var model = this.collection.findWhere({ 
+				CTS: $(e.target).attr('data-cts') 
+			});
 
-			// Get model related to hovered word and mark as 'hovered'
-			var hoveredWord = this.collection.findWhere({ CTS: cts });
-			hoveredWord.set('hovered', false);
+			// If this word is the same as current word, deselect
+			if (model == prev) {
+				prev.set('selected', false);
+				this.$el.find('.page-content span[data-cts="' + prev.get('CTS') + '"]').removeClass('selected');
+			}
+			else if (typeof(prev) != 'undefined') {
+				prev.set('selected', false);
+				this.$el.find('.page-content span[data-cts="' + prev.get('CTS') + '"]').removeClass('selected');
+				model.set('selected', true);
+				$(e.target).addClass('selected');
+			}
+			else {
+				model.set('selected', true);
+				$(e.target).addClass('selected');
+			}
 		}
 	});
 
