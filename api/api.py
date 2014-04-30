@@ -417,6 +417,125 @@ class SentenceResource(Resource):
 									
 		return None
 
+
+class DocumentResource(Resource):
+	
+	CTS = fields.CharField(attribute='CTS')
+	name = fields.CharField(attribute='name', null = True, blank = True)	
+	name_eng = fields.CharField(attribute='name_eng', null = True, blank = True)
+	lang = fields.CharField(attribute='lang', null = True, blank = True)
+	author = fields.CharField(attribute='author', null = True, blank = True)
+	sentences = fields.ListField(attribute='sentences', null = True, blank = True)
+		
+	class Meta:
+		
+		resource_name = 'document'
+		object_class = DataObject
+		authorization = ReadOnlyAuthorization()
+	
+	def detail_uri_kwargs(self, bundle_or_obj):
+		
+		kwargs = {}
+		
+		if isinstance(bundle_or_obj, Bundle):
+			kwargs['pk'] = bundle_or_obj.obj.id
+			
+		else:
+			kwargs['pk'] = bundle_or_obj.id
+			
+		return kwargs
+	
+	#/api/word/?randomized=&format=json&lemma=κρατέω
+	def get_object_list(self, request):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		attrlist = ['CTS', 'name', 'name_eng', 'lang', 'author']
+		documents = []
+		
+		query_params = {}
+		for obj in request.GET.keys():
+			if obj in attrlist and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+			elif obj.split('__')[0] in attrlist and request.GET.get(obj) is not None:
+				query_params[obj] = request.GET.get(obj)
+		
+		# implement filtering
+		if len(query_params) > 0:
+			
+			# generate query
+			q = """START d=node(*) MATCH (d)-[:sentences]->(s) WHERE """
+			
+			# filter word on parameters
+			for key in query_params:
+				if len(key.split('__')) > 1:
+					if key.split('__')[1] == 'contains':
+						q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'startswith':
+						q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'endswith':
+						q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+				else:
+					q = q + """HAS (d.""" +key+ """) AND d.""" +key+ """='""" +query_params[key]+ """' AND """
+			q = q[:len(q)-4]
+			q = q + """RETURN DISTINCT d"""
+			
+			table = gdb.query(q)
+		
+		# default querying	
+		else:	
+			table = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) WHERE HAS (s.CTS) RETURN DISTINCT d""")
+			
+		# create the objects which was queried for and set all necessary attributes
+		for t in table:
+			document = t[0]		
+			urlDoc = document['self'].split('/')		
+				
+			new_obj = DataObject(urlDoc[len(urlDoc)-1])
+			new_obj.__dict__['_data'] = document['data']		
+			new_obj.__dict__['_data']['id'] = urlDoc[len(urlDoc)-1]
+			
+			documentNode = gdb.nodes.get(document['self'])
+			sentences = documentNode.relationships.outgoing(types=["sentences"])
+			
+			sentenceArray = []
+			for s in sentences:
+				sent = s.end
+				properties = {} #sent.properties #sent.properties['resource_uri']
+				properties['resource_uri'] = API_PATH + 'sentence/' + sent.url.split('/')[len(sent.url.split('/'))-1] + '/'
+				sentenceArray.append(properties)
+				
+			new_obj.__dict__['_data']['sentences'] = reversed(sentenceArray)
+			
+			documents.append(new_obj)		
+				
+		return documents
+	
+	
+	def obj_get_list(self, bundle, **kwargs):
+		
+		return self.get_object_list(bundle.request)
+	
+	def obj_get(self, bundle, **kwargs):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		document = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
+		
+		new_obj = DataObject(kwargs['pk'])
+		new_obj.__dict__['_data'] = document.properties
+		new_obj.__dict__['_data']['id'] = kwargs['pk']
+		
+		sentences = document.relationships.outgoing(types=["sentences"])
+		sentenceArray = []
+		for s in sentences:
+			sentence = s.end
+			# this might seems a little hacky, but API resources are very decoupled,
+			# which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
+			sentence.properties['resource_uri'] = API_PATH + 'sentence/' + sentence.url.split('/')[len(sentence.url.split('/'))-1] + '/'
+			sentenceArray.append(sentence.properties)
+				
+			new_obj.__dict__['_data']['sentences'] = reversed(sentenceArray)
+
+		return new_obj
  
 
 
