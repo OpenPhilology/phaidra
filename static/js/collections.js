@@ -113,8 +113,19 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		}
 	});
 
-	Collections.Vocab = Backbone.Collection.extend({
-		model: Models.Word
+	Collections.Words = Backbone.Collection.extend({
+		model: Models.Word,
+		initialize: function() {
+			if (!this._meta)
+				this._meta = [];
+
+			this.meta = function(prop, value) {
+				if (value == undefined)
+					return this._meta[prop];
+				else
+					this._meta[prop] = value;
+			};
+		}
 	});
 
 	return Collections;

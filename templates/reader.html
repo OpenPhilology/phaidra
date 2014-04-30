@@ -2,7 +2,7 @@
 
 	{# Determine which navigation element is 'active'  #}
 	{% block nav %}
-		{% with 'active' as viz_active %}
+		{% with 'active' as reader_active %}
 			{{ block.super }}
 		{% endwith %}
 	{% endblock %}
@@ -12,45 +12,13 @@
 	<!-- Container for Reader -->
 	<div id="reader">
 		<!-- Container for Pages -->
-		<div class="row page-container">
-			<div class="col-md-6 hidden-sm hidden-xs">
-				<div class="page">
-					<div class="corner left">
-						<a href="#" data-toggle="tooltip" title="Next Page" data-placement="right"></a>
-					</div>
-					<h1>Thucydides' Peloponnesian War <small><a href="#">Section 1.89</a></small></h1>
-					<hr>
-					<p class="greek-text">οἱ γὰρ Ἀθηναῖοι τρόπῳ τοιῷδε ἦλθον ἐπὶ τὰ πράγματα ἐν οἷς ηὐξήθησαν.</p>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="page">
-					<div class="corner right">
-						<a href="#" data-toggle="tooltip" title="Next Page" data-placement="left"></a>
-					</div>
-					<h1>Thucydides' Peloponnesian War <small><a href="#">Section 1.90</a></small></h1>
-					<hr>
-					<p class="greek-text">Ἀθηναίων δὲ τὸ κοινόν, ἐπειδὴ αὐτοῖς οἱ βάρβαροι ἐκ τῆς χώρας ἀπῆλθον, διεκομίζοντο εὐθὺς ὅθεν ὑπεξέθεντο παῖδας καὶ γυναῖκας καὶ τὴν περιοῦσαν κατασκευήν, καὶ τὴν πόλιν ἀνοικοδομεῖν παρεσκευάζοντο καὶ τὰ τείχη.</p> 
-				</div>
-			</div>
-		</div>
-		<div class="row notes-container">
-			<div class="col-md-12 notes">
-				<div class="note-nav">
-					<a href="#" title="Add an Annotation"><span class="glyphicon glyphicon-plus-sign"></span></a> 
-					<a href="#" title="View Resources for this Text"><span class="glyphicon glyphicon-chevron-up"></span></a> 
-				</div>
+		<div class="row page-container"></div>
 
-				<p>Hover over a sentence in the text to see available annotations, or to add your own!</p>
-			</div>
-		</div>
-		<div class="row knowledge-container">
-			<div class="progress">
-				<div class="progress-bar progress-bar-voc" style="width: 40%" title="40% Vocabulary Learned"></div>
-				<div class="progress-bar progress-bar-morph" style="width: 20%" title="20% Morphology Learned"></div>
-				<div class="progress-bar progress-bar-syn" style="width: 10%" title="10% Synxtax Learned"></div>
-			</div>
-		</div>
+		<!-- Container for Notes -->
+		<div class="row notes-container"></div>
+
+		<!-- Container for High-level knowledge viz -->
+		<div class="row knowledge-container"></div>
 	</div>
 	
 	{% endblock %}

@@ -319,7 +319,7 @@ label {
 	background-color: $color-sec-two;
 	position: fixed;
 	width: 100%;
-	height: 81px;
+	height: 64px;
 	z-index: 1;
 
 	#search-form {
@@ -332,6 +332,10 @@ label {
 
 	#logo-container {
 		padding-top: 10px;	
+		
+		img {
+			height: 40px;
+		}
 	}
 
 	.user-data {
@@ -351,7 +355,7 @@ label {
 	a {
 		display: inline-block;
 		letter-spacing: 0.08em;
-		padding: 20px 10px;
+		padding: 11px 10px;
 		cursor: pointer;
 		text-decoration: none;
 		@include transition(background-color, .2s, ease-out);
@@ -423,7 +427,7 @@ label {
 	position: absolute;
 	height: 100%;
 	top: 0;
-	padding-top: 81px;
+	padding-top: 64px;
 	width: 100%;
 	
 	.lesson-right-menu {
@@ -1078,7 +1082,7 @@ p span[lang="grc"] {
 	background-color: rgba(255, 255, 255, .8);
 	min-height: 100%;
 
-	.col-md-6 {
+	.col-md-6, .col-md-12 {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -1090,6 +1094,19 @@ p span[lang="grc"] {
 
 		h1 {
 			text-align: center;
+		}
+	}
+
+	.page-content {
+		line-height: 2em; 
+
+		span[lang="grc"] {
+			cursor: pointer;
+			padding: 5px;
+
+			&:hover {
+				background-color: lighten($color-sec-four, 10%);
+			}
 		}
 	}
 

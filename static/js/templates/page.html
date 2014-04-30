@@ -1,0 +1,20 @@
+<!-- Page of Greek text for Reader view -->
+<div class="page">
+
+	<!-- Page corner, functions as navigation -->
+	<div class="corner <%= side %>">
+		<a href="#" data-toggle="tooltip" title="Next Page" data-placement="left"></a>
+	</div>
+
+	<!-- Page header -->
+	<h1>Thucydides' Peloponnesian War <small><a href="#">section</a></small></h1>
+	<hr>
+
+	<!-- Greek goes here! -->
+	<span class="page-content">
+		<% _.each(words, function(word) { %>
+			<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('CTS') %>"><%= word.get('value') %></span> 
+		<% }) %>
+	</span>
+
+</div>
