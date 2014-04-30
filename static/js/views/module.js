@@ -1,6 +1,6 @@
 define(
 	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition', 'views/slide_direct_select'], 
-	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView, FrankTestView, SimpleVocabView, DirectSelectSlideView) { 
+	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView, DirectSelectSlideView) { 
 
 		var View = Backbone.View.extend({
 			events: {
@@ -33,7 +33,7 @@ define(
 				// Set for easy navigation to next slide
 				model.set('index', model.collection.indexOf(model));
 
-				// Decide which type of view to create
+				// TODO: Generalize this out!!
 				if (selector == '#slide_multi_composition') {
 					view = new MultiCompSlideView({ 
 						model: model, 
@@ -74,9 +74,6 @@ define(
 			},
 			showSlide: function(slide) {
 				slide = parseInt(slide);
-
-				console.log("show slide called for ", slide);
-				console.log("views so far", _(this.slides).clone());
 
 				// Show the correct slide view
 				for (var i = 0; i < this.slides.length; i++) {

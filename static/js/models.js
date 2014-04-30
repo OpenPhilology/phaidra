@@ -5,7 +5,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		defaults: {
 			'modelName': 'user',
 		},
-		url: '/api/user/',
+		url: '/api/v1/user/',
 		parse: function(response) {
 			if (response && response.meta)
 				this.meta = response.meta;
@@ -147,18 +147,9 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 	Models.Word = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'word',
-			/*
-			'def': 'Definition',
-			'seen': 0,
-			'lesson': '3'
-			*/
+			'selected': false
 		}
 	});
-
-	//_.extend(Models.Lesson.defaults, Models.Base.defaults);
-	//_.extend(Models.Module.defaults, Models.Base.defaults);
-	//_.extend(Models.Slide.defaults, Models.Base.defaults);
-	//_.extend(Models.Word.defaults, Models.Base.defaults);
 
 	return Models;
 });

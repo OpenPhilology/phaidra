@@ -45,7 +45,7 @@
 							words learned
 						</small>
 					</a>
-					<a class="col-xs-4 col-sm-4 progress-book {{ viz_active }}" href="/viz">
+					<a class="col-xs-4 col-sm-4 progress-book {{ reader_active }}" href="/reader">
 						<strong>
 							<span class="glyphicon glyphicon-book"></span>
 							10% 
@@ -59,10 +59,10 @@
 		</div>
 
 		<div class="col-md-4 hidden-sm hidden-xs">
-			<div class="user-info pull-right" style="margin: 20px">
+			<div class="user-info pull-right" style="margin: 15px">
 				{% if user.is_authenticated %}
 					<span class="logged-in">
-						<span class="greek-text">χαῖρε</span>, 
+						<span lang="grc">χαῖρε</span>, 
 						<a href="/profile/" class="username">
 							<img src="http://www.gravatar.com/avatar/{{ email_hash }}?s=25&d=mm" class="img-circle img-thumbnail"> 
 							{{ user.username }} 

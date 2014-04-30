@@ -36,7 +36,7 @@ require(['jquery', 'underscore', 'backbone', 'router', 'd3', 'bootstrap'], funct
 		// Activate Bootstrap JS Components
 		//$('.sec').tooltip();
 		$('.module .circle').tooltip({ container: 'body'});
-		$('div').tooltip();
-		$('a').tooltip();
+		$('div[data-toggle="tooltip"]').tooltip();
+		$('a[data-toggle="tooltip"]').tooltip();
 	});
 });
