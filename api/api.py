@@ -93,8 +93,8 @@ class WordResource(Resource):
 	sentence = fields.CharField(attribute='sentence', null = True, blank = True)
 	
 	length = fields.IntegerField(attribute='length', null = True, blank = True)
-	tbwid = fields.IntegerField(attribute='tbwid')
-	head = fields.IntegerField(attribute='head')
+	tbwid = fields.IntegerField(attribute='tbwid', null = True, blank = True)
+	head = fields.IntegerField(attribute='head', null = True, blank = True)
 	cid = fields.IntegerField(attribute='cid', null = True, blank = True)
 	
 	pos = fields.CharField(attribute='pos', null = True, blank = True)
@@ -113,6 +113,9 @@ class WordResource(Resource):
 	posClass = fields.CharField(attribute='posClass', null = True, blank = True)
 	posAdd = fields.CharField(attribute='posAdd', null = True, blank = True)
 	isIndecl = fields.CharField(attribute='isIndecl', null = True, blank = True)
+	
+	lemma_resource = fields.CharField(attribute='lemma_resource', null = True, blank = True)
+	translations = fields.ListField(attribute='translations', null = True, blank = True)
 		
 	class Meta:
 	
@@ -184,6 +187,22 @@ class WordResource(Resource):
 			new_obj.__dict__['_data'] = word['data']		
 			new_obj.__dict__['_data']['id'] = url[len(url)-1]
 			new_obj.__dict__['_data']['sentence'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
+			
+			# too expensive here, put in into detail view
+			#wordNode = gdb.nodes.get(word['self'])
+			#lemmaRels = word.relationships.incoming(types=["values"])
+			#if len(lemmaRels) > 0:
+				#new_obj.__dict__['_data']['lemma_resource'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
+			
+			#translations = wordNode.relationships.outgoing(types=["translation"])
+			
+			#translationArray = []
+			#for t in translations:
+				#trans = t.end
+				#trans.properties['resource_uri'] = API_PATH + 'word/' + str(trans.id) + '/'
+				#translationArray.append(trans.properties)
+				
+			#new_obj.__dict__['_data']['translations'] = reversed(translationArray)			
 			words.append(new_obj)
 				
 		return words
@@ -202,6 +221,19 @@ class WordResource(Resource):
 		new_obj.__dict__['_data'] = word.properties
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		new_obj.__dict__['_data']['sentence'] = API_PATH + 'sentence/' + str(word.relationships.incoming(types=["words"])[0].start.id) + '/'
+		
+		lemmaRels = word.relationships.incoming(types=["values"])
+		if len(lemmaRels) > 0:
+			new_obj.__dict__['_data']['lemma_resource'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
+			
+		translations = word.relationships.outgoing(types=["translation"])			
+		translationArray = []
+		for t in translations:
+			trans = t.end
+			trans.properties['resource_uri'] = API_PATH + 'word/' + str(trans.id) + '/'
+			translationArray.append(trans.properties)
+			
+		new_obj.__dict__['_data']['translations'] = reversed(translationArray)
 
 		return new_obj
 
@@ -302,14 +334,17 @@ class SentenceResource(Resource):
 		new_obj.__dict__['_data'] = sentence.properties
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		new_obj.__dict__['_data']['document'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
+		
 		words = sentence.relationships.outgoing(types=["words"])
 		wordArray = []
+		new_obj.__dict__['_data']['words'] = {}		
+		
 		for w in words:
 			word = w.end
 			# this might seems a little hacky, but API resources are very decoupled,
 			# which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
-			word.properties['resource_uri'] = API_PATH + 'word/' + word.url.split('/')[len(word.url.split('/'))-1] + '/'
-			wordArray.append(word.properties)
+			word.properties['resource_uri'] = API_PATH + 'word/' + word.url.split('/')[len(word.url.split('/'))-1] + '/'		
+			wordArray.append(word.properties)	
 		
 		new_obj.__dict__['_data']['words'] = reversed(wordArray)
 
