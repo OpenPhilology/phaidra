@@ -13,63 +13,43 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		initialize: function(options) {
 			this.options = options;
 			this.render();
-			this.turnPage(options.cts);
+
+			this.collection.on('change:selected', this.toggleHighlight, this); 
 		},
 		render: function() {
+			var that = this;
+
 			// Pass in CTS of sentence so only words in that sentence appear on this page  
 			this.$el.html(this.template({ 
 				side: this.options.side, 
 				words: this.collection.models,
 				cts: this.options.cts
 			})); 
+			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
+
+			// Update the 'next or previous' page links
+			var model = this.collection.findWhere({ sentenceCTS: this.options.cts });
+			this.$el.find('a').attr('href', function() {
+				var cts = that.options.side == 'left' ? model.get('prevSentenceCTS') : model.get('nextSentenceCTS'); 
+				return '/reader/' + cts;
+			});
+
+			var ref = this.options.cts.split(':');
+			this.$el.find('h1 a').html(ref[ref.length-1]);
 
 			return this;	
 		},
-		turnPage: function(cts) {
-			var that = this;
-
-			// Let's start at the very beginning, a very good place to staaaart!
-			if (typeof(cts) == 'undefined')
-				cts = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1';
-
-			$.ajax({
-				url: '/api/v1/sentence/?format=json&CTS=' + cts,
-				dataType: 'json',
-				success: function(response) {
-					var text = that.prepText(response.objects[0]);
-					var ref = response.objects[0]["CTS"].split(':');
-
-					that.$el.find('h1 a').html(ref[ref.length-1]);
-				},
-				error: function() {
-					that.$el.find('.page-content').html('Error was encountered trying to render this page.');
-				}
-			});
-		},
-		/*
-		* Builds up our collection of words for this page 
-		*/
-		prepText: function(text) {
-			var that = this;
-			var tokens = $.trim(text.sentence).split(' ');
-
-			$.each(tokens, function(i, token) {
-				that.collection.add({
-					'value': token,
-					'lang': 'grc',
-					'CTS': text.CTS + ':' + (i + 1)
-				});
-			});
-
+		turnToPage: function(cts) {
+			this.options.cts = cts;
 			this.render();
+		},
+		turnPage: function(e) {
+			e.preventDefault();
+			Backbone.history.navigate(this.$el.find('.corner a').attr('href'), { trigger: true });		
 		},
 
 		// TODO: Delegate these responsibilities to a super tiny word view 
-		// Will fix the problem of allowing two words on separate pages to be simultaneously selected
 
-		/*
-		*	Change the 'hover' state of the model appropriately.
-		*/
 		hoverWord: function(e) {
 			var model = this.collection.findWhere({ 
 				CTS: $(e.target).attr('data-cts') 
@@ -90,20 +70,26 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			// If this word is the same as current word, deselect
 			if (model == prev) {
 				prev.set('selected', false);
-				this.$el.find('.page-content span[data-cts="' + prev.get('CTS') + '"]').removeClass('selected');
-				this.$el.parent().css('padding-bottom', '0');
+				this.$el.parent().css('padding-bottom', '80px');
 			}
 			else if (typeof(prev) != 'undefined') {
 				prev.set('selected', false);
-				this.$el.find('.page-content span[data-cts="' + prev.get('CTS') + '"]').removeClass('selected');
 				model.set('selected', true);
-				$(e.target).addClass('selected');
 				this.$el.parent().css('padding-bottom', '200px');
 			}
 			else {
 				model.set('selected', true);
-				$(e.target).addClass('selected');
 				this.$el.parent().css('padding-bottom', '200px');
+			}
+		},
+		// If an element becomes selected or de-selected, update highlight accordingly
+		toggleHighlight: function(model) {
+			if (model.get('selected'))
+				this.$el.find('.page-content span[data-cts="' + model.get('CTS') + '"]')
+					.addClass('selected');
+			else if (!model.get('selected')) {
+				this.$el.find('.page-content span[data-cts="' + model.get('CTS') + '"]')
+					.removeClass('selected');
 			}
 		}
 	});

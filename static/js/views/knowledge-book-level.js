@@ -5,10 +5,10 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/knowledge-book-level
 		template: _.template(KnowledgeTemplate),
 		events: {},
 		initialize: function(options) {
-			this.$el.find('div').tooltip();
 		},
 		render: function() {
 			this.$el.html(this.template());
+			this.$el.find('div').tooltip();
 			return this;
 		}
 	});

@@ -5,8 +5,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			"": "index",
 			"lessons/":"lessons",
 			"login/": "login",
-			"reader/": "showReader",
 			"reader/:cts": "updateReader",
+			"reader/": "showReader",
 			"module/": "forwardModule",
 			"module/:mod": "showModule",
 			"module/:mod/section/:sec": "showSection",
@@ -47,10 +47,13 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 		},
 		/*
 		*	Manages routing for the assisted reader	
+		* 	TODO: Find a more elegant solution for this
 		*/
 		showReader: function() {
 			if (!this.reader_view)
 				this.reader_view = new ReaderView({ el: '#reader' }).render();
+
+			this.updateReader(undefined);
 		},
 		updateReader: function(cts) {
 			if (!this.reader_view)
