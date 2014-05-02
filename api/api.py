@@ -5,7 +5,8 @@ from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH
 
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
-from django.conf import settings
+from django.conf import settings 
+from django.conf.urls import url
 from django.contrib.auth.models import User
 from app.models import Textbook, Unit, Lesson, Slide
 
@@ -20,7 +21,7 @@ from tastypie.bundle import Bundle
 from tastypie.authentication import SessionAuthentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 #from tastypie.exceptions import Unauthorized
-#from tastypie.utils import trailing_slash
+from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 
 import json
@@ -379,7 +380,7 @@ class SentenceResource(Resource):
 		
 		resource_name = 'sentence'
 		object_class = DataObject
-		authorization = ReadOnlyAuthorization()
+		authorization = ReadOnlyAuthorization()	
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -457,12 +458,12 @@ class SentenceResource(Resource):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		sentence = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
-		
+					
 		new_obj = DataObject(kwargs['pk'])
 		new_obj.__dict__['_data'] = sentence.properties
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		new_obj.__dict__['_data']['document'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
-		
+			
 		# get the words
 		words = sentence.relationships.outgoing(types=["words"])
 		wordArray = []		
@@ -472,14 +473,18 @@ class SentenceResource(Resource):
 			lemmaRels = word.relationships.incoming(types=["values"])
 			if len(lemmaRels) > 0:
 				word.properties['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
-
-			# create the resource uri
-			word.properties['resource_uri'] = API_PATH + 'word/' + word.url.split('/')[len(word.url.split('/'))-1] + '/'		
-			wordArray.append(word.properties)	
 		
+				# create the resource uri of the word
+				word.properties['resource_uri'] = API_PATH + 'word/' + str(word.id) + '/'		
+				wordArray.append(word.properties)
+		
+		if bundle.request.GET.get('short'):
+			wordArray =  self.shorten(wordArray, {})
+						
 		new_obj.__dict__['_data']['words'] = reversed(wordArray)
-
+			
 		return new_obj
+	
 	
 	class node(object):
 		
@@ -571,15 +576,15 @@ class SentenceResource(Resource):
 							
 							if cand:										
 								# set and order words
-								return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)	
+								return sorted(aim_words, key=lambda x: x['tbwid'], reverse=True)	
 						
 						return None		
 					else:		
 						# set and order words
-						return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)				
+						return sorted(aim_words, key=lambda x: x['tbwid'], reverse=True)				
 					
 					# set and order words
-					return sorted(aim_words, key=lambda x: x['tbwid'], reverse=False)
+					return sorted(aim_words, key=lambda x: x['tbwid'], reverse=True)
 									
 		return None
 
@@ -667,7 +672,7 @@ class DocumentResource(Resource):
 			for s in sentences:
 				sent = s.end
 				properties = {} #sent.properties #sent.properties['resource_uri']
-				properties['resource_uri'] = API_PATH + 'sentence/' + sent.url.split('/')[len(sent.url.split('/'))-1] + '/'
+				properties['resource_uri'] = API_PATH + 'sentence/' + str(sent.id) + '/'
 				sentenceArray.append(properties)
 				
 			new_obj.__dict__['_data']['sentences'] = reversed(sentenceArray)
@@ -695,7 +700,7 @@ class DocumentResource(Resource):
 			sentence = s.end
 			# this might seems a little hacky, but API resources are very decoupled,
 			# which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
-			sentence.properties['resource_uri'] = API_PATH + 'sentence/' + sentence.url.split('/')[len(sentence.url.split('/'))-1] + '/'
+			sentence.properties['resource_uri'] = API_PATH + 'sentence/' + str(sentence.id) + '/'
 			sentenceArray.append(sentence.properties)
 				
 			new_obj.__dict__['_data']['sentences'] = reversed(sentenceArray)
