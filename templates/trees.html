@@ -28,29 +28,24 @@
 
 	</head>
 	<body>
-		<div class="container">
+		<div class="tree" data-mode="edit" data-url="/api/v1/sentence/7761/?format=json" data-width="100%" data-height="550"></div>
+		<div class="container" style="background-color: rgba(255, 255, 255, 0.8); min-width: 1000px !important">
 			<div class="row" style="padding: 20px">
 				<h1>Parse Tree Builder Demo</h1>
-				Please be patient, as these trees are loading live on my small VM. The second two sentences are also being shortened from full-length Thucydides sentences,
-				to demonstrate how eLearners might get acquainted with treebanking early on. <strong style="color: #1FBEBE; letter-spacing: 1px">Keep scrolling for more demos, </strong> a list of features, known bugs, etc.
+				Please be patient, as these trees are loading live on my small VM. <strong style="color: #1FBEBE; letter-spacing: 1px">Keep scrolling for more demos, </strong> a list of features, known bugs, etc.
+				<hr>
 			</div>
-		</div>
-		<div class="tree" data-mode="edit" data-url="/api/v1/sentence/852/?format=json" data-width="100%" data-height="550"></div>
-		<div class="container" style="background-color: rgba(255, 255, 255, 0.8); width: 1000px !important">
-			<div style="overflow: auto; width: 100%;">
-				<div style="width: 45%; float: left">
+			<div style="overflow: auto; width: 100%; padding: 20px">
+				<div style="width: 60%; float: left">
 					<h3>BYOT <small>Build Your Own Tree!</small></h3>
 					<p>Doubleclick a node to edit its POS. Then, move a node to its parent node &mdash; if the node's color fills in, you got it right! <strong style="color: #1FBEBE; letter-spacing: 1px">Right now "Complete" only indicates tree structure</strong>, not other attributes such as morph, relationship, lemma, etc.)</p>
-					<div class="tree" data-mode="create" data-url="/api/v1/sentence/514/?format=json"></div>
-					<span class="label label-primary">Coming Soon</span> Checking morphology, relation value, and lemma against gold standard, and giving the user points for right answers.
 
-					<hr>
-					<h3>Mystery Tree</h3>
-					<p>This loads a <strong>totally random</strong> short sentence, so anything could happen! (As the shortening algorithm is far from perfect, you may see errors in the sentence &mdash; which can also be reported on <a href="https://github.com/OpenPhilology/phaidra/issues?state=open" target="_blank">our project's github</a>)!!</p>
 					<p><strong>Don't forget!</strong> You can zoom and pan on the tree if it doesn't fit when it first loads &mdash; smarter sizes and scaling is on the roadmap.</p>
-					<!--<div class="tree" data-mode="create" data-url="/api/sentence/get_one_random_short/?format=json"></div>-->
+
+					<div class="tree" data-mode="create" data-url="/api/v1/sentence/8375/?format=json"></div>
+					<span class="label label-primary">Coming Soon</span> Checking morphology, relation value, and lemma against gold standard, and giving the user points for right answers.
 				</div>
-				<div style="width: 45%; float: right">
+				<div style="width: 35%; float: right">
 					<div class="well">
 						<h4>User-Oriented Features</h4>
 						<ul>
