@@ -23,6 +23,7 @@ from tastypie.authorization import Authorization, ReadOnlyAuthorization
 #from tastypie.exceptions import Unauthorized
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
+from tastypie.exceptions import NotFound, BadRequest
 
 import json
 import random
@@ -370,7 +371,7 @@ class WordResource(Resource):
 
 class SentenceResource(Resource):
 	
-	CTS = fields.CharField(attribute='CTS')
+	CTS = fields.CharField(attribute='CTS', null = True, blank = True)
 	sentence = fields.CharField(attribute='sentence', null = True, blank = True)	
 	length = fields.IntegerField(attribute='length', null = True, blank = True)
 	document_resource_uri = fields.CharField(attribute='document_resource_uri', null = True, blank = True)
@@ -449,12 +450,20 @@ class SentenceResource(Resource):
 				
 		return sentences
 	
-	
 	def obj_get_list(self, bundle, **kwargs):
 		
 		return self.get_object_list(bundle.request)
 	
 	def obj_get(self, bundle, **kwargs):
+		
+		# query parameters (optional) for short sentence approach
+		attrlist = ['CTS', 'length', 'case', 'dialect', 'head', 'form', 'posClass', 'cid', 'gender', 'tbwid', 'pos', 'value', 'degree', 'number','lemma', 'relation', 'isIndecl', 'ref', 'posAdd', 'mood', 'tense', 'voice', 'person']
+		query_params = {}
+		for obj in bundle.request.GET.keys():
+			if obj in attrlist and bundle.request.GET.get(obj) is not None:
+				query_params[obj] = bundle.request.GET.get(obj)
+			elif obj.split('__')[0] in attrlist and bundle.request.GET.get(obj) is not None:
+				query_params[obj] = bundle.request.GET.get(obj)
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		sentence = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
@@ -479,7 +488,12 @@ class SentenceResource(Resource):
 				wordArray.append(word.properties)
 		
 		if bundle.request.GET.get('short'):
-			wordArray =  self.shorten(wordArray, {})
+			wordArray =  self.shorten(wordArray, query_params)
+			if wordArray is None:
+				#return None
+				raise BadRequest("Sentence doesn't hit your query.")
+			
+				#return self.error_response(bundle.request, {'error': ''}, response_class=HttpBadRequest)	
 						
 		new_obj.__dict__['_data']['words'] = reversed(wordArray)
 			
