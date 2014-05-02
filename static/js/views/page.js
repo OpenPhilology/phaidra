@@ -14,6 +14,8 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			this.options = options;
 			this.render();
 			this.turnPage(options.cts);
+
+			this.collection.on('change:selected', this.toggleHighlight, this); 
 		},
 		render: function() {
 			// Pass in CTS of sentence so only words in that sentence appear on this page  
@@ -90,20 +92,26 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			// If this word is the same as current word, deselect
 			if (model == prev) {
 				prev.set('selected', false);
-				this.$el.find('.page-content span[data-cts="' + prev.get('CTS') + '"]').removeClass('selected');
 				this.$el.parent().css('padding-bottom', '0');
 			}
 			else if (typeof(prev) != 'undefined') {
 				prev.set('selected', false);
-				this.$el.find('.page-content span[data-cts="' + prev.get('CTS') + '"]').removeClass('selected');
 				model.set('selected', true);
-				$(e.target).addClass('selected');
 				this.$el.parent().css('padding-bottom', '200px');
 			}
 			else {
 				model.set('selected', true);
-				$(e.target).addClass('selected');
 				this.$el.parent().css('padding-bottom', '200px');
+			}
+		},
+		// If an element becomes selected or de-selected, update highlight accordingly
+		toggleHighlight: function(model) {
+			if (model.get('selected'))
+				this.$el.find('.page-content span[data-cts="' + model.get('CTS') + '"]')
+					.addClass('selected');
+			else if (!model.get('selected')) {
+				this.$el.find('.page-content span[data-cts="' + model.get('CTS') + '"]')
+					.removeClass('selected');
 			}
 		}
 	});
