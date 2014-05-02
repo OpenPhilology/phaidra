@@ -14,7 +14,7 @@
 	<span class="page-content">
 		<% _.each(words, function(word) { %>
 			<% if (word.get('CTS').indexOf(cts + ':') != -1) { %>
-				<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('CTS') %>"><%= word.get('value') %></span> 
+				<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('CTS') %>" class="<% if (word.get('value').match(/[\.,-\·\/#!$%\^&\*;:{}=\-_`~()]/)) print('punct'); %>"><%= word.get('value') %></span> 
 			<% } %>
 		<% }) %>
 	</span>

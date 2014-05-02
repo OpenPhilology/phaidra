@@ -67,7 +67,6 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		},
 
 		// TODO: Delegate these responsibilities to a super tiny word view 
-		// Will fix the problem of allowing two words on separate pages to be simultaneously selected
 
 		/*
 		*	Change the 'hover' state of the model appropriately.

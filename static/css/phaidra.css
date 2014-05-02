@@ -901,10 +901,13 @@ p span[lang="grc"] {
     #reader .page h1 {
       text-align: center; }
   #reader .page-content {
-    line-height: 2em; }
+    line-height: 3em; }
     #reader .page-content span[lang="grc"] {
       cursor: pointer;
       padding: 5px; }
+      #reader .page-content span[lang="grc"].punct {
+        padding: 1px !important;
+        margin-left: -8px; }
       #reader .page-content span[lang="grc"]:hover {
         background-color: #fcebd6; }
     #reader .page-content .selected, #reader .page-content .selected:hover {

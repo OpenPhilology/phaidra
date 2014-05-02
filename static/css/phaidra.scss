@@ -1098,12 +1098,16 @@ p span[lang="grc"] {
 	}
 
 	.page-content {
-		line-height: 2em; 
+		line-height: 3em; 
 
 		span[lang="grc"] {
 			cursor: pointer;
 			padding: 5px;
 
+			&.punct {
+				padding: 1px !important;
+				margin-left: -8px;
+			}
 			&:hover {
 				background-color: lighten($color-sec-four, 20%);
 			}
