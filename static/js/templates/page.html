@@ -7,15 +7,16 @@
 	</div>
 
 	<!-- Page header -->
-	<h1>Thucydides' Peloponnesian War <small><a href="#">section</a></small></h1>
+	<h1>Thucydides' Peloponnesian War <small><a href="#" data-toggle="tooltip" title="Jump to another section">section</a></small></h1>
 	<hr>
 
 	<!-- Greek goes here! -->
 	<span class="page-content">
 		<% _.each(words, function(word) { %>
-			<% if (word.get('CTS').indexOf(cts + ':') != -1) { %>
+			<% if (word.get('sentenceCTS') == cts) { %>
 				<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('CTS') %>" class="<% if (word.get('value').match(/[\.,-\·\/#!$%\^&\*;:{}=\-_`~()]/)) print('punct'); %>"><%= word.get('value') %></span> 
 			<% } %>
+
 		<% }) %>
 	</span>
 

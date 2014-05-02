@@ -895,7 +895,7 @@ p span[lang="grc"] {
     padding-left: 0;
     padding-right: 0; }
   #reader .page {
-    padding: 10px 80px;
+    padding: 10px 80px 80px 10px;
     position: relative;
     margin-top: 0; }
     #reader .page h1 {
@@ -966,11 +966,8 @@ p span[lang="grc"] {
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
       padding: 10px;
       height: 75px; }
-    #reader .notes-container .note-nav {
-      float: right;
-      font-size: 24px; }
-      #reader .notes-container .note-nav span {
-        padding: 5px; }
+    #reader .notes-container span[lang="grc"] {
+      background-color: #FFF; }
   #reader .knowledge-container {
     position: fixed;
     bottom: 0;

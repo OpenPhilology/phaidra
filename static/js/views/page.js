@@ -24,45 +24,15 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 				words: this.collection.models,
 				cts: this.options.cts
 			})); 
+			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
+
+			var ref = this.options.cts.split(':');
+			this.$el.find('h1 a').html(ref[ref.length-1]);
 
 			return this;	
 		},
 		turnPage: function(cts) {
-			var that = this;
-
-			// Let's start at the very beginning, a very good place to staaaart!
-			if (typeof(cts) == 'undefined')
-				cts = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1';
-
-			$.ajax({
-				url: '/api/v1/sentence/?format=json&CTS=' + cts,
-				dataType: 'json',
-				success: function(response) {
-					var text = that.prepText(response.objects[0]);
-					var ref = response.objects[0]["CTS"].split(':');
-
-					that.$el.find('h1 a').html(ref[ref.length-1]);
-				},
-				error: function() {
-					that.$el.find('.page-content').html('Error was encountered trying to render this page.');
-				}
-			});
-		},
-		/*
-		* Builds up our collection of words for this page 
-		*/
-		prepText: function(text) {
-			var that = this;
-			var tokens = $.trim(text.sentence).split(' ');
-
-			$.each(tokens, function(i, token) {
-				that.collection.add({
-					'value': token,
-					'lang': 'grc',
-					'CTS': text.CTS + ':' + (i + 1)
-				});
-			});
-
+			this.cts = cts;
 			this.render();
 		},
 
@@ -91,7 +61,7 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			// If this word is the same as current word, deselect
 			if (model == prev) {
 				prev.set('selected', false);
-				this.$el.parent().css('padding-bottom', '0');
+				this.$el.parent().css('padding-bottom', '80px');
 			}
 			else if (typeof(prev) != 'undefined') {
 				prev.set('selected', false);

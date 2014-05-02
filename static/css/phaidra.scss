@@ -1088,7 +1088,7 @@ p span[lang="grc"] {
 	}
 
 	.page {
-		padding: 10px 80px;
+		padding: 10px 80px 80px 10px;
 		position: relative;
 		margin-top: 0;
 
@@ -1193,13 +1193,9 @@ p span[lang="grc"] {
 			padding: 10px;
 			height: 75px;
 		}
-		.note-nav {
-			float: right;
-			font-size: 24px;
 
-			span {
-				padding: 5px;
-			}
+		span[lang="grc"] {
+			background-color: #FFF;
 		}
 	}
 
