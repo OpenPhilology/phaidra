@@ -13,11 +13,12 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		initialize: function(options) {
 			this.options = options;
 			this.render();
-			this.turnPage(options.cts);
 
 			this.collection.on('change:selected', this.toggleHighlight, this); 
 		},
 		render: function() {
+			var that = this;
+
 			// Pass in CTS of sentence so only words in that sentence appear on this page  
 			this.$el.html(this.template({ 
 				side: this.options.side, 
@@ -26,21 +27,29 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			})); 
 			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
 
+			// Update the 'next or previous' page links
+			var model = this.collection.findWhere({ sentenceCTS: this.options.cts });
+			this.$el.find('a').attr('href', function() {
+				var cts = that.options.side == 'left' ? model.get('prevSentenceCTS') : model.get('nextSentenceCTS'); 
+				return '/reader/' + cts;
+			});
+
 			var ref = this.options.cts.split(':');
 			this.$el.find('h1 a').html(ref[ref.length-1]);
 
 			return this;	
 		},
-		turnPage: function(cts) {
-			this.cts = cts;
+		turnToPage: function(cts) {
+			this.options.cts = cts;
 			this.render();
+		},
+		turnPage: function(e) {
+			e.preventDefault();
+			Backbone.history.navigate(this.$el.find('.corner a').attr('href'), { trigger: true });		
 		},
 
 		// TODO: Delegate these responsibilities to a super tiny word view 
 
-		/*
-		*	Change the 'hover' state of the model appropriately.
-		*/
 		hoverWord: function(e) {
 			var model = this.collection.findWhere({ 
 				CTS: $(e.target).attr('data-cts') 
