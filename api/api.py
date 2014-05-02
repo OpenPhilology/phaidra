@@ -10,6 +10,8 @@ from django.conf.urls import url
 from django.contrib.auth.models import User
 from app.models import Textbook, Unit, Lesson, Slide
 
+from django.core.exceptions import ValidationError
+
 from tastypie import fields
 from tastypie.resources import Resource, ModelResource
 
@@ -20,7 +22,6 @@ from tastypie import fields
 from tastypie.bundle import Bundle
 from tastypie.authentication import SessionAuthentication, BasicAuthentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
-#from tastypie.exceptions import Unauthorized
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
@@ -51,7 +52,11 @@ class UserObjectsOnlyAuthorization(Authorization):
 		return submissions
 	
 	def read_detail(self, object_list, bundle):
-		return bundle.obj.user == bundle.request.user
+		
+		if bundle.request.user is not None:
+			return object_list				
+		else:
+			raise Unauthorized()
 	
 	def create_detail(self, object_list, bundle):
 		return bundle.obj.user == bundle.request.user
@@ -67,12 +72,7 @@ class UserObjectsOnlyAuthorization(Authorization):
 	
 	def update_detail(self, object_list, bundle):
 		return bundle.obj.user == bundle.request.user.pk
-	
-	def delete_list(self, object_list, bundle):
-		raise Unauthorized("Deletion forbidden")
-	
-	def delete_detail(self, object_list, bundle):
-		raise Unauthorized("Deletion forbidden")
+
 
 
 #db = GraphDatabase('/var/lib/neo4j/data/graph.db/')
@@ -205,11 +205,17 @@ class SubmissionResource(Resource):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		submission = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
-		
+			
 		new_obj = DataObject(kwargs['pk'])
 		new_obj.__dict__['_data'] = submission.properties
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
-		return new_obj
+			
+		try:
+			auth_result = self._meta.authorization.read_detail(new_obj, bundle)
+		except Unauthorized as e:
+			self.unauthorized_result(e)
+
+		return auth_result	
 		
 	def post_list(self, request, **kwargs):
 		"""
