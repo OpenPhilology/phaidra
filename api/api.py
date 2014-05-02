@@ -18,18 +18,62 @@ from neo4jrestclient.client import GraphDatabase
 
 from tastypie import fields
 from tastypie.bundle import Bundle
-from tastypie.authentication import SessionAuthentication
+from tastypie.authentication import SessionAuthentication, BasicAuthentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 #from tastypie.exceptions import Unauthorized
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
-from tastypie.exceptions import NotFound, BadRequest
+from tastypie.exceptions import NotFound, BadRequest, Unauthorized
 
 import json
 import random
 from random import shuffle
 
 import time
+
+class UserObjectsOnlyAuthorization(Authorization):
+	
+	def read_list(self, object_list, bundle):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		submissions = []
+		table = gdb.query("""START u=node(*) MATCH (u)-[:submissions]->(s) WHERE HAS (u.username) AND u.username='""" + bundle.request.user.username + """' RETURN s""")		
+			
+		# create the objects which was queried for and set all necessary attributes
+		for s in table:
+			submission = s[0]	
+			url = submission['self'].split('/')						
+			new_obj = DataObject(url[len(url)-1])
+			new_obj.__dict__['_data'] = submission['data']		
+			new_obj.__dict__['_data']['id'] = url[len(url)-1]						
+			submissions.append(new_obj)
+				
+		return submissions
+	
+	def read_detail(self, object_list, bundle):
+		return bundle.obj.user == bundle.request.user
+	
+	def create_detail(self, object_list, bundle):
+		return bundle.obj.user == bundle.request.user
+
+	def update_list(self, object_list, bundle):
+		allowed = []
+
+		for obj in object_list:
+			if obj.user == bundle.request.user:
+				allowed.append(obj)
+
+		return allowed
+	
+	def update_detail(self, object_list, bundle):
+		return bundle.obj.user == bundle.request.user.pk
+	
+	def delete_list(self, object_list, bundle):
+		raise Unauthorized("Deletion forbidden")
+	
+	def delete_detail(self, object_list, bundle):
+		raise Unauthorized("Deletion forbidden")
+
 
 #db = GraphDatabase('/var/lib/neo4j/data/graph.db/')
 
@@ -62,9 +106,11 @@ class UserResource(ModelResource):
 		queryset = User.objects.all()
 		resource_name = 'user'
 		fields = ['username', 'first_name', 'last_name', 'last_login']
-		
 
-		
+
+"""
+Simple object for creating the instances.
+"""		
 class DataObject(object):
 	
     def __init__(self, id=None):
@@ -83,6 +129,148 @@ class DataObject(object):
 
     def to_dict(self):
         return self._data
+     
+
+"""
+Derivatives from Resource.
+"""		
+		
+class SubmissionResource(Resource):
+	
+	response = fields.CharField(attribute='response', null = True, blank = True) 
+	task = fields.CharField(attribute='task', null = True, blank = True)
+	smyth = fields.CharField(attribute='smyth', null = True, blank = True)
+	time = fields.IntegerField(attribute='time', null = True, blank = True)
+	accuracy = fields.IntegerField(attribute='accuracy', null = True, blank = True)
+	encounteredWords = fields.ListField(attribute='encounteredWords', null = True, blank = True)
+	slideType = fields.CharField(attribute='slideType', null = True, blank = True)
+	timestamp = fields.DateField(attribute='timestamp', null = True, blank = True)
+	
+	class Meta:
+		allowed_methods = ['post', 'get', 'patch']
+		#authentication = SessionAuthentication() 
+		authentication = BasicAuthentication()
+		authorization = UserObjectsOnlyAuthorization()
+		object_class = DataObject
+		resource_name = 'submission'
+
+	def detail_uri_kwargs(self, bundle_or_obj):
+		
+		kwargs = {}	
+		if isinstance(bundle_or_obj, Bundle):
+			kwargs['pk'] = bundle_or_obj.obj.id	
+		else:
+			kwargs['pk'] = bundle_or_obj.id		
+		return kwargs
+
+	def authorized_read_list(self, object_list, bundle):
+		"""
+		Handles checking of permissions to see if the user has authorization
+		to GET this resource.
+		"""
+		try:
+			auth_result = self._meta.authorization.read_list(object_list, bundle)
+		except Unauthorized as e:
+			self.unauthorized_result(e)
+
+		return auth_result
+
+	#def get_object_list(self, request):
+		
+		#gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		#submissions = []
+		#table = gdb.query("""START u=node(*) MATCH (u)-[:submissions]->(s) RETURN s""")		
+			
+		# create the objects which was queried for and set all necessary attributes
+		#for s in table:
+			#submission = s[0]	
+			#url = submission['self'].split('/')						
+			#new_obj = DataObject(url[len(url)-1])
+			#new_obj.__dict__['_data'] = submission['data']		
+			#new_obj.__dict__['_data']['id'] = url[len(url)-1]						
+			#submissions.append(new_obj)
+				
+		#return submissions
+	
+	def obj_get_list(self, bundle, **kwargs):
+		
+		try:
+			return self.authorized_read_list(bundle.request, bundle)
+		except ValueError:
+			raise BadRequest("Invalid resource lookup data provided (mismatched type).")
+		
+		#return self.get_object_list(bundle.request)
+	
+	def obj_get(self, bundle, **kwargs):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		submission = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
+		
+		new_obj = DataObject(kwargs['pk'])
+		new_obj.__dict__['_data'] = submission.properties
+		new_obj.__dict__['_data']['id'] = kwargs['pk']
+		return new_obj
+		
+	def post_list(self, request, **kwargs):
+		"""
+		Create a new submission object, which relates to the slide it responds to and the user who submitted it.
+		Return the submission object, complete with whether or not they got the answer correct.
+		"""
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		
+		self.method_check(request, allowed=['post'])
+		#self.is_authenticated(request)
+
+		if not request.user or not request.user.is_authenticated():
+			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user })
+
+		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+		# Ensuring that the user is who s/he says s/he is, handled by user objs. auth.
+		#try:
+			#user_node = AppUser.objects.get(username=data.get("user"))
+		#except ObjectDoesNotExist as e:
+			#return self.create_response(request, {'success': False, 'error': e})
+
+		# get the user via neo look-up or create a newone
+		if data['user'] is not None:
+			userTable = gdb.query("""START u=node(*) MATCH (u)-[:submissions]->(s) WHERE HAS (u.username) AND u.username='""" + data['user'] + """' RETURN u""")
+		
+			if len(userTable) > 0:	
+				userurl = userTable[0][0]['self']
+				userNode = gdb.nodes.get(userurl)			
+			
+			else:
+				userNode = gdb.node(username=data['user'])
+			
+			subms = gdb.node(
+				response = data.get("response"), # string 
+				task = data.get("task"), # string 
+				smyth = data.get("smyth"),	# string
+				time = int(data.get("time")),		 # integer
+				accuracy = int(data.get("accuracy")), # integer
+				encounteredWords = data.get("encounteredWords"), # array
+				slideType = data.get("slideType"), # string
+				timestamp = data.get("timestamp") # datetime
+			)
+			if subms is None :
+				# in case an error wasn't already raised 			
+				raise ValidationError('Submission node could not be created.')
+		
+			# Form the connections from the new Submission node to the existing slide and user nodes
+			userNode.submissions(subms)
+	
+			# create the body
+			body = json.loads(request.body) if type(request.body) is str else request.body
+	
+			return self.create_response(request, body)
+		
+		else:
+			return self.error_response(request, {'error': 'User is required.' }, response_class=HttpBadRequest)
+
+       
+"""
+Here start the data resources.
+"""      
 
 class LemmaResource(Resource):
 	
@@ -102,13 +290,10 @@ class LemmaResource(Resource):
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
 		kwargs = {}
-		
 		if isinstance(bundle_or_obj, Bundle):
-			kwargs['pk'] = bundle_or_obj.obj.id
-			
+			kwargs['pk'] = bundle_or_obj.obj.id			
 		else:
-			kwargs['pk'] = bundle_or_obj.id
-			
+			kwargs['pk'] = bundle_or_obj.id			
 		return kwargs
 	
 	#/api/word/?randomized=&format=json&lemma=κρατέω
@@ -182,7 +367,6 @@ class LemmaResource(Resource):
 				
 		return lemmas
 	
-	
 	def obj_get_list(self, bundle, **kwargs):
 		
 		return self.get_object_list(bundle.request)
@@ -208,7 +392,6 @@ class LemmaResource(Resource):
 		new_obj.__dict__['_data']['values'] = reversed(valuesArray)
 
 		return new_obj
-
 
 class WordResource(Resource):
 	
@@ -252,14 +435,11 @@ class WordResource(Resource):
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
-		kwargs = {}
-		
+		kwargs = {}		
 		if isinstance(bundle_or_obj, Bundle):
 			kwargs['pk'] = bundle_or_obj.obj.id
-			
 		else:
 			kwargs['pk'] = bundle_or_obj.id
-			
 		return kwargs
 	
 	#/api/word/?randomized=&format=json&lemma=κρατέω
@@ -317,7 +497,7 @@ class WordResource(Resource):
 			# get the word as a node to query relations
 			#wordNode = gdb.nodes.get(word['self'])
 			
-			# get the lemma -> too expensive here, put in into detail view			
+			# get the lemma -> too expensive here, put it into detail view			
 			#lemmaRels = word.relationships.incoming(types=["values"])
 			#if len(lemmaRels) > 0:
 				#new_obj.__dict__['_data']['lemma_resource'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
@@ -334,7 +514,6 @@ class WordResource(Resource):
 			words.append(new_obj)
 				
 		return words
-	
 	
 	def obj_get_list(self, bundle, **kwargs):
 		
@@ -368,7 +547,6 @@ class WordResource(Resource):
 
 		return new_obj
 
-
 class SentenceResource(Resource):
 	
 	CTS = fields.CharField(attribute='CTS', null = True, blank = True)
@@ -386,13 +564,10 @@ class SentenceResource(Resource):
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
 		kwargs = {}
-		
 		if isinstance(bundle_or_obj, Bundle):
-			kwargs['pk'] = bundle_or_obj.obj.id
-			
+			kwargs['pk'] = bundle_or_obj.obj.id	
 		else:
-			kwargs['pk'] = bundle_or_obj.id
-			
+			kwargs['pk'] = bundle_or_obj.id	
 		return kwargs
 	
 	#/api/word/?randomized=&format=json&lemma=κρατέω
@@ -602,7 +777,6 @@ class SentenceResource(Resource):
 									
 		return None
 
-
 class DocumentResource(Resource):
 	
 	CTS = fields.CharField(attribute='CTS')
@@ -620,14 +794,11 @@ class DocumentResource(Resource):
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
-		kwargs = {}
-		
+		kwargs = {}	
 		if isinstance(bundle_or_obj, Bundle):
-			kwargs['pk'] = bundle_or_obj.obj.id
-			
+			kwargs['pk'] = bundle_or_obj.obj.id	
 		else:
-			kwargs['pk'] = bundle_or_obj.id
-			
+			kwargs['pk'] = bundle_or_obj.id		
 		return kwargs
 	
 	#/api/word/?randomized=&format=json&lemma=κρατέω
@@ -721,6 +892,4 @@ class DocumentResource(Resource):
 
 		return new_obj
  
-
-
    
