@@ -140,7 +140,7 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.file'
 
-AUTH_USER_MODEL = 'auth.user'
+AUTH_USER_MODEL = 'app.AppUser'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

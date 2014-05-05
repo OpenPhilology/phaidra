@@ -1,5 +1,18 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser, UserManager
 from django.utils.text import slugify
+
+class AppUser(AbstractUser):
+	
+	objects = UserManager()
+	
+	lang = models.CharField(max_length=200)
+	unit = models.IntegerField()
+	lesson = models.IntegerField()
+	progress = models.IntegerField()
+	
+	def __unicode__(self):
+		return unicode(self.username) or u''
 
 class Textbook(models.Model):
 	name = models.CharField(max_length=200)
@@ -19,7 +32,6 @@ class Unit(models.Model):
 	def __unicode__(self):
 		return self.name
 
-
 class Lesson(models.Model):
 	unit = models.ForeignKey('Unit')
 	name = models.CharField(max_length=200)
@@ -27,7 +39,6 @@ class Lesson(models.Model):
 
 	def __unicode__(self):
 		return self.name
-
 
 class Slide(models.Model):
 	lesson = models.ForeignKey('Lesson')
