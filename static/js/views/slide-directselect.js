@@ -1,7 +1,8 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($, _, Backbone, Models, Collections) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templates/slide-directselect.html'], function($, _, Backbone, Models, Collections, Template) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',
+		template: _.template(Template),
 		events: {
 			"click .direct-select a" : "selectAnswer",
 		},
@@ -13,7 +14,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 			return this;	
 		},
 		draw: function() {
-			this.$el.html(this.options.template(this.model.attributes));
+			this.$el.html(this.template(this.model.attributes));
 		},
 		selectAnswer: function(e) {
 			e.preventDefault();

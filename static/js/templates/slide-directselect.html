@@ -1,0 +1,16 @@
+<div style="text-align: center; margin-bottom: 10px; font-size: 3em">
+	<%= question %>
+</div>
+
+<div class="greek-text exercise direct-select horizontal">
+	<% _.each(options, function(optionSet) { %>
+
+			<% _.each(optionSet, function(option, index) { %>
+				<a href="#" data-value="<%= option.value  %>"><span class="badge"><%= index + 1 %></span><%= option.display %></a> 
+			<% }); %>
+
+	<% }); %>
+</div>
+
+<div class="slide-feedback" style="display: none">
+</div>

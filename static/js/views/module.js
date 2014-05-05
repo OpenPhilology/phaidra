@@ -1,5 +1,5 @@
 define(
-	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide_info', 'views/slide_multi_composition', 'views/slide_direct_select'], 
+	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect'], 
 	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView, DirectSelectSlideView) { 
 
 		var View = Backbone.View.extend({
@@ -8,18 +8,38 @@ define(
 			},
 			initialize: function(options) {
 
-				/*
-					If model doesn't exist, it can go build itself.
-				*/
+				var that = this;
+
+				// If we're loading this module initially, fetch lesson content
 				if (!this.lesson) {
-					console.log("creating a new lesson");
 					this.lesson = new Collections.Slides([], {
 						module: options.module, 
 						section: options.section
 					});
 				}
 				
-				if (!this.slides) this.slides = [];
+				// Keep a handy reference to all the slides for nav purposes
+				if (!this.slides) 
+					this.slides = [];
+
+				// Create a slide-type-to-view mapper
+				this.map = {
+					'slide_info': function(model) {
+						return new InfoSlideView({
+							model: model
+						}).render()
+							.$el
+							.appendTo(that.$el.find('#lesson-content'));
+					},
+					'slide_multi_comp': 'MultiCompSlideView',
+					'slide_direct_select': function(model) {
+						return new DirectSelectSlideView({
+							model: model
+						}).render()
+							.$el
+							.appendTo(that.$el.find('#lesson-content'));
+					}
+				};
 
 				this.lesson.bind('add', _.bind(this.addSlide, this));
 				this.lesson.populate();
@@ -28,38 +48,12 @@ define(
 			addSlide: function(model, collection, options) {
 				var selector = '#' + model.get('type');
 				var that = this;
-				var view;
 
 				// Set for easy navigation to next slide
 				model.set('index', model.collection.indexOf(model));
 
-				// TODO: Generalize this out!!
-				if (selector == '#slide_multi_composition') {
-					view = new MultiCompSlideView({ 
-						model: model, 
-						template: _.template(this.$el.find('#slide_multi_composition').html()) 
-					}).render()
-						.$el
-						.appendTo(this.$el.find('#lesson-content'));
-				}
-				else if (selector == '#slide_info') {
-					view = new InfoSlideView({ 
-						model: model, 
-						template: _.template(this.$el.find('#slide_info').html()) 
-					}).render()
-						.$el
-						.appendTo(this.$el.find('#lesson-content'));
-				}
-				else if (selector == '#slide_direct_select') {
-					view = new DirectSelectSlideView({ 
-						model: model, 
-						template: _.template(this.$el.find('#slide_direct_select').html()) 
-					}).render()
-						.$el
-						.appendTo(this.$el.find('#lesson-content'));
-				}
-
 				// The Module view keeps references to the various slide views
+				var view = this.map[model.attributes.type](model);
 				this.slides.push(view);
 
 				// Create a progress bar section for each slide
