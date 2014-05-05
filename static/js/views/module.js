@@ -17,7 +17,7 @@ define(
 						section: options.section
 					});
 				}
-				
+
 				// Keep a handy reference to all the slides for nav purposes
 				if (!this.slides) 
 					this.slides = [];
@@ -43,6 +43,7 @@ define(
 
 				this.lesson.bind('add', _.bind(this.addSlide, this));
 				this.lesson.populate();
+				this.$el.find('.lesson-header h1').html(this.lesson.meta('title'));
 				
 			},
 			addSlide: function(model, collection, options) {
