@@ -7,9 +7,9 @@ class AppUser(AbstractUser):
 	objects = UserManager()
 	
 	lang = models.CharField(max_length=200)
-	unit = models.IntegerField()
-	lesson = models.IntegerField()
-	progress = models.IntegerField()
+	unit = models.IntegerField(default=0)
+	lesson = models.IntegerField(default=0)
+	progress = models.IntegerField(default=0)
 	
 	def __unicode__(self):
 		return unicode(self.username) or u''
