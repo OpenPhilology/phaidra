@@ -126,6 +126,34 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				else
 					this._meta[prop] = value;
 			};
+		},
+		populate: function(sentenceURI) {
+			var that = this;
+
+			// First, make sure this isn't already populated by seeing if lemma attribute is there
+			if (!that.findWhere({ sentenceURI: sentenceURI }).get('lemma')) {
+
+				// Populates a subset of the data based on the sentence URI
+				$.ajax({
+					url: sentenceURI,
+					dataType: 'json',
+					success: function(response) {
+						var words = response.words;
+
+						for (var i = 0; i < words.length; i++) {
+							that.findWhere({ CTS : words[i]["CTS"] }).set(words[i]);
+						}
+
+						that.trigger('populated');
+					},
+					error: function(x, y, z) {
+						console.log(x, y, z);
+					}
+				});
+			}
+			else {
+				that.trigger('populated');
+			}
 		}
 	});
 
