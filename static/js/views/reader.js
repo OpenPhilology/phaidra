@@ -11,8 +11,6 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 			// Start by getting our reader content and building a table of contents
 			this.buildBook();
 
-			//this.turnToPage('urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1');
-
 			// Render the notes viewer at the bottom of the screen
 			if (!this.notes) {
 				this.notes = new NotesView({
@@ -66,7 +64,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 
 							that.collection.add({
 								'value': token,
-								'lang': 'grc',
+								'lang': book.lang,
 								'sentenceURI': book.sentences[i]["resource_uri"],
 								'sentenceCTS': book.sentences[i]["CTS"],
 								'nextSentenceCTS': next || undefined,

@@ -3,11 +3,11 @@
 
 	<!-- Page corner, functions as navigation -->
 	<div class="corner <%= side %>">
-		<a href="#" data-toggle="tooltip" title="Next Page" data-placement="left"></a>
+		<a href="#" data-toggle="tooltip" title="<% side == 'left' ? print('Previous') : print('Next') %> Page" data-placement="<% side == 'left' ? print('right') : print('left') %>"></a>
 	</div>
 
 	<!-- Page header -->
-	<h1>Thucydides' Peloponnesian War <small><a href="#" data-toggle="tooltip" title="Jump to another section">section</a></small></h1>
+	<h1><%= work %> <small>by <%= author %>, <a href="#" data-toggle="tooltip" title="Jump to another section">section</a></small></h1>
 	<hr>
 
 	<!-- Greek goes here! -->
