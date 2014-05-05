@@ -7,6 +7,7 @@ admin.autodiscover()
 from tastypie.api import Api
 from api.api import TextbookResource, UnitResource, LessonResource, SlideResource, UserResource, SubmissionResource
 from api.api import WordResource, SentenceResource, DocumentResource, LemmaResource
+from api.api import VisualizationResource
 
 v1_api = Api(api_name='v1')
 v1_api.register(UserResource())
@@ -21,6 +22,7 @@ v1_api.register(DocumentResource())
 v1_api.register(LemmaResource())
 
 v1_api.register(SubmissionResource())
+v1_api.register(VisualizationResource())
 
 urlpatterns = patterns('',
 
