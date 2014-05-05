@@ -49,7 +49,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		initialize: function(models, options) {
 			var that = this;
 
-			/* Is this really bad? */
+			// Keep track of metadata about the collection
 			if (!this._meta)
 				this._meta = [];
 
@@ -78,6 +78,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			that.meta('title', Utils.Content[that.meta('module')]["title"]);
 
 			for (var i = 0; i < slide_data.length; i++) {
+				slide_data[i]["title"] = that.meta('title');
 				if (slide_data[i]["smyth"] && slide_data[i]["type"] == 'slide_info') {
 					// Create data needed for a an exercise
 					console.log("Adding an exercise for " + slide_data[i]["smyth"]);

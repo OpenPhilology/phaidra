@@ -13,6 +13,7 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		initialize: function(options) {
 			this.options = options;
 			this.render();
+			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
 
 			this.collection.on('change:selected', this.toggleHighlight, this); 
 		},
@@ -22,17 +23,18 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			// Pass in CTS of sentence so only words in that sentence appear on this page  
 			this.$el.html(this.template({ 
 				side: this.options.side, 
+				author: this.collection._meta.book.author,
+				work: this.collection._meta.book.name,
 				words: this.collection.models,
 				cts: this.options.cts
 			})); 
-			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
 
 			// Update the 'next or previous' page links
 			var model = this.collection.findWhere({ sentenceCTS: this.options.cts });
 			this.$el.find('a').attr('href', function() {
 				var cts = that.options.side == 'left' ? model.get('prevSentenceCTS') : model.get('nextSentenceCTS'); 
 				return '/reader/' + cts;
-			});
+			}).tooltip();
 
 			var ref = this.options.cts.split(':');
 			this.$el.find('h1 a').html(ref[ref.length-1]);
@@ -87,10 +89,9 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			if (model.get('selected'))
 				this.$el.find('.page-content span[data-cts="' + model.get('CTS') + '"]')
 					.addClass('selected');
-			else if (!model.get('selected')) {
+			else if (!model.get('selected'))
 				this.$el.find('.page-content span[data-cts="' + model.get('CTS') + '"]')
 					.removeClass('selected');
-			}
 		}
 	});
 

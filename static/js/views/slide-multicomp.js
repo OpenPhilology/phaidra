@@ -1,16 +1,21 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($, _, Backbone, Models, Collections) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templates/slide-multicomp.html'], function($, _, Backbone, Models, Collections, Template) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',
+		template: _.template(Template),
 		events: {
 			"click .options a" : "selectAnswer",
 			"click .answers a" : "deselectAnswer"
 		},
 		initialize: function(options) {
-			this.$el.html(options.template(this.model.attributes));
+			this.options = options;
+			this.model.on('populated', this.draw, this);
 		},
 		render: function() {
 			return this;	
+		},
+		draw: function() {
+			this.$el.html(this.template(this.model.attributes));
 		},
 		selectAnswer: function(e) {
 			e.preventDefault();

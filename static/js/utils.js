@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'text!smyth.json', 'text!emily_content.json'], function($, _, Smyth, Content) {
+define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/emily_content.json'], function($, _, Smyth, Content) {
 	var Utils = {};
 	Utils.Smyth = JSON.parse(Smyth);
 	Utils.Content = JSON.parse(Content);
