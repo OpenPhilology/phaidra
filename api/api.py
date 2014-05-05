@@ -7,8 +7,7 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
 from django.conf import settings 
 from django.conf.urls import url
-from django.contrib.auth.models import User
-from app.models import Textbook, Unit, Lesson, Slide
+from app.models import Textbook, Unit, Lesson, Slide, AppUser
 
 from django.core.exceptions import ValidationError
 
@@ -58,7 +57,7 @@ class UserObjectsOnlyAuthorization(Authorization):
 		else:
 			raise Unauthorized()
 	
-	### not in use yet. User submissions are related to the user in the sent data, which makes sure the the user was already veryfied
+	### not in use yet. User submissions are related to the user in the sent data, which makes sure the the user was already verified
 	def create_detail(self, object_list, bundle):
 		return bundle.obj.user == bundle.request.user
 
@@ -95,7 +94,7 @@ class SlideResource(ModelResource):
 
 class UserResource(ModelResource):
 	class Meta:
-		queryset = User.objects.all()
+		queryset = AppUser.objects.all()
 		resource_name = 'user'
 		fields = ['username', 'first_name', 'last_name', 'last_login']
 
@@ -657,8 +656,8 @@ class SentenceResource(Resource):
 				word.properties['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
 		
 				# create the resource uri of the word
-				word.properties['resource_uri'] = API_PATH + 'word/' + str(word.id) + '/'		
-				wordArray.append(word.properties)
+			word.properties['resource_uri'] = API_PATH + 'word/' + str(word.id) + '/'		
+			wordArray.append(word.properties)
 		
 		if bundle.request.GET.get('short'):
 			wordArray =  self.shorten(wordArray, query_params)
