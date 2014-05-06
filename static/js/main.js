@@ -9,6 +9,8 @@ requirejs.config({
 		'backbone': 'lib/backbone',
 		'd3': 'lib/d3.v3.min',
 		'jquery-ui': 'lib/jquery-ui-draggable',
+		'jquery-ui-core': 'lib/jquery-ui-core',
+		'jquery-ui-slide': 'lib/jquery-ui-effects-slide',
 		'text': 'lib/text'
 	},
 	'shim': {
@@ -24,6 +26,15 @@ requirejs.config({
 		},
 		'd3': {
 			'exports': 'd3'
+		},
+		'jquery-ui-core': {
+			'deps': ['jquery']
+		},
+		'jquery-ui': {
+			'deps': ['jquery']
+		},
+		'jquery-ui-slide': {
+			'deps': ['jquery', 'jquery-ui-core']
 		}
 	}
 });
