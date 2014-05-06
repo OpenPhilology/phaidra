@@ -554,17 +554,17 @@ label {
 	}
 }
 .lesson-progress {
-	margin-bottom: 35px;
+	margin-bottom: 10px;
 
 	.bar {
 		$c: #DDD;
 
 		display: inline-block;
-		height: 15px;
-		background: linear-gradient(to left, #FFF 50%, $color-sec-two 50%);
+		height: 10px;
+		background: linear-gradient(to left, #FFF 50%, $color-pri-two 50%);
 		background-size: 200% 100%;
 		background-position: right bottom;
-		transition: all 1s ease-out;
+		transition: all 0.5s ease-out;
 
 		border: {
 			top: 1px solid $c;
@@ -757,20 +757,26 @@ div.module {
 	}
 }
 
-.lesson-container {
-	.lesson-header {
+#lesson-toc {
+	background-color: #EEE; //darken($color-sec-two, 15%);
+	padding: 20px;
+	color: #666;
 
-		h3 {
-			display: inline-block;
-			margin-top: 0;
-		}
+	li {
+		padding: 2px;	
 	}
 }
-.lesson-left-menu {
-	padding-top: 20px;
+
+.lesson-header {
+	h1 {
+		display: inline-block;
+		margin-top: 0;
+		color: darken($color-sec-two, 10%);
+		text-transform: uppercase;
+		font-size: 24px;
+	}
 }
 .slide {
-
 	padding: 20px;
 	border-radius: 3px;
 	min-height: 300px;
@@ -1077,6 +1083,70 @@ p span[lang="grc"] {
 	margin-left: 3px;
 	margin-right: 3px;
 }
+// Used as navigation in Reader and in Lessons
+.corner {
+	content: "";
+	position: fixed;
+	border-style: solid;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
+
+	&.left {
+		top: 64px;
+		left: 0;
+		border-color: #EEE #FFF;
+		border-width: 60px 60px 0 0;
+
+		a {
+			top: -60px;
+			border-width: 0 0 60px 60px;
+			border-color: #FFF $color-pri-one;
+
+			&::after {
+				left: -55px;
+				top: 1px;
+				content: "\e091";
+			}
+			&:hover {
+				border-color: #FFF lighten($color-pri-one, 5%);
+			}
+		}
+	}
+	&.right {
+		top: 64px;
+		right: 0;
+		border-color: #EEE #FFF;
+		border-width: 0 60px 60px 0;
+
+		a {
+			right: -60px;
+			border-width: 60px 0 0 60px;
+			border-color: $color-pri-one #FFF;
+
+			&::after {
+				right: 5px;
+				top: -57px;
+				content: "\e092";
+			}
+			&:hover {
+				border-color: lighten($color-pri-one, 5%) #FFF;
+			}
+		}
+	}
+
+	a {
+		top: 0;
+		position: absolute;
+		border-style: solid;
+		color: #FFF;
+
+		&::after {
+			font-family: 'Glyphicons Halflings';
+			font-size: 24px;
+			position: absolute;
+		}
+
+	}
+}
 
 #reader {
 	background-color: rgba(255, 255, 255, .8);
@@ -1117,69 +1187,6 @@ p span[lang="grc"] {
 		}
 	}
 
-	.corner {
-		content: "";
-		position: absolute;
-		border-style: solid;
-		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
-
-		&.left {
-			top: 0;
-			left: 0;
-			border-color: #EEE #FFF;
-			border-width: 60px 60px 0 0;
-
-			a {
-				top: -60px;
-				border-width: 0 0 60px 60px;
-				border-color: #FFF $color-pri-one;
-
-				&::after {
-					left: -55px;
-					top: 1px;
-					content: "\e091";
-				}
-				&:hover {
-					border-color: #FFF lighten($color-pri-one, 5%);
-				}
-			}
-		}
-		&.right {
-			top: 0;
-			right: 0;
-			border-color: #EEE #FFF;
-			border-width: 0 60px 60px 0;
-
-			a {
-				right: -60px;
-				border-width: 60px 0 0 60px;
-				border-color: $color-pri-one #FFF;
-
-				&::after {
-					right: 5px;
-					top: -57px;
-					content: "\e092";
-				}
-				&:hover {
-					border-color: lighten($color-pri-one, 5%) #FFF;
-				}
-			}
-		}
-
-		a {
-			top: 0;
-			position: absolute;
-			border-style: solid;
-			color: #FFF;
-
-			&::after {
-				font-family: 'Glyphicons Halflings';
-				font-size: 24px;
-				position: absolute;
-			}
-
-		}
-	}
 
 	.notes-container {
 		position: fixed;

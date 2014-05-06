@@ -1,10 +1,10 @@
 define(
-	['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect'], 
-	function($, _, Backbone, Models, Collections, InfoSlideView, MultiCompSlideView, DirectSelectSlideView) { 
+	['jquery', 'underscore', 'backbone', 'jquery-ui-core', 'jquery-ui-slide', 'models', 'collections', 'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect'], 
+	function($, _, Backbone, jQueryUICore, jQueryUISlide, Models, Collections, InfoSlideView, MultiCompSlideView, DirectSelectSlideView) { 
 
 		var View = Backbone.View.extend({
 			events: {
-				'click .lesson-right-menu a': 'navigate'
+				'click .corner a': 'navigate'
 			},
 			initialize: function(options) {
 
@@ -74,7 +74,7 @@ define(
 				for (var i = 0; i < this.slides.length; i++) {
 					this.slides[i].hide();
 				}
-				this.slides[slide].show();
+				this.slides[slide].show('slide', { direction: 'right' }, 500);
 
 				// Display proper progress to the user
 				var progress = this.$el.find('.lesson-progress').children();
@@ -87,16 +87,16 @@ define(
 
 				// Update the navigation link
 				if (!this.slides[slide + 1])
-					this.$el.find('.lesson-right-menu a').hide();
+					this.$el.find('.corner a').hide();
 				else {
 					var url = '/' + Backbone.history.fragment.split('/').splice(0, 5).join('/') + '/' + (1 + slide);
-					this.$el.find('.lesson-right-menu a').attr('href', url);
+					this.$el.find('.corner a').attr('href', url);
 				}
 			},
 			navigate: function(e) {
 				e.preventDefault();
 
-				var url = $(e.target).parent().attr('href');
+				var url = $(e.target).attr('href');
 				Backbone.history.navigate(url, { trigger: true });
 			}
 		});

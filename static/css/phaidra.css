@@ -447,14 +447,14 @@ label {
       fill: none; }
 
 .lesson-progress {
-  margin-bottom: 35px; }
+  margin-bottom: 10px; }
   .lesson-progress .bar {
     display: inline-block;
-    height: 15px;
-    background: linear-gradient(to left, white 50%, #4e6087 50%);
+    height: 10px;
+    background: linear-gradient(to left, white 50%, #1fadad 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     border-left: 1px solid #dddddd; }
@@ -626,12 +626,19 @@ div.module {
     .module .circle.complete {
       background-color: white; }
 
-.lesson-container .lesson-header h3 {
-  display: inline-block;
-  margin-top: 0; }
+#lesson-toc {
+  background-color: #EEE;
+  padding: 20px;
+  color: #666; }
+  #lesson-toc li {
+    padding: 2px; }
 
-.lesson-left-menu {
-  padding-top: 20px; }
+.lesson-header h1 {
+  display: inline-block;
+  margin-top: 0;
+  color: #3b4967;
+  text-transform: uppercase;
+  font-size: 24px; }
 
 .slide {
   padding: 20px;
@@ -888,6 +895,51 @@ p span[lang="grc"] {
   margin-left: 3px;
   margin-right: 3px; }
 
+.corner {
+  content: "";
+  position: fixed;
+  border-style: solid;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3); }
+  .corner.left {
+    top: 64px;
+    left: 0;
+    border-color: #EEE #FFF;
+    border-width: 60px 60px 0 0; }
+    .corner.left a {
+      top: -60px;
+      border-width: 0 0 60px 60px;
+      border-color: white #d15241; }
+      .corner.left a::after {
+        left: -55px;
+        top: 1px;
+        content: "\e091"; }
+      .corner.left a:hover {
+        border-color: white #d66556; }
+  .corner.right {
+    top: 64px;
+    right: 0;
+    border-color: #EEE #FFF;
+    border-width: 0 60px 60px 0; }
+    .corner.right a {
+      right: -60px;
+      border-width: 60px 0 0 60px;
+      border-color: #d15241 white; }
+      .corner.right a::after {
+        right: 5px;
+        top: -57px;
+        content: "\e092"; }
+      .corner.right a:hover {
+        border-color: #d66556 white; }
+  .corner a {
+    top: 0;
+    position: absolute;
+    border-style: solid;
+    color: #FFF; }
+    .corner a::after {
+      font-family: 'Glyphicons Halflings';
+      font-size: 24px;
+      position: absolute; }
+
 #reader {
   background-color: rgba(255, 255, 255, 0.8);
   min-height: 100%; }
@@ -912,50 +964,6 @@ p span[lang="grc"] {
         background-color: #fcebd6; }
     #reader .page-content .selected, #reader .page-content .selected:hover {
       background-color: #f8d3a7 !important; }
-  #reader .corner {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3); }
-    #reader .corner.left {
-      top: 0;
-      left: 0;
-      border-color: #EEE #FFF;
-      border-width: 60px 60px 0 0; }
-      #reader .corner.left a {
-        top: -60px;
-        border-width: 0 0 60px 60px;
-        border-color: white #d15241; }
-        #reader .corner.left a::after {
-          left: -55px;
-          top: 1px;
-          content: "\e091"; }
-        #reader .corner.left a:hover {
-          border-color: white #d66556; }
-    #reader .corner.right {
-      top: 0;
-      right: 0;
-      border-color: #EEE #FFF;
-      border-width: 0 60px 60px 0; }
-      #reader .corner.right a {
-        right: -60px;
-        border-width: 60px 0 0 60px;
-        border-color: #d15241 white; }
-        #reader .corner.right a::after {
-          right: 5px;
-          top: -57px;
-          content: "\e092"; }
-        #reader .corner.right a:hover {
-          border-color: #d66556 white; }
-    #reader .corner a {
-      top: 0;
-      position: absolute;
-      border-style: solid;
-      color: #FFF; }
-      #reader .corner a::after {
-        font-family: 'Glyphicons Halflings';
-        font-size: 24px;
-        position: absolute; }
   #reader .notes-container {
     position: fixed;
     width: 100%;
