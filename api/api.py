@@ -890,3 +890,114 @@ class DocumentResource(Resource):
 		return new_obj
  
    
+"""
+Visualization Resource.
+"""
+class VisualizationResource(Resource):
+							
+	class Meta:
+		#queryset = Word.objects.all()
+		resource_name = 'visualization'
+		#always_return_data = True
+		#excludes = ['require_order', 'require_all']
+		authorization = ReadOnlyAuthorization()
+
+	def prepend_urls(self, *args, **kwargs):	
+		
+		return [
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered')
+			]
+
+	#/api/v1/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:11-19&user=john
+	def encountered(self, request, **kwargs):
+		
+		"""
+		Start visualization...
+		"""
+		#fo = open("foo.txt", "wb")
+		#millis = int(round(time.time() * 1000))
+		#fo.write("%s start encountered method, get user: \n" % millis)
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		level = request.GET.get('level')
+	
+		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")	
+		data = {}	
+		
+		if level == "word-level":
+			
+			seenDict = {}
+			knownDict = {}
+			data['words'] = []
+		
+			# calculate CTSs of the word range (later look them up within submissions of the user)
+			wordRangeArray = []
+			cts = request.GET.get('range')
+			# get the stem
+			endIndex = len(cts)-len(cts.split(':')[len(cts.split(':'))-1])
+			rangeStem = cts[0:endIndex]		
+			# get the numbers of the range and save the CTSs
+			numbersArray = cts.split(':')[len(cts.split(':'))-1].split('-')
+			for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
+				wordRangeArray.append(rangeStem + str(num))
+			
+			# get the file entry:
+			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
+			fileContent = {}
+			with open(filename, 'r') as json_data:
+				fileContent = json.load(json_data)
+				json_data.close()
+						
+			for wordRef in wordRangeArray:
+					
+				w = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CTS) AND HAS (n.head) AND n.CTS = '""" +wordRef+ """' RETURN n""")
+				
+				seenDict[wordRef] = 0
+				knownDict[wordRef] = False
+				
+				for sub in submissions.elements:	
+				
+					# get the morph info to the words via a file lookup of submission's smyth key, save params to test it on the encountered word of a submission
+					params = {}
+					grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
+					for pair in grammarParams:
+						params[pair.split('=')[0]] = pair.split('=')[1]
+														
+					# get the encountered word's CTSs of this submission
+					if wordRef in sub[0]['data']['encounteredWords']:			
+												
+						# if word learnt already known don't apply filter again
+						if not knownDict[wordRef]:
+							# loop over params to get morph known infos							
+							badmatch = False
+							
+							for p in params.keys():
+								try:
+									w.elements[0][0]['data'][p]
+									if params[p] != w.elements[0][0]['data'][p]:
+										badmatch = True
+								except KeyError as k:
+									badmatch = True
+									
+							if not badmatch:
+								knownDict[wordRef] = True				
+										
+						# if word in requested range and in encountered save times seen
+						try:
+							seenDict[wordRef]
+							seenDict[wordRef] = seenDict[wordRef] + 1
+						except KeyError as k:
+							seenDict[wordRef] = 1
+							
+				# save data
+				if seenDict[wordRef] > 0:
+					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.elements[0][0]['data']['CTS']})
+					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.CTS})
+				else:
+					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.elements[0][0]['data']['CTS']})
+					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.CTS})
+		
+			return self.create_response(request, data)
+		
+		return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
+	
