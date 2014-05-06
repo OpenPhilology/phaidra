@@ -566,8 +566,8 @@ class SentenceResource(Resource):
 		else:
 			kwargs['pk'] = bundle_or_obj.id	
 		return kwargs
-	
-	#/api/word/?randomized=&format=json&lemma=κρατέω
+
+
 	def get_object_list(self, request):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
@@ -908,7 +908,7 @@ class VisualizationResource(Resource):
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered')
 			]
 
-	#/api/v1/visualization/encountered/?format=json&level=word-level&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:11-19&user=john
+	#/api/v1/visualization/encountered/?format=json&level=word&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:11-19&user=john
 	def encountered(self, request, **kwargs):
 		
 		"""
@@ -918,13 +918,11 @@ class VisualizationResource(Resource):
 		#millis = int(round(time.time() * 1000))
 		#fo.write("%s start encountered method, get user: \n" % millis)
 		
-		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
-		level = request.GET.get('level')
-	
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
 		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")	
 		data = {}	
 		
-		if level == "word-level":
+		if request.GET.get('level') == "word":
 			
 			seenDict = {}
 			knownDict = {}
@@ -999,5 +997,84 @@ class VisualizationResource(Resource):
 		
 			return self.create_response(request, data)
 		
-		return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
+		
+		
+		# if the viz of a document is requested calcualate the numbers on all submissions again and then the percentage of viz data
+		elif request.GET.get('level') == "document":
+			
+			data['sentences'] = []
+
+			# get the file entry:
+			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
+			fileContent = {}
+			with open(filename, 'r') as json_data:
+				fileContent = json.load(json_data)
+				json_data.close()
+				
+			# get the sentences ot that document
+			sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
+			#counter = 0
+			for s in sentenceTable.elements:
+				node = gdb.nodes.get(s[0]['self'])
+				
+				words = node.relationships.outgoing(types=["words"])
+				all = {}	
+				vocabKnown = {}
+				morphKnown = {}
+				syntaxKnown = {}
+				
+				for w in words:
+					word = w.end
+					all[word.properties['CTS']] = True
+					morphKnown[word.properties['CTS']] = False
+					vocabKnown[word.properties['CTS']] = False
+					syntaxKnown[word.properties['CTS']] = False
+					# scan the submission for vocab information
+					for sub in submissions.elements:
+						if vocabKnown[word.properties['CTS']] and morphKnown[word.properties['CTS']]:
+							break
+						# get the morph info to the words via a file lookup of submission's smyth key, save params to test it on the encountered word of a submission
+						params = {}
+						grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
+						for pair in grammarParams:
+							params[pair.split('=')[0]] = pair.split('=')[1]
+							
+						# was this word  seen?
+						if word.properties['CTS'] in sub[0]['data']['encounteredWords']:	
+							
+							# if word morph already known don't apply filter again
+							if not morphKnown[word.properties['CTS']]:
+								# loop over params to get morph known infos
+								badmatch = False
+								for p in params.keys():
+									try:
+										word.properties[p]
+										if params[p] != word.properties[p]:
+											badmatch = True
+									except KeyError as k:
+										badmatch = True
+								
+								if not badmatch:
+									morphKnown[word.properties['CTS']] = True # all params are fine				
+							
+							# know this vocab
+							vocabKnown[word.properties['CTS']] = True
+				
+				# after reading words calcualte percentages of aspects for the sentence
+				sentLeng = len(words)
+				aspects = {'one': 0.00, 'two': 0.00, 'three': 0.00}
+				for cts in all.keys():
+					if vocabKnown[cts] and morphKnown[cts] and syntaxKnown[cts]:
+						aspects['three'] = aspects['three'] +1
+					elif vocabKnown[cts] and morphKnown[cts] or vocabKnown[cts] and syntaxKnown[cts] or morphKnown[cts] and syntaxKnown[cts]:
+						aspects['two'] = aspects['two'] +1	
+					elif vocabKnown[cts] or morphKnown[cts] or syntaxKnown[cts]:	
+						aspects['one'] = aspects['one'] +1	
+				
+				data['sentences'].append({'CTS': node.properties['CTS'], 'lenth': len(words), 'one': aspects['one']/len(words), 'two' : aspects['two']/len(words), 'three': aspects['three']/len(words)})
+				
+			
+			return self.create_response(request, data)		
+		
+		return self.error_response(request, {'error': 'Level parameter required.'}, response_class=HttpBadRequest)
 	
