@@ -90,6 +90,8 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 
 			var that = this;
 
+			this.$el.find('.loader').remove();
+
 			// Render pages if not yet appended to DOM
 			if (!this.pages) {
 				this.pages = {};

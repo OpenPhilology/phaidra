@@ -1,22 +1,37 @@
 <!-- Gets populated with Notes about Greek text -->
 <div class="notes-nav">
-	<a href="#" title="Add Annotation"><span class="glyphicon glyphicon-plus-sign"></span></a> 
-	<a href="#" title="Show Resources"><span class="glyphicon glyphicon-chevron-up"></span></a> 
+	<a href="#" data-toggle="tooltip" title="Preferences"><span class="glyphicon glyphicon-cog"></span></a>
+	<a href="#" data-toggle="tooltip" title="Add Annotation"><span class="glyphicon glyphicon-comment"></span></a> 
+	<a href="#" data-toggle="tooltip" title="Show Resources"><span class="glyphicon glyphicon-chevron-up"></span></a> 
 </div>
 <p class="intro">Hover over a sentence in the text to see available annotations, or to add your own!</p>
 
 <div class="resources">
-	<h3 class="resources-header"></h3>
+	<p class="resources-header">
+		<span lang="grc" class="selected"><%= word.value %></span>
+		<span>
+			comes from <span lang="grc"><%= word.lemma %></span></span>
+		</span>
+		<span id="parse-vals"> 
+			<a href="#" class="btn btn-default" title="Hide Parse">
+				<strong>Show Parse</strong>
+				<span class="vals" style="display: none">
+					<%= word.pos || '' %>
+					<%= word.case || '' %>
+					<%= word.number || '' %>
+					<%= word.gender || '' %>
+					<%= word.tense || '' %>
+					<%= word.voice || '' %>
+					<%= word.mood || '' %>
+					<%= word.person || '' %>
+				</span>
+			</a>
+		</span>
+	</p>
 	<hr>
 	<div class="row">
-		<div class="col-sm-4">
-			<span class="label label-success">1</span> Parse Tree (<a href="#">View Sentence in Parse Tree</a>) 
-		</div>
-		<div class="col-sm-4">
-			<span class="label label-primary">0</span> Aligned Translations 
-		</div>
-		<div class="col-sm-4">
-			<span class="label label-danger">0</span> Occurences in Thucydides 
-		</div>
+		<span class="label label-success">1</span> Parse Tree (<a href="#">View Sentence as a Tree</a>)<br> 
+		<span class="label label-primary">0</span> Aligned Translations <br>
+		<span class="label label-danger">0</span> Occurences in Thucydides 
 	</div>
 </div>

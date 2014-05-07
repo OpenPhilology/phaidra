@@ -5,26 +5,39 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/notes.html'], functi
 		className: 'col-md-12 notes',
 		template: _.template(NotesTemplate),
 		events: { 
-			'click a > .glyphicon-chevron-up': 'collapseNotes'
+			'click a > .glyphicon-chevron-up': 'toggleNotes',
+			'click #parse-vals': 'toggleParse'
 		},
 		initialize: function(options) {
 			this.options = options;	
 			this.collection.bind('change:selected change:hovered', this.toggleNotes, this);
 			this.collection.on('populated', this.renderDetails, this);
+
+			this.$el.html(NotesTemplate);
+			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
 		},
 		render: function() {
-			this.$el.html(this.template());
-			this.$el.find('.notes-nav a').tooltip({ container: 'body' });
 			return this;	
 		},
 		renderDetails: function() {
-			this.$el.addClass('expanded');
 			var selected = this.collection.findWhere({ selected: true });
-			this.$el.find('h3').html(function() {
-				var content = '<span lang="grc">' + selected.get('value') + '</span>';
-				content += ' <small>comes from <strong lang="grc">' + selected.get('lemma') + '</strong>';
-				return content;
-			});
+			this.$el.html(this.template({
+				word: selected.attributes
+			}));
+
+			// Bind events
+			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
+			this.$el.addClass('expanded');
+		},
+		toggleParse: function(e) {
+			e.preventDefault();
+			var link = this.$el.find('#parse-vals');
+
+			link.find('.vals').toggle();
+			var toggle = link.find('.vals').is(':visible') ? 'Hide' : 'Show';
+			link.find('strong').html(toggle + ' Parse');
+
+			console.log(toggle, link);
 		},
 		toggleNotes: function(model) {
 			if (model.get('hovered') && !model.get('selected') && (this.collection.findWhere({ selected: true }) == undefined)) {
@@ -37,7 +50,7 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/notes.html'], functi
 
 			// This will perform a fetch on the model for full data
 			else if (model.get('selected')) {
-				this.$el.find('.intro').html("Loading");
+				this.$el.find('.intro').html('<img src="/static/images/tree-loader.gif"> Loading');
 				this.$el.find('.notes-nav a').eq(1).attr('title', 'Show Resources');
 				this.collection.populate(model.get('sentenceURI'));
 			}
