@@ -106,6 +106,9 @@ $font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	}
 }
 
+/*
+*	Global CSS
+*/
 html, body {
 	height: 100%;
 }
@@ -124,6 +127,42 @@ a {
 		color: darken($color-pri-two, 10%);
 	}
 }
+span[lang="grc"], div[lang="grc"] {
+	font-family: 'Cambria', 'Times New Romans' !important;
+	font-size: 1.3em;
+	letter-spacing: 0.1em;
+
+	em {
+		background-color: #FFF0A3;
+		border-radius: 3px;
+		padding: 3px;
+		font-style: normal;
+	}
+	em[data-toggle="tooltip"] {
+		cursor: pointer;
+	}
+}
+.masc {
+	color: $color-pri-two; // #3882C5;
+}
+.fem {
+	color: $color-pri-one; //#E04A62;
+}
+.neut {
+	color: $color-dark-green; //#3C8818;
+}
+p {
+	line-height: 3em;
+}
+
+p span[lang="grc"] {
+	border: 1px solid #EEE;
+	padding: 2px;
+	border-radius: 3px;
+	background-color: #F6F6F6;
+	margin-left: 3px;
+	margin-right: 3px;
+}
 
 /* Override Bootstrap Styles */
 h1, h2, h3, h4, h5, h6 {
@@ -132,7 +171,26 @@ h1, h2, h3, h4, h5, h6 {
 label {
 	font-weight: normal;
 	font-size: 1.2em;
-
+}
+.label {
+	padding: 0.4em 0.6em 0.3em;
+	margin: 0px 3px;
+	
+	&.label-default {
+		background-color: #BBB;
+	}
+	&.label-primary {
+		background-color: $color-pri-two;
+	}
+	&.label-danger {
+		background-color: $color-pri-one;
+	}
+	&.label-success {
+		background-color: $color-light-green;
+	}
+	&.label-info {
+		background-color: $color-sec-two;
+	}
 }
 .container {
 	max-width: none !important;
@@ -150,6 +208,9 @@ label {
 		}
 	}
 }
+/*
+*	Extending Bootstrap styles
+*/
 .progress-bar-morph {
 	background-color: $color-sec-four; 
 }
@@ -159,7 +220,6 @@ label {
 .progress-bar-voc {
 	background-color: $color-pri-two; 
 }
-
 @mixin context-bg($color) {
 	border: 2px $color solid;
 	border-radius: 3px;
@@ -182,7 +242,6 @@ label {
 		letter-spacing: 0.1em;
 	}
 }
-
 .bg-success {
 	@include context-bg($color-dark-green);
 
@@ -204,7 +263,6 @@ label {
 /* The speech bubble that Thuc uses to speak */
 .speech {
 	$color: lighten($color-sec-four, 15%);
-
 	position: relative;
 	padding: 15px;
 	margin: 1em 0 3em;
@@ -353,8 +411,21 @@ label {
 .navigation {
 	text-align: center;
 
+	span {
+		text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22);
+	}
 	span + span {
 		margin-left: 5px;
+	}
+
+	.glyphicon-flash {
+		color: $color-sec-four;
+	}
+	.glyphicon-bookmark {
+		color: lighten($color-pri-one, 5%);
+	}
+	.glyphicon-comment {
+		color: $color-pri-two;
 	}
 
 	a {
@@ -399,7 +470,6 @@ label {
 	}
 
 }
-
 .user-info {
 	img {
 		margin-right: 10px;
@@ -429,6 +499,9 @@ label {
 	}
 }
 
+/*
+*	Style for main viewport
+*/
 .main {
 	position: absolute;
 	height: 100%;
@@ -454,49 +527,6 @@ label {
 		margin-right: 2px;
 		letter-spacing: 0.05em;
 		color: $color-sec-two;
-	}
-}
-
-@media (max-width: 768px) {
-	.hidden-inline-sm {
-		display: none !important;	
-	}
-	#logo-container {
-		display: none !important;
-	}
-}
-
-/* Styling buttons that are calls to action */
-.calls-to-action {
-	button, a {
-		border: 0;
-		background-color: darken($color-sec-two, 10%);
-		color: #EEE;
-		@include transition(background-color, .2s, ease-out);
-		margin-top: 3px;
-
-		&:hover {
-			background-color: lighten($color-sec-two, 5%);
-			@include transition(background-color, .2s, ease-out);
-			box-shadow: 2px 2px 3px #CCC;
-			color: #FFF;
-
-			.glyphicon {
-				@include wiggle;
-			}
-		}
-	}
-	.glyphicon {
-		margin-right: 5px;
-	}
-	.glyphicon-flash {
-		color: $color-sec-four;	
-	}
-	.glyphicon-list-alt {
-		color: $color-pri-one;
-	}
-	.glyphicon-inbox {
-		color: $color-pri-two;
 	}
 }
 
@@ -559,6 +589,9 @@ label {
 		}
 	}
 }
+/*
+*	Progress bar displayed above every lesson-in-progress
+*/
 .lesson-progress {
 	margin-bottom: 10px;
 
@@ -594,12 +627,14 @@ label {
 		}
 	}
 }
+/*
+*	The lesson boxes visible on the lessons screen
+*/
 .module-container {
 	background: rgba(255, 255, 255, 0.7);
 	border-radius: 2px;
 	padding: 20px;
 	text-align: center;
-
 	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
 		padding-left: 5px;
 		padding-right: 5px;
@@ -631,34 +666,6 @@ div.module {
 		text-decoration: none;
 	}	
 
-	// Styles the practice lightning bolt
-	.practice-module {
-		float: right;
-		margin-top: -18px;
-		margin-right: -16px;
-		margin-left: 5px;
-		color: #F5BC78;
-		background-color: #FFF;
-		padding: 3px 3px 4px 3px;
-		border-radius: 12px;
-	}
-
-	// Different types of modules
-	&.keep-learning {
-		background-color: $color-pri-two;
-		@include transition(background-color, .2s, ease-out);
-		margin-bottom: 20px;
-		
-		&:hover {
-			background-color: lighten($color-pri-two, 5%);
-			@include transition(background-color, .2s, ease-in);
-			box-shadow: 2px 2px 3px #CCC;
-		}
-
-		h3 {
-			color: #FFF;
-		}
-	}
 	&.nouns {
 		background-color: $color-pri-two;
 		@include transition(background-color, .2s, ease-out);
@@ -763,16 +770,9 @@ div.module {
 	}
 }
 
-#lesson-toc {
-	background-color: #EEE; //darken($color-sec-two, 15%);
-	padding: 20px;
-	color: #666;
-
-	li {
-		padding: 2px;	
-	}
-}
-
+/*
+*	Slide Styles	
+*/
 .lesson-header {
 	h1 {
 		display: inline-block;
@@ -786,8 +786,8 @@ div.module {
 	padding: 20px;
 	border-radius: 3px;
 	min-height: 300px;
-	background: rgba(255, 255, 255, 0.7);
 	border-radius: 2px;
+	background: rgba(255, 255, 255, 0.7);
 
 	.slide-unit {
 		display: none;
@@ -965,6 +965,10 @@ div.module {
 	}
 }
 
+/*
+*	Used in lessons to show the parts of the word
+*	e.g. past indicative augment, stem, ending.
+*/
 .word-breakdown {
 	text-align: center;
 
@@ -978,7 +982,6 @@ div.module {
 	}
 
 	td.part {
-		
 		span[lang="grc"] {
 			font-size: 3em;
 		}
@@ -995,7 +998,9 @@ div.module {
 
 	}
 }
-
+/*
+*	Styles inflection tables
+*/
 table.inflection-table {
 	font-size: 0.9em;
 
@@ -1031,64 +1036,6 @@ table.inflection-table {
 	}
 }
 
-.label {
-	padding: 0.4em 0.6em 0.3em;
-	margin: 0px 3px;
-	
-	&.label-default {
-		background-color: #BBB;
-	}
-	&.label-primary {
-		background-color: $color-pri-two;
-	}
-	&.label-danger {
-		background-color: $color-pri-one;
-	}
-	&.label-success {
-		background-color: $color-light-green;
-	}
-	&.label-info {
-		background-color: $color-sec-two;
-	}
-}
-
-span[lang="grc"], div[lang="grc"] {
-	font-family: 'Cambria', 'Times New Romans' !important;
-	font-size: 1.3em;
-	letter-spacing: 0.1em;
-
-	em {
-		background-color: #FFF0A3;
-		border-radius: 3px;
-		padding: 3px;
-		font-style: normal;
-	}
-	em[data-toggle="tooltip"] {
-		cursor: pointer;
-	}
-}
-.masc {
-	color: $color-pri-two; // #3882C5;
-}
-.fem {
-	color: $color-pri-one; //#E04A62;
-}
-.neut {
-	color: $color-dark-green; //#3C8818;
-}
-
-p {
-	line-height: 3em;
-}
-
-p span[lang="grc"] {
-	border: 1px solid #EEE;
-	padding: 2px;
-	border-radius: 3px;
-	background-color: #F6F6F6;
-	margin-left: 3px;
-	margin-right: 3px;
-}
 // Used as navigation in Reader and in Lessons
 .corner {
 	content: "";

@@ -280,8 +280,16 @@ label {
 
 .navigation {
   text-align: center; }
+  .navigation span {
+    text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22); }
   .navigation span + span {
     margin-left: 5px; }
+  .navigation .glyphicon-flash {
+    color: #f4bc78; }
+  .navigation .glyphicon-bookmark {
+    color: #d66556; }
+  .navigation .glyphicon-comment {
+    color: #1fadad; }
   .navigation a {
     display: inline-block;
     padding: 10px 10px;
@@ -356,7 +364,8 @@ label {
   height: 100%;
   top: 0;
   padding-top: 43px;
-  width: 100%; }
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7); }
   .main .lesson-right-menu {
     position: relative;
     height: 40%; }
@@ -502,33 +511,6 @@ div.module {
     height: 65px; }
   .module:hover {
     text-decoration: none; }
-  .module .practice-module {
-    float: right;
-    margin-top: -18px;
-    margin-right: -16px;
-    margin-left: 5px;
-    color: #F5BC78;
-    background-color: #FFF;
-    padding: 3px 3px 4px 3px;
-    border-radius: 12px; }
-  .module.keep-learning {
-    background-color: #1fadad;
-    -webkit-transition: background-color 0.2s ease-out;
-    -moz-transition: background-color 0.2s ease-out;
-    -o-transition: background-color 0.2s ease-out;
-    -ms-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out;
-    margin-bottom: 20px; }
-    .module.keep-learning:hover {
-      background-color: #23c3c3;
-      -webkit-transition: background-color 0.2s ease-in;
-      -moz-transition: background-color 0.2s ease-in;
-      -o-transition: background-color 0.2s ease-in;
-      -ms-transition: background-color 0.2s ease-in;
-      transition: background-color 0.2s ease-in;
-      box-shadow: 2px 2px 3px #CCC; }
-    .module.keep-learning h3 {
-      color: #FFF; }
   .module.nouns {
     background-color: #1fadad;
     -webkit-transition: background-color 0.2s ease-out;
@@ -648,7 +630,6 @@ div.module {
   padding: 20px;
   border-radius: 3px;
   min-height: 300px;
-  background: rgba(255, 255, 255, 0.7);
   border-radius: 2px; }
   .slide .slide-unit {
     display: none; }

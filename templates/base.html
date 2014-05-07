@@ -20,17 +20,14 @@
 
 <div class="container">
 	<header class="row banner">
-		<div class="col-md-1 hidden-sm hidden-xs" id="logo-container">
-			<a href="/lessons/"><img src="/static/images/elearning-logo.png"></a>
-		</div>
-		<div class="col-md-7">
+		<div class="col-md-9">
 			{% block nav %}
 				<nav class="row navigation">
 					<a class="col-xs-4 col-sm-4 progress-lessons {{ lessons_active }}" href="/lessons">
 						<span class="glyphicon glyphicon-flash"></span> <span class="hidden-xs">LEARN</span>
 					</a>
 					<a class="col-xs-4 col-sm-4 progress-voc {{ reader_active }}" href="/reader">
-						<span class="glyphicon glyphicon-book"></span> <span class="hidden-xs">READ</span>
+						<span class="glyphicon glyphicon-bookmark"></span> <span class="hidden-xs">READ</span>
 					</a>
 					<a class="col-xs-4 col-sm-4 progress-book {{ create_active }}" href="/reader">
 						<span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">CREATE</span>
@@ -39,7 +36,7 @@
 			{% endblock %}
 		</div>
 
-		<div class="col-md-4 hidden-sm hidden-xs">
+		<div class="col-md-3 hidden-sm hidden-xs">
 			<div class="user-info pull-right" style="margin: 15px">
 				{% if user.is_authenticated %}
 					<span class="logged-in">
