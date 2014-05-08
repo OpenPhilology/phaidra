@@ -41,6 +41,9 @@
   100% {
     transform: rotateZ(2deg); } }
 
+/*
+*	Global CSS
+*/
 html, body {
   height: 100%; }
 
@@ -57,13 +60,66 @@ a {
   a:hover {
     color: #178282; }
 
+span[lang="grc"], div[lang="grc"] {
+  font-family: 'Cambria', 'Times New Romans' !important;
+  font-size: 1.3em;
+  letter-spacing: 0.1em; }
+  span[lang="grc"] em, div[lang="grc"] em {
+    background-color: #FFF0A3;
+    border-radius: 3px;
+    padding: 3px;
+    font-style: normal; }
+  span[lang="grc"] em[data-toggle="tooltip"], div[lang="grc"] em[data-toggle="tooltip"] {
+    cursor: pointer; }
+
+.masc {
+  color: #1fadad; }
+
+.fem {
+  color: #d15241; }
+
+.neut {
+  color: #49a556; }
+
+p {
+  line-height: 3em; }
+
+p span[lang="grc"] {
+  border: 1px solid #EEE;
+  padding: 2px;
+  border-radius: 3px;
+  background-color: #F6F6F6;
+  margin-left: 3px;
+  margin-right: 3px; }
+
 /* Override Bootstrap Styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Garamond'; }
 
+.btn {
+  border: 1px solid #EEE;
+  text-decoration: none;
+  border-radius: 2px; }
+  .btn.btn-link {
+    border: 0; }
+
 label {
   font-weight: normal;
   font-size: 1.2em; }
+
+.label {
+  padding: 0.4em 0.6em 0.3em;
+  margin: 0px 3px; }
+  .label.label-default {
+    background-color: #BBB; }
+  .label.label-primary {
+    background-color: #1fadad; }
+  .label.label-danger {
+    background-color: #d15241; }
+  .label.label-success {
+    background-color: #a3d55f; }
+  .label.label-info {
+    background-color: #4e6087; }
 
 .container {
   max-width: none !important;
@@ -77,6 +133,9 @@ label {
 .alert.alert-success strong {
   color: #19641A !important; }
 
+/*
+*	Extending Bootstrap styles
+*/
 .progress-bar-morph {
   background-color: #f4bc78; }
 
@@ -359,13 +418,15 @@ label {
     .user-info a.username:hover img, .user-info a.log-in-link:hover img {
       box-shadow: 2px 2px 3px #455577; }
 
+/*
+*	Style for main viewport
+*/
 .main {
   position: absolute;
   height: 100%;
   top: 0;
   padding-top: 43px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.7); }
+  width: 100%; }
   .main .lesson-right-menu {
     position: relative;
     height: 40%; }
@@ -380,46 +441,6 @@ label {
     margin-right: 2px;
     letter-spacing: 0.05em;
     color: #4e6087; }
-
-@media (max-width: 768px) {
-  .hidden-inline-sm {
-    display: none !important; }
-
-  #logo-container {
-    display: none !important; } }
-/* Styling buttons that are calls to action */
-.calls-to-action button, .calls-to-action a {
-  border: 0;
-  background-color: #3b4967;
-  color: #EEE;
-  -webkit-transition: background-color 0.2s ease-out;
-  -moz-transition: background-color 0.2s ease-out;
-  -o-transition: background-color 0.2s ease-out;
-  -ms-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
-  margin-top: 3px; }
-  .calls-to-action button:hover, .calls-to-action a:hover {
-    background-color: #576b97;
-    -webkit-transition: background-color 0.2s ease-out;
-    -moz-transition: background-color 0.2s ease-out;
-    -o-transition: background-color 0.2s ease-out;
-    -ms-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out;
-    box-shadow: 2px 2px 3px #CCC;
-    color: #FFF; }
-    .calls-to-action button:hover .glyphicon, .calls-to-action a:hover .glyphicon {
-      -webkit-animation: wiggle 0.2s ease 0 3;
-      -moz-animation: wiggle 0.2s ease 0 3;
-      -o-animation: wiggle 0.2s ease 0 3;
-      animation: wiggle 0.2s ease 0 3; }
-.calls-to-action .glyphicon {
-  margin-right: 5px; }
-.calls-to-action .glyphicon-flash {
-  color: #f4bc78; }
-.calls-to-action .glyphicon-list-alt {
-  color: #d15241; }
-.calls-to-action .glyphicon-inbox {
-  color: #1fadad; }
 
 /* Lesson-related styles */
 .feedback-container {
@@ -459,6 +480,9 @@ label {
       stroke-width: 2px;
       fill: none; }
 
+/*
+*	Progress bar displayed above every lesson-in-progress
+*/
 .lesson-progress {
   margin-bottom: 10px; }
   .lesson-progress .bar {
@@ -481,6 +505,9 @@ label {
     .lesson-progress .bar.complete {
       background-position: left bottom; }
 
+/*
+*	The lesson boxes visible on the lessons screen
+*/
 .module-container {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 2px;
@@ -612,13 +639,9 @@ div.module {
     .module .circle.complete {
       background-color: white; }
 
-#lesson-toc {
-  background-color: #EEE;
-  padding: 20px;
-  color: #666; }
-  #lesson-toc li {
-    padding: 2px; }
-
+/*
+*	Slide Styles	
+*/
 .lesson-header h1 {
   display: inline-block;
   margin-top: 0;
@@ -630,7 +653,8 @@ div.module {
   padding: 20px;
   border-radius: 3px;
   min-height: 300px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.7); }
   .slide .slide-unit {
     display: none; }
   .slide .exercise .badge {
@@ -795,6 +819,10 @@ div.module {
       margin-right: 20px;
       margin-bottom: 20px; }
 
+/*
+*	Used in lessons to show the parts of the word
+*	e.g. past indicative augment, stem, ending.
+*/
 .word-breakdown {
   text-align: center; }
   .word-breakdown table {
@@ -813,6 +841,9 @@ div.module {
     margin-left: auto;
     margin-right: auto; }
 
+/*
+*	Styles inflection tables
+*/
 table.inflection-table {
   font-size: 0.9em; }
   table.inflection-table span[lang="grc"] strong {
@@ -833,52 +864,6 @@ table.inflection-table {
     color: #333; }
     table.inflection-table tr.past span[lang="grc"] {
       color: #333; }
-
-.label {
-  padding: 0.4em 0.6em 0.3em;
-  margin: 0px 3px; }
-  .label.label-default {
-    background-color: #BBB; }
-  .label.label-primary {
-    background-color: #1fadad; }
-  .label.label-danger {
-    background-color: #d15241; }
-  .label.label-success {
-    background-color: #a3d55f; }
-  .label.label-info {
-    background-color: #4e6087; }
-
-span[lang="grc"], div[lang="grc"] {
-  font-family: 'Cambria', 'Times New Romans' !important;
-  font-size: 1.3em;
-  letter-spacing: 0.1em; }
-  span[lang="grc"] em, div[lang="grc"] em {
-    background-color: #FFF0A3;
-    border-radius: 3px;
-    padding: 3px;
-    font-style: normal; }
-  span[lang="grc"] em[data-toggle="tooltip"], div[lang="grc"] em[data-toggle="tooltip"] {
-    cursor: pointer; }
-
-.masc {
-  color: #1fadad; }
-
-.fem {
-  color: #d15241; }
-
-.neut {
-  color: #49a556; }
-
-p {
-  line-height: 3em; }
-
-p span[lang="grc"] {
-  border: 1px solid #EEE;
-  padding: 2px;
-  border-radius: 3px;
-  background-color: #F6F6F6;
-  margin-left: 3px;
-  margin-right: 3px; }
 
 .corner {
   content: "";
@@ -991,6 +976,11 @@ p span[lang="grc"] {
           display: block; }
         #reader .notes-container .notes.expanded .intro {
           display: none; }
+      #reader .notes-container .notes .label {
+        padding: 5px 6px 2px 5px;
+        position: relative;
+        top: -1px;
+        margin: 0 0 0 3px; }
       #reader .notes-container .notes .resources {
         display: none; }
       #reader .notes-container .notes .intro {

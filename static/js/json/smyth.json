@@ -1,11 +1,7 @@
 [{
-	"meta": {
-		"perseus": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s",
-		"indicatives": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D44%3Asection%3D111%3Asubsection%3D124"
-	},
 	"s499": {
 		"title": "Form the Present, Active, Indicative for ω-stem Verbs",
-		"query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd=w_stem,reg_conj"
+		"query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd__contains=w_stem"
 	},
 	"s532": {
 		"title": "Intro to Future Active Indicative",
@@ -31,7 +27,13 @@
 		"query": "pos=verb&lemma=εἰμί&tense=imperf"
 	},
 	"s1889": {
-		"title": "Imperfect, Active, Indicative",
+		"title": "Form the Imperfect, Active, Indicative",
 		"query": "pos=verb&tense=imperf&mood=ind&voice=act&posAdd__contains=w_stem"
+	}
+},
+{
+	"meta": {
+		"perseus": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s",
+		"indicatives": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D44%3Asection%3D111%3Asubsection%3D124"
 	}
 }]

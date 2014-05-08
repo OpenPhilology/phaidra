@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'text!templates/notes.html'], function($, _, Backbone, NotesTemplate) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'], function($, _, Backbone, Utils, NotesTemplate) { 
 
 	var View = Backbone.View.extend({
 		tagName: 'div', 
@@ -21,8 +21,14 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/notes.html'], functi
 		},
 		renderDetails: function() {
 			var selected = this.collection.findWhere({ selected: true });
+
+			if (selected.get('pos') == 'noun') {
+				selected.set('article', Utils.getDefiniteArticle(selected.get('gender')));
+			}
+			
 			this.$el.html(this.template({
-				word: selected.attributes
+				word: selected.attributes,
+				grammar: selected.getGrammar()
 			}));
 
 			// Bind events
@@ -34,10 +40,8 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/notes.html'], functi
 			var link = this.$el.find('#parse-vals');
 
 			link.find('.vals').toggle();
-			var toggle = link.find('.vals').is(':visible') ? 'Hide' : 'Show';
-			link.find('strong').html(toggle + ' Parse');
-
-			console.log(toggle, link);
+			var toggle = link.find('.vals').is(':visible') ? 'Hide ' : '';
+			link.find('strong').html(toggle + 'Parse');
 		},
 		toggleNotes: function(model) {
 			if (model.get('hovered') && !model.get('selected') && (this.collection.findWhere({ selected: true }) == undefined)) {

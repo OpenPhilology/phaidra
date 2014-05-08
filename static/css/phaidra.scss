@@ -168,6 +168,15 @@ p span[lang="grc"] {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Garamond';
 }
+.btn {
+	border: 1px solid #EEE;
+	text-decoration: none;
+	border-radius: 2px;
+
+	&.btn-link {
+		border: 0;
+	}
+}
 label {
 	font-weight: normal;
 	font-size: 1.2em;
@@ -1191,6 +1200,13 @@ table.inflection-table {
 				.intro {
 					display: none;
 				}
+			}
+
+			.label {
+				padding: 5px 6px 2px 5px;
+				position: relative;
+				top: -1px;
+				margin: 0 0 0 3px;
 			}
 
 			.resources {
