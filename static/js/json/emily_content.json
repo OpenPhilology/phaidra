@@ -524,19 +524,23 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec0.html"
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec0.html",
+						"smyth": "s216"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec.html"
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec.html",
+						"smyth": "s217a"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec1.html"
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec1.html",
+						"smyth": "s217c"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec2.html"
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec2.html",
+						"smyth": "s222"
 					},
 					{
 						"type": "slide_info",
@@ -570,11 +574,13 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec.html"
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec.html",
+						"smyth": "s228a"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec1.html"
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec1.html",
+						"smyth": "s228b"
 					},
 					{
 						"type": "slide_info",

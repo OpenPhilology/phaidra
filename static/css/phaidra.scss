@@ -116,6 +116,7 @@ body {
 	color: #666;
 	font-family: $font-family;
 	background-image: url('/static/images/footer_graphic.png');
+	background-size: 50%;
 	background-repeat: repeat-x;
 	background-position: left bottom;
 	background-attachment: fixed;
@@ -1122,7 +1123,7 @@ table.inflection-table {
 	}
 
 	.page {
-		padding: 10px 80px 80px 10px;
+		padding: 10px 80px 80px 80px;
 		position: relative;
 		margin-top: 0;
 

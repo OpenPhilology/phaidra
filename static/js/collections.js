@@ -79,7 +79,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 
 			for (var i = 0; i < slide_data.length; i++) {
 				slide_data[i]["title"] = that.meta('title');
-				if (slide_data[i]["smyth"] && slide_data[i]["type"] == 'slide_info') {
+				if (slide_data[i]["smyth"] && slide_data[i]["tasks"] && slide_data[i]["type"] == 'slide_info') {
 					// Create data needed for a an exercise
 					console.log("Adding an exercise for " + slide_data[i]["smyth"]);
 					

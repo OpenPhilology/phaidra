@@ -22,6 +22,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 		renderDetails: function() {
 			var selected = this.collection.findWhere({ selected: true });
 
+			// Give the user the definite article with the definition
 			if (selected.get('pos') == 'noun') {
 				selected.set('article', Utils.getDefiniteArticle(selected.get('gender')));
 			}

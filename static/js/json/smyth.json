@@ -1,4 +1,32 @@
 [{
+	"s216": {
+		"title": "The Alpha or First Declension",
+		"query": "pos=noun&posAdd=h_hs"
+	},
+	"s217a": {
+		"title": "Feminine Nouns in the First Declension (α-stem)",	
+		"query": "pos=noun&gender=fem&lemma__endswith=α&posAdd__contains=h_hs"
+	},
+	"s217c": {
+		"title": "Feminine Nouns in the First Declension (η-stem)",	
+		"query": "pos=noun&gender=fem&lemma__endswith=η&posAdd__contains=h_hs"
+	},
+	"s222": {
+		"title": "Masculine Nouns in the First Declension (ης-stem)",
+		"query": "pos=noun&gender=masc&posAdd__contains=hs_ou"
+	},
+	"s228a": {
+		"title": "Masculine Nouns in the Second Declension (ος-stem)",
+		"query": "pos=noun&gender=masc&posAdd__contains=os_ou"
+	},
+	"s228b": {
+		"title": "Neuter Nouns in the Second Declension (ον-stem)",
+		"query": "pos=noun&gender=neut&posAdd__contains=os_ou"
+	},
+	"s232": {
+		"title": "Feminine Nouns in the Second Declension",
+		"query": "pos=noun&gender=fem&posAdd__contains=os_ou"
+	},
 	"s499": {
 		"title": "Form the Present, Active, Indicative for ω-stem Verbs",
 		"query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd__contains=w_stem"

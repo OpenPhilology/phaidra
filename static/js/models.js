@@ -186,6 +186,12 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 						if (that.get(prop).indexOf(value) == -1)
 							return false;
 					}
+					else if (prop.indexOf('__endswith') != -1) {
+						var j = prop.indexOf('__endswith');
+						prop = prop.substring(0, j);
+						if (that.get(prop).indexOf(value) != (that.get(prop).length - value.length))
+							return false;	
+					}
 					else {
 						// Last, simple value check
 						if (that.get(prop) != value)
