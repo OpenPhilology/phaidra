@@ -175,6 +175,8 @@ h1, h2, h3, h4, h5, h6 {
 
 	&.btn-link {
 		border: 0;
+		color: $color-pri-two;
+		text-decoration: none;
 	}
 }
 label {
@@ -1184,7 +1186,7 @@ table.inflection-table {
 			&.expanded {
 				height: auto;
 				min-height: 75px;
-				max-height: 200px;
+				max-height: 300px;
 				overflow: auto;
 				@include animate(all, .5s, linear, 0, 1);
 
@@ -1228,7 +1230,9 @@ table.inflection-table {
 		}
 
 		.notes-nav {
-			float: right;
+			position: absolute;
+			right: 5px;
+			z-index: 1;
 
 			span.glyphicon {
 				padding: 10px;

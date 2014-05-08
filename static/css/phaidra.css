@@ -101,7 +101,9 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   border-radius: 2px; }
   .btn.btn-link {
-    border: 0; }
+    border: 0;
+    color: #1fadad;
+    text-decoration: none; }
 
 label {
   font-weight: normal;
@@ -962,7 +964,7 @@ table.inflection-table {
       #reader .notes-container .notes.expanded {
         height: auto;
         min-height: 75px;
-        max-height: 200px;
+        max-height: 300px;
         overflow: auto;
         -webkit-animation: all 0.5s linear 0 1;
         -moz-animation: all 0.5s linear 0 1;
@@ -994,7 +996,9 @@ table.inflection-table {
       margin-right: 3px;
       font-family: 'Cambria', 'Times New Romans' !important; }
     #reader .notes-container .notes-nav {
-      float: right; }
+      position: absolute;
+      right: 5px;
+      z-index: 1; }
       #reader .notes-container .notes-nav span.glyphicon {
         padding: 10px; }
   #reader .knowledge-container {
