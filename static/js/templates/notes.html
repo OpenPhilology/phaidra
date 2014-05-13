@@ -50,7 +50,7 @@
 			<% if (grammar.length > 0) { %>
 				<% _.each(grammar, function(entry) { %>
 					<% console.log(entry) %>
-					<li><a href="/grammar/#<%= entry.key %>"><%= entry.title %></a></li>
+					<li><a href="/grammar/<%= entry.key %>"><%= entry.title %></a></li>
 				<% }); %>
 			<% } else { %>
 				<li><em>None found</em></li>

@@ -424,22 +424,22 @@ label {
 /*
 *	Style for main viewport
 */
-.main {
+#main {
   position: absolute;
   height: 100%;
   top: 0;
   padding-top: 43px;
   width: 100%; }
-  .main .lesson-right-menu {
+  #main .lesson-right-menu {
     position: relative;
     height: 40%; }
-    .main .lesson-right-menu a {
+    #main .lesson-right-menu a {
       color: #4e6087;
       position: absolute;
       font-size: 70px;
       top: 0;
       left: 0; }
-  .main strong {
+  #main strong {
     margin-left: 2px;
     margin-right: 2px;
     letter-spacing: 0.05em;
@@ -1012,3 +1012,34 @@ table.inflection-table {
       height: 13px;
       border-radius: 0;
       cursor: pointer; }
+
+#toc {
+  background-color: #3b4967;
+  color: #BBB;
+  width: 300px;
+  padding: 20px;
+  float: left; }
+  #toc h2 {
+    color: #DDD; }
+  #toc ul {
+    list-style-type: none;
+    padding-left: 0; }
+  #toc li {
+    margin: 0 -20px 0 -20px; }
+    #toc li.selected {
+      background-color: #1fadad; }
+      #toc li.selected a {
+        color: #EEE; }
+  #toc ul li {
+    padding: 10px 10px 10px 20px; }
+  #toc ul ul li {
+    padding: 10px 10px 10px 40px; }
+  #toc ul ul ul li {
+    padding: 10px 10px 10px 60px; }
+
+#grammar-container {
+  position: fixed;
+  left: 300px;
+  padding: 10px;
+  top: 43px;
+  width: 100%; }

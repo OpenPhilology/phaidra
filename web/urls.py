@@ -3,6 +3,7 @@ from django.conf.urls import patterns, url
 from web import views
 
 urlpatterns = patterns('', 
+	url(r'^grammar/', views.grammar, name='grammar'),
 	url(r'^trees/', views.trees, name='trees'),
 	url(r'^module/', views.module, name='module'),
 	url(r'^viz/', views.viz, name='viz'),

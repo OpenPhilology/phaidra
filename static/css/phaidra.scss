@@ -381,6 +381,8 @@ label {
 	}
 }
 
+$banner-height: 43px;
+
 /* Header */
 .banner {
 	color: #EEE; 
@@ -389,7 +391,7 @@ label {
 	background-color: $color-sec-two;
 	position: fixed;
 	width: 100%;
-	height: 43px;
+	height: $banner-height;
 	z-index: 1;
 
 	#search-form {
@@ -514,11 +516,11 @@ label {
 /*
 *	Style for main viewport
 */
-.main {
+#main {
 	position: absolute;
 	height: 100%;
 	top: 0;
-	padding-top: 43px;
+	padding-top: $banner-height;
 	width: 100%;
 	
 	.lesson-right-menu {
@@ -1056,7 +1058,7 @@ table.inflection-table {
 	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
 
 	&.left {
-		top: 43px;
+		top: $banner-height;
 		left: 0;
 		border-color: #EEE #FFF;
 		border-width: 60px 60px 0 0;
@@ -1077,7 +1079,7 @@ table.inflection-table {
 		}
 	}
 	&.right {
-		top: 43px;
+		top: $banner-height;
 		right: 0;
 		border-color: #EEE #FFF;
 		border-width: 0 60px 60px 0;
@@ -1231,7 +1233,7 @@ table.inflection-table {
 		}
 
 		.notes-nav {
-			position: absolute;
+				position: absolute;
 			right: 5px;
 			z-index: 1;
 
@@ -1254,4 +1256,52 @@ table.inflection-table {
 			cursor: pointer;
 		}
 	}
+}
+
+#toc {
+	background-color: darken($color-sec-two, 10%);
+	color: #BBB;
+	width: 300px;
+	padding: 20px;
+	float: left;
+
+	h2 {
+		color: #DDD;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	li {
+		margin: 0 -20px 0 -20px;
+
+
+		&.selected {
+			background-color: $color-pri-two;
+			a {
+				color: #EEE;
+			}
+		}
+	}
+
+	ul li {
+		padding: 10px 10px 10px 20px;
+
+	}
+	ul ul li {
+		padding: 10px 10px 10px 40px;
+	}
+	ul ul ul li {
+		padding: 10px 10px 10px 60px;
+	}
+}
+
+#grammar-container {
+	position: fixed;
+	left: 300px;
+	padding: 10px;
+	top: $banner-height;
+	width: 100%;
 }
