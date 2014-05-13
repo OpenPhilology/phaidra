@@ -20,45 +20,23 @@
 
 <div class="container">
 	<header class="row banner">
-		<div class="col-md-1 hidden-sm hidden-xs" id="logo-container">
-			<a href="/lessons/"><img src="/static/images/elearning-logo.png"></a>
-		</div>
-		<div class="col-md-7">
-
+		<div class="col-md-9">
 			{% block nav %}
 				<nav class="row navigation">
 					<a class="col-xs-4 col-sm-4 progress-lessons {{ lessons_active }}" href="/lessons">
-						<strong>
-							<span class="glyphicon glyphicon-list"></span>
-							15
-						</strong>
-						<small>
-							lessons completed
-						</small>
+						<span class="glyphicon glyphicon-flash"></span> <span class="hidden-xs">LEARN</span>
 					</a>
-					<a class="col-xs-4 col-sm-4 progress-voc {{ vocab_active }}" href="/vocab">
-						<strong>
-							<span class="glyphicon glyphicon-inbox"></span>
-							50 
-						</strong>
-						<small>
-							words learned
-						</small>
+					<a class="col-xs-4 col-sm-4 progress-voc {{ reader_active }}" href="/reader">
+						<span class="glyphicon glyphicon-bookmark"></span> <span class="hidden-xs">READ</span>
 					</a>
-					<a class="col-xs-4 col-sm-4 progress-book {{ reader_active }}" href="/reader">
-						<strong>
-							<span class="glyphicon glyphicon-book"></span>
-							10% 
-						</strong>
-						<small>
-							Thucydides
-						</small>
+					<a class="col-xs-4 col-sm-4 progress-book {{ create_active }}" href="/reader">
+						<span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">CREATE</span>
 					</a>
 				</nav>
 			{% endblock %}
 		</div>
 
-		<div class="col-md-4 hidden-sm hidden-xs">
+		<div class="col-md-3 hidden-sm hidden-xs">
 			<div class="user-info pull-right" style="margin: 15px">
 				{% if user.is_authenticated %}
 					<span class="logged-in">
@@ -94,7 +72,7 @@
 		</div>
 	</header>
 
-	<div class="row main">
+	<div class="row" id="main">
 		{% block content %} {% endblock %} 	
 	</div>
 </div>

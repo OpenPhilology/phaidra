@@ -34,6 +34,7 @@ urlpatterns = patterns('',
 
 	url(r'api/', include(v1_api.urls)),
 
+	url(r'^grammar/', 'web.views.grammar'),
 	url(r'^trees/', 'web.views.trees'),
 	url(r'^lessons/', 'web.views.lessons'),
 	url(r'^module/', 'web.views.module'),

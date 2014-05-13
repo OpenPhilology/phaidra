@@ -164,6 +164,48 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		defaults: {
 			'modelName': 'word',
 			'selected': false
+		},
+		// TODO: Flesh out this implementation to cover more query filters
+		getGrammar: function() {
+			var that = this;
+
+			if (this.get('grammar'))
+				return this.get('grammar');
+
+			// Go through Smyth and get the relevant topics
+			var matches = _.filter(Utils.Smyth[0], function(entry, key) {
+				var attrs = entry.query.split('&');
+				for (var i = 0; i < attrs.length; i++) {
+
+					// Try to make this legible...
+					var v = attrs[i].split('=');
+					var prop = v[0], value = v[1]; 
+					
+					if (prop.indexOf('__contains') != -1) {
+						prop = prop.substring(0, prop.indexOf('__contains'));
+						if (that.get(prop).indexOf(value) == -1)
+							return false;
+					}
+					else if (prop.indexOf('__endswith') != -1) {
+						var j = prop.indexOf('__endswith');
+						prop = prop.substring(0, j);
+						if (that.get(prop).indexOf(value) != (that.get(prop).length - value.length))
+							return false;	
+					}
+					else {
+						// Last, simple value check
+						if (that.get(prop) != value)
+							return false;
+					}
+
+				}
+				entry.key = key;
+				return true;
+			});
+
+			this.set('grammar', matches);
+			
+			return this.get('grammar');
 		}
 	});
 

@@ -1,10 +1,11 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module', 'views/login', 'views/index', 'views/reader'], function($, _, Backbone, Models, Collections, ModuleView, LoginView, IndexView, ReaderView) { 
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module', 'views/login', 'views/index', 'views/reader', 'views/grammar'], function($, _, Backbone, Models, Collections, ModuleView, LoginView, IndexView, ReaderView, GrammarView) { 
 	var Router = {};
 	Router.Router = Backbone.Router.extend({
 		routes: {
 			"": "index",
 			"lessons/":"lessons",
 			"login/": "login",
+			"grammar/:smyth": "showGrammar",
 			"reader/:cts": "updateReader",
 			"reader/": "showReader",
 			"module/": "forwardModule",
@@ -34,16 +35,23 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 		/*
 		*	Does the visualizations visible on the main lesson screen
 		*/
-		displayLessons: function() {
+		showLessons: function() {
 			if (!this.index_view)
-				this.index_view = new IndexView({ el: '.main' }).render();
+				this.index_view = new IndexView({ el: '#main' }).render();
 		},
 		/*
 		*	Handles user login via a form
 		*/
-		displayLogin: function() {
+		showLogin: function() {
 			if (!this.login_view)
 				this.login_view = new LoginView({ el: '#loginform'}).render();
+		},
+		/*
+		*
+		*/
+		showGrammar: function(smyth) {
+			if (!this.grammar_view)
+				this.grammar_view = new GrammarView({ el: '#main', smyth: smyth}).render().$el.appendTo($('#main'));
 		},
 		/*
 		*	Manages routing for the assisted reader	

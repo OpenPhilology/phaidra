@@ -41,6 +41,14 @@ def login(request):
 
 	return HttpResponse(template.render(context))
 
+def grammar(request):
+	template = loader.get_template('grammar.html')
+	context = RequestContext(request, {
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+	})
+
+	return HttpResponse(template.render(context))
+
 def reader(request):
 	template = loader.get_template('reader.html')
 	context = RequestContext(request, {

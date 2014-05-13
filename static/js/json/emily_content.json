@@ -25,15 +25,18 @@
 					},
 					{	
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/alphabettable.html"
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/alphabettable.html",
+						"smyth": "s1"
 					},
 					{	
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/excep.html"
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/excep.html",
+						"smyth": "s19a"
 					},
 					{	
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/punctuation.html"
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/punctuation.html",
+						"smyth": "s188"
 					},
 					{	
 						"type": "slide_info",
@@ -62,15 +65,18 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/nouns.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/nouns.html",
+						"smyth": "s194"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/characteristics.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/characteristics.html",
+						"smyth": "s194"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/gender.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/gender.html",
+						"smyth": "s196"
 					},
 					{
 						"type": "slide_direct_select",
@@ -162,7 +168,8 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/number.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/number.html",
+						"smyth": "s195"
 					},
 					{
 						"type": "slide_info",
@@ -524,19 +531,23 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec0.html"
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec0.html",
+						"smyth": "s216"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec.html"
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec.html",
+						"smyth": "s217a"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec1.html"
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec1.html",
+						"smyth": "s217c"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec2.html"
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec2.html",
+						"smyth": "s222"
 					},
 					{
 						"type": "slide_info",
@@ -570,11 +581,13 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec.html"
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec.html",
+						"smyth": "s228a"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec1.html"
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec1.html",
+						"smyth": "s228b"
 					},
 					{
 						"type": "slide_info",

@@ -9,63 +9,16 @@
 
 	{% block content %}
 
-	<div class="col-md-3 hidden-sm hidden-xs" id="lesson-toc">
-		<a href="/lessons/"><span class="glyphicon glyphicon-arrow-left"></span> &nbsp; Back to Lesson Overview</a>
-		<!-- TODO: Build this from JSON file -->
-		<h2>Table of Contents</h2>
-		<ul>
-			<li>Greek Alphabet</li>
-			<ul>
-				<li><a href="#">Letters and Forms</a></li>
-				<li><a href="#">Punctuation</a></li>
-			</ul>
-			<li>Introduction to Nouns</li>
-			<ul>
-				<li><a href="#">Nouns in Greek</a></li>
-				<li><a href="#">Gender</a></li>
-				<li><a href="#">Number</a></li>
-			</ul>
-			<li>Cases of the Nouns</li>
-			<ul>
-				<li class="active"><a href="#">Nominative</a></li>
-				<li><a href="#">Accusative</a></li>
-				<li><a href="#">Genitive</a></li>
-				<li><a href="#">Dative</a></li>
-				<li><a href="#">Vocative</a></li>
-			</ul>
-			<li>First Declension</li>
-			<ul>
-				<li><a href="#">Nouns ending in -<span lang="grc">α</span></a></li>
-				<li><a href="#">Nouns ending in -<span lang="grc">η</span> (Pt. I)</a></li>
-				<li><a href="#">Nouns ending in -<span lang="grc">η</span> (Pt. II)</a></li>
-			</ul>
-			<li>Second Declension</li>
-			<ul>
-				<li><a href="#">Nouns ending in -<span class="grc">ος</span></a></li>
-				<li><a href="#">Nouns ending in -<span class="grc">ον</span></a></li>
-			</ul>
-			<li>Introduction to Verbs</li>
-			<ul>
-				<li><a href="#">Person</a></li>
-				<li><a href="#">Number</a></li>
-				<li><a href="#">Tense</a></li>
-				<li><a href="#">Mood</a></li>
-				<li><a href="#">Voice</a></li>
-			</ul>
-			<li>Present Indicative Active</li>
-			<ul>
-				<li><a href="#">Regular Verbs (<span lang="grc">λύω</span>)</a></li>
-				<li><a href="#">Present Indicative Active of <span lang="grc">εἰμί</span></a></li>
-			</ul>
-		</ul>
+	<div class="col-md-1 hidden-sm hidden-xs" style="padding: 20px">
+		<a href="/lessons/"><span class="glyphicon glyphicon-arrow-left" style="margin-right: 5px"></span>Lessons</a>
 	</div>
-	<div class="col-md-9">
+	<div class="col-md-10">
 		<div class="row slide">
 			<div class="corner right">
 				<a href="#" data-toggle="tooltip" data-placement="left" title="Turn Page"></a>
 			</div>
 			<div class="lesson-header">
-				<h1>Module Title</h1>
+				<h1><img src="/static/images/tree-loader.gif"> Loading Lesson</h1>
 			</div>
 			{% spaceless %}
 				<div class="lesson-progress"></div>
