@@ -1011,10 +1011,27 @@ class VisualizationResource(Resource):
 				fileContent = json.load(json_data)
 				json_data.close()
 				
-			# get the sentences ot that document
+			vocKnowledge = {}
+			smythFlat = {}		
+			# flatten the smyth and collect the vocab knowledge
+			for sub in submissions.elements:			
+				
+				for word in sub[0]['data']['encounteredWords']:
+					
+					vocKnowledge[word] = True
+					if sub[0]['data']['smyth'] not in smythFlat:
+						# get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
+						params = {}
+						grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
+						for pair in grammarParams:
+							params[pair.split('=')[0]] = pair.split('=')[1]
+						smythFlat[sub[0]['data']['smyth']] = params	
+				
+			# get the sentences of that document
 			sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
 			#counter = 0
 			for s in sentenceTable.elements:
+				
 				node = gdb.nodes.get(s[0]['self'])
 				
 				words = node.relationships.outgoing(types=["words"])
@@ -1024,29 +1041,23 @@ class VisualizationResource(Resource):
 				syntaxKnown = {}
 				
 				for w in words:
+				
 					word = w.end
 					all[word.properties['CTS']] = True
 					morphKnown[word.properties['CTS']] = False
 					vocabKnown[word.properties['CTS']] = False
 					syntaxKnown[word.properties['CTS']] = False
 					# scan the submission for vocab information
-					for sub in submissions.elements:
-						if vocabKnown[word.properties['CTS']] and morphKnown[word.properties['CTS']]:
-							break
-						# get the morph info to the words via a file lookup of submission's smyth key, save params to test it on the encountered word of a submission
-						params = {}
-						grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
-						for pair in grammarParams:
-							params[pair.split('=')[0]] = pair.split('=')[1]
+					for smyth in smythFlat:
 							
-						# was this word  seen?
-						if word.properties['CTS'] in sub[0]['data']['encounteredWords']:	
+						# was this word seen?
+						if word.properties['CTS'] in vocKnowledge:	
 							
 							# if word morph already known don't apply filter again
 							if not morphKnown[word.properties['CTS']]:
 								# loop over params to get morph known infos
 								badmatch = False
-								for p in params.keys():
+								for p in smythFlat[smyth].keys():
 									try:
 										word.properties[p]
 										if params[p] != word.properties[p]:
@@ -1071,8 +1082,8 @@ class VisualizationResource(Resource):
 					elif vocabKnown[cts] or morphKnown[cts] or syntaxKnown[cts]:	
 						aspects['one'] = aspects['one'] +1	
 				
+				# and save the infos to the json
 				data['sentences'].append({'CTS': node.properties['CTS'], 'lenth': len(words), 'one': aspects['one']/len(words), 'two' : aspects['two']/len(words), 'three': aspects['three']/len(words)})
-				
 			
 			return self.create_response(request, data)		
 		
