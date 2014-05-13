@@ -201,7 +201,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				}
 				entry.key = key;
 				return true;
-			});
+			}).reverse();
 
 			this.set('grammar', matches);
 			
