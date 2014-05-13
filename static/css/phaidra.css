@@ -1016,9 +1016,12 @@ table.inflection-table {
 #toc {
   background-color: #3b4967;
   color: #BBB;
-  width: 300px;
+  width: 20%;
   padding: 20px;
-  float: left; }
+  float: left;
+  overflow-y: scroll;
+  position: fixed;
+  height: 100%; }
   #toc h2 {
     color: #DDD; }
   #toc ul {
@@ -1038,8 +1041,20 @@ table.inflection-table {
     padding: 10px 10px 10px 60px; }
 
 #grammar-container {
-  position: fixed;
-  left: 300px;
+  position: absolute;
+  left: 20%;
   padding: 10px;
   top: 43px;
-  width: 100%; }
+  width: 80%; }
+  #grammar-container div[data-url^="/"] {
+    border: 1px solid #DDD;
+    padding: 60px;
+    margin: 10px;
+    background-color: #FFF;
+    position: relative; }
+  #grammar-container .corner {
+    position: absolute;
+    box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.3); }
+    #grammar-container .corner.right {
+      top: -1px;
+      right: -1px; }

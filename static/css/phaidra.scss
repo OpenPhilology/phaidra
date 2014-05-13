@@ -1261,9 +1261,12 @@ table.inflection-table {
 #toc {
 	background-color: darken($color-sec-two, 10%);
 	color: #BBB;
-	width: 300px;
+	width: 20%;
 	padding: 20px;
 	float: left;
+	overflow-y: scroll;
+	position: fixed;
+	height: 100%;
 
 	h2 {
 		color: #DDD;
@@ -1299,9 +1302,27 @@ table.inflection-table {
 }
 
 #grammar-container {
-	position: fixed;
-	left: 300px;
+	position: absolute;
+	left: 20%;
 	padding: 10px;
 	top: $banner-height;
-	width: 100%;
+	width: 80%;
+
+	div[data-url^="/"] {
+		border: 1px solid #DDD;
+		padding: 60px;
+		margin: 10px;
+		background-color: #FFF;
+		position: relative;
+	}
+
+	.corner {
+		position: absolute;
+		box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+		
+		&.right {
+			top: -1px;
+			right: -1px;
+		}
+	}
 }
