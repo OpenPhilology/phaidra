@@ -552,6 +552,7 @@ class SentenceResource(Resource):
 	length = fields.IntegerField(attribute='length', null = True, blank = True)
 	document_resource_uri = fields.CharField(attribute='document_resource_uri', null = True, blank = True)
 	words = fields.ListField(attribute='words', null = True, blank = True)
+	translations = fields.DictField(attribute='translations', null = True, blank = True)
 	
 	class Meta:
 		
@@ -640,18 +641,31 @@ class SentenceResource(Resource):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		sentence = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
-					
+			
+		# get the sentence parameters			
 		new_obj = DataObject(kwargs['pk'])
 		new_obj.__dict__['_data'] = sentence.properties
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
-			
+		
+		# get a dictionary or related translation of this sentence
+		relatedSentences = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w)-[:translation]->(t)<-[:words]-(s1) WHERE HAS (s.CTS) AND s.CTS='""" 
+						+ sentence.properties['CTS'] + """' RETURN DISTINCT s1""")
+		
+		new_obj.__dict__['_data']['translations']={}
+		for rs in relatedSentences:
+			sent = rs[0]
+			url = sent['self'].split('/')
+			cts_outtake = sent['data']['CTS'].split(':')[len(sent['data']['CTS'].split(':'))-2]
+			key = cts_outtake.split('-')[len(cts_outtake.split('-'))-1]
+			new_obj.__dict__['_data']['translations'][key] = API_PATH + 'sentence/' + url[len(url)-1] +'/'		
+						
 		# get the words
 		words = sentence.relationships.outgoing(types=["words"])
 		wordArray = []		
 		for w in words:
 			word = w.end
-			# get the lemma
+			# get the lemma of a word
 			lemmaRels = word.relationships.incoming(types=["values"])
 			if len(lemmaRels) > 0:
 				word.properties['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
@@ -674,6 +688,7 @@ class SentenceResource(Resource):
 			
 			wordArray.append(word.properties)
 		
+		# if short=True return only words of the short sentence
 		if bundle.request.GET.get('short'):
 			wordArray =  self.shorten(wordArray, query_params)
 			if wordArray is None:
