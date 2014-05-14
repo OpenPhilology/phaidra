@@ -644,7 +644,7 @@ class SentenceResource(Resource):
 		new_obj = DataObject(kwargs['pk'])
 		new_obj.__dict__['_data'] = sentence.properties
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
-		new_obj.__dict__['_data']['document'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
+		new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
 			
 		# get the words
 		words = sentence.relationships.outgoing(types=["words"])
@@ -656,16 +656,29 @@ class SentenceResource(Resource):
 			if len(lemmaRels) > 0:
 				word.properties['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
 		
-				# create the resource uri of the word
+			# create the resource uri of the word
 			word.properties['resource_uri'] = API_PATH + 'word/' + str(word.id) + '/'		
+			
+			# if full=True return also the translation data to the words
+			if bundle.request.GET.get('full'):
+				translationRels = word.relationships.outgoing(types=["translation"])
+				translationArray = []
+				#for t in translationRels:
+				for i in range(0, len(translationRels), 1):
+					trans = translationRels[i].end
+					#trans = t.end
+					trans.properties['resource_uri'] = API_PATH + 'word/' + str(trans.id) + '/'
+					translationArray.append(trans.properties)
+
+				word.properties['translations'] = translationArray
+			
 			wordArray.append(word.properties)
 		
 		if bundle.request.GET.get('short'):
 			wordArray =  self.shorten(wordArray, query_params)
 			if wordArray is None:
 				#return None
-				raise BadRequest("Sentence doesn't hit your query.")
-			
+				raise BadRequest("Sentence doesn't hit your query.")		
 				#return self.error_response(bundle.request, {'error': ''}, response_class=HttpBadRequest)	
 						
 		new_obj.__dict__['_data']['words'] = reversed(wordArray)
