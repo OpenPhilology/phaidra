@@ -32,11 +32,11 @@ def lessons(request):
 
 	return HttpResponse(template.render(context))
 
-def trees(request):
-	template = loader.get_template('trees.html')
+def create(request):
+	template = loader.get_template('create.html')
 
 	context = RequestContext(request, {
-		'':''
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
 	})
 
 	return HttpResponse(template.render(context))
@@ -74,18 +74,19 @@ def profile(request):
 
 	return HttpResponse(template.render(context))
 
-def vocab(request):
-	template = loader.get_template('vocab.html')
+def module(request):
+	template = loader.get_template('module.html')
 	context = RequestContext(request, {
 		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
 	})
 
 	return HttpResponse(template.render(context))
 
-def module(request):
-	template = loader.get_template('module.html')
+def trees(request):
+	template = loader.get_template('trees.html')
+
 	context = RequestContext(request, {
-		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+		'':''
 	})
 
 	return HttpResponse(template.render(context))
