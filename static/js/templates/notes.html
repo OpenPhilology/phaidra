@@ -48,9 +48,10 @@
 			<h3>Related Grammar Topics</h3>
 			<ul>
 			<% if (grammar.length > 0) { %>
-				<% _.each(grammar, function(entry) { %>
-					<% console.log(entry) %>
-					<li><a href="/grammar/<%= entry.key %>"><%= entry.title %></a></li>
+				<% _.each(grammar, function(entry, index) { %>
+					<% if (index < 5) { %>
+						<li><a href="/grammar/<%= entry.key %>"><%= entry.title %></a></li>
+					<% } %>
 				<% }); %>
 			<% } else { %>
 				<li><em>None found</em></li>

@@ -116,7 +116,6 @@ body {
 	color: #666;
 	font-family: $font-family;
 	background-image: url('/static/images/footer_graphic.png');
-	background-size: 50%;
 	background-repeat: repeat-x;
 	background-position: left bottom;
 	background-attachment: fixed;
@@ -545,6 +544,34 @@ $banner-height: 43px;
 }
 
 /* Lesson-related styles */
+.achievements {
+	.box {
+		$color: $color-sec-two;
+
+		height: 125px;
+		width: 125px;
+		display: inline-block;
+		background-color: $color;
+		color: #FFF;
+		margin: 5px;
+		border-radius: 2px;
+		text-align: center;
+		padding: 30px;
+		text-decoration: none;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color, 8%);
+			@include transition(background-color, .2s, ease-out);
+		}
+
+		strong {
+			color: #FFF !important;
+			font-size: 24px;
+			font-weight: normal;
+		}
+	}
+}
 .feedback-container {
 	padding: 20px;
 	background: rgba(255, 255, 255, 0.7);
