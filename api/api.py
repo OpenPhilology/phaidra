@@ -396,6 +396,7 @@ class WordResource(Resource):
 	value = fields.CharField(attribute='value')
 	form = fields.CharField(attribute='form', null = True, blank = True)
 	lemma = fields.CharField(attribute='lemma', null = True, blank = True)
+	ref = fields.CharField(attribute='ref', null = True, blank = True)
 	
 	sentence_resource_uri = fields.CharField(attribute='sentence_resource_uri', null = True, blank = True)
 	
