@@ -1,11 +1,11 @@
 [{
 	"s1": {
 		"title": "The Ancient Greek Alphabet",
-		"query": "pos=noun"
+		"query": null
 	},
 	"s19a": {
 		"title": "The Gamma Nasal",
-		"query": "pos=noun",
+		"query": "pos=noun&lemma__contains=γγ",
 		"variants": ["lemma__contains=γγ", "lemma__contains=γκ", "lemma__contains=γχ", "lemma__contains=γξ"]
 	},
 	"s188": {
@@ -14,15 +14,15 @@
 	},
 	"s194": {
 		"title": "Characteristics of Nouns in Ancient Greek",
-		"query": "pos=noun"
+		"query": null
 	},
 	"s195": {
 		"title": "Number in Ancient Greek Nouns",
-		"query": "pos=noun"
+		"query": null
 	},
 	"s196": {
 		"title": "Gender in Ancient Greek Nouns",
-		"query": "pos=noun"
+		"query": null
 	},
 	"s216": {
 		"title": "The Alpha or First Declension",

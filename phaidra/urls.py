@@ -34,13 +34,16 @@ urlpatterns = patterns('',
 
 	url(r'api/', include(v1_api.urls)),
 
-	url(r'^grammar/', 'web.views.grammar'),
+	# Demo page
 	url(r'^trees/', 'web.views.trees'),
+
+	# Website URLS
 	url(r'^home/', 'web.views.home'),
 	url(r'^lessons/', 'web.views.lessons'),
+	url(r'^create/', 'web.views.create'),
+	url(r'^grammar/', 'web.views.grammar'),
 	url(r'^module/', 'web.views.module'),
 	url(r'^reader/', 'web.views.reader'),
-	url(r'^vocab/', 'web.views.vocab'),
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^login/', 'web.views.login'),
 	url(r'^$', 'web.views.index')
