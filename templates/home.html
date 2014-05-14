@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{# Determine which navigation element is 'active'  #}
+{% block nav %}
+	{% with 'active' as home_active %}
+		{{ block.super }}
+	{% endwith %}
+{% endblock %}
+
+{% block content %}
+
+	<div class="col-md-7 col-md-offset-1" style="margin-top: 30px">
+		<h1>Continue Learning!</h1>
+		<p>
+			Round out your knowledge of nouns by learning the 3rd declension nouns.
+		</p>
+		<a href="#" class="btn btn-default">Keep Learning Greek</a>
+
+		<hr>
+
+		<h2>Ready to put your Greek skills to use?</h2>	
+		<p>Here are some other ways you can improve your Greek:</p>
+		<ul>
+			<li> Read </li>
+			<li> Annotate </li>
+			<li> Etc.</li>
+		</ul>
+	</div>
+
+	<div class="col-md-3 feedback-container" style="background-color: rgba(255, 255, 255, 0.8)">
+		<div class="achievements">
+			<a href="#" class="box">
+				<strong>75</strong>
+				<br>
+				words learned
+			</a>
+			<a href="#" class="box">
+				<strong>12</strong>
+				<br>
+				lessons completed
+			</a>
+			<a href="#" class="box">
+				<strong>13</strong>
+				<br>
+				skills earned
+			</a>
+			<a href="#" class="box">
+				<strong>20</strong>
+				<br>
+				original annotations
+			</a>
+		</div>
+
+		<h3>Records</h3>
+		<div id="records">
+			<div class="sparkline"></div>
+			10 lessons in a week
+		</div>
+		<hr>
+
+		<h3>Recent Activity</h3>
+		<h4>Yesterday</h4>
+		<p>
+			<span class="badge lesson">+ 2</span> Completed 2 lessons<br>
+			<span class="badge vocab">+ 10</span> Learned 10 new words<br>
+		</p>
+		<h3>Last Week</h3>
+		<p>
+			<span class="badge treebank">+ 4</span> Treebanked 4 sentences<br>
+		</p>
+	</div>
+
+{% endblock %}

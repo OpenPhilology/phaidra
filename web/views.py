@@ -14,6 +14,15 @@ def index(request):
 
 	return HttpResponse(template.render(context))
 
+def home(request): 
+	template = loader.get_template('home.html')
+
+	context = RequestContext(request, {
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+	})
+
+	return HttpResponse(template.render(context))
+
 def lessons(request):
 	template = loader.get_template('lessons.html')
 

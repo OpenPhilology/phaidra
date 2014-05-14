@@ -51,7 +51,6 @@ body {
   color: #666;
   font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background-image: url("/static/images/footer_graphic.png");
-  background-size: 50%;
   background-repeat: repeat-x;
   background-position: left bottom;
   background-attachment: fixed; }
@@ -446,6 +445,34 @@ label {
     color: #4e6087; }
 
 /* Lesson-related styles */
+.achievements .box {
+  height: 125px;
+  width: 125px;
+  display: inline-block;
+  background-color: #4e6087;
+  color: #FFF;
+  margin: 5px;
+  border-radius: 2px;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out; }
+  .achievements .box:hover {
+    background-color: #5d72a1;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+  .achievements .box strong {
+    color: #FFF !important;
+    font-size: 24px;
+    font-weight: normal; }
+
 .feedback-container {
   padding: 20px;
   background: rgba(255, 255, 255, 0.7);

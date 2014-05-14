@@ -36,6 +36,7 @@ urlpatterns = patterns('',
 
 	url(r'^grammar/', 'web.views.grammar'),
 	url(r'^trees/', 'web.views.trees'),
+	url(r'^home/', 'web.views.home'),
 	url(r'^lessons/', 'web.views.lessons'),
 	url(r'^module/', 'web.views.module'),
 	url(r'^reader/', 'web.views.reader'),
