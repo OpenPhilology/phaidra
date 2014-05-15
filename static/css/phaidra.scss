@@ -25,7 +25,7 @@ $font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 @mixin transition($prop, $len, $style) {
 	$trans: $prop $len $style;
 
-	-webkix-transition: $trans;
+	-webkit-transition: $trans;
 	-moz-transition: $trans;
 	-o-transition: $trans;
 	-ms-transition: $trans;
@@ -106,6 +106,12 @@ $font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	}
 }
 
+/*
+*	Global CSS
+*/
+html, body {
+	height: 100%;
+}
 body {
 	color: #666;
 	font-family: $font-family;
@@ -121,11 +127,90 @@ a {
 		color: darken($color-pri-two, 10%);
 	}
 }
+span[lang="grc"], div[lang="grc"] {
+	font-family: 'Cambria', 'Times New Romans' !important;
+	font-size: 1.3em;
+	letter-spacing: 0.1em;
+
+	em {
+		background-color: #FFF0A3;
+		border-radius: 3px;
+		padding: 3px;
+		font-style: normal;
+	}
+	em[data-toggle="tooltip"] {
+		cursor: pointer;
+	}
+}
+.masc {
+	color: $color-pri-two; // #3882C5;
+}
+.fem {
+	color: $color-pri-one; //#E04A62;
+}
+.neut {
+	color: $color-dark-green; //#3C8818;
+}
+p {
+	line-height: 3em;
+}
+
+p span[lang="grc"] {
+	border: 1px solid #EEE;
+	padding: 2px;
+	border-radius: 3px;
+	background-color: #F6F6F6;
+	margin-left: 3px;
+	margin-right: 3px;
+}
 
 /* Override Bootstrap Styles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Garamond';
+}
+.btn {
+	border: 1px solid #EEE;
+	text-decoration: none;
+	border-radius: 2px;
+
+	&.btn-link {
+		border: 0;
+		color: $color-pri-two;
+		text-decoration: none;
+	}
+}
+label {
+	font-weight: normal;
+	font-size: 1.2em;
+}
+.label {
+	padding: 0.4em 0.6em 0.3em;
+	margin: 0px 3px;
+	
+	&.label-default {
+		background-color: #BBB;
+	}
+	&.label-primary {
+		background-color: $color-pri-two;
+	}
+	&.label-danger {
+		background-color: $color-pri-one;
+	}
+	&.label-success {
+		background-color: $color-light-green;
+	}
+	&.label-info {
+		background-color: $color-sec-two;
+	}
+}
 .container {
 	max-width: none !important;
 	width: 100%;
+	padding: 0;
+	height: 100%;
+}
+.row {
+	margin: 0;
 }
 .alert {
 	&.alert-success {
@@ -134,7 +219,18 @@ a {
 		}
 	}
 }
-
+/*
+*	Extending Bootstrap styles
+*/
+.progress-bar-morph {
+	background-color: $color-sec-four; 
+}
+.progress-bar-syn {
+	background-color: $color-pri-one; 
+}
+.progress-bar-voc {
+	background-color: $color-pri-two; 
+}
 @mixin context-bg($color) {
 	border: 2px $color solid;
 	border-radius: 3px;
@@ -157,7 +253,6 @@ a {
 		letter-spacing: 0.1em;
 	}
 }
-
 .bg-success {
 	@include context-bg($color-dark-green);
 
@@ -176,9 +271,9 @@ a {
 	}
 }
 
+/* The speech bubble that Thuc uses to speak */
 .speech {
 	$color: lighten($color-sec-four, 15%);
-
 	position: relative;
 	padding: 15px;
 	margin: 1em 0 3em;
@@ -217,12 +312,85 @@ a {
 	}
 }
 
+/* Styles related to the intro page */
+#splash {
+	background-color: $color-pri-two;
+	position: relative;
+	min-height: 300px;
+	padding: 20px;
+	color: #EEE;
+
+	.thuc {
+		position: absolute; 
+		left: 0; 
+		bottom: 0;
+	}
+
+	form {
+		width: 80%;
+	}
+
+	img {
+		height: 300px;
+	}
+
+	h1 {
+		display: inline-block;
+		font-family: 'Garamond';
+		font-size: 5em;
+	}
+
+	p {
+		font-size: 1.3em;
+		line-height: 1.7em;
+	}
+}
+#login-link {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	border: 0;
+	background-color: rgba(255, 255, 255, .4);
+	z-index: 10;
+	color: #FFF;
+	padding: 10px 20px;
+	@include transition(background-color, .2s, ease-out);
+
+	&:hover {
+		background-color: rgba(255, 255, 255, .6);
+		@include transition(background-color, .2s, ease-in);
+	}
+}
+.register-link {
+	border: 0;
+	border-radius: 3px;
+	font-size: 24px;
+	background-color: $color-pri-one;
+	padding: 10px 30px;
+	display: inline-block;
+	position: relative;
+	color: #FFF;
+	@include transition(background-color, .2s, ease-out);
+
+	&:hover {
+		@include transition(background-color, .2s, ease-in);
+		background-color: lighten($color-pri-one, 3%);
+		box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .1);
+		top: -2px;
+	}
+}
+
+$banner-height: 43px;
+
 /* Header */
 .banner {
 	color: #EEE; 
-	//@include gradient($color-pri-two, 0, lighten($color-pri-two, 5%), 100);
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
+	@include gradient($color-sec-two, 0, lighten($color-sec-two, 5%), 100);
 	background-color: $color-sec-two;
-	position: relative;
+	position: fixed;
+	width: 100%;
+	height: $banner-height;
 	z-index: 1;
 
 	#search-form {
@@ -234,7 +402,12 @@ a {
 	}
 
 	#logo-container {
-		padding-top: 10px;	
+		padding-top: 4px;	
+		
+		img {
+			height: 35px;
+			margin-right: 4px;
+		}
 	}
 
 	.user-data {
@@ -251,12 +424,30 @@ a {
 .navigation {
 	text-align: center;
 
+	span {
+		text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22);
+	}
+	span + span {
+		margin-left: 5px;
+	}
+
+	.glyphicon-flash {
+		color: $color-sec-four;
+	}
+	.glyphicon-bookmark {
+		color: lighten($color-pri-one, 5%);
+	}
+	.glyphicon-comment {
+		color: $color-pri-two;
+	}
+
 	a {
 		display: inline-block;
-		letter-spacing: 0.08em;
-		padding: 20px 10px;
+		padding: 10px 10px;
 		cursor: pointer;
 		text-decoration: none;
+		font-size: 16px;
+		letter-spacing: 0.1em;
 		@include transition(background-color, .2s, ease-out);
 
 		&:hover {
@@ -292,80 +483,6 @@ a {
 	}
 
 }
-
-/* Visualization Styles */
-.progress-therm {
-	margin-top: 0px;
-	margin-left: 10px;
-	margin-right: 10px;
-	border: 2px solid whitesmoke;
-	margin-bottom: 20px;
-	height: 20px;
-
-	.sec {
-		height: 16px;
-		display: inline-block;
-		margin-right: -4px;
-		@include transition(background-color, 0.3s, cubic);
-
-		&.morph {
-			background-color: $color-sec-two;
-
-			&:hover {
-				background-color: lighten($color-sec-two, 5%);
-				@include transition(background-color, 0.3s, cubic);
-			}
-		}
-		&.syn {
-			background-color: $color-pri-two;
-
-			&:hover {
-				background-color: lighten($color-pri-two, 5%);
-				@include transition(background-color, 0.3s, cubic);
-			}
-		}
-		&.voc {
-
-			background-color: $color-sec-four;
-			&:hover {
-				background-color: lighten($color-sec-four, 5%);
-				@include transition(background-color, 0.3s, cubic);
-			}
-		}
-		&.rem {
-			background-color: #EEE;
-
-			&:hover {
-				background-color: lighter(#FEFEFE, 5%);
-			}
-		}
-		&:hover {
-			@include transition(background-color, 0.3s, cubic);
-			cursor: pointer;
-		}
-	}
-}
-.legend {
-	.sec {
-		height: 10px;
-		width: 10px;
-		display: inline-block;
-		border: 1px solid whitesmoke;
-		margin-right: 5px;
-		margin-left: 10px;
-
-		&.morph {
-			background-color: $color-sec-two;
-		}
-		&.syn {
-			background-color: $color-pri-two;
-		}
-		&.voc {
-			background-color: $color-sec-four;
-		}
-	}
-}
-
 .user-info {
 	img {
 		margin-right: 10px;
@@ -395,9 +512,15 @@ a {
 	}
 }
 
-.main {
-	overflow: hidden;
-	position: relative;
+/*
+*	Style for main viewport
+*/
+#main {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	padding-top: $banner-height;
+	width: 100%;
 	
 	.lesson-right-menu {
 		position: relative;
@@ -420,63 +543,46 @@ a {
 	}
 }
 
-@media (max-width: 768px) {
-	.hidden-inline-sm {
-		display: none !important;	
-	}
-	#logo-container {
-		display: none !important;
-	}
-}
+/* Lesson-related styles */
+.achievements {
+	.box {
+		$color: $color-sec-two;
 
-/* Styling buttons that are calls to action */
-.calls-to-action {
-	button, a {
-		border: 0;
-		background-color: darken($color-sec-two, 10%);
-		color: #EEE;
+		height: 125px;
+		width: 125px;
+		display: inline-block;
+		background-color: $color;
+		color: #FFF;
+		margin: 5px;
+		border-radius: 2px;
+		text-align: center;
+		padding: 30px;
+		text-decoration: none;
 		@include transition(background-color, .2s, ease-out);
-		margin-top: 3px;
 
 		&:hover {
-			background-color: lighten($color-sec-two, 5%);
+			background-color: lighten($color, 8%);
 			@include transition(background-color, .2s, ease-out);
-			box-shadow: 2px 2px 3px #CCC;
-			color: #FFF;
+		}
 
-			.glyphicon {
-				@include wiggle;
-			}
+		strong {
+			color: #FFF !important;
+			font-size: 24px;
+			font-weight: normal;
 		}
 	}
-	.glyphicon {
-		margin-right: 5px;
-	}
-	.glyphicon-flash {
-		color: $color-sec-four;	
-	}
-	.glyphicon-list-alt {
-		color: $color-pri-one;
-	}
-	.glyphicon-inbox {
-		color: $color-pri-two;
-	}
 }
-
-/* Lesson-related styles */
 .feedback-container {
 	padding: 20px;
 	background: rgba(255, 255, 255, 0.7);
 	border-radius: 2px;
 
-	h2 {
+	h3 {
 		color: lighten($color-pri-three, 10%);
-		font-size: 14px;
 		letter-spacing: 0.1em;
 	}
-	h3 {
+	h4 {
 		color: $color-pri-three;
-		font-size: 13px;
 		letter-spacing: 0.1em;
 		font-weight: normal;
 	}
@@ -498,16 +604,16 @@ a {
 		text-align: center;
 	}
 	#vocab-pie {
-		& + h3 {
+		& + h4 {
 			color: $color-pri-two;
 			margin-bottom: 0px;
 		}
 	}
-	#morph-pie + h3 {
+	#morph-pie + h4 {
 		color: $color-sec-four;
 		margin-bottom: 0px;
 	}
-	#syn-pie + h3 {
+	#syn-pie + h4 {
 		color: $color-pri-one;		
 		margin-bottom: 0px;
 	}
@@ -524,15 +630,21 @@ a {
 		}
 	}
 }
+/*
+*	Progress bar displayed above every lesson-in-progress
+*/
 .lesson-progress {
-	margin-bottom: 35px;
+	margin-bottom: 10px;
 
 	.bar {
 		$c: #DDD;
 
 		display: inline-block;
-		height: 15px;
-		@include gradient(#FFF, 0, #EEE, 100);
+		height: 10px;
+		background: linear-gradient(to left, #FFF 50%, $color-pri-two 50%);
+		background-size: 200% 100%;
+		background-position: right bottom;
+		transition: all 0.5s ease-out;
 
 		border: {
 			top: 1px solid $c;
@@ -551,21 +663,19 @@ a {
 		}
 
 		&.complete {
-			$b: $color-sec-two;
-
-			box-shadow: 1px 1px 0px lighten($b, 20%) inset;
-			@include gradient($b, 0, lighten($b, 10%), 100);
-			border: 1px solid darken($b, 10%);
-
+			$b: $color-pri-two;
+			background-position: left bottom;
 		}
 	}
 }
+/*
+*	The lesson boxes visible on the lessons screen
+*/
 .module-container {
 	background: rgba(255, 255, 255, 0.7);
 	border-radius: 2px;
 	padding: 20px;
 	text-align: center;
-
 	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
 		padding-left: 5px;
 		padding-right: 5px;
@@ -597,34 +707,6 @@ div.module {
 		text-decoration: none;
 	}	
 
-	// Styles the practice lightning bolt
-	.practice-module {
-		float: right;
-		margin-top: -18px;
-		margin-right: -16px;
-		margin-left: 5px;
-		color: #F5BC78;
-		background-color: #FFF;
-		padding: 3px 3px 4px 3px;
-		border-radius: 12px;
-	}
-
-	// Different types of modules
-	&.keep-learning {
-		background-color: $color-pri-two;
-		@include transition(background-color, .2s, ease-out);
-		margin-bottom: 20px;
-		
-		&:hover {
-			background-color: lighten($color-pri-two, 5%);
-			@include transition(background-color, .2s, ease-in);
-			box-shadow: 2px 2px 3px #CCC;
-		}
-
-		h3 {
-			color: #FFF;
-		}
-	}
 	&.nouns {
 		background-color: $color-pri-two;
 		@include transition(background-color, .2s, ease-out);
@@ -729,25 +811,24 @@ div.module {
 	}
 }
 
-.lesson-container {
-	.lesson-header {
-
-		h3 {
-			display: inline-block;
-			margin-top: 0;
-		}
+/*
+*	Slide Styles	
+*/
+.lesson-header {
+	h1 {
+		display: inline-block;
+		margin-top: 0;
+		color: darken($color-sec-two, 10%);
+		text-transform: uppercase;
+		font-size: 24px;
 	}
 }
-.lesson-left-menu {
-	padding-top: 20px;
-}
 .slide {
-
 	padding: 20px;
 	border-radius: 3px;
 	min-height: 300px;
-	background: rgba(255, 255, 255, 0.7);
 	border-radius: 2px;
+	background: rgba(255, 255, 255, 0.7);
 
 	.slide-unit {
 		display: none;
@@ -868,7 +949,6 @@ div.module {
 
 	ul {
 		display: block;
-		padding-left: 0;
 		margin-bottom: 0;
 
 		/* Corresponds to Multi Composition Slide options */
@@ -926,14 +1006,56 @@ div.module {
 	}
 }
 
+/*
+*	Used in lessons to show the parts of the word
+*	e.g. past indicative augment, stem, ending.
+*/
+.word-breakdown {
+	text-align: center;
+
+	table {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	td.part {
+		span[lang="grc"] {
+			font-size: 3em;
+		}
+		hr {
+			margin-bottom: 0;
+			border-top: 1px solid #888;
+		}
+		.caret {
+			color: #AAA;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+}
+/*
+*	Styles inflection tables
+*/
 table.inflection-table {
 	font-size: 0.9em;
+
+	span[lang="grc"] strong {
+		color: $color-pri-two;
+		background-color: #f5f5f5;
+		padding: 3px;
+	}
 
 	tr.current {
 		background-color: $color-pri-one;
 		color: #FFF;
 
-		.greek-text {
+		span[lang="grc"] {
 			color: #FFF;
 
 			em {
@@ -943,89 +1065,291 @@ table.inflection-table {
 		}
 	}
 	tr.future {
-		.greek-text {
+		span[lang="grc"] {
 			color: #CCC;
 		}
 	}
 	tr.past {
 		color: #333;
-		.greek-text {
+		span[lang="grc"] {
 			color: #333;
 		}
 	}
-		
-
 }
 
-.label {
-	padding: 0.4em 0.6em 0.3em;
-	background-color: #BBB;
-	margin: 0px 3px;
-}
+// Used as navigation in Reader and in Lessons
+.corner {
+	content: "";
+	position: fixed;
+	border-style: solid;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
 
-.greek-text {
-	font-family: 'Cambria', 'Times New Romans';
-	font-size: 1.3em;
-	letter-spacing: 0.1em;
+	&.left {
+		top: $banner-height;
+		left: 0;
+		border-color: #EEE #FFF;
+		border-width: 60px 60px 0 0;
 
-	em {
-		background-color: #FFF0A3;
-		border-radius: 3px;
-		padding: 3px;
-		font-style: normal;
+		a {
+			top: -60px;
+			border-width: 0 0 60px 60px;
+			border-color: #FFF $color-pri-one;
+
+			&::after {
+				left: -55px;
+				top: 1px;
+				content: "\e091";
+			}
+			&:hover {
+				border-color: #FFF lighten($color-pri-one, 5%);
+			}
+		}
 	}
-	em[data-toggle="tooltip"] {
-		cursor: pointer;
+	&.right {
+		top: $banner-height;
+		right: 0;
+		border-color: #EEE #FFF;
+		border-width: 0 60px 60px 0;
+
+		a {
+			right: -60px;
+			border-width: 60px 0 0 60px;
+			border-color: $color-pri-one #FFF;
+
+			&::after {
+				right: 5px;
+				top: -57px;
+				content: "\e092";
+			}
+			&:hover {
+				border-color: lighten($color-pri-one, 5%) #FFF;
+			}
+		}
+	}
+
+	a {
+		top: 0;
+		position: absolute;
+		border-style: solid;
+		color: #FFF;
+
+		&::after {
+			font-family: 'Glyphicons Halflings';
+			font-size: 24px;
+			position: absolute;
+		}
+
 	}
 }
-.masc {
-	color: $color-pri-two; // #3882C5;
-}
-.fem {
-	color: $color-pri-one; //#E04A62;
-}
-.neut {
-	color: $color-dark-green; //#3C8818;
-}
 
-p {
-	line-height: 3em;
-}
+#reader {
+	background-color: rgba(255, 255, 255, .8);
+	min-height: 100%;
 
-p .greek-text {
-	border: 1px solid #EEE;
-	padding: 2px;
-	border-radius: 3px;
-	background-color: #F6F6F6;
-	margin-left: 3px;
-	margin-right: 3px;
-}
+	.col-md-6, .col-md-12 {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
-.work {
-	width: 3000px;
-	position: relative;
+	.page {
+		padding: 10px 80px 80px 80px;
+		position: relative;
+		margin-top: 0;
 
-	div {
-		display: inline-block;
-		vertical-align: top;
-		border: 2px solid #FFF;
+		h1 {
+			text-align: center;
+		}
+	}
 
-		span {
-			display: inline-block;
-			width: 2px;
-			height: 2px;
+	.page-content {
+		line-height: 3em; 
+
+		span[lang="grc"] {
+			cursor: pointer;
+			padding: 5px;
+
+			&.punct {
+				padding: 1px !important;
+				margin-left: -8px;
+			}
+			&:hover {
+				background-color: lighten($color-sec-four, 20%);
+			}
+		}
+		.selected, .selected:hover {
+			background-color: lighten($color-sec-four, 10%) !important;
+		}
+	}
+
+
+	.notes-container {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+
+		.notes {
+			background-color: #F7F7F7;
+			border-top: 1px solid #AAA;
+			box-shadow: 0 0 8px 0 rgba(0, 0, 0, .3);
+			height: 75px;
+			max-height: 75px;
+			padding: 5px 10px 30px 10px;
+			@include animate(all, .5s, linear, 0, 1);
+
+			.resources-header {
+				span {
+					margin-left: 20px;
+
+					&[lang="grc"] {
+						margin-left: 0px !important;
+						margin-right: 0px !important;
+					}
+				}
+				.selected {
+					background-color: lighten($color-sec-four, 10%) !important;
+					border: 0;
+					border-raidus: 0px !important;
+					padding: 6px;
+				}
+			}
+
+			&.expanded {
+				height: auto;
+				min-height: 75px;
+				max-height: 300px;
+				overflow: auto;
+				@include animate(all, .5s, linear, 0, 1);
+
+				.glyphicon-chevron-up {
+					-webkit-transform: rotate(180deg);
+					-moz-transform: rotate(180deg);
+					transform: rotate(180deg);
+				}
+
+				.resources {
+					display: block;
+				}
+				.intro {
+					display: none;
+				}
+			}
+
+			.label {
+				padding: 5px 6px 2px 5px;
+				position: relative;
+				top: -1px;
+				margin: 0 0 0 3px;
+			}
+
+			.resources {
+				display: none;
+			}
+			.intro {
+				display: block;
+			}
+		}
+
+		span[lang="grc"], *[lang="grc"], a[lang="grc"] {
+			border: 1px solid #EEE;
+			padding: 2px;
+			border-radius: 3px;
 			background-color: #FFF;
+			margin-left: 3px;
+			margin-right: 3px;
+			font-family: 'Cambria', 'Times New Romans' !important;
 		}
 
-		/* Colors for types of knowledge of text */ 
-		span.r {
-			background-color: #BE1E2D;
+		.notes-nav {
+				position: absolute;
+			right: 5px;
+			z-index: 1;
+
+			span.glyphicon {
+				padding: 10px;
+			}
 		}
-		span.g {
-			background-color: #1FADAD;
+	}
+
+	.knowledge-container {
+		position: fixed;
+		bottom: 0;
+		z-index: 10;
+		width: 100%;
+
+		.progress {
+			margin: 0;
+			height: 13px;
+			border-radius: 0;
+			cursor: pointer;
 		}
-		span.b {
-			background-color: #F5BC78;
+	}
+}
+
+#toc {
+	background-color: darken($color-sec-two, 10%);
+	color: #BBB;
+	width: 20%;
+	padding: 20px;
+	float: left;
+	overflow-y: scroll;
+	position: fixed;
+	height: 100%;
+
+	h2 {
+		color: #DDD;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	li {
+		margin: 0 -20px 0 -20px;
+
+
+		&.selected {
+			background-color: $color-pri-two;
+			a {
+				color: #EEE;
+			}
+		}
+	}
+
+	ul li {
+		padding: 10px 10px 10px 20px;
+
+	}
+	ul ul li {
+		padding: 10px 10px 10px 40px;
+	}
+	ul ul ul li {
+		padding: 10px 10px 10px 60px;
+	}
+}
+
+#grammar-container {
+	position: absolute;
+	left: 20%;
+	padding: 10px;
+	top: $banner-height;
+	width: 80%;
+
+	div[data-url^="/"] {
+		border: 1px solid #DDD;
+		padding: 60px;
+		margin: 10px;
+		background-color: #FFF;
+		position: relative;
+	}
+
+	.corner {
+		position: absolute;
+		box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+		
+		&.right {
+			top: -1px;
+			right: -1px;
 		}
 	}
 }

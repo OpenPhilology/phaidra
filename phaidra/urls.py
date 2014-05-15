@@ -1,43 +1,28 @@
 from django.conf.urls import patterns, include, url
-#from web import views
-#from rest_framework import routers
-
-from api.api import UserResource
-from api.api import SlideResource
-from api.api import SubmissionResource
-
-from api.api import DocumentResource
-from api.api import SentenceResource
-from api.api import WordResource
-from api.api import LemmaResource
-
-from api.api import LemmaWordResource
-from api.api import SentenceShortResource
-from api.api import TranslationResource
-
-user_resource = UserResource()
-slide_resource = SlideResource()
-submission_resource = SubmissionResource()
-
-document_resource = DocumentResource()
-sentence_resource = SentenceResource()
-word_resource = WordResource()
-lemma_resource = LemmaResource()
-
-lemma_word_resource = LemmaWordResource()
-sentence_short_resource = SentenceShortResource()
-translation_resource = TranslationResource()
-
-#router = routers.DefaultRouter()
-#router.register(r'api/users', views.UserViewSet)
-
-# Wire up our API using automatic URL routing.
-# Additionally, we include login URLs for the browseable API.
-
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
+
+from tastypie.api import Api
+from api.api import TextbookResource, UnitResource, LessonResource, SlideResource, UserResource, SubmissionResource
+from api.api import WordResource, SentenceResource, DocumentResource, LemmaResource
+from api.api import VisualizationResource
+
+v1_api = Api(api_name='v1')
+v1_api.register(UserResource())
+v1_api.register(TextbookResource())
+v1_api.register(UnitResource())
+v1_api.register(LessonResource())
+v1_api.register(SlideResource())
+
+v1_api.register(WordResource())
+v1_api.register(SentenceResource())
+v1_api.register(DocumentResource())
+v1_api.register(LemmaResource())
+
+v1_api.register(SubmissionResource())
+v1_api.register(VisualizationResource())
 
 urlpatterns = patterns('',
 
@@ -45,29 +30,21 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 
+	url(r'api/', include(v1_api.urls)),
+
+	# Demo page
 	url(r'^trees/', 'web.views.trees'),
+
+	# Website URLS
+	url(r'^home/', 'web.views.home'),
+	url(r'^lessons/', 'web.views.lessons'),
+	url(r'^create/', 'web.views.create'),
+	url(r'^grammar/', 'web.views.grammar'),
 	url(r'^module/', 'web.views.module'),
-	url(r'^viz/', 'web.views.viz'),
-	url(r'^vocab/', 'web.views.vocab'),
+	url(r'^reader/', 'web.views.reader'),
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^login/', 'web.views.login'),
-	url(r'^$', 'web.views.index'),
-	url(r'^api/', include(user_resource.urls)),
-	url(r'^api/', include(slide_resource.urls)),
-	url(r'^api/', include(submission_resource.urls)),
-
-	url(r'^api/', include(document_resource.urls)),
-    
-    url(r'^api/', include(sentence_short_resource.urls)),
-	url(r'^api/', include(sentence_resource.urls)),
-	url(r'^api/', include(word_resource.urls)),
-    
-    url(r'^api/', include(lemma_word_resource.urls)),
-    url(r'^api/', include(lemma_resource.urls)),
-    url(r'^api/', include(translation_resource.urls)),
-
-	#url(r'^', include(router.urls)),
-	#url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+	url(r'^$', 'web.views.index')
 )

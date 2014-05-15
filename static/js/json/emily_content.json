@@ -1,0 +1,839 @@
+[
+	{
+		"title": "Experiments!",
+		"modules": [
+			{
+				"title": "Parse trees",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/design/tree.html"
+					}
+				]
+			}
+		]
+	},        
+	{
+		"title": "The Greek Alphabet",
+		"modules": [
+			{
+				"title": "Ancient Greek Alphabet",
+				"slides": [
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/intro.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/alphabettable.html",
+						"smyth": "s1"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/excep.html",
+						"smyth": "s19a"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/punctuation.html",
+						"smyth": "s188"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/concl.html"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Greek Diacritics"
+	},
+	{
+		"title": "Introduction to Nouns",
+		"modules": [
+			{
+				"title": "Nouns in Ancient Greek",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/nouns.html",
+						"smyth": "s194"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/characteristics.html",
+						"smyth": "s194"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/gender.html",
+						"smyth": "s196"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Exercise: Pick the correct definite article",
+						"content": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
+						"options": [
+							[
+								{
+									"value": "ὁ",
+									"display": "ὁ"
+								},
+								{  
+									"value": "ἡ",
+									"display": "ἡ"
+								},
+								{
+									"value": "τό",
+									"display": "τό"
+								}
+							]
+						],
+						"answers": ["ἡ"],
+						"successMsg": "<strong>Right Answer!</strong> The definite article for feminine nouns like <span class=\"greek-text\">ἡμέρα</span> is <span class=\"greek-text\">ἡ</span>.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Exercise: Pick the correct definite article",
+						"content": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span class=\"greek-text masc\">πόλεμος</span> (battle)?",
+						"options": [
+							[
+								{
+									"value": "ὁ",
+									"display": "ὁ"
+								},
+								{
+									"value": "ἡ",
+									"display": "ἡ"
+								},
+								{
+									"value": "τό",
+									"display": "τό"
+								}
+							]
+						],
+						"answers": ["ὁ"],
+						"successMsg": "<strong>Right Answer!</strong> The definite article for masculine nouns like <span class=\"greek-text\">πόλεμος</span> is <span class=\"greek-text\">ὁ</span>.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Exercise: Pick the correct definite article",
+						"content": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span class=\"greek-text neut\">ἔργον</span> (work)?",
+						"options": [
+							[
+								{
+									"value": "ὁ",
+									"display": "ὁ"
+								},
+								{
+									"value": "ἡ",
+									"display": "ἡ"
+								},
+								{
+									"value": "τό",
+									"display": "τό"
+								}
+							]
+						],
+						"answers": ["τό"],
+						"successMsg": "<strong>Right Answer!</strong> The definite article for neuter nouns like <span class=\"greek-text\">ἔργον</span> is <span class=\"greek-text\">τό</span>.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/number.html",
+						"smyth": "s195"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/case.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/articles.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/nouns_concl.html"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Introduction to Cases",
+		"modules": [
+			{
+				"title": "Nominative Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_subj.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_comp.html"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": 
+							{ 
+								"orientation" : "horizontal" 
+							},
+						"title": "Exercise: Select the Subject of this Sentence",
+						"content": "Which of these words is the subject of the following English sentence:",
+						"options": [
+							[
+								{
+									"value": "The ships",
+									"display": "The ships"
+								},
+								{
+									"value": "sailed",
+									"display": "sailed"
+								},
+								{
+									"value": "to Sicily",
+									"display": "to Sicily"
+								}
+							]
+						],
+						"answers": ["The ships"],
+						"successMsg": "<strong>Right Answer!</strong> \"The Ships\" is the subject of this sentence, because it performs the action of the verb, \"sailed\". If this sentence were in Greek, \"The ships\" would be in the <strong>nominative case</strong>.", 
+						"hintMsg": "<strong>Not quite.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": 
+							{ 
+								"orientation" : "horizontal" 
+							},
+						"title": "Exercise: Select the <strong>Complement</strong> of this Sentence",
+						"content": "Which of these words is the complement to the subject?",
+						"options": [
+							[
+								{
+									"value": "The day",
+									"display": "ἡ ἡμέρα<br><small>The day</small>"
+								},
+								{
+									"value": "is",
+									"display": "ἐστὶ<br><small>is</small>"
+								},
+								{
+									"value": "long",
+									"display": "μακρά<br><small>long</small>"
+								}
+							]
+						],
+						"answers": ["long"],
+						"successMsg": "<strong>Right Answer!</strong> You noticed that 'long' is the complement to the subject, 'the day'.", 
+						"hintMsg": "<strong>Not quite.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": 
+							{ 
+								"orientation" : "vertical" 
+							},
+						"title": "Exercise: Pick the Correct Case",
+						"content": "In which case does the <strong>subject of a sentence</strong> belong?",
+						"options": [
+							[
+								{
+									"value": "Nominative",
+									"display": "Nominative"
+								},
+								{
+									"value": "Genitive",
+									"display": "Genitive"
+								},
+								{
+									"value": "Dative",
+									"display": "Dative"
+								}
+							]
+						],
+						"answers": ["Nominative"],
+						"successMsg": "<strong>Right Answer!</strong> Subjects of a sentence always belong in the nominative case.", 
+						"hintMsg": "<strong>Not quite.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/nominative_concl.html"
+					}
+				]
+			},
+			{
+				"title": "Accusative Case",
+				"slides": [
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative.html"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "horizontal"
+						},
+						"title": "Exercise: Select the Direct Object",
+						"content": "In the following sentence, which word or words are the direct object, and would belong in the <strong>accusative case</strong> if they were written in Greek?",
+						"options": [
+							[
+								{
+									"value": "The king",
+									"display": "The king"
+								},
+								{  
+									"value": "gave",
+									"display": "gave"
+								},
+								{
+									"value": "an order",
+									"display": "an order"
+								}
+							]
+						],
+						"answers": ["an order"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": 
+							{ 
+								"orientation" : "horizontal" 
+							},
+						"title": "Exercise: Select the Direct Object",
+						"content": "Which of these words is in the accusative case?",
+						"options": [
+							[
+								{
+									"value": "The city",
+									"display": "ἡ πόλις<br><small>The city</small>"
+								},
+								{
+									"value": "has",
+									"display": "ἔχει<br><small>has</small>"
+								},
+								{
+									"value": "an army",
+									"display": "στρατίαν<br><small>an army</small>"
+								}
+							]
+						],
+						"answers": ["an army"],
+						"successMsg": "<strong>Right Answer!</strong>", 
+						"hintMsg": "<strong>Not quite.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/accusative_concl.html"
+					}
+				]
+			},
+			{
+				"title": "Genitive Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_poss.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_part.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_comp.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/genitive_concl.html"
+					}
+				]
+			},
+			{
+				"title": "Dative Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative_in.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/dative_concl.html"
+					}
+				]
+			},
+			{
+				"title": "Vocative Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/vocative.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/4.cases/vocative_concl.html"
+					}
+				]
+			},
+			{
+				"title": "Placeholder",
+				"slides" : [
+					{
+						"type": "slide_multi_composition",
+						"title": "Make the forms agree!",
+						"content": "What is the accusative plural form for \"the small country\"?",
+						"options": [
+							[
+								{
+									"value": "τῆς",
+									"display": "τῆς"
+								},
+								{  
+									"value": "ἡ",
+									"display": "ἡ"
+								},
+								{
+									"value": "τὰς",
+									"display": "τὰς"
+								}
+							],
+							[
+								{
+									"value": "μῑκρᾷ",
+									"display": "μῑκρᾷ"
+								},
+								{  
+									"value": "μῑκραὶ",
+									"display": "μῑκραὶ"
+								},
+								{
+									"value": "μῑκρὰς",
+									"display": "μῑκρὰς"
+								}
+							],
+							[
+								{
+									"value": "χώρᾱν",
+									"display": "χώρᾱν"
+								},
+								{  
+									"value": "χώραιν",
+									"display": "χώραιν"
+								},
+								{
+									"value": "χώρᾱς",
+									"display": "χώρᾱς"
+								}
+							]
+						],
+						"answers": ["τὰς", "μῑκρὰς", "χώρᾱς"],
+						"successMsg": "<strong>Right Answer!</strong> The accusative plural form of 'the small country' is <span class=\"greek-text\">τὰς μῑκρὰς χώρᾱς</span>.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "true",
+						"require_all": "true"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "First or α- Declension",
+		"modules": [
+			{
+				"title": "The First or α- Declension",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec0.html",
+						"smyth": "s216"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec.html",
+						"smyth": "s217a"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec1.html",
+						"smyth": "s217c"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec2.html",
+						"smyth": "s222"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec_pent1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec_concl.html"
+					}
+				]
+			}
+		]
+	},
+	{	
+		"title": "Second Declension",
+		"modules": [
+			{
+				"title": "The Second Declension",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec.html",
+						"smyth": "s228a"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec1.html",
+						"smyth": "s228b"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec_concl.html"
+					}
+				]
+			}
+		]		
+	},
+	{	
+		"title": "Introduction to Verbs",
+		"modules": [
+			{
+				"title": "Verbs in Ancient Greek",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/verbs.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/person.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/number.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/tense.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/mood.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/voice.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/7.verbs/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Present Indicative Active",
+		"modules": [
+			{
+				"title": "Present Indicative Active",
+				"vocab": [""],
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact1.html",
+						"smyth": "s499",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact2.html",
+						"smyth": "s768a",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Future Indicative Active",
+		"modules": [
+			{
+				"title": "Form the Future, Indicative, Active for Regular Verbs",
+				"vocab": ["πέμπω", "πράσσω", "πείθω", "φαίνω", "ὑπάρχω", "μῆδος", "ναύπακτος", "ὁρκος", "κόρινθος", "ἀστύοχος", "Ἡλλήσποντος", "λόφος", "λέσβος", "κόκλος", "ἵππος"],
+				"slides": [
+					{
+						"title": "Introduction to Future Indicative Active",
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/history.html"
+					},
+					{
+						"title": "What do 'future', 'active', and 'indicative' imply?",
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact.html"
+					},
+					{
+						"title": "Future Indicative Active of λύω",
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact1.html",
+						"smyth": "s532",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"title": "Forming the Future Active Indicative for Stop Verbs",
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact2.html",
+						"smyth": "s537",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"title": "Future Active Indicative of εἰμί",
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact3.html",
+						"smyth": "s768b",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"title": "The Future Indicative Active in the Pentecontaetia",
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Adjectives: First and Second Declension",
+		"modules": [
+			{
+				"title": "Adjectives: First and Second Declension",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/adjectives.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/3ending.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/2ending.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/10.adjectivesfirsec/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Imperfect Indicative Active",
+		"modules": [
+			{
+				"title": "Imperfect Indicative Active",
+				"vocab": [""],
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/imperfindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/imperfindact1.html",
+						"smyth": "s1889",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/imperfindact2.html",
+						"smyth": "s768c",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Third Declension: Consonant Stem",
+		"modules": [
+			{
+				"title": "Third Declension: Consonant Stem",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/history.html"
+					}
+				]
+			}	
+		]
+	}
+]

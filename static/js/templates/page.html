@@ -1,0 +1,23 @@
+<!-- Page of Greek text for Reader view -->
+<div class="page">
+
+	<!-- Page corner, functions as navigation -->
+	<div class="corner <%= side %>">
+		<a href="#" data-toggle="tooltip" title="<% side == 'left' ? print('Previous') : print('Next') %> Page" data-placement="<% side == 'left' ? print('right') : print('left') %>"></a>
+	</div>
+
+	<!-- Page header -->
+	<h1><%= work %> <small>by <%= author %>, <a href="#" data-toggle="tooltip" title="Jump to another section">section</a></small></h1>
+	<hr>
+
+	<!-- Greek goes here! -->
+	<span class="page-content">
+		<% _.each(words, function(word) { %>
+			<% if (word.get('sentenceCTS') == cts) { %>
+				<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('CTS') %>" class="<% if (word.get('value').match(/[\.,-\·\/#!$%\^&\*;:{}=\-_`~()]/)) print('punct'); %>"><%= word.get('value') %></span> 
+			<% } %>
+
+		<% }) %>
+	</span>
+
+</div>

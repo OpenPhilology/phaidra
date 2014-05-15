@@ -1,11 +1,11 @@
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
+define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, Utils) {
 	var Models = {};
 
 	Models.User = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'user',
 		},
-		url: '/api/user/',
+		url: '/api/v1/user/',
 		parse: function(response) {
 			if (response && response.meta)
 				this.meta = response.meta;
@@ -26,76 +26,106 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 			_.bindAll(this, 'checkAnswer');
 		},
 		constructor: function(attributes, options) {
-
-			//Backbone.Model.apply(this, arguments);
 			Backbone.Model.prototype.constructor.call(this, attributes);
+
+			if (attributes.includeHTML)
+				this.fetchHTML(attributes, options);
 
 			// Slide is dynamic if it has a task defined
 			// Or it has all set attributes already (as is case for hand-written slides) 
-
 			if (attributes.task)
 				this.fillAttributes(attributes, options)
 		},
 		defaults: {
 			'modelName': 'slide',
 		},
+		fetchHTML: function(attributes, options) {
+			var that = this;
+
+			$.ajax({
+				url: attributes.includeHTML,
+				async: false,
+				dataType: 'text',
+				success: function(response) {
+					that.set('content', response);
+				},
+				error: function(x, y, z) {
+					console.log(x, y, z);
+				}
+			});
+		},
+		// TODO: Map these to a conf file or something similar (see ~ static/js/exercises.json)
 		fillAttributes: function(attributes, options) {
 			
 			var that = this;
 
+			// Attrs we care about: Smyth ref, task
+			this.set('query', Utils.Smyth[0][this.attributes.smyth]["query"])
+			this.set('type', 'slide_direct_select');
+
 			var taskMapper = {
-				/*
-					If the task is "identify_morph_noun", we expect the inputs:
-					* lemmas
-					* filter
-				*/
-				'identify_morph_noun': function() {
-
-					var index = Math.floor((Math.random() * attributes.inputs.lemmas.length));
-					var lemma = attributes.inputs.lemmas[index];
-
+				'identify_morph_person': function() {
 					$.ajax({
-						url: '/api/sentence/get_one_random/?format=json&lemma=' + lemma + '&' + attributes.inputs.filter,
-						async: false,
-						dataType: 'json',
-						success: function(response_text) {
-							that.set({
-								title: "Exercise: Identify the Case!",
-								responseText: response_text,
-								lemma: lemma,
-								content: response_text.sentence,
-								options: [
-									[
-										{
-											"value": "Nominative",
-											"display": "Nominative"
-										},
-										{
-											"value": "Genitive",
-											"display": "Genitive"
-										},
-										{
-											"value": "Dative",
-											"display": "Dative"
-										}
-									]
-								],
-								successMsg: "Right",
-								hintMsg: "Wrong",
-								failureMsg: "Correct was",
-								require_order: true,
-								require_all: true
-							});
+						'dataType': 'text',
+						'url': '/api/v1/word/?format=json&' + that.get('query'),
+						'success': function(response) {
+							response = JSON.parse(response);
+							var len = response.objects.length;
+							var words = response.objects;
+							var i = Math.floor((Math.random() * len) + 1);
+							var word = words[i - 1];
+							
+							that.set('question', 'What is the <strong>person</strong> of <span lang="grc" data-cts="' + word.CTS + '">' + word.value + '</span>?');
+							that.set('title', 'Morph fun!');
+							that.set('options', [
+								[{ "value": "1st", "display": "1st" },
+								{ "value": "2nd", "display": "2nd" },
+								{ "value": "3rd", "display": "3rd" }]
+							]);
+							that.set('answers', [word.person]);
+							that.set('require_all', true);
+							that.set('require_order', false);
+							that.set('successMsg', '<strong>CORRECT!</strong> <span lang="grc">' + word.value + '</span> is in the ' + word.person + ' person.');
+							that.set('hintMsg', 'Not quite.');
+							that.trigger('populated');
 						},
-						error: function(xhr, status, error) {
-							console.log(xhr, status, error);
+						error: function(x, y, z) {
+							console.log(x, y, z);
+						}
+					});
+				},
+				'identify_morph_number': function() {
+					$.ajax({
+						'dataType': 'text',
+						'url': '/api/v1/word/?format=json&' + that.get('query'),
+						'success': function(response) {
+							response = JSON.parse(response);
+							var len = response.meta.total_count;
+							var words = response.objects;
+							var i = Math.floor((Math.random() * len) + 1);
+							var word = words[i - 1];
+							
+							that.set('question', 'What is the <strong>number</strong> of <span lang="grc" data-cts="' + word.CTS + '">' + word.value + '</span>?');
+							that.set('title', 'Morph fun!');
+							that.set('options', [
+								[{ "value": "sg", "display": "Singular" },
+								{ "value" : "pl", "display": "Plural" }]
+							]);
+							that.set('answers', [word.number]);
+							that.set('require_all', true);
+							that.set('require_order', false);
+							that.set('successMsg', '<strong>CORRECT!</strong> <span lang="grc">' + word.value + '</span> is ' + word.number + '.');
+							that.set('hintMsg', 'Not quite.');
+							that.trigger('populated');
+						},
+						error: function(x, y, z) {
+							console.log(x, y, z);
 						}
 					});
 				}
 			};
 
 			taskMapper[attributes.task]();
-
 		},
 		checkAnswer: function(attempt) {
 			if (typeof(attempt) == 'string')
@@ -133,18 +163,56 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 	Models.Word = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'word',
-			/*
-			'def': 'Definition',
-			'seen': 0,
-			'lesson': '3'
-			*/
+			'selected': false
+		},
+		// TODO: Flesh out this implementation to cover more query filters
+		getGrammar: function() {
+			var that = this;
+
+			if (this.get('grammar'))
+				return this.get('grammar');
+
+			// Go through Smyth and get the relevant topics
+			var matches = _.filter(Utils.Smyth[0], function(entry, key) {
+
+				// If the query isn't relevant to figuring out grammar topics
+				if (!entry.query)
+					return false;
+
+				var attrs = entry.query.split('&');
+				for (var i = 0; i < attrs.length; i++) {
+
+					// Try to make this legible...
+					var v = attrs[i].split('=');
+					var prop = v[0], value = v[1]; 
+					
+					if (prop.indexOf('__contains') != -1) {
+						prop = prop.substring(0, prop.indexOf('__contains'));
+						if (that.get(prop).indexOf(value) == -1)
+							return false;
+					}
+					else if (prop.indexOf('__endswith') != -1) {
+						var j = prop.indexOf('__endswith');
+						prop = prop.substring(0, j);
+						if (that.get(prop).indexOf(value) != (that.get(prop).length - value.length))
+							return false;	
+					}
+					else {
+						// Last, simple value check
+						if (that.get(prop) != value)
+							return false;
+					}
+
+				}
+				entry.key = key;
+				return true;
+			}).reverse();
+
+			this.set('grammar', matches);
+			
+			return this.get('grammar');
 		}
 	});
-
-	//_.extend(Models.Lesson.defaults, Models.Base.defaults);
-	//_.extend(Models.Module.defaults, Models.Base.defaults);
-	//_.extend(Models.Slide.defaults, Models.Base.defaults);
-	//_.extend(Models.Word.defaults, Models.Base.defaults);
 
 	return Models;
 });

@@ -74,6 +74,7 @@ body {
 	animation: bounce .7s;
 }
 .sentence {
+	line-height: 2em;
 	display: inline-block;
 }
 .sentence span {

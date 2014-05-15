@@ -41,6 +41,12 @@
   100% {
     transform: rotateZ(2deg); } }
 
+/*
+*	Global CSS
+*/
+html, body {
+  height: 100%; }
+
 body {
   color: #666;
   font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -54,13 +60,92 @@ a {
   a:hover {
     color: #178282; }
 
+span[lang="grc"], div[lang="grc"] {
+  font-family: 'Cambria', 'Times New Romans' !important;
+  font-size: 1.3em;
+  letter-spacing: 0.1em; }
+  span[lang="grc"] em, div[lang="grc"] em {
+    background-color: #FFF0A3;
+    border-radius: 3px;
+    padding: 3px;
+    font-style: normal; }
+  span[lang="grc"] em[data-toggle="tooltip"], div[lang="grc"] em[data-toggle="tooltip"] {
+    cursor: pointer; }
+
+.masc {
+  color: #1fadad; }
+
+.fem {
+  color: #d15241; }
+
+.neut {
+  color: #49a556; }
+
+p {
+  line-height: 3em; }
+
+p span[lang="grc"] {
+  border: 1px solid #EEE;
+  padding: 2px;
+  border-radius: 3px;
+  background-color: #F6F6F6;
+  margin-left: 3px;
+  margin-right: 3px; }
+
 /* Override Bootstrap Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Garamond'; }
+
+.btn {
+  border: 1px solid #EEE;
+  text-decoration: none;
+  border-radius: 2px; }
+  .btn.btn-link {
+    border: 0;
+    color: #1fadad;
+    text-decoration: none; }
+
+label {
+  font-weight: normal;
+  font-size: 1.2em; }
+
+.label {
+  padding: 0.4em 0.6em 0.3em;
+  margin: 0px 3px; }
+  .label.label-default {
+    background-color: #BBB; }
+  .label.label-primary {
+    background-color: #1fadad; }
+  .label.label-danger {
+    background-color: #d15241; }
+  .label.label-success {
+    background-color: #a3d55f; }
+  .label.label-info {
+    background-color: #4e6087; }
+
 .container {
   max-width: none !important;
-  width: 100%; }
+  width: 100%;
+  padding: 0;
+  height: 100%; }
+
+.row {
+  margin: 0; }
 
 .alert.alert-success strong {
   color: #19641A !important; }
+
+/*
+*	Extending Bootstrap styles
+*/
+.progress-bar-morph {
+  background-color: #f4bc78; }
+
+.progress-bar-syn {
+  background-color: #d15241; }
+
+.progress-bar-voc {
+  background-color: #1fadad; }
 
 .bg-success {
   border: 2px #49a556 solid;
@@ -117,6 +202,7 @@ a {
   .bg-primary strong {
     color: #178282 !important; }
 
+/* The speech bubble that Thuc uses to speak */
 .speech {
   position: relative;
   padding: 15px;
@@ -151,18 +237,100 @@ a {
     display: block;
     width: 0; }
 
+/* Styles related to the intro page */
+#splash {
+  background-color: #1fadad;
+  position: relative;
+  min-height: 300px;
+  padding: 20px;
+  color: #EEE; }
+  #splash .thuc {
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+  #splash form {
+    width: 80%; }
+  #splash img {
+    height: 300px; }
+  #splash h1 {
+    display: inline-block;
+    font-family: 'Garamond';
+    font-size: 5em; }
+  #splash p {
+    font-size: 1.3em;
+    line-height: 1.7em; }
+
+#login-link {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 10;
+  color: #FFF;
+  padding: 10px 20px;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out; }
+  #login-link:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-transition: background-color 0.2s ease-in;
+    -moz-transition: background-color 0.2s ease-in;
+    -o-transition: background-color 0.2s ease-in;
+    -ms-transition: background-color 0.2s ease-in;
+    transition: background-color 0.2s ease-in; }
+
+.register-link {
+  border: 0;
+  border-radius: 3px;
+  font-size: 24px;
+  background-color: #d15241;
+  padding: 10px 30px;
+  display: inline-block;
+  position: relative;
+  color: #FFF;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out; }
+  .register-link:hover {
+    -webkit-transition: background-color 0.2s ease-in;
+    -moz-transition: background-color 0.2s ease-in;
+    -o-transition: background-color 0.2s ease-in;
+    -ms-transition: background-color 0.2s ease-in;
+    transition: background-color 0.2s ease-in;
+    background-color: #d45d4d;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    top: -2px; }
+
 /* Header */
 .banner {
   color: #EEE;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -o-linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -moz-linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -webkit-linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -ms-linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4e6087), color-stop(1, #576b97));
   background-color: #4e6087;
-  position: relative;
+  background-color: #4e6087;
+  position: fixed;
+  width: 100%;
+  height: 43px;
   z-index: 1; }
   .banner #search-form {
     margin: 7px 0px; }
     .banner #search-form .form-group {
       margin-bottom: 7px; }
   .banner #logo-container {
-    padding-top: 10px; }
+    padding-top: 4px; }
+    .banner #logo-container img {
+      height: 35px;
+      margin-right: 4px; }
   .banner .user-data a {
     display: inline-block;
     vertical-align: top;
@@ -173,27 +341,38 @@ a {
 
 .navigation {
   text-align: center; }
+  .navigation span {
+    text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22); }
+  .navigation span + span {
+    margin-left: 5px; }
+  .navigation .glyphicon-flash {
+    color: #f4bc78; }
+  .navigation .glyphicon-bookmark {
+    color: #d66556; }
+  .navigation .glyphicon-comment {
+    color: #1fadad; }
   .navigation a {
     display: inline-block;
-    letter-spacing: 0.08em;
-    padding: 20px 10px;
+    padding: 10px 10px;
     cursor: pointer;
     text-decoration: none;
-    -webkix-transition: background-color 0.2s ease-out;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .navigation a:hover {
       background-color: #576b97;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
       transition: background-color 0.2s ease-in; }
     .navigation a.active {
       background-color: #6378a5;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -213,76 +392,6 @@ a {
     .navigation a.progress-lessons {
       color: #eeeeee; }
 
-/* Visualization Styles */
-.progress-therm {
-  margin-top: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: 2px solid whitesmoke;
-  margin-bottom: 20px;
-  height: 20px; }
-  .progress-therm .sec {
-    height: 16px;
-    display: inline-block;
-    margin-right: -4px;
-    -webkix-transition: background-color 0.3s cubic;
-    -moz-transition: background-color 0.3s cubic;
-    -o-transition: background-color 0.3s cubic;
-    -ms-transition: background-color 0.3s cubic;
-    transition: background-color 0.3s cubic; }
-    .progress-therm .sec.morph {
-      background-color: #4e6087; }
-      .progress-therm .sec.morph:hover {
-        background-color: #576b97;
-        -webkix-transition: background-color 0.3s cubic;
-        -moz-transition: background-color 0.3s cubic;
-        -o-transition: background-color 0.3s cubic;
-        -ms-transition: background-color 0.3s cubic;
-        transition: background-color 0.3s cubic; }
-    .progress-therm .sec.syn {
-      background-color: #1fadad; }
-      .progress-therm .sec.syn:hover {
-        background-color: #23c3c3;
-        -webkix-transition: background-color 0.3s cubic;
-        -moz-transition: background-color 0.3s cubic;
-        -o-transition: background-color 0.3s cubic;
-        -ms-transition: background-color 0.3s cubic;
-        transition: background-color 0.3s cubic; }
-    .progress-therm .sec.voc {
-      background-color: #f4bc78; }
-      .progress-therm .sec.voc:hover {
-        background-color: #f6c890;
-        -webkix-transition: background-color 0.3s cubic;
-        -moz-transition: background-color 0.3s cubic;
-        -o-transition: background-color 0.3s cubic;
-        -ms-transition: background-color 0.3s cubic;
-        transition: background-color 0.3s cubic; }
-    .progress-therm .sec.rem {
-      background-color: #EEE; }
-      .progress-therm .sec.rem:hover {
-        background-color: lighter(#fefefe, 5%); }
-    .progress-therm .sec:hover {
-      -webkix-transition: background-color 0.3s cubic;
-      -moz-transition: background-color 0.3s cubic;
-      -o-transition: background-color 0.3s cubic;
-      -ms-transition: background-color 0.3s cubic;
-      transition: background-color 0.3s cubic;
-      cursor: pointer; }
-
-.legend .sec {
-  height: 10px;
-  width: 10px;
-  display: inline-block;
-  border: 1px solid whitesmoke;
-  margin-right: 5px;
-  margin-left: 10px; }
-  .legend .sec.morph {
-    background-color: #4e6087; }
-  .legend .sec.syn {
-    background-color: #1fadad; }
-  .legend .sec.voc {
-    background-color: #f4bc78; }
-
 .user-info img {
   margin-right: 10px; }
 .user-info a {
@@ -290,7 +399,7 @@ a {
 .user-info a.username, .user-info a.log-in-link {
   border: 0;
   background-color: #3b4967;
-  -webkix-transition: background-color 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-out;
   -moz-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
   -ms-transition: background-color 0.2s ease-out;
@@ -301,7 +410,7 @@ a {
   margin: 0px 20px 0px 5px; }
   .user-info a.username:hover, .user-info a.log-in-link:hover {
     background-color: #6378a5;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
@@ -311,76 +420,68 @@ a {
     .user-info a.username:hover img, .user-info a.log-in-link:hover img {
       box-shadow: 2px 2px 3px #455577; }
 
-.main {
-  overflow: hidden;
-  position: relative; }
-  .main .lesson-right-menu {
+/*
+*	Style for main viewport
+*/
+#main {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  padding-top: 43px;
+  width: 100%; }
+  #main .lesson-right-menu {
     position: relative;
     height: 40%; }
-    .main .lesson-right-menu a {
+    #main .lesson-right-menu a {
       color: #4e6087;
       position: absolute;
       font-size: 70px;
       top: 0;
       left: 0; }
-  .main strong {
+  #main strong {
     margin-left: 2px;
     margin-right: 2px;
     letter-spacing: 0.05em;
     color: #4e6087; }
 
-@media (max-width: 768px) {
-  .hidden-inline-sm {
-    display: none !important; }
-
-  #logo-container {
-    display: none !important; } }
-/* Styling buttons that are calls to action */
-.calls-to-action button, .calls-to-action a {
-  border: 0;
-  background-color: #3b4967;
-  color: #EEE;
-  -webkix-transition: background-color 0.2s ease-out;
+/* Lesson-related styles */
+.achievements .box {
+  height: 125px;
+  width: 125px;
+  display: inline-block;
+  background-color: #4e6087;
+  color: #FFF;
+  margin: 5px;
+  border-radius: 2px;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-out;
   -moz-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
   -ms-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
-  margin-top: 3px; }
-  .calls-to-action button:hover, .calls-to-action a:hover {
-    background-color: #576b97;
-    -webkix-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out; }
+  .achievements .box:hover {
+    background-color: #5d72a1;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out;
-    box-shadow: 2px 2px 3px #CCC;
-    color: #FFF; }
-    .calls-to-action button:hover .glyphicon, .calls-to-action a:hover .glyphicon {
-      -webkit-animation: wiggle 0.2s ease 0 3;
-      -moz-animation: wiggle 0.2s ease 0 3;
-      -o-animation: wiggle 0.2s ease 0 3;
-      animation: wiggle 0.2s ease 0 3; }
-.calls-to-action .glyphicon {
-  margin-right: 5px; }
-.calls-to-action .glyphicon-flash {
-  color: #f4bc78; }
-.calls-to-action .glyphicon-list-alt {
-  color: #d15241; }
-.calls-to-action .glyphicon-inbox {
-  color: #1fadad; }
+    transition: background-color 0.2s ease-out; }
+  .achievements .box strong {
+    color: #FFF !important;
+    font-size: 24px;
+    font-weight: normal; }
 
-/* Lesson-related styles */
 .feedback-container {
   padding: 20px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 2px; }
-  .feedback-container h2 {
-    color: #6e517a;
-    font-size: 14px;
-    letter-spacing: 0.1em; }
   .feedback-container h3 {
+    color: #6e517a;
+    letter-spacing: 0.1em; }
+  .feedback-container h4 {
     color: #523d5b;
-    font-size: 13px;
     letter-spacing: 0.1em;
     font-weight: normal; }
   .feedback-container .badge {
@@ -393,13 +494,13 @@ a {
       background-color: #49a556; }
   .feedback-container #pies {
     text-align: center; }
-  .feedback-container #vocab-pie + h3 {
+  .feedback-container #vocab-pie + h4 {
     color: #1fadad;
     margin-bottom: 0px; }
-  .feedback-container #morph-pie + h3 {
+  .feedback-container #morph-pie + h4 {
     color: #f4bc78;
     margin-bottom: 0px; }
-  .feedback-container #syn-pie + h3 {
+  .feedback-container #syn-pie + h4 {
     color: #d15241;
     margin-bottom: 0px; }
   .feedback-container #records .sparkline {
@@ -409,18 +510,18 @@ a {
       stroke-width: 2px;
       fill: none; }
 
+/*
+*	Progress bar displayed above every lesson-in-progress
+*/
 .lesson-progress {
-  margin-bottom: 35px; }
+  margin-bottom: 10px; }
   .lesson-progress .bar {
     display: inline-block;
-    height: 15px;
-    background-image: linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -o-linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -moz-linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -webkit-linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -ms-linear-gradient(bottom, white 0, #eeeeee 100);
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #eeeeee));
-    background-color: white;
+    height: 10px;
+    background: linear-gradient(to left, white 50%, #1fadad 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     border-left: 1px solid #dddddd; }
@@ -432,16 +533,11 @@ a {
       border-bottom-right-radius: 3px;
       border-top-right-radius: 3px; }
     .lesson-progress .bar.complete {
-      box-shadow: 1px 1px 0px #8394b8 inset;
-      background-image: linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -o-linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -moz-linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -webkit-linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -ms-linear-gradient(bottom, #4e6087 0, #6378a5 100);
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4e6087), color-stop(1, #6378a5));
-      background-color: #4e6087;
-      border: 1px solid #3b4967; }
+      background-position: left bottom; }
 
+/*
+*	The lesson boxes visible on the lessons screen
+*/
 .module-container {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 2px;
@@ -472,43 +568,16 @@ div.module {
     height: 65px; }
   .module:hover {
     text-decoration: none; }
-  .module .practice-module {
-    float: right;
-    margin-top: -18px;
-    margin-right: -16px;
-    margin-left: 5px;
-    color: #F5BC78;
-    background-color: #FFF;
-    padding: 3px 3px 4px 3px;
-    border-radius: 12px; }
-  .module.keep-learning {
-    background-color: #1fadad;
-    -webkix-transition: background-color 0.2s ease-out;
-    -moz-transition: background-color 0.2s ease-out;
-    -o-transition: background-color 0.2s ease-out;
-    -ms-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out;
-    margin-bottom: 20px; }
-    .module.keep-learning:hover {
-      background-color: #23c3c3;
-      -webkix-transition: background-color 0.2s ease-in;
-      -moz-transition: background-color 0.2s ease-in;
-      -o-transition: background-color 0.2s ease-in;
-      -ms-transition: background-color 0.2s ease-in;
-      transition: background-color 0.2s ease-in;
-      box-shadow: 2px 2px 3px #CCC; }
-    .module.keep-learning h3 {
-      color: #FFF; }
   .module.nouns {
     background-color: #1fadad;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .module.nouns:hover {
       background-color: #23c3c3;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -520,14 +589,14 @@ div.module {
       color: #FFF; }
   .module.morph {
     background-color: #4e6087;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .module.morph:hover {
       background-color: #576b97;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -539,14 +608,14 @@ div.module {
       color: #FFF; }
   .module.verbs {
     background-color: #4e6087;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .module.verbs:hover {
       background-color: #576b97;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -558,14 +627,14 @@ div.module {
       color: #FFF; }
   .module.basics {
     background-color: #d15241;
-    -webkix-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .module.basics:hover {
       background-color: #d66556;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -600,19 +669,22 @@ div.module {
     .module .circle.complete {
       background-color: white; }
 
-.lesson-container .lesson-header h3 {
+/*
+*	Slide Styles	
+*/
+.lesson-header h1 {
   display: inline-block;
-  margin-top: 0; }
-
-.lesson-left-menu {
-  padding-top: 20px; }
+  margin-top: 0;
+  color: #3b4967;
+  text-transform: uppercase;
+  font-size: 24px; }
 
 .slide {
   padding: 20px;
   border-radius: 3px;
   min-height: 300px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 2px; }
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.7); }
   .slide .slide-unit {
     display: none; }
   .slide .exercise .badge {
@@ -646,7 +718,7 @@ div.module {
       left: 40%;
       top: 110%;
       border: 1px solid #FFF;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -686,7 +758,7 @@ div.module {
       border-radius: 3px;
       padding: 10px;
       margin: 5px;
-      -webkix-transition: background-color 0.2s ease-in;
+      -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
@@ -695,7 +767,7 @@ div.module {
         background-color: #1fadad;
         border: 1px solid transparent;
         color: #FFF;
-        -webkix-transition: background-color 0.2s ease-out;
+        -webkit-transition: background-color 0.2s ease-out;
         -moz-transition: background-color 0.2s ease-out;
         -o-transition: background-color 0.2s ease-out;
         -ms-transition: background-color 0.2s ease-out;
@@ -704,14 +776,13 @@ div.module {
         .slide .direct-select a:hover .badge {
           background-color: #d15241;
           color: #FFF;
-          -webkix-transition: background-color 0.2s ease-out;
+          -webkit-transition: background-color 0.2s ease-out;
           -moz-transition: background-color 0.2s ease-out;
           -o-transition: background-color 0.2s ease-out;
           -ms-transition: background-color 0.2s ease-out;
           transition: background-color 0.2s ease-out; }
   .slide ul {
     display: block;
-    padding-left: 0;
     margin-bottom: 0;
     /* Corresponds to Multi Composition Slide options */ }
     .slide ul.short-multi li {
@@ -727,7 +798,7 @@ div.module {
       border-radius: 3px; }
     .slide ul.short-multi.options a {
       border: 1px solid #e1e1e1;
-      -webkix-transition: background-color 0.2s ease-out;
+      -webkit-transition: background-color 0.2s ease-out;
       -moz-transition: background-color 0.2s ease-out;
       -o-transition: background-color 0.2s ease-out;
       -ms-transition: background-color 0.2s ease-out;
@@ -751,7 +822,7 @@ div.module {
         color: #FFF; }
     .slide ul.short-multi.answers a {
       border: 1px solid #1b9797;
-      -webkix-transition: background-color 0.2s ease-out;
+      -webkit-transition: background-color 0.2s ease-out;
       -moz-transition: background-color 0.2s ease-out;
       -o-transition: background-color 0.2s ease-out;
       -ms-transition: background-color 0.2s ease-out;
@@ -778,76 +849,239 @@ div.module {
       margin-right: 20px;
       margin-bottom: 20px; }
 
+/*
+*	Used in lessons to show the parts of the word
+*	e.g. past indicative augment, stem, ending.
+*/
+.word-breakdown {
+  text-align: center; }
+  .word-breakdown table {
+    margin-left: auto;
+    margin-right: auto; }
+  .word-breakdown td {
+    padding: 10px; }
+  .word-breakdown td.part span[lang="grc"] {
+    font-size: 3em; }
+  .word-breakdown td.part hr {
+    margin-bottom: 0;
+    border-top: 1px solid #888; }
+  .word-breakdown td.part .caret {
+    color: #AAA;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+/*
+*	Styles inflection tables
+*/
 table.inflection-table {
   font-size: 0.9em; }
+  table.inflection-table span[lang="grc"] strong {
+    color: #1fadad;
+    background-color: #f5f5f5;
+    padding: 3px; }
   table.inflection-table tr.current {
     background-color: #d15241;
     color: #FFF; }
-    table.inflection-table tr.current .greek-text {
+    table.inflection-table tr.current span[lang="grc"] {
       color: #FFF; }
-      table.inflection-table tr.current .greek-text em {
+      table.inflection-table tr.current span[lang="grc"] em {
         color: #1fadad;
         background-color: #FFF; }
-  table.inflection-table tr.future .greek-text {
+  table.inflection-table tr.future span[lang="grc"] {
     color: #CCC; }
   table.inflection-table tr.past {
     color: #333; }
-    table.inflection-table tr.past .greek-text {
+    table.inflection-table tr.past span[lang="grc"] {
       color: #333; }
 
-.label {
-  padding: 0.4em 0.6em 0.3em;
-  background-color: #BBB;
-  margin: 0px 3px; }
+.corner {
+  content: "";
+  position: fixed;
+  border-style: solid;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3); }
+  .corner.left {
+    top: 43px;
+    left: 0;
+    border-color: #EEE #FFF;
+    border-width: 60px 60px 0 0; }
+    .corner.left a {
+      top: -60px;
+      border-width: 0 0 60px 60px;
+      border-color: white #d15241; }
+      .corner.left a::after {
+        left: -55px;
+        top: 1px;
+        content: "\e091"; }
+      .corner.left a:hover {
+        border-color: white #d66556; }
+  .corner.right {
+    top: 43px;
+    right: 0;
+    border-color: #EEE #FFF;
+    border-width: 0 60px 60px 0; }
+    .corner.right a {
+      right: -60px;
+      border-width: 60px 0 0 60px;
+      border-color: #d15241 white; }
+      .corner.right a::after {
+        right: 5px;
+        top: -57px;
+        content: "\e092"; }
+      .corner.right a:hover {
+        border-color: #d66556 white; }
+  .corner a {
+    top: 0;
+    position: absolute;
+    border-style: solid;
+    color: #FFF; }
+    .corner a::after {
+      font-family: 'Glyphicons Halflings';
+      font-size: 24px;
+      position: absolute; }
 
-.greek-text {
-  font-family: 'Cambria', 'Times New Romans';
-  font-size: 1.3em;
-  letter-spacing: 0.1em; }
-  .greek-text em {
-    background-color: #FFF0A3;
-    border-radius: 3px;
-    padding: 3px;
-    font-style: normal; }
-  .greek-text em[data-toggle="tooltip"] {
-    cursor: pointer; }
+#reader {
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 100%; }
+  #reader .col-md-6, #reader .col-md-12 {
+    padding-left: 0;
+    padding-right: 0; }
+  #reader .page {
+    padding: 10px 80px 80px 80px;
+    position: relative;
+    margin-top: 0; }
+    #reader .page h1 {
+      text-align: center; }
+  #reader .page-content {
+    line-height: 3em; }
+    #reader .page-content span[lang="grc"] {
+      cursor: pointer;
+      padding: 5px; }
+      #reader .page-content span[lang="grc"].punct {
+        padding: 1px !important;
+        margin-left: -8px; }
+      #reader .page-content span[lang="grc"]:hover {
+        background-color: #fcebd6; }
+    #reader .page-content .selected, #reader .page-content .selected:hover {
+      background-color: #f8d3a7 !important; }
+  #reader .notes-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0; }
+    #reader .notes-container .notes {
+      background-color: #F7F7F7;
+      border-top: 1px solid #AAA;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+      height: 75px;
+      max-height: 75px;
+      padding: 5px 10px 30px 10px;
+      -webkit-animation: all 0.5s linear 0 1;
+      -moz-animation: all 0.5s linear 0 1;
+      -o-animation: all 0.5s linear 0 1;
+      animation: all 0.5s linear 0 1; }
+      #reader .notes-container .notes .resources-header span {
+        margin-left: 20px; }
+        #reader .notes-container .notes .resources-header span[lang="grc"] {
+          margin-left: 0px !important;
+          margin-right: 0px !important; }
+      #reader .notes-container .notes .resources-header .selected {
+        background-color: #f8d3a7 !important;
+        border: 0;
+        border-raidus: 0px !important;
+        padding: 6px; }
+      #reader .notes-container .notes.expanded {
+        height: auto;
+        min-height: 75px;
+        max-height: 300px;
+        overflow: auto;
+        -webkit-animation: all 0.5s linear 0 1;
+        -moz-animation: all 0.5s linear 0 1;
+        -o-animation: all 0.5s linear 0 1;
+        animation: all 0.5s linear 0 1; }
+        #reader .notes-container .notes.expanded .glyphicon-chevron-up {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          transform: rotate(180deg); }
+        #reader .notes-container .notes.expanded .resources {
+          display: block; }
+        #reader .notes-container .notes.expanded .intro {
+          display: none; }
+      #reader .notes-container .notes .label {
+        padding: 5px 6px 2px 5px;
+        position: relative;
+        top: -1px;
+        margin: 0 0 0 3px; }
+      #reader .notes-container .notes .resources {
+        display: none; }
+      #reader .notes-container .notes .intro {
+        display: block; }
+    #reader .notes-container span[lang="grc"], #reader .notes-container *[lang="grc"], #reader .notes-container a[lang="grc"] {
+      border: 1px solid #EEE;
+      padding: 2px;
+      border-radius: 3px;
+      background-color: #FFF;
+      margin-left: 3px;
+      margin-right: 3px;
+      font-family: 'Cambria', 'Times New Romans' !important; }
+    #reader .notes-container .notes-nav {
+      position: absolute;
+      right: 5px;
+      z-index: 1; }
+      #reader .notes-container .notes-nav span.glyphicon {
+        padding: 10px; }
+  #reader .knowledge-container {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    width: 100%; }
+    #reader .knowledge-container .progress {
+      margin: 0;
+      height: 13px;
+      border-radius: 0;
+      cursor: pointer; }
 
-.masc {
-  color: #1fadad; }
+#toc {
+  background-color: #3b4967;
+  color: #BBB;
+  width: 20%;
+  padding: 20px;
+  float: left;
+  overflow-y: scroll;
+  position: fixed;
+  height: 100%; }
+  #toc h2 {
+    color: #DDD; }
+  #toc ul {
+    list-style-type: none;
+    padding-left: 0; }
+  #toc li {
+    margin: 0 -20px 0 -20px; }
+    #toc li.selected {
+      background-color: #1fadad; }
+      #toc li.selected a {
+        color: #EEE; }
+  #toc ul li {
+    padding: 10px 10px 10px 20px; }
+  #toc ul ul li {
+    padding: 10px 10px 10px 40px; }
+  #toc ul ul ul li {
+    padding: 10px 10px 10px 60px; }
 
-.fem {
-  color: #d15241; }
-
-.neut {
-  color: #49a556; }
-
-p {
-  line-height: 3em; }
-
-p .greek-text {
-  border: 1px solid #EEE;
-  padding: 2px;
-  border-radius: 3px;
-  background-color: #F6F6F6;
-  margin-left: 3px;
-  margin-right: 3px; }
-
-.work {
-  width: 3000px;
-  position: relative; }
-  .work div {
-    display: inline-block;
-    vertical-align: top;
-    border: 2px solid #FFF;
-    /* Colors for types of knowledge of text */ }
-    .work div span {
-      display: inline-block;
-      width: 2px;
-      height: 2px;
-      background-color: #FFF; }
-    .work div span.r {
-      background-color: #BE1E2D; }
-    .work div span.g {
-      background-color: #1FADAD; }
-    .work div span.b {
-      background-color: #F5BC78; }
+#grammar-container {
+  position: absolute;
+  left: 20%;
+  padding: 10px;
+  top: 43px;
+  width: 80%; }
+  #grammar-container div[data-url^="/"] {
+    border: 1px solid #DDD;
+    padding: 60px;
+    margin: 10px;
+    background-color: #FFF;
+    position: relative; }
+  #grammar-container .corner {
+    position: absolute;
+    box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.3); }
+    #grammar-container .corner.right {
+      top: -1px;
+      right: -1px; }

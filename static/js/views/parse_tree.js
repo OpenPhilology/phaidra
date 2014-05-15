@@ -24,6 +24,11 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 			this.options.height = this.$el.attr('data-height') || '500';
 			this.options.width = this.$el.attr('data-width') || '300';
 
+			this.$el.find('select[name="pos"]').on('change', _.bind(this.displayFields, this));
+		},
+		render: function() {
+			var that = this;
+
 			$.ajax({
 				url: that.options.url,
 				dataType: 'json', 
@@ -44,16 +49,11 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 
 					data = that.convertData(words);
 					that.renderTree(data);
-					that.render();
 				},
 				failure: function(x, y, z) {
 					console.log(x, y, z);
 				}
 			});
-		},
-		render: function() {
-			var that = this;
-			this.$el.find('select[name="pos"]').on('change', _.bind(this.displayFields, this));
 			return this;	
 		},
 		/*

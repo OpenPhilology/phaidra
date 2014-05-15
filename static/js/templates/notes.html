@@ -1,0 +1,62 @@
+<!-- Gets populated with Notes about Greek text -->
+<div class="notes-nav">
+	<a href="#" data-toggle="tooltip" title="Preferences"><span class="glyphicon glyphicon-cog"></span></a>
+	<a href="#" data-toggle="tooltip" title="Add Annotation"><span class="glyphicon glyphicon-comment"></span></a> 
+	<a href="#" data-toggle="tooltip" title="Show Resources"><span class="glyphicon glyphicon-chevron-up"></span></a> 
+</div>
+<p class="intro">Hover over a sentence in the text to see available annotations, or to add your own!</p>
+
+<div class="resources">
+	<div class="row">
+		<div class="col-md-6">
+			<p class="resources-header">
+				<span lang="grc" class="selected"><%= word.value %></span>
+				<span>
+					from <span lang="grc"><%= word.article || '' %> <%= word.lemma %></span>
+				</span>
+				<span id="parse-vals"> 
+					<a href="#" class="btn btn-link" title="Parse">
+						<strong>Parse</strong><span class="vals" style="display: none">
+							<%= word.pos || '' %>
+							<%= word.case || '' %>
+							<%= word.number || '' %>
+							<%= word.gender || '' %>
+							<%= word.tense || '' %>
+							<%= word.voice || '' %>
+							<%= word.mood || '' %>
+							<%= word.person || '' %>
+						</span>
+					</a>
+				</span>
+			</p>
+			<!-- TODO: Put in translations, refactor this CSS -->
+			<h3 style="display: inline-block">Translations</h3> 
+
+				<a href="#" class="btn btn-link" data-toggle="tooltip" title="Load English Alignments">English (1)</a> 
+				<a href="#" class="btn btn-link" data-toggle="tooltip" title="Load Farsi Alignments">Farsi (1)</a>
+
+			<div class="well" style="background-color: #FFF; margin-right: 15px;">
+				<em>(Here, automatically show alignment to word in user's selected language, and link to change language or pull up as side-by-side translation)</em>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h3>Other Resources</h3>
+			<ul>
+				<li> <a href="#">View Sentence as Tree</a></li>
+				<li> <a href="#">Contribute Annotation</a></li>
+			</ul>
+			<h3>Related Grammar Topics</h3>
+			<ul>
+			<% if (grammar.length > 0) { %>
+				<% _.each(grammar, function(entry, index) { %>
+					<% if (index < 5) { %>
+						<li><a href="/grammar/<%= entry.key %>"><%= entry.title %></a></li>
+					<% } %>
+				<% }); %>
+			<% } else { %>
+				<li><em>None found</em></li>
+			<% } %>
+			</ul>
+		</div>
+	</div>
+</div>

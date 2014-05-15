@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{# Determine which navigation element is 'active'  #}
+{% block nav %}
+	{% with 'active' as create_active %}
+		{{ block.super }}
+	{% endwith %}
+{% endblock %}
+
+{% block content %}
+
+<div class="col-md-7 col-md-offset-1">
+	<h1>Help Create Digital Editions</h1>
+	<p>
+		You can help create a digital edition of a Classical work, no matter what skill level you're at. You'll be improving your Ancient Greek and contributing to Open Data at the same time!
+	</p>
+	<hr>
+	<h2><a href="#">Translate</a></h2>
+	<p>Take something and write it in another language. <a href="#">Learn How</a></p>
+	<h2><a href="#">Align</a></h2>
+	<p>Choose the words in a sentence that corresponse to one another. <a href="#">Learn How</a></p>
+	<h2><a href="#">Treebank</a></h2>
+	<p>Move the words of a sentence into a tree structure to indicate their depedencies. <a href="#">Learn How</a></p>
+	<h2><a href="#">Transcribe</a></h2>
+	<p>Study a snippet of a manuscript and transcribe it. <a href="#">Learn How</a></p>
+	<hr>
+</div>
+<div class="col-md-3">
+	<h3>Suggestions for You</h3>
+	<div class="well">
+		<p>Can you align these two sentences?</p>
+		<p>Sent. A</p>
+		<p>Sent. B</p>
+
+		<a href="#" class="btn btn-default">Align</a> &nbsp; <a href="#">Suggest Another</a>
+	</div>
+
+	<hr>
+
+	<h3>Your Annotations</h3>
+	<strong>Thuc.</strong><br>
+	<ul style="list-style-type: none; padding-left: 0">
+		<li><a href="#">1.90</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 20</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; Translation</li>
+		<li><a href="#">1.91</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 10</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; Translation</li>
+	</ul>
+	<strong>Plato</strong><br>
+	<ul style="list-style-type: none; padding-left: 0">
+		<li><a href="#">4.90</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 20</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; Translation</li>
+		<li><a href="#">4.91</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 10</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; Translation</li>
+	</ul>
+</div>
+
+{% endblock %}

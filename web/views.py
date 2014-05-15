@@ -14,11 +14,29 @@ def index(request):
 
 	return HttpResponse(template.render(context))
 
-def trees(request):
-	template = loader.get_template('trees.html')
+def home(request): 
+	template = loader.get_template('home.html')
 
 	context = RequestContext(request, {
-		'':''
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+	})
+
+	return HttpResponse(template.render(context))
+
+def lessons(request):
+	template = loader.get_template('lessons.html')
+
+	context = RequestContext(request, {
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+	})
+
+	return HttpResponse(template.render(context))
+
+def create(request):
+	template = loader.get_template('create.html')
+
+	context = RequestContext(request, {
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
 	})
 
 	return HttpResponse(template.render(context))
@@ -32,8 +50,16 @@ def login(request):
 
 	return HttpResponse(template.render(context))
 
-def viz(request):
-	template = loader.get_template('viz.html')
+def grammar(request):
+	template = loader.get_template('grammar.html')
+	context = RequestContext(request, {
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+	})
+
+	return HttpResponse(template.render(context))
+
+def reader(request):
+	template = loader.get_template('reader.html')
 	context = RequestContext(request, {
 		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
 	})
@@ -48,18 +74,19 @@ def profile(request):
 
 	return HttpResponse(template.render(context))
 
-def vocab(request):
-	template = loader.get_template('vocab.html')
+def module(request):
+	template = loader.get_template('module.html')
 	context = RequestContext(request, {
 		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
 	})
 
 	return HttpResponse(template.render(context))
 
-def module(request):
-	template = loader.get_template('module.html')
+def trees(request):
+	template = loader.get_template('trees.html')
+
 	context = RequestContext(request, {
-		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+		'':''
 	})
 
 	return HttpResponse(template.render(context))
