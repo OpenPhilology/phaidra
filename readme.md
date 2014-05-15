@@ -28,15 +28,26 @@ Clone the project to your local machine.
 
 This will create a directory at `/opt/phaidra`. 
 
-Set up Virtualenv
+Set up Virtualenv and install Postgres
 ---
 
 		$ sudo apt-get install python-virtualenv 
+		$ apt-get build-dep python-psycopg2 
 		$ cd /opt/phaidra
 		# The name of our virtualenv is "env"
 		$ virtualenv --no-site-packages env
 
 Now, in front of your command prompt, you should see `(env)`, which indicates that you are operating within that environment.
+
+Install and Configure Postgres
+---
+
+		$ apt-get build-dep python-psycopg2
+		$ apt-get install postgresql postgresql-contrib
+		$ sudo -u postgres psql postgres
+		$ \password  # Set as you like, our test setup will use "phaidra"
+		$ \q
+		$ sudo -u postgres createdb phaidra
 
 Install Requirements
 ---
@@ -50,7 +61,7 @@ Install and configure Nginx with Uwsgi
 ---
 Phaidra runs on nginx as its web server.
 
-		$ sudo apt-get install nginx uwsgi uwsgi-plugin-python python2.7-dev
+		$ sudo apt-get install nginx uwsgi uwsgi-plugin-python python2.7-dev 
 
 Make sure you are running the latest version of Uwsgi (at time of writing, 1.9) with `uwsgi --version`. If this gives you an older version, you will need to upgrade by doing the following:
 
