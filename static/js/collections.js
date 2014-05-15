@@ -136,12 +136,13 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				// Populates a subset of the data based on the sentence URI
 				$.ajax({
 					url: sentenceURI,
+					data: { 'full': 'True' },
 					dataType: 'json',
 					success: function(response) {
 						var words = response.words;
 
 						for (var i = 0; i < words.length; i++) {
-							that.findWhere({ CTS : words[i]["CTS"] }).set(words[i]);
+							that.findWhere({ CTS: words[i]["CTS"] }).set(words[i]);
 						}
 
 						that.trigger('populated');

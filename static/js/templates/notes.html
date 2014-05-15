@@ -36,7 +36,12 @@
 				<a href="#" class="btn btn-link" data-toggle="tooltip" title="Load Farsi Alignments">Farsi (1)</a>
 
 			<div class="well" style="background-color: #FFF; margin-right: 15px;">
-				<em>(Here, automatically show alignment to word in user's selected language, and link to change language or pull up as side-by-side translation)</em>
+				<% console.log(word) %>
+				<% for (var i = 0; i < word.translations.length; i++) { %>
+					<% if (word.translations[i]["CTS"].indexOf('eng') != -1) { %>
+						<em><%= word.translations[i]["value"] %></em>
+					<% } %>
+				<% } %>
 			</div>
 		</div>
 		<div class="col-md-6">
