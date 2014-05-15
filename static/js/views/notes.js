@@ -6,7 +6,8 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 		template: _.template(NotesTemplate),
 		events: { 
 			'click a > .glyphicon-chevron-up': 'toggleNotes',
-			'click #parse-vals': 'toggleParse'
+			'click #parse-vals': 'toggleParse',
+			'click .btn-show-trans': 'showTranslation'
 		},
 		initialize: function(options) {
 			this.options = options;	
@@ -26,9 +27,12 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			if (selected.get('pos') == 'noun') {
 				selected.set('article', Utils.getDefiniteArticle(selected.get('gender')));
 			}
+
+			var that = this;
 			
 			this.$el.html(this.template({
 				word: selected.attributes,
+				lang: that.lang || 'eng', 	// This will obviously be set by user profile for their 'default', not 'eng' 
 				grammar: selected.getGrammar()
 			}));
 
@@ -66,6 +70,11 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			var selected = this.collection.findWhere({ selected: true });
 			if (typeof(selected) != 'undefined')
 				selected.set('selected', false);
+		},
+		showTranslation: function(e) {
+			e.preventDefault();
+			this.lang = $(e.target).attr('data-lang');
+			this.renderDetails();
 		}
 	});
 

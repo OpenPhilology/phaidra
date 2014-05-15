@@ -33,7 +33,7 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			var model = this.collection.findWhere({ sentenceCTS: this.options.cts });
 			this.$el.find('a').attr('href', function() {
 				var cts = that.options.side == 'left' ? model.get('prevSentenceCTS') : model.get('nextSentenceCTS'); 
-				return '/reader/' + cts;
+				return '/reader/' + (cts || '');
 			}).tooltip();
 
 			var ref = this.options.cts.split(':');
