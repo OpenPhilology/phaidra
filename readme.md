@@ -28,11 +28,10 @@ Clone the project to your local machine.
 
 This will create a directory at `/opt/phaidra`. 
 
-Set up Virtualenv and install Postgres
+Set up Virtualenv
 ---
 
 		$ sudo apt-get install python-virtualenv 
-		$ apt-get build-dep python-psycopg2 
 		$ cd /opt/phaidra
 		# The name of our virtualenv is "env"
 		$ virtualenv --no-site-packages env
