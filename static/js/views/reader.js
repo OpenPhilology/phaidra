@@ -7,9 +7,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 
 			// Create an empty collection of words, so views can update based on changes to it
 			this.collection = new Collections.Words();
-
-			// Start by getting our reader content and building a table of contents
-			this.buildBook();
+			this.collection.buildBook('urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1');
 
 			// Render the notes viewer at the bottom of the screen
 			if (!this.notes) {
@@ -31,64 +29,20 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 		render: function() {
 			return this;	
 		},
-		/*
-		*	Grab the data we need to build their book. Specifically have to grab this data
-		*	for navigation, since we can't predict the next resource by CTS alone.
-		*	TODO: Make a book model? Overkill/Unnecessary?
-		*/
-		buildBook: function() {
-			// Thuc hardcoded, TODO: generalize for translations
-			var url = '/api/v1/document/0/?format=json';
-			var that = this;
+		turnToPage: function(CTS) {
 
-			$.ajax({
-				url: url,
-				async: false,
-				dataType: 'json',
-				success: function(book) {
-					// Keep a reference to the book's metadata -- important for turning pages
-					that.collection._meta = {};
-					that.collection._meta.book = book;
-
-					// Build our collection of words
-					for (var i = 0; i < book.sentences.length; i++) {
-						var tokens = $.trim(book.sentences[i]["sentence"]).split(' ');
-
-						$.each(tokens, function(j, token) {
-							var next, prev;
-
-							if (book.sentences[i-2])
-								prev = book.sentences[i-1]["CTS"];	
-							if (book.sentences[i+2])
-								next = book.sentences[i+1]["CTS"];
-
-							that.collection.add({
-								'value': token,
-								'lang': book.lang,
-								'sentenceURI': book.sentences[i]["resource_uri"],
-								'sentenceCTS': book.sentences[i]["CTS"],
-								'nextSentenceCTS': next || undefined,
-								'prevSentenceCTS': prev || undefined,
-								'CTS': book.sentences[i]["CTS"] + ':' + (j + 1)
-							});
-						});
-					}
-				}
-			});
-		},
-		turnToPage: function(cts) {
-
-			if (cts == undefined)
-				cts = this.collection.at(0).get('sentenceCTS');
-
-			// Get the CTS ref after the one passed in, to build facing page
-			var i = _.findWhere(this.collection._meta.book.sentences, { CTS: cts });
-			var j = this.collection._meta.book.sentences.indexOf(i) + 1;
-
-			// Next CTS is...
-			var ctsNext = this.collection._meta.book.sentences[j]["CTS"];
-
-			var that = this;
+			// Turning pages by CTS is just gross...
+			var that = this, uri, next_uri;
+			if (CTS == undefined) {
+				uri = this.collection._meta.sentence_resource_uris[0];
+				next_uri = this.collection._meta.sentence_resource_uris[1];
+			}
+			else {
+				this.collection.addSentence({ sentenceCTS: CTS });
+				uri = this.collection.findWhere({ sentenceCTS: CTS }).get('sentence_resource_uri');
+				var index = this.collection._meta.sentence_resource_uris.indexOf(uri) + 1; 
+				next_uri = this.collection._meta.sentence_resource_uris[index];
+			}
 
 			this.$el.find('.loader').remove();
 
@@ -97,7 +51,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 				this.pages = {};
 				this.pages.left = new PageView({ 
 					collection: that.collection, 
-					cts: cts,
+					sentence_resource_uri: uri,
 					side: 'left' 
 				});
 				this.pages.left.render()
@@ -106,7 +60,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 
 				this.pages.right = new PageView({ 
 					collection: that.collection,
-					cts: ctsNext,
+					sentence_resource_uri: next_uri,
 					side: 'right' 
 				});
 				this.pages.right.render()
@@ -115,8 +69,8 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 			}
 			// Otherwise, turn the pages
 			else {
-				this.pages.left.turnToPage(cts);
-				this.pages.right.turnToPage(ctsNext);
+				this.pages.left.turnToPage(CTS);
+				this.pages.right.turnToPage(nextCTS);
 			}
 		}
 	});
