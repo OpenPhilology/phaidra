@@ -12,7 +12,6 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 		initialize: function(options) {
 			this.options = options;	
 			this.collection.bind('change:selected change:hovered', this.toggleNotes, this);
-			this.collection.on('populated', this.renderDetails, this);
 
 			this.$el.html(NotesTemplate);
 			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
@@ -61,7 +60,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			else if (model.get('selected')) {
 				this.$el.find('.intro').html('<img src="/static/images/tree-loader.gif"> Loading');
 				this.$el.find('.notes-nav a').eq(1).attr('title', 'Show Resources');
-				this.collection.populate(model.get('sentenceURI'));
+				this.renderDetails();
 			}
 
 		},
