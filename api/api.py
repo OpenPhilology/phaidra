@@ -15,7 +15,6 @@ from tastypie import fields
 from tastypie.resources import Resource, ModelResource
 
 from neo4jrestclient.client import GraphDatabase
-#from neo4jrestclient import client
 
 from tastypie import fields
 from tastypie.bundle import Bundle
@@ -60,13 +59,6 @@ class UserObjectsOnlyAuthorization(Authorization):
 	### not in use yet. User submissions are related to the user in the sent data, which makes sure the the user was already verified
 	def create_detail(self, object_list, bundle):
 		return bundle.obj.user == bundle.request.user
-
-
-
-
-
-
-#db = GraphDatabase('/var/lib/neo4j/data/graph.db/')
 
 class TextbookResource(ModelResource):
 	class Meta:
@@ -123,7 +115,7 @@ class DataObject(object):
      
 
 """
-Derivatives from Resource.
+Derives from Resource.
 """		
 		
 class SubmissionResource(Resource):
