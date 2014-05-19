@@ -937,6 +937,9 @@ class VisualizationResource(Resource):
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered')
 			]
 
+	"""
+	returns visualization data on word-rage-, book- and work-level.
+	"""
 	#/api/v1/visualization/encountered/?format=json&level=word&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:11-19&user=john
 	def encountered(self, request, **kwargs):
 		
@@ -1003,8 +1006,16 @@ class VisualizationResource(Resource):
 									w.elements[0][0]['data'][p]
 									if params[p] != w.elements[0][0]['data'][p]:
 										badmatch = True
+										break
 								except KeyError as k:
-									badmatch = True
+									if len(p.split('__')) > 1:
+										if p.split('__')[1] == 'contains':
+											if params[p] not in w.elements[0][0]['data'][p.split('__')[0]]:
+												badmatch = True
+												break
+									else:
+										badmatch = True
+										break
 									
 							if not badmatch:
 								knownDict[wordRef] = True				
@@ -1091,11 +1102,19 @@ class VisualizationResource(Resource):
 										word.properties[p]
 										if params[p] != word.properties[p]:
 											badmatch = True
+											break
 									except KeyError as k:
-										badmatch = True
+										if len(p.split('__')) > 1:
+											if p.split('__')[1] == 'contains':
+												if params[p] not in word.properties[p.split('__')[0]]:
+													badmatch = True
+													break
+										else:
+											badmatch = True
+											break
 								
 								if not badmatch:
-									morphKnown[word.properties['CTS']] = True # all params are fine				
+									morphKnown[word.properties['CTS']] = True # all params are fine											
 							
 							# know this vocab
 							vocabKnown[word.properties['CTS']] = True
@@ -1117,4 +1136,7 @@ class VisualizationResource(Resource):
 			return self.create_response(request, data)		
 		
 		return self.error_response(request, {'error': 'Level parameter required.'}, response_class=HttpBadRequest)
+	
+
+
 	
