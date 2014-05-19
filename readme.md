@@ -111,12 +111,25 @@ Make sure the virtual env is activated.
 
 		$ cd /opt/phaidra
 		$ source env/bin/activate
-		$ python manage.py syncdb
 
-Here you'll get to create your superuser. 
-		
-		$ python manage.py schemamigration app --initial
-		$ python manage.py migrate
+First, comment out the following apps from INSTALLED_APPS in phaidra/settings.py: 'apps', 'django.contrib.auth', 'django.contrib.admin'. We have to do some finangling to get South to play nicely with our custom user model.
+
+Then run:
+
+		$ ./manage.py syncdb
+
+Uncomment 'apps', 'django.contrib.auth', and 'django.contrib.admin' in phaidra/settings.py. Then run:
+
+		$ ./manage.py schemamigration app --initial
+		$ ./manage.py schemamigration tastypie --initial
+		$ ./manage.py migrate app
+		$ ./manage.py migrate tastypie
+
+If you get errors about tables already existing, you can run these commands to fix the South history and keep the tables from trying to re-create themselves:
+
+		$ ./manage.py migrate app --fake 0001
+		$ ./manage.py migrate tastypie --fake 0001
+
 
 Install and configure the Neo4j database
 ---
