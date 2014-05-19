@@ -6,12 +6,12 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 		template: _.template(NotesTemplate),
 		events: { 
 			'click a > .glyphicon-chevron-up': 'toggleNotes',
-			'click #parse-vals': 'toggleParse'
+			'click #parse-vals': 'toggleParse',
+			'click .btn-show-trans': 'showTranslation'
 		},
 		initialize: function(options) {
 			this.options = options;	
 			this.collection.bind('change:selected change:hovered', this.toggleNotes, this);
-			this.collection.on('populated', this.renderDetails, this);
 
 			this.$el.html(NotesTemplate);
 			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
@@ -26,9 +26,12 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			if (selected.get('pos') == 'noun') {
 				selected.set('article', Utils.getDefiniteArticle(selected.get('gender')));
 			}
+
+			var that = this;
 			
 			this.$el.html(this.template({
 				word: selected.attributes,
+				lang: that.lang || 'eng', 	// This will obviously be set by user profile for their 'default', not 'eng' 
 				grammar: selected.getGrammar()
 			}));
 
@@ -57,7 +60,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			else if (model.get('selected')) {
 				this.$el.find('.intro').html('<img src="/static/images/tree-loader.gif"> Loading');
 				this.$el.find('.notes-nav a').eq(1).attr('title', 'Show Resources');
-				this.collection.populate(model.get('sentenceURI'));
+				this.renderDetails();
 			}
 
 		},
@@ -66,6 +69,11 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			var selected = this.collection.findWhere({ selected: true });
 			if (typeof(selected) != 'undefined')
 				selected.set('selected', false);
+		},
+		showTranslation: function(e) {
+			e.preventDefault();
+			this.lang = $(e.target).attr('data-lang');
+			this.renderDetails();
 		}
 	});
 

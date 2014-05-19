@@ -324,13 +324,13 @@ class LemmaResource(Resource):
 					else:
 						q = q + """HAS (l.""" +key+ """) AND l.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
-			q = q + """RETURN DISTINCT l"""
+			q = q + """RETURN DISTINCT l ORDER BY ID(l)"""
 			
 			table = gdb.query(q)
 		
 		# default querying	
 		else:	
-			table = gdb.query("""START l=node(*) MATCH (l)-[:values]->(w) WHERE HAS (l.CITE) RETURN DISTINCT l""")
+			table = gdb.query("""START l=node(*) MATCH (l)-[:values]->(w) WHERE HAS (l.CITE) RETURN DISTINCT l ORDER BY ID(l)""")
 			
 		# create the objects which was queried for and set all necessary attributes
 		for t in table:
@@ -346,12 +346,12 @@ class LemmaResource(Resource):
 			
 			values = lemmaNode.relationships.outgoing(types=["values"])	
 			valuesArray = []
-			for v in values:
-				val = v.end
+			for v in range(0, len(values), 1):
+				val = values[v].end
 				val.properties['resource_uri'] = API_PATH + 'word/' + str(val.id) + '/'
 				valuesArray.append(val.properties)
 				
-			new_obj.__dict__['_data']['values'] = reversed(valuesArray)			
+			new_obj.__dict__['_data']['values'] = valuesArray			
 			lemmas.append(new_obj)
 				
 		return lemmas
@@ -373,12 +373,12 @@ class LemmaResource(Resource):
 		# get the values	
 		values = lemma.relationships.outgoing(types=["values"])			
 		valuesArray = []
-		for v in values:
-			val = v.end
+		for v in range(0, len(values), 1):
+			val = values[v].end
 			val.properties['resource_uri'] = API_PATH + 'word/' + str(val.id) + '/'
 			valuesArray.append(val.properties)
 			
-		new_obj.__dict__['_data']['values'] = reversed(valuesArray)
+		new_obj.__dict__['_data']['values'] = valuesArray
 
 		return new_obj
 
@@ -464,13 +464,13 @@ class WordResource(Resource):
 				else:
 					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
-			q = q + """RETURN w, s"""
+			q = q + """RETURN w, s ORDER BY ID(w)"""
 			
 			table = gdb.query(q)
 		
 		# default querying	
 		else:	
-			table = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE HAS (w.CTS) RETURN w, s""")
+			table = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE HAS (w.CTS) RETURN w, s ORDER BY ID(w)""")
 			
 		# create the objects which was queried for and set all necessary attributes
 		for t in table:
@@ -528,12 +528,12 @@ class WordResource(Resource):
 		# get the translations	
 		translations = word.relationships.outgoing(types=["translation"])			
 		translationArray = []
-		for t in translations:
-			trans = t.end
+		for t in range(0, len(translations), 1):
+			trans = translations[t].end
 			trans.properties['resource_uri'] = API_PATH + 'word/' + str(trans.id) + '/'
 			translationArray.append(trans.properties)
 			
-		new_obj.__dict__['_data']['translations'] = reversed(translationArray)
+		new_obj.__dict__['_data']['translations'] = translationArray
 
 		return new_obj
 
@@ -593,13 +593,13 @@ class SentenceResource(Resource):
 				else:
 					q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
-			q = q + """RETURN s, d"""
+			q = q + """RETURN s, d ORDER BY ID(s)"""
 			
 			table = gdb.query(q)
 		
 		# default querying	
 		else:	
-			table = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) WHERE HAS (s.CTS) RETURN s, d""")
+			table = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) WHERE HAS (s.CTS) RETURN s, d ORDER BY ID(s)""")
 			
 		# create the objects which was queried for and set all necessary attributes
 		for t in table:
@@ -640,9 +640,9 @@ class SentenceResource(Resource):
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
 		
-		# get a dictionary or related translation of this sentence
+		# get a dictionary or related translation of this sentence # ordering here is a problem child
 		relatedSentences = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w)-[:translation]->(t)<-[:words]-(s1) WHERE HAS (s.CTS) AND s.CTS='""" 
-						+ sentence.properties['CTS'] + """' RETURN DISTINCT s1""")
+						+ sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
 		
 		new_obj.__dict__['_data']['translations']={}
 		for rs in relatedSentences:
@@ -655,8 +655,8 @@ class SentenceResource(Resource):
 		# get the words
 		words = sentence.relationships.outgoing(types=["words"])
 		wordArray = []		
-		for w in words:
-			word = w.end
+		for w in range(0, len(words), 1):
+			word = words[w].end
 			# get the lemma of a word
 			lemmaRels = word.relationships.incoming(types=["values"])
 			if len(lemmaRels) > 0:
@@ -688,7 +688,7 @@ class SentenceResource(Resource):
 				raise BadRequest("Sentence doesn't hit your query.")		
 				#return self.error_response(bundle.request, {'error': ''}, response_class=HttpBadRequest)	
 						
-		new_obj.__dict__['_data']['words'] = reversed(wordArray)
+		new_obj.__dict__['_data']['words'] = wordArray
 			
 		return new_obj
 	
@@ -851,13 +851,13 @@ class DocumentResource(Resource):
 				else:
 					q = q + """HAS (d.""" +key+ """) AND d.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
-			q = q + """RETURN DISTINCT d"""
+			q = q + """RETURN DISTINCT d ORDER BY ID(d)"""
 			
 			table = gdb.query(q)
 		
 		# default querying	
 		else:	
-			table = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) WHERE HAS (s.CTS) RETURN DISTINCT d""")
+			table = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) WHERE HAS (s.CTS) RETURN DISTINCT d ORDER BY ID(d)""")
 			
 		# create the objects which was queried for and set all necessary attributes
 		for t in table:
@@ -872,13 +872,13 @@ class DocumentResource(Resource):
 			sentences = documentNode.relationships.outgoing(types=["sentences"])
 			
 			sentenceArray = []
-			for s in sentences:
-				sent = s.end
+			for s in range(0, len(sentences), 1):
+				sent = sentences[s].end
 				properties = {} #sent.properties #sent.properties['resource_uri']
 				properties['resource_uri'] = API_PATH + 'sentence/' + str(sent.id) + '/'
 				sentenceArray.append(properties)
 				
-			new_obj.__dict__['_data']['sentences'] = reversed(sentenceArray)
+			new_obj.__dict__['_data']['sentences'] = sentenceArray
 			
 			documents.append(new_obj)		
 				
@@ -899,14 +899,14 @@ class DocumentResource(Resource):
 		
 		sentences = document.relationships.outgoing(types=["sentences"])
 		sentenceArray = []
-		for s in sentences:
-			sentence = s.end
+		for s in range(0, len(sentences), 1):
+			sentence = sentences[s].end
 			# this might seems a little hacky, but API resources are very decoupled,
 			# which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
 			sentence.properties['resource_uri'] = API_PATH + 'sentence/' + str(sentence.id) + '/'
 			sentenceArray.append(sentence.properties)
 				
-			new_obj.__dict__['_data']['sentences'] = reversed(sentenceArray)
+			new_obj.__dict__['_data']['sentences'] = sentenceArray
 
 		return new_obj
  
