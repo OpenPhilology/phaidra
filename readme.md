@@ -105,6 +105,19 @@ Start up services:
 		
 * Check that everything has worked up to this point by navigating to http://localhost:8000 *
 
+Set up initial migration with South
+---
+Make sure the virtual env is activated.
+
+		$ cd /opt/phaidra
+		$ source env/bin/activate
+		$ python manage.py syncdb
+
+Here you'll get to create your superuser. 
+		
+		$ python manage.py schemamigration app --initial
+		$ python manage.py migrate
+
 Install and configure the Neo4j database
 ---
 Make sure you installed java 1.7. Do this outside your virtualenv.
