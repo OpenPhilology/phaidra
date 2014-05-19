@@ -926,7 +926,8 @@ class VisualizationResource(Resource):
 	def prepend_urls(self, *args, **kwargs):	
 		
 		return [
-			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered')
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered'),
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'statistics', trailing_slash()), self.wrap_view('statistics'), name="api_%s" % 'statistics')
 			]
 
 	"""
@@ -1003,20 +1004,12 @@ class VisualizationResource(Resource):
 					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : 0, 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.elements[0][0]['data']['CTS']})
 					
 			return self.create_response(request, data)
-		
-		
+			
 		
 		# if the viz of a document is requested calcualate the numbers on all submissions again and then the percentage of viz data
 		elif request.GET.get('level') == "document":
 			
 			data['sentences'] = []
-
-			# get the file entry:
-			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
-			fileContent = {}
-			with open(filename, 'r') as json_data:
-				fileContent = json.load(json_data)
-				json_data.close()
 				
 			# preprocess knowledge of a user
 			callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
@@ -1025,12 +1018,13 @@ class VisualizationResource(Resource):
 				
 			# get the sentences of that document
 			sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
-			#counter = 0
+			
 			for s in sentenceTable.elements:
 				
-				node = gdb.nodes.get(s[0]['self'])
-				
+				node = gdb.nodes.get(s[0]['self'])			
 				words = node.relationships.outgoing(types=["words"])
+				
+				# helper arrays also for statistics, contain the cts as a key and a boolean as an entry
 				all = {}	
 				vocabKnown = {}
 				morphKnown = {}
@@ -1040,8 +1034,8 @@ class VisualizationResource(Resource):
 				
 					word = w.end
 					all[word.properties['CTS']] = True
-					morphKnown[word.properties['CTS']] = False
 					vocabKnown[word.properties['CTS']] = False
+					morphKnown[word.properties['CTS']] = False
 					syntaxKnown[word.properties['CTS']] = False
 					# scan the submission for vocab information
 					for smyth in smythFlat:
@@ -1049,7 +1043,7 @@ class VisualizationResource(Resource):
 						if word.properties['CTS'] in vocKnowledge:	
 							
 							# if word morph already known don't apply filter again
-							if not morphKnown[word.properties['CTS']]:
+							if morphKnown[word.properties['CTS']]:
 								# loop over params to get morph known infos
 								badmatch = False
 								for p in smythFlat[smyth].keys():
@@ -1076,7 +1070,7 @@ class VisualizationResource(Resource):
 				
 				# after reading words calcualte percentages of aspects for the sentence
 				sentLeng = len(words)
-				aspects = {'one': 0.00, 'two': 0.00, 'three': 0.00}
+				aspects = {'one': 0.0, 'two': 0.0, 'three': 0.0}
 				for cts in all.keys():
 					if vocabKnown[cts] and morphKnown[cts] and syntaxKnown[cts]:
 						aspects['three'] = aspects['three'] +1
@@ -1092,9 +1086,82 @@ class VisualizationResource(Resource):
 		
 		return self.error_response(request, {'error': 'Level parameter required.'}, response_class=HttpBadRequest)
 	
+	
 	"""
 	Returns overall statistically learned information for displaying in the panels
 	"""
+	def statistics(self, request, **kwargs):
+		
+		data = {}
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		
+		# preprocess knowledge of a user
+		callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
+		vocKnowledge = callFunction[0]
+		smythFlat = callFunction[1]
+			
+		# get the sentences of that document
+		sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
+		
+		# helper arrays also for statistics, contain the cts as a key and a boolean as an entry
+		all = {}	
+		vocabKnown = {}
+		morphKnown = {}
+		syntaxKnown = {}
+		wordCount = 0
+		for s in sentenceTable.elements:
+			
+			node = gdb.nodes.get(s[0]['self'])
+			
+			words = node.relationships.outgoing(types=["words"])
+				
+			for w in words:
+			
+				word = w.end
+				all[word.properties['CTS']] = True
+				# scan the submission for vocab information
+				for smyth in smythFlat:
+					# was this word seen?
+					if word.properties['CTS'] in vocKnowledge:	
+						
+						# if word morph already known don't apply filter again
+						try:
+							morphKnown[word.properties['CTS']]
+						except KeyError as k:
+							# loop over params to get morph known infos
+							badmatch = False
+							for p in smythFlat[smyth].keys():
+								try:
+									word.properties[p]
+									if smythFlat[smyth][p] != word.properties[p]:
+										badmatch = True
+										break
+								except KeyError as k:
+									if len(p.split('__')) > 1:
+										if p.split('__')[1] == 'contains':
+											if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
+												badmatch = True
+												break
+									else:
+										badmatch = True
+										break
+							
+							if not badmatch:
+								morphKnown[word.properties['CTS']] = True # all params are fine											
+						
+						# know this vocab
+						vocabKnown[word.properties['CTS']] = True
+				
+			# after reading words update overall no
+			wordCount = wordCount + len(words)
+		
+		# after reading everything return the statistics
+		data['statistics'] = {'all': wordCount, 'vocab': float(len(vocabKnown))/float(len(all)), 'morphology': float(len(morphKnown))/float(len(all)), 'syntax': float(len(syntaxKnown))/float(len(all))}
+	
+		return self.create_response(request, data)
+	
+	
+	
 	
 	"""
 	prepare knowledge map
