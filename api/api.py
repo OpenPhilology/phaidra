@@ -935,16 +935,11 @@ class VisualizationResource(Resource):
 	#/api/v1/visualization/encountered/?format=json&level=word&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:11-19&user=john
 	def encountered(self, request, **kwargs):
 		
-		"""
-		Start visualization...
-		"""
+		data = {}
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		#fo = open("foo.txt", "wb")
 		#millis = int(round(time.time() * 1000))
-		#fo.write("%s start encountered method, get user: \n" % millis)
-		
-		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
-		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")	
-		data = {}	
+		#fo.write("%s start encountered method, get user: \n" % millis)	
 		
 		if request.GET.get('level') == "word":
 			
@@ -963,13 +958,11 @@ class VisualizationResource(Resource):
 			for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
 				wordRangeArray.append(rangeStem + str(num))
 			
-			# get the file entry:
-			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
-			fileContent = {}
-			with open(filename, 'r') as json_data:
-				fileContent = json.load(json_data)
-				json_data.close()
-						
+			# preprocess knowledge of a user
+			callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
+			vocKnowledge = callFunction[0]
+			smythFlat = callFunction[1]
+								
 			for wordRef in wordRangeArray:
 					
 				w = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CTS) AND HAS (n.head) AND n.CTS = '""" +wordRef+ """' RETURN n""")
@@ -977,56 +970,38 @@ class VisualizationResource(Resource):
 				seenDict[wordRef] = 0
 				knownDict[wordRef] = False
 				
-				for sub in submissions.elements:	
-				
-					# get the morph info to the words via a file lookup of submission's smyth key, save params to test it on the encountered word of a submission
-					params = {}
-					grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
-					for pair in grammarParams:
-						params[pair.split('=')[0]] = pair.split('=')[1]
-														
-					# get the encountered word's CTSs of this submission
-					if wordRef in sub[0]['data']['encounteredWords']:			
-												
-						# if word learnt already known don't apply filter again
-						if not knownDict[wordRef]:
-							# loop over params to get morph known infos							
-							badmatch = False
-							
-							for p in params.keys():
-								try:
-									w.elements[0][0]['data'][p]
-									if params[p] != w.elements[0][0]['data'][p]:
-										badmatch = True
-										break
-								except KeyError as k:
-									if len(p.split('__')) > 1:
-										if p.split('__')[1] == 'contains':
-											if params[p] not in w.elements[0][0]['data'][p.split('__')[0]]:
-												badmatch = True
-												break
-									else:
-										badmatch = True
-										break
+				#for sub in submissions.elements:
+				for smyth in smythFlat:		
+					# was the word even known?
+					if wordRef in vocKnowledge:			
+			
+						# loop over params to get morph known infos							
+						badmatch = False			
+						for p in smythFlat[smyth].keys():
+							try:
+								w.elements[0][0]['data'][p]
+								if smythFlat[smyth][p] != w.elements[0][0]['data'][p]:
+									badmatch = True
+									break
+							except KeyError as k:
+								if len(p.split('__')) > 1:
+									if p.split('__')[1] == 'contains':
+										if smythFlat[smyth][p] not in w.elements[0][0]['data'][p.split('__')[0]]:
+											badmatch = True
+											break
+								else:
+									badmatch = True
+									break
 									
-							if not badmatch:
-								knownDict[wordRef] = True				
-										
-						# if word in requested range and in encountered save times seen
-						try:
-							seenDict[wordRef]
-							seenDict[wordRef] = seenDict[wordRef] + 1
-						except KeyError as k:
-							seenDict[wordRef] = 1
+						if not badmatch:
+							knownDict[wordRef] = True												
 							
 				# save data
-				if seenDict[wordRef] > 0:
-					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.elements[0][0]['data']['CTS']})
-					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.CTS})
-				else:
-					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.elements[0][0]['data']['CTS']})
-					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.CTS})
-		
+				try:
+					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : vocKnowledge[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.elements[0][0]['data']['CTS']})
+				except KeyError as e:
+					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : 0, 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.elements[0][0]['data']['CTS']})
+					
 			return self.create_response(request, data)
 		
 		
@@ -1043,21 +1018,10 @@ class VisualizationResource(Resource):
 				fileContent = json.load(json_data)
 				json_data.close()
 				
-			vocKnowledge = {}
-			smythFlat = {}		
-			# flatten the smyth and collect the vocab knowledge
-			for sub in submissions.elements:			
-				
-				for word in sub[0]['data']['encounteredWords']:
-					
-					vocKnowledge[word] = True
-					if sub[0]['data']['smyth'] not in smythFlat:
-						# get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
-						params = {}
-						grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
-						for pair in grammarParams:
-							params[pair.split('=')[0]] = pair.split('=')[1]
-						smythFlat[sub[0]['data']['smyth']] = params	
+			# preprocess knowledge of a user
+			callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
+			vocKnowledge = callFunction[0]
+			smythFlat = callFunction[1]
 				
 			# get the sentences of that document
 			sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
@@ -1081,7 +1045,6 @@ class VisualizationResource(Resource):
 					syntaxKnown[word.properties['CTS']] = False
 					# scan the submission for vocab information
 					for smyth in smythFlat:
-							
 						# was this word seen?
 						if word.properties['CTS'] in vocKnowledge:	
 							
@@ -1092,13 +1055,13 @@ class VisualizationResource(Resource):
 								for p in smythFlat[smyth].keys():
 									try:
 										word.properties[p]
-										if params[p] != word.properties[p]:
+										if smythFlat[smyth][p] != word.properties[p]:
 											badmatch = True
 											break
 									except KeyError as k:
 										if len(p.split('__')) > 1:
 											if p.split('__')[1] == 'contains':
-												if params[p] not in word.properties[p.split('__')[0]]:
+												if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
 													badmatch = True
 													break
 										else:
@@ -1129,6 +1092,49 @@ class VisualizationResource(Resource):
 		
 		return self.error_response(request, {'error': 'Level parameter required.'}, response_class=HttpBadRequest)
 	
+	"""
+	Returns overall statistically learned information for displaying in the panels
+	"""
+	
+	"""
+	prepare knowledge map
+	"""
+	def calculateKnowledgeMap(self, user):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + user + """' RETURN s""")	
+		
+		# get the file entry:
+		filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
+		fileContent = {}
+		with open(filename, 'r') as json_data:
+			fileContent = json.load(json_data)
+			json_data.close()			
+						
+		vocab = {}
+		smyth = {}		
+		# flatten the smyth and collect the vocab knowledge
+		for sub in submissions.elements:			
+				
+			for word in sub[0]['data']['encounteredWords']:
+					
+				try:
+					vocab[word] = vocab[word]+1
+				except KeyError as k:
+					vocab[word] = 1
+				if sub[0]['data']['smyth'] not in smyth:
+					# get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
+					params = {}
+					grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
+					for pair in grammarParams:
+						params[pair.split('=')[0]] = pair.split('=')[1]
+					smyth[sub[0]['data']['smyth']] = params
 
-
+		return [vocab, smyth]
+	
+	
+	
+	
+	
+	
 	
