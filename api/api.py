@@ -7,15 +7,13 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
 from django.conf import settings 
 from django.conf.urls import url
-from django.contrib.auth import authenticate, login, logout
-from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
-from app.models import Textbook, Unit, Lesson, Slide, AppUser
-
 from django.core.exceptions import ValidationError
+from django.db import IntegrityError
+from django.contrib.auth import authenticate, login, logout
 
-from tastypie import fields
-from tastypie.resources import Resource, ModelResource
+from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
 
+from app.models import Textbook, Unit, Lesson, Slide, AppUser
 from neo4jrestclient.client import GraphDatabase
 
 from tastypie import fields
@@ -25,6 +23,7 @@ from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
+from tastypie.resources import Resource, ModelResource
 
 import json
 import random
@@ -172,7 +171,8 @@ class UserResource(ModelResource):
 		except IntegrityError as e:
 			return self.create_response(request, {
 				'success': False,
-				'error': e
+				'error': e,
+				'error_message': 'Username already in use.'
 			})
 
 		return self.create_response(request, {
