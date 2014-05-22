@@ -3,75 +3,92 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 	var View = Backbone.View.extend({
 		events: { },
 		initialize: function(options) {
-			var that = this;
+			this.options = options;
+			if (!this.options.currentCTS)
+				this.options.currentCTS = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1';
 
-			// Create an empty collection of words, so views can update based on changes to it
-			this.collection = new Collections.Words();
-			this.collection.buildBook('urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1');
+			// Fetch the list of Documents available to the reader
+			this.documents = new Collections.Documents();
+			this.documents.on('add', this.initializeReader, this);
+			this.documents.fetch();
 
-			// Render the notes viewer at the bottom of the screen
+		},
+		render: function() {
+			return this;	
+		},
+		// This is necessary to get the facing page
+		initializeReader: function(model) {
+			if (model.get('lang') == 'grc') {
+
+				// Now that we know which document we're displaying, listen to it.
+				this.model = model;
+				this.model.set('currentCTS', this.options.currentCTS);
+				this.model.on('change:nextCTS', this.renderPages, this);
+
+				this.model.fetch({
+					success: function(model, response, options) {
+
+						// Get CTS of other page
+						var rightPage = model.getNextCTS(model.get('currentCTS'));
+
+						if (rightPage)
+							model.set('nextCTS', rightPage);
+						else
+							model.get('nextCTS', model.words.at(0));
+					}
+				});
+			}
+		},
+		renderPages: function(model, options) {
+
+			// If notes don't exist, render them.
 			if (!this.notes) {
 				this.notes = new NotesView({
-					collection: this.collection
+					model: model
 				}).render()
 					.$el
 					.appendTo(this.$el.find('.notes-container'));
 			}
 
-			// Knowledge Meter at bottom of reader
-			if (!this.knowledge) {
-				this.knowledge = new KnowledgeView()
+			// If knowledge meter doesn't exist, render.
+			if (!this.knowledge_view) {
+				this.knowledge_view = new KnowledgeView()
 					.render()
 					.$el
 					.appendTo(this.$el);
 			}
-		},
-		render: function() {
-			return this;	
-		},
-		turnToPage: function(CTS) {
 
-			// Turning pages by CTS is just gross...
-			var that = this, uri, next_uri;
-			if (CTS == undefined) {
-				uri = this.collection._meta.sentence_resource_uris[0];
-				next_uri = this.collection._meta.sentence_resource_uris[1];
-			}
-			else {
-				this.collection.addSentence({ sentenceCTS: CTS });
-				uri = this.collection.findWhere({ sentenceCTS: CTS }).get('sentence_resource_uri');
-				var index = this.collection._meta.sentence_resource_uris.indexOf(uri) + 1; 
-				next_uri = this.collection._meta.sentence_resource_uris[index];
-			}
 
-			this.$el.find('.loader').remove();
-
-			// Render pages if not yet appended to DOM
+			// If the views don't exist, render them.
 			if (!this.pages) {
 				this.pages = {};
-				this.pages.left = new PageView({ 
-					collection: that.collection, 
-					sentence_resource_uri: uri,
-					side: 'left' 
+				this.pages.left = new PageView({
+					model: model,
+					side: 'left'
 				});
 				this.pages.left.render()
 					.$el
 					.appendTo(this.$el.find('.page-container'));
 
-				this.pages.right = new PageView({ 
-					collection: that.collection,
-					sentence_resource_uri: next_uri,
-					side: 'right' 
+				this.pages.right = new PageView({
+					model: model,
+					side: 'right'
 				});
 				this.pages.right.render()
 					.$el
 					.appendTo(this.$el.find('.page-container'));
 			}
-			// Otherwise, turn the pages
 			else {
-				this.pages.left.turnToPage(CTS);
-				this.pages.right.turnToPage(nextCTS);
+				// Otherwise, flip the pages
 			}
+		},
+		turnToPage: function(CTS) {
+			/*this.$el.find('img').remove();
+			this.model.set('currentCTS', CTS);			
+			this.model.set('nextCTS', this.model.getNextCTS(CTS));
+			*/
+
+			// TODO: Fix navigation
 		}
 	});
 
