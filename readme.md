@@ -127,7 +127,7 @@ Uncomment 'apps', 'django.contrib.auth', and 'django.contrib.admin' in phaidra/s
 
 If you get errors about tables already existing, you can run these commands to fix the South history and keep the tables from trying to re-create themselves:
 
-		$ ./manage.py migrate app --fake 0001
+		$ ./manage.py migrate app --no-initial-data
 		$ ./manage.py migrate tastypie --fake 0001
 
 
