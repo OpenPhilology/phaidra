@@ -114,110 +114,23 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		}
 	});
 
-	Collections.Words = Backbone.Collection.extend({
-		model: Models.Word,
-		initialize: function() {
-			if (!this._meta)
-				this._meta = [];
+	Collections.Documents = Backbone.Collection.extend({
+		model: Models.Document,
+		url: '/api/v1/document/',
+		parse: function(response) {
 
-			this.meta = function(prop, value) {
-				if (value == undefined)
-					return this._meta[prop];
-				else
-					this._meta[prop] = value;
-			};
-		},
-		// Helper function to build large number of sentences at once
-		buildBook: function(CTS) {
-
-			var that = this;
-
-			$.ajax({
-				url: '/api/v1/document/',
-				dataType: 'json',
-				async: false,
-				data: { 'CTS': CTS },
-				success: function(response) {
-					var details = response.objects[0];
-					that._meta = _.pick(response.objects[0], 'CTS', 'author', 'lang', 'name', 'name_eng', 'resource_uri');
-
-					that._meta.sentence_resource_uris = _.map(response.objects[0]["sentences"], function(entry) {
-						return entry.resource_uri;
-					});
-
-					console.log(that);
-				},
-				error: function(x, y, z) {
-					console.log(x, y, z);
-				}
-			});
-		},
-		addSentence: function(options) {
-
-			var that = this;
-
-			// If they give us the resource_uri, skip straight to getting sentence details
-			if (options.sentence_resource_uri) {
-				this.populateDetails(options.sentence_resource_uri);	
-			}
-			// If we have only the CTS, get that, then go to populating the details
-			else if (options.sentenceCTS) {
-				$.ajax({
-					url: '/api/v1/sentence/',
-					dataType: 'json',
-					async: false,
-					that: that,
-					data: { 'CTS': options.sentenceCTS },
-					success: function(response) {
-						// Send sentence resource URI to populate details
-						this.that.populateDetails(response.objects[0]["resource_uri"]);
-					},
-					error: function(x, y, z) {
-						console.log(x, y, z);
-					}
+			// Flatten our references to sentence URIs
+			for (var i = 0; i < response.objects.length; i++) {
+				response.objects[i].sentences = response.objects[i].sentences.map(function(el) {
+					return el.resource_uri;
 				});
 			}
-		},
-		populateDetails: function(sentence_resource_uri) {
-			var that = this;
-
-			// First, make sure this isn't already populated by seeing if lemma attribute is there
-			if (!that.findWhere({ sentence_resource_uri: sentence_resource_uri })) {
-
-				// Populates a subset of the data based on the sentence URI
-				$.ajax({
-					url: sentence_resource_uri,
-					data: { 'full': 'True' },
-					dataType: 'json',
-					async: false,
-					success: function(response) {
-						var words = response.words;
-
-						for (var i = 0; i < words.length; i++) {
-							words[i]["sentenceCTS"] = response.CTS;
-							words[i]["sentence_resource_uri"] = response.resource_uri;
-							words[i]["lang"] = that._meta.lang; 
-
-							// Especially tightly coupled to our CTS implementation -- need to get this into the data itself
-							var trans = response.words[i]["translations"];
-							response.words[i]["translations"] = _.map(trans, function(entry) {
-								entry.lang = entry.CTS.substring(entry.CTS.indexOf('-') + 1, entry.CTS.indexOf('-') + 4);
-								return entry;
-							});
-						}
-
-						that.add(words);
-						that.trigger('populated');
-					},
-					error: function(x, y, z) {
-						console.log(x, y, z);
-					}
-				});
-			}
-			else {
-				that.trigger('populated');
-			}
+			this.add(response.objects);
 		}
+	});
+
+	Collections.Words = Backbone.Collection.extend({
+		model: Models.Word
 	});
 
 	return Collections;
