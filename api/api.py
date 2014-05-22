@@ -18,7 +18,7 @@ from neo4jrestclient.client import GraphDatabase
 
 from tastypie import fields
 from tastypie.bundle import Bundle
-from tastypie.authentication import SessionAuthentication, BasicAuthentication
+from tastypie.authentication import SessionAuthentication, BasicAuthentication, Authentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
@@ -85,6 +85,41 @@ class SlideResource(ModelResource):
 		resource_name = 'slide'
 		allowed_methods = ['get']
 
+class CreateUserResource(ModelResource):
+	
+	class Meta:
+		queryset = AppUser.objects.all()
+		resource_name = 'create_user'
+		fields = ['username', 'first_name', 'last_name', 'last_login']
+		allowed_methods = ['post']
+		always_return_data = True
+		authentication = Authentication()
+		authorization = Authorization()
+		
+	def post_list(self, request, **kwargs):
+		"""
+		Make sure the user isn't already registered, create the user, return user object as JSON.
+		"""
+		self.method_check(request, allowed=['post'])		
+		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+			
+		try:
+			user = AppUser.objects.create_user(
+				data.get("username"),
+				data.get("email"),
+				data.get("password")
+			)
+			user.save()
+		except IntegrityError as e:
+			return self.create_response(request, {
+				'success': False,
+				'error': e,
+				'error_message': 'Username already in use.'
+			})	
+		return self.create_response(request, {
+				'success': True
+		})
+						
 class UserResource(ModelResource):
 	class Meta:
 		queryset = AppUser.objects.all()
@@ -93,7 +128,6 @@ class UserResource(ModelResource):
 		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
 		authentication = SessionAuthentication()
-		#authentication = BasicAuthentication()
 		authorization = Authorization()
 
 	def prepend_urls(self):
@@ -154,35 +188,6 @@ class UserResource(ModelResource):
 		else:
 			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
 	
-	def post_list(self, request, **kwargs):
-		"""
-		Make sure the user isn't already registered, create the user, return user object as JSON.
-		"""
-		self.method_check(request, allowed=['post'])
-		self.is_authenticated(request)
-		
-		if not request.user or not request.user.is_authenticated() or not request.user.is_superuser:
-			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
-		else:			
-			data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
-	
-			try:
-				user = AppUser.objects.create_user(
-					data.get("username"),
-					data.get("email"),
-					data.get("password")
-				)
-				user.save()
-			except IntegrityError as e:
-				return self.create_response(request, {
-					'success': False,
-					'error': e,
-					'error_message': 'Username already in use.'
-				})
-	
-			return self.create_response(request, {
-				'success': True
-			})	
 	
 	def patch_detail(self, request, **kwargs):
 		""" 
