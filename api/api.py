@@ -159,25 +159,30 @@ class UserResource(ModelResource):
 		Make sure the user isn't already registered, create the user, return user object as JSON.
 		"""
 		self.method_check(request, allowed=['post'])
-		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
-
-		try:
-			user = AppUser.objects.create_user(
-				data.get("username"),
-				data.get("email"),
-				data.get("password")
-			)
-			user.save()
-		except IntegrityError as e:
+		self.is_authenticated(request)
+		
+		if not request.user or not request.user.is_authenticated() or not request.user.is_superuser:
+			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
+		else:			
+			data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+	
+			try:
+				user = AppUser.objects.create_user(
+					data.get("username"),
+					data.get("email"),
+					data.get("password")
+				)
+				user.save()
+			except IntegrityError as e:
+				return self.create_response(request, {
+					'success': False,
+					'error': e,
+					'error_message': 'Username already in use.'
+				})
+	
 			return self.create_response(request, {
-				'success': False,
-				'error': e,
-				'error_message': 'Username already in use.'
-			})
-
-		return self.create_response(request, {
-			'success': True
-		})	
+				'success': True
+			})	
 	
 	def patch_detail(self, request, **kwargs):
 		""" 
