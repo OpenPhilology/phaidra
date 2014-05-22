@@ -14,7 +14,7 @@
 		]
 	},        
 	{
-		"title": "The Greek Alphabet",
+		"title": "Greek Alphabet",
 		"modules": [
 			{
 				"title": "Ancient Greek Alphabet",
@@ -47,7 +47,17 @@
 		]
 	},
 	{
-		"title": "Greek Diacritics"
+		"title": "Greek Diacritics",
+		"slides": [
+			{	"title": "Diacritics and Dipthongs",
+				"slides": [
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/intro.html"
+					}
+				]
+			}
+		]
 	},
 	{
 		"title": "Introduction to Nouns",

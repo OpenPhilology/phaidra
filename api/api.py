@@ -7,6 +7,8 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
 from django.conf import settings 
 from django.conf.urls import url
+from django.contrib.auth import authenticate, login, logout
+from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
 from app.models import Textbook, Unit, Lesson, Slide, AppUser
 
 from django.core.exceptions import ValidationError
@@ -89,7 +91,143 @@ class UserResource(ModelResource):
 		queryset = AppUser.objects.all()
 		resource_name = 'user'
 		fields = ['username', 'first_name', 'last_name', 'last_login']
+		allowed_methods = ['get', 'post', 'patch']
+		always_return_data = True
+		authentication = SessionAuthentication()
+		#authentication = BasicAuthentication()
+		authorization = Authorization()
 
+	def prepend_urls(self):
+		params = (self._meta.resource_name, trailing_slash())
+		return [
+			url(r"^(?P<resource_name>%s)/login%s$" % params, self.wrap_view('login'), name="api_login"),
+			url(r"^(?P<resource_name>%s)/logout%s$" % params, self.wrap_view('logout'), name="api_logout")
+		]
+
+	def login(self, request, **kwargs):
+		"""
+		Authenticate a user, create a CSRF token for them, and return the user object as JSON.
+		"""
+		self.method_check(request, allowed=['post'])
+		
+		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+
+		username = data.get('username', '')
+		password = data.get('password', '')
+
+		if username == '' or password == '':
+			return self.create_response(request, {
+				'success': False,
+				'error_message': 'Missing username or password'
+			})
+		
+		user = authenticate(username=username, password=password)
+		
+		if user:
+			if user.is_active:
+				login(request, user)
+				response = self.create_response(request, {
+					'success': True,
+					'username': user.username
+				})
+				response.set_cookie("csrftoken", get_new_csrf_key())
+				return response
+			else:
+				return self.create_response(request, {
+					'success': False,
+					'reason': 'disabled',
+				}, HttpForbidden)
+		else:
+			return self.create_response(request, {
+				'success': False,
+				'error_message': 'Incorrect username or password'
+			})
+			
+	def logout(self, request, **kwargs):
+		""" 
+		Attempt to log a user out, and return success status.		
+		"""
+		self.method_check(request, allowed=['get'])
+		self.is_authenticated(request)
+		if request.user and request.user.is_authenticated():
+			logout(request)
+			return self.create_response(request, { 'success': True })
+		else:
+			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
+	
+	def post_list(self, request, **kwargs):
+		"""
+		Make sure the user isn't already registered, create the user, return user object as JSON.
+		"""
+		self.method_check(request, allowed=['post'])
+		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+
+		try:
+			user = AppUser.objects.create_user(
+				data.get("username"),
+				data.get("email"),
+				data.get("password")
+			)
+			user.save()
+		except IntegrityError as e:
+			return self.create_response(request, {
+				'success': False,
+				'error': e
+			})
+
+		return self.create_response(request, {
+			'success': True
+		})	
+	
+	def patch_detail(self, request, **kwargs):
+		""" 
+		Check the user		
+		"""
+		self.method_check(request, allowed=['patch'])
+		self.is_authenticated(request)
+		if not request.user or not request.user.is_authenticated():
+			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
+		else:	
+		
+			property_names = ['username', 'first_name', 'last_name', 'last_login', 'email', 'date_joined', 'lang', 'unit', 'lesson', 'progress']
+			
+			try:
+				user = AppUser.objects.select_related(depth=1).get(id=kwargs["pk"])
+			except ObjectDoesNotExist:
+				raise Http404("Cannot find user.")
+	
+			body = json.loads(request.body) if type(request.body) is str else request.body
+			data = body.copy()
+	
+			restricted_fields = ['is_staff', 'is_user', 'username', 'password']
+	
+			for field in body:
+				if hasattr(user, field) and not field.startswith("_"):
+					attr = getattr(user, field)
+					value = data[field]
+	
+					# Do not alter relationship fields from this endpoint
+					if not hasattr(attr, "_rel") and field not in restricted_fields:
+						setattr(user, field, value)
+					else:
+						return self.create_response(request, {
+							'success': False,
+							'error_message': 'You are not authorized to update this field.'
+						})
+					continue
+	
+				# This field is not contained in our model, so discard it
+				del data[field]
+	
+			if len(data) > 0:
+				user.save()
+	
+			# Returns all field data of the related user as response data
+			data = {}		
+			for property_name in property_names: 		
+				data[property_name] = getattr(user, property_name)
+	
+			return self.create_response(request, data)
 
 """
 Simple object for creating the instances.
@@ -132,7 +270,7 @@ class SubmissionResource(Resource):
 	class Meta:
 		allowed_methods = ['post', 'get', 'patch']
 		#authentication = SessionAuthentication() 
-		authentication = BasicAuthentication()
+		authentication = BasicAuthentication() 
 		authorization = UserObjectsOnlyAuthorization()
 		object_class = DataObject
 		resource_name = 'submission'
@@ -926,7 +1064,8 @@ class VisualizationResource(Resource):
 	def prepend_urls(self, *args, **kwargs):	
 		
 		return [
-			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered')
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered'),
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'statistics', trailing_slash()), self.wrap_view('statistics'), name="api_%s" % 'statistics')
 			]
 
 	"""
@@ -935,16 +1074,11 @@ class VisualizationResource(Resource):
 	#/api/v1/visualization/encountered/?format=json&level=word&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:11-19&user=john
 	def encountered(self, request, **kwargs):
 		
-		"""
-		Start visualization...
-		"""
+		data = {}
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		#fo = open("foo.txt", "wb")
 		#millis = int(round(time.time() * 1000))
-		#fo.write("%s start encountered method, get user: \n" % millis)
-		
-		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
-		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")	
-		data = {}	
+		#fo.write("%s start encountered method, get user: \n" % millis)	
 		
 		if request.GET.get('level') == "word":
 			
@@ -963,13 +1097,11 @@ class VisualizationResource(Resource):
 			for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
 				wordRangeArray.append(rangeStem + str(num))
 			
-			# get the file entry:
-			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
-			fileContent = {}
-			with open(filename, 'r') as json_data:
-				fileContent = json.load(json_data)
-				json_data.close()
-						
+			# preprocess knowledge of a user
+			callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
+			vocKnowledge = callFunction[0]
+			smythFlat = callFunction[1]
+								
 			for wordRef in wordRangeArray:
 					
 				w = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CTS) AND HAS (n.head) AND n.CTS = '""" +wordRef+ """' RETURN n""")
@@ -977,96 +1109,60 @@ class VisualizationResource(Resource):
 				seenDict[wordRef] = 0
 				knownDict[wordRef] = False
 				
-				for sub in submissions.elements:	
-				
-					# get the morph info to the words via a file lookup of submission's smyth key, save params to test it on the encountered word of a submission
-					params = {}
-					grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
-					for pair in grammarParams:
-						params[pair.split('=')[0]] = pair.split('=')[1]
-														
-					# get the encountered word's CTSs of this submission
-					if wordRef in sub[0]['data']['encounteredWords']:			
-												
-						# if word learnt already known don't apply filter again
-						if not knownDict[wordRef]:
-							# loop over params to get morph known infos							
-							badmatch = False
-							
-							for p in params.keys():
-								try:
-									w.elements[0][0]['data'][p]
-									if params[p] != w.elements[0][0]['data'][p]:
-										badmatch = True
-										break
-								except KeyError as k:
-									if len(p.split('__')) > 1:
-										if p.split('__')[1] == 'contains':
-											if params[p] not in w.elements[0][0]['data'][p.split('__')[0]]:
-												badmatch = True
-												break
-									else:
-										badmatch = True
-										break
+				#for sub in submissions.elements:
+				for smyth in smythFlat:		
+					# was the word even known?
+					if wordRef in vocKnowledge:			
+			
+						# loop over params to get morph known infos							
+						badmatch = False			
+						for p in smythFlat[smyth].keys():
+							try:
+								w.elements[0][0]['data'][p]
+								if smythFlat[smyth][p] != w.elements[0][0]['data'][p]:
+									badmatch = True
+									break
+							except KeyError as k:
+								if len(p.split('__')) > 1:
+									if p.split('__')[1] == 'contains':
+										if smythFlat[smyth][p] not in w.elements[0][0]['data'][p.split('__')[0]]:
+											badmatch = True
+											break
+								else:
+									badmatch = True
+									break
 									
-							if not badmatch:
-								knownDict[wordRef] = True				
-										
-						# if word in requested range and in encountered save times seen
-						try:
-							seenDict[wordRef]
-							seenDict[wordRef] = seenDict[wordRef] + 1
-						except KeyError as k:
-							seenDict[wordRef] = 1
+						if not badmatch:
+							knownDict[wordRef] = True												
 							
 				# save data
-				if seenDict[wordRef] > 0:
-					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.elements[0][0]['data']['CTS']})
-					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.CTS})
-				else:
-					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.elements[0][0]['data']['CTS']})
-					#data['words'].append({'value': w.value, 'timesSeen' : seenDict[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.CTS})
-		
+				try:
+					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : vocKnowledge[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.elements[0][0]['data']['CTS']})
+				except KeyError as e:
+					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : 0, 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.elements[0][0]['data']['CTS']})
+					
 			return self.create_response(request, data)
-		
-		
+			
 		
 		# if the viz of a document is requested calcualate the numbers on all submissions again and then the percentage of viz data
 		elif request.GET.get('level') == "document":
 			
 			data['sentences'] = []
-
-			# get the file entry:
-			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
-			fileContent = {}
-			with open(filename, 'r') as json_data:
-				fileContent = json.load(json_data)
-				json_data.close()
 				
-			vocKnowledge = {}
-			smythFlat = {}		
-			# flatten the smyth and collect the vocab knowledge
-			for sub in submissions.elements:			
-				
-				for word in sub[0]['data']['encounteredWords']:
-					
-					vocKnowledge[word] = True
-					if sub[0]['data']['smyth'] not in smythFlat:
-						# get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
-						params = {}
-						grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
-						for pair in grammarParams:
-							params[pair.split('=')[0]] = pair.split('=')[1]
-						smythFlat[sub[0]['data']['smyth']] = params	
+			# preprocess knowledge of a user
+			callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
+			vocKnowledge = callFunction[0]
+			smythFlat = callFunction[1]
 				
 			# get the sentences of that document
 			sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
-			#counter = 0
+			
 			for s in sentenceTable.elements:
 				
-				node = gdb.nodes.get(s[0]['self'])
-				
+				node = gdb.nodes.get(s[0]['self'])			
 				words = node.relationships.outgoing(types=["words"])
+				
+				# helper arrays also for statistics, contain the cts as a key and a boolean as an entry
 				all = {}	
 				vocabKnown = {}
 				morphKnown = {}
@@ -1076,29 +1172,28 @@ class VisualizationResource(Resource):
 				
 					word = w.end
 					all[word.properties['CTS']] = True
-					morphKnown[word.properties['CTS']] = False
 					vocabKnown[word.properties['CTS']] = False
+					morphKnown[word.properties['CTS']] = False
 					syntaxKnown[word.properties['CTS']] = False
 					# scan the submission for vocab information
 					for smyth in smythFlat:
-							
 						# was this word seen?
 						if word.properties['CTS'] in vocKnowledge:	
 							
 							# if word morph already known don't apply filter again
-							if not morphKnown[word.properties['CTS']]:
+							if morphKnown[word.properties['CTS']]:
 								# loop over params to get morph known infos
 								badmatch = False
 								for p in smythFlat[smyth].keys():
 									try:
 										word.properties[p]
-										if params[p] != word.properties[p]:
+										if smythFlat[smyth][p] != word.properties[p]:
 											badmatch = True
 											break
 									except KeyError as k:
 										if len(p.split('__')) > 1:
 											if p.split('__')[1] == 'contains':
-												if params[p] not in word.properties[p.split('__')[0]]:
+												if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
 													badmatch = True
 													break
 										else:
@@ -1113,7 +1208,7 @@ class VisualizationResource(Resource):
 				
 				# after reading words calcualte percentages of aspects for the sentence
 				sentLeng = len(words)
-				aspects = {'one': 0.00, 'two': 0.00, 'three': 0.00}
+				aspects = {'one': 0.0, 'two': 0.0, 'three': 0.0}
 				for cts in all.keys():
 					if vocabKnown[cts] and morphKnown[cts] and syntaxKnown[cts]:
 						aspects['three'] = aspects['three'] +1
@@ -1129,6 +1224,122 @@ class VisualizationResource(Resource):
 		
 		return self.error_response(request, {'error': 'Level parameter required.'}, response_class=HttpBadRequest)
 	
+	
+	"""
+	Returns overall statistically learned information for displaying in the panels
+	"""
+	def statistics(self, request, **kwargs):
+		
+		data = {}
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		
+		# preprocess knowledge of a user
+		callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
+		vocKnowledge = callFunction[0]
+		smythFlat = callFunction[1]
+			
+		# get the sentences of that document
+		sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
+		
+		# helper arrays also for statistics, contain the cts as a key and a boolean as an entry
+		all = {}	
+		vocabKnown = {}
+		morphKnown = {}
+		syntaxKnown = {}
+		wordCount = 0
+		for s in sentenceTable.elements:
+			
+			node = gdb.nodes.get(s[0]['self'])
+			
+			words = node.relationships.outgoing(types=["words"])
+				
+			for w in words:
+			
+				word = w.end
+				all[word.properties['CTS']] = True
+				# scan the submission for vocab information
+				for smyth in smythFlat:
+					# was this word seen?
+					if word.properties['CTS'] in vocKnowledge:	
+						
+						# if word morph already known don't apply filter again
+						try:
+							morphKnown[word.properties['CTS']]
+						except KeyError as k:
+							# loop over params to get morph known infos
+							badmatch = False
+							for p in smythFlat[smyth].keys():
+								try:
+									word.properties[p]
+									if smythFlat[smyth][p] != word.properties[p]:
+										badmatch = True
+										break
+								except KeyError as k:
+									if len(p.split('__')) > 1:
+										if p.split('__')[1] == 'contains':
+											if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
+												badmatch = True
+												break
+									else:
+										badmatch = True
+										break
+							
+							if not badmatch:
+								morphKnown[word.properties['CTS']] = True # all params are fine											
+						
+						# know this vocab
+						vocabKnown[word.properties['CTS']] = True
+				
+			# after reading words update overall no
+			wordCount = wordCount + len(words)
+		
+		# after reading everything return the statistics
+		data['statistics'] = {'all': wordCount, 'vocab': float(len(vocabKnown))/float(len(all)), 'morphology': float(len(morphKnown))/float(len(all)), 'syntax': float(len(syntaxKnown))/float(len(all))}
+	
+		return self.create_response(request, data)
+	
+	
+	
+	
+	"""
+	prepare knowledge map
+	"""
+	def calculateKnowledgeMap(self, user):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + user + """' RETURN s""")	
+		
+		# get the file entry:
+		filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
+		fileContent = {}
+		with open(filename, 'r') as json_data:
+			fileContent = json.load(json_data)
+			json_data.close()			
+						
+		vocab = {}
+		smyth = {}		
+		# flatten the smyth and collect the vocab knowledge
+		for sub in submissions.elements:			
+				
+			for word in sub[0]['data']['encounteredWords']:
+					
+				try:
+					vocab[word] = vocab[word]+1
+				except KeyError as k:
+					vocab[word] = 1
+				if sub[0]['data']['smyth'] not in smyth:
+					# get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
+					params = {}
+					grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
+					for pair in grammarParams:
+						params[pair.split('=')[0]] = pair.split('=')[1]
+					smyth[sub[0]['data']['smyth']] = params
 
-
+		return [vocab, smyth]
+	
+	
+	
+	
+	
+	
 	
