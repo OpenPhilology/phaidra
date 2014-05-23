@@ -160,10 +160,111 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		}
 	});
 
+	Models.Document = Backbone.Model.extend({
+		defaults: {
+			'modelName': 'document'
+		},
+		initialize: function(attributes) {
+			this.urlRoot = attributes.resource_uri;
+
+			Collections = require('collections');
+			this.words = new Collections.Words();
+		},
+		parse: function(response) {
+
+			// TODO: Move this
+			if (response.lang == 'fas')
+				this.set('direction', 'rtl');
+			else
+				this.set('direction', 'ltr');
+
+			// Split all the words and add them to the collection.
+			for (var i = 0; i < response.sentences.length; i++) {
+				var tokens = response.sentences[i]["sentence"].trim().split(' ');
+
+				this.words.add(tokens.map(function(token, index) {
+					return {
+						sentenceCTS: response.sentences[i]["CTS"],
+						sentence_resource_uri: response.sentences[i]["resource_uri"],
+						lang: response.lang,
+						value: token,
+						index: index
+					};
+				}));
+			}
+		},
+		// TODO: Merge this functions, make them aware of text direction
+		getNextCTS: function(sentenceCTS) {
+			var current_resource_uri = this.words.findWhere({
+				sentenceCTS: sentenceCTS
+			}).get('sentence_resource_uri');
+			var index = this.get('sentences').indexOf(current_resource_uri) + 1;
+			var nextPage = this.words.findWhere({
+				sentence_resource_uri: this.get('sentences')[index]
+			})
+
+			if (nextPage)
+				return nextPage.get('sentenceCTS');
+			else
+				return undefined;
+		},
+		getPrevCTS: function(sentenceCTS) {
+			var current_resource_uri = this.words.findWhere({
+				sentenceCTS: sentenceCTS
+			}).get('sentence_resource_uri');
+			var index = this.get('sentences').indexOf(current_resource_uri) - 1;
+			var nextPage = this.words.findWhere({
+				sentence_resource_uri: this.get('sentences')[index]
+			})
+
+			if (nextPage)
+				return nextPage.get('sentenceCTS');
+			else
+				return undefined;
+		},
+		populate: function(sentenceCTS) {
+			// Populate a section of words by their sentence CTS id
+			var starter = this.words.findWhere({ sentenceCTS: sentenceCTS });
+			var that = this;
+
+			if (starter.get('lemma')) {
+				// If it has a lemma property, we know its been populated
+				this.trigger('pageReady', this, { CTS: sentenceCTS });
+			}
+			else {
+				$.ajax({
+					url: starter.get('sentence_resource_uri'),
+					data: { 'full': 'True' },
+					dataType: 'json',
+					doc: that,
+					success: function(response) {
+						this.doc.set('translations', response.translations);
+						
+						for (var i = 0; i < response.words.length; i++) {
+							this.doc.words.findWhere({ wordCTS: response.words[i]["CTS"] })
+								.set(response.words[i]);
+						}
+
+						this.doc.trigger('pageReady', this.doc, { CTS: response["CTS"] });
+					},
+					error: function(x, y, z) {
+						console.log(x, y, z);
+					}
+				});
+			}
+		}
+	});
+
 	Models.Word = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'word',
 			'selected': false
+		},
+		initialize: function(attributes) {
+			this.set('wordCTS', attributes.sentenceCTS + ':' + (attributes.index + 1));
+		},
+		parse: function(response) {
+			
 		},
 		// TODO: Flesh out this implementation to cover more query filters
 		getGrammar: function() {

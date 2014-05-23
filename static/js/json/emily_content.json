@@ -48,7 +48,7 @@
 	},
 	{
 		"title": "Greek Diacritics",
-		"slides": [
+		"modules": [
 			{	"title": "Diacritics and Dipthongs",
 				"slides": [
 					{	

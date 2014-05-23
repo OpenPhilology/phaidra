@@ -1,4 +1,8 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module', 'views/login', 'views/index', 'views/reader', 'views/grammar'], function($, _, Backbone, Models, Collections, ModuleView, LoginView, IndexView, ReaderView, GrammarView) { 
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module', 
+		'views/login', 'views/index', 'views/reader', 'views/grammar', 'views/aligner'], 
+		function($, _, Backbone, Models, Collections, ModuleView, 
+		LoginView, IndexView, ReaderView, GrammarView, AlignerView) { 
+
 	var Router = {};
 	Router.Router = Backbone.Router.extend({
 		routes: {
@@ -46,10 +50,12 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 
 		// Creator View (Annotations/Micropubs)
 		createAnnotation: function(type, cts) {
-
+			if (!this.aligner)
+				this.aligner = new AlignerView({ el: '#main' }).render().$el.appendTo($('#main'));
 		},
 		showCreator: function() {
-
+			if (!this.aligner)
+				this.createAnnotation();
 		},
 
 		// Traditional Grammar View

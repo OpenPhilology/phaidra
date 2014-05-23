@@ -11,7 +11,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 		},
 		initialize: function(options) {
 			this.options = options;	
-			this.collection.bind('change:selected change:hovered', this.toggleNotes, this);
+			this.model.words.bind('change:selected change:hovered', this.toggleNotes, this);
 
 			this.$el.html(NotesTemplate);
 			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
@@ -20,7 +20,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			return this;	
 		},
 		renderDetails: function() {
-			var selected = this.collection.findWhere({ selected: true });
+			var selected = this.model.words.findWhere({ selected: true });
 
 			// Give the user the definite article with the definition
 			if (selected.get('pos') == 'noun') {
@@ -48,7 +48,8 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			link.find('strong').html(toggle + 'Parse');
 		},
 		toggleNotes: function(model) {
-			if (model.get('hovered') && !model.get('selected') && (this.collection.findWhere({ selected: true }) == undefined)) {
+			if (model.get('hovered') && !model.get('selected') && 
+				(this.model.words.findWhere({ selected: true }) == undefined)) {
 				this.$el.find('.intro').html(
 					'Information about <span lang="' + model.get('lang') +'">' + model.get('value') + '</span>'
 				);
@@ -66,7 +67,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 		},
 		collapseNotes: function(e) {
 			e.preventDefault();
-			var selected = this.collection.findWhere({ selected: true });
+			var selected = this.model.words.findWhere({ selected: true });
 			if (typeof(selected) != 'undefined')
 				selected.set('selected', false);
 		},
