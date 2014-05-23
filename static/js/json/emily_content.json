@@ -54,6 +54,26 @@
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/intro.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/rough.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/smooth.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/longshort.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/iota.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/accents.html"
 					}
 				]
 			}
