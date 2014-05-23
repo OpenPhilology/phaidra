@@ -631,24 +631,7 @@ class WordResource(Resource):
 			new_obj.__dict__['_data'] = word['data']		
 			new_obj.__dict__['_data']['id'] = url[len(url)-1]
 			new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
-			
-			# get the word as a node to query relations
-			#wordNode = gdb.nodes.get(word['self'])
-			
-			# get the lemma -> too expensive here, put it into detail view			
-			#lemmaRels = word.relationships.incoming(types=["values"])
-			#if len(lemmaRels) > 0:
-				#new_obj.__dict__['_data']['lemma_resource'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
-			
-			# get the translations -> too expensive here, put in into detail view	
-			#translations = wordNode.relationships.outgoing(types=["translation"])	
-			#translationArray = []
-			#for t in translations:
-				#trans = t.end
-				#trans.properties['resource_uri'] = API_PATH + 'word/' + str(trans.id) + '/'
-				#translationArray.append(trans.properties)
-				
-			#new_obj.__dict__['_data']['translations'] = reversed(translationArray)			
+					
 			words.append(new_obj)
 				
 		return words
@@ -672,17 +655,17 @@ class WordResource(Resource):
 		lemmaRels = word.relationships.incoming(types=["values"])
 		if len(lemmaRels) > 0:
 			new_obj.__dict__['_data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
-		
-		# get the translations	
-		translations = word.relationships.outgoing(types=["translation"])			
-		translationArray = []
-		for t in range(0, len(translations), 1):
-			trans = translations[t].end
-			trans.properties['resource_uri'] = API_PATH + 'word/' + str(trans.id) + '/'
-			translationArray.append(trans.properties)
 			
+		translations = gdb.query("""START d=node(*) MATCH (d)-[:translation]->(w) WHERE d.CTS='""" +word.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+		translationArray = []
+		for t in translations:
+			trans = t[0]
+			url = trans['self'].split('/')
+			trans['data']['resource_uri'] = API_PATH + 'word/' + url[len(url)-1] + '/'
+			translationArray.append(trans['data'])
+				
 		new_obj.__dict__['_data']['translations'] = translationArray
-
+				
 		return new_obj
 
 class SentenceResource(Resource):
@@ -799,45 +782,44 @@ class SentenceResource(Resource):
 			cts_outtake = sent['data']['CTS'].split(':')[len(sent['data']['CTS'].split(':'))-2]
 			key = cts_outtake.split('-')[len(cts_outtake.split('-'))-1]
 			new_obj.__dict__['_data']['translations'][key] = API_PATH + 'sentence/' + url[len(url)-1] +'/'		
-						
-		# get the words
-		words = sentence.relationships.outgoing(types=["words"])
-		wordArray = []		
-		for w in range(0, len(words), 1):
-			word = words[w].end
-			# get the lemma of a word
-			lemmaRels = word.relationships.incoming(types=["values"])
+		
+		# get the words	and related information	
+		words = gdb.query("""START d=node(*) MATCH (d)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+		wordArray = []
+		for w in words:
+			word = w[0]
+			url = word['self'].split('/')
+			word['data']['resource_uri'] = API_PATH + 'word/' + url[len(url)-1] + '/'
+			wordNode = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + url[len(url)-1] + '/')
+			
+			# get the lemma	
+			lemmaRels = wordNode.relationships.incoming(types=["values"])
 			if len(lemmaRels) > 0:
-				word.properties['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
-		
-			# create the resource uri of the word
-			word.properties['resource_uri'] = API_PATH + 'word/' + str(word.id) + '/'		
+				word['data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
 			
-			# if full=True return also the translation data to the words
-			if bundle.request.GET.get('full'):
-				translationRels = word.relationships.outgoing(types=["translation"])
+			# get the full translation
+			if bundle.request.GET.get('full'):			
+				translations = gdb.query("""START d=node(*) MATCH (d)-[:translation]->(w) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
 				translationArray = []
-				#for t in translationRels:
-				for i in range(0, len(translationRels), 1):
-					trans = translationRels[i].end
-					#trans = t.end
-					trans.properties['resource_uri'] = API_PATH + 'word/' + str(trans.id) + '/'
-					translationArray.append(trans.properties)
-
-				word.properties['translations'] = translationArray
+				for t in translations:
+					trans = t[0]
+					transurl = trans['self'].split('/')
+					trans['data']['resource_uri'] = API_PATH + 'word/' + transurl[len(transurl)-1] + '/'
+					translationArray.append(trans['data'])
+				word['data']['translations'] = translationArray
+				
+			wordArray.append(word['data'])
 			
-			wordArray.append(word.properties)
-		
 		# if short=True return only words of the short sentence
 		if bundle.request.GET.get('short'):
 			wordArray =  self.shorten(wordArray, query_params)
 			if wordArray is None:
 				#return None
-				raise BadRequest("Sentence doesn't hit your query.")		
-				#return self.error_response(bundle.request, {'error': ''}, response_class=HttpBadRequest)	
-						
+				raise BadRequest("Sentence doesn't hit your query.")
+		
+		
 		new_obj.__dict__['_data']['words'] = wordArray
-			
+
 		return new_obj
 	
 	
@@ -931,15 +913,15 @@ class SentenceResource(Resource):
 							
 							if cand:										
 								# set and order words
-								return sorted(aim_words, key=lambda x: x['tbwid'], reverse=True)	
+								return sorted(aim_words, key=lambda x: x['tbwid'])	
 						
 						return None		
 					else:		
 						# set and order words
-						return sorted(aim_words, key=lambda x: x['tbwid'], reverse=True)				
+						return sorted(aim_words, key=lambda x: x['tbwid'])				
 					
 					# set and order words
-					return sorted(aim_words, key=lambda x: x['tbwid'], reverse=True)
+					return sorted(aim_words, key=lambda x: x['tbwid'])
 									
 		return None
 
@@ -1016,17 +998,31 @@ class DocumentResource(Resource):
 			new_obj.__dict__['_data'] = document['data']		
 			new_obj.__dict__['_data']['id'] = urlDoc[len(urlDoc)-1]
 			
-			documentNode = gdb.nodes.get(document['self'])
-			sentences = documentNode.relationships.outgoing(types=["sentences"])
-			
+			#documentNode = gdb.nodes.get(document['self'])
+			#sentences = documentNode.relationships.outgoing(types=["sentences"])
+	
+			sentences = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) WHERE d.CTS='""" +document['data']['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
 			sentenceArray = []
-			for s in range(0, len(sentences), 1):
-				sent = sentences[s].end
-				properties = {} #sent.properties #sent.properties['resource_uri']
-				properties['resource_uri'] = API_PATH + 'sentence/' + str(sent.id) + '/'
-				sentenceArray.append(properties)
+			for s in sentences:
+				
+				sent = s[0]
+				url = sent['self'].split('/')
+				# this might seems a little hacky, but API resources are very decoupled,
+				# which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
+				sent['data'] = {}
+				sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
+				sentenceArray.append(sent['data'])
 				
 			new_obj.__dict__['_data']['sentences'] = sentenceArray
+
+			#sentenceArray = []
+			#for s in range(0, len(sentences), 1):
+				#sent = sentences[s].end
+				#properties = {} #sent.properties #sent.properties['resource_uri']
+				#properties['resource_uri'] = API_PATH + 'sentence/' + str(sent.id) + '/'
+				#sentenceArray.append(properties)
+				
+			#new_obj.__dict__['_data']['sentences'] = sentenceArray
 			
 			documents.append(new_obj)		
 				
@@ -1045,14 +1041,15 @@ class DocumentResource(Resource):
 		new_obj.__dict__['_data'] = document.properties
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		
-		sentences = document.relationships.outgoing(types=["sentences"])
+		sentences = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) WHERE d.CTS='""" +document.properties['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
 		sentenceArray = []
-		for s in range(0, len(sentences), 1):
-			sentence = sentences[s].end
+		for s in sentences:
+			sent = s[0]
+			url = sent['self'].split('/')
 			# this might seems a little hacky, but API resources are very decoupled,
 			# which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
-			sentence.properties['resource_uri'] = API_PATH + 'sentence/' + str(sentence.id) + '/'
-			sentenceArray.append(sentence.properties)
+			sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
+			sentenceArray.append(sent['data'])
 				
 			new_obj.__dict__['_data']['sentences'] = sentenceArray
 
@@ -1081,7 +1078,6 @@ class VisualizationResource(Resource):
 	"""
 	returns visualization data on word-rage-, book- and work-level.
 	"""
-	#/api/v1/visualization/encountered/?format=json&level=word&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:11-19&user=john
 	def encountered(self, request, **kwargs):
 		
 		data = {}
@@ -1090,9 +1086,9 @@ class VisualizationResource(Resource):
 		#millis = int(round(time.time() * 1000))
 		#fo.write("%s start encountered method, get user: \n" % millis)	
 		
+		# /api/v1/visualization/encountered/?format=json&level=word&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:11-19&user=john
 		if request.GET.get('level') == "word":
 			
-			seenDict = {}
 			knownDict = {}
 			data['words'] = []
 		
@@ -1104,6 +1100,7 @@ class VisualizationResource(Resource):
 			rangeStem = cts[0:endIndex]		
 			# get the numbers of the range and save the CTSs
 			numbersArray = cts.split(':')[len(cts.split(':'))-1].split('-')
+			####### make a error code wront range format here
 			for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
 				wordRangeArray.append(rangeStem + str(num))
 			
@@ -1116,7 +1113,6 @@ class VisualizationResource(Resource):
 					
 				w = gdb.query("""START n=node(*) MATCH (n) WHERE HAS (n.CTS) AND HAS (n.head) AND n.CTS = '""" +wordRef+ """' RETURN n""")
 				
-				seenDict[wordRef] = 0
 				knownDict[wordRef] = False
 				
 				#for sub in submissions.elements:
@@ -1149,12 +1145,76 @@ class VisualizationResource(Resource):
 				try:
 					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : vocKnowledge[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.elements[0][0]['data']['CTS']})
 				except KeyError as e:
+					##### here might goes the sentence end error code
 					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : 0, 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.elements[0][0]['data']['CTS']})
 					
 			return self.create_response(request, data)
+		
+		
+		# if the viz of a book is requested calcualate the numbers on all submissions and then the percentage of viz data
+		# /api/v1/visualization/encountered/?format=json&level=book&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1&user=john
+		elif request.GET.get('level') == "book":
+			
+			knownDict = {}
+			data['words'] = []
+							
+			# preprocess knowledge of a user
+			callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
+			vocKnowledge = callFunction[0]
+			smythFlat = callFunction[1]
+								
+			# get the sentences of that document
+			sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s ORDER BY ID(s)""")
+			
+			for s in sentenceTable.elements:
+				
+				node = gdb.nodes.get(s[0]['self'])			
+				#words = node.relationships.outgoing(types=["words"])
+				
+				words = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE s.CTS = '""" +node.properties['CTS']+ """' RETURN w ORDER BY ID(w)""")
+				
+				for w in words:
+					word = w[0]
+					#word = gdb.nodes.get(w[0]['self'])	
+					knownDict[word['data']['CTS']] = False
+				
+					for smyth in smythFlat:		
+						
+						# scan the submission for vocab information
+						if word['data']['CTS'] in vocKnowledge:			
+			
+							# loop over params to get morph known infos							
+							badmatch = False			
+							for p in smythFlat[smyth].keys():
+								try:
+									word['data'][p]
+									if smythFlat[smyth][p] != word['data'][p]:
+										badmatch = True
+										break
+								except KeyError as k:
+									if len(p.split('__')) > 1:
+										if p.split('__')[1] == 'contains':
+											if smythFlat[smyth][p] not in word['data'][p.split('__')[0]]:
+												badmatch = True
+												break
+									else:
+										badmatch = True
+										break
+									
+							if not badmatch:
+								knownDict[word['data']['CTS']] = True												
+							
+					# save data
+					try:
+						data['words'].append({'value': word['data']['value'], 'timesSeen' : vocKnowledge[word['data']['CTS']], 'morphKnown': knownDict[word['data']['CTS']], 'synKnown': False, 'vocKnown': True, 'CTS': word['data']['CTS']})
+					except KeyError as e:
+						data['words'].append({'value': word['data']['value'], 'timesSeen' : 0, 'morphKnown': knownDict[word['data']['CTS']], 'synKnown': False, 'vocKnown': False, 'CTS': word['data']['CTS']})
+						
+			return self.create_response(request, data)
 			
 		
-		# if the viz of a document is requested calcualate the numbers on all submissions again and then the percentage of viz data
+		# if the viz of a document is requested calcualate the numbers on all submissions and then the percentage of viz data
+		# /api/v1/visualization/encountered/?format=json&level=document&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1&user=john
 		elif request.GET.get('level') == "document":
 			
 			data['sentences'] = []
@@ -1165,7 +1225,7 @@ class VisualizationResource(Resource):
 			smythFlat = callFunction[1]
 				
 			# get the sentences of that document
-			sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
+			sentenceTable = gdb.query("""START n=node(*) MATCH (n)-[:sentences]->(s) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s ORDER BY ID(s)""")
 			
 			for s in sentenceTable.elements:
 				
