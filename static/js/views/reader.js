@@ -4,44 +4,48 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 		events: { },
 		initialize: function(options) {
 			this.options = options;
-			if (!this.options.currentCTS)
-				this.options.currentCTS = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1';
+
+			// Default to beginning of Thuc
+			if (!options.CTS)
+				this.options.CTS = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1';
 
 			// Fetch the list of Documents available to the reader
 			this.documents = new Collections.Documents();
 			this.documents.on('add', this.initializeReader, this);
 			this.documents.fetch();
 
+			// Bind view context to our model population callbacks
+			_.bindAll(this, "fetchSuccess", "fetchError");
+
 		},
 		render: function() {
+			// Render early what we can
+			if (!this.knowledge_view) {
+				this.knowledge_view = new KnowledgeView()
+					.render()
+					.$el
+					.appendTo(this.$el);
+			}
+
 			return this;	
 		},
-		// This is necessary to get the facing page
 		initializeReader: function(model) {
 			if (model.get('lang') == 'grc') {
-
-				// Now that we know which document we're displaying, listen to it.
 				this.model = model;
-				this.model.set('currentCTS', this.options.currentCTS);
-				this.model.on('change:nextCTS', this.renderPages, this);
-
 				this.model.fetch({
-					success: function(model, response, options) {
-
-						// Get CTS of other page
-						var rightPage = model.getNextCTS(model.get('currentCTS'));
-
-						if (rightPage)
-							model.set('nextCTS', rightPage);
-						else
-							model.get('nextCTS', model.words.at(0));
-					}
+					success: this.fetchSuccess,
+					error: this.fetchError
 				});
 			}
 		},
+		fetchSuccess: function(model, options) {
+			// Successfully got the words we need for our initial render
+			this.renderPages(model);	
+		},
+		fetchError: function(model, options) {
+			console.log("error fetching ", model);
+		},
 		renderPages: function(model, options) {
-
-			// If notes don't exist, render them.
 			if (!this.notes) {
 				this.notes = new NotesView({
 					model: model
@@ -50,21 +54,14 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 					.appendTo(this.$el.find('.notes-container'));
 			}
 
-			// If knowledge meter doesn't exist, render.
-			if (!this.knowledge_view) {
-				this.knowledge_view = new KnowledgeView()
-					.render()
-					.$el
-					.appendTo(this.$el);
-			}
-
-
 			// If the views don't exist, render them.
 			if (!this.pages) {
 				this.pages = {};
+
 				this.pages.left = new PageView({
 					model: model,
-					side: 'left'
+					side: 'left',
+					CTS: this.options.CTS
 				});
 				this.pages.left.render()
 					.$el
@@ -72,23 +69,18 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 
 				this.pages.right = new PageView({
 					model: model,
-					side: 'right'
+					side: 'right',
+					CTS: this.model.getNextCTS(this.options.CTS)
 				});
 				this.pages.right.render()
 					.$el
 					.appendTo(this.$el.find('.page-container'));
 			}
-			else {
-				// Otherwise, flip the pages
-			}
 		},
 		turnToPage: function(CTS) {
-			/*this.$el.find('img').remove();
-			this.model.set('currentCTS', CTS);			
-			this.model.set('nextCTS', this.model.getNextCTS(CTS));
-			*/
-
-			// TODO: Fix navigation
+			this.options.CTS = CTS;
+			this.pages.left.turnToPage(CTS);
+			this.pages.right.turnToPage(this.model.getNextCTS(CTS));
 		}
 	});
 

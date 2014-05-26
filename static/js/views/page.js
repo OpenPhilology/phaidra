@@ -12,26 +12,30 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		template: _.template(PageTemplate),
 		initialize: function(options) {
 			this.options = options;
-			this.model.on('pageReady', this.reRender, this);
 
-			if (this.model.get('direction') == 'ltr' && this.options.side == 'left') {
-				this.model.populate(this.model.get('currentCTS'));
-				this.options.CTS = this.model.get('currentCTS');
-			}
-			else {
-				this.model.populate(this.model.get('nextCTS'));
-				this.options.CTS = this.model.get('nextCTS');
-			}
-
+			// Bind to our document model and our word collection
+			this.model.on('populated', this.reRender, this);
 			this.model.words.on('change:selected', this.toggleHighlight, this); 
-			
+
+			if (this.options.CTS == undefined) {
+				this.options.CTS = this.model.words.at(0).get('sentenceCTS');
+			}
+
+			this.model.populate(this.options.CTS);
 		},
 		render: function() {
+			this.$el.html(this.template({ 
+				side: this.options.side, 
+				author: this.model.get('author'),
+				work: this.model.get('name'),
+				lang: this.model.get('lang'),
+				words: {},
+				cts: this.options.CTS
+			})); 
 			return this;
 		},
 		reRender: function(model) {
 
-			// Pass in CTS of sentence so only words in that sentence appear on this page  
 			this.$el.html(this.template({ 
 				side: this.options.side, 
 				author: this.model.get('author'),
@@ -44,7 +48,7 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			// Update the 'next or previous' page links
 			var that = this;
 			this.$el.find('a').attr('href', function() {
-				var cts = that.options.side == 'left' ? that.model.getPrevCTS(that.options.CTS) : model.getNextCTS(that.options.CTS); 
+				var cts = that.options.side == 'left' ? that.model.getPrevCTS(that.options.CTS) : that.model.getNextCTS(that.options.CTS); 
 				return '/reader/' + (cts || '');
 			}).tooltip();
 
@@ -53,13 +57,13 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 
 			return this;	
 		},
+		turnPage: function(e) {
+			if (e) e.preventDefault();
+			Backbone.history.navigate(this.$el.find('.corner a').attr('href'), { trigger: true });		
+		},
 		turnToPage: function(CTS) {
 			this.options.CTS = CTS;
 			this.model.populate(CTS);
-		},
-		turnPage: function(e) {
-			e.preventDefault();
-			Backbone.history.navigate(this.$el.find('.corner a').attr('href'), { trigger: true });		
 		},
 		hoverWord: function(e) {
 			var word = this.model.words.findWhere({ 

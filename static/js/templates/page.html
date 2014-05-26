@@ -16,7 +16,7 @@
 			<% if (word.get('sentenceCTS') == cts) { %>
 				<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('wordCTS') %>" class="<% if (word.get('value').match(/[\.,-\·\/#!$%\^&\*;:{}=\-_`~()]/)) print('punct'); %>"><%= word.get('value') %></span> 
 			<% } %>
-		<% }) %>
+		<% }); %>
 	</span>
 
 </div>
