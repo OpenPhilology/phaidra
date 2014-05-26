@@ -226,7 +226,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			else
 				return undefined;
 		},
-		populate: function(sentenceCTS) {
+		populate: function(sentenceCTS, options) {
 			// Populate a section of words by their sentence CTS id
 			var starter = this.words.findWhere({ sentenceCTS: sentenceCTS });
 			var that = this;
@@ -241,6 +241,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 					data: { 'full': 'True' },
 					dataType: 'json',
 					doc: that,
+					options: options,
 					success: function(response) {
 						this.doc.set('translations', response.translations);
 						

@@ -63,7 +63,7 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		},
 		turnToPage: function(CTS) {
 			this.options.CTS = CTS;
-			this.reRender();
+			this.model.populate(CTS);
 		},
 		hoverWord: function(e) {
 			var word = this.model.words.findWhere({ 
