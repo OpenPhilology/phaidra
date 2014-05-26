@@ -44,14 +44,19 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 
 		// Form handles login page 
 		showLogin: function() {
-			if (!this.login_view)
-				this.login_view = new LoginView({ el: '#loginform'}).render();
+			if (!this.login_view) {
+				this.login_view = new LoginView({ el: '#loginform'})
+					.render();
+			}
 		},
 
 		// Creator View (Annotations/Micropubs)
 		createAnnotation: function(type, cts) {
 			if (!this.aligner)
-				this.aligner = new AlignerView({ el: '#main' }).render().$el.appendTo($('#main'));
+				this.aligner = new AlignerView({ el: '#main' })
+					.render()
+					.$el
+					.appendTo($('#main'));
 		},
 		showCreator: function() {
 			if (!this.aligner)
@@ -60,28 +65,36 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 
 		// Traditional Grammar View
 		showGrammar: function(smyth) {
-			if (!this.grammar_view)
-				this.grammar_view = new GrammarView({ el: '#main', smyth: smyth}).render().$el.appendTo($('#main'));
+			if (!this.grammar_view) {
+				this.grammar_view = new GrammarView({ el: '#main', smyth: smyth})
+					.render()
+					.$el
+					.appendTo($('#main'));
+			}
 		},
 
 		// Reader Routes
 		showReader: function() {
-			if (!this.reader_view)
-				this.reader_view = new ReaderView({ el: '#reader' }).render();
-
 			this.updateReader(undefined);
 		},
-		updateReader: function(cts) {
-			if (!this.reader_view)
-				this.showReader();
-
-			this.reader_view.turnToPage(cts);
+		updateReader: function(CTS) {
+			if (!this.reader_view) {
+				this.reader_view = new ReaderView({ 
+					el: '#reader', 
+					CTS: CTS 
+				}).render();
+			}
+			else {
+				this.reader_view.turnToPage(CTS);
+			}
 		},
 
 		// Lesson Routes
 		showLessons: function() {
-			if (!this.index_view)
-				this.index_view = new IndexView({ el: '#main' }).render();
+			if (!this.index_view) {
+				this.index_view = new IndexView({ el: '#main' })
+					.render();
+			}
 		},
 		forwardModule: function() {
 			Backbone.history.navigate('module/3/section/0/slide/0', { trigger: true });
