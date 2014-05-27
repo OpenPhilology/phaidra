@@ -1,0 +1,19 @@
+<div class="panel panel-default aligner" style="margin: 20px">
+	<div class="panel-body">
+		<div class="left-side" dir="<%= doc.direction %>">
+			<h4><%= doc.readable_lang %></h4>
+			<hr>
+			<% _.each(words, function(word) { %>
+				<% if (word.get('sentenceCTS') == CTS) { %>
+					<span lang="<%= word.get('lang') %>" style="padding: 5px" data-cts="<%= word.get('wordCTS') %>" class="<% if (word.get('value').match(/[\.,-\·\/#!$%\^&\*;:{}=\-_`~()]/)) print('punct'); %>"><%= word.get('value') %></span> 
+				<% } %>
+			<% }); %>
+		</div>
+		<div class="right-side">
+			eng
+		</div>
+	</div>
+	<div class="panel-footer">
+		<h4><%= doc.name %> <small>by <%= doc.author %></small>, <a href="#">section</a></small></h4> 
+	</div>
+</div>
