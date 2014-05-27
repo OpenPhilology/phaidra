@@ -50,7 +50,6 @@ html, body {
 body {
   color: #666;
   font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  background-image: url("/static/images/footer_graphic.png");
   background-repeat: repeat-x;
   background-position: left bottom;
   background-attachment: fixed; }
@@ -1085,3 +1084,9 @@ table.inflection-table {
     #grammar-container .corner.right {
       top: -1px;
       right: -1px; }
+
+.aligner .left-side, .aligner .right-side {
+  line-height: 3em;
+  display: inline-block;
+  width: 50%;
+  float: left; }

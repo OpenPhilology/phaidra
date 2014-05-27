@@ -51,16 +51,17 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 		},
 
 		// Creator View (Annotations/Micropubs)
-		createAnnotation: function(type, cts) {
-			if (!this.aligner)
-				this.aligner = new AlignerView({ el: '#main' })
-					.render()
-					.$el
-					.appendTo($('#main'));
+		createAnnotation: function(type, CTS) {
+			/*if (!this.aligner)
+				this.aligner = new AlignerView({
+					CTS: CTS
+				});
+				$('#main').html(this.aligner.render()
+					.$el);*/
 		},
 		showCreator: function() {
-			if (!this.aligner)
-				this.createAnnotation();
+			/*if (!this.aligner)
+				this.createAnnotation();*/
 		},
 
 		// Traditional Grammar View

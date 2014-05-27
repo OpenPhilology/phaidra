@@ -115,7 +115,7 @@ html, body {
 body {
 	color: #666;
 	font-family: $font-family;
-	background-image: url('/static/images/footer_graphic.png');
+	//background-image: url('/static/images/footer_graphic.png');
 	background-repeat: repeat-x;
 	background-position: left bottom;
 	background-attachment: fixed;
@@ -1351,5 +1351,15 @@ table.inflection-table {
 			top: -1px;
 			right: -1px;
 		}
+	}
+}
+
+.aligner {
+
+	.left-side, .right-side {
+		line-height: 3em;
+		display: inline-block;
+		width: 50%;
+		float: left;
 	}
 }
