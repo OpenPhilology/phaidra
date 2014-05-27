@@ -1,18 +1,20 @@
-Django==1.6.2
+Django==1.5.3
 Markdown==2.3.1
 South==0.8.4
 argparse==1.2.1
 decorator==3.4.0
 distribute==0.6.49
 django-filter==0.7
--e git+https://github.com/mlent/django-tastypie.git@9ce920d2acca06c52bcd7bc759f78190ba317ba4#egg=django_tastypie-master
+-e git+https://github.com/mlent/django-tastypie.git@9ce920d2acca06c52bcd7bc759f78190ba317ba4#egg=django_tastypie-dev
+djangorestframework==2.3.8
 httplib2==0.8
 lucene-querybuilder==0.2
 meld3==0.6.10
-neo4j-embedded==1.6
-neo4jrestclient==1.9.0
+-e git+https://github.com/scholrly/neo4django/@1f107335052d7a04a0bc8c8e640bbbf2ec44148f#egg=neo4django-dev
+neo4jrestclient==2.0.0
 psycopg2==2.5.2
 python-dateutil==2.1
 python-mimeparse==0.1.4
+requests==2.1.0
 six==1.4.1
 wsgiref==0.1.2

@@ -14,7 +14,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
 
 from app.models import Textbook, Unit, Lesson, Slide, AppUser
-from neo4jrestclient.client import GraphDatabase
+from neo4jrestclient.client import GraphDatabase, Node, Relationship
 
 from tastypie import fields
 from tastypie.bundle import Bundle
@@ -1131,9 +1131,14 @@ class VisualizationResource(Resource):
 							except KeyError as k:
 								if len(p.split('__')) > 1:
 									if p.split('__')[1] == 'contains':
-										if smythFlat[smyth][p] not in w.elements[0][0]['data'][p.split('__')[0]]:
+										try:
+											w.elements[0][0]['data'][p.split('__')[0]]
+											if smythFlat[smyth][p] not in w.elements[0][0]['data'][p.split('__')[0]]:
+												badmatch = True
+												break
+										except KeyError as k:
 											badmatch = True
-											break
+											break										
 								else:
 									badmatch = True
 									break
@@ -1194,9 +1199,14 @@ class VisualizationResource(Resource):
 								except KeyError as k:
 									if len(p.split('__')) > 1:
 										if p.split('__')[1] == 'contains':
-											if smythFlat[smyth][p] not in word['data'][p.split('__')[0]]:
+											try:
+												word['data'][p.split('__')[0]]
+												if smythFlat[smyth][p] not in word['data'][p.split('__')[0]]:
+													badmatch = True
+													break
+											except KeyError as k:
 												badmatch = True
-												break
+												break												
 									else:
 										badmatch = True
 										break
@@ -1263,7 +1273,12 @@ class VisualizationResource(Resource):
 									except KeyError as k:
 										if len(p.split('__')) > 1:
 											if p.split('__')[1] == 'contains':
-												if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
+												try:
+													word.properties[p.split('__')[0]]
+													if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
+														badmatch = True
+														break
+												except KeyError as k:
 													badmatch = True
 													break
 										else:
