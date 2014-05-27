@@ -74,6 +74,18 @@
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/accents.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/general.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/acute.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/grave.html"
 					}
 				]
 			}
