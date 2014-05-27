@@ -1,4 +1,4 @@
-Django==1.5.3
+Django==1.6.5
 Markdown==2.3.1
 South==0.8.4
 argparse==1.2.1
