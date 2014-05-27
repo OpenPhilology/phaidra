@@ -28,6 +28,26 @@
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/alphabettable.html",
 						"smyth": "s1"
 					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/beta.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/gamma.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/delta.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/theta.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/phi.html"
+					},
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/excep.html",
