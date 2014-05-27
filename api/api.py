@@ -1362,9 +1362,14 @@ class VisualizationResource(Resource):
 								except KeyError as k:
 									if len(p.split('__')) > 1:
 										if p.split('__')[1] == 'contains':
-											if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
+											try:
+												word.properties[p.split('__')[0]]
+												if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
+													badmatch = True
+													break
+											except KeyError as k:
 												badmatch = True
-												break
+												break											
 									else:
 										badmatch = True
 										break
