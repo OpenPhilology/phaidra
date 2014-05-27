@@ -193,8 +193,12 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				}));
 			}
 		},
-		// TODO: Merge this functions, make them aware of text direction
+		// TODO: Merge these functions, make them aware of text direction
 		getNextCTS: function(sentenceCTS) {
+			console.log("getting CTS after " + sentenceCTS);
+
+			console.log(this.words.findWhere({ sentenceCTS: sentenceCTS }));
+
 			var current_resource_uri = this.words.findWhere({
 				sentenceCTS: sentenceCTS
 			}).get('sentence_resource_uri');
@@ -222,14 +226,14 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			else
 				return undefined;
 		},
-		populate: function(sentenceCTS) {
+		populate: function(sentenceCTS, options) {
 			// Populate a section of words by their sentence CTS id
 			var starter = this.words.findWhere({ sentenceCTS: sentenceCTS });
 			var that = this;
 
 			if (starter.get('lemma')) {
 				// If it has a lemma property, we know its been populated
-				this.trigger('pageReady', this, { CTS: sentenceCTS });
+				this.trigger('populated', this, { CTS: sentenceCTS });
 			}
 			else {
 				$.ajax({
@@ -237,6 +241,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 					data: { 'full': 'True' },
 					dataType: 'json',
 					doc: that,
+					options: options,
 					success: function(response) {
 						this.doc.set('translations', response.translations);
 						
@@ -245,7 +250,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 								.set(response.words[i]);
 						}
 
-						this.doc.trigger('pageReady', this.doc, { CTS: response["CTS"] });
+						this.doc.trigger('populated', this.doc, { CTS: response["CTS"] });
 					},
 					error: function(x, y, z) {
 						console.log(x, y, z);
