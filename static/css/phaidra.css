@@ -678,6 +678,47 @@ div.module {
   text-transform: uppercase;
   font-size: 24px; }
 
+.alphabet {
+  list-style-type: none;
+  border: 1px solid #EEE;
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 20px !important; }
+  .alphabet li {
+    font-family: 'Cambria', 'Times New Romans' !important;
+    display: inline;
+    font-size: 24px;
+    padding: 5px 10px;
+    color: #AAA;
+    margin-left: -3px;
+    margin-right: -3px; }
+    .alphabet li.learned {
+      color: #333;
+      background-color: #efc2bc; }
+    .alphabet li.current {
+      color: #FFF;
+      background-color: #d15241; }
+
+.letter {
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box; }
+  .letter img {
+    height: 200px; }
+  .letter.bg-light {
+    background-color: #F4CDA2; }
+  .letter.bg-med {
+    background-color: #b8e0e0; }
+  .letter.bg-dark {
+    background-color: #b7bfd1; }
+  .letter hr {
+    border: 1px solid #FFF; }
+  .letter a {
+    background-color: #FFF;
+    padding: 6px 9px 3px 6px;
+    border-radius: 2px;
+    margin: 6px; }
+
 .slide {
   padding: 20px;
   border-radius: 3px;
