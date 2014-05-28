@@ -14,10 +14,10 @@
 		]
 	},        
 	{
-		"title": "Greek Alphabet",
+		"title": "Alphabet",
 		"modules": [
 			{
-				"title": "Ancient Greek Alphabet",
+				"title": "Alphabet",
 				"slides": [
 					{	
 						"type": "slide_info",
@@ -67,7 +67,7 @@
 		]
 	},
 	{
-		"title": "Greek Diacritics",
+		"title": "Diacritics & Dipthongs",
 		"modules": [
 			{	"title": "Diacritics and Dipthongs",
 				"slides": [
@@ -106,6 +106,18 @@
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/grave.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/circumflex.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/dipthongs.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/concl.html"
 					}
 				]
 			}
