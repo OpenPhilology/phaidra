@@ -1171,7 +1171,16 @@ class VisualizationResource(Resource):
 												break
 										except KeyError as k:
 											badmatch = True
-											break										
+											break
+									elif p.split('__')[1] == 'endswith':	
+										try:
+											w.elements[0][0]['data'][p.split('__')[0]]
+											if not w.elements[0][0]['data'][p.split('__')[0]].endswith(smythFlat[smyth][p]):
+												badmatch = True
+												break
+										except KeyError as k:
+											badmatch = True
+											break								
 								else:
 									badmatch = True
 									break
@@ -1221,7 +1230,8 @@ class VisualizationResource(Resource):
 						# scan the submission for vocab information
 						if word['data']['CTS'] in vocKnowledge:			
 			
-							# loop over params to get morph known infos							
+							# loop over params to get morph known infos
+							# extract this maybe (hand over smyth, its value and word)							
 							badmatch = False			
 							for p in smythFlat[smyth].keys():
 								try:
@@ -1235,6 +1245,15 @@ class VisualizationResource(Resource):
 											try:
 												word['data'][p.split('__')[0]]
 												if smythFlat[smyth][p] not in word['data'][p.split('__')[0]]:
+													badmatch = True
+													break
+											except KeyError as k:
+												badmatch = True
+												break
+										elif p.split('__')[1] == 'endswith':
+											try:
+												word['data'][p.split('__')[0]]
+												if not word['data'][p.split('__')[0]].endswith(smythFlat[smyth][p]):
 													badmatch = True
 													break
 											except KeyError as k:
@@ -1309,6 +1328,15 @@ class VisualizationResource(Resource):
 												try:
 													word.properties[p.split('__')[0]]
 													if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
+														badmatch = True
+														break
+												except KeyError as k:
+													badmatch = True
+													break
+											elif p.split('__')[1] == 'endswith':
+												try:
+													word.properties[p.split('__')[0]]
+													if not word.properties[p.split('__')[0]].endswith(smythFlat[smyth][p]):
 														badmatch = True
 														break
 												except KeyError as k:
@@ -1398,6 +1426,15 @@ class VisualizationResource(Resource):
 											try:
 												word.properties[p.split('__')[0]]
 												if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
+													badmatch = True
+													break
+											except KeyError as k:
+												badmatch = True
+												break
+										elif p.split('__')[1] == 'endswith':
+											try:
+												word.properties[p.split('__')[0]]
+												if not word.properties[p.split('__')[0]].endswith(smythFlat[smyth][p]):
 													badmatch = True
 													break
 											except KeyError as k:
