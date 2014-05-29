@@ -26,9 +26,7 @@ from tastypie.exceptions import NotFound, BadRequest, Unauthorized
 from tastypie.resources import Resource, ModelResource
 
 import json
-import random
-from random import shuffle
-
+import operator
 import time
 
 class UserObjectsOnlyAuthorization(Authorization):
@@ -361,7 +359,7 @@ class SubmissionResource(Resource):
 		if not request.user or not request.user.is_authenticated():
 			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user })
 
-		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
 		# Ensuring that the user is who s/he says s/he is, handled by user objs. auth.
 		#try:
 			#user_node = AppUser.objects.get(username=data.get("user"))
@@ -433,7 +431,6 @@ class LemmaResource(Resource):
 			kwargs['pk'] = bundle_or_obj.id			
 		return kwargs
 	
-	#/api/word/?randomized=&format=json&lemma=κρατέω
 	def get_object_list(self, request):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
@@ -580,7 +577,6 @@ class WordResource(Resource):
 			kwargs['pk'] = bundle_or_obj.id
 		return kwargs
 	
-	#/api/word/?randomized=&format=json&lemma=κρατέω
 	def get_object_list(self, request):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
@@ -949,7 +945,6 @@ class DocumentResource(Resource):
 			kwargs['pk'] = bundle_or_obj.id		
 		return kwargs
 	
-	#/api/word/?randomized=&format=json&lemma=κρατέω
 	def get_object_list(self, request):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
@@ -1072,8 +1067,46 @@ class VisualizationResource(Resource):
 		
 		return [
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered'),
-			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'statistics', trailing_slash()), self.wrap_view('statistics'), name="api_%s" % 'statistics')
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'statistics', trailing_slash()), self.wrap_view('statistics'), name="api_%s" % 'statistics'),
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'accuracy', trailing_slash()), self.wrap_view('accuracy'), name="api_%s" % 'accuracy')
 			]
+		
+	"""
+	prepare knowledge map
+	"""
+	def calculateKnowledgeMap(self, user):
+		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + user + """' RETURN s""")	
+		
+		# get the file entry:
+		filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
+		fileContent = {}
+		with open(filename, 'r') as json_data:
+			fileContent = json.load(json_data)
+			json_data.close()			
+						
+		vocab = {}
+		smyth = {}		
+		# flatten the smyth and collect the vocab knowledge
+		for sub in submissions.elements:			
+				
+			for word in sub[0]['data']['encounteredWords']:
+					
+				try:
+					vocab[word] = vocab[word]+1
+				except KeyError as k:
+					vocab[word] = 1
+				if sub[0]['data']['smyth'] not in smyth:
+					# get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
+					params = {}
+					grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
+					for pair in grammarParams:
+						params[pair.split('=')[0]] = pair.split('=')[1]
+					smyth[sub[0]['data']['smyth']] = params
+
+		return [vocab, smyth]
+
 
 	"""
 	returns visualization data on word-rage-, book- and work-level.
@@ -1138,7 +1171,16 @@ class VisualizationResource(Resource):
 												break
 										except KeyError as k:
 											badmatch = True
-											break										
+											break
+									elif p.split('__')[1] == 'endswith':	
+										try:
+											w.elements[0][0]['data'][p.split('__')[0]]
+											if not w.elements[0][0]['data'][p.split('__')[0]].endswith(smythFlat[smyth][p]):
+												badmatch = True
+												break
+										except KeyError as k:
+											badmatch = True
+											break								
 								else:
 									badmatch = True
 									break
@@ -1188,7 +1230,8 @@ class VisualizationResource(Resource):
 						# scan the submission for vocab information
 						if word['data']['CTS'] in vocKnowledge:			
 			
-							# loop over params to get morph known infos							
+							# loop over params to get morph known infos
+							# extract this maybe (hand over smyth, its value and word)							
 							badmatch = False			
 							for p in smythFlat[smyth].keys():
 								try:
@@ -1202,6 +1245,15 @@ class VisualizationResource(Resource):
 											try:
 												word['data'][p.split('__')[0]]
 												if smythFlat[smyth][p] not in word['data'][p.split('__')[0]]:
+													badmatch = True
+													break
+											except KeyError as k:
+												badmatch = True
+												break
+										elif p.split('__')[1] == 'endswith':
+											try:
+												word['data'][p.split('__')[0]]
+												if not word['data'][p.split('__')[0]].endswith(smythFlat[smyth][p]):
 													badmatch = True
 													break
 											except KeyError as k:
@@ -1276,6 +1328,15 @@ class VisualizationResource(Resource):
 												try:
 													word.properties[p.split('__')[0]]
 													if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
+														badmatch = True
+														break
+												except KeyError as k:
+													badmatch = True
+													break
+											elif p.split('__')[1] == 'endswith':
+												try:
+													word.properties[p.split('__')[0]]
+													if not word.properties[p.split('__')[0]].endswith(smythFlat[smyth][p]):
 														badmatch = True
 														break
 												except KeyError as k:
@@ -1369,6 +1430,15 @@ class VisualizationResource(Resource):
 													break
 											except KeyError as k:
 												badmatch = True
+												break
+										elif p.split('__')[1] == 'endswith':
+											try:
+												word.properties[p.split('__')[0]]
+												if not word.properties[p.split('__')[0]].endswith(smythFlat[smyth][p]):
+													badmatch = True
+													break
+											except KeyError as k:
+												badmatch = True
 												break											
 									else:
 										badmatch = True
@@ -1389,43 +1459,64 @@ class VisualizationResource(Resource):
 		return self.create_response(request, data)
 	
 	
-	
-	
 	"""
-	prepare knowledge map
+	Returns some figures for grammar and title the user has struggled with
 	"""
-	def calculateKnowledgeMap(self, user):
+	def accuracy(self, request, **kwargs):
 		
-		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
-		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + user + """' RETURN s""")	
+		data = {}
+		data['accuracy_ranking'] = []
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		
-		# get the file entry:
+		accuracy = {}
+		title = {}
+		query = {}
+
+		# get the file smyth entry:
 		filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
 		fileContent = {}
 		with open(filename, 'r') as json_data:
 			fileContent = json.load(json_data)
 			json_data.close()			
-						
-		vocab = {}
-		smyth = {}		
-		# flatten the smyth and collect the vocab knowledge
-		for sub in submissions.elements:			
-				
-			for word in sub[0]['data']['encounteredWords']:
-					
-				try:
-					vocab[word] = vocab[word]+1
-				except KeyError as k:
-					vocab[word] = 1
-				if sub[0]['data']['smyth'] not in smyth:
-					# get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
-					params = {}
-					grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
-					for pair in grammarParams:
-						params[pair.split('=')[0]] = pair.split('=')[1]
-					smyth[sub[0]['data']['smyth']] = params
 
-		return [vocab, smyth]
+		for entry in fileContent[0].keys():
+			query[entry] = fileContent[0][entry]['query']
+			title[entry] = fileContent[0][entry]['title']
+
+		# process accuracy of grammar of submissions of a user
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")			
+									
+		# get the accuray per smyth key
+		for sub in submissions.elements:
+			if sub[0]['data']['accuracy'] < 50:								
+				try:
+					accuracy[sub[0]['data']['smyth']].append(sub[0]['data']['accuracy'])  
+				except KeyError as k:
+					accuracy[sub[0]['data']['smyth']] = []
+					accuracy[sub[0]['data']['smyth']].append(sub[0]['data']['accuracy'])
+		
+		# calculate the averages and sort by it
+		average = {}
+		for smyth in accuracy.keys():
+			average[smyth] = 0.0
+			for value in accuracy[smyth]:
+				average[smyth] = average[smyth] + value
+			average[smyth] = average[smyth]/len(accuracy[smyth]) 
+		
+		sorted_dict = sorted(average.iteritems(), key=operator.itemgetter(1))
+		#sorted_reverse = sorted.reverse()
+				
+		for entry in sorted_dict:
+			data['accuracy_ranking'].append({'smyth': entry[0], 'average': average[entry[0]], 'title': title[entry[0]], 'query': query[entry[0]]})
+	
+		#return the json
+		return self.create_response(request, data)
+	
+	
+	
+	
+
 	
 	
 	
