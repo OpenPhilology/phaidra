@@ -45,6 +45,10 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/zeta.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/theta.html"
 					},
 					{
