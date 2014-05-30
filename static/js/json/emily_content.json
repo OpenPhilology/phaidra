@@ -23,10 +23,9 @@
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/intro.html"
 					},
-					{	
+					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/alphabettable.html",
-						"smyth": "s1"
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/alpha.html"
 					},
 					{
 						"type": "slide_info",
@@ -42,11 +41,28 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/epsilon.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/theta.html"
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/lambda.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/upsilon.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/phi.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/alphabettable.html",
+						"smyth": "s1"
 					},
 					{	
 						"type": "slide_info",
