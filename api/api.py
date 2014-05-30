@@ -25,9 +25,14 @@ from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
 from tastypie.resources import Resource, ModelResource
 
+from datetime import datetime
+
+import dateutil.parser
+
 import json
 import operator
 import time
+
 
 class UserObjectsOnlyAuthorization(Authorization):
 	
@@ -1068,7 +1073,8 @@ class VisualizationResource(Resource):
 		return [
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'encountered', trailing_slash()), self.wrap_view('encountered'), name="api_%s" % 'encountered'),
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'statistics', trailing_slash()), self.wrap_view('statistics'), name="api_%s" % 'statistics'),
-			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'accuracy', trailing_slash()), self.wrap_view('accuracy'), name="api_%s" % 'accuracy')
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'least_accurate', trailing_slash()), self.wrap_view('least_accurate'), name="api_%s" % 'least_accurate'),
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'least_recently', trailing_slash()), self.wrap_view('least_recently'), name="api_%s" % 'least_recently')
 			]
 		
 	"""
@@ -1462,7 +1468,7 @@ class VisualizationResource(Resource):
 	"""
 	Returns some figures for grammar and title the user has struggled with
 	"""
-	def accuracy(self, request, **kwargs):
+	def least_accurate(self, request, **kwargs):
 		
 		data = {}
 		data['accuracy_ranking'] = []
@@ -1509,6 +1515,70 @@ class VisualizationResource(Resource):
 				
 		for entry in sorted_dict:
 			data['accuracy_ranking'].append({'smyth': entry[0], 'average': average[entry[0]], 'title': title[entry[0]], 'query': query[entry[0]]})
+	
+		#return the json
+		return self.create_response(request, data)
+	
+	
+	"""
+	Returns some figures for grammar and title the user has struggled with
+	"""
+	def least_recently(self, request, **kwargs):
+		
+		data = {}
+		data['time_ranking'] = []
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		
+		time = {}
+		title = {}
+		query = {}
+
+		# get the file smyth entry:
+		filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
+		fileContent = {}
+		with open(filename, 'r') as json_data:
+			fileContent = json.load(json_data)
+			json_data.close()			
+
+		for entry in fileContent[0].keys():
+			query[entry] = fileContent[0][entry]['query']
+			title[entry] = fileContent[0][entry]['title']
+
+		# process time of grammar of submissions of a user
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submissions]->(s) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")			
+		
+		# get the current time
+		unix = datetime(1970,1,1)
+									
+		# get the accuray per smyth key
+		for sub in submissions.elements:
+				
+			t=dateutil.parser.parse(sub[0]['data']['timestamp'].replace('T', ' '))
+			diff = (t-unix).total_seconds()																			
+			try:					
+				time[sub[0]['data']['smyth']].append(diff)  
+			except KeyError as k:
+				time[sub[0]['data']['smyth']] = []
+				time[sub[0]['data']['smyth']].append(diff)
+		
+		# calculate the averages and sort by it
+		average = {}
+		for smyth in time.keys():
+			average[smyth] = 0.0
+			for value in time[smyth]:
+				average[smyth] = average[smyth] + value
+				
+			av = average[smyth]/len(time[smyth])
+			av = datetime.fromtimestamp(int(av)).strftime('%Y-%m-%d %H:%M:%S')
+			av = av.replace(' ', 'T')
+			average[smyth] = av
+		
+		sorted_dict = sorted(average.iteritems(), key=operator.itemgetter(1))
+		#sorted_reverse = sorted_dict.reverse()
+				
+		for entry in sorted_dict:
+			data['time_ranking'].append({'smyth': entry[0], 'average': average[entry[0]], 'title': title[entry[0]], 'query': query[entry[0]]})
 	
 		#return the json
 		return self.create_response(request, data)
