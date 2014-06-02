@@ -69,6 +69,10 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/xi.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/upsilon.html"
 					},
 					{
