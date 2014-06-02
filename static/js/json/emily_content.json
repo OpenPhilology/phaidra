@@ -73,6 +73,10 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/omicron.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/upsilon.html"
 					},
 					{
