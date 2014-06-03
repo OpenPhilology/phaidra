@@ -50,7 +50,7 @@ define(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap', 'text!templates/t
 					data = that.convertData(words);
 					that.renderTree(data);
 				},
-				failure: function(x, y, z) {
+				error: function(x, y, z) {
 					console.log(x, y, z);
 				}
 			});
