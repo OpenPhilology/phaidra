@@ -704,7 +704,8 @@ div.module {
   padding: 30px;
   box-sizing: border-box; }
   .letter img {
-    height: 200px; }
+    height: 200px;
+    max-width: 100%; }
   .letter.bg-light {
     background-color: #F4CDA2; }
   .letter.bg-med {
