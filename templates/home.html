@@ -1,3 +1,4 @@
+{% load i18n %}
 {% extends "base.html" %}
 
 {# Determine which navigation element is 'active'  #}
@@ -10,63 +11,63 @@
 {% block content %}
 
 	<div class="col-md-7 col-md-offset-1" style="margin-top: 30px">
-		<h1>Continue Learning!</h1>
+		<h1>{% trans "Continue Learning!" %}</h1>
 		<p>
-			Round out your knowledge of nouns by learning the 3rd declension nouns.
+			{% trans "Round out your knowledge of nouns by learning the 3rd declension nouns." %}
 		</p>
-		<a href="#" class="btn btn-default">Keep Learning Greek</a>
+		<a href="#" class="btn btn-default">{% trans "Keep Learning Greek" %}</a>
 
 		<hr>
 
-		<h2>Ready to put your Greek skills to use?</h2>	
-		<p>Here are some other ways you can improve your Greek:</p>
+		<h2>{% trans "Ready to put your Greek skills to use?" %}</h2>	
+		<p>{% trans "Here are some other ways you can improve your Greek:" %}</p>
 		<ul>
-			<li> Read </li>
-			<li> Annotate </li>
-			<li> Etc.</li>
+			<li> {% trans "Read" %} </li>
+			<li> {% trans "Annotate" %} </li>
+			<li> {% trans "Etc." %}</li>
 		</ul>
 	</div>
 
 	<div class="col-md-3 feedback-container" style="background-color: rgba(255, 255, 255, 0.8)">
 		<div class="achievements">
 			<a href="#" class="box">
-				<strong>75</strong>
+				<strong>{% trans "75" %}</strong>
 				<br>
-				words learned
+				{% trans "words learned" %}
 			</a>
 			<a href="#" class="box">
-				<strong>12</strong>
+				<strong>{% trans "12" %}</strong>
 				<br>
-				lessons completed
+				{% trans "lessons completed" %}
 			</a>
 			<a href="#" class="box">
-				<strong>13</strong>
+				<strong>{% trans "13" %}</strong>
 				<br>
-				skills earned
+				{% trans "skills earned" %}
 			</a>
 			<a href="#" class="box">
-				<strong>20</strong>
+				<strong>{% trans "20" %}</strong>
 				<br>
-				original annotations
+				{% trans "original annotations" %}
 			</a>
 		</div>
 
-		<h3>Records</h3>
+		<h3>{% trans "Records" %}</h3>
 		<div id="records">
 			<div class="sparkline"></div>
-			10 lessons in a week
+			{% trans "10 lessons in a week" %}
 		</div>
 		<hr>
 
-		<h3>Recent Activity</h3>
-		<h4>Yesterday</h4>
+		<h3>{% trans "Recent Activity" %}</h3>
+		<h4>{% trans "Yesterday" %}</h4>
 		<p>
-			<span class="badge lesson">+ 2</span> Completed 2 lessons<br>
-			<span class="badge vocab">+ 10</span> Learned 10 new words<br>
+			<span class="badge lesson">+ 2</span> {% trans "Completed 2 lessons" %}<br>
+			<span class="badge vocab">+ 10</span> {% trans "Learned 10 new words" %}<br>
 		</p>
-		<h3>Last Week</h3>
+		<h3>{% trans "Last Week" %}</h3>
 		<p>
-			<span class="badge treebank">+ 4</span> Treebanked 4 sentences<br>
+			<span class="badge treebank">+ 4</span> {% trans "Treebanked 4 sentences" %}<br>
 		</p>
 	</div>
 
