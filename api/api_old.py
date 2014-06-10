@@ -617,7 +617,6 @@ class SentenceShortResource(ModelResource):
 			return super(SentenceResource, self).get_list(request, **kwargs)
 		
 		# filter word on parameters 
-		#/api/sentence/?randomized=&format=json&lemma=κρατέω
 		gdb = GraphDatabase("http://localhost:7474/db/data/")
 		q = """START n=node(*) MATCH (n)-[:words]->(w) WHERE """
 		if len(query_params) > 0:
@@ -640,7 +639,7 @@ class SentenceShortResource(ModelResource):
 		data = {}
 		data['sentences'] = []
 		
-		#/api/sentence/?randomized=&short=&format=json&lemma=κρατέω
+		#/api/sentence/?randomized=&short=&format=json&lemma=
 		if 'randomized' in request.GET.keys():
 						
 			if 'short' in request.GET.keys():
@@ -671,7 +670,7 @@ class SentenceShortResource(ModelResource):
 				return self.error_response(request, {'error': 'No short sentences hit your query.'}, response_class=HttpBadRequest)
 			
 			# randomized, long FIRST HANDLE STARTS/ENDS... ###### Noch umschreiben
-			#/api/sentence/?randomized=&format=json&lemma=κρατέω	
+			#/api/sentence/?randomized=&format=json&lemma=	
 			else:
 				
 				word = random.choice(words)
@@ -693,7 +692,7 @@ class SentenceShortResource(ModelResource):
 			if 'short' in request.GET.keys():
 				
 				CTS = request.GET.get('CTS')
-				#/api/sentence/?format=json&short=&form=ἀπέβησαν
+				#/api/sentence/?format=json&short=&form=
 				if CTS is None:				
 					return self.error_response(request, {'error': 'CTS required.'}, response_class=HttpBadRequest)
 				
@@ -718,7 +717,7 @@ class SentenceShortResource(ModelResource):
 			else:
 				CTS = request.GET.get('CTS')
 				# if CTS is missed all sentences containing words that hit the query are returned
-				#/api/sentence/?format=json&form=ἀπέβησαν&lemma__endswith=νω
+				#/api/sentence/?format=json&form=&lemma__endswith=
 				if CTS is None:					
 					# and no other params -> default
 					if len(query_params) < 1:	

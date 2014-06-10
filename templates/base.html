@@ -1,10 +1,11 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
-		Historical Languages eLearning - by Open Philology Project
+		{% trans "Historical Languages eLearning - by Open Philology Project" %}
 	</title>
 
 	<!-- CSS -->
@@ -50,11 +51,11 @@
 							<span style="color: #6378A5; font-size: 1.2em">!</span>
 						</a>
 						
-						<a href="/logout/">Log out</a>
+						<a href="/logout/">{% trans "Log out" %}</a>
 					</span>
 				{% else %}
 					<span class="logged-out">
-						<a href="/login" class="log-in-link">Would you care to log in?</a>
+						<a href="/login" class="log-in-link">{% trans "Would you care to log in? %}</a>
 					</span>
 				{% endif %}
 			</div>
