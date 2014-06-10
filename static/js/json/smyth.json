@@ -3,7 +3,7 @@
 		"title": "The Ancient Greek Alphabet",
 		"query": null
 	},
-	"s19a": {
+	"s19#a": {
 		"title": "The Gamma Nasal",
 		"query": "pos=noun&lemma__contains=γγ",
 		"variants": ["lemma__contains=γγ", "lemma__contains=γκ", "lemma__contains=γχ", "lemma__contains=γξ"]
@@ -11,6 +11,13 @@
 	"s188": {
 		"title": "Marks of Punctuation",
 		"query": "pos=punct"
+	},
+	"s9"  : {
+		"title": "Rough Breathing",
+		"query": "null"
+	},
+	"s9"  : {
+		"title": "Smooth Breathing",
 	},
 	"s194": {
 		"title": "Characteristics of Nouns in Ancient Greek",
@@ -28,11 +35,11 @@
 		"title": "The Alpha or First Declension",
 		"query": "pos=noun&posAdd=h_hs"
 	},
-	"s217a": {
+	"s217#a": {
 		"title": "Feminine Nouns in the First Declension (α-stem)",	
 		"query": "pos=noun&gender=fem&lemma__endswith=α&posAdd__contains=h_hs"
 	},
-	"s217c": {
+	"s217#c": {
 		"title": "Feminine Nouns in the First Declension (η-stem)",	
 		"query": "pos=noun&gender=fem&lemma__endswith=η&posAdd__contains=h_hs"
 	},
@@ -40,11 +47,11 @@
 		"title": "Masculine Nouns in the First Declension (ης-stem)",
 		"query": "pos=noun&gender=masc&posAdd__contains=hs_ou"
 	},
-	"s228a": {
+	"s228#a": {
 		"title": "Masculine Nouns in the Second Declension (ος-stem)",
 		"query": "pos=noun&gender=masc&posAdd__contains=os_ou"
 	},
-	"s228b": {
+	"s228#b": {
 		"title": "Neuter Nouns in the Second Declension (ον-stem)",
 		"query": "pos=noun&gender=neut&posAdd__contains=os_ou"
 	},
@@ -67,15 +74,15 @@
 		"variants": ["lemma__endswith=πω", "lemma__endswith=βω", "lemma__endswidth=πτω", "lemma__endswith=ϕω", "lemma__endswith=κω", "lemma__endswith=γω", "lemma__endswith=ττω"], 
 		"samples": ["πέμπω"]
 	},
-	"s768a": {
+	"s768#a": {
 		"title": "εἰμί in the Present Tense",
 		"query": "pos=verb&lemma=εἰμί&tense=pres"
 	},
-	"s768b": {
+	"s768#b": {
 		"title": "εἰμί in the Future Tense",
 		"query": "pos=verb&lemma=εἰμί&tense=fut"
 	},
-	"s768c": {
+	"s768#c": {
 		"title": "εἰμί in the Imperfect Tense",
 		"query": "pos=verb&lemma=εἰμί&tense=imperf"
 	},

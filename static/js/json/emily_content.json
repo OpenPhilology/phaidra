@@ -91,7 +91,7 @@
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/excep.html",
-						"smyth": "s19a"
+						"smyth": "s19#a"
 					},
 					{	
 						"type": "slide_info",
@@ -656,12 +656,12 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec.html",
-						"smyth": "s217a"
+						"smyth": "s217#a"
 					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/5.firstdec/firstdec1.html",
-						"smyth": "s217c"
+						"smyth": "s217#c"
 					},
 					{
 						"type": "slide_info",
@@ -701,12 +701,12 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec.html",
-						"smyth": "s228a"
+						"smyth": "s228#a"
 					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/6.seconddec/seconddec1.html",
-						"smyth": "s228b"
+						"smyth": "s228#b"
 					},
 					{
 						"type": "slide_info",
@@ -848,7 +848,7 @@
 						"title": "Future Active Indicative of εἰμί",
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/9.futureindicativeactive/futindact3.html",
-						"smyth": "s768b",
+						"smyth": "s768#b",
 						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
@@ -926,7 +926,7 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/11.imperfectindicativeactive/imperfindact2.html",
-						"smyth": "s768c",
+						"smyth": "s768#c",
 						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
