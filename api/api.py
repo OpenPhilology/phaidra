@@ -104,7 +104,7 @@ class CreateUserResource(ModelResource):
 		Make sure the user isn't already registered, create the user, return user object as JSON.
 		"""
 		self.method_check(request, allowed=['post'])		
-		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
 			
 		try:
 			user = AppUser.objects.create_user(
@@ -146,7 +146,7 @@ class UserResource(ModelResource):
 		"""
 		self.method_check(request, allowed=['post'])
 		
-		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
 		username = data.get('username', '')
 		password = data.get('password', '')
