@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {# Determine which navigation element is 'active'  #}
 {% block nav %}
@@ -10,8 +11,8 @@
 {% block content %}
 
 	<div class="col-md-10 col-md-offset-1">
-		<h1>Vocabulary</h1>
-		<p>50 words learned</p>
+		<h1>{% trans "Vocabulary" %}</h1>
+		<p>{% trans "50 words learned" %}</p>
 		<hr>
 	</div>
 </div>
@@ -21,48 +22,48 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<td style="width: 20%">Word</td>
-						<td style="width: 50%">Definition</td>
-						<td style="width: 10%; text-align: center">Lesson</td>
-						<td style="width: 30%; text-align: center">Times Seen</td>
+						<td style="width: 20%">{% trans "Word" %}</td>
+						<td style="width: 50%">{% trans "Definition" %}</td>
+						<td style="width: 10%; text-align: center">{% trans "Lesson" %}</td>
+						<td style="width: 30%; text-align: center">{% trans "Times Seen" %}</td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="greek-text">γνώμη, ης, ἡ</td>
-						<td>means of knowing, mark, token, judgement will, opinion, mind, intelligence.</td>
-						<td style="text-align: center">4</td>
-						<td style="text-align: center">20</td>
+						<td>{% trans "means of knowing, mark, token, judgement will, opinion, mind, intelligence." %}</td>
+						<td style="text-align: center">{% trans "4" %}</td>
+						<td style="text-align: center">{% trans "20" %}</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="col-md-3">
 			<p style="text-align: center">
-				<a class="btn btn-default" href="#">Strengthen Vocabulary</a>
+				<a class="btn btn-default" href="#">{% trans "Strengthen Vocabulary" %}</a>
 			</p>
 
 			<p>
-				<strong>Options</strong>
+				<strong>{% trans "Options" %}</strong>
 				<form role="form">
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"> Hide Definitions
+							<input type="checkbox"> {% trans "Hide Definitions" %}
 						</label>
 					</div>
 				</form>
 			</p>
 			<p>
-				<strong>Sort By</strong>
+				<strong>{% trans "Sort By" %}</strong>
 				<form role="form">
 					<div class="radio">
 						<label>
-							<input type="radio"> Recency
+							<input type="radio"> {% trans "Recency" %}
 						</label>
 					</div>
 					<div class="radio">
 						<label>
-							<input type="radio"> Alphabetical
+							<input type="radio"> {% trans "Alphabetical" %}
 						</label>
 					</div>
 				</form>
