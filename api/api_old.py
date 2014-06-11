@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-# coding: utf8
+# coding: utf-8
 from django.core.management import setup_environ
 from phaidra import settings
 from tastypie.bundle import Bundle

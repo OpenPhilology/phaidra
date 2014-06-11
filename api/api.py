@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-# coding: utf8
+# coding: utf-8
 from phaidra import settings
 from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH
 

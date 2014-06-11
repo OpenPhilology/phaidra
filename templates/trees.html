@@ -1,10 +1,11 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>
-			OPP Parse Tree Editor
+			{% trans "OPP Parse Tree Editor" %}
 		</title>
 
 		<!-- CSS -->
@@ -31,80 +32,80 @@
 		<div class="tree" data-mode="edit" data-url="/api/v1/sentence/4962/?format=json" data-width="100%" data-height="550"></div>
 		<div class="container" style="background-color: rgba(255, 255, 255, 0.8); min-width: 1000px !important">
 			<div class="row" style="padding: 20px">
-				<h1>Parse Tree Builder Demo</h1>
-				Please be patient, as these trees are loading live on my small VM. <strong style="color: #1FBEBE; letter-spacing: 1px">Keep scrolling for more demos, </strong> a list of features, known bugs, etc.
+				<h1>{% trans "Parse Tree Builder Demo" %}</h1>
+				{% trans "Please be patient, as these trees are loading live on my small VM. " %}<strong style="color: #1FBEBE; letter-spacing: 1px">{% trans "Keep scrolling for more demos, " %}</strong>{% trans "a list of features, known bugs, etc." %}
 				<hr>
 			</div>
 			<div style="overflow: auto; width: 100%; padding: 20px">
 				<div style="width: 60%; float: left">
-					<h3>BYOT <small>Build Your Own Tree!</small></h3>
-					<p>Doubleclick a node to edit its POS. Then, move a node to its parent node &mdash; if the node's color fills in, you got it right! <strong style="color: #1FBEBE; letter-spacing: 1px">Right now "Complete" only indicates tree structure</strong>, not other attributes such as morph, relationship, lemma, etc.)</p>
+					<h3>{% trans "BYOT " %}<small>{% trans "Build Your Own Tree!" %}</small></h3>
+					<p>{% trans "Doubleclick a node to edit its POS. Then, move a node to its parent node &mdash; if the node's color fills in, you got it right! " %}<strong style="color: #1FBEBE; letter-spacing: 1px">{% trans "Right now "Complete" only indicates tree structure" %}</strong>{% trans ", not other attributes such as morph, relationship, lemma, etc." %}</p>
 
-					<p><strong>Don't forget!</strong> You can zoom and pan on the tree if it doesn't fit when it first loads &mdash; smarter sizes and scaling is on the roadmap.</p>
+					<p><strong>{% trans "Don't forget!</strong>{% trans " You can zoom and pan on the tree if it doesn't fit when it first loads &mdash; smarter sizes and scaling is on the roadmap." %}</p>
 
 					<div class="tree" data-mode="create" data-url="/api/v1/sentence/3/?format=json"></div>
-					<span class="label label-primary">Coming Soon</span> Checking morphology, relation value, and lemma against gold standard, and giving the user points for right answers.
+					<span class="label label-primary">{% trans "Coming Soon" %}</span>{% trans " Checking morphology, relation value, and lemma against gold standard, and giving the user points for right answers." %}
 				</div>
 				<div style="width: 35%; float: right">
 					<div class="well">
-						<h4>User-Oriented Features</h4>
+						<h4>{% trans "User-Oriented Features" %}</h4>
 						<ul>
-							<li><strong>Move words via node circles</strong> &mdash; Provides users with a consistent area they can click to move a word, no matter if text is a giant word or a tiny punctuation mark. A click interaction rather than drag-n-drop is also more mobile-friendly.</li>
-							<li><strong>Zoom and pan</strong> &mdash; Ideal for building large trees which cannot fit on your monitor.</li>
-							<li><strong>Editor modal is draggable</strong> &mdash; This way, you can still see the word you're working on and the complete sentence while you're editing its part of speech, morphology, or relation attributes. It'll also continue popping up in the same place if you relocate it.</li> 
-							<li><strong>Answer-checking against gold-standard tree</strong> &mdash; On a tree in edit mode, the node fills in when a user has placed it under the correct parent.</li>
-							<li><strong>Node's corresponding word highlights in sentence</strong> &mdash; So it's clear which instance of a word in the sentence you're working with.
-							<li><strong>Part of Speech Legend</strong> &mdash; Handy, fixed position legend which tells users what the node colors indicate.</li>
+							<li><strong>{% trans "Move words via node circles" %}</strong>{% trans " &mdash; Provides users with a consistent area they can click to move a word, no matter if text is a giant word or a tiny punctuation mark. A click interaction rather than drag-n-drop is also more mobile-friendly." %}</li>
+							<li><strong>{% trans "Zoom and pan" %}</strong>{% trans " &mdash; Ideal for building large trees which cannot fit on your monitor." %}</li>
+							<li><strong>{% trans "Editor modal is draggable" %}</strong>{% trans " &mdash; This way, you can still see the word you're working on and the complete sentence while you're editing its part of speech, morphology, or relation attributes. It'll also continue popping up in the same place if you relocate it." %}</li> 
+							<li><strong>{% trans "Answer-checking against gold-standard tree" %}</strong>{% trans " &mdash; On a tree in edit mode, the node fills in when a user has placed it under the correct parent." %}</li>
+							<li><strong>{% trans "Node's corresponding word highlights in sentence" %}</strong>{% trans " &mdash; So it's clear which instance of a word in the sentence you're working with." %}
+							<li><strong>{% trans "Part of Speech Legend" %}</strong>{% trans " &mdash; Handy, fixed position legend which tells users what the node colors indicate." %}</li>
 						</ul>
 
 						<hr style="border-color: #BBB">
 						
-						<h4>Technical Features</h4>
+						<h4>{% trans "Technical Features" %}</h4>
 						<ul>
-							<li><strong>Built on <a href="http://d3js.org">d3.js</a></strong> &mdash; Popular, well-supported, standards-compliant data visualization framework.</li>
-							<li><strong>Browser Compatibility</strong> &mdash; As a result, this parse tree editor works in Chrome, Safari, and Firefox (and hopefully, soon, a recent IE version).</li>
-							<li><strong>AMD Compliant</strong> &mdash; You can include this parse tree editor into your page easily with RequireJS.</li>
-							<li><strong>Flexible Word IDs</strong> &mdash; Word IDs do not have to be sequential, start from zero (including root), or even be integers. Useful for presenting automatically-shortened sentences without assigning words artifical ids.</li>
+							<li><strong>{% trans "Built on <a href="http://d3js.org">d3.js</a></strong>{% trans " &mdash; Popular, well-supported, standards-compliant data visualization framework.</li>
+							<li><strong>{% trans "Browser Compatibility</strong>{% trans " &mdash; As a result, this parse tree editor works in Chrome, Safari, and Firefox (and hopefully, soon, a recent IE version).</li>
+							<li><strong>{% trans "AMD Compliant</strong>{% trans " &mdash; You can include this parse tree editor into your page easily with RequireJS.</li>
+							<li><strong>{% trans "Flexible Word IDs</strong>{% trans " &mdash; Word IDs do not have to be sequential, start from zero (including root), or even be integers. Useful for presenting automatically-shortened sentences without assigning words artifical ids.</li>
 						</ul>
 						<hr style="border-color: #BBB">
 
-						<h4>Known Bugs</h4>
+						<h4>{% trans "Known Bugs" %}</h4>
 						<ul>
-							<li>Assigning a parent to a grandchild node causes problems. (Only known critical bug)</li>
-							<li>The legend is all sorts of funky when updating trees.</li>
-							<li>I may have the wrong morph fields showing based on POS, I just did it roughly by guess.</li>
-							<li>Points circle sometimes overlaps the greek text, particularly when it indicates completion.</li>
+							<li>{% trans "Assigning a parent to a grandchild node causes problems. (Only known critical bug)" %}</li>
+							<li>{% trans "The legend is all sorts of funky when updating trees." %}</li>
+							<li>{% trans "I may have the wrong morph fields showing based on POS, I just did it roughly by guess." %}</li>
+							<li>{% trans "Points circle sometimes overlaps the greek text, particularly when it indicates completion." %}</li>
 						</ul>
 
-						Please report reproducible bugs and feature requests via <a href="https://github.com/OpenPhilology/phaidra/issues?state=open" target="_blank">our project's github</a>.
+						{% trans "Please report reproducible bugs and feature requests via " %}<a href="https://github.com/OpenPhilology/phaidra/issues?state=open" target="_blank">{% trans "our project's github" %}</a>.
 
 						<hr style="border-color: #BBB">
 
-						<h4>Future Plans &amp; Posibilities</h4>
+						<h4>{% trans "Future Plans &amp; Posibilities" %}</h4>
 						<ul>
-							<li><span class="label label-warning">Priority</span> <strong>Gamification / eLearning enhancements</strong></li>
+							<li><span class="label label-warning">{% trans "Priority" %}</span> <strong>{% trans "Gamification / eLearning enhancements" %}</strong></li>
 							<ul>
-								<li><strong>Record information about <em>how</em> a user is using the tool</strong> &mdash; Which aspects they struggle with, what those indicate about gaps in their knowledge, etc.</li>
-								<li><strong>Assigning points/scores to users who complete a successful tree</strong> &mdash; Current implementation just assigns a point every time they do something right.</li>
+								<li><strong>{% trans "Record information about " %}<em>{% trans "how" %}</em>{% trans " a user is using the tool" %}</strong>{% trans " &mdash; Which aspects they struggle with, what those indicate about gaps in their knowledge, etc." %}</li>
+								<li><strong>{% trans "Assigning points/scores to users who complete a successful tree" %}</strong>{% trans " &mdash; Current implementation just assigns a point every time they do something right." %}</li>
 							</ul>
-							<li><span class="label label-primary">Near Future</span> <strong>Move nodes by clicking on words in the original sentence</strong>, which ties into the need for: </li>
+							<li><span class="label label-primary">{% trans "Near Future" %}</span> <strong>{% trans "Move nodes by clicking on words in the original sentence" %}</strong>{% trans ", which ties into the need for: " %}</li>
 							<ul>
-								<li><strong>Error Recognition on Input Data</strong> &mdash; Inform users when they would be introducing a circular depdency into the tree, or detect if incoming data is incompatible and in which way(s).</li>
+								<li><strong>{% trans "Error Recognition on Input Data" %}</strong>{% trans " &mdash; Inform users when they would be introducing a circular depdency into the tree, or detect if incoming data is incompatible and in which way(s)." %}</li>
 							</ul>
-							<li><strong>Make SVG canvas size responsive</strong> &mdash; Accomodate more resolutions.</li>
-							<li><span class="label label-primary">Near Future</span> <strong>Move into independent Github repo</strong> &mdash; Generalize a couple of our project-specific requirements out of the codebase.</li>
-							<li><span class="label label-info">Pending Interest</span> <strong>Real World Treebanking Needs</strong>
+							<li><strong>{% trans "Make SVG canvas size responsive" %}</strong>{% trans " &mdash; Accomodate more resolutions." %}</li>
+							<li><span class="label label-primary">{% trans "Near Future" %}</span> <strong>{% trans "Move into independent Github repo" %}</strong>{% trans " &mdash; Generalize a couple of our project-specific requirements out of the codebase." %}</li>
+							<li><span class="label label-info">{% trans "Pending Interest" %}</span> <strong>{% trans "Real World Treebanking Needs" %}</strong>
 							<ul>
-								<li>Accept and output standard formats of XML. </li>
-								<li>Misc. stuff, e.g., ellipses, supplying elided forms, different types of annotation (e.g. named entities), checking against more than one gold standard, etc.</li>
+								<li>{% trans "Accept and output standard formats of XML." %}</li>
+								<li>{% trans "Misc. stuff, e.g., ellipses, supplying elided forms, different types of annotation (e.g. named entities), checking against more than one gold standard, etc." %}</li>
 							</ul>
-							<li><strong>Optimize support for handheld devices</strong> &mdash; Basic functionality of the editor is present, but can be enhanced for our mobile users (e.g. optimizing default size and zoom based on device resolution).</li>
-							<li><strong>Undo/Redo</strong> &mdash; As well as other editing shortcuts (e.g. sending node and all its children to the root)</li>
+							<li><strong>{% trans "Optimize support for handheld devices" %}</strong>{% trans " &mdash; Basic functionality of the editor is present, but can be enhanced for our mobile users (e.g. optimizing default size and zoom based on device resolution)." %}</li>
+							<li><strong>{% trans "Undo/Redo" %}</strong>{% trans " &mdash; As well as other editing shortcuts (e.g. sending node and all its children to the root)" %}</li>
 						</ul>
 
 						<hr style="border-color: #BBB">
-						<h4>Disclaimer!</h4>
-						Code's a bit rough at the moment, but has lots of comments :) You can take a peak at it <a href="https://github.com/OpenPhilology/phaidra/blob/master/static/js/views/parse_tree.js" target="_blank">here</a>.
+						<h4>{% trans "Disclaimer!" %}</h4>
+						{% trans "Code's a bit rough at the moment, but has lots of comments :) You can take a peak at it " %}<a href="https://github.com/OpenPhilology/phaidra/blob/master/static/js/views/parse_tree.js" target="_blank">{% trans "here" %}</a>{% trans "." %}
 					</div>
 				</div>
 			</div>
