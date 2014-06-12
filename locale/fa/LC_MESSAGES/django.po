@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-12 14:25+0200\n"
+"POT-Creation-Date: 2014-06-12 14:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -360,8 +360,8 @@ msgstr ""
 msgid "Treebanked 4 sentences"
 msgstr ""
 
-#: templates/index.html:26
-msgid "Login"
+#: templates/index.html:26 templates/login.html:26
+msgid "Log in"
 msgstr ""
 
 #: templates/index.html:31
@@ -662,10 +662,6 @@ msgstr ""
 
 #: templates/lessons.html:308 templates/lessons.html.py:319
 msgid "Contract Verbs"
-msgstr ""
-
-#: templates/login.html:26
-msgid "Log in"
 msgstr ""
 
 #: templates/module.html:14
