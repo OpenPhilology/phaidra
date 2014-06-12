@@ -35,7 +35,7 @@
 				</p>
 
 				<p class="text-align: center">
-					<a href="/register" class="register-link btn btn-primary btn-lg">{% trans "Start Learning!" %}</a>
+					<a href="#" id="start-link" class="register-link btn btn-primary btn-lg">{% trans "Start Learning!" %}</a>
 				</p>
 			</div>
 			<div id="register-text" style="display: none">
@@ -44,19 +44,19 @@
 				<form role="form" style="max-width: 400px">
 					<div class="form-group">
 						<label for="name-input">{% trans "Full Name" %}</label>
-						<input type="text" class="form-control" id="first-name-input" placeholder="(Optional)">
+						<input type="text" name="first_name" class="form-control" id="first-name-input" placeholder="(Optional)">
 					</div>
 					<div class="form-group">
 						<label for="email-input">{% trans "Email Address" %}</label>
-						<input type="email" class="form-control" id="email-input">
+						<input type="email" name="email" class="form-control" id="email-input">
 					</div>
 					<div class="form-group">
 						<label for="username-input">{% trans "Username" %}</label>
-						<input type="text" class="form-control" id="username-input">
+						<input type="text" name="username" class="form-control" id="username-input">
 					</div>
 					<div class="form-group">
 						<label for="password-input">{% trans "Password" %}</label>
-						<input type="password" class="form-control" id="password-input">
+						<input type="password" name="password" class="form-control" id="password-input">
 					</div>
 					<button type="submit" class="register-link btn">{% trans "Create Account" %}</button>
 				</form>
