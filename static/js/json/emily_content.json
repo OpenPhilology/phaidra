@@ -117,15 +117,18 @@
 					},
 					{	
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/rough.html"
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/rough.html",
+						"smyth": "s9"
 					},
 					{	
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/smooth.html"
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/smooth.html",
+						"smyth": "s9"
 					},
 					{	
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/longshort.html"
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/longshort.html",
+						"smyth": "s4"
 					},
 					{	
 						"type": "slide_info",
@@ -137,7 +140,8 @@
 					},
 					{	
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/general.html"
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/general.html",
+						"smyth": "s149"
 					},
 					{	
 						"type": "slide_info",
