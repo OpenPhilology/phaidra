@@ -282,7 +282,6 @@ class SubmissionResource(Resource):
 	
 	class Meta:
 		allowed_methods = ['post', 'get', 'patch']
-		#authentication = SessionAuthentication() 
 		authentication = SessionAuthentication() 
 		authorization = UserObjectsOnlyAuthorization()
 		object_class = DataObject
@@ -364,14 +363,13 @@ class SubmissionResource(Resource):
 		self.is_authenticated(request)
 		
 		if not request.user or not request.user.is_authenticated():
-			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user })
+			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s.' % request.user })
 
 		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
-		# Ensuring that the user is who s/he says s/he is, handled by user objs. auth.
-		#try:
-			#user_node = AppUser.objects.get(username=data.get("user"))
-		#except ObjectDoesNotExist as e:
-			#return self.create_response(request, {'success': False, 'error': e})
+
+		# check if thte authenticated and the data user has the same username
+		if request.user.username != data['user']:
+			 return self.create_response(request, { 'success': False, 'error_message': 'Authenticated and submitting user is not identical, authenticated: %s , submitting: %s' % (request.user, data['user'])})
 
 		# get the user via neo look-up or create a newone
 		if data['user'] is not None:
@@ -382,7 +380,8 @@ class SubmissionResource(Resource):
 				userNode = gdb.nodes.get(userurl)			
 			
 			else:
-				userNode = gdb.node(username=data['user'])
+				userNode = gdb.nodes.create(username=data['user'])
+				userNode.labels.add("User")
 			
 			subms = gdb.node(
 				response = data.get("response"), # string 
@@ -946,7 +945,7 @@ class SentenceResource(Resource):
 		# build a "tree"
 		verbs = []
 		for w in words:
-			if w['head'] is not 0:
+			if w['head'] != 0:
 	   			nodes[w['head']].add_child(nodes[w['tbwid']])
 	   		if w['relation'] == "PRED" or w['relation'] == "PRED_CO":
 	   			verbs.append(w)
@@ -989,7 +988,7 @@ class SentenceResource(Resource):
 				for id in u:
 					for id2 in i:
 						w = nodes[id2].value
-						if w['head'] is id:
+						if w['head'] == id:
 							aim_words.append(w)   
 							
 				aim_words.append(verb)
