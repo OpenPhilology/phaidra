@@ -383,7 +383,7 @@ class SubmissionResource(Resource):
 				userNode = gdb.nodes.create(username=data['user'])
 				userNode.labels.add("User")
 			
-			subms = gdb.node(
+			subms = gdb.nodes.create(
 				response = data.get("response"), # string 
 				task = data.get("task"), # string 
 				smyth = data.get("smyth"),	# string
@@ -393,6 +393,9 @@ class SubmissionResource(Resource):
 				slideType = data.get("slideType"), # string
 				timestamp = data.get("timestamp") # datetime
 			)
+			######################TEST
+			subms.labels.add("Submission")
+			
 			if subms is None :
 				# in case an error wasn't already raised 			
 				raise ValidationError('Submission node could not be created.')
