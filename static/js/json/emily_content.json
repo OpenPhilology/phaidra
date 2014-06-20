@@ -132,7 +132,8 @@
 					},
 					{	
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/iota.html"
+						"includeHTML": "/static/raw/thuc/emily_content/2.diacritics/iota.html",
+						"smyth": "s5"
 					},
 					{	
 						"type": "slide_info",
@@ -300,7 +301,8 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/articles.html"
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/articles.html",
+						"smyth": "s332"
 					},
 					{
 						"type": "slide_info",

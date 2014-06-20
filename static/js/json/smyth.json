@@ -11,6 +11,10 @@
 		"title": "Dipthongs",
 		"query": null
 	},
+	"s5"  : {
+		"title": "Iota Subscript",
+		"query": null
+	},
 	"s9"  : {
 		"title": "Rough Breathing",
 		"query": null
@@ -71,6 +75,10 @@
 	"s232": {
 		"title": "Feminine Nouns in the Second Declension",
 		"query": "pos=noun&gender=fem&posAdd__contains=os_ou"
+	},
+	"s332": {
+		"title": "Articles Declension",
+		"query": "null"
 	},
 	"s499": {
 		"title": "Form the Present, Active, Indicative for ω-stem Verbs",
