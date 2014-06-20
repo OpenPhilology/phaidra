@@ -2,7 +2,7 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 
 		var View = Backbone.View.extend({
 			events: {
-				'submit form': 'login'
+				'submit #login-form': 'login'
 			},
 			initialize: function() {
 				// If user is already logged in, redirect
@@ -20,13 +20,13 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 				};
 
 				$.ajax({
-					url: '/api/user/login/',
+					url: '/api/v1/user/login/',
 					type: 'POST',
 					contentType: 'application/json; charset=utf-8', 
 					dataType: 'json',
 					data: JSON.stringify(data),
 					success: function(response_text) {
-						window.location.assign("/");	
+						window.location.assign("/home/");	
 					},
 					error: function(response_text) {
 						alert("Try again");

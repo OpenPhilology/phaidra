@@ -1,10 +1,11 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
-		Historical Languages eLearning - by Open Philology Project
+		{% trans "Historical Languages eLearning - by Open Philology Project" %}
 	</title>
 
 	<!-- CSS -->
@@ -22,42 +23,42 @@
 <div class="container" style="background: rgba(255, 255, 255, 0.7)">
 	<div class="row" id="splash">
 
-		<a class="btn btn-default" href="/home" id="login-link">Login</a>
+		<a class="btn btn-default" href="/home" id="login-link">{% trans "Log in" %}</a>
 		<img src="/static/images/new_thuc.png" class="thuc">
 
 		<div class="col-md-8 col-md-push-4">
 			<div id="greeting-text">
-				<h1>Get your Greek on.</h1>
+				<h1>{% trans "Get your Greek on." %}</h1>
 
 				<p class="lead">
-					Learn Ancient Greek as you read Thucydides' harrowing tale of the war between <span lang="grc" class="greek-text masc">οἱ Λακεδαιμόνιοι</span>, the Spartans, and <span lang="grc" class="greek-text masc">οἱ ᾿Αθηναῖοι</span>, the Athenians. 
+					{% trans "Learn Ancient Greek as you read Thucydides' harrowing tale of the war between " %}<span lang="grc" class="greek-text masc">οἱ Λακεδαιμόνιοι</span>{% trans ", the Spartans, and " %}<span lang="grc" class="greek-text masc">οἱ ᾿Αθηναῖοι</span>{% trans ", the Athenians" %}{% trans "." %} 
 				</p>
 
 				<p class="text-align: center">
-					<a href="/register" class="register-link btn btn-primary btn-lg">Start Learning!</a>
+					<a href="#" id="start-link" class="register-link btn btn-primary btn-lg">{% trans "Start Learning!" %}</a>
 				</p>
 			</div>
 			<div id="register-text" style="display: none">
-				<h1>Sign up</h1>
+				<h1>{% trans "Sign up" %}</h1>
 
 				<form role="form" style="max-width: 400px">
 					<div class="form-group">
-						<label for="name-input">Full Name</label>
-						<input type="text" class="form-control" id="first-name-input" placeholder="(Optional)">
+						<label for="name-input">{% trans "Full Name" %}</label>
+						<input type="text" name="first_name" class="form-control" id="first-name-input" placeholder="(Optional)">
 					</div>
 					<div class="form-group">
-						<label for="email-input">Email Address</label>
-						<input type="email" class="form-control" id="email-input">
+						<label for="email-input">{% trans "Email Address" %}</label>
+						<input type="email" name="email" class="form-control" id="email-input">
 					</div>
 					<div class="form-group">
-						<label for="username-input">Username</label>
-						<input type="text" class="form-control" id="username-input">
+						<label for="username-input">{% trans "Username" %}</label>
+						<input type="text" name="username" class="form-control" id="username-input">
 					</div>
 					<div class="form-group">
-						<label for="password-input">Password</label>
-						<input type="password" class="form-control" id="password-input">
+						<label for="password-input">{% trans "Password" %}</label>
+						<input type="password" name="password" class="form-control" id="password-input">
 					</div>
-					<button type="submit" class="register-link btn">Create Account</button>
+					<button type="submit" class="register-link btn">{% trans "Create Account" %}</button>
 				</form>
 			</div>
 
@@ -67,21 +68,21 @@
 	</div>
 	<div class="row" style="padding: 30px;">
 		<div class="col-md-4">
-			<h2>Game your way through Greek.</h2>
+			<h2>{% trans "Game your way through Greek." %}</h2>
 			<p>
-				Develop your mad Greek skillz through games and choose the path to Greek glory that suits your personal learning style. 
+				{% trans "Develop your mad Greek skillz through games and choose the path to Greek glory that suits your personal learning style." %} 
 			</p>
 		</div>
 		<div class="col-md-4">
-			<h2>Keep it original.</h2>
+			<h2>{% trans "Keep it original." %}</h2>
 			<p>
-				Explore Classical texts in their original languages, the way they were intended to be read, enhanced by data contributed by people like you.
+				{% trans "Explore Classical texts in their original languages, the way they were intended to be read, enhanced by data contributed by people like you." %}
 			</p>
 		</div>
 		<div class="col-md-4">
-			<h2>Be a scholar!</h2>
+			<h2>{% trans "Be a scholar!" %}</h2>
 			<p>
-				Contribute micropublications like translations and annotations to help create brand new, digital editions of Classical works!
+				{% trans "Contribute micropublications like translations and annotations to help create brand new, digital editions of Classical works!" %}
 			</p>
 		</div>
 	</div>

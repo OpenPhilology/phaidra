@@ -5,19 +5,19 @@
 	},
 	"s4"  : {
 		"title": "Long and Short Vowels",
-		"query": "null"
+		"query": null
 	},
 	"s5"  : {
 		"title": "Dipthongs",
-		"query": "null"
+		"query": null
 	},
 	"s9"  : {
 		"title": "Rough Breathing",
-		"query": "null"
+		"query": null
 	},
 	"s9"  : {
 		"title": "Smooth Breathing",
-		"query": "null"
+		"query": null
 	},
 	"s19#a": {
 		"title": "The Gamma Nasal",
@@ -26,7 +26,7 @@
 	},
 	"s149"  : {
 		"title": "Rules of Accents",
-		"query": "null"
+		"query": null
 	},
 	"s188": {
 		"title": "Marks of Punctuation",

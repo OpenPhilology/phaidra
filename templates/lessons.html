@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 	{# Determine which navigation element is 'active'  #}
 	{% block nav %}
@@ -12,10 +13,10 @@
 		<div class="col-md-4 col-md-push-8 feedback-container">
 			<div class="hidden-sm hidden-xs">
 				<img src="/static/images/thuc.png" style="height: 100px; float: right">
-				<h3>TARGET TEXT</h3>
+				<h3>{% trans "TARGET TEXT" %}</h3>
 				<p>
-					<strong>Author:</strong> Thucydides<br>
-					<strong>Work:</strong> <em>History of the Peloponnesian War</em>
+					<strong>{% trans "Author:" %}</strong> {% trans "Thucydides" %}<br>
+					<strong>{% trans "Work:" %}</strong> <em>{% trans "History of the Peloponnesian War" %}</em>
 				</p>
 			</div>
 		</div>
@@ -25,9 +26,9 @@
 						<a href="/module/1/section/0/slide/0" class="module basics">
 							<img src="/static/images/icon_grk_amphora.png" alt="The Greek Alphabet">
 							<div>
-								<h3>Alphabet</h3>
-								<span class="circle complete" title="Alphabet Table"></span>
-								<span class="circle complete" title="Punctuation"></span>
+								<h3>{% trans "Alphabet" %}</h3>
+								<span class="circle complete" title="{% trans 'Alphabet Table' %}"></span>
+								<span class="circle complete" title="{% trans 'Punctuation' %}"></span>
 							</div>
 						</a>
 					</div>
@@ -36,12 +37,12 @@
 						<a href="/module/2/section/0/slide/0" class="module basics">
 							<!-- <img src="/static/images/icon_grk_alphabet.png" alt="Diacritics">-->
 							<div>
-								<h3>Diacritics & Dipthongs</h3>
-								<span class="circle complete" title="Rough and Smooth Breathings"></span>
-								<span class="circle complete" title="Long and Short Vowels"></span>
-								<span class="circle complete" title="Iota Subscript"></span>
-								<span class="circle complete" title="Accents"></span>
-								<span class="circle complete" title="Dipthongs"></span>
+								<h3>{% trans "Diacritics & Dipthongs" %}</h3>
+								<span class="circle complete" title="{% trans 'Rough and Smooth Breathings' %}"></span>
+								<span class="circle complete" title="{% trans 'Long and Short Vowels' %}"></span>
+								<span class="circle complete" title="{% trans 'Iota Subscript' %}"></span>
+								<span class="circle complete" title="{% trans 'Accents' %}"></span>
+								<span class="circle complete" title="{% trans 'Dipthongs' %}"></span>
 							</div>
 						</a>
 					</div>
@@ -49,10 +50,10 @@
 						<a href="/module/3/section/0/slide/0" class="module nouns">
 							<div>
 								<img src="/static/images/icon_grk_monster.png" alt="Introduction to Nouns">
-								<h3>Introduction to Nouns</h3>
-								<span class="circle complete" title="Nouns in Greek"></span>
-								<span class="circle complete" title="Gender"></span>
-								<span class="circle complete" title="Number"></span>
+								<h3>{% trans "Introduction to Nouns" %}</h3>
+								<span class="circle complete" title="{% trans 'Nouns in Greek' %}"></span>
+								<span class="circle complete" title="{% trans 'Gender' %}"></span>
+								<span class="circle complete" title="{% trans 'Number' %}"></span>
 							</div>
 						</a>
 					</div>
@@ -61,12 +62,12 @@
 							<!--<img src="/static/images/icon_grk_nouns_intro.png" alt="Introduction to Alpha Declension">-->
 
 							<div>
-								<h3>Cases of Nouns</h3>
-								<span class="circle complete" title="Nominative Case"></span>
-								<span class="circle complete" title="Accusative Case"></span>
-								<span class="circle complete" title="Genitive Case"></span>
-								<span class="circle complete" title="Dative Case"></span>
-								<span class="circle complete" title="Vocative Case"></span>
+								<h3>{% trans "Cases of Nouns" %}</h3>
+								<span class="circle complete" title="{% trans 'Nominative Case' %}"></span>
+								<span class="circle complete" title="{% trans 'Accusative Case' %}"></span>
+								<span class="circle complete" title="{% trans 'Genitive Case' %}"></span>
+								<span class="circle complete" title="{% trans 'Dative Case' %}"></span>
+								<span class="circle complete" title="{% trans 'Vocative Case' %}"></span>
 							</div>
 						</a>
 					</div>
@@ -75,10 +76,10 @@
 							<!-- <img src="/static/images/icon_grk_amphora.png" alt="Introduction to First Declension">-->
 
 							<div>
-								<h3>First Declension</h3>
-								<span class="circle complete" title="Nouns in -α"></span>
-								<span class="circle complete" title="Nouns in -η"></span>
-								<span class="circle complete" title="Nouns in -η"></span>
+								<h3>{% trans "First Declension" %}</h3>
+								<span class="circle complete" title="{% trans 'Nouns in -α' %}"></span>
+								<span class="circle complete" title="{% trans 'Nouns in -η' %}"></span>
+								<span class="circle complete" title="{% trans 'Nouns in -η' %}"></span>
 							</div>
 						</a>
 					</div>
@@ -88,9 +89,9 @@
 							<!-- <img src="/static/images/icon_grk_nouns_first_dec.png" alt="Introduction to Second Declension">-->
 
 							<div>
-								<h3>Second Declension</h3>
-								<span class="circle complete" title="Nouns in -ο"></span>
-								<span class="circle complete" title="Nouns in -ον"></span>
+								<h3>{% trans "Second Declension" %}</h3>
+								<span class="circle complete" title="{% trans 'Nouns in -ο' %}"></span>
+								<span class="circle complete" title="{% trans 'Nouns in -ον' %}"></span>
 							</div>
 						</a>
 					</div>
@@ -100,12 +101,12 @@
 							<img src="/static/images/icon_grk_parthenon.png" alt="Introduction to Verbs">
 
 							<div>
-								<h3>Introduction to Verbs</h3>
-								<span class="circle complete" title="Person"></span>
-								<span class="circle complete" title="Number"></span>
-								<span class="circle complete" title="Tense"></span>
-								<span class="circle complete" title="Mood"></span>
-								<span class="circle complete" title="Voice"></span>
+								<h3>{% trans "Introduction to Verbs" %}</h3>
+								<span class="circle complete" title="{% trans 'Person' %}"></span>
+								<span class="circle complete" title="{% trans 'Number' %}"></span>
+								<span class="circle complete" title="{% trans 'Tense' %}"></span>
+								<span class="circle complete" title="{% trans 'Mood' %}"></span>
+								<span class="circle complete" title="{% trans 'Voice' %}"></span>
 							</div>
 						</a>
 					</div>
@@ -115,7 +116,7 @@
 							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
 
 							<div>
-								<h3>Present Indicative Active</h3>
+								<h3>{% trans "Present Indicative Active" %}</h3>
 								<span class="circle complete" title="λύω"></span>
 								<span class="circle complete" title= "εἰμί"></span>
 							</div>
@@ -127,7 +128,7 @@
 							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
 
 							<div>
-								<h3>Future Indicative Active</h3>
+								<h3>{% trans "Future Indicative Active" %}</h3>
 								<span class="circle complete" title="λύσω"></span>
 								<span class="circle complete" title= "ἔσομαι"></span>
 							</div>
@@ -139,9 +140,9 @@
 							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
 
 							<div>
-								<h3>Adjectives: First and Second Declension</h3>
-								<span class="circle complete" title= "Three-ending"></span>
-								<span class="circle complete" title= "Two-ending"></span>
+								<h3>{% trans "Adjectives: First and Second Declension" %}</h3>
+								<span class="circle complete" title= "{% trans 'Three-ending' %}"></span>
+								<span class="circle complete" title= "{% trans 'Two-ending' %}"></span>
 							</div>
 						</a>
 					</div>
@@ -151,7 +152,7 @@
 							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
 
 							<div>
-								<h3>Imperfect Indicative Active</h3>
+								<h3>{% trans "Imperfect Indicative Active" %}</h3>
 								<span class="circle complete" title= "ἔλυον"></span>
 								<span class="circle complete" title= "ἧ"></span>
 							</div>
@@ -163,7 +164,7 @@
 							<!-- <img src="/static/images/icon_grk_monster.png" alt="Present Indicative Active">-->
 
 							<div>
-								<h3>Third Declension: Consonant Stems</h3>
+								<h3>{% trans "Third Declension: Consonant Stems" %}</h3>
 								<span class="circle" title= ""></span>
 								<span class="circle" title= ""></span>
 							</div>
@@ -172,7 +173,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Secondary Tenses</h3>
+								<h3>{% trans "Secondary Tenses" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -183,7 +184,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Demonstrative Pronouns</h3>
+								<h3>{% trans "Demonstrative Pronouns" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -194,7 +195,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Present and Imperfect of <span class="greek-text">εἰμί</span>, to be</h3>
+								<h3>{% trans "Present and Imperfect of " %}<span class="greek-text">εἰμί</span>{% trans ", to be" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -205,7 +206,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Introduction to the Middle Voice</h3>
+								<h3>{% trans "Introduction to the Middle Voice" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -216,7 +217,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Continuing the Middle Voice</h3>
+								<h3>{% trans "Continuing the Middle Voice" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -227,7 +228,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Indicative Passive</h3>
+								<h3>{% trans "Indicative Passive" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -238,7 +239,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Perfect/Pluperfect Middle/Passive (Pt. I)</h3>
+								<h3>{% trans "Perfect/Pluperfect Middle/Passive (Pt. I)" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -249,7 +250,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Perfect/Pluperfect Middle/Passive (Pt. II)</h3>
+								<h3>{% trans "Perfect/Pluperfect Middle/Passive (Pt. II)" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -260,7 +261,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Prepositions</h3>
+								<h3>{% trans "Prepositions" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -271,7 +272,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Stems of the Consonant Declension (Pt. I)</h3>
+								<h3>{% trans "Stems of the Consonant Declension (Pt. I)" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -282,7 +283,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Stems of the Consonant Declension (Pt. II)</h3>
+								<h3>{% trans "Stems of the Consonant Declension (Pt. II)" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -293,7 +294,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3>Adjectives of the Consonant Declension</h3>
+								<h3>{% trans "Adjectives of the Consonant Declension" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -304,7 +305,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3><span class="greek-text">-αω</span> Contract Verbs</h3>
+								<h3><span class="greek-text">-αω</span> {% trans "Contract Verbs" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>
@@ -315,7 +316,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="module">
 							<div>
-								<h3><span class="greek-text">-εω, -οω</span> Contract Verbs</h3>
+								<h3><span class="greek-text">-εω, -οω</span> {% trans "Contract Verbs" %}</h3>
 								<span class="circle"></span>
 								<span class="circle"></span>
 								<span class="circle"></span>

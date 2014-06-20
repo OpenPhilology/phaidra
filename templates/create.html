@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {# Determine which navigation element is 'active'  #}
 {% block nav %}
@@ -10,90 +11,90 @@
 {% block content %}
 
 <div class="col-md-7 col-md-offset-1" style="background-color: rgba(255, 255, 255, 0.8)">
-	<h1>Help Create Digital Editions</h1>
+	<h1>{% trans "Help Create Digital Editions" %}</h1>
 	<p>
-		You can help create a digital edition of a Classical work, no matter what skill level you're at. You'll be improving your Ancient Greek and contributing to Open Data at the same time!
+		{% trans "You can help create a digital edition of a Classical work, no matter what skill level you're at. You'll be improving your Ancient Greek and contributing to Open Data at the same time!" %}
 	</p>
 	<hr>
-	<h2>Digital Editions in Progress</h2>
+	<h2>{% trans "Digital Editions in Progress" %}</h2>
 	<p>
-		Click the section of the progress bar to contribute to that Digital Edition.
+		{% trans "Click the section of the progress bar to contribute to that Digital Edition." %}
 	</p>
 
-	<h3>Plato's <em>Crito</em> <small>(Greek into German)</small></h3>
+	<h3>{% trans "Plato's" %}<em>{% trans "Crito" %}</em> <small>{% trans "(Greek into German)" %}</small></h3>
 	<div class="progress">
-		<div class="progress-bar progress-bar-info" style="width: 33%" data-toggle="tooltip" title="100% Translated"></div>
-		<div class="progress-bar progress-bar-syntax" style="width: 11%" data-toggle="tooltip" title="33% Aligned"></div>
-		<div class="progress-bar progress-bar-success" style="width: 11%" data-toggle="tooltip" title="33% Treebanked"></div>
+		<div class="progress-bar progress-bar-info" style="width: 33%" data-toggle="tooltip" title="{% trans '100% Translated' %}"></div>
+		<div class="progress-bar progress-bar-syntax" style="width: 11%" data-toggle="tooltip" title="{% trans '33% Aligned' %}"></div>
+		<div class="progress-bar progress-bar-success" style="width: 11%" data-toggle="tooltip" title="{% trans '33% Treebanked' %}"></div>
 	</div>
-	<span>3 Contributors</span>
+	<span>{% trans "3 Contributors" %}</span>
 
 	<hr>
 
-	<h3>Homer's <em>Iliad</em> <small>(Greek into English)</small></h3>
+	<h3>{% trans "Homer's" %}" <em>{% trans "Iliad" %}</em> <small>{% trans "(Greek into English)" %}</small></h3>
 	<div class="progress">
-		<div class="progress-bar progress-bar-info" style="width: 22%" data-toggle="tooltip" title="66% Translated"></div>
-		<div class="progress-bar progress-bar-syntax" style="width: 11%" data-toggle="tooltip" title="33% Aligned"></div>
-		<div class="progress-bar progress-bar-success" style="width: 33%" data-toggle="tooltip" title="100% Treebanked"></div>
+		<div class="progress-bar progress-bar-info" style="width: 22%" data-toggle="tooltip" title="{% trans '66% Translated' %}"></div>
+		<div class="progress-bar progress-bar-syntax" style="width: 11%" data-toggle="tooltip" title="{% trans '33% Aligned' %}"></div>
+		<div class="progress-bar progress-bar-success" style="width: 33%" data-toggle="tooltip" title="{% trans '100% Treebanked' %}"></div>
+	</div>
+	<span>{% trans "12 Contributors" %}</span>
+
+	<hr>
+
+	<h3>{% trans "Herodotus'" %} <em>{% trans "Histories" %}</em> <small>{% trans "(Greek into English)" %}</small></h3>
+	<div class="progress">
+		<div class="progress-bar progress-bar-info" style="width: 22%" data-toggle="tooltip" title="{% trans '66% Translated' %}"></div>
+		<div class="progress-bar progress-bar-syntax" style="width: 22%" data-toggle="tooltip" title="{% trans '66% Aligned' %}"></div>
+		<div class="progress-bar progress-bar-success" style="width: 33%" data-toggle="tooltip" title="{% trans '100% Treebanked' %}"></div>
 	</div>
 	<span>12 Contributors</span>
 
 	<hr>
 
-	<h3>Herodotus' <em>Histories</em> <small>(Greek into English)</small></h3>
+	<h3>{% trans "Thucydides'" %} <em>{% trans "Penteconteatia" %}</em> <small>{% trans "(Greek into Croatian)" %}</small> </h3>
+	<p><span class="label label-info">{% trans "Complete!" %}</span> {% trans "This edition is complete, but you can still improve it!" %} <a href="#">{% trans "Learn How" %}</a></p>
 	<div class="progress">
-		<div class="progress-bar progress-bar-info" style="width: 22%" data-toggle="tooltip" title="66% Translated"></div>
-		<div class="progress-bar progress-bar-syntax" style="width: 22%" data-toggle="tooltip" title="66% Aligned"></div>
-		<div class="progress-bar progress-bar-success" style="width: 33%" data-toggle="tooltip" title="100% Treebanked"></div>
+		<div class="progress-bar progress-bar-info" style="width: 33%" data-toggle="tooltip" title="{% trans '100% Translated' %}"></div>
+		<div class="progress-bar progress-bar-syntax" style="width: 33%" data-toggle="tooltip" title="{% trans '100% Aligned' %}"></div>
+		<div class="progress-bar progress-bar-success" style="width: 34%" data-toggle="tooltip" title="{% trans '100% Treebanked' %}"></div>
 	</div>
-	<span>12 Contributors</span>
-
-	<hr>
-
-	<h3>Thucydides' <em>Penteconteatia</em> <small>(Greek into Croatian)</small> </h3>
-	<p><span class="label label-info">Complete!</span> This edition is complete, but you can still improve it! <a href="#">Learn How</a></p>
-	<div class="progress">
-		<div class="progress-bar progress-bar-info" style="width: 33%" data-toggle="tooltip" title="100% Translated"></div>
-		<div class="progress-bar progress-bar-syntax" style="width: 33%" data-toggle="tooltip" title="100% Aligned"></div>
-		<div class="progress-bar progress-bar-success" style="width: 34%" data-toggle="tooltip" title="100% Treebanked"></div>
-	</div>
-	<span>1 Contributor</span>
+	<span>{% trans "1 Contributor" %}</span>
 
 	<hr>
 	<div style="display: none">
-		<h2><a href="#">Translate</a></h2>
-		<p>Take something and write it in another language. <a href="#">Learn How</a></p>
-		<h2><a href="#">Align</a></h2>
-		<p>Choose the words in a sentence that corresponse to one another. <a href="#">Learn How</a></p>
-		<h2><a href="#">Treebank</a></h2>
-		<p>Move the words of a sentence into a tree structure to indicate their depedencies. <a href="#">Learn How</a></p>
-		<h2><a href="#">Transcribe</a></h2>
-		<p>Study a snippet of a manuscript and transcribe it. <a href="#">Learn How</a></p>
+		<h2><a href="#">{% trans "Translate" %}</a></h2>
+		<p>{% trans "Take something and write it in another language." %} <a href="#">{% trans "Learn How" %}</a></p>
+		<h2><a href="#">{% trans "Align" %}</a></h2>
+		<p>{% trans "Choose the words in a sentence that corresponse to one another." %} <a href="#">{% trans "Learn How" %}</a></p>
+		<h2><a href="#">{% trans "Treebank" %}</a></h2>
+		<p>{% trans "Move the words of a sentence into a tree structure to indicate their dependencies." %} <a href="#">{% trans "Learn How" %}</a></p>
+		<h2><a href="#">{% trans "Transcribe" %}</a></h2>
+		<p>{% trans "Study a snippet of a manuscript and transcribe it." %} <a href="#">{% trans "Learn How" %}</a></p>
 		<hr>
 	</div>
 </div>
 <div class="col-md-3">
-	<h3>Suggestions for You</h3>
+	<h3>{% trans "Suggestions for You" %}</h3>
 	<div class="well">
-		<p>Can you align these two sentences?</p>
-		<p>Sent. A</p>
-		<p>Sent. B</p>
+		<p>{% trans "Can you align these two sentences?" %}</p>
+		<p>{% trans "Sent. A" %}</p>
+		<p>{% trans "Sent. B" %}</p>
 
-		<a href="#" class="btn btn-default">Align</a> &nbsp; <a href="#">Suggest Another</a>
+		<a href="#" class="btn btn-default">{% trans "Align" %}</a> &nbsp; <a href="#">{% trans "Suggest Another" %}</a>
 	</div>
 
 	<hr>
 
-	<h3>Your Contributions</h3>
-	<strong>Thuc.</strong><br>
+	<h3>{% trans "Your Contributions" %}</h3>
+	<strong>{% trans "Thuc." %}</strong><br>
 	<ul style="list-style-type: none; padding-left: 0">
-		<li><a href="#">1.90</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 20</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; Translation <span class="label label-success">Accepted</span></li>
-		<li><a href="#">1.90</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 10</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; Alignment</li>
+		<li><a href="#">1.90</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 20</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; {% trans "Translation" %} <span class="label label-success">{% trans "Accepted" %}</span></li>
+		<li><a href="#">1.90</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 10</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; {% trans "Alignment" %}</li>
 	</ul>
-	<strong>Plato</strong><br>
+	<strong>{% trans "Plato" %}</strong><br>
 	<ul style="list-style-type: none; padding-left: 0">
-		<li><a href="#">4.90</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 20</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; Translation</li>
-		<li><a href="#">4.91</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 10</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; Translation</li>
+		<li><a href="#">4.90</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 20</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; {% trans "Translation" %}</li>
+		<li><a href="#">4.91</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 10</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; {% trans "Translation" %}</li>
 	</ul>
 </div>
 

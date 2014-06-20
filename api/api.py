@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-# coding: utf8
+# coding: utf-8
 from phaidra import settings
 from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH
 
@@ -104,7 +104,7 @@ class CreateUserResource(ModelResource):
 		Make sure the user isn't already registered, create the user, return user object as JSON.
 		"""
 		self.method_check(request, allowed=['post'])		
-		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
 			
 		try:
 			user = AppUser.objects.create_user(
@@ -146,7 +146,7 @@ class UserResource(ModelResource):
 		"""
 		self.method_check(request, allowed=['post'])
 		
-		data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
 		username = data.get('username', '')
 		password = data.get('password', '')
@@ -283,7 +283,7 @@ class SubmissionResource(Resource):
 	class Meta:
 		allowed_methods = ['post', 'get', 'patch']
 		#authentication = SessionAuthentication() 
-		authentication = BasicAuthentication() 
+		authentication = SessionAuthentication() 
 		authorization = UserObjectsOnlyAuthorization()
 		object_class = DataObject
 		resource_name = 'submission'
@@ -297,6 +297,7 @@ class SubmissionResource(Resource):
 			kwargs['pk'] = bundle_or_obj.id		
 		return kwargs
 
+	# means csrftoken and sessionid  is required for reading, if resource on session auth?!
 	def authorized_read_list(self, object_list, bundle):
 		"""
 		Handles checking of permissions to see if the user has authorization
@@ -350,7 +351,8 @@ class SubmissionResource(Resource):
 			self.unauthorized_result(e)
 
 		return auth_result	
-		
+	
+	# means csrftoken and sessionid  is required, if resource on session auth?!	
 	def post_list(self, request, **kwargs):
 		"""
 		Create a new submission object, which relates to the slide it responds to and the user who submitted it.
@@ -359,8 +361,8 @@ class SubmissionResource(Resource):
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		
 		self.method_check(request, allowed=['post'])
-		#self.is_authenticated(request)
-
+		self.is_authenticated(request)
+		
 		if not request.user or not request.user.is_authenticated():
 			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user })
 
@@ -464,6 +466,8 @@ class LemmaResource(Resource):
 						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
 					elif key.split('__')[1] == 'endswith':
 						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					elif key.split('__')[1] == 'isnot':
+						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
 					elif key.split('__')[1] == 'gt':
 						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """>""" +query_params[key]+ """ AND """
 					elif key.split('__')[1] == 'lt':
@@ -610,6 +614,8 @@ class WordResource(Resource):
 						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
 					elif key.split('__')[1] == 'endswith':
 						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					elif key.split('__')[1] == 'isnot':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
 				else:
 					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
@@ -1106,12 +1112,32 @@ class VisualizationResource(Resource):
 				if sub[0]['data']['smyth'] not in smyth:
 					# get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
 					params = {}
-					grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
-					for pair in grammarParams:
-						params[pair.split('=')[0]] = pair.split('=')[1]
-					smyth[sub[0]['data']['smyth']] = params
+					try:
+						grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
+						for pair in grammarParams:
+							params[pair.split('=')[0]] = pair.split('=')[1]
+						smyth[sub[0]['data']['smyth']] = params
+					except KeyError as k:
+						continue
 
 		return [vocab, smyth]
+	
+	def check_fuzzy_filters(self, filter, request_attribute, word_attribute ):
+		
+		if filter == 'contains':
+			if request_attribute not in word_attribute:
+				return True
+		elif filter == 'startswith':	
+			if not word_attribute.startswith(request_attribute):
+				return True
+		elif filter == 'endswith':
+			if not word_attribute.endswith(request_attribute):
+				return True
+		elif filter == 'isnot':	
+			if word_attribute == request_attribute:
+				return True
+			
+		return False
 
 
 	"""
@@ -1167,26 +1193,14 @@ class VisualizationResource(Resource):
 								if smythFlat[smyth][p] != w.elements[0][0]['data'][p]:
 									badmatch = True
 									break
+							# check for fuzzy filtering attributes
 							except KeyError as k:
 								if len(p.split('__')) > 1:
-									if p.split('__')[1] == 'contains':
-										try:
-											w.elements[0][0]['data'][p.split('__')[0]]
-											if smythFlat[smyth][p] not in w.elements[0][0]['data'][p.split('__')[0]]:
-												badmatch = True
-												break
-										except KeyError as k:
-											badmatch = True
-											break
-									elif p.split('__')[1] == 'endswith':	
-										try:
-											w.elements[0][0]['data'][p.split('__')[0]]
-											if not w.elements[0][0]['data'][p.split('__')[0]].endswith(smythFlat[smyth][p]):
-												badmatch = True
-												break
-										except KeyError as k:
-											badmatch = True
-											break								
+									try:
+										badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], w.elements[0][0]['data'][p.split('__')[0]])
+									except KeyError as k:
+										badmatch = True
+										break																	
 								else:
 									badmatch = True
 									break
@@ -1245,26 +1259,14 @@ class VisualizationResource(Resource):
 									if smythFlat[smyth][p] != word['data'][p]:
 										badmatch = True
 										break
+								# check for fuzzy filtering attributes
 								except KeyError as k:
 									if len(p.split('__')) > 1:
-										if p.split('__')[1] == 'contains':
-											try:
-												word['data'][p.split('__')[0]]
-												if smythFlat[smyth][p] not in word['data'][p.split('__')[0]]:
-													badmatch = True
-													break
-											except KeyError as k:
-												badmatch = True
-												break
-										elif p.split('__')[1] == 'endswith':
-											try:
-												word['data'][p.split('__')[0]]
-												if not word['data'][p.split('__')[0]].endswith(smythFlat[smyth][p]):
-													badmatch = True
-													break
-											except KeyError as k:
-												badmatch = True
-												break												
+										try:
+											badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], word['data'][p.split('__')[0]])
+										except KeyError as k:
+											badmatch = True
+											break																					
 									else:
 										badmatch = True
 										break
@@ -1328,26 +1330,14 @@ class VisualizationResource(Resource):
 										if smythFlat[smyth][p] != word.properties[p]:
 											badmatch = True
 											break
+									# check for fuzzy filtering attributes
 									except KeyError as k:
 										if len(p.split('__')) > 1:
-											if p.split('__')[1] == 'contains':
-												try:
-													word.properties[p.split('__')[0]]
-													if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
-														badmatch = True
-														break
-												except KeyError as k:
-													badmatch = True
-													break
-											elif p.split('__')[1] == 'endswith':
-												try:
-													word.properties[p.split('__')[0]]
-													if not word.properties[p.split('__')[0]].endswith(smythFlat[smyth][p]):
-														badmatch = True
-														break
-												except KeyError as k:
-													badmatch = True
-													break
+											try:
+												badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], word.properties[p.split('__')[0]])
+											except KeyError as k:
+												badmatch = True
+												break																					
 										else:
 											badmatch = True
 											break
@@ -1426,26 +1416,14 @@ class VisualizationResource(Resource):
 									if smythFlat[smyth][p] != word.properties[p]:
 										badmatch = True
 										break
+								# check for fuzzy filtering attributes
 								except KeyError as k:
 									if len(p.split('__')) > 1:
-										if p.split('__')[1] == 'contains':
-											try:
-												word.properties[p.split('__')[0]]
-												if smythFlat[smyth][p] not in word.properties[p.split('__')[0]]:
-													badmatch = True
-													break
-											except KeyError as k:
-												badmatch = True
-												break
-										elif p.split('__')[1] == 'endswith':
-											try:
-												word.properties[p.split('__')[0]]
-												if not word.properties[p.split('__')[0]].endswith(smythFlat[smyth][p]):
-													badmatch = True
-													break
-											except KeyError as k:
-												badmatch = True
-												break											
+										try:
+											badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], word.properties[p.split('__')[0]])
+										except KeyError as k:
+											badmatch = True
+											break																					
 									else:
 										badmatch = True
 										break

@@ -1,7 +1,7 @@
 define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module', 
-		'views/login', 'views/index', 'views/reader', 'views/grammar', 'views/aligner'], 
+		'views/login', 'views/index', 'views/home', 'views/reader', 'views/grammar', 'views/aligner'], 
 		function($, _, Backbone, Models, Collections, ModuleView, 
-		LoginView, IndexView, ReaderView, GrammarView, AlignerView) { 
+		LoginView, IndexView, HomeView, ReaderView, GrammarView, AlignerView) { 
 
 	var Router = {};
 	Router.Router = Backbone.Router.extend({
@@ -9,7 +9,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			"": "index",
 
 			// Form handles login page
-			"login/": "login",
+			"login/": "showLogin",
 
 			// Traditional Grammar Routes
 			"grammar/:smyth": "showGrammar",
@@ -33,13 +33,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			// Create/Populate necessary models and collections
 		},
 		index: function() {
-			// TODO: Move this into its own view, along with reg. form handling
-			$('#greeting-text a').on('click', function(e) {
-				e.preventDefault();
-				$('#greeting-text').slideUp('slow', function() {
-					$('#register-text').slideDown('slow');
-				});
-			});
+			if (!this.index_view) {
+				this.index_view = new IndexView({ el: '.container' }).render();
+			}
 		},
 
 		// Form handles login page 

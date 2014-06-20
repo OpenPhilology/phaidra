@@ -25,16 +25,16 @@
 			{% block nav %}
 				<nav class="row navigation">
 					<a class="col-xs-3 col-sm-3 progress-lessons {{ home_active }}" href="/home">
-						<span class="glyphicon glyphicon-home"></span> <span class="hidden-xs">HOME</span>
+						<span class="glyphicon glyphicon-home"></span> <span class="hidden-xs">{% trans "HOME" %}</span>
 					</a>
 					<a class="col-xs-3 col-sm-3 progress-lessons {{ lessons_active }}" href="/lessons">
-						<span class="glyphicon glyphicon-flash"></span> <span class="hidden-xs">LEARN</span>
+						<span class="glyphicon glyphicon-flash"></span> <span class="hidden-xs">{% trans "LEARN" %}</span>
 					</a>
 					<a class="col-xs-3 col-sm-3 progress-voc {{ reader_active }}" href="/reader">
-						<span class="glyphicon glyphicon-bookmark"></span> <span class="hidden-xs">READ</span>
+						<span class="glyphicon glyphicon-bookmark"></span> <span class="hidden-xs">{% trans "READ" %}</span>
 					</a>
 					<a class="col-xs-3 col-sm-3 progress-book {{ create_active }}" href="/create">
-						<span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">CREATE</span>
+						<span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">{% trans "CREATE" %}</span>
 					</a>
 				</nav>
 			{% endblock %}
@@ -55,7 +55,7 @@
 					</span>
 				{% else %}
 					<span class="logged-out">
-						<a href="/login" class="log-in-link">{% trans "Would you care to log in? %}</a>
+						<a href="/login" class="log-in-link">{% trans "Would you care to log in?" %}</a>
 					</span>
 				{% endif %}
 			</div>
