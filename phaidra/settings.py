@@ -38,6 +38,10 @@ TIME_ZONE = 'Europe/Berlin'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = (
+    ('fa'),
+)
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
