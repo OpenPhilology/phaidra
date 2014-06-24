@@ -3,14 +3,17 @@
 		"title": "The Ancient Greek Alphabet",
 		"query": null
 	},
-	"s19#a": {
-		"title": "The Gamma Nasal",
-		"query": "pos=noun&lemma__contains=γγ",
-		"variants": ["lemma__contains=γγ", "lemma__contains=γκ", "lemma__contains=γχ", "lemma__contains=γξ"]
+	"s4"  : {
+		"title": "Long and Short Vowels",
+		"query": null
 	},
-	"s188": {
-		"title": "Marks of Punctuation",
-		"query": "pos=punct"
+	"s5"  : {
+		"title": "Dipthongs",
+		"query": null
+	},
+	"s5"  : {
+		"title": "Iota Subscript",
+		"query": null
 	},
 	"s9"  : {
 		"title": "Rough Breathing",
@@ -19,6 +22,19 @@
 	"s9"  : {
 		"title": "Smooth Breathing",
 		"query": null
+	},
+	"s19#a": {
+		"title": "The Gamma Nasal",
+		"query": "pos=noun&lemma__contains=γγ",
+		"variants": ["lemma__contains=γγ", "lemma__contains=γκ", "lemma__contains=γχ", "lemma__contains=γξ"]
+	},
+	"s149"  : {
+		"title": "Rules of Accents",
+		"query": null
+	},
+	"s188": {
+		"title": "Marks of Punctuation",
+		"query": "pos=punct"
 	},
 	"s194": {
 		"title": "Characteristics of Nouns in Ancient Greek",
@@ -59,6 +75,10 @@
 	"s232": {
 		"title": "Feminine Nouns in the Second Declension",
 		"query": "pos=noun&gender=fem&posAdd__contains=os_ou"
+	},
+	"s332": {
+		"title": "Articles Declension",
+		"query": "null"
 	},
 	"s499": {
 		"title": "Form the Present, Active, Indicative for ω-stem Verbs",

@@ -282,7 +282,6 @@ class SubmissionResource(Resource):
 	
 	class Meta:
 		allowed_methods = ['post', 'get', 'patch']
-		#authentication = SessionAuthentication() 
 		authentication = SessionAuthentication() 
 		authorization = UserObjectsOnlyAuthorization()
 		object_class = DataObject
@@ -364,14 +363,13 @@ class SubmissionResource(Resource):
 		self.is_authenticated(request)
 		
 		if not request.user or not request.user.is_authenticated():
-			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user })
+			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s.' % request.user })
 
 		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
-		# Ensuring that the user is who s/he says s/he is, handled by user objs. auth.
-		#try:
-			#user_node = AppUser.objects.get(username=data.get("user"))
-		#except ObjectDoesNotExist as e:
-			#return self.create_response(request, {'success': False, 'error': e})
+
+		# check if thte authenticated and the data user has the same username
+		if request.user.username != data['user']:
+			 return self.create_response(request, { 'success': False, 'error_message': 'Authenticated and submitting user is not identical, authenticated: %s , submitting: %s' % (request.user, data['user'])})
 
 		# get the user via neo look-up or create a newone
 		if data['user'] is not None:
@@ -382,9 +380,10 @@ class SubmissionResource(Resource):
 				userNode = gdb.nodes.get(userurl)			
 			
 			else:
-				userNode = gdb.node(username=data['user'])
+				userNode = gdb.nodes.create(username=data['user'])
+				userNode.labels.add("User")
 			
-			subms = gdb.node(
+			subms = gdb.nodes.create(
 				response = data.get("response"), # string 
 				task = data.get("task"), # string 
 				smyth = data.get("smyth"),	# string
@@ -394,6 +393,9 @@ class SubmissionResource(Resource):
 				slideType = data.get("slideType"), # string
 				timestamp = data.get("timestamp") # datetime
 			)
+			######################TEST
+			subms.labels.add("Submission")
+			
 			if subms is None :
 				# in case an error wasn't already raised 			
 				raise ValidationError('Submission node could not be created.')
@@ -577,6 +579,78 @@ class WordResource(Resource):
 		object_class = DataObject
 		authorization = ReadOnlyAuthorization()
 	
+	def prepend_urls(self, *args, **kwargs):	
+		
+		return [
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'smyth', trailing_slash()), self.wrap_view('smyth'), name="api_%s" % 'smyth')
+			]
+	
+	"""
+	returns a list of words to a given smyth key. Doesn't work via objects. Returns a json object returninig a list of words.
+	"""
+	def smyth(self, request, **kwargs):
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		data = {}
+		data['words'] = []
+		query_params = {}
+		
+		# this might tricky, because no error response creatable of unsuccessful
+		if request.GET.get('smyth'):
+			
+			# get the file entry:
+			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
+			fileContent = {}
+			with open(filename, 'r') as json_data:
+				fileContent = json.load(json_data)
+				json_data.close()
+				
+			try:
+				grammarParams = fileContent[0][request.GET.get('smyth')]['query'].split('&')		
+				for pair in grammarParams:
+					query_params[pair.split('=')[0]] = pair.split('=')[1]
+			except KeyError as k:	
+				return self.error_response(request, {'error': 'Smyth key does not exist.'}, response_class=HttpBadRequest)
+			
+			# generate query
+			q = """START s=node(*) MATCH (s)-[:words]->(w) WHERE """
+			
+			# filter word on parameters
+			for key in query_params:
+				if len(key.split('__')) > 1:
+					if key.split('__')[1] == 'contains':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'startswith':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'endswith':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					elif key.split('__')[1] == 'isnot':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
+				else:
+					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
+			q = q[:len(q)-4]
+			q = q + """RETURN w, s ORDER BY ID(w)"""
+			
+			table = gdb.query(q)
+				
+			# create the objects which was queried for and set all necessary attributes
+			for t in table:
+				word = t[0]
+				sentence = t[1]		
+				url = word['self'].split('/')
+				urlSent = sentence['self'].split('/')		
+				
+				tmp = {}
+				for key in word['data']:
+					tmp[key] = word['data'][key]	
+				tmp['resource_uri'] = API_PATH + 'word/' + url[len(url)-1]
+				tmp['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
+				data['words'].append(tmp)
+			
+			return self.create_response(request, data)
+		
+		else:
+			return self.error_response(request, {'error': 'Smyth key missed.'}, response_class=HttpBadRequest)
+	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
 		kwargs = {}		
@@ -588,16 +662,34 @@ class WordResource(Resource):
 	
 	def get_object_list(self, request):
 		
-		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		attrlist = ['CTS', 'length', 'case', 'dialect', 'head', 'form', 'posClass', 'cid', 'gender', 'tbwid', 'pos', 'value', 'degree', 'number','lemma', 'relation', 'isIndecl', 'ref', 'posAdd', 'mood', 'tense', 'voice', 'person']
 		words = []
-		
 		query_params = {}
-		for obj in request.GET.keys():
-			if obj in attrlist and request.GET.get(obj) is not None:
-				query_params[obj] = request.GET.get(obj)
-			elif obj.split('__')[0] in attrlist and request.GET.get(obj) is not None:
-				query_params[obj] = request.GET.get(obj)
+		
+		if request.GET.get('smyth'):
+			
+			# get the file entry:
+			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
+			fileContent = {}
+			with open(filename, 'r') as json_data:
+				fileContent = json.load(json_data)
+				json_data.close()
+				
+			try:
+				grammarParams = fileContent[0][request.GET.get('smyth')]['query'].split('&')		
+				for pair in grammarParams:
+					query_params[pair.split('=')[0]] = pair.split('=')[1]
+			except KeyError as k:	
+				return words				
+		
+		# query by ordinary filters
+		else:		
+			for obj in request.GET.keys():
+				if obj in attrlist and request.GET.get(obj) is not None:
+					query_params[obj] = request.GET.get(obj)
+				elif obj.split('__')[0] in attrlist and request.GET.get(obj) is not None:
+					query_params[obj] = request.GET.get(obj)
 		
 		# implement filtering
 		if len(query_params) > 0:
@@ -643,9 +735,9 @@ class WordResource(Resource):
 				
 		return words
 	
-	def obj_get_list(self, bundle, **kwargs):
-		
+	def obj_get_list(self, bundle, **kwargs):		
 		return self.get_object_list(bundle.request)
+	
 	
 	def obj_get(self, bundle, **kwargs):
 		
@@ -856,7 +948,7 @@ class SentenceResource(Resource):
 		# build a "tree"
 		verbs = []
 		for w in words:
-			if w['head'] is not 0:
+			if w['head'] != 0:
 	   			nodes[w['head']].add_child(nodes[w['tbwid']])
 	   		if w['relation'] == "PRED" or w['relation'] == "PRED_CO":
 	   			verbs.append(w)
@@ -899,7 +991,7 @@ class SentenceResource(Resource):
 				for id in u:
 					for id2 in i:
 						w = nodes[id2].value
-						if w['head'] is id:
+						if w['head'] == id:
 							aim_words.append(w)   
 							
 				aim_words.append(verb)
@@ -1562,13 +1654,6 @@ class VisualizationResource(Resource):
 		return self.create_response(request, data)
 	
 	
-	
-	
 
-	
-	
-	
-	
-	
-	
+
 	
