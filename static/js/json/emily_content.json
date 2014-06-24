@@ -292,25 +292,25 @@
 							"orientation": "vertical"
 						},
 						"title": "Exercise: Pick the correct definite article",
-						"question": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
+						"question": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span lang=\"grc\" class=\"fem\">ἡμέρα</span> (day)?",
 						"options": [
 							[
 								{
 									"value": "ὁ",
-									"display": "ὁ"
+									"display": "<span lang=\"grc\">ὁ</span>"
 								},
-								{  
+								{
 									"value": "ἡ",
-									"display": "ἡ"
+									"display": "<span lang=\"grc\">ἡ</span>"
 								},
 								{
 									"value": "τό",
-									"display": "τό"
+									"display": "<span lang=\"τό\">τό</span>"
 								}
 							]
 						],
 						"answers": ["ἡ"],
-						"successMsg": "<strong>Right Answer!</strong> The definite article for feminine nouns like <span class=\"greek-text\">ἡμέρα</span> is <span class=\"greek-text\">ἡ</span>.",
+						"successMsg": "<strong>Right Answer!</strong> The definite article for feminine nouns like <span lang=\"grc\">ἡμέρα</span> is <span lang=\"grc\">ἡ</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
@@ -322,25 +322,25 @@
 							"orientation": "vertical"
 						},
 						"title": "Exercise: Pick the correct definite article",
-						"question": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span class=\"greek-text masc\">πόλεμος</span> (battle)?",
+						"question": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span lang=\"grc\" class=\"masc\">πόλεμος</span> (battle)?",
 						"options": [
 							[
 								{
 									"value": "ὁ",
-									"display": "ὁ"
+									"display": "<span lang=\"grc\">ὁ</span>"
 								},
 								{
 									"value": "ἡ",
-									"display": "ἡ"
+									"display": "<span lang=\"grc\">ἡ</span>"
 								},
 								{
 									"value": "τό",
-									"display": "τό"
+									"display": "<span lang=\"τό\">τό</span>"
 								}
 							]
 						],
 						"answers": ["ὁ"],
-						"successMsg": "<strong>Right Answer!</strong> The definite article for masculine nouns like <span class=\"greek-text\">πόλεμος</span> is <span class=\"greek-text\">ὁ</span>.",
+						"successMsg": "<strong>Right Answer!</strong> The definite article for masculine nouns like <span lang=\"grc\" class=\"masc\">πόλεμος</span> is <span lang=\"grc\">ὁ</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"require_order": "false",
 						"require_all": "true"
@@ -351,25 +351,25 @@
 							"orientation": "vertical"
 						},
 						"title": "Exercise: Pick the correct definite article",
-						"question": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span class=\"greek-text neut\">ἔργον</span> (work)?",
+						"question": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span lang=\"grc\" class=\"neut\">ἔργον</span> (work)?",
 						"options": [
 							[
 								{
 									"value": "ὁ",
-									"display": "ὁ"
+									"display": "<span lang=\"grc\">ὁ</span>"
 								},
 								{
 									"value": "ἡ",
-									"display": "ἡ"
+									"display": "<span lang=\"grc\">ἡ</span>"
 								},
 								{
 									"value": "τό",
-									"display": "τό"
+									"display": "<span lang=\"grc\">τό</span>"
 								}
 							]
 						],
 						"answers": ["τό"],
-						"successMsg": "<strong>Right Answer!</strong> The definite article for neuter nouns like <span class=\"greek-text\">ἔργον</span> is <span class=\"greek-text\">τό</span>.",
+						"successMsg": "<strong>Right Answer!</strong> The definite article for neuter nouns like <span lang=\"grc\">ἔργον</span> is <span lang=\"grc\">τό</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"require_order": "false",
 						"require_all": "true"
@@ -714,7 +714,7 @@
 							]
 						],
 						"answers": ["τὰς", "μῑκρὰς", "χώρᾱς"],
-						"successMsg": "<strong>Right Answer!</strong> The accusative plural form of 'the small country' is <span class=\"greek-text\">τὰς μῑκρὰς χώρᾱς</span>.",
+						"successMsg": "<strong>Right Answer!</strong> The accusative plural form of 'the small country' is <span lang=\"grc\">τὰς μῑκρὰς χώρᾱς</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "true",
