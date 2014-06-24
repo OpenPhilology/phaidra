@@ -18,19 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/django-tastypie-master/tastypie/authentication.py:434
-#, python-format
-msgid "Invalid access token: %s"
-msgstr ""
-
-#: src/django-tastypie-master/tastypie/authentication.py:448
-msgid "You are not allowed to access this resource."
-msgstr ""
-
-#: src/django-tastypie-master/tastypie/authentication.py:450
-msgid "Invalid request parameters."
-msgstr ""
-
 #: templates/base.html:8 templates/index.html:8
 msgid "Historical Languages eLearning - by Open Philology Project"
 msgstr "آموزش الکترونیکی زبان‌های باستانی – کاری از پروژه “Open Philology”"

@@ -28,6 +28,10 @@ DATABASES = {
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ['*']
 
+LOCALE_PATHS = (
+    '/opt/phaidra/locale',
+)
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -39,7 +43,8 @@ TIME_ZONE = 'Europe/Berlin'
 LANGUAGE_CODE = 'en-us'
 
 LANGUAGES = (
-    ('fa'),
+    ('fa', 'Farsi'),
+    ('de', 'German')
 )
 
 SITE_ID = 1
