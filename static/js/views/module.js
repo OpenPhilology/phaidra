@@ -31,7 +31,13 @@ define(
 							.$el
 							.appendTo(that.$el.find('#lesson-content'));
 					},
-					'slide_multi_comp': 'MultiCompSlideView',
+					'slide_multi_comp': function(model) {
+						return new MultiCompSlideView({
+							model: model
+						}).render()
+							.$el
+							.appendTo(that.$el.find('#lesson-content'));
+					},
 					'slide_direct_select': function(model) {
 						return new DirectSelectSlideView({
 							model: model

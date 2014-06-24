@@ -28,6 +28,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 				return false;
 
 			var selectedOption = $(e.target);
+			if (e.target.tagName === "SPAN")
+				selectedOption = selectedOption.parent();
+
 			selectedOption.addClass('selected');
 
 			// Check answer, if appropriate

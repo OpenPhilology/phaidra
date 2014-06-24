@@ -36,7 +36,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				this.fillAttributes(attributes, options)
 
 			// Or it has all set attributes already (as is case for hand-written slides) 
-			else if (this.get('type') == 'slide_direct_select') {
+			else if (this.get('type') == 'slide_direct_select' || this.get('type') == 'slide_multi_comp') {
 				this.set('populated', true);
 			}
 		},
@@ -138,7 +138,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				attempt = [attempt]
 
 			// Check if all submitted attempts are somewhere in answers
-			if (!Boolean(this.get('require_all'))) {
+			if (this.get('require_all') === "false") {
 				for (var i = 0; i < attempt.length; i++)
 					if (this.get('answers').indexOf(attempt[i]) == -1)
 						return false;
@@ -146,7 +146,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				return true;
 			}
 			// Require order implies that require_all is also true
-			else if (Boolean(this.get('require_order'))) {
+			else if (this.get('require_order') === "true") {
 				if (this.get('answers').length !== attempt.length)
 					return false;
 				else {
@@ -159,7 +159,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				}
 			}
 			// All Required, but order is not required
-			else if (Boolean(this.get('require_all')) && !Boolean(this.get('require_order')))
+			else if (this.get('require_all') === "true" && this.get('require_order') === "false")
 				return $(attempt).not(this.get('answers')).length == 0 && $(this.get('answers')).not(attempt).length == 0;
 			else
 				return false;
