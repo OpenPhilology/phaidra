@@ -85,7 +85,7 @@
 							{ "value": "beta - book", "display": "Beta - like <u>b</u>ook" }
 						]],
 						"answers": ["gamma - grammar"],
-						"successMsg": "<strong>Right Answer!</strong> Remember that Beta sounds like the \"b\" in book.",
+						"successMsg": "<strong>Right Answer!</strong> Remember that gamma sounds like the \"g\" in grammar.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
@@ -102,7 +102,7 @@
 							{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
 						]],
 						"answers": ["α"],
-						"successMsg": "<strong>Right Answer!</strong> You've identified alpha, <span class=\"grc\">α</span>, pronounced like the \"g\" in <u>g</u>rammar.",
+						"successMsg": "<strong>Right Answer!</strong> You've identified alpha, <span class=\"grc\">α</span>, pronounced like the \"a\" in <u>a</u>rachnid.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
