@@ -36,6 +36,95 @@
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/gamma.html"
 					},
 					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">β</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+							{ "value": "gamma - good", "display": "Gamma - like <u>g</u>ood" },
+							{ "value": "sigma - signal", "display": "Sigma - like <u>s</u>ignal" },
+							{ "value": "beta - book", "display": "Beta - like <u>b</u>ook" }
+						]],
+						"answers": ["beta - book"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that Beta sounds like the \"b\" in book.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "horizontal" },
+						"title": "Identify the letter!",
+						"question": "Which of these are <strong>gammas</strong>?",
+						"options": [ [
+							{ "value": "Α", "display": "<span lang=\"grc\">Α</span>" },
+							{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+							{ "value": "Β", "display": "<span lang=\"grc\">Β</span>" },
+							{ "value": "β", "display": "<span lang=\"grc\">β</span>" },
+							{ "value": "Γ", "display": "<span lang=\"grc\">Γ</span>" },
+							{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
+						]],
+						"answers": ["γ", "Γ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified gamma, <span class=\"grc\">Γ γ</span>, pronounced like the \"g\" in <u>g</u>rammar.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">γ</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+							{ "value": "gamma - grammar", "display": "Gamma - like <u>g</u>rammar" },
+							{ "value": "sigma - signal", "display": "Sigma - like <u>s</u>ignal" },
+							{ "value": "beta - book", "display": "Beta - like <u>b</u>ook" }
+						]],
+						"answers": ["gamma - grammar"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that gamma sounds like the \"g\" in grammar.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "Which of these is an <strong>alpha</strong>?",
+						"options": [ [
+							{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+							{ "value": "β", "display": "<span lang=\"grc\">β</span>" },
+							{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
+						]],
+						"answers": ["α"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified alpha, <span class=\"grc\">α</span>, pronounced like the \"a\" in <u>a</u>rachnid.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_multi_comp",
+						"title": "Identify the letter!",
+						"question": "What is the order of these letters in the alphabet?",
+						"options": [ [
+							{ "value": "β", "display": "<span lang=\"grc\">β</span>" },
+							{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+							{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
+						]],
+						"answers": ["α", "β", "γ"],
+						"successMsg": "Correctomundo!",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "true",
+						"require_all": "true"
+					},
+					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/1.alphabet/delta.html"
 					},
@@ -208,7 +297,7 @@
 							"orientation": "vertical"
 						},
 						"title": "Exercise: Pick the correct definite article",
-						"content": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
+						"question": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
 						"options": [
 							[
 								{
@@ -238,7 +327,7 @@
 							"orientation": "vertical"
 						},
 						"title": "Exercise: Pick the correct definite article",
-						"content": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span class=\"greek-text masc\">πόλεμος</span> (battle)?",
+						"question": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span class=\"greek-text masc\">πόλεμος</span> (battle)?",
 						"options": [
 							[
 								{
@@ -267,7 +356,7 @@
 							"orientation": "vertical"
 						},
 						"title": "Exercise: Pick the correct definite article",
-						"content": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span class=\"greek-text neut\">ἔργον</span> (work)?",
+						"question": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span class=\"greek-text neut\">ἔργον</span> (work)?",
 						"options": [
 							[
 								{
@@ -345,7 +434,7 @@
 								"orientation" : "horizontal" 
 							},
 						"title": "Exercise: Select the Subject of this Sentence",
-						"content": "Which of these words is the subject of the following English sentence:",
+						"question": "Which of these words is the subject of the following English sentence:",
 						"options": [
 							[
 								{
@@ -375,20 +464,20 @@
 								"orientation" : "horizontal" 
 							},
 						"title": "Exercise: Select the <strong>Complement</strong> of this Sentence",
-						"content": "Which of these words is the complement to the subject?",
+						"question": "Which of these words is the complement to the subject?",
 						"options": [
 							[
 								{
 									"value": "The day",
-									"display": "ἡ ἡμέρα<br><small>The day</small>"
+									"display": "<span lang=\"grc\">ἡ ἡμέρα</span><br><small>The day</small>"
 								},
 								{
 									"value": "is",
-									"display": "ἐστὶ<br><small>is</small>"
+									"display": "<span lang=\"grc\">ἐστὶ</span><br><small>is</small>"
 								},
 								{
 									"value": "long",
-									"display": "μακρά<br><small>long</small>"
+									"display": "<span lang=\"grc\">μακρά</span><br><small>long</small>"
 								}
 							]
 						],
@@ -405,7 +494,7 @@
 								"orientation" : "vertical" 
 							},
 						"title": "Exercise: Pick the Correct Case",
-						"content": "In which case does the <strong>subject of a sentence</strong> belong?",
+						"question": "In which case does the <strong>subject of a sentence</strong> belong?",
 						"options": [
 							[
 								{
@@ -451,7 +540,7 @@
 							"orientation": "horizontal"
 						},
 						"title": "Exercise: Select the Direct Object",
-						"content": "In the following sentence, which word or words are the direct object, and would belong in the <strong>accusative case</strong> if they were written in Greek?",
+						"question": "In the following sentence, which word or words are the direct object, and would belong in the <strong>accusative case</strong> if they were written in Greek?",
 						"options": [
 							[
 								{
@@ -482,7 +571,7 @@
 								"orientation" : "horizontal" 
 							},
 						"title": "Exercise: Select the Direct Object",
-						"content": "Which of these words is in the accusative case?",
+						"question": "Which of these words is in the accusative case?",
 						"options": [
 							[
 								{
@@ -584,7 +673,7 @@
 					{
 						"type": "slide_multi_composition",
 						"title": "Make the forms agree!",
-						"content": "What is the accusative plural form for \"the small country\"?",
+						"question": "What is the accusative plural form for \"the small country\"?",
 						"options": [
 							[
 								{
@@ -968,6 +1057,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/excep.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/thirddeccon_pent.html"
 					}
 				]
 			}	

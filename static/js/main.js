@@ -11,7 +11,8 @@ requirejs.config({
 		'jquery-ui': 'lib/jquery-ui-draggable',
 		'jquery-ui-core': 'lib/jquery-ui-core',
 		'jquery-ui-slide': 'lib/jquery-ui-effects-slide',
-		'text': 'lib/text'
+		'text': 'lib/text',
+		'daphne': 'lib/daphnejs/src/daphne'
 	},
 	'shim': {
 		'underscore': {
@@ -26,6 +27,10 @@ requirejs.config({
 		},
 		'd3': {
 			'exports': 'd3'
+		},
+		'daphne': {
+			'exports': 'daphne',
+			'deps': ['d3']
 		},
 		'jquery-ui-core': {
 			'deps': ['jquery']
