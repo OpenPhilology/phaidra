@@ -2,7 +2,8 @@
 	<%= question %>
 </div>
 
-<div class="greek-text exercise direct-select horizontal">
+
+<div class="greek-text exercise direct-select <% if (settings && settings.orientation) { print(settings.orientation); } else { print('vertical'); } %>">
 	<% _.each(options, function(optionSet) { %>
 
 			<% _.each(optionSet, function(option, index) { %>

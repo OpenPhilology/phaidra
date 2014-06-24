@@ -81,12 +81,3 @@ def module(request):
 	})
 
 	return HttpResponse(template.render(context))
-
-def trees(request):
-	template = loader.get_template('trees.html')
-
-	context = RequestContext(request, {
-		'':''
-	})
-
-	return HttpResponse(template.render(context))

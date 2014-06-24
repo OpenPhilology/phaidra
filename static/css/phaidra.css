@@ -59,16 +59,16 @@ a {
   a:hover {
     color: #178282; }
 
-span[lang="grc"], div[lang="grc"] {
+[lang="grc"], div[lang="grc"] {
   font-family: 'Cambria', 'Times New Romans' !important;
   font-size: 1.3em;
   letter-spacing: 0.1em; }
-  span[lang="grc"] em, div[lang="grc"] em {
+  [lang="grc"] em, div[lang="grc"] em {
     background-color: #FFF0A3;
     border-radius: 3px;
     padding: 3px;
     font-style: normal; }
-  span[lang="grc"] em[data-toggle="tooltip"], div[lang="grc"] em[data-toggle="tooltip"] {
+  [lang="grc"] em[data-toggle="tooltip"], div[lang="grc"] em[data-toggle="tooltip"] {
     cursor: pointer; }
 
 .masc {
@@ -391,33 +391,35 @@ label {
     .navigation a.progress-lessons {
       color: #eeeeee; }
 
-.user-info img {
-  margin-right: 10px; }
-.user-info a {
-  color: #EEE; }
-.user-info a.username, .user-info a.log-in-link {
-  border: 0;
-  background-color: #3b4967;
-  -webkit-transition: background-color 0.2s ease-out;
-  -moz-transition: background-color 0.2s ease-out;
-  -o-transition: background-color 0.2s ease-out;
-  -ms-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
-  padding: 10px;
-  text-decoration: none;
-  border-radius: 3px;
-  margin: 0px 20px 0px 5px; }
-  .user-info a.username:hover, .user-info a.log-in-link:hover {
-    background-color: #6378a5;
+.user-info {
+  margin: 4px; }
+  .user-info img {
+    margin-right: 10px; }
+  .user-info a {
+    color: #EEE; }
+  .user-info a.username, .user-info a.log-in-link {
+    border: 0;
+    background-color: #3b4967;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
-    box-shadow: 2px 2px 3px #455577;
-    color: #FFF; }
-    .user-info a.username:hover img, .user-info a.log-in-link:hover img {
-      box-shadow: 2px 2px 3px #455577; }
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 0px 20px 0px 5px; }
+    .user-info a.username:hover, .user-info a.log-in-link:hover {
+      background-color: #6378a5;
+      -webkit-transition: background-color 0.2s ease-out;
+      -moz-transition: background-color 0.2s ease-out;
+      -o-transition: background-color 0.2s ease-out;
+      -ms-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out;
+      box-shadow: 2px 2px 3px #455577;
+      color: #FFF; }
+      .user-info a.username:hover img, .user-info a.log-in-link:hover img {
+        box-shadow: 2px 2px 3px #455577; }
 
 /*
 *	Style for main viewport
@@ -741,7 +743,7 @@ div.module {
       margin-left: auto;
       text-align: left;
       display: block;
-      max-width: 300px; }
+      max-width: 400px; }
     .slide .direct-select.vertical .badge {
       border: 1px solid #FFF;
       vertical-align: middle; }

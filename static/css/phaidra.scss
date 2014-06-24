@@ -127,7 +127,7 @@ a {
 		color: darken($color-pri-two, 10%);
 	}
 }
-span[lang="grc"], div[lang="grc"] {
+[lang="grc"], div[lang="grc"] {
 	font-family: 'Cambria', 'Times New Romans' !important;
 	font-size: 1.3em;
 	letter-spacing: 0.1em;
@@ -484,6 +484,8 @@ $banner-height: 43px;
 
 }
 .user-info {
+	margin: 4px;
+
 	img {
 		margin-right: 10px;
 	}
@@ -911,7 +913,7 @@ div.module {
 				margin-left: auto;
 				text-align: left;
 				display: block;
-				max-width: 300px;
+				max-width: 400px;
 			}
 			.badge {
 				border: 1px solid #FFF;

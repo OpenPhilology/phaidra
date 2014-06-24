@@ -9,7 +9,12 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 		},
 		initialize: function(options) {
 			this.options = options;
-			this.model.on('populated', this.draw, this);
+
+			// Decide whether we can draw right away or must wait
+			if (this.model.get('populated'))
+				this.draw();
+			else
+				this.model.on('populated', this.draw, this);
 		},
 		render: function() {
 			return this;	
@@ -20,7 +25,12 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 		selectAnswer: function(e) {
 			e.preventDefault();
 
-			var selectedOption = $(e.target).parent();
+			var selectedOption = $(e.target);
+			if (e.target.tagName === 'SPAN')
+				selectedOption = selectedOption.parent().parent();
+			else if (e.target.tagName === 'A')
+				selectedOption = selectedOption.parent();
+
 			var answer = selectedOption.clone();
 
 			answer.data('source', selectedOption);
@@ -54,8 +64,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 				// Display correct answer message
 				var info = this.$el.find('.slide-feedback');
 				info.html(this.model.get('successMsg'));
-				info.removeClass('alert-info');
-				info.addClass('alert-success');
+				info.removeClass('bg-info');
+				info.addClass('bg-success');
 				info.slideDown();
 			}
 			else {
@@ -63,8 +73,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 				// Give the user a hint so they can try again
 				var info = this.$el.find('.slide-feedback');
 				info.html(this.model.get('hintMsg'));
-				info.removeClass('alert-success');
-				info.addClass('alert-info');
+				info.removeClass('bg-success');
+				info.addClass('bg-info');
 				info.slideDown();
 			}
 		}

@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-16 16:18+0200\n"
+"POT-Creation-Date: 2014-06-24 14:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,35 +16,35 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/base.html:8 templates/index.html:8
 msgid "Historical Languages eLearning - by Open Philology Project"
-msgstr "آموزش الکترونیکی زبان‌های باستانی – کاری از پروژه “Open Philology”"
+msgstr "Lernen Historischer Sprachen - mit dem Open Philology Project"
 
 #: templates/base.html:28
 msgid "HOME"
-msgstr "صفحه اصلی"
+msgstr "HOME"
 
 #: templates/base.html:31
 msgid "LEARN"
-msgstr "یاد بگیر"
+msgstr "LERNEN"
 
 #: templates/base.html:34
 msgid "READ"
-msgstr "بخوان"
+msgstr "LESEN"
 
 #: templates/base.html:37
 msgid "CREATE"
-msgstr "ایجاد کن"
+msgstr "ERSTELLEN"
 
 #: templates/base.html:54
 msgid "Log out"
-msgstr "خروج از سیستم"
+msgstr "Ausloggen"
 
 #: templates/base.html:58 templates/profile.html:18
 msgid "Would you care to log in?"
-msgstr "می‌خواهی وارد سیستم شوی؟"
+msgstr "Würdest du dich einloggen?"
 
 #: templates/create.html:14
 msgid "Help Create Digital Editions"
@@ -253,12 +253,11 @@ msgstr ""
 
 #: templates/home.html:14
 msgid "Continue Learning!"
-msgstr "به یاد گرفتن ادامه بده!"
+msgstr ""
 
 #: templates/home.html:16
 msgid "Round out your knowledge of nouns by learning the 3rd declension nouns."
 msgstr ""
-"دانش خود را درباره اسامی با یاد گرفتن اسامی دارای صرف در حالت سوم کامل کن!"
 
 #: templates/home.html:18
 msgid "Keep Learning Greek"
@@ -266,178 +265,171 @@ msgstr ""
 
 #: templates/home.html:22
 msgid "Ready to put your Greek skills to use?"
-msgstr "آماده استفاده از مهارت‌های یونانی خود هستی؟"
+msgstr ""
 
 #: templates/home.html:23
 msgid "Here are some other ways you can improve your Greek:"
-msgstr "این هم چند راه دیگر که بتوانی در یونانی پیشرفت کنی:"
+msgstr ""
 
 #: templates/home.html:25
 msgid "Read"
-msgstr "بخوان"
+msgstr ""
 
 #: templates/home.html:26
 msgid "Annotate"
-msgstr "حاشیه‌نویسی کن"
+msgstr ""
 
 #: templates/home.html:27
 msgid "Etc."
-msgstr "و غیره"
+msgstr ""
 
 #: templates/home.html:34
 msgid "75"
-msgstr "75"
+msgstr ""
 
 #: templates/home.html:36
 msgid "words learned"
-msgstr "لغت یاد گرفتی"
+msgstr ""
 
 #: templates/home.html:39
 msgid "12"
-msgstr "12"
+msgstr ""
 
 #: templates/home.html:41
 msgid "lessons completed"
-msgstr "درس‌ کامل کردی"
+msgstr ""
 
 #: templates/home.html:44
 msgid "13"
-msgstr "13"
+msgstr ""
 
 #: templates/home.html:46
 msgid "skills earned"
-msgstr "مهارت‌ به دست آوردی"
+msgstr ""
 
 #: templates/home.html:49 templates/vocab.html:36
 msgid "20"
-msgstr "20"
+msgstr ""
 
 #: templates/home.html:51
 msgid "original annotations"
-msgstr "حاشیه‌نویسی‌ اصلی"
+msgstr ""
 
 #: templates/home.html:55
 msgid "Records"
-msgstr "رکوردها"
+msgstr ""
 
 #: templates/home.html:58
 msgid "10 lessons in a week"
-msgstr "10 درس در هفته"
+msgstr ""
 
 #: templates/home.html:62
 msgid "Recent Activity"
-msgstr "فعالیت‌های اخیر"
+msgstr ""
 
 #: templates/home.html:63
 msgid "Yesterday"
-msgstr "دیروز"
+msgstr ""
 
 #: templates/home.html:65
 msgid "Completed 2 lessons"
-msgstr "2 درس را کامل کردی"
+msgstr ""
 
 #: templates/home.html:66
 msgid "Learned 10 new words"
-msgstr "10 لغت جدید یاد گرفتی"
+msgstr ""
 
 #: templates/home.html:68
 msgid "Last Week"
-msgstr "هفته گذشته"
+msgstr ""
 
 #: templates/home.html:70
 msgid "Treebanked 4 sentences"
-msgstr "نمودار درختی 4 جمله را رسم کردی"
+msgstr ""
 
 #: templates/index.html:26 templates/login.html:26
 msgid "Log in"
-msgstr "ورود به سیستم"
+msgstr ""
 
-#: templates/index.html:31
+#: templates/index.html:33
 msgid "Get your Greek on."
-msgstr "زبان یونانی خود را ارتقا بده."
+msgstr ""
 
-#: templates/index.html:34
+#: templates/index.html:36
 msgid ""
 "Learn Ancient Greek as you read Thucydides' harrowing tale of the war "
 "between "
-msgstr "همانطور که داستان‌های دلخراش توسیدید را درباره جنگ    بین   "
+msgstr ""
 
-#: templates/index.html:34
+#: templates/index.html:36
 msgid ", the Spartans, and "
-msgstr "، اسپارت‌ها و "
+msgstr ""
 
-#: templates/index.html:34
+#: templates/index.html:36
 msgid ", the Athenians"
-msgstr "، آتنی‌ها"
+msgstr ""
 
-#: templates/index.html:34
+#: templates/index.html:36
 msgid "."
-msgstr " می‌خوانی، یونانی باستان یاد بگیر."
+msgstr ""
 
-#: templates/index.html:38
+#: templates/index.html:40
 msgid "Start Learning!"
-msgstr "شروع کن به یاد گرفتن!"
+msgstr ""
 
-#: templates/index.html:42
+#: templates/index.html:44
 msgid "Sign up"
-msgstr "ثبت نام"
+msgstr ""
 
-#: templates/index.html:46
+#: templates/index.html:48
 msgid "Full Name"
-msgstr "نام و نام خانوادگی"
+msgstr ""
 
-#: templates/index.html:50
+#: templates/index.html:52
 msgid "Email Address"
-msgstr "آدرس ایمیل"
+msgstr ""
 
-#: templates/index.html:54 templates/login.html:18
+#: templates/index.html:56 templates/login.html:18
 msgid "Username"
-msgstr "نام کاربری"
+msgstr ""
 
-#: templates/index.html:58 templates/login.html:22
+#: templates/index.html:60 templates/login.html:22
 msgid "Password"
-msgstr "کلمه عبور"
+msgstr ""
 
-#: templates/index.html:61
+#: templates/index.html:63
 msgid "Create Account"
-msgstr "ایجاد حساب کاربری"
-
-#: templates/index.html:71
-msgid "Game your way through Greek."
-msgstr "با بازی راه خود را در دنیای یونان پیدا کن."
+msgstr ""
 
 #: templates/index.html:73
+msgid "Game your way through Greek."
+msgstr ""
+
+#: templates/index.html:75
 msgid ""
 "Develop your mad Greek skillz through games and choose the path to Greek "
 "glory that suits your personal learning style."
 msgstr ""
-"مهارت‌های یونانی خاص خودت را از طریق بازی توسعه بده و راه خودت را به سمت شکوه "
-"یونان که متناسب با سبک یادگیری خودت است، انتخاب کن."
-
-#: templates/index.html:77
-msgid "Keep it original."
-msgstr "فقط از اصل استفاده کن."
 
 #: templates/index.html:79
+msgid "Keep it original."
+msgstr ""
+
+#: templates/index.html:81
 msgid ""
 "Explore Classical texts in their original languages, the way they were "
 "intended to be read, enhanced by data contributed by people like you."
 msgstr ""
-"در متون کلاسیک به همان زبان اصلی کاوش کن، با همان زبانی این متن‌ها از همان "
-"اول نوشته شده‌ بودند، متن‌هایی که به‌واسطه داده‌هایی که افرادی مثل تو در ایجاد "
-"آن همکاری کرده‌اند، بهبود یافته‌اند."
-
-#: templates/index.html:83
-msgid "Be a scholar!"
-msgstr "پژوهشگر باش!"
 
 #: templates/index.html:85
+msgid "Be a scholar!"
+msgstr ""
+
+#: templates/index.html:87
 msgid ""
 "Contribute micropublications like translations and annotations to help "
 "create brand new, digital editions of Classical works!"
 msgstr ""
-"برای کمک به ایجاد نسخه‌های جدید و دیجیتال آثار کلاسیک، با کارهایی چون ترجمه و "
-"حاشیه‌نویسی به نشر میکرو یاری رسان!"
 
 #: templates/lessons.html:16
 msgid "TARGET TEXT"

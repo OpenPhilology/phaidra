@@ -35,9 +35,6 @@ urlpatterns = patterns('',
 
 	url(r'api/', include(v1_api.urls)),
 
-	# Demo page
-	url(r'^trees/', 'web.views.trees'),
-
 	# Website URLS
 	url(r'^home/', 'web.views.home'),
 	url(r'^lessons/', 'web.views.lessons'),
