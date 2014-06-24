@@ -32,9 +32,13 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				this.fetchHTML(attributes, options);
 
 			// Slide is dynamic if it has a task defined
-			// Or it has all set attributes already (as is case for hand-written slides) 
 			if (attributes.task)
 				this.fillAttributes(attributes, options)
+
+			// Or it has all set attributes already (as is case for hand-written slides) 
+			else if (this.get('type') == 'slide_direct_select') {
+				this.set('populated', true);
+			}
 		},
 		defaults: {
 			'modelName': 'slide',
@@ -88,6 +92,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 							that.set('successMsg', '<strong>CORRECT!</strong> <span lang="grc">' + word.value + '</span> is in the ' + word.person + ' person.');
 							that.set('hintMsg', 'Not quite.');
 							that.trigger('populated');
+							that.set('populated', true);
 						},
 						error: function(x, y, z) {
 							console.log(x, y, z);
@@ -117,6 +122,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 							that.set('successMsg', '<strong>CORRECT!</strong> <span lang="grc">' + word.value + '</span> is ' + word.number + '.');
 							that.set('hintMsg', 'Not quite.');
 							that.trigger('populated');
+							that.set('populated', true);
 						},
 						error: function(x, y, z) {
 							console.log(x, y, z);

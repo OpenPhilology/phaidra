@@ -345,7 +345,7 @@
 								"orientation" : "horizontal" 
 							},
 						"title": "Exercise: Select the Subject of this Sentence",
-						"content": "Which of these words is the subject of the following English sentence:",
+						"question": "Which of these words is the subject of the following English sentence:",
 						"options": [
 							[
 								{
@@ -375,20 +375,20 @@
 								"orientation" : "horizontal" 
 							},
 						"title": "Exercise: Select the <strong>Complement</strong> of this Sentence",
-						"content": "Which of these words is the complement to the subject?",
+						"question": "Which of these words is the complement to the subject?",
 						"options": [
 							[
 								{
 									"value": "The day",
-									"display": "ἡ ἡμέρα<br><small>The day</small>"
+									"display": "<span lang=\"grc\">ἡ ἡμέρα</span><br><small>The day</small>"
 								},
 								{
 									"value": "is",
-									"display": "ἐστὶ<br><small>is</small>"
+									"display": "<span lang=\"grc\">ἐστὶ</span><br><small>is</small>"
 								},
 								{
 									"value": "long",
-									"display": "μακρά<br><small>long</small>"
+									"display": "<span lang=\"grc\">μακρά</span><br><small>long</small>"
 								}
 							]
 						],
@@ -405,7 +405,7 @@
 								"orientation" : "vertical" 
 							},
 						"title": "Exercise: Pick the Correct Case",
-						"content": "In which case does the <strong>subject of a sentence</strong> belong?",
+						"question": "In which case does the <strong>subject of a sentence</strong> belong?",
 						"options": [
 							[
 								{

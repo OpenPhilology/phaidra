@@ -8,7 +8,12 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 		},
 		initialize: function(options) {
 			this.options = options;
-			this.model.on('populated', this.draw, this);
+
+			// Decide whether we can draw right away or must wait
+			if (this.model.get('populated'))
+				this.draw();
+			else
+				this.model.on('populated', this.draw, this);
 		},
 		render: function() {
 			return this;	
