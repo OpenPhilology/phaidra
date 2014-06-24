@@ -4,12 +4,7 @@
 		"modules": [
 			{
 				"title": "Parse trees",
-				"slides": [
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/tree.html"
-					}
-				]
+				"slides": []
 			}
 		]
 	},        
@@ -889,7 +884,7 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact2.html",
-						"smyth": "s768a",
+						"smyth": "s768#a",
 						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
@@ -909,7 +904,6 @@
 		"modules": [
 			{
 				"title": "Form the Future, Indicative, Active for Regular Verbs",
-				"vocab": ["πέμπω", "πράσσω", "πείθω", "φαίνω", "ὑπάρχω", "μῆδος", "ναύπακτος", "ὁρκος", "κόρινθος", "ἀστύοχος", "Ἡλλήσποντος", "λόφος", "λέσβος", "κόκλος", "ἵππος"],
 				"slides": [
 					{
 						"title": "Introduction to Future Indicative Active",
