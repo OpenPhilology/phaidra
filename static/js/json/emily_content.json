@@ -4,12 +4,7 @@
 		"modules": [
 			{
 				"title": "Parse trees",
-				"slides": [
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/raw/thuc/design/tree.html"
-					}
-				]
+				"slides": []
 			}
 		]
 	},        
@@ -297,25 +292,14 @@
 							"orientation": "vertical"
 						},
 						"title": "Exercise: Pick the correct definite article",
-						"question": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span class=\"greek-text fem\">ἡμέρα</span> (day)?",
-						"options": [
-							[
-								{
-									"value": "ὁ",
-									"display": "ὁ"
-								},
-								{  
-									"value": "ἡ",
-									"display": "ἡ"
-								},
-								{
-									"value": "τό",
-									"display": "τό"
-								}
-							]
-						],
+						"question": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span lang=\"grc\" class=\"fem\">ἡμέρα</span> (day)?",
+						"options": [[
+								{ "value": "ὁ", "display": "<span lang=\"grc\">ὁ</span>" },
+								{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+								{ "value": "τό", "display": "<span lang=\"grc\">τό</span>" }
+						]],
 						"answers": ["ἡ"],
-						"successMsg": "<strong>Right Answer!</strong> The definite article for feminine nouns like <span class=\"greek-text\">ἡμέρα</span> is <span class=\"greek-text\">ἡ</span>.",
+						"successMsg": "<strong>Right Answer!</strong> The definite article for feminine nouns like <span lang=\"grc\">ἡμέρα</span> is <span lang=\"grc\">ἡ</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
@@ -327,25 +311,14 @@
 							"orientation": "vertical"
 						},
 						"title": "Exercise: Pick the correct definite article",
-						"question": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span class=\"greek-text masc\">πόλεμος</span> (battle)?",
-						"options": [
-							[
-								{
-									"value": "ὁ",
-									"display": "ὁ"
-								},
-								{
-									"value": "ἡ",
-									"display": "ἡ"
-								},
-								{
-									"value": "τό",
-									"display": "τό"
-								}
-							]
-						],
+						"question": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span lang=\"grc\" class=\"masc\">πόλεμος</span> (battle)?",
+						"options": [[
+								{ "value": "ὁ", "display": "<span lang=\"grc\">ὁ</span>" },
+								{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+								{ "value": "τό", "display": "<span lang=\"grc\">τό</span>" }
+						]],
 						"answers": ["ὁ"],
-						"successMsg": "<strong>Right Answer!</strong> The definite article for masculine nouns like <span class=\"greek-text\">πόλεμος</span> is <span class=\"greek-text\">ὁ</span>.",
+						"successMsg": "<strong>Right Answer!</strong> The definite article for masculine nouns like <span lang=\"grc\" class=\"masc\">πόλεμος</span> is <span lang=\"grc\">ὁ</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"require_order": "false",
 						"require_all": "true"
@@ -356,25 +329,14 @@
 							"orientation": "vertical"
 						},
 						"title": "Exercise: Pick the correct definite article",
-						"question": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span class=\"greek-text neut\">ἔργον</span> (work)?",
-						"options": [
-							[
-								{
-									"value": "ὁ",
-									"display": "ὁ"
-								},
-								{
-									"value": "ἡ",
-									"display": "ἡ"
-								},
-								{
-									"value": "τό",
-									"display": "τό"
-								}
-							]
-						],
+						"question": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span lang=\"grc\" class=\"neut\">ἔργον</span> (work)?",
+						"options": [ [
+								{ "value": "ὁ", "display": "<span lang=\"grc\">ὁ</span>" },
+								{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+								{ "value": "τό", "display": "<span lang=\"grc\">τό</span>" }
+						]],
 						"answers": ["τό"],
-						"successMsg": "<strong>Right Answer!</strong> The definite article for neuter nouns like <span class=\"greek-text\">ἔργον</span> is <span class=\"greek-text\">τό</span>.",
+						"successMsg": "<strong>Right Answer!</strong> The definite article for neuter nouns like <span lang=\"grc\">ἔργον</span> is <span lang=\"grc\">τό</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"require_order": "false",
 						"require_all": "true"
@@ -392,6 +354,10 @@
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/articles.html",
 						"smyth": "s332"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/treebank-nouns.html"
 					},
 					{
 						"type": "slide_info",
@@ -719,7 +685,7 @@
 							]
 						],
 						"answers": ["τὰς", "μῑκρὰς", "χώρᾱς"],
-						"successMsg": "<strong>Right Answer!</strong> The accusative plural form of 'the small country' is <span class=\"greek-text\">τὰς μῑκρὰς χώρᾱς</span>.",
+						"successMsg": "<strong>Right Answer!</strong> The accusative plural form of 'the small country' is <span lang=\"grc\">τὰς μῑκρὰς χώρᾱς</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "true",
@@ -889,7 +855,7 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/8.presentindicativeactive/presindact2.html",
-						"smyth": "s768a",
+						"smyth": "s768#a",
 						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
@@ -909,7 +875,6 @@
 		"modules": [
 			{
 				"title": "Form the Future, Indicative, Active for Regular Verbs",
-				"vocab": ["πέμπω", "πράσσω", "πείθω", "φαίνω", "ὑπάρχω", "μῆδος", "ναύπακτος", "ὁρκος", "κόρινθος", "ἀστύοχος", "Ἡλλήσποντος", "λόφος", "λέσβος", "κόκλος", "ἵππος"],
 				"slides": [
 					{
 						"title": "Introduction to Future Indicative Active",
@@ -1057,6 +1022,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/excep.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/thirddeccon_pent.html"
 					}
 				]
 			}	

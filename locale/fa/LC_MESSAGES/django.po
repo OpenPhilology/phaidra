@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-16 16:18+0200\n"
+"POT-Creation-Date: 2014-06-24 17:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -284,33 +284,17 @@ msgstr "حاشیه‌نویسی کن"
 msgid "Etc."
 msgstr "و غیره"
 
-#: templates/home.html:34
-msgid "75"
-msgstr "75"
-
 #: templates/home.html:36
 msgid "words learned"
 msgstr "لغت یاد گرفتی"
-
-#: templates/home.html:39
-msgid "12"
-msgstr "12"
 
 #: templates/home.html:41
 msgid "lessons completed"
 msgstr "درس‌ کامل کردی"
 
-#: templates/home.html:44
-msgid "13"
-msgstr "13"
-
 #: templates/home.html:46
 msgid "skills earned"
 msgstr "مهارت‌ به دست آوردی"
-
-#: templates/home.html:49 templates/vocab.html:36
-msgid "20"
-msgstr "20"
 
 #: templates/home.html:51
 msgid "original annotations"
@@ -704,10 +688,6 @@ msgid ""
 "means of knowing, mark, token, judgement will, opinion, mind, intelligence."
 msgstr ""
 
-#: templates/vocab.html:35
-msgid "4"
-msgstr ""
-
 #: templates/vocab.html:43
 msgid "Strengthen Vocabulary"
 msgstr ""
@@ -731,3 +711,15 @@ msgstr ""
 #: templates/vocab.html:66
 msgid "Alphabetical"
 msgstr ""
+
+#~ msgid "75"
+#~ msgstr "75"
+
+#~ msgid "12"
+#~ msgstr "12"
+
+#~ msgid "13"
+#~ msgstr "13"
+
+#~ msgid "20"
+#~ msgstr "20"

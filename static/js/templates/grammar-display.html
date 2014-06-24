@@ -2,9 +2,9 @@
 	<h2>Table of Contents</h2>
 	<ul>
 		<% for (var i = 0; i < content.length; i++) { %>	
-			<li> <%= content[i]["title"] %> </li>
+			<li> <%= content[i].title %> </li>
 
-			<% if (content[i]["modules"]) { %>
+			<% if (content[i].modules) { %>
 				<ul>
 				
 				<% var modules = content[i]["modules"]; %>
@@ -15,7 +15,7 @@
 					<% var slides = modules[j]["slides"] %>
 					<% for (var k = 0; k < slides.length; k++) { %>
 						<% if (slides[k]["smyth"]) { %> 
-							<li class="<% if (slides[k]["smyth"] == selected) print('selected'); %>"> <a href="/grammar/<%= slides[k]["smyth"] %>"><%= smyth[slides[k]["smyth"]]["title"] %></a></li>
+							<li class="<% if (slides[k].smyth == selected) print('selected'); %>"> <a href="/grammar/<%= slides[k].smyth %>"><%= smyth[slides[k].smyth].title %></a></li>
 						<% } %>
 					<% } %>
 
