@@ -206,35 +206,21 @@ label {
   position: relative;
   padding: 15px;
   margin: 1em 0 3em;
-  background-color: #fadfbf;
+  background-color: #f8d3a7;
   border-radius: 3px;
   line-height: 2em;
-  margin-bottom: 10px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+  margin-bottom: 10px; }
   .speech:before {
-    top: -20px;
-    bottom: auto;
-    left: auto;
-    right: 40px;
-    border-width: 0 20px 20px;
-    content: "";
+    content: '';
     position: absolute;
     border-style: solid;
-    border-color: #fadfbf transparent;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #f8d3a7;
     display: block;
-    width: 0; }
-  .speech:after {
-    top: -13px;
-    bottom: auto;
-    left: auto;
-    right: 47px;
-    border-width: 0 13px 13px;
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-color: #fadfbf transparent;
-    display: block;
-    width: 0; }
+    width: 0;
+    z-index: 1;
+    left: -15px;
+    top: 25px; }
 
 /* Styles related to the intro page */
 #splash {
@@ -552,7 +538,7 @@ div.module {
 
 .module {
   border-radius: 3px;
-  color: #666;
+  background-color: #e4e8f0;
   text-align: center;
   display: inline-block;
   padding: 20px;
@@ -563,7 +549,7 @@ div.module {
   vertical-align: top;
   position: relative;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
-  color: #BBB !important; }
+  color: #333 !important; }
   .module img {
     height: 65px; }
   .module:hover {
@@ -1133,3 +1119,9 @@ table.inflection-table {
   display: inline-block;
   width: 50%;
   float: left; }
+
+.summary.skills span {
+  font-size: 10em; }
+
+.thuc.red {
+  fill: #d15241; }
