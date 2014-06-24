@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-24 14:25+0200\n"
+"POT-Creation-Date: 2014-06-24 17:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -283,32 +283,16 @@ msgstr ""
 msgid "Etc."
 msgstr ""
 
-#: templates/home.html:34
-msgid "75"
-msgstr ""
-
 #: templates/home.html:36
 msgid "words learned"
-msgstr ""
-
-#: templates/home.html:39
-msgid "12"
 msgstr ""
 
 #: templates/home.html:41
 msgid "lessons completed"
 msgstr ""
 
-#: templates/home.html:44
-msgid "13"
-msgstr ""
-
 #: templates/home.html:46
 msgid "skills earned"
-msgstr ""
-
-#: templates/home.html:49 templates/vocab.html:36
-msgid "20"
 msgstr ""
 
 #: templates/home.html:51
@@ -349,83 +333,83 @@ msgstr ""
 
 #: templates/index.html:26 templates/login.html:26
 msgid "Log in"
-msgstr ""
+msgstr "Einloggen"
 
-#: templates/index.html:33
+#: templates/index.html:31
 msgid "Get your Greek on."
 msgstr ""
 
-#: templates/index.html:36
+#: templates/index.html:34
 msgid ""
 "Learn Ancient Greek as you read Thucydides' harrowing tale of the war "
 "between "
 msgstr ""
 
-#: templates/index.html:36
+#: templates/index.html:34
 msgid ", the Spartans, and "
 msgstr ""
 
-#: templates/index.html:36
+#: templates/index.html:34
 msgid ", the Athenians"
 msgstr ""
 
-#: templates/index.html:36
+#: templates/index.html:34
 msgid "."
 msgstr ""
 
-#: templates/index.html:40
+#: templates/index.html:38
 msgid "Start Learning!"
-msgstr ""
+msgstr "Starten!"
 
-#: templates/index.html:44
+#: templates/index.html:42
 msgid "Sign up"
-msgstr ""
+msgstr "Anmelden"
 
-#: templates/index.html:48
+#: templates/index.html:46
 msgid "Full Name"
-msgstr ""
+msgstr "Vollständiger Name"
 
-#: templates/index.html:52
+#: templates/index.html:50
 msgid "Email Address"
-msgstr ""
+msgstr "E-Mail-Adresse"
 
-#: templates/index.html:56 templates/login.html:18
+#: templates/index.html:54 templates/login.html:18
 msgid "Username"
-msgstr ""
+msgstr "Benutzername"
 
-#: templates/index.html:60 templates/login.html:22
+#: templates/index.html:58 templates/login.html:22
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
-#: templates/index.html:63
+#: templates/index.html:61
 msgid "Create Account"
 msgstr ""
 
-#: templates/index.html:73
+#: templates/index.html:71
 msgid "Game your way through Greek."
 msgstr ""
 
-#: templates/index.html:75
+#: templates/index.html:73
 msgid ""
 "Develop your mad Greek skillz through games and choose the path to Greek "
 "glory that suits your personal learning style."
 msgstr ""
 
-#: templates/index.html:79
+#: templates/index.html:77
 msgid "Keep it original."
 msgstr ""
 
-#: templates/index.html:81
+#: templates/index.html:79
 msgid ""
 "Explore Classical texts in their original languages, the way they were "
 "intended to be read, enhanced by data contributed by people like you."
 msgstr ""
 
-#: templates/index.html:85
+#: templates/index.html:83
 msgid "Be a scholar!"
 msgstr ""
 
-#: templates/index.html:87
+#: templates/index.html:85
 msgid ""
 "Contribute micropublications like translations and annotations to help "
 "create brand new, digital editions of Classical works!"
@@ -694,10 +678,6 @@ msgstr ""
 #: templates/vocab.html:34
 msgid ""
 "means of knowing, mark, token, judgement will, opinion, mind, intelligence."
-msgstr ""
-
-#: templates/vocab.html:35
-msgid "4"
 msgstr ""
 
 #: templates/vocab.html:43
