@@ -450,8 +450,8 @@ label {
   height: 125px;
   width: 125px;
   display: inline-block;
-  background-color: #4e6087;
-  color: #FFF;
+  background-color: #c4ccdd;
+  color: #333;
   margin: 5px;
   border-radius: 2px;
   text-align: center;
@@ -463,14 +463,13 @@ label {
   -ms-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out; }
   .achievements .box:hover {
-    background-color: #5d72a1;
+    background-color: #dee2ec;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
   .achievements .box strong {
-    color: #FFF !important;
     font-size: 24px;
     font-weight: normal; }
 
