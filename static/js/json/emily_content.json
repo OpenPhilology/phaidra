@@ -968,6 +968,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/excep.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/12.thirddecconson/thirddeccon_pent.html"
 					}
 				]
 			}	
