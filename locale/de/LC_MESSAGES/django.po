@@ -1,0 +1,725 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-24 14:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/base.html:8 templates/index.html:8
+msgid "Historical Languages eLearning - by Open Philology Project"
+msgstr "Lernen Historischer Sprachen - mit dem Open Philology Project"
+
+#: templates/base.html:28
+msgid "HOME"
+msgstr "HOME"
+
+#: templates/base.html:31
+msgid "LEARN"
+msgstr "LERNEN"
+
+#: templates/base.html:34
+msgid "READ"
+msgstr "LESEN"
+
+#: templates/base.html:37
+msgid "CREATE"
+msgstr "ERSTELLEN"
+
+#: templates/base.html:54
+msgid "Log out"
+msgstr "Ausloggen"
+
+#: templates/base.html:58 templates/profile.html:18
+msgid "Would you care to log in?"
+msgstr "Würdest du dich einloggen?"
+
+#: templates/create.html:14
+msgid "Help Create Digital Editions"
+msgstr ""
+
+#: templates/create.html:16
+msgid ""
+"You can help create a digital edition of a Classical work, no matter what "
+"skill level you're at. You'll be improving your Ancient Greek and "
+"contributing to Open Data at the same time!"
+msgstr ""
+
+#: templates/create.html:19
+msgid "Digital Editions in Progress"
+msgstr ""
+
+#: templates/create.html:21
+msgid ""
+"Click the section of the progress bar to contribute to that Digital Edition."
+msgstr ""
+
+#: templates/create.html:24
+msgid "Plato's"
+msgstr ""
+
+#: templates/create.html:24
+msgid "Crito"
+msgstr ""
+
+#: templates/create.html:24
+msgid "(Greek into German)"
+msgstr ""
+
+#: templates/create.html:26 templates/create.html.py:57
+#, python-format
+msgid "100%% Translated"
+msgstr ""
+
+#: templates/create.html:27 templates/create.html.py:37
+#, python-format
+msgid "33%% Aligned"
+msgstr ""
+
+#: templates/create.html:28
+#, python-format
+msgid "33%% Treebanked"
+msgstr ""
+
+#: templates/create.html:30
+msgid "3 Contributors"
+msgstr ""
+
+#: templates/create.html:34
+msgid "Homer's"
+msgstr ""
+
+#: templates/create.html:34
+msgid "Iliad"
+msgstr ""
+
+#: templates/create.html:34 templates/create.html.py:44
+msgid "(Greek into English)"
+msgstr ""
+
+#: templates/create.html:36 templates/create.html.py:46
+#, python-format
+msgid "66%% Translated"
+msgstr ""
+
+#: templates/create.html:38 templates/create.html.py:48
+#: templates/create.html:59
+#, python-format
+msgid "100%% Treebanked"
+msgstr ""
+
+#: templates/create.html:40
+msgid "12 Contributors"
+msgstr ""
+
+#: templates/create.html:44
+msgid "Herodotus'"
+msgstr ""
+
+#: templates/create.html:44
+msgid "Histories"
+msgstr ""
+
+#: templates/create.html:47
+#, python-format
+msgid "66%% Aligned"
+msgstr ""
+
+#: templates/create.html:54
+msgid "Thucydides'"
+msgstr ""
+
+#: templates/create.html:54
+msgid "Penteconteatia"
+msgstr ""
+
+#: templates/create.html:54
+msgid "(Greek into Croatian)"
+msgstr ""
+
+#: templates/create.html:55
+msgid "Complete!"
+msgstr ""
+
+#: templates/create.html:55
+msgid "This edition is complete, but you can still improve it!"
+msgstr ""
+
+#: templates/create.html:55 templates/create.html.py:66
+#: templates/create.html:68 templates/create.html.py:70
+#: templates/create.html:72
+msgid "Learn How"
+msgstr ""
+
+#: templates/create.html:58
+#, python-format
+msgid "100%% Aligned"
+msgstr ""
+
+#: templates/create.html:61
+msgid "1 Contributor"
+msgstr ""
+
+#: templates/create.html:65
+msgid "Translate"
+msgstr ""
+
+#: templates/create.html:66
+msgid "Take something and write it in another language."
+msgstr ""
+
+#: templates/create.html:67 templates/create.html.py:83
+msgid "Align"
+msgstr ""
+
+#: templates/create.html:68
+msgid "Choose the words in a sentence that corresponse to one another."
+msgstr ""
+
+#: templates/create.html:69
+msgid "Treebank"
+msgstr ""
+
+#: templates/create.html:70
+msgid ""
+"Move the words of a sentence into a tree structure to indicate their "
+"dependencies."
+msgstr ""
+
+#: templates/create.html:71
+msgid "Transcribe"
+msgstr ""
+
+#: templates/create.html:72
+msgid "Study a snippet of a manuscript and transcribe it."
+msgstr ""
+
+#: templates/create.html:77
+msgid "Suggestions for You"
+msgstr ""
+
+#: templates/create.html:79
+msgid "Can you align these two sentences?"
+msgstr ""
+
+#: templates/create.html:80
+msgid "Sent. A"
+msgstr ""
+
+#: templates/create.html:81
+msgid "Sent. B"
+msgstr ""
+
+#: templates/create.html:83
+msgid "Suggest Another"
+msgstr ""
+
+#: templates/create.html:88
+msgid "Your Contributions"
+msgstr ""
+
+#: templates/create.html:89
+msgid "Thuc."
+msgstr ""
+
+#: templates/create.html:91 templates/create.html.py:96
+#: templates/create.html:97
+msgid "Translation"
+msgstr ""
+
+#: templates/create.html:91
+msgid "Accepted"
+msgstr ""
+
+#: templates/create.html:92
+msgid "Alignment"
+msgstr ""
+
+#: templates/create.html:94
+msgid "Plato"
+msgstr ""
+
+#: templates/home.html:14
+msgid "Continue Learning!"
+msgstr ""
+
+#: templates/home.html:16
+msgid "Round out your knowledge of nouns by learning the 3rd declension nouns."
+msgstr ""
+
+#: templates/home.html:18
+msgid "Keep Learning Greek"
+msgstr ""
+
+#: templates/home.html:22
+msgid "Ready to put your Greek skills to use?"
+msgstr ""
+
+#: templates/home.html:23
+msgid "Here are some other ways you can improve your Greek:"
+msgstr ""
+
+#: templates/home.html:25
+msgid "Read"
+msgstr ""
+
+#: templates/home.html:26
+msgid "Annotate"
+msgstr ""
+
+#: templates/home.html:27
+msgid "Etc."
+msgstr ""
+
+#: templates/home.html:34
+msgid "75"
+msgstr ""
+
+#: templates/home.html:36
+msgid "words learned"
+msgstr ""
+
+#: templates/home.html:39
+msgid "12"
+msgstr ""
+
+#: templates/home.html:41
+msgid "lessons completed"
+msgstr ""
+
+#: templates/home.html:44
+msgid "13"
+msgstr ""
+
+#: templates/home.html:46
+msgid "skills earned"
+msgstr ""
+
+#: templates/home.html:49 templates/vocab.html:36
+msgid "20"
+msgstr ""
+
+#: templates/home.html:51
+msgid "original annotations"
+msgstr ""
+
+#: templates/home.html:55
+msgid "Records"
+msgstr ""
+
+#: templates/home.html:58
+msgid "10 lessons in a week"
+msgstr ""
+
+#: templates/home.html:62
+msgid "Recent Activity"
+msgstr ""
+
+#: templates/home.html:63
+msgid "Yesterday"
+msgstr ""
+
+#: templates/home.html:65
+msgid "Completed 2 lessons"
+msgstr ""
+
+#: templates/home.html:66
+msgid "Learned 10 new words"
+msgstr ""
+
+#: templates/home.html:68
+msgid "Last Week"
+msgstr ""
+
+#: templates/home.html:70
+msgid "Treebanked 4 sentences"
+msgstr ""
+
+#: templates/index.html:26 templates/login.html:26
+msgid "Log in"
+msgstr ""
+
+#: templates/index.html:33
+msgid "Get your Greek on."
+msgstr ""
+
+#: templates/index.html:36
+msgid ""
+"Learn Ancient Greek as you read Thucydides' harrowing tale of the war "
+"between "
+msgstr ""
+
+#: templates/index.html:36
+msgid ", the Spartans, and "
+msgstr ""
+
+#: templates/index.html:36
+msgid ", the Athenians"
+msgstr ""
+
+#: templates/index.html:36
+msgid "."
+msgstr ""
+
+#: templates/index.html:40
+msgid "Start Learning!"
+msgstr ""
+
+#: templates/index.html:44
+msgid "Sign up"
+msgstr ""
+
+#: templates/index.html:48
+msgid "Full Name"
+msgstr ""
+
+#: templates/index.html:52
+msgid "Email Address"
+msgstr ""
+
+#: templates/index.html:56 templates/login.html:18
+msgid "Username"
+msgstr ""
+
+#: templates/index.html:60 templates/login.html:22
+msgid "Password"
+msgstr ""
+
+#: templates/index.html:63
+msgid "Create Account"
+msgstr ""
+
+#: templates/index.html:73
+msgid "Game your way through Greek."
+msgstr ""
+
+#: templates/index.html:75
+msgid ""
+"Develop your mad Greek skillz through games and choose the path to Greek "
+"glory that suits your personal learning style."
+msgstr ""
+
+#: templates/index.html:79
+msgid "Keep it original."
+msgstr ""
+
+#: templates/index.html:81
+msgid ""
+"Explore Classical texts in their original languages, the way they were "
+"intended to be read, enhanced by data contributed by people like you."
+msgstr ""
+
+#: templates/index.html:85
+msgid "Be a scholar!"
+msgstr ""
+
+#: templates/index.html:87
+msgid ""
+"Contribute micropublications like translations and annotations to help "
+"create brand new, digital editions of Classical works!"
+msgstr ""
+
+#: templates/lessons.html:16
+msgid "TARGET TEXT"
+msgstr ""
+
+#: templates/lessons.html:18
+msgid "Author:"
+msgstr ""
+
+#: templates/lessons.html:18
+msgid "Thucydides"
+msgstr ""
+
+#: templates/lessons.html:19
+msgid "Work:"
+msgstr ""
+
+#: templates/lessons.html:19
+msgid "History of the Peloponnesian War"
+msgstr ""
+
+#: templates/lessons.html:29
+msgid "Alphabet"
+msgstr ""
+
+#: templates/lessons.html:30
+msgid "Alphabet Table"
+msgstr ""
+
+#: templates/lessons.html:31
+msgid "Punctuation"
+msgstr ""
+
+#: templates/lessons.html:40
+msgid "Diacritics & Dipthongs"
+msgstr ""
+
+#: templates/lessons.html:41
+msgid "Rough and Smooth Breathings"
+msgstr ""
+
+#: templates/lessons.html:42
+msgid "Long and Short Vowels"
+msgstr ""
+
+#: templates/lessons.html:43
+msgid "Iota Subscript"
+msgstr ""
+
+#: templates/lessons.html:44
+msgid "Accents"
+msgstr ""
+
+#: templates/lessons.html:45
+msgid "Dipthongs"
+msgstr ""
+
+#: templates/lessons.html:53
+msgid "Introduction to Nouns"
+msgstr ""
+
+#: templates/lessons.html:54
+msgid "Nouns in Greek"
+msgstr ""
+
+#: templates/lessons.html:55
+msgid "Gender"
+msgstr ""
+
+#: templates/lessons.html:56 templates/lessons.html.py:106
+msgid "Number"
+msgstr ""
+
+#: templates/lessons.html:65
+msgid "Cases of Nouns"
+msgstr ""
+
+#: templates/lessons.html:66
+msgid "Nominative Case"
+msgstr ""
+
+#: templates/lessons.html:67
+msgid "Accusative Case"
+msgstr ""
+
+#: templates/lessons.html:68
+msgid "Genitive Case"
+msgstr ""
+
+#: templates/lessons.html:69
+msgid "Dative Case"
+msgstr ""
+
+#: templates/lessons.html:70
+msgid "Vocative Case"
+msgstr ""
+
+#: templates/lessons.html:79
+msgid "First Declension"
+msgstr ""
+
+#: templates/lessons.html:80
+msgid "Nouns in -α"
+msgstr ""
+
+#: templates/lessons.html:81 templates/lessons.html.py:82
+msgid "Nouns in -η"
+msgstr ""
+
+#: templates/lessons.html:92
+msgid "Second Declension"
+msgstr ""
+
+#: templates/lessons.html:93
+msgid "Nouns in -ο"
+msgstr ""
+
+#: templates/lessons.html:94
+msgid "Nouns in -ον"
+msgstr ""
+
+#: templates/lessons.html:104
+msgid "Introduction to Verbs"
+msgstr ""
+
+#: templates/lessons.html:105
+msgid "Person"
+msgstr ""
+
+#: templates/lessons.html:107
+msgid "Tense"
+msgstr ""
+
+#: templates/lessons.html:108
+msgid "Mood"
+msgstr ""
+
+#: templates/lessons.html:109
+msgid "Voice"
+msgstr ""
+
+#: templates/lessons.html:119
+msgid "Present Indicative Active"
+msgstr ""
+
+#: templates/lessons.html:131
+msgid "Future Indicative Active"
+msgstr ""
+
+#: templates/lessons.html:143
+msgid "Adjectives: First and Second Declension"
+msgstr ""
+
+#: templates/lessons.html:144
+msgid "Three-ending"
+msgstr ""
+
+#: templates/lessons.html:145
+msgid "Two-ending"
+msgstr ""
+
+#: templates/lessons.html:155
+msgid "Imperfect Indicative Active"
+msgstr ""
+
+#: templates/lessons.html:167
+msgid "Third Declension: Consonant Stems"
+msgstr ""
+
+#: templates/lessons.html:176
+msgid "Secondary Tenses"
+msgstr ""
+
+#: templates/lessons.html:187
+msgid "Demonstrative Pronouns"
+msgstr ""
+
+#: templates/lessons.html:198
+msgid "Present and Imperfect of "
+msgstr ""
+
+#: templates/lessons.html:198
+msgid ", to be"
+msgstr ""
+
+#: templates/lessons.html:209
+msgid "Introduction to the Middle Voice"
+msgstr ""
+
+#: templates/lessons.html:220
+msgid "Continuing the Middle Voice"
+msgstr ""
+
+#: templates/lessons.html:231
+msgid "Indicative Passive"
+msgstr ""
+
+#: templates/lessons.html:242
+msgid "Perfect/Pluperfect Middle/Passive (Pt. I)"
+msgstr ""
+
+#: templates/lessons.html:253
+msgid "Perfect/Pluperfect Middle/Passive (Pt. II)"
+msgstr ""
+
+#: templates/lessons.html:264
+msgid "Prepositions"
+msgstr ""
+
+#: templates/lessons.html:275
+msgid "Stems of the Consonant Declension (Pt. I)"
+msgstr ""
+
+#: templates/lessons.html:286
+msgid "Stems of the Consonant Declension (Pt. II)"
+msgstr ""
+
+#: templates/lessons.html:297
+msgid "Adjectives of the Consonant Declension"
+msgstr ""
+
+#: templates/lessons.html:308 templates/lessons.html.py:319
+msgid "Contract Verbs"
+msgstr ""
+
+#: templates/module.html:14
+msgid "Lessons"
+msgstr ""
+
+#: templates/module.html:22
+msgid "Loading Lesson"
+msgstr ""
+
+#: templates/profile.html:17
+msgid "You're not logged in!"
+msgstr ""
+
+#: templates/vocab.html:14
+msgid "Vocabulary"
+msgstr ""
+
+#: templates/vocab.html:15
+msgid "50 words learned"
+msgstr ""
+
+#: templates/vocab.html:25
+msgid "Word"
+msgstr ""
+
+#: templates/vocab.html:26
+msgid "Definition"
+msgstr ""
+
+#: templates/vocab.html:27
+msgid "Lesson"
+msgstr ""
+
+#: templates/vocab.html:28
+msgid "Times Seen"
+msgstr ""
+
+#: templates/vocab.html:34
+msgid ""
+"means of knowing, mark, token, judgement will, opinion, mind, intelligence."
+msgstr ""
+
+#: templates/vocab.html:35
+msgid "4"
+msgstr ""
+
+#: templates/vocab.html:43
+msgid "Strengthen Vocabulary"
+msgstr ""
+
+#: templates/vocab.html:47
+msgid "Options"
+msgstr ""
+
+#: templates/vocab.html:51
+msgid "Hide Definitions"
+msgstr ""
+
+#: templates/vocab.html:57
+msgid "Sort By"
+msgstr ""
+
+#: templates/vocab.html:61
+msgid "Recency"
+msgstr ""
+
+#: templates/vocab.html:66
+msgid "Alphabetical"
+msgstr ""
