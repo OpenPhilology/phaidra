@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templates/slide-info.html'], function($, _, Backbone, Models, Collections, Template) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templates/slide-info.html', 'daphne'], function($, _, Backbone, Models, Collections, Template, Daphne) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',
@@ -11,6 +11,22 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 			this.$el.html(this.template(this.model.attributes));
 			this.$el.find('a[data-toggle="popover"]').popover();
 			this.$el.find('em[data-toggle="tooltip"]').tooltip();
+
+			// If there are any parse trees, render them
+			// TODO: Make this more robust
+			this.$el.find('[data-toggle="daphne"]').each(function(i, el) {
+				var words = JSON.parse(el.innerHTML);
+				el.innerHTML = '';
+
+				new Daphne(el, {
+					data: words,
+					mode: el.getAttribute('data-mode'),
+					width: el.getAttribute('data-width') || 200,
+					height: 400,
+					initialScale: 0.9
+				});
+			});
+
 			return this;
 		},
 		navigate: function(e) {

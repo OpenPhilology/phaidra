@@ -293,22 +293,11 @@
 						},
 						"title": "Exercise: Pick the correct definite article",
 						"question": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span lang=\"grc\" class=\"fem\">ἡμέρα</span> (day)?",
-						"options": [
-							[
-								{
-									"value": "ὁ",
-									"display": "<span lang=\"grc\">ὁ</span>"
-								},
-								{
-									"value": "ἡ",
-									"display": "<span lang=\"grc\">ἡ</span>"
-								},
-								{
-									"value": "τό",
-									"display": "<span lang=\"τό\">τό</span>"
-								}
-							]
-						],
+						"options": [[
+								{ "value": "ὁ", "display": "<span lang=\"grc\">ὁ</span>" },
+								{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+								{ "value": "τό", "display": "<span lang=\"grc\">τό</span>" }
+						]],
 						"answers": ["ἡ"],
 						"successMsg": "<strong>Right Answer!</strong> The definite article for feminine nouns like <span lang=\"grc\">ἡμέρα</span> is <span lang=\"grc\">ἡ</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
@@ -323,22 +312,11 @@
 						},
 						"title": "Exercise: Pick the correct definite article",
 						"question": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span lang=\"grc\" class=\"masc\">πόλεμος</span> (battle)?",
-						"options": [
-							[
-								{
-									"value": "ὁ",
-									"display": "<span lang=\"grc\">ὁ</span>"
-								},
-								{
-									"value": "ἡ",
-									"display": "<span lang=\"grc\">ἡ</span>"
-								},
-								{
-									"value": "τό",
-									"display": "<span lang=\"τό\">τό</span>"
-								}
-							]
-						],
+						"options": [[
+								{ "value": "ὁ", "display": "<span lang=\"grc\">ὁ</span>" },
+								{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+								{ "value": "τό", "display": "<span lang=\"grc\">τό</span>" }
+						]],
 						"answers": ["ὁ"],
 						"successMsg": "<strong>Right Answer!</strong> The definite article for masculine nouns like <span lang=\"grc\" class=\"masc\">πόλεμος</span> is <span lang=\"grc\">ὁ</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
@@ -352,22 +330,11 @@
 						},
 						"title": "Exercise: Pick the correct definite article",
 						"question": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span lang=\"grc\" class=\"neut\">ἔργον</span> (work)?",
-						"options": [
-							[
-								{
-									"value": "ὁ",
-									"display": "<span lang=\"grc\">ὁ</span>"
-								},
-								{
-									"value": "ἡ",
-									"display": "<span lang=\"grc\">ἡ</span>"
-								},
-								{
-									"value": "τό",
-									"display": "<span lang=\"grc\">τό</span>"
-								}
-							]
-						],
+						"options": [ [
+								{ "value": "ὁ", "display": "<span lang=\"grc\">ὁ</span>" },
+								{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+								{ "value": "τό", "display": "<span lang=\"grc\">τό</span>" }
+						]],
 						"answers": ["τό"],
 						"successMsg": "<strong>Right Answer!</strong> The definite article for neuter nouns like <span lang=\"grc\">ἔργον</span> is <span lang=\"grc\">τό</span>.",
 						"hintMsg": "<strong>Not Quite</strong>",
@@ -387,6 +354,10 @@
 						"type": "slide_info",
 						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/articles.html",
 						"smyth": "s332"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/raw/thuc/emily_content/3.nouns/treebank-nouns.html"
 					},
 					{
 						"type": "slide_info",
