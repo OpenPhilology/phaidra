@@ -1,6 +1,8 @@
 define(
-	['jquery', 'underscore', 'backbone', 'jquery-ui-core', 'jquery-ui-slide', 'models', 'collections', 'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect'], 
-	function($, _, Backbone, jQueryUICore, jQueryUISlide, Models, Collections, InfoSlideView, MultiCompSlideView, DirectSelectSlideView) { 
+	['jquery', 'underscore', 'backbone', 'jquery-ui-core', 'jquery-ui-slide', 'models', 'collections', 
+		'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect', 'views/slide-treebank'], 
+	function($, _, Backbone, jQueryUICore, jQueryUISlide, Models, Collections, 
+		InfoSlideView, MultiCompSlideView, DirectSelectSlideView, TreebankingView) { 
 
 		var View = Backbone.View.extend({
 			events: {
@@ -33,6 +35,13 @@ define(
 					},
 					'slide_multi_comp': function(model) {
 						return new MultiCompSlideView({
+							model: model
+						}).render()
+							.$el
+							.appendTo(that.$el.find('#lesson-content'));
+					},
+					'slide_treebank': function(model) {
+						return new TreebankingView({
 							model: model
 						}).render()
 							.$el
