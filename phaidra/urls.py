@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.shortcuts import redirect
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -45,5 +46,8 @@ urlpatterns = patterns('',
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^login/', 'web.views.login'),
 	url(r'^aboutus/', 'web.views.aboutus'),
+
+    # front-end logout with javascript disabled does not use the tastypie api logout, but the one of django 
+    url(r'^logout/', 'django.contrib.auth.views.logout', {'next_page': '/home'}),
 	url(r'^$', 'web.views.index')
 )
