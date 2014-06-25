@@ -44,5 +44,6 @@ urlpatterns = patterns('',
 	url(r'^reader/', 'web.views.reader'),
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^login/', 'web.views.login'),
+	url(r'^aboutus/', 'web.views.aboutus'),
 	url(r'^$', 'web.views.index')
 )

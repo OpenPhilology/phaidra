@@ -33,9 +33,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			// Create/Populate necessary models and collections
 		},
 		index: function() {
-			if (!this.index_view) {
+			/*if (!this.index_view) {
 				this.index_view = new IndexView({ el: '.container' }).render();
-			}
+			}*/
 		},
 
 		// Form handles login page 

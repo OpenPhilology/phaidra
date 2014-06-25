@@ -306,8 +306,15 @@ label {
 
 	.thuc {
 		position: absolute; 
+		display: inline-block;
 		left: 0; 
 		bottom: 0;
+
+		.wiggle {
+			@include animate(wiggle, .2s, ease, 0, 3);
+			display: inline-block;
+		}
+
 	}
 
 	form {

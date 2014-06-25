@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+	{# Determine which navigation element is 'active'  #}
+	{% block nav %}
+		{{ block.super }}
+	{% endblock %}
+
+	{% block content %}
+
+	<div class="col-md-7 col-md-offset-2">
+		<h1>About Us</h1>
+		<hr>
+		<h2>The Project</h2>
+		<p style="text-indent: 50px"><strong>Ancient Geek</strong> was conceived as a didactic, user-friendly ecosystem providing localized support to learners of ancient languages, such as Ancient Greek, Latin and Classical Arabic. The term “localized” means that the material at the user’s disposal would be offered in a number of different modern languages (English, Italian, German, French, Farsi, Croatian, etc.), so that users could choose which language best suits their learning needs.</p> 
+
+		<p style="text-indent: 50px">The project started in September 2013 and is now already at the point of offering a fully functional platform enriched with history snippets, gamified exercises, aligned text, parse trees, all designed with the sole purpose of teaching an ancient language, not through traditional grammars, but through direct contact with the text and active participation. So far, the text at the user’s disposal is a section of <em>The History of the Peloponnesian War</em> by the ancient Greek historian Thucydides, whose literal translation is made available in English, Croatian and Farsi.</p> 
+
+		<p style="text-indent: 50px">The project’s working name is <em>Historical Languages eLearning Project</em> and is part of the wider <em>Open Philology Project</em> led by Prof. Gregory Crane, Humboldt Professor of Digital Humanities at the University of Leipzig and funded by the Alexander von Humboldt Foundation, the European Social Fund and the Sächsische AufbauBank.</p>
+
+		<p style="text-indent: 50px"><em>Ancient Geek</em> was born and blossomed in the capable hands of three Research Associates at the University of Leipzig &mdash; Monica Lent, Emily Franzini and Maria Moritz - with the help of Maryam Foradi, professional translator, and their leaders Professor Gregory Crane, Dr. Thomas Köntges.</p> 
+		<hr>
+		<h2>Team Responsibilities</h2>
+
+		<p>
+			<strong>Monica Lent</strong> is a frontend developer and designer, working on all the visible, clickable, interactive components of the website, as well as all the graphics, visual design, and user experience as a whole. 
+		</p>
+
+		<p>
+			<strong>Maria Moritz</strong> is a backend developer who works on preparing data (cleaning, parsing, and merging), building and managing the database (powered by neo4j), developing the API, and integrating new data as it becomes available. 
+		</p>
+
+		<p>
+			<strong>Emily Franzini</strong> is a classicist owkring with the original Greek text and its translations, she writes the lesson content with attention to their pedagogical function, and is involved in the interface design.
+		</p>
+
+		<p>
+			<strong>Maryam Foradi</strong> is a professional translator and has written and aligned a literal Farsi translation of <em>The History of the Peloponnesian War</em> (1.89-1.177).
+		</p>
+
+		<hr>
+
+		<p>
+			Special thanks goes to Josip Parat and Barbara Pavlek for the Croatian and English translations and alignments.
+		</p>
+
+	</div>
+	
+	{% endblock %}

@@ -231,8 +231,17 @@ label {
   color: #EEE; }
   #splash .thuc {
     position: absolute;
+    display: inline-block;
     left: 0;
     bottom: 0; }
+    #splash .thuc:hover .wiggle {
+      -webkit-animation: wiggle, .2s, ease, 0, infinite !important; }
+    #splash .thuc .wiggle {
+      -webkit-animation: wiggle 0.2s ease 0 3;
+      -moz-animation: wiggle 0.2s ease 0 3;
+      -o-animation: wiggle 0.2s ease 0 3;
+      animation: wiggle 0.2s ease 0 3;
+      display: inline-block; }
   #splash form {
     width: 80%; }
   #splash img {
