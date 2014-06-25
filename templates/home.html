@@ -10,43 +10,68 @@
 
 {% block content %}
 
-	<div class="col-md-7 col-md-offset-1" style="margin-top: 30px">
-		<h1>{% trans "Continue Learning!" %}</h1>
-		<p>
-			{% trans "Round out your knowledge of nouns by learning the 3rd declension nouns." %}
-		</p>
-		<a href="#" class="btn btn-default">{% trans "Keep Learning Greek" %}</a>
+	<!-- TODO: Move all these terrible inline styles out... -->
+	<div class="col-md-10 col-md-offset-1" style="margin-top: 30px;">
+		<div class="well" style="background-color: #D15241; color: #FFF">
+			<a style="float: right" href="/module/1/section/0/slide/0" class="btn btn-default">{% trans "Start Learning Greek" %}</a>
+			<img src="/static/images/icon_grk_amphora.png" alt="The Greek Alphabet" style="float: left; padding: 20px">
+			<h1>{% trans "Learn the Alphabet" %}</h1>
+			<p>There's no better way to start than with your ABC's!</p>
+		</div>
+	</div>
+	<div class="col-md-8 col-md-offset-1" style="margin-top: 30px;">
+
+		<h3>{% trans "Ready to put your Greek skills to use?" %}</h3>	
+		<p>{% trans "When you feel like you've learned enough, dive right in to more advanced (and more fun) Greek learning tools." %}</p>
 
 		<hr>
 
-		<h2>{% trans "Ready to put your Greek skills to use?" %}</h2>	
-		<p>{% trans "Here are some other ways you can improve your Greek:" %}</p>
-		<ul>
-			<li> {% trans "Read" %} </li>
-			<li> {% trans "Annotate" %} </li>
-			<li> {% trans "Etc." %}</li>
-		</ul>
+		<div class="row">
+			<div class="col-md-4" style="text-align: center">
+				<span class="glyphicon glyphicon-bookmark" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
+				<h3><a href="/reader/">Start Reading</a></h3>
+				<p>
+					Start reading Thucydides' war story of the Spartans versus the Athenians.
+				</p>
+			</div>
+			<div class="col-md-4" style="text-align: center">
+				<span class="glyphicon glyphicon-book" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
+				<h3><a href="/create/">Create Translations</a></h3>
+				<p>
+					Contribute to brand new, digital editions of Classical works.
+				</p>
+			</div>
+			<div class="col-md-4" style="text-align: center">
+				<span class="glyphicon glyphicon-leaf" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
+				<h3><a href="/create/">Build Parse Trees</a></h3>
+				<p>
+					Show off your syntactic chops by building parse trees of previously unanalysed sentences.
+				</p>
+			</div>
+		</div>
+
+		<hr>
 	</div>
 
-	<div class="col-md-3 feedback-container" style="background-color: rgba(255, 255, 255, 0.8)">
+	<div class="col-md-3 feedback-container" style="background-color: rgba(255, 255, 255, 0.8); display: none">
 		<div class="achievements">
 			<a href="#" class="box">
-				<strong>75</strong>
+				<strong>0</strong>
 				<br>
 				{% trans "words learned" %}
 			</a>
 			<a href="#" class="box">
-				<strong>12</strong>
+				<strong>0</strong>
 				<br>
 				{% trans "lessons completed" %}
 			</a>
 			<a href="#" class="box">
-				<strong>13</strong>
+				<strong>0</strong>
 				<br>
 				{% trans "skills earned" %}
 			</a>
 			<a href="#" class="box">
-				<strong>20</strong>
+				<strong>0</strong>
 				<br>
 				{% trans "original annotations" %}
 			</a>
@@ -69,6 +94,10 @@
 		<p>
 			<span class="badge treebank">+ 4</span> {% trans "Treebanked 4 sentences" %}<br>
 		</p>
+	</div>
+
+	<div style="position: fixed; bottom: -50px; right: 0; z-index: -10; width: 400px; text-align: right">
+		<img src="/static/images/thuc.svg" width="100%" height="100%" style="opacity: .3; float: right">
 	</div>
 
 {% endblock %}

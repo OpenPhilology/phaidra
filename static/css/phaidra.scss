@@ -273,7 +273,7 @@ label {
 
 /* The speech bubble that Thuc uses to speak */
 .speech {
-	$color: lighten($color-sec-four, 15%);
+	$color: lighten($color-sec-four, 10%);
 	position: relative;
 	padding: 15px;
 	margin: 1em 0 3em;
@@ -281,34 +281,18 @@ label {
 	border-radius: 3px;
 	line-height: 2em;
 	margin-bottom: 10px;
-	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
 	&:before {
-		top: -20px;
-		bottom: auto;
-		left: auto;
-		right: 40px;
-		border-width: 0 20px 20px;
-		content: "";
+		content: '';
 		position: absolute;
 		border-style: solid;
-		border-color: $color transparent;
+		border-width: 15px 15px 15px 0;
+		border-color: transparent $color;
 		display: block;
 		width: 0;
-	}
-
-	&:after {
-		top: -13px;
-		bottom: auto;
-		left: auto;
-		right: 47px;
-		border-width: 0 13px 13px;
-		content: "";
-		position: absolute;
-		border-style: solid;
-		border-color: $color transparent;
-		display: block;
-		width: 0;
+		z-index: 1;
+		left: -15px;
+		top: 25px;
 	}
 }
 
@@ -548,13 +532,13 @@ $banner-height: 43px;
 /* Lesson-related styles */
 .achievements {
 	.box {
-		$color: $color-sec-two;
+		$color: lighten($color-sec-two, 40%);
 
 		height: 125px;
 		width: 125px;
 		display: inline-block;
 		background-color: $color;
-		color: #FFF;
+		color: #333;
 		margin: 5px;
 		border-radius: 2px;
 		text-align: center;
@@ -568,7 +552,6 @@ $banner-height: 43px;
 		}
 
 		strong {
-			color: #FFF !important;
 			font-size: 24px;
 			font-weight: normal;
 		}
@@ -688,7 +671,7 @@ div.module {
 }
 .module {
 	border-radius: 3px;
-	color: #666;
+	background-color: lighten($color-sec-two, 50%);
 	text-align: center;
 	display: inline-block;
 	padding: 20px;
@@ -699,7 +682,7 @@ div.module {
 	vertical-align: top;
 	position: relative;
 	box-shadow:	0px 0px 4px 0px rgba(0, 0, 0, .1);
-	color: #BBB !important;
+	color: #333 !important;
 
 	img {
 		height: 65px;
@@ -1416,11 +1399,24 @@ table.inflection-table {
 }
 
 .aligner {
-
 	.left-side, .right-side {
 		line-height: 3em;
 		display: inline-block;
 		width: 50%;
 		float: left;
+	}
+}
+
+.summary {
+	
+	&.skills {
+		span {
+			font-size: 10em;
+		}
+	}
+}
+.thuc {
+	&.red {
+		fill: $color-pri-one;
 	}
 }
