@@ -1,24 +1,58 @@
-<div data-toggle="daphne" data-mode="edit" style="float: right; margin: 10px;">
-[
-	{ "id": 1, "head": 2, "relation": "ATR", "value": "οἱ", "pos": "article" },
-	{ "id": 2, "head": 0, "relation": "SBJ", "value": "Ἀθηναῖοι", "pos": "noun" }
-]
+<div class="row">
+	<div class="col-md-3">
+		<div class="thuc">
+			<img src="/static/images/new_thuc.png" style="background-color: #1fadad; height: 200px;" class="img-circle">
+			<img src="/static/images/glasses.svg" style="position: absolute; left: 76px; top: 69px; width: 70px; height: 30px"> 
+		</div>
+		<blockquote>
+			<em>I may not like parsely, but I do like a parse tree.</em> 
+			<footer>Thucydides</footer>
+		</blockquote>
+	</div>
+	<div class="col-md-9">
+		<h2>Building Parse Trees for Nouns</h2>
+
+		<hr>
+
+		<h3>What's a parse tree, you ask?</h3>
+		<p>
+			A <strong>parse tree</strong> is a way to represent that you understand the grammar of a greek sentence. If one word <u>depends</u> on another, it goes below it on the tree. Simple as pie. Read on to learn your first rule of dependency! 
+		</p>
+
+		<div style="background-color: #EEE; padding: 20px;">
+			<div data-toggle="daphne" data-mode="play" data-width="300" style="min-width: 300px; float: right; margin-left: 20px">
+			[
+				{ "id": 1, "head": 2, "relation": "ATR", "value": "οἱ", "pos": "article" },
+				{ "id": 2, "head": 0, "relation": "SBJ", "value": "Ἀθηναῖοι", "pos": "noun" }
+			]
+			</div>
+			<h3>Try it yourself!</h3>
+			<ol>
+				<li> Click on <span lang="grc">οἱ</span> ("the"), the dependent.</li>
+				<li> Click on <span lang="grc">Ἀθηναῖοι</span> ("Athenians"), the parent.</li>
+				<li> Profit.</li>
+			</ol>
+
+			<hr>
+
+			<h3>Wait, what did I just do?</h3>
+			<p>
+				You just demonstrated you understand that in this fragment, <span lang="grc">οἱ Ἀθηναῖοι</span>, the Athenians, belong together because: 
+			</p>
+			<hr>
+			<ul>
+				<li> <span lang="grc">οἱ</span> <u>depends upon</u> <span lang="grc">Ἀθηναῖοι</span>, because they agree in Case, Number, and Gender (both are  Masculine, Plural, Nominative).</li>
+			</ul>
+
+			<hr>
+
+			<p>
+				That's it! Here's your first rule to learn on your quest for parse tree proficiency:
+			</p>
+			<p class="lead"><strong>1. Whenever you see a definite article and a noun that it agrees with, that definite article should be directly below it on a parse tree.</strong></p>
+			<p>
+				Keep that in mind as you try the next couple exercises.
+			</p>
+		</div>
+	</div>
 </div>
-<div data-toggle="daphne" data-mode="play" data-width="300" style="float: right; margin: 10px; min-width: 500px;">
-[
-	{ "id": 1, "head": 2, "relation": "ATR", "value": "οἱ", "pos": "article" },
-	{ "id": 2, "head": 0, "relation": "SBJ", "value": "Ἀθηναῖοι", "pos": "noun" }
-]
-</div>
-<h2>Building Parse Trees for Nouns</h2>
-<hr>
-<h3>What's a parse tree?</h3>
-<p>
-	A <strong>parse tree</strong> is a way to represent that you understand the grammar of a greek sentence. Take a look at the example to the right:
-</p>
-<p lang="grc" class="masc">
-	οἱ Ἀθηναῖοι
-</p>
-<p>
-	Since <span lang="grc">οἱ</span> ("the") <em>depends on</em> and <em>agrees with</em> (in case, number, and gender) <span lang="grc">Ἀθηναῖοι</span> ("Athenians"), it belongs under it on the parse tree. 
-</p>

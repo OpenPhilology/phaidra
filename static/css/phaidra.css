@@ -1,6 +1,70 @@
 /* Color Scheme! */
 /* Fonts! */
 /* Mix-ins */
+@-webkit-keyframes bounce {
+  0% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  37% {
+    top: 62px;
+    animation-timing-function: ease-out; }
+
+  55% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  73% {
+    top: 78px;
+    animation-timing-function: ease-out; }
+
+  82% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  91% {
+    top: 88px;
+    animation-timing-function: ease-out; }
+
+  100% {
+    top: 92px;
+    animation-timing-function: ease-in; } }
+
+@keyframes bounce {
+  0% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  37% {
+    top: 62px;
+    animation-timing-function: ease-out; }
+
+  55% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  73% {
+    top: 78px;
+    animation-timing-function: ease-out; }
+
+  82% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  91% {
+    top: 88px;
+    animation-timing-function: ease-out; }
+
+  100% {
+    top: 92px;
+    animation-timing-function: ease-in; } }
+
+.bounce {
+  -webkit-animation: bounce 1s ease 0.5s 1;
+  -moz-animation: bounce 1s ease 0.5s 1;
+  -o-animation: bounce 1s ease 0.5s 1;
+  animation: bounce 1s ease 0.5s 1; }
+
 @-webkit-keyframes wiggle {
   0% {
     -webkit-transform: rotateZ(2deg); }
@@ -48,7 +112,7 @@ html, body {
   height: 100%; }
 
 body {
-  color: #666;
+  color: #333;
   font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background-repeat: repeat-x;
   background-position: left bottom;
@@ -58,6 +122,9 @@ a {
   color: #1fadad; }
   a:hover {
     color: #178282; }
+
+blockquote {
+  line-height: 40px; }
 
 [lang="grc"], div[lang="grc"] {
   font-family: 'Cambria', 'Times New Romans' !important;
@@ -223,6 +290,21 @@ label {
     top: 25px; }
 
 /* Styles related to the intro page */
+.thuc {
+  display: inline-block; }
+  .thuc .wiggle {
+    -webkit-animation: wiggle 0.2s ease 2s 3;
+    -moz-animation: wiggle 0.2s ease 2s 3;
+    -o-animation: wiggle 0.2s ease 2s 3;
+    animation: wiggle 0.2s ease 2s 3;
+    display: inline-block; }
+
+.wiggle {
+  -webkit-animation: wiggle 0.5s ease 0 3;
+  -moz-animation: wiggle 0.5s ease 0 3;
+  -o-animation: wiggle 0.5s ease 0 3;
+  animation: wiggle 0.5s ease 0 3; }
+
 #splash {
   background-color: #1fadad;
   position: relative;
@@ -231,21 +313,12 @@ label {
   color: #EEE; }
   #splash .thuc {
     position: absolute;
-    display: inline-block;
-    left: 0;
-    bottom: 0; }
-    #splash .thuc:hover .wiggle {
-      -webkit-animation: wiggle, .2s, ease, 0, infinite !important; }
-    #splash .thuc .wiggle {
-      -webkit-animation: wiggle 0.2s ease 0 3;
-      -moz-animation: wiggle 0.2s ease 0 3;
-      -o-animation: wiggle 0.2s ease 0 3;
-      animation: wiggle 0.2s ease 0 3;
-      display: inline-block; }
+    top: 0;
+    left: 0; }
   #splash form {
     width: 80%; }
   #splash img {
-    height: 300px; }
+    height: 330px; }
   #splash h1 {
     display: inline-block;
     font-family: 'Garamond';
