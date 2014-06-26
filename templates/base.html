@@ -21,26 +21,26 @@
 
 <div class="container">
 	<header class="row banner">
-		<div class="col-md-9">
+		<div class="col-md-7">
 			{% block nav %}
 				<nav class="row navigation">
-					<a class="col-xs-3 col-sm-3 progress-lessons {{ home_active }}" href="/home">
-						<span class="glyphicon glyphicon-home"></span> <span class="hidden-xs">{% trans "HOME" %}</span>
+					<a class="col-xs-1 col-sm-2 progress-lessons {{ home_active }}" href="/home">
+						<span class="glyphicon glyphicon-home"></span> <span class="hidden-sm hidden-xs">{% trans "Home" %}</span>
 					</a>
-					<a class="col-xs-3 col-sm-3 progress-lessons {{ lessons_active }}" href="/lessons">
-						<span class="glyphicon glyphicon-flash"></span> <span class="hidden-xs">{% trans "LEARN" %}</span>
+					<a class="col-xs-1 col-sm-2 progress-lessons {{ lessons_active }}" href="/lessons">
+						<span class="glyphicon glyphicon-flash"></span> <span class="hidden-sm hidden-xs">{% trans "Learn" %}</span>
 					</a>
-					<a class="col-xs-3 col-sm-3 progress-voc {{ reader_active }}" href="/reader">
-						<span class="glyphicon glyphicon-bookmark"></span> <span class="hidden-xs">{% trans "READ" %}</span>
+					<a class="col-xs-1 col-sm-2 progress-voc {{ reader_active }}" href="/reader">
+						<span class="glyphicon glyphicon-bookmark"></span> <span class="hidden-sm hidden-xs">{% trans "Read" %}</span>
 					</a>
-					<a class="col-xs-3 col-sm-3 progress-book {{ create_active }}" href="/create">
-						<span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">{% trans "CREATE" %}</span>
+					<a class="col-xs-1 col-sm-2 progress-book {{ create_active }}" href="/create">
+						<span class="glyphicon glyphicon-comment"></span> <span class="hidden-sm hidden-xs">{% trans "Create" %}</span>
 					</a>
 				</nav>
 			{% endblock %}
 		</div>
 
-		<div class="col-md-3 hidden-sm hidden-xs">
+		<div class="col-md-5 hidden-sm hidden-xs">
 			<div class="user-info pull-right">
 				{% if user.is_authenticated %}
 					<span class="logged-in">
@@ -55,7 +55,7 @@
 					</span>
 				{% else %}
 					<span class="logged-out">
-						<a href="/login" class="log-in-link">{% trans "Would you care to log in?" %}</a>
+						<a href="/login" class="log-in-link">{% trans "Login" %}</a>
 					</span>
 				{% endif %}
 			</div>

@@ -45,6 +45,8 @@ urlpatterns = patterns('',
 	url(r'^reader/', 'web.views.reader'),
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^login/', 'web.views.login'),
+	url(r'^aboutus/', 'web.views.aboutus'),
+
     # front-end logout with javascript disabled does not use the tastypie api logout, but the one of django 
     url(r'^logout/', 'django.contrib.auth.views.logout', {'next_page': '/home'}),
 	url(r'^$', 'web.views.index')

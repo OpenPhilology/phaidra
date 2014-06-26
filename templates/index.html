@@ -11,31 +11,64 @@
 	<!-- CSS -->
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/static/css/phaidra.css" rel="stylesheet">
-	<link href="/static/css/parse-tree.css" rel="stylesheet">
 
 	<!-- JS -->
 	<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
 	<script src="/static/js/lib/jquery-2.0.3.js"></script>
 
+	<style>
+		[lang="grc"] {
+			background-color: transparent !important;
+			border: 0 !important;
+		}
+	</style>
+
 </head>
 <body>
 
 <div class="container" style="background: rgba(255, 255, 255, 0.7)">
+	<header class="row banner" style="position: static">
+		<div class="col-md-6" style="padding: 11px; font-size: 16px; letter-spacing: 1px">
+			Ancient Geek
+		</div>
+		<div class="col-md-6">
+			<div class="user-info pull-right">
+				{% if user.is_authenticated %}
+					<span class="logged-in">
+						<span lang="grc">χαῖρε</span>, 
+						<a href="/profile/" class="username">
+							<img src="http://www.gravatar.com/avatar/{{ email_hash }}?s=25&d=mm" class="img-circle img-thumbnail"> 
+							{{ user.username }} 
+							<span style="color: #6378A5; font-size: 1.2em">!</span>
+						</a>
+						
+						<a href="/logout/">{% trans "Log out" %}</a>
+					</span>
+				{% else %}
+					<span class="logged-out">
+						<a href="/login" class="log-in-link">{% trans "Login to Ancient Geek!" %}</a>
+					</span>
+				{% endif %}
+			</div>
+		</div>
+	</header>
 	<div class="row" id="splash">
 
-		<a class="btn btn-default" href="/home" id="login-link">{% trans "Log in" %}</a>
-		<img src="/static/images/new_thuc.png" class="thuc">
+		<div class="thuc">
+			<img src="/static/images/new_thuc.png">
+			<img class="wiggle" src="/static/images/glasses.svg" style="position: absolute; left: 104px; top: 83px; width: 112px; height: 112px"> 
+		</div>
 
 		<div class="col-md-8 col-md-push-4">
 			<div id="greeting-text">
 				<h1>{% trans "Get your Greek on." %}</h1>
 
-				<p class="lead">
-					{% trans "Learn Ancient Greek as you read Thucydides' harrowing tale of the war between " %}<span lang="grc" class="greek-text masc">οἱ Λακεδαιμόνιοι</span>{% trans ", the Spartans, and " %}<span lang="grc" class="greek-text masc">οἱ ᾿Αθηναῖοι</span>{% trans ", the Athenians" %}{% trans "." %} 
+				<p class="lead" style="line-height: 40px">
+					{% trans "Learn Ancient Greek as you read Thucydides' harrowing tale of the war between " %}<br><span lang="grc">οἱ Λακεδαιμόνιοι</span>{% trans " (the Spartans) and " %}<span lang="grc">οἱ ᾿Αθηναῖοι</span>{% trans " (the Athenians)" %}{% trans "." %} 
 				</p>
 
 				<p class="text-align: center">
-					<a href="#" id="start-link" class="register-link btn btn-primary btn-lg">{% trans "Start Learning!" %}</a>
+					<a href="/module/1/section/0/slide/0" id="start-link" class="register-link btn btn-primary btn-lg">{% trans "Start Learning!" %}</a>
 				</p>
 			</div>
 			<div id="register-text" style="display: none">
@@ -63,27 +96,101 @@
 			</div>
 
 		</div>
-		<div class="col-md-4 col-md-pull-8" style="height: 300px;">
-		</div>
 	</div>
-	<div class="row" style="padding: 30px;">
-		<div class="col-md-4">
+	<div class="row" style="text-align: center; margin-top: 30px">
+		<div class="col-md-4" style="padding: 30px;">
+			<span class="glyphicon glyphicon-fire" style="font-size: 3em; color: #d15241"></span>
 			<h2>{% trans "Game your way through Greek." %}</h2>
 			<p>
 				{% trans "Develop your mad Greek skillz through games and choose the path to Greek glory that suits your personal learning style." %} 
 			</p>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4" style="padding: 30px">
+			<span class="glyphicon glyphicon-book" style="font-size: 3em; color: #4e6087"></span>
 			<h2>{% trans "Keep it original." %}</h2>
 			<p>
-				{% trans "Explore Classical texts in their original languages, the way they were intended to be read, enhanced by data contributed by people like you." %}
+				{% trans "Explore Classical texts in their original languages, the way they were meant to be read, enhanced by data contributed by people like you." %}
 			</p>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4" style="padding: 30px">
+			<span class="glyphicon glyphicon-flash" style="font-size: 3em; color: #f4bc78"></span>
 			<h2>{% trans "Be a scholar!" %}</h2>
 			<p>
 				{% trans "Contribute micropublications like translations and annotations to help create brand new, digital editions of Classical works!" %}
 			</p>
 		</div>
+	</div>
+	<div class="row well">
+		<div class="row" style="margin-top: 30px">
+			<div class="col-md-10 col-md-offset-1">
+				<h3>Here's how it works.</h3>
+				<hr>
+			</div>
+			<div class="col-md-5 col-md-offset-1">
+				<blockquote style="line-height: 36px">
+					<strong>You choose the way you want to learn Greek</strong> &mdash; whether it's through pure immersion or structured lessons, Ancient Geek supports you in both ways.<Br><br>
+					You'll have all the tools you need to grapple with <em>real</em> Ancient Greek from day one, not just contrived textbook examples. 
+				</blockquote>
+			</div>
+			<div class="col-md-5" style="text-align: center">
+				<img src="/static/images/reader.png" class="img-thumbnail">
+				<hr>
+				If you want to get straight to reading, you can use the <br>
+				<strong>Ancient Geek Reader</strong>, and dip in and out of the grammar<br>
+				only as needed.
+			</div>
+		</div>
+		<hr style="border: 2px solid #FFF">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h3>Your mission.</h3>
+				<hr>
+			</div>
+			<div class="col-md-5 col-md-offset-1">
+				<blockquote style="line-height: 36px">
+				You'll practice each lesson through enjoyable <strong>interactive exercises</strong> that will help you develop the skills you need.
+				<br><br>
+				For example, you'll learn how to take Greek sentences and <strong>represent them as parse trees</strong>. Not only does this prove that you get the Greek, but you'll be able to compare your interpretations against those of others. 
+				<br><br>
+				When you're ready, you can create trees for new, unanalyzed sentences and contribute your interpretation to the Digital Humanities community as a micropublication. 
+				</blockquote>
+			</div>
+			<div class="col-md-5" style="text-align: center">
+				<img src="/static/images/treebanking.png" class="img-thumbnail">
+				<hr>
+				You'll learn how to build parse trees on sentences others have done,<br>
+				then <strong>contribute trees for brand new, digital texts</strong>.
+			</div>
+		</div>
+		<hr style="border: 2px solid #FFF">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h3>What then?</h3>
+				<hr>
+			</div>
+			<div class="col-md-5 col-md-offset-1">
+				<blockquote style="line-height: 36px">Did you know there are still unexplored Classical texts? Many have never been digital before, much less translated or treebanked. <strong>That's where you come in.</strong> There are millions of words of newly digitized Greek just waiting to be analyzed, and you can help us do it by playing the same games that taught you your alphas from your betas.<br><br>
+				
+					The best part is that you're not alone &mdash; Ancient Geeks all over the world will contribute to creating <strong>new digital editions</strong> of these unexplored texts, using their newly acquired ancient language skills coupled with their diverse range of modern languages.
+				</blockquote>
+			</div>
+			<div class="col-md-5" style="text-align: center">
+				<img src="/static/images/diged.png" class="img-thumbnail">
+				<hr>
+				Any contribution big or small is helpful!<br>
+				You can continue to improve your Greek while<br>
+				contributing to open data.
+			</div>
+		</div>
+		<hr>
+		<div class="row" style="text-align: center">
+			<a href="/module/1/section/0/slide/0" id="start-link" class="register-link btn btn-primary btn-lg">{% trans "Start Learning!" %}</a>
+		</div>
+	</div>
+	<div class="row">
+		<p style="text-align: center; color: #999; margin-top: 30px">
+			Built with Geek love in Leipzig, Germany by lent, moritz, efranzini {@informatik.uni-leipzig.de} (<a href="/aboutus/">About Us</a>), 
+			<br><a href="http://www.dh.uni-leipzig.de/wo/" target="_blank">Open Philology Project</a>, with support from Alexander von Humboldt Foundation, the European Social Fund (ESF), &amp; the Sächische AufbauBank (SAB).
+		</p>
 	</div>
 </div>

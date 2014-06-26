@@ -74,6 +74,21 @@ def profile(request):
 
 	return HttpResponse(template.render(context))
 
+def aboutus(request):
+	template = loader.get_template('aboutus.html')
+	context = RequestContext(request, {
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+	})
+
+	return HttpResponse(template.render(context))
+
+def module(request):
+	template = loader.get_template('module.html')
+	context = RequestContext(request, {
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+	})
+
+	return HttpResponse(template.render(context))
 def module(request):
 	template = loader.get_template('module.html')
 	context = RequestContext(request, {
