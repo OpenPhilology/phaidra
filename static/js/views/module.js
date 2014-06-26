@@ -1,8 +1,8 @@
 define(
 	['jquery', 'underscore', 'backbone', 'jquery-ui-core', 'jquery-ui-slide', 'models', 'collections', 
-		'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect', 'views/slide-treebank'], 
+		'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect'], 
 	function($, _, Backbone, jQueryUICore, jQueryUISlide, Models, Collections, 
-		InfoSlideView, MultiCompSlideView, DirectSelectSlideView, TreebankingView) { 
+		InfoSlideView, MultiCompSlideView, DirectSelectSlideView) { 
 
 		var View = Backbone.View.extend({
 			events: {

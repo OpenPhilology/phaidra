@@ -149,7 +149,7 @@
 						"title": "Identify the letter!",
 						"question": "How does <strong lang=\"grc\">η</strong> sound and what is it called?",
 						"options": [ [
-							{ "value": "epsilon - east", "display": "Gamma - like <u>ea</u>st" },
+							{ "value": "epsilon - get", "display": "Epsilon - like g<u>e</u>t" },
 							{ "value": "mu - mouse", "display": "Mu - like <u>m</u>ouse" },
 							{ "value": "eta - hair", "display": "Eta - like h<u>ai</u>r" },
 							{ "value": "eta - eat", "display": "Eta - like <u>ea</u>t" }
@@ -169,16 +169,138 @@
 						"options": [ [
 							{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
 							{ "value": "Ζ", "display": "<span lang=\"grc\">Ζ</span>" },
+							{ "value": "Η", "display": "<span lang=\"grc\">Η</span>" },
 							{ "value": "η", "display": "<span lang=\"grc\">η</span>" },
 							{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
-							{ "value": "Θ", "display": "<span lang=\"grc\">Θ</span>" },
-							{ "value": "Η", "display": "<span lang=\"grc\">Η</span>" }
+							{ "value": "Θ", "display": "<span lang=\"grc\">Θ</span>" }	
 						]],
 						"answers": ["ζ", "Ζ"],
-						"successMsg": "<strong>Right Answer!</strong> You've identified gamma, <span class=\"grc\">Γ γ</span>, pronounced like the \"g\" in <u>g</u>rammar.",
+						"successMsg": "<strong>Right Answer!</strong> You've identified zdeta, <span class=\"grc\">Ζ ζ</span>, pronounced like the \"zd\" in wi<u>sd</u>om.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">δ</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+							{ "value": "delta - door", "display": "Delta - like <u>d</u>oor" },
+							{ "value": "eta - hair", "display": "Eta - like h<u>ai</u>r" },
+							{ "value": "sigma - signal", "display": "Sigma - like <u>s</u>ignal" }
+						]],
+						"answers": ["delta - door"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that gamma sounds like the \"δ\" in door.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">λ</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+							{ "value": "lambda - long", "display": "Lambda - like <u>l</u>ong" },
+							{ "value": "zdeta - wisdom", "display": "Zdeta - like wi<u>sd</u>om" },
+							{ "value": "gamma - grammar", "display": "Gamma - like <u>g</u>rammar" }
+						]],
+						"answers": ["lambda - long"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that lambda sounds like the \"λ\" in long.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "Which of these is a <strong>theta</strong>?",
+						"options": [ [
+							{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+							{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
+							{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
+						]],
+						"answers": ["θ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified theta, <span class=\"grc\">θ</span>, pronounced like the \"th\" in <u>th</u>under.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_multi_comp",
+						"title": "Identify the letter!",
+						"question": "What is the order of these letters in the alphabet?",
+						"options": [ [
+							{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+							{ "value": "δ", "display": "<span lang=\"grc\">δ</span>" },
+							{ "value": "ε", "display": "<span lang=\"grc\">ε</span>" },
+							{ "value": "η", "display": "<span lang=\"grc\">η</span>" }
+						]],
+						"answers": ["δ", "ε", "ζ", "η"],
+						"successMsg": "You're right!",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "true",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">κ</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+							{ "value": "kappa - coat", "display": "Kappa - like <u>c</u>oat" },
+							{ "value": "zdeta - wisdom", "display": "Zdeta - like wi<u>sd</u>om" },
+							{ "value": "kappa - cherry", "display": "Kappa - like <u>ch</u>erry" }
+						]],
+						"answers": ["kappa - coat"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that gamma sounds like the \"κ\" in coat.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "Which of these is a <strong>iota</strong>?",
+						"options": [ [
+							{ "value": "λ", "display": "<span lang=\"grc\">λ</span>" },
+							{ "value": "ι", "display": "<span lang=\"grc\">ι</span>" },
+							{ "value": "η", "display": "<span lang=\"grc\">η</span>" }
+						]],
+						"answers": ["ι"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified theta, <span class=\"grc\">ι</span>, pronounced like the \"i\" in <u>ea</u>st.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_multi_comp",
+						"title": "Identify the letter!",
+						"question": "What is the order of these letters in the alphabet?",
+						"options": [ [
+							{ "value": "λ", "display": "<span lang=\"grc\">λ</span>" },
+							{ "value": "ι", "display": "<span lang=\"grc\">ι</span>" },
+							{ "value": "κ", "display": "<span lang=\"grc\">κ</span>" },
+							{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" }
+						]],
+						"answers": ["θ", "ι", "κ", "λ"],
+						"successMsg": "Correct!",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "true",
 						"require_all": "true"
 					},
 					{
@@ -202,8 +324,204 @@
 						"includeHTML": "/static/content/en/slides/1.alphabet/upsilon.html"
 					},
 					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">ν</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+							{ "value": "gamma - good", "display": "Gamma - like <u>g</u>ood" },
+							{ "value": "üpsilon - food", "display": "Üpsilon - like f<u>oo</u>d" },
+							{ "value": "nu - nose", "display": "Nose - like <u>n</u>ose" }
+						]],
+						"answers": ["nu - nose"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that Nu sounds like the \"n\" in book.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "horizontal" },
+						"title": "Identify the letter!",
+						"question": "Which of these are <strong>rho</strong>?",
+						"options": [ [
+							{ "value": "τ", "display": "<span lang=\"grc\">τ</span>" },
+							{ "value": "Τ", "display": "<span lang=\"grc\">Τ</span>" },
+							{ "value": "Ρ", "display": "<span lang=\"grc\">Ρ</span>" },
+							{ "value": "ρ", "display": "<span lang=\"grc\">ρ</span>" },
+							{ "value": "Π", "display": "<span lang=\"grc\">Π</span>" },
+							{ "value": "π", "display": "<span lang=\"grc\">π</span>" }	
+						]],
+						"answers": ["ρ", "Ρ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified rho, <span class=\"grc\">Ρ ρ</span>, pronounced like the \"r\" in <u>r</u>ose.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_multi_comp",
+						"title": "Identify the letter!",
+						"question": "What is the order of these letters in the alphabet?",
+						"options": [ [
+							{ "value": "μ", "display": "<span lang=\"grc\">μ</span>" },
+							{ "value": "ο", "display": "<span lang=\"grc\">ο</span>" },
+							{ "value": "ν", "display": "<span lang=\"grc\">ν</span>" },
+							{ "value": "π", "display": "<span lang=\"grc\">π</span>" }
+						]],
+						"answers": ["μ", "ν", "ο", "π"],
+						"successMsg": "Awesome!",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "true",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "Which of these are a <strong>sigma</strong>?",
+						"options": [ [
+							{ "value": "ς", "display": "<span lang=\"grc\">ς</span>" },
+							{ "value": "ο", "display": "<span lang=\"grc\">ο</span>" },
+							{ "value": "σ", "display": "<span lang=\"grc\">σ</span>" }
+						]],
+						"answers": ["ς", "σ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified sigma, <span class=\"grc\">σ,ς</span>, pronounced like the \"s\" in <u>s</u>ignal.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">ρ</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "rho - rose", "display": "Rho - like <u>r</u>ose" },
+							{ "value": "pi - pen", "display": "Pi - like <u>p</u>en" },
+							{ "value": "üpsilon - food", "display": "Üpsilon - like f<u>oo</u>d" },
+							{ "value": "nu - nose", "display": "Nose - like <u>n</u>ose" }
+						]],
+						"answers": ["rho - rose"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that Rho sounds like the \"r\" in rose.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_multi_comp",
+						"title": "Identify the letter!",
+						"question": "What is the order of these letters in the alphabet?",
+						"options": [ [
+							{ "value": "ρ", "display": "<span lang=\"grc\">ρ</span>" },
+							{ "value": "υ", "display": "<span lang=\"grc\">υ</span>" },
+							{ "value": "ς", "display": "<span lang=\"grc\">ς</span>" },
+							{ "value": "τ", "display": "<span lang=\"grc\">τ</span>" }
+						]],
+						"answers": ["ρ", "ς", "τ", "υ"],
+						"successMsg": "You're awesome!",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "true",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "Which of these is a <strong>tau</strong>?",
+						"options": [ [
+							{ "value": "ς", "display": "<span lang=\"grc\">ς</span>" },
+							{ "value": "ν", "display": "<span lang=\"grc\">ν</span>" },
+							{ "value": "τ", "display": "<span lang=\"grc\">τ</span>" }
+						]],
+						"answers": ["τ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified tau, <span class=\"grc\">τ</span>, pronounced like the \"t\" in <u>t</u>ower.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/phi.html"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">χ</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "kappa - coat", "display": "Kappa - like <u>c</u>oat" },
+							{ "value": "khi - kiosk", "display": "Khi - like <u>k</u>iosk" },
+							{ "value": "Fi - flower", "display": "Fi - like <u>f</u>lower" },
+							{ "value": "Tau - tower", "display": "Tau - like <u>t</u>ower" }
+						]],
+						"answers": ["khi - kiosk"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that Khi sounds like the \"k\" in kiosk.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "Which of these is a <strong>fi</strong>?",
+						"options": [ [
+							{ "value": "φ", "display": "<span lang=\"grc\">φ</span>" },
+							{ "value": "ψ", "display": "<span lang=\"grc\">ψ</span>" },
+							{ "value": "χ", "display": "<span lang=\"grc\">χ</span>" }
+						]],
+						"answers": ["φ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified fi, <span class=\"grc\">φ</span>, pronounced like the \"f\" in <u>f</u>lower.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "horizontal" },
+						"title": "Identify the letter!",
+						"question": "Which of these are <strong>omega</strong>?",
+						"options": [ [
+							{ "value": "Φ", "display": "<span lang=\"grc\">Φ</span>" },
+							{ "value": "φ", "display": "<span lang=\"grc\">φ</span>" },
+							{ "value": "Χ", "display": "<span lang=\"grc\">Χ</span>" },
+							{ "value": "χ", "display": "<span lang=\"grc\">χ</span>" },
+							{ "value": "ω", "display": "<span lang=\"grc\">ω</span>" },
+							{ "value": "Ω", "display": "<span lang=\"grc\">Ω</span>" }	
+						]],
+						"answers": ["ω", "Ω"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified omega, <span class=\"grc\">Ω ω</span>, pronounced like the \"o\" in <u>o</u>strich.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_multi_comp",
+						"title": "Identify the letter!",
+						"question": "What is the order of these letters in the alphabet?",
+						"options": [ [
+							{ "value": "ψ", "display": "<span lang=\"grc\">ψ</span>" },
+							{ "value": "χ", "display": "<span lang=\"grc\">χ</span>" },
+							{ "value": "φ", "display": "<span lang=\"grc\">φ</span>" },
+							{ "value": "ω", "display": "<span lang=\"grc\">ω</span>" }
+						]],
+						"answers": ["φ", "χ", "ψ", "ω"],
+						"successMsg": "You're awesome!",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "true",
+						"require_all": "true"
 					},
 					{	
 						"type": "slide_info",
