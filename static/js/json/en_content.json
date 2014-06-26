@@ -204,15 +204,125 @@
 						"includeHTML": "/static/content/en/slides/2.diacritics/rough.html",
 						"smyth": "s9"
 					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Pronounciation Challenge!",
+						"question": "How would you pronounce <span lang=\"grc\">ὁδός</span>, <em>way</em>?",
+						"options": [ [
+							{ "value": "Oh-dos", "display": "Oh-dos" },
+							{ "value": "Hoh-dos", "display": "Hoh-dos" },
+							{ "value": "Roh-dos", "display": "Roh-dos" }
+						]],
+						"answers": ["Hoh-dos"],
+						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὁ</span> is pronounced like \"hoh\".",
+						"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ὁ</span> is pronounced like \"hoh\" because of the rough breathing.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Pronounciation Challenge!",
+						"question": "How would you spell <strong>Hellēnes</strong>, <em>Greeks</em>?",
+						"options": [ [
+							{ "value": "´Ελληνες", "display": "<span lang=\"grc\">´Ελληνες</span>" },
+							{ "value": "`Ελληνες", "display": "<span lang=\"grc\">`Ελληνες</span>" },
+							{ "value": "῾´Ελληνες", "display": "<span lang=\"grc\">῾´Ελληνες</span>" }
+						]],
+						"answers": ["῾´Ελληνες"],
+						"successMsg": "<strong>Right Answer!</strong> You remembered that the He sound must come from a rough breathing, such as <span lang=\"grc\">῾´Ε</span>.",
+						"hintMsg": "<strong>Not Quite</strong> Remember that in Greek, the H sound must come from a rough breathing, such as <span lang=\"grc\">῾´Ε</span>.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/smooth.html",
 						"smyth": "s9"
 					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Pronounciation Challenge!",
+						"question": "How would you pronounce <span lang=\"grc\">ὀλιγαρχία</span>, <em>oligarchy</em>?",
+						"options": [ [
+							{ "value": "Roh-li-gar-chia", "display": "Roh-li-gar-chia" },
+							{ "value": "Hoh-li-gar-chia", "display": "Hoh-li-gar-chia" },
+							{ "value": "Oh-li-gar-chia", "display": "Oh-li-gar-chia" }
+						]],
+						"answers": ["Oh-li-gar-chia"],
+						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὀ</span> sounds like 'oh', because of its smooth breathing.",
+						"hintMsg": "<strong>Not Quite</strong> Remember that smooth breathings don't affect pronunciation. So <span lang=\"grc\">ὀλιγαρχία</span> simply sounds like 'Oh-li-gar-chia'.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/longshort.html",
 						"smyth": "s4"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "horizontal" },
+						"title": "What is the long version of <span lang=\"grc\">ε</span>, epsilon?",
+						"question": "What is the long version of <span lang=\"grc\">ε</span>, epsilon?",
+						"options": [ [
+							{ "value": "η", "display": "<span lang=\"grc\">η</span>" },
+							{ "value": "υ", "display": "<span lang=\"grc\">υ</span>" },
+							{ "value": "ω", "display": "<span lang=\"grc\">ω</span>" }
+						]],
+						"answers": ["η"],
+						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">η</span>, eta, is the long version of <span lang=\"grc\">ε</span>, epsilon.",
+						"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">η</span>, eta, is the long version of <span lang=\"grc\">ε</span>, epsilon.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "horizontal" },
+						"title": "Vowel Lengths!",
+						"question": "Which of these vowels are <strong>NOT long</strong>?",
+						"options": [ [
+							{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+							{ "value": "ε", "display": "<span lang=\"grc\">ε</span>" },
+							{ "value": "η", "display": "<span lang=\"grc\">η</span>" },
+							{ "value": "ι", "display": "<span lang=\"grc\">ι</span>" },
+							{ "value": "ο", "display": "<span lang=\"grc\">ο</span>" },
+							{ "value": "ω", "display": "<span lang=\"grc\">ω</span>" },
+							{ "value": "υ", "display": "<span lang=\"grc\">υ</span>" }
+						]],
+						"answers": ["α", "ε", "υ", "ο", "ι"],
+						"successMsg": "<strong>Right Answer!</strong> These are all vowels that are either short, or can be short or long.",
+						"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ω</span> and <span lang=\"grc\">η</span> can only be long vowels. The short vowels are <span lang=\"grc\">α, ε, ι, ο, υ</span>.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "horizontal" },
+						"title": "Vowel Lengths!",
+						"question": "Which of these vowels MUST be <strong>long</strong>?",
+						"options": [ [
+							{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+							{ "value": "ε", "display": "<span lang=\"grc\">ε</span>" },
+							{ "value": "η", "display": "<span lang=\"grc\">η</span>" },
+							{ "value": "ι", "display": "<span lang=\"grc\">ι</span>" },
+							{ "value": "ο", "display": "<span lang=\"grc\">ο</span>" },
+							{ "value": "ω", "display": "<span lang=\"grc\">ω</span>" },
+							{ "value": "υ", "display": "<span lang=\"grc\">υ</span>" }
+						]],
+						"answers": ["η", "ω"],
+						"successMsg": "<strong>Right Answer!</strong> These are all vowels that must be long.",
+						"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ω</span> and <span lang=\"grc\">η</span> can only be long vowels. The short vowels are <span lang=\"grc\">α, ε, ι, ο, υ</span>.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
 					},
 					{	
 						"type": "slide_info",
@@ -222,6 +332,57 @@
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/accents.html"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Accents",
+						"question": "Which of these words contains an <strong>acute</strong> accent?",
+						"options": [ [
+							{ "value": "ὁδός (way)", "display": "<span lang=\"grc\">ὁδός</span> (way)" },
+							{ "value": "σῶμα (body)", "display": "<span lang=\"grc\">σῶμα</span> (body)" },
+							{ "value": "ὑπὸ (by)", "display": "<span lang=\"grc\">ὑπὸ ...</span> (by)" }
+						]],
+						"answers": ["ὁδός (way)"],
+						"successMsg": "<strong>Right Answer!</strong> The <span lang=\"grc\">ό</span> in <span lang=\"grc\">ὁδός</span> has an acute accent.",
+						"hintMsg": "<strong>Not Quite</strong> Remember, the acute accent points right: ´ .",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Accents",
+						"question": "Which of these words contains a <strong>circumflex</strong> accent?",
+						"options": [ [
+							{ "value": "ὁδός (way)", "display": "<span lang=\"grc\">ὁδός</span> (way)" },
+							{ "value": "σῶμα (body)", "display": "<span lang=\"grc\">σῶμα</span> (body)" },
+							{ "value": "ὑπὸ (by)", "display": "<span lang=\"grc\">ὑπὸ ...</span> (by)" }
+						]],
+						"answers": ["σῶμα (body)"],
+						"successMsg": "<strong>Right Answer!</strong> The <span lang=\"grc\">ῶ</span> in <span lang=\"grc\">σῶμα</span> has a circumflex accent.",
+						"hintMsg": "<strong>Not Quite</strong> Remember, the circumflex is crazy and wavy: ῀",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Accents",
+						"question": "Which of these words contains a <strong>grave</strong> accent?",
+						"options": [ [
+							{ "value": "ὁδός (way)", "display": "<span lang=\"grc\">ὁδός</span> (way)" },
+							{ "value": "σῶμα (body)", "display": "<span lang=\"grc\">σῶμα</span> (body)" },
+							{ "value": "ὑπὸ (by)", "display": "<span lang=\"grc\">ὑπὸ ...</span> (by)" }
+						]],
+						"answers": ["ὑπὸ (by)"],
+						"successMsg": "<strong>Right Answer!</strong> The <span lang=\"grc\">ὸ</span> in <span lang=\"grc\">ὑπὸ</span> has a grave accent.",
+						"hintMsg": "<strong>Not Quite</strong> Remember, the grave accent points to the left: `",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
 					},
 					{	
 						"type": "slide_info",
