@@ -144,6 +144,44 @@
 						"includeHTML": "/static/content/en/slides/1.alphabet/lambda.html"
 					},
 					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">η</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "epsilon - east", "display": "Gamma - like <u>ea</u>st" },
+							{ "value": "mu - mouse", "display": "Mu - like <u>m</u>ouse" },
+							{ "value": "eta - hair", "display": "Eta - like h<u>ai</u>r" },
+							{ "value": "eta - eat", "display": "Eta - like <u>ea</u>t" }
+						]],
+						"answers": ["eta - hair"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that Eta sounds like the \"η\" in hair.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "horizontal" },
+						"title": "Identify the letter!",
+						"question": "Which of these are <strong>zdeta</strong>?",
+						"options": [ [
+							{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+							{ "value": "Ζ", "display": "<span lang=\"grc\">Ζ</span>" },
+							{ "value": "η", "display": "<span lang=\"grc\">η</span>" },
+							{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
+							{ "value": "Θ", "display": "<span lang=\"grc\">Θ</span>" },
+							{ "value": "Η", "display": "<span lang=\"grc\">Η</span>" }
+						]],
+						"answers": ["ζ", "Ζ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified gamma, <span class=\"grc\">Γ γ</span>, pronounced like the \"g\" in <u>g</u>rammar.",
+						"hintMsg": "<strong>Not Quite</strong>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/mu.html"
 					},
