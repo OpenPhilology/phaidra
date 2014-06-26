@@ -368,19 +368,19 @@ class SubmissionResource(Resource):
 		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
 		# check if thte authenticated and the data user has the same username
-		if request.user.username != data['user']:
-			 return self.create_response(request, { 'success': False, 'error_message': 'Authenticated and submitting user is not identical, authenticated: %s , submitting: %s' % (request.user, data['user'])})
+		#if request.user.username != data['user']:
+			 #return self.create_response(request, { 'success': False, 'error_message': 'Authenticated and submitting user is not identical, authenticated: %s , submitting: %s' % (request.user, data['user'])})
 
 		# get the user via neo look-up or create a newone
-		if data['user'] is not None:
-			userTable = gdb.query("""START u=node(*) MATCH (u)-[:submissions]->(s) WHERE HAS (u.username) AND u.username='""" + data['user'] + """' RETURN u""")
+		if request.user.username is not None:
+			userTable = gdb.query("""START u=node(*) MATCH (u)-[:submissions]->(s) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
 		
 			if len(userTable) > 0:	
 				userurl = userTable[0][0]['self']
 				userNode = gdb.nodes.get(userurl)			
 			
 			else:
-				userNode = gdb.nodes.create(username=data['user'])
+				userNode = gdb.nodes.create(username=request.user.username)
 				userNode.labels.add("User")
 			
 			subms = gdb.nodes.create(
