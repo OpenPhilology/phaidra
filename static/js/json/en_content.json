@@ -438,6 +438,27 @@
 						"smyth": "s194"
 					},
 					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "Select all the characteristics of a <strong>Noun</strong> in Ancient Greek.",
+						"options": [[
+								{ "value": "Gender", "display": "Gender" },
+								{ "value": "Tense", "display": "Tense" },
+								{ "value": "Number", "display": "Number" },
+								{ "value": "Person", "display": "Person" },
+								{ "value": "Case", "display": "Case" }
+						]],
+						"answers": ["Gender", "Number", "Case"],
+						"successMsg": "<strong>Right Answer!</strong> When you see a noun, you'll need to figure out these three characteristics.",
+						"hintMsg": "<strong>Not Quite</strong> Nouns in Greek have three characteristics: Gender, Number, and Case.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/3.nouns/characteristics.html",
 						"smyth": "s194"
@@ -508,6 +529,25 @@
 						"smyth": "s195"
 					},
 					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "Which definite article (\"the\") agrees with <strong>plural, feminine</strong> nouns like <span lang=\"grc\" class=\"fem\">ἡμέραι</span> (\"days\")?",
+						"options": [[
+								{ "value": "τά", "display": "<span lang=\"grc\">τά</span>" },
+								{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+								{ "value": "αἱ", "display": "<span lang=\"grc\">αἱ</span>" }
+						]],
+						"answers": ["αἱ"],
+						"successMsg": "<strong>Right Answer!</strong> You noticed that the ending of the article and the noun itself match!",
+						"hintMsg": "<strong>Not Quite</strong> Look at the endings and see how they're similar: <span lang=\"grc\"><em>αἱ</em> ἡμέρ<em>αι</em></span> (\"the days\").",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/3.nouns/case.html"
 					},
@@ -519,6 +559,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/3.nouns/treebank-nouns.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/treebank-exercises.html"
 					},
 					{
 						"type": "slide_info",
