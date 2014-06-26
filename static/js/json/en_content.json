@@ -642,7 +642,7 @@
 						"type": "slide_direct_select",
 						"settings": { "orientation": "horizontal" },
 						"title": "Vowel Lengths!",
-						"question": "Which of these vowels are <strong>NOT long</strong>?",
+						"question": "Which of these vowels can NOT be <strong>long</strong>?",
 						"options": [ [
 							{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
 							{ "value": "ε", "display": "<span lang=\"grc\">ε</span>" },
