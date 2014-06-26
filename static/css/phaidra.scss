@@ -560,7 +560,7 @@ $banner-height: 43px;
 		border: 0;
 		background-color: darken($color-sec-two, 10%);
 		@include transition(background-color, .2s, ease-out);
-		padding: 8px;
+		padding: 0 10px;
 		text-decoration: none;
 		border-radius: 2px;
 		display: inline-block;
