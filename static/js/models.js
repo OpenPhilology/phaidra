@@ -134,6 +134,9 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			taskMapper[attributes.task]();
 		},
 		checkAnswer: function(attempt) {
+
+			var correct = true;
+
 			if (typeof(attempt) == 'string')
 				attempt = [attempt]
 
@@ -141,28 +144,56 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			if (this.get('require_all') === "false") {
 				for (var i = 0; i < attempt.length; i++)
 					if (this.get('answers').indexOf(attempt[i]) == -1)
-						return false;
+						correct = false;
 
-				return true;
+				correct = correct ? true: false;
 			}
 			// Require order implies that require_all is also true
 			else if (this.get('require_order') === "true") {
 				if (this.get('answers').length !== attempt.length)
-					return false;
+					correct = false;
 				else {
 					for (var i = 0; i < attempt.length; i++) {
 						if (attempt[i] != this.get('answers')[i]) 
-							return false;
+							correct = false;
 					}
 
-					return true;
+					correct = correct ? true : false;
 				}
 			}
 			// All Required, but order is not required
 			else if (this.get('require_all') === "true" && this.get('require_order') === "false")
-				return $(attempt).not(this.get('answers')).length == 0 && $(this.get('answers')).not(attempt).length == 0;
+				correct = $(attempt).not(this.get('answers')).length == 0 && $(this.get('answers')).not(attempt).length == 0;
 			else
-				return false;
+				correct = false;
+
+			this.sendSubmission(attempt, correct);
+
+			return correct;
+		},
+		sendSubmission: function(attempt, correct) {
+			var data = {
+				response: JSON.stringify(attempt),
+				task: this.get('task') || 'static_exercise',
+				accuracy: (correct ? 100 : 0),
+				encounteredWords: '',
+				slideType: this.get('type'),
+				smyth: this.get('smyth') || '',
+				timestamp: (new Date()).toISOString()
+			};
+
+			$.ajax({
+				url: '/api/v1/submission/',
+				data: data,
+				dataType: 'json',
+				type: 'POST',
+				success: function(response) {
+					console.log("Successfully submitted data");
+				},
+				error: function(x, y, z) {
+					console.log(x, y, z);
+				}
+			});
 		}
 	});
 

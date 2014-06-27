@@ -268,6 +268,25 @@ label {
   .bg-primary strong {
     color: #178282 !important; }
 
+.bg-error {
+  border: 2px #d15241 solid;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  line-height: 2em;
+  background-color: white; }
+  .bg-error .glyphicon {
+    margin-right: 3px;
+    color: #f9e8e5; }
+  .bg-error h1, .bg-error h2, .bg-error h3, .bg-error h4, .bg-error h5, .bg-error h6 {
+    background-color: #d15241;
+    color: #FFF;
+    margin: -10px -10px 10px;
+    padding: 10px;
+    letter-spacing: 0.1em; }
+  .bg-error strong {
+    color: #b43c2b !important; }
+
 /* The speech bubble that Thuc uses to speak */
 .speech {
   position: relative;
