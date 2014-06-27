@@ -331,6 +331,7 @@ label {
 }
 .bg-primary {
 	@include context-bg($color-pri-two);
+	color: #333;
 
 	strong {
 		color: darken($color-pri-two, 10%) !important;
@@ -707,6 +708,7 @@ $banner-height: 43px;
 */
 .lesson-progress {
 	margin-bottom: 10px;
+	text-align: center;
 
 	.bar {
 		$c: #DDD;
@@ -929,6 +931,7 @@ div.module {
 
 	img {
 		height: 200px;
+		max-width: 200px;
 		max-width: 100%;
 	}
 

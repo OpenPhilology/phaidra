@@ -25,6 +25,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 		selectAnswer: function(e) {
 			e.preventDefault();
 
+			if (this.completed) return;
+
 			var selectedOption = $(e.target);
 			if (e.target.tagName === 'SPAN')
 				selectedOption = selectedOption.parent().parent();
@@ -47,10 +49,13 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 					attempt.push(btns[i].getAttribute('data-value'))
 
 				this.checkAnswer(attempt);
+				this.completed = true;
 			}
 		},
 		deselectAnswer: function(e) {
 			e.preventDefault();
+
+			if (this.completed) return;
 
 			var answer = $(e.target).parent();
 			answer.hide();

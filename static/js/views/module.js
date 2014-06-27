@@ -75,7 +75,7 @@ define(
 				// Create a progress bar section for each slide
 				if (model.get('index') < model.collection.meta('initLength') - 1) {
 					var progress = this.$el.find('.lesson-progress');
-					progWidth = Math.floor(100 / (model.collection.meta('initLength') - 1));
+					progWidth = (100 / model.collection.meta('initLength') - 1); 
 					progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
 				}
 			},
