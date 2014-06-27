@@ -264,7 +264,7 @@
 						]],
 						"answers": ["kappa - coat"],
 						"successMsg": "<strong>Right Answer!</strong>",
-						"hintMsg": "<strong>Not Quite.</strong> Remember that gamma sounds like the <strong>\"κ\" in coat.",
+						"hintMsg": "<strong>Not Quite.</strong> Remember that kappa sounds like the <strong>\"κ\" in coat.",
 						"failureMsg": "<strong>The correct answer was kappa like coat.</strong>",
 						"require_order": "false",
 						"require_all": "true"
@@ -280,7 +280,7 @@
 							{ "value": "η", "display": "<span lang=\"grc\">η</span>" }
 						]],
 						"answers": ["ι"],
-						"successMsg": "<strong>Right Answer!</strong> You've identified theta, <span class=\"grc\">ι</span>, pronounced like the \"i\" in <u>ea</u>st.",
+						"successMsg": "<strong>Right Answer!</strong> You've identified iota, <span class=\"grc\">ι</span>, pronounced like the \"i\" in <u>ea</u>st.",
 						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"i\" like <u>ea</u>st</strong>",
 						"failureMsg": "<strong>The correct answer was \"i\" like <u>ea</u>st</strong>",
 						"require_order": "false",
@@ -390,8 +390,8 @@
 						]],
 						"answers": ["ς", "σ"],
 						"successMsg": "<strong>Right Answer!</strong> You've identified sigma, <span class=\"grc\">σ,ς</span>, pronounced like the \"s\" in <u>s</u>ignal.",
-						"hintMsg": "<strong>Not Quite.</strong> The correct answer is <strong>\"s\" like <u>s</u>ignal.</strong>",
-						"failureMsg": "<strong>The correct answer was \"s\" like <u>s</u>ignal.</strong>",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer is <strong>\"ς\", \"σ\".</strong>",
+						"failureMsg": "<strong>The correct answer is \"ς\", \"σ\".</strong>",
 						"require_order": "false",
 						"require_all": "true"
 					},
@@ -459,7 +459,7 @@
 						"options": [ [
 							{ "value": "kappa - coat", "display": "Kappa - like <u>c</u>oat" },
 							{ "value": "khi - kiosk", "display": "Khi - like <u>k</u>iosk" },
-							{ "value": "Fi - flower", "display": "Fi - like <u>f</u>lower" },
+							{ "value": "Phi - flower", "display": "Phi- like <u>f</u>lower" },
 							{ "value": "Tau - tower", "display": "Tau - like <u>t</u>ower" }
 						]],
 						"answers": ["khi - kiosk"],
@@ -480,7 +480,7 @@
 							{ "value": "χ", "display": "<span lang=\"grc\">χ</span>" }
 						]],
 						"answers": ["φ"],
-						"successMsg": "<strong>Right Answer!</strong> You've identified fi, <span class=\"grc\">φ</span>, pronounced like the \"f\" in <u>f</u>lower.",
+						"successMsg": "<strong>Right Answer!</strong> You've identified phi, <span class=\"grc\">φ</span>, pronounced like the \"f\" in <u>f</u>lower.",
 						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"f\" like <u>f</u>lower.</strong>",
 						"failureMsg": "<strong>The correct answer was \"f\" like <u>f</u>lower.</strong>",
 						"require_order": "false",
