@@ -603,7 +603,8 @@ label {
 *	Progress bar displayed above every lesson-in-progress
 */
 .lesson-progress {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-align: center; }
   .lesson-progress .bar {
     display: inline-block;
     height: 10px;
@@ -795,6 +796,7 @@ div.module {
   box-sizing: border-box; }
   .letter img {
     height: 200px;
+    max-width: 200px;
     max-width: 100%; }
   .letter.bg-light {
     background-color: #F4CDA2; }

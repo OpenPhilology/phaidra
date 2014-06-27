@@ -141,6 +141,14 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/iota.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/kappa.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/lambda.html"
 					},
 					{
@@ -321,6 +329,22 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/pi.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/rho.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/sigma.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/tau.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/upsilon.html"
 					},
 					{
@@ -450,6 +474,18 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/phi.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/chi.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/psi.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/omega.html"
 					},
 					{
 						"type": "slide_direct_select",
