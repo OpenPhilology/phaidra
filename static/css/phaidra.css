@@ -255,7 +255,8 @@ label {
   padding: 10px;
   margin-bottom: 10px;
   line-height: 2em;
-  background-color: #d4f7f7; }
+  background-color: #d4f7f7;
+  color: #333; }
   .bg-primary .glyphicon {
     margin-right: 3px;
     color: #a9f0f0; }

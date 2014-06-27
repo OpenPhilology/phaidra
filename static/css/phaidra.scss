@@ -331,6 +331,7 @@ label {
 }
 .bg-primary {
 	@include context-bg($color-pri-two);
+	color: #333;
 
 	strong {
 		color: darken($color-pri-two, 10%) !important;
