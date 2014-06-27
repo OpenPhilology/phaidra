@@ -173,7 +173,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		},
 		sendSubmission: function(attempt, correct) {
 			var data = {
-				response: attempt.toString(),
+				response: JSON.stringify(attempt),
 				task: this.get('task') || 'static_exercise',
 				accuracy: (correct ? 100 : 0),
 				encounteredWords: '',

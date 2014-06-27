@@ -336,6 +336,13 @@ label {
 		color: darken($color-pri-two, 10%) !important;
 	}
 }
+.bg-error {
+	@include context-bg($color-pri-one);
+
+	strong {
+		color: darken($color-pri-one, 10%) !important;
+	}
+}
 
 /* The speech bubble that Thuc uses to speak */
 .speech {

@@ -73,7 +73,10 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templ
 				// Give the user a hint so they can try again
 				var info = this.$el.find('.slide-feedback');
 				info.html(this.model.get('hintMsg'));
+				info.removeClass('bg-info');
+				info.addClass('bg-error');
 				info.slideDown();
+
 			}
 
 			// Prevent user from continuing to click

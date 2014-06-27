@@ -6,7 +6,6 @@ decorator==3.4.0
 distribute==0.6.49
 django-filter==0.7
 -e git+https://github.com/mlent/django-tastypie.git@9ce920d2acca06c52bcd7bc759f78190ba317ba4#egg=django_tastypie-dev
-djangorestframework==2.3.8
 httplib2==0.8
 lucene-querybuilder==0.2
 meld3==0.6.10

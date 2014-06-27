@@ -280,7 +280,7 @@
 							{ "value": "η", "display": "<span lang=\"grc\">η</span>" }
 						]],
 						"answers": ["ι"],
-						"successMsg": "<strong>Right Answer!</strong> You've identified theta, <span class=\"grc\">ι</span>, pronounced like the \"i\" in <u>ea</u>st.",
+						"successMsg": "<strong>Right Answer!</strong> You've identified iota, <span class=\"grc\">ι</span>, pronounced like the \"i\" in <u>ea</u>st.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
@@ -331,8 +331,8 @@
 						"options": [ [
 							{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
 							{ "value": "gamma - good", "display": "Gamma - like <u>g</u>ood" },
-							{ "value": "üpsilon - food", "display": "Üpsilon - like f<u>oo</u>d" },
-							{ "value": "nu - nose", "display": "Nose - like <u>n</u>ose" }
+							{ "value": "üpsilon - food", "display": "Upsilon - like f<u>oo</u>d" },
+							{ "value": "nu - nose", "display": "Nu - like <u>n</u>ose" }
 						]],
 						"answers": ["nu - nose"],
 						"successMsg": "<strong>Right Answer!</strong> Remember that Nu sounds like the \"n\" in book.",
@@ -403,8 +403,8 @@
 						"options": [ [
 							{ "value": "rho - rose", "display": "Rho - like <u>r</u>ose" },
 							{ "value": "pi - pen", "display": "Pi - like <u>p</u>en" },
-							{ "value": "üpsilon - food", "display": "Üpsilon - like f<u>oo</u>d" },
-							{ "value": "nu - nose", "display": "Nose - like <u>n</u>ose" }
+							{ "value": "üpsilon - food", "display": "Upsilon - like f<u>oo</u>d" },
+							{ "value": "nu - nose", "display": "Nu - like <u>n</u>ose" }
 						]],
 						"answers": ["rho - rose"],
 						"successMsg": "<strong>Right Answer!</strong> Remember that Rho sounds like the \"r\" in rose.",
@@ -473,14 +473,14 @@
 						"type": "slide_direct_select",
 						"settings": { "orientation": "vertical" },
 						"title": "Identify the letter!",
-						"question": "Which of these is a <strong>fi</strong>?",
+						"question": "Which of these is a <strong>Phi</strong>?",
 						"options": [ [
 							{ "value": "φ", "display": "<span lang=\"grc\">φ</span>" },
 							{ "value": "ψ", "display": "<span lang=\"grc\">ψ</span>" },
 							{ "value": "χ", "display": "<span lang=\"grc\">χ</span>" }
 						]],
 						"answers": ["φ"],
-						"successMsg": "<strong>Right Answer!</strong> You've identified fi, <span class=\"grc\">φ</span>, pronounced like the \"f\" in <u>f</u>lower.",
+						"successMsg": "<strong>Right Answer!</strong> You've identified Phi, <span class=\"grc\">φ</span>, pronounced like the \"f\" in <u>f</u>lower.",
 						"hintMsg": "<strong>Not Quite</strong>",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
@@ -605,13 +605,13 @@
 						"title": "Pronounciation Challenge!",
 						"question": "How would you pronounce <span lang=\"grc\">ὀλιγαρχία</span>, <em>oligarchy</em>?",
 						"options": [ [
-							{ "value": "Roh-li-gar-chia", "display": "Roh-li-gar-chia" },
-							{ "value": "Hoh-li-gar-chia", "display": "Hoh-li-gar-chia" },
-							{ "value": "Oh-li-gar-chia", "display": "Oh-li-gar-chia" }
+							{ "value": "Roh-li-gar-khia", "display": "Roh-li-gar-khia" },
+							{ "value": "Hoh-li-gar-khia", "display": "Hoh-li-gar-khia" },
+							{ "value": "Oh-li-gar-khia", "display": "Oh-li-gar-khia" }
 						]],
-						"answers": ["Oh-li-gar-chia"],
+						"answers": ["Oh-li-gar-khia"],
 						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὀ</span> sounds like 'oh', because of its smooth breathing.",
-						"hintMsg": "<strong>Not Quite</strong> Remember that smooth breathings don't affect pronunciation. So <span lang=\"grc\">ὀλιγαρχία</span> simply sounds like 'Oh-li-gar-chia'.",
+						"hintMsg": "<strong>Not Quite</strong> Remember that smooth breathings don't affect pronunciation. So <span lang=\"grc\">ὀλιγαρχία</span> simply sounds like 'Oh-li-gar-khia'.",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
 						"require_all": "true"
