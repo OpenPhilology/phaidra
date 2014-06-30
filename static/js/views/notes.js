@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'], function($, _, Backbone, Utils, NotesTemplate) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html', 'daphne'], function($, _, Backbone, Utils, NotesTemplate, Daphne) { 
 
 	var View = Backbone.View.extend({
 		tagName: 'div', 
@@ -7,7 +7,8 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 		events: { 
 			'click a > .glyphicon-chevron-up': 'toggleNotes',
 			'click #parse-vals': 'toggleParse',
-			'click .btn-show-trans': 'showTranslation'
+			'click .btn-show-trans': 'showTranslation',
+			'click .parse-tree-view': 'showParseTree'
 		},
 		initialize: function(options) {
 			this.options = options;	
@@ -78,6 +79,27 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			e.preventDefault();
 			this.lang = $(e.target).attr('data-lang');
 			this.renderDetails();
+		},
+		showParseTree: function(e) {
+			e.preventDefault();
+
+			var selectedWord = this.model.words.findWhere({ selected: true });
+			var sentence = this.model.words.where({ sentenceCTS: selectedWord.get('sentenceCTS') });
+			var words = sentence.map(function(el, i) {
+				el.attributes.id = el.attributes.tbwid;
+				return el.attributes;
+			});
+
+			$('.modal-body').removeClass('daphne').html("");
+
+			new Daphne('.modal-body', {
+				data: words,
+				mode: 'edit',
+				height: 600,
+				initialScale: 0.9
+			});
+
+			$('.modal').modal('show');
 		}
 	});
 
