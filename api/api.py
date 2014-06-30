@@ -714,26 +714,47 @@ class WordResource(Resource):
 			q = q + """RETURN w, s ORDER BY ID(w)"""
 			
 			table = gdb.query(q)
-		
-		# default querying	
-		else:	
-			table = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE HAS (w.CTS) RETURN w, s ORDER BY ID(w)""")
 			
-		# create the objects which was queried for and set all necessary attributes
-		for t in table:
-			word = t[0]
-			sentence = t[1]		
-			url = word['self'].split('/')
-			urlSent = sentence['self'].split('/')		
-				
-			new_obj = DataObject(url[len(url)-1])
-			new_obj.__dict__['_data'] = word['data']		
-			new_obj.__dict__['_data']['id'] = url[len(url)-1]
-			new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
+			# create the objects which was queried for and set all necessary attributes
+			for t in table:
+				word = t[0]
+				sentence = t[1]		
+				url = word['self'].split('/')
+				urlSent = sentence['self'].split('/')		
 					
-			words.append(new_obj)
+				new_obj = DataObject(url[len(url)-1])
+				new_obj.__dict__['_data'] = word['data']		
+				new_obj.__dict__['_data']['id'] = url[len(url)-1]
+				new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
+						
+				words.append(new_obj)
 				
-		return words
+			return words	
+		
+		# default querying on big dataset
+		else:	
+			sentences = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) RETURN s ORDER BY ID(s)""")
+			
+			# create the objects which was queried for and set all necessary attributes
+			for s in sentences:
+				sentence = s[0]
+				urlSent = sentence['self'].split('/')
+				
+				wordTable = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE s.CTS = '""" + sentence['data']['CTS'] + """' RETURN w ORDER BY ID(w)""")
+				
+				for w in wordTable:
+					word = w[0]
+					url = word['self'].split('/')
+									
+					new_obj = DataObject(url[len(url)-1])
+					new_obj.__dict__['_data'] = word['data']		
+					new_obj.__dict__['_data']['id'] = url[len(url)-1]
+					new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
+				
+					words.append(new_obj)
+			
+			return words
+		
 	
 	def obj_get_list(self, bundle, **kwargs):		
 		return self.get_object_list(bundle.request)
