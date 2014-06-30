@@ -21,23 +21,26 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 		},
 		renderDetails: function() {
 			var selected = this.model.words.findWhere({ selected: true });
-
-			// Give the user the definite article with the definition
-			if (selected.get('pos') == 'noun') {
-				selected.set('article', Utils.getDefiniteArticle(selected.get('gender')));
-			}
-
 			var that = this;
-			
-			this.$el.html(this.template({
-				word: selected.attributes,
-				lang: that.lang || 'eng', 	// This will obviously be set by user profile for their 'default', not 'eng' 
-				grammar: selected.getGrammar()
-			}));
 
-			// Bind events
-			this.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
-			this.$el.addClass('expanded');
+			selected.fetch({
+				success: function() { 
+					// Give the user the definite article with the definition
+					if (selected.get('pos') == 'noun') {
+						selected.set('article', Utils.getDefiniteArticle(selected.get('gender')));
+					}
+
+					that.$el.html(that.template({
+						word: selected.attributes,
+						lang: that.lang || 'eng', 	// This will obviously be set by user profile for their 'default', not 'eng' 
+						grammar: selected.getGrammar()
+					}));
+
+					// Bind events
+					that.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
+					that.$el.addClass('expanded');
+				}
+			});
 		},
 		toggleParse: function(e) {
 			e.preventDefault();

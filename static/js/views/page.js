@@ -99,6 +99,9 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		},
 		// If an element becomes selected or de-selected, update highlight accordingly
 		toggleHighlight: function(model) {
+
+			model.fetch();
+
 			if (model.get('selected'))
 				this.$el.find('.page-content span[data-cts="' + model.get('wordCTS') + '"]')
 					.addClass('selected');
