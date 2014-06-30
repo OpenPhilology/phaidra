@@ -360,7 +360,7 @@
 						]],
 						"answers": ["nu - nose"],
 						"successMsg": "<strong>Right Answer!</strong>",
-						"hintMsg": "<strong>Not Quite.</strong> Remember that Nu sounds like the <strong>\"n\" in book.</strong>",
+						"hintMsg": "<strong>Not Quite.</strong> Remember that Nu sounds like the <strong>\"n\" in nose.</strong>",
 						"failureMsg": "<strong>The correct answer was \"n\" like book.</strong>",
 						"require_order": "false",
 						"require_all": "true"
