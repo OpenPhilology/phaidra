@@ -245,9 +245,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		},
 		// TODO: Merge these functions, make them aware of text direction
 		getNextCTS: function(sentenceCTS) {
-			console.log("getting CTS after " + sentenceCTS);
-
-			console.log(this.words.findWhere({ sentenceCTS: sentenceCTS }));
 
 			var current_resource_uri = this.words.findWhere({
 				sentenceCTS: sentenceCTS
@@ -288,7 +285,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			else {
 				$.ajax({
 					url: starter.get('sentence_resource_uri'),
-					data: { 'full': 'True' },
 					dataType: 'json',
 					doc: that,
 					options: options,
@@ -296,8 +292,10 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 						this.doc.set('translations', response.translations);
 						
 						for (var i = 0; i < response.words.length; i++) {
-							this.doc.words.findWhere({ wordCTS: response.words[i]["CTS"] })
-								.set(response.words[i]);
+							var target = this.doc.words.findWhere(
+								{ wordCTS: response.words[i]["CTS"] }
+							);
+							target.set(response.words[i])
 						}
 
 						this.doc.trigger('populated', this.doc, { CTS: response["CTS"] });
@@ -318,8 +316,11 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		initialize: function(attributes) {
 			this.set('wordCTS', attributes.sentenceCTS + ':' + (attributes.index + 1));
 		},
+		urlRoot: function() {
+			return this.get('resource_uri');
+		},
 		parse: function(response) {
-			
+			this.set(response);
 		},
 		// TODO: Flesh out this implementation to cover more query filters
 		getGrammar: function() {
