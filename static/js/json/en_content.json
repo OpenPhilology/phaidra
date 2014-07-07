@@ -130,6 +130,77 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/zeta.html"
+					},	
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">ε</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "epsilon - get", "display": "Epsilon - like g<u>e</u>t" },
+							{ "value": "beta - book", "display": "Beta - like <u>b</u>ook" },
+							{ "value": "zdeta - wisdom", "display": "Zdeta - like wi<u>sd</u>om" },
+							{ "value": "delta - door", "display": "Delta - like <u>d</u>oor" }
+						]],
+						"answers": ["epsilon - get"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that Epsilon sounds like the \"ε\" in get.",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>epsilon like hair.</strong>",
+						"failureMsg": "<strong>The correct answer was epsilon like get.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "horizontal" },
+						"title": "Identify the letter!",
+						"question": "Which of these are <strong>delta</strong>?",
+						"options": [ [
+							{ "value": "Α", "display": "<span lang=\"grc\">Α</span>" },
+							{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+							{ "value": "Δ", "display": "<span lang=\"grc\">Δ</span>" },
+							{ "value": "δ", "display": "<span lang=\"grc\">δ</span>" },
+							{ "value": "Ζ", "display": "<span lang=\"grc\">Ζ</span>" },
+							{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" }	
+						]],
+						"answers": ["δ", "Δ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified delta, <span class=\"grc\">Δ δ</span>, pronounced like the \"d\" in <u>d</u>oor.",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong><span class=\"grc\">Δ δ</span></strong>",
+						"failureMsg": "<strong>The correct answer was <span class=\"grc\">Ζ δ</span>.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "What is the capital equivalent of <strong lang=\"grc\">ζ</strong>?",
+						"options": [ [
+							{ "value": "Δ", "display": "<span lang=\"grc\">Δ</span>" },
+							{ "value": "Ζ", "display": "<span lang=\"grc\">Ζ</span>" },
+							{ "value": "Ε", "display": "<span lang=\"grc\">Ε</span>" }	
+						]],
+						"answers": ["Ζ"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite.</strong>",
+						"failureMsg": "<strong>The correct answer was \"Ζ\" in long.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_multi_comp",
+						"title": "Identify the letter!",
+						"question": "Put the following letters is the correct order: <strong lang=\"grc\">α</strong>, <strong lang=\"grc\">β</strong>, <strong lang=\"grc\">γ</strong>, ...",
+						"options": [ [
+							{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+							{ "value": "δ", "display": "<span lang=\"grc\">δ</span>" },
+							{ "value": "ε", "display": "<span lang=\"grc\">ε</span>" }
+						]],
+						"answers": ["δ", "ε", "ζ"],
+						"successMsg": "You're right!",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <span lang=\"grc\">δ</span>, <span lang=\"grc\">ε</span>, <span lang=\"grc\">ζ</span>",
+						"failureMsg": "<strong>The correct answer was <span lang=\"grc\">δ</span>, <span lang=\"grc\">ε</span>, <span lang=\"grc\">ζ</span>",
+						"require_order": "true",
+						"require_all": "true"
 					},
 					{
 						"type": "slide_info",
@@ -138,6 +209,56 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/theta.html"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">η</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "epsilon - get", "display": "Epsilon - like g<u>e</u>t" },
+							{ "value": "alpha - apple", "display": "Alpha - like <u>a</u>pple" },
+							{ "value": "eta - hair", "display": "Eta - like h<u>ai</u>r" },
+							{ "value": "eta - eat", "display": "Eta - like <u>ea</u>t" }
+						]],
+						"answers": ["eta - hair"],
+						"successMsg": "<strong>Right Answer!</strong> Remember that Eta sounds like the \"η\" in hair.",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>eta like hair.</strong>",
+						"failureMsg": "<strong>The correct answer was eta like hair.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+						{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "Which of these is a <strong>theta</strong>?",
+						"options": [ [
+							{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+							{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
+							{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
+						]],
+						"answers": ["θ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified theta, <span class=\"grc\">θ</span>, pronounced like the \"th\" in <u>th</u>under.",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"th\" like <u>th</u>under</strong>",
+						"failureMsg": "<strong>The correct answer was \"th\" like <u>th</u>under.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_multi_comp",
+						"title": "Identify the letter!",
+						"question": "Put the following letters in the correct order: <strong lang=\"grc\">α</strong>, <strong lang=\"grc\">β</strong>, <strong lang=\"grc\">γ</strong>, <strong lang=\"grc\">δ</strong>, <strong lang=\"grc\">ε</strong>, <strong lang=\"grc\">ζ</strong>, ...",
+						"options": [ [
+							{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
+							{ "value": "η", "display": "<span lang=\"grc\">η</span>" }
+						]],
+						"answers": ["η", "θ"],
+						"successMsg": "You're right!",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <span lang=\"grc\">η</span>, <span lang=\"grc\">θ</span>",
+						"failureMsg": "<strong>The correct answer was <span lang=\"grc\">η</span>, <span lang=\"grc\">θ</span>",
+						"require_order": "true",
+						"require_all": "true"
 					},
 					{
 						"type": "slide_info",
@@ -158,7 +279,7 @@
 						"question": "How does <strong lang=\"grc\">η</strong> sound and what is it called?",
 						"options": [ [
 							{ "value": "epsilon - get", "display": "Epsilon - like g<u>e</u>t" },
-							{ "value": "mu - mouse", "display": "Mu - like <u>m</u>ouse" },
+							{ "value": "delta - door", "display": "Door - like <u>d</u>oor" },
 							{ "value": "eta - hair", "display": "Eta - like h<u>ai</u>r" },
 							{ "value": "eta - eat", "display": "Eta - like <u>ea</u>t" }
 						]],
@@ -245,17 +366,16 @@
 					{
 						"type": "slide_multi_comp",
 						"title": "Identify the letter!",
-						"question": "What is the order of these letters in the alphabet?",
+						"question": "Put the following letters in the correct order: <strong lang=\"grc\">α</strong>, <strong lang=\"grc\">β</strong>, <strong lang=\"grc\">γ</strong>, <strong lang=\"grc\">δ</strong>, <strong lang=\"grc\">ε</strong>, <strong lang=\"grc\">ζ</strong>, <strong lang=\"grc\">η</strong>, <strong lang=\"grc\">θ</strong>, ...",
 						"options": [ [
-							{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
-							{ "value": "δ", "display": "<span lang=\"grc\">δ</span>" },
-							{ "value": "ε", "display": "<span lang=\"grc\">ε</span>" },
-							{ "value": "η", "display": "<span lang=\"grc\">η</span>" }
+							{ "value": "ι", "display": "<span lang=\"grc\">ι</span>" },
+							{ "value": "λ", "display": "<span lang=\"grc\">λ</span>" },
+							{ "value": "κ", "display": "<span lang=\"grc\">κ</span>" }
 						]],
-						"answers": ["δ", "ε", "ζ", "η"],
+						"answers": ["ι", "κ", "λ"],
 						"successMsg": "You're right!",
-						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <span lang=\"grc\">δ</span>, <span lang=\"grc\">ε</span>, <span lang=\"grc\">ζ</span>, <span lang=\"grc\">η</span></strong>",
-						"failureMsg": "<strong>The correct answer was <span lang=\"grc\">δ</span>, <span lang=\"grc\">ε</span>, <span lang=\"grc\">ζ</span>, <span lang=\"grc\">η</span></strong>",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <span lang=\"grc\">ι</span>, <span lang=\"grc\">κ</span>, <span lang=\"grc\">λ</span>",
+						"failureMsg": "<strong>The correct answer was <span lang=\"grc\">ι</span>, <span lang=\"grc\">κ</span>, <span lang=\"grc\">λ</span>",
 						"require_order": "true",
 						"require_all": "true"
 					},
@@ -295,23 +415,6 @@
 						"require_all": "true"
 					},
 					{
-						"type": "slide_multi_comp",
-						"title": "Identify the letter!",
-						"question": "What is the order of these letters in the alphabet?",
-						"options": [ [
-							{ "value": "λ", "display": "<span lang=\"grc\">λ</span>" },
-							{ "value": "ι", "display": "<span lang=\"grc\">ι</span>" },
-							{ "value": "κ", "display": "<span lang=\"grc\">κ</span>" },
-							{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" }
-						]],
-						"answers": ["θ", "ι", "κ", "λ"],
-						"successMsg": "Correct!",
-						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong><span lang=\"grc\">θ</span>, <span lang=\"grc\">ι</span>, <span lang=\"grc\">κ</span>, <span lang=\"grc\">λ</span>.</strong>",
-						"failureMsg": "<strong>The correct answer was span lang=\"grc\">θ</span>, <span lang=\"grc\">ι</span>, <span lang=\"grc\">κ</span>, <span lang=\"grc\">λ</span>.</strong>",
-						"require_order": "true",
-						"require_all": "true"
-					},
-					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/mu.html"
 					},
@@ -322,30 +425,6 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/xi.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/1.alphabet/omicron.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/1.alphabet/pi.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/1.alphabet/rho.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/1.alphabet/sigma.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/1.alphabet/tau.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/1.alphabet/upsilon.html"
 					},
 					{
 						"type": "slide_direct_select",
@@ -367,6 +446,68 @@
 					},
 					{
 						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "Which of these is a <strong>xi</strong>?",
+						"options": [ [
+							{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
+							{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+							{ "value": "ξ", "display": "<span lang=\"grc\">ξ</span>" }
+						]],
+						"answers": ["ξ"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified xi, <span class=\"grc\">ξ</span>, pronounced like the \"x\" in <u>x</u>ylophon.",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"ξ\", pronounced like the \"x\" in <u>x</u>ylophon.",
+						"failureMsg": "<strong>The correct answer was \"ξ\" like <u>x</u>ylophon</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_multi_comp",
+						"title": "Identify the letter!",
+						"question": "Put the following letters in the correct order: <strong lang=\"grc\">α</strong>, <strong lang=\"grc\">β</strong>, <strong lang=\"grc\">γ</strong>, <strong lang=\"grc\">δ</strong>, <strong lang=\"grc\">ε</strong>, <strong lang=\"grc\">ζ</strong>, <strong lang=\"grc\">η</strong>, <strong lang=\"grc\">θ</strong>, <strong lang=\"grc\">ι</strong>, <strong lang=\"grc\">κ</strong>, <strong lang=\"grc\">λ</strong>, ...",
+						"options": [ [
+							{ "value": "ξ", "display": "<span lang=\"grc\">ξ</span>" },
+							{ "value": "ν", "display": "<span lang=\"grc\">ν</span>" },
+							{ "value": "μ", "display": "<span lang=\"grc\">μ</span>" }
+						]],
+						"answers": ["μ", "ν", "ξ"],
+						"successMsg": "You're right!",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <span lang=\"grc\">μ</span>, <span lang=\"grc\">ν</span>, <span lang=\"grc\">ξ</span>",
+						"failureMsg": "<strong>The correct answer was <span lang=\"grc\">μ</span>, <span lang=\"grc\">ν</span>, <span lang=\"grc\">ξ</span>",
+						"require_order": "true",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "What is the capital equivalent of <strong lang=\"grc\">μ</strong>?",
+						"options": [ [
+							{ "value": "Μ", "display": "<span lang=\"grc\">Μ</span>" },
+							{ "value": "Η", "display": "<span lang=\"grc\">Η</span>" },
+							{ "value": "Ν", "display": "<span lang=\"grc\">Ν</span>" }	
+						]],
+						"answers": ["Μ"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was \"Μ\" in long.</strong>",
+						"failureMsg": "<strong>The correct answer was \"Μ\" in long.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/omicron.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/pi.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/rho.html"
+					},
+					{
+						"type": "slide_direct_select",
 						"settings": { "orientation": "horizontal" },
 						"title": "Identify the letter!",
 						"question": "Which of these are <strong>rho</strong>?",
@@ -384,6 +525,70 @@
 						"failureMsg": "<strong>The correct answer was <span class=\"grc\">Ρ ρ</span></strong>",
 						"require_order": "false",
 						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "Which of these is a <strong>pi</strong>?",
+						"options": [ [
+							{ "value": "π", "display": "<span lang=\"grc\">π</span>" },
+							{ "value": "ρ", "display": "<span lang=\"grc\">ρ</span>" },
+							{ "value": "τ", "display": "<span lang=\"grc\">τ</span>" }
+						]],
+						"answers": ["π"],
+						"successMsg": "<strong>Right Answer!</strong> You've identified pi, <span class=\"grc\">τ</span>, pronounced like the \"p\" in <u>p</u>en.",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"π\"</strong>",
+						"failureMsg": "<strong>The correct answer was \"p\" like <u>p</u>en.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "How does <strong lang=\"grc\">ρ</strong> sound and what is it called?",
+						"options": [ [
+							{ "value": "rho - rose", "display": "Rho - like <u>r</u>ose" },
+							{ "value": "pi - pen", "display": "Pi - like <u>p</u>en" },
+							{ "value": "üpsilon - food", "display": "Upsilon - like f<u>oo</u>d" },
+							{ "value": "nu - nose", "display": "Nu - like <u>n</u>ose" }
+						]],
+						"answers": ["rho - rose"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"r\" like rose.</strong>",
+						"failureMsg": "<strong>The correct answer was \"r\" like rose.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Identify the letter!",
+						"question": "What is the capital equivalent of <strong lang=\"grc\">ο</strong>?",
+						"options": [ [
+							{ "value": "Δ", "display": "<span lang=\"grc\">Δ</span>" },
+							{ "value": "Ω", "display": "<span lang=\"grc\">Ω</span>" },
+							{ "value": "Ο", "display": "<span lang=\"grc\">Ο</span>" }	
+						]],
+						"answers": ["Ο"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite.</strong> The correct answer was \"Ο\" in ostrich.</strong>",
+						"failureMsg": "<strong>The correct answer was \"Ο\" in ostrich.</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/sigma.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/tau.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/upsilon.html"
 					},
 					{
 						"type": "slide_multi_comp",
@@ -417,41 +622,6 @@
 						"hintMsg": "<strong>Not Quite.</strong> The correct answer is <strong>\"ς\", \"σ\".</strong>",
 						"failureMsg": "<strong>The correct answer is \"ς\", \"σ\".</strong>",
 						"require_order": "false",
-						"require_all": "true"
-					},
-					{
-						"type": "slide_direct_select",
-						"settings": { "orientation": "vertical" },
-						"title": "Identify the letter!",
-						"question": "How does <strong lang=\"grc\">ρ</strong> sound and what is it called?",
-						"options": [ [
-							{ "value": "rho - rose", "display": "Rho - like <u>r</u>ose" },
-							{ "value": "pi - pen", "display": "Pi - like <u>p</u>en" },
-							{ "value": "üpsilon - food", "display": "Upsilon - like f<u>oo</u>d" },
-							{ "value": "nu - nose", "display": "Nu - like <u>n</u>ose" }
-						]],
-						"answers": ["rho - rose"],
-						"successMsg": "<strong>Right Answer!</strong>",
-						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"r\" like rose.</strong>",
-						"failureMsg": "<strong>The correct answer was \"r\" like rose.</strong>",
-						"require_order": "false",
-						"require_all": "true"
-					},
-					{
-						"type": "slide_multi_comp",
-						"title": "Identify the letter!",
-						"question": "What is the order of these letters in the alphabet?",
-						"options": [ [
-							{ "value": "ρ", "display": "<span lang=\"grc\">ρ</span>" },
-							{ "value": "υ", "display": "<span lang=\"grc\">υ</span>" },
-							{ "value": "ς", "display": "<span lang=\"grc\">ς</span>" },
-							{ "value": "τ", "display": "<span lang=\"grc\">τ</span>" }
-						]],
-						"answers": ["ρ", "ς", "τ", "υ"],
-						"successMsg": "You're awesome!",
-						"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong><span lang=\"grc\">ρ</span>, <span lang=\"grc\">ς</span>, <span lang=\"grc\">τ</span>, <span lang=\"grc\">υ</span>.</strong>",
-						"failureMsg": "<strong>The correct answer was <span lang=\"grc\">ρ</span>, <span lang=\"grc\">ς</span>, <span lang=\"grc\">τ</span>, <span lang=\"grc\">υ</span>.</strong>",
-						"require_order": "true",
 						"require_all": "true"
 					},
 					{
