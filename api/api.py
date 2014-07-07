@@ -540,8 +540,8 @@ class LemmaResource(Resource):
 
 class WordResource(Resource):
 	
-	CTS = fields.CharField(attribute='CTS')
-	value = fields.CharField(attribute='value')
+	CTS = fields.CharField(attribute='CTS', null = True, blank = True)
+	value = fields.CharField(attribute='value', null = True, blank = True)
 	form = fields.CharField(attribute='form', null = True, blank = True)
 	lemma = fields.CharField(attribute='lemma', null = True, blank = True)
 	ref = fields.CharField(attribute='ref', null = True, blank = True)
@@ -733,26 +733,38 @@ class WordResource(Resource):
 		
 		# default querying on big dataset
 		else:	
-			sentences = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) RETURN s ORDER BY ID(s)""")
+			#sentences = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) RETURN s ORDER BY ID(s)""")
+			#for s in sentences:
+				#sentence = s[0]
+				#urlSent = sentence['self'].split('/')
+				#wordTable = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE s.CTS = '""" + sentence['data']['CTS'] + """' RETURN w ORDER BY ID(w)""")		
+			##### TODO: document wise, return word and sent and get id url SONST heap raise SONST wieder satzweise
+			documentTable = gdb.query("""MATCH (n:`Document`) RETURN n ORDER BY ID(n)""")	
 			
-			# create the objects which was queried for and set all necessary attributes
-			for s in sentences:
-				sentence = s[0]
-				urlSent = sentence['self'].split('/')
-				
-				wordTable = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE s.CTS = '""" + sentence['data']['CTS'] + """' RETURN w ORDER BY ID(w)""")
-				
+			for d in documentTable:
+				document = d[0]
+				wordTable = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS = '""" + document['data']['CTS'] + """' RETURN w,s ORDER BY ID(w)""")
+							
+				# get sent id
 				for w in wordTable:
 					word = w[0]
+					sentence = w[1]
 					url = word['self'].split('/')
-									
+					urlSent = sentence['self'].split('/')	
+						
+				#wordNode = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + url[len(url)-1] + '/')
+				#sentRel = wordNode.relationships.incoming(types=["words"])
+							
 					new_obj = DataObject(url[len(url)-1])
-					new_obj.__dict__['_data'] = word['data']		
+					new_obj.__dict__['_data'] = word['data']
+					#if len(sentRel) > 0:
+						#new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + str(sentRel[0].start.id) + '/'
+									
 					new_obj.__dict__['_data']['id'] = url[len(url)-1]
 					new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
-				
+									
 					words.append(new_obj)
-			
+							
 			return words
 		
 	
