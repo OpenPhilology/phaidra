@@ -24,6 +24,7 @@ from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
 from tastypie.resources import Resource, ModelResource
+from tastypie.serializers import Serializer
 
 from datetime import datetime
 
@@ -32,6 +33,7 @@ import dateutil.parser
 import json
 import operator
 import time
+import urlparse
 
 
 class UserObjectsOnlyAuthorization(Authorization):
@@ -283,9 +285,11 @@ class SubmissionResource(Resource):
 	class Meta:
 		allowed_methods = ['post', 'get', 'patch']
 		authentication = SessionAuthentication() 
+		#authentication = BasicAuthentication()
 		authorization = UserObjectsOnlyAuthorization()
 		object_class = DataObject
 		resource_name = 'submission'
+		#serializer = urlencodeSerializer()
 
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -387,7 +391,7 @@ class SubmissionResource(Resource):
 				response = data.get("response"), # string 
 				task = data.get("task"), # string 
 				smyth = data.get("smyth"),	# string
-				time = int(data.get("time")),		 # integer
+				#time = int(data.get("time")),		 # integer
 				accuracy = int(data.get("accuracy")), # integer
 				encounteredWords = data.get("encounteredWords"), # array
 				slideType = data.get("slideType"), # string
@@ -404,9 +408,10 @@ class SubmissionResource(Resource):
 			userNode.submissions(subms)
 	
 			# create the body
+			# json loads throws error under Ajax
 			body = json.loads(request.body) if type(request.body) is str else request.body
-	
-			return self.create_response(request, body)
+				
+			return self.create_response(request, request.body)
 		
 		else:
 			return self.error_response(request, {'error': 'User is required.' }, response_class=HttpBadRequest)
