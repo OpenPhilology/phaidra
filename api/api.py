@@ -35,7 +35,6 @@ import operator
 import time
 import urlparse
 
-
 class UserObjectsOnlyAuthorization(Authorization):
 	
 	def read_list(self, object_list, bundle):
@@ -276,7 +275,7 @@ class SubmissionResource(Resource):
 	response = fields.CharField(attribute='response', null = True, blank = True) 
 	task = fields.CharField(attribute='task', null = True, blank = True)
 	smyth = fields.CharField(attribute='smyth', null = True, blank = True)
-	time = fields.IntegerField(attribute='time', null = True, blank = True)
+	time = fields.IntegerField(attribute='time', null = True, blank = True, default = 0)
 	accuracy = fields.IntegerField(attribute='accuracy', null = True, blank = True)
 	encounteredWords = fields.ListField(attribute='encounteredWords', null = True, blank = True)
 	slideType = fields.CharField(attribute='slideType', null = True, blank = True)
@@ -285,11 +284,9 @@ class SubmissionResource(Resource):
 	class Meta:
 		allowed_methods = ['post', 'get', 'patch']
 		authentication = SessionAuthentication() 
-		#authentication = BasicAuthentication()
 		authorization = UserObjectsOnlyAuthorization()
 		object_class = DataObject
 		resource_name = 'submission'
-		#serializer = urlencodeSerializer()
 
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -391,8 +388,8 @@ class SubmissionResource(Resource):
 				response = data.get("response"), # string 
 				task = data.get("task"), # string 
 				smyth = data.get("smyth"),	# string
-				#time = int(data.get("time")),		 # integer
-				accuracy = int(data.get("accuracy")), # integer
+				time = data.get("time"),	 # integer
+				accuracy = data.get("accuracy"), # integer
 				encounteredWords = data.get("encounteredWords"), # array
 				slideType = data.get("slideType"), # string
 				timestamp = data.get("timestamp") # datetime
@@ -408,10 +405,9 @@ class SubmissionResource(Resource):
 			userNode.submissions(subms)
 	
 			# create the body
-			# json loads throws error under Ajax
 			body = json.loads(request.body) if type(request.body) is str else request.body
 				
-			return self.create_response(request, request.body)
+			return self.create_response(request, body)
 		
 		else:
 			return self.error_response(request, {'error': 'User is required.' }, response_class=HttpBadRequest)
