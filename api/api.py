@@ -912,9 +912,9 @@ class SentenceResource(Resource):
 		for rs in relatedSentences:
 			sent = rs[0]
 			url = sent['self'].split('/')
-			cts_outtake = sent['data']['CTS'].split(':')[len(sent['data']['CTS'].split(':'))-2]
-			key = cts_outtake.split('-')[len(cts_outtake.split('-'))-1]
-			new_obj.__dict__['_data']['translations'][key] = API_PATH + 'sentence/' + url[len(url)-1] +'/'		
+			for lang in settings.CTS_LANG:
+				if sent['data']['CTS'].find(lang) != -1:
+					new_obj.__dict__['_data']['translations'][lang] = API_PATH + 'sentence/' + url[len(url)-1] +'/'		
 		
 		# get the words	and related information	
 		words = gdb.query("""START d=node(*) MATCH (d)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
