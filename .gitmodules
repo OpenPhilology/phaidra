@@ -1,3 +1,6 @@
 [submodule "static/js/lib/daphnejs"]
 	path = static/js/lib/daphnejs
 	url = https://github.com/mlent/daphnejs.git
+[submodule "static/js/lib/moreajs"]
+	path = static/js/lib/moreajs
+	url = https://github.com/mlent/moreajs.git

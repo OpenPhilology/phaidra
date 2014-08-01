@@ -90,12 +90,11 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 				return el.attributes;
 			});
 
-			$('.modal-body').removeClass('daphne').html("");
-
-			new Daphne('.modal-body', {
+			new Daphne('[data-toggle="daphne"]', {
 				data: words,
 				mode: 'edit',
 				height: 600,
+				width: 1000,
 				initialScale: 0.9
 			});
 
