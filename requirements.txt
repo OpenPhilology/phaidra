@@ -9,7 +9,6 @@ django-filter==0.7
 httplib2==0.8
 lucene-querybuilder==0.2
 meld3==0.6.10
--e git+https://github.com/scholrly/neo4django/@1f107335052d7a04a0bc8c8e640bbbf2ec44148f#egg=neo4django-dev
 neo4jrestclient==2.0.0
 psycopg2==2.5.2
 python-dateutil==2.1

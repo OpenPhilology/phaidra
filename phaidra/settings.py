@@ -47,6 +47,12 @@ LANGUAGES = (
     ('de', 'German')
 )
 
+CTS_LANG = (
+	'grc',
+	'eng',
+	'fas',
+)
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not

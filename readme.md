@@ -18,6 +18,7 @@ Push directly to OpenPhilology/Phaidra
 		$ cd /opt
 		$ git clone git@github.com:OpenPhilology/phaidra.git
 
+Or use our https clone url.
 This will create a directory at `/opt/phaidra`. 
 
 Fork from Github
@@ -41,7 +42,7 @@ Set up Virtualenv
 		# The name of our virtualenv is "env"
 		$ virtualenv --no-site-packages env
 
-Now, in front of your command prompt, you should see `(env)`, which indicates that you are operating within that environment.
+You will need permission on /opt directory.
 
 Install and Configure Postgres
 ---
@@ -55,7 +56,7 @@ Install and Configure Postgres
 
 Install Requirements
 ---
-Presuming you are starting with a new machine, you need to install Python-related tools.
+Presuming you are starting with a new machine, you need to install Python-related tools. Hint: You might don't wanna install or at least run the application with superuser permissions.
 
 		$ source env/bin/activate
 		$ sudo pip install -r requirements.txt
@@ -117,13 +118,13 @@ Make sure the virtual env is activated.
 		$ cd /opt/phaidra
 		$ source env/bin/activate
 
-First, comment out the following apps from INSTALLED_APPS in phaidra/settings.py: 'apps', 'django.contrib.auth', 'django.contrib.admin'. We have to do some finangling to get South to play nicely with our custom user model.
+First, comment out the apps 'app' and 'tastypie' from INSTALLED_APPS as well as 'AUTH_USER_MODEL' in phaidra/settings.py. We have to do some finangling to get South to play nicely with our custom user model.
 
 Then run:
 
 		$ ./manage.py syncdb
 
-Uncomment 'apps', 'django.contrib.auth', and 'django.contrib.admin' in phaidra/settings.py. Then run:
+Uncomment 'apps', 'tastypie', and 'AUTH_USER_MODEL' in phaidra/settings.py. Then run:
 
 		$ ./manage.py schemamigration app --initial
 		$ ./manage.py schemamigration tastypie --initial

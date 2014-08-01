@@ -45,7 +45,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		},
 		fetchHTML: function(attributes, options) {
 			var that = this;
-
 			$.ajax({
 				url: attributes.includeHTML,
 				async: false,
@@ -184,8 +183,11 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 
 			$.ajax({
 				url: '/api/v1/submission/',
-				data: data,
+				headers: { 'X-CSRFToken': window.csrf_token },
+				data: JSON.stringify(data),
+				processData: false,
 				dataType: 'json',
+				contentType: "application/json",
 				type: 'POST',
 				success: function(response) {
 					console.log("Successfully submitted data");

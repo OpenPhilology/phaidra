@@ -24,6 +24,7 @@ from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
 from tastypie.resources import Resource, ModelResource
+from tastypie.serializers import Serializer
 
 from datetime import datetime
 
@@ -32,7 +33,7 @@ import dateutil.parser
 import json
 import operator
 import time
-
+import urlparse
 
 class UserObjectsOnlyAuthorization(Authorization):
 	
@@ -274,7 +275,7 @@ class SubmissionResource(Resource):
 	response = fields.CharField(attribute='response', null = True, blank = True) 
 	task = fields.CharField(attribute='task', null = True, blank = True)
 	smyth = fields.CharField(attribute='smyth', null = True, blank = True)
-	time = fields.IntegerField(attribute='time', null = True, blank = True)
+	time = fields.IntegerField(attribute='time', null = True, blank = True, default = 0)
 	accuracy = fields.IntegerField(attribute='accuracy', null = True, blank = True)
 	encounteredWords = fields.ListField(attribute='encounteredWords', null = True, blank = True)
 	slideType = fields.CharField(attribute='slideType', null = True, blank = True)
@@ -387,8 +388,8 @@ class SubmissionResource(Resource):
 				response = data.get("response"), # string 
 				task = data.get("task"), # string 
 				smyth = data.get("smyth"),	# string
-				time = int(data.get("time")),		 # integer
-				accuracy = int(data.get("accuracy")), # integer
+				time = data.get("time"),	 # integer
+				accuracy = data.get("accuracy"), # integer
 				encounteredWords = data.get("encounteredWords"), # array
 				slideType = data.get("slideType"), # string
 				timestamp = data.get("timestamp") # datetime
@@ -405,7 +406,7 @@ class SubmissionResource(Resource):
 	
 			# create the body
 			body = json.loads(request.body) if type(request.body) is str else request.body
-	
+				
 			return self.create_response(request, body)
 		
 		else:
@@ -540,8 +541,8 @@ class LemmaResource(Resource):
 
 class WordResource(Resource):
 	
-	CTS = fields.CharField(attribute='CTS')
-	value = fields.CharField(attribute='value')
+	CTS = fields.CharField(attribute='CTS', null = True, blank = True)
+	value = fields.CharField(attribute='value', null = True, blank = True)
 	form = fields.CharField(attribute='form', null = True, blank = True)
 	lemma = fields.CharField(attribute='lemma', null = True, blank = True)
 	ref = fields.CharField(attribute='ref', null = True, blank = True)
@@ -663,7 +664,7 @@ class WordResource(Resource):
 	def get_object_list(self, request):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
-		attrlist = ['CTS', 'length', 'case', 'dialect', 'head', 'form', 'posClass', 'cid', 'gender', 'tbwid', 'pos', 'value', 'degree', 'number','lemma', 'relation', 'isIndecl', 'ref', 'posAdd', 'mood', 'tense', 'voice', 'person']
+		attrlist = ['lang','CTS', 'length', 'case', 'dialect', 'head', 'form', 'posClass', 'cid', 'gender', 'tbwid', 'pos', 'value', 'degree', 'number','lemma', 'relation', 'isIndecl', 'ref', 'posAdd', 'mood', 'tense', 'voice', 'person']
 		words = []
 		query_params = {}
 		
@@ -733,26 +734,38 @@ class WordResource(Resource):
 		
 		# default querying on big dataset
 		else:	
-			sentences = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) RETURN s ORDER BY ID(s)""")
+			#sentences = gdb.query("""START d=node(*) MATCH (d)-[:sentences]->(s) RETURN s ORDER BY ID(s)""")
+			#for s in sentences:
+				#sentence = s[0]
+				#urlSent = sentence['self'].split('/')
+				#wordTable = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE s.CTS = '""" + sentence['data']['CTS'] + """' RETURN w ORDER BY ID(w)""")		
+			##### TODO: document wise, return word and sent and get id url SONST heap raise SONST wieder satzweise
+			documentTable = gdb.query("""MATCH (n:`Document`) RETURN n ORDER BY ID(n)""")	
 			
-			# create the objects which was queried for and set all necessary attributes
-			for s in sentences:
-				sentence = s[0]
-				urlSent = sentence['self'].split('/')
-				
-				wordTable = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w) WHERE s.CTS = '""" + sentence['data']['CTS'] + """' RETURN w ORDER BY ID(w)""")
-				
+			for d in documentTable:
+				document = d[0]
+				wordTable = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS = '""" + document['data']['CTS'] + """' RETURN w,s ORDER BY ID(w)""")
+							
+				# get sent id
 				for w in wordTable:
 					word = w[0]
+					sentence = w[1]
 					url = word['self'].split('/')
-									
+					urlSent = sentence['self'].split('/')	
+						
+				#wordNode = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + url[len(url)-1] + '/')
+				#sentRel = wordNode.relationships.incoming(types=["words"])
+							
 					new_obj = DataObject(url[len(url)-1])
-					new_obj.__dict__['_data'] = word['data']		
+					new_obj.__dict__['_data'] = word['data']
+					#if len(sentRel) > 0:
+						#new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + str(sentRel[0].start.id) + '/'
+									
 					new_obj.__dict__['_data']['id'] = url[len(url)-1]
 					new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
-				
+									
 					words.append(new_obj)
-			
+							
 			return words
 		
 	
@@ -899,9 +912,9 @@ class SentenceResource(Resource):
 		for rs in relatedSentences:
 			sent = rs[0]
 			url = sent['self'].split('/')
-			cts_outtake = sent['data']['CTS'].split(':')[len(sent['data']['CTS'].split(':'))-2]
-			key = cts_outtake.split('-')[len(cts_outtake.split('-'))-1]
-			new_obj.__dict__['_data']['translations'][key] = API_PATH + 'sentence/' + url[len(url)-1] +'/'		
+			for lang in settings.CTS_LANG:
+				if sent['data']['CTS'].find(lang) != -1:
+					new_obj.__dict__['_data']['translations'][lang] = API_PATH + 'sentence/' + url[len(url)-1] +'/'		
 		
 		# get the words	and related information	
 		words = gdb.query("""START d=node(*) MATCH (d)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
