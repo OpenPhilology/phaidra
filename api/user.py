@@ -33,7 +33,7 @@ import urlparse
 
 from api import DataObject
 
-class SentenceUserResource(Resource):
+class UserSentenceResource(Resource):
     
     CTS = fields.CharField(attribute='CTS', null = True, blank = True)
     sentence = fields.CharField(attribute='sentence', null = True, blank = True)    
@@ -44,7 +44,7 @@ class SentenceUserResource(Resource):
     
     class Meta:
         
-        resource_name = 'sentence_user'
+        resource_name = 'user_sentence'
         object_class = DataObject
         authorization = Authorization()    
     
@@ -188,7 +188,7 @@ class SentenceUserResource(Resource):
         return new_obj
 
 
-class DocumentUserResource(Resource):
+class UserDocumentResource(Resource):
     
     CTS = fields.CharField(attribute='CTS')
     name = fields.CharField(attribute='name', null = True, blank = True)    
@@ -199,7 +199,7 @@ class DocumentUserResource(Resource):
         
     class Meta:
         
-        resource_name = 'document_user'
+        resource_name = 'user_document'
         object_class = DataObject
         allowed_methods = ['get', 'post']
         authorization = Authorization()
