@@ -1,6 +1,12 @@
 {% load i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
 <!DOCTYPE html>
-<html>
+{% if LANGUAGE_BIDI %}
+	<html dir="rtl">
+{% else %}
+	<html dir="ltr">
+{% endif %}
+<head>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
