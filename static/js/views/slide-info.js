@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templates/slide-info.html', 'daphne'], function($, _, Backbone, Models, Collections, Template, Daphne) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/templates/js/slide-info.html', 'daphne'], function($, _, Backbone, Models, Collections, Template, Daphne) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',

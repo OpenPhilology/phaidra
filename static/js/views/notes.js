@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html', 'daphne'], function($, _, Backbone, Utils, NotesTemplate, Daphne) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes.html', 'daphne'], function($, _, Backbone, Utils, NotesTemplate, Daphne) { 
 
 	var View = Backbone.View.extend({
 		tagName: 'div', 
@@ -55,7 +55,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			if (model.get('hovered') && !model.get('selected') && 
 				(this.model.words.findWhere({ selected: true }) == undefined)) {
 				this.$el.find('.intro').html(
-					'Information about <span lang="' + model.get('lang') +'">' + model.get('value') + '</span>'
+					gettext('Information about') + ' <span lang="' + model.get('lang') +'">' + model.get('value') + '</span>'
 				);
 				this.$el.removeClass('expanded');
 				this.$el.find('.notes-nav a').eq(1).attr('title', 'Hide Resources');
@@ -64,7 +64,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			// This will perform a fetch on the model for full data
 			else if (model.get('selected')) {
 				this.$el.find('.intro').html('<img src="/static/images/tree-loader.gif"> Loading');
-				this.$el.find('.notes-nav a').eq(1).attr('title', 'Show Resources');
+				this.$el.find('.notes-nav a').eq(1).attr('title', gettext('Show Resources'));
 				this.renderDetails();
 			}
 

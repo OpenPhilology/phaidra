@@ -1,4 +1,4 @@
-import os
+import os.path
 import json
 import hashlib
 
@@ -95,10 +95,17 @@ def module(request):
 	})
 
 	return HttpResponse(template.render(context))
-def module(request):
-	template = loader.get_template('module.html')
+
+def static(request, path): 
+	directory = '/opt/phaidra/' + request.META['REQUEST_URI'];
+	template = loader.get_template(directory)
+
+	if hasattr(request.user, 'lang'):
+		request.session['django_language'] = request.user.lang
+
 	context = RequestContext(request, {
 		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
 	})
 
 	return HttpResponse(template.render(context))
+

@@ -1,3 +1,4 @@
+{% load i18n %}
 <!-- Page of Greek text for Reader view -->
 <div class="page">
 
@@ -7,7 +8,7 @@
 	</div>
 
 	<!-- Page header -->
-	<h1><%= work %> <small>by <%= author %>, <a href="#" data-toggle="tooltip" title="Jump to another section">section</a></small></h1>
+	<h1><%= work %> <small>{% trans "by" %} <%= author %>, <a href="#" data-toggle="tooltip" title="Jump to another section">section</a></small></h1>
 	<hr>
 
 	<!-- Greek goes here! -->

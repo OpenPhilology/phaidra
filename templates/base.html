@@ -19,6 +19,7 @@
 	<link href="/static/js/lib/daphnejs/dist/daphne.css" rel="stylesheet">
 
 	<!-- JS -->
+	<script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
 	<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
 	<script>var csrf_token = "{{ csrf_token }}";</script>
 

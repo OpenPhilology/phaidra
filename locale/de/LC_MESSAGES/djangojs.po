@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-07 19:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:45
+#: static/admin/js/SelectFilter2.js:45
+#, c-format
+msgid "Available %s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:46
+#: static/admin/js/SelectFilter2.js:46
+#, c-format
+msgid ""
+"This is the list of available %s. You may choose some by selecting them in "
+"the box below and then clicking the \"Choose\" arrow between the two boxes."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:53
+#: static/admin/js/SelectFilter2.js:53
+#, c-format
+msgid "Type into this box to filter down the list of available %s."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:57
+#: static/admin/js/SelectFilter2.js:57
+msgid "Filter"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:61
+#: static/admin/js/SelectFilter2.js:61
+msgid "Choose all"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:61
+#: static/admin/js/SelectFilter2.js:61
+#, c-format
+msgid "Click to choose all %s at once."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:67
+#: static/admin/js/SelectFilter2.js:67
+msgid "Choose"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:69
+#: static/admin/js/SelectFilter2.js:69
+msgid "Remove"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:75
+#: static/admin/js/SelectFilter2.js:75
+#, c-format
+msgid "Chosen %s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:76
+#: static/admin/js/SelectFilter2.js:76
+#, c-format
+msgid ""
+"This is the list of chosen %s. You may remove some by selecting them in the "
+"box below and then clicking the \"Remove\" arrow between the two boxes."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:80
+#: static/admin/js/SelectFilter2.js:80
+msgid "Remove all"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js:80
+#: static/admin/js/SelectFilter2.js:80
+#, c-format
+msgid "Click to remove all chosen %s at once."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.js:18
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.min.js:1
+#: static/admin/js/actions.js:18 static/admin/js/actions.min.js:1
+msgid "%(sel)s of %(cnt)s selected"
+msgid_plural "%(sel)s of %(cnt)s selected"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.js:109
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.min.js:5
+#: static/admin/js/actions.js:109 static/admin/js/actions.min.js:5
+msgid ""
+"You have unsaved changes on individual editable fields. If you run an "
+"action, your unsaved changes will be lost."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.js:121
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.min.js:5
+#: static/admin/js/actions.js:121 static/admin/js/actions.min.js:5
+msgid ""
+"You have selected an action, but you haven't saved your changes to "
+"individual fields yet. Please click OK to save. You'll need to re-run the "
+"action."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.js:123
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.min.js:6
+#: static/admin/js/actions.js:123 static/admin/js/actions.min.js:6
+msgid ""
+"You have selected an action, and you haven't made any changes on individual "
+"fields. You're probably looking for the Go button rather than the Save "
+"button."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/calendar.js:8
+#: static/admin/js/calendar.js:8
+msgid ""
+"January February March April May June July August September October November "
+"December"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/calendar.js:9
+#: static/admin/js/calendar.js:9
+msgid "S M T W T F S"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/collapse.js:8
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/collapse.js:19
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/collapse.min.js:1
+#: static/admin/js/collapse.js:8 static/admin/js/collapse.js.c:19
+#: static/admin/js/collapse.min.js:1
+msgid "Show"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/collapse.js:16
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/collapse.min.js:1
+#: static/admin/js/collapse.js:16 static/admin/js/collapse.min.js:1
+msgid "Hide"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:52
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:88
+#: static/admin/js/admin/DateTimeShortcuts.js:52
+#: static/admin/js/admin/DateTimeShortcuts.js:88
+msgid "Now"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:56
+#: static/admin/js/admin/DateTimeShortcuts.js:56
+msgid "Clock"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:84
+#: static/admin/js/admin/DateTimeShortcuts.js:84
+msgid "Choose a time"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:89
+#: static/admin/js/admin/DateTimeShortcuts.js:89
+msgid "Midnight"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:90
+#: static/admin/js/admin/DateTimeShortcuts.js:90
+msgid "6 a.m."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:91
+#: static/admin/js/admin/DateTimeShortcuts.js:91
+msgid "Noon"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:95
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:208
+#: static/admin/js/admin/DateTimeShortcuts.js:95
+#: static/admin/js/admin/DateTimeShortcuts.js:208
+msgid "Cancel"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:148
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:201
+#: static/admin/js/admin/DateTimeShortcuts.js:148
+#: static/admin/js/admin/DateTimeShortcuts.js:201
+msgid "Today"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:152
+#: static/admin/js/admin/DateTimeShortcuts.js:152
+msgid "Calendar"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:199
+#: static/admin/js/admin/DateTimeShortcuts.js:199
+msgid "Yesterday"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js:203
+#: static/admin/js/admin/DateTimeShortcuts.js:203
+msgid "Tomorrow"
+msgstr ""
+
+#: static/js/views/notes.js:58
+msgid "Information about"
+msgstr "Informationen zu"
+
+#: static/js/views/notes.js:67
+msgid "Show Resources"
+msgstr ""

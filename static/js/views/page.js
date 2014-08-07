@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], function($, _, Backbone, PageTemplate) { 
+define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html'], function($, _, Backbone, PageTemplate) { 
 
 	var View = Backbone.View.extend({
 		events: { 

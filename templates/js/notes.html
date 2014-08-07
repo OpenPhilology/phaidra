@@ -1,10 +1,11 @@
+{% load i18n %}
 <!-- Gets populated with Notes about Greek text -->
 <div class="notes-nav">
-	<a href="#" data-toggle="tooltip" title="Preferences"><span class="glyphicon glyphicon-cog"></span></a>
-	<a href="#" data-toggle="tooltip" title="Add Annotation"><span class="glyphicon glyphicon-comment"></span></a> 
-	<a href="#" data-toggle="tooltip" title="Show Resources"><span class="glyphicon glyphicon-chevron-up"></span></a> 
+	<a href="#" data-toggle="tooltip" title="{% trans "Preferences" %}"><span class="glyphicon glyphicon-cog"></span></a>
+	<a href="#" data-toggle="tooltip" title="{% trans "Add Annotation" %}"><span class="glyphicon glyphicon-comment"></span></a> 
+	<a href="#" data-toggle="tooltip" title="{% trans "Show Resources" %}"><span class="glyphicon glyphicon-chevron-up"></span></a> 
 </div>
-<p class="intro">Hover over a sentence in the text to see available annotations, or to add your own!</p>
+<p class="intro">{% trans "Hover over a sentence in the text to see available annotations, or to add your own!" %}</p>
 
 <div class="resources">
 	<div class="row">
@@ -12,11 +13,11 @@
 			<p class="resources-header">
 				<span lang="grc" class="selected"><%= word.value %></span>
 				<span>
-					from <span lang="grc"><%= word.article || '' %> <%= word.lemma %></span>
+					{% trans "from" %} <span lang="grc"><%= word.article || '' %> <%= word.lemma %></span>
 				</span>
 				<span id="parse-vals"> 
 					<a href="#" class="btn btn-link" title="Parse">
-						<strong>Parse</strong><span class="vals" style="display: none">
+						<strong>{% trans "Parse" %}</strong><span class="vals" style="display: none">
 							<%= word.pos || '' %>
 							<%= word.case || '' %>
 							<%= word.number || '' %>
@@ -30,10 +31,10 @@
 				</span>
 			</p>
 			<!-- TODO: Put in translations, refactor this CSS -->
-			<h3 style="display: inline-block">Translations</h3> 
+			<h3 style="display: inline-block">{% trans "Translations" %}</h3> 
 
-			<a href="#" class="btn btn-link btn-show-trans" data-lang="eng" data-toggle="tooltip">English</a> 
-			<a href="#" class="btn btn-link btn-show-trans" data-lang="fas" data-toggle="tooltip">Farsi</a>
+			<a href="#" class="btn btn-link btn-show-trans" data-lang="eng" data-toggle="tooltip">{% trans "English" %}</a> 
+			<a href="#" class="btn btn-link btn-show-trans" data-lang="fas" data-toggle="tooltip">{% trans "Farsi" %}</a>
 
 			<!-- TODO: Probably move this into a JS interaction -->
 			<div class="well" style="background-color: #FFF; margin-right: 15px; <% if (lang == "fas") print('direction: rtl') %>">
@@ -51,12 +52,12 @@
 
 		</div>
 		<div class="col-md-6">
-			<h3>Other Resources</h3>
+			<h3>{% trans "Other Resources" %}</h3>
 			<ul>
-				<li> <a href="#" class="parse-tree-view">View Sentence as Tree</a></li>
-				<li> <a href="#">Contribute Annotation</a></li>
+				<li> <a href="#" class="parse-tree-view">{% trans "View Sentence as Tree" %}</a></li>
+				<li> <a href="#">{% trans "Contribute Annotation" %}</a></li>
 			</ul>
-			<h3>Related Grammar Topics</h3>
+			<h3>{% trans "Related Grammar Topics" %}</h3>
 			<ul>
 			<% if (grammar.length > 0) { %>
 				<% _.each(grammar, function(entry, index) { %>
@@ -65,7 +66,7 @@
 					<% } %>
 				<% }); %>
 			<% } else { %>
-				<li><em>None found</em></li>
+				<li><em>{% trans "None found" %}</em></li>
 			<% } %>
 			</ul>
 		</div>

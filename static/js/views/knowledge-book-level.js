@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'text!templates/knowledge-book-level.html'], function($, _, Backbone, KnowledgeTemplate) { 
+define(['jquery', 'underscore', 'backbone', 'text!/templates/js/knowledge-book-level.html'], function($, _, Backbone, KnowledgeTemplate) { 
 	var View = Backbone.View.extend({
 		tagName: 'div', 
 		className: 'row knowledge-container',

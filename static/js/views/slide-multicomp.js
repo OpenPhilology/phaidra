@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!templates/slide-multicomp.html'], function($, _, Backbone, Models, Collections, Template) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/templates/js/slide-multicomp.html'], function($, _, Backbone, Models, Collections, Template) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',

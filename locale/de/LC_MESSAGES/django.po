@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-28 21:12+0200\n"
+"POT-Creation-Date: 2014-08-07 20:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,33 +18,944 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/base.html:8 templates/index.html:8
-msgid "Historical Languages eLearning - by Open Philology Project"
-msgstr "Lernen Historischer Sprachen - mit dem Open Philology Project"
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/404.html:4
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/404.html:8
+msgid "Page not found"
+msgstr ""
 
-#: templates/base.html:29
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/404.html:10
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/500.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/app_index.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/base.html:47
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_form.html:18
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_list.html:40
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/invalid_setup.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/object_history.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:13
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/logged_out.html:4
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_done.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:14
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:8
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:6
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:7
+#: templates/base.html:35
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:32
-msgid "Learn"
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/500.html:7
+msgid "Server error"
 msgstr ""
 
-#: templates/base.html:35
-msgid "Read"
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/500.html:11
+msgid "Server error (500)"
 msgstr ""
 
-#: templates/base.html:38
-msgid "Create"
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/500.html:14
+msgid "Server Error <em>(500)</em>"
 msgstr ""
 
-#: templates/base.html:55 templates/index.html:46
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/500.html:15
+msgid ""
+"There's been an error. It's been reported to the site administrators via "
+"email and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/actions.html:4
+msgid "Run the selected action"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/actions.html:4
+msgid "Go"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/actions.html:11
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/actions.html:11
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/actions.html:13
+msgid "Clear selection"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/app_index.html:10
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html:21
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/base.html:28
+msgid "Welcome,"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/base.html:33
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_done.html:3
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:4
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:10
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:14
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:14
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:15
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:9
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:8
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:8
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:8
+msgid "Documentation"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/base.html:36
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:17
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:51
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_done.html:3
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:4
+#, fuzzy
+msgid "Change password"
+msgstr "Passwort"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/base.html:38
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_done.html:3
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:4
+#: templates/base.html:61 templates/index.html:52
 msgid "Log out"
 msgstr "Ausloggen"
 
-#: templates/base.html:59
-msgid "Login"
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/base_site.html:4
+msgid "Django site admin"
 msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_form.html:21
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html:33
+msgid "Add"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_form.html:33
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/object_history.html:10
+msgid "History"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_form.html:35
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html:9
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html:30
+msgid "View on site"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_form.html:46
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_list.html:67
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/login.html:17
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:27
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:20
+msgid "Please correct the error below."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_form.html:46
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_list.html:67
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/login.html:17
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:27
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:20
+msgid "Please correct the errors below."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_list.html:58
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_list.html:78
+msgid "Filter"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_list_results.html:17
+msgid "Remove from sorting"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_list_results.html:18
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/change_list_results.html:19
+msgid "Toggle sorting"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:10
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/submit_line.html:6
+msgid "Delete"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:17
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:25
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:33
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:38
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:43
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:9
+msgid "Delete multiple objects"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:16
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:24
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:32
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/filter.html:2
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html:20
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html:39
+msgid "Change"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html:49
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html:57
+msgid "Recent Actions"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html:58
+msgid "My Actions"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html:62
+msgid "None available"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html:76
+msgid "Unknown content"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/invalid_setup.html:12
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/login.html:37
+#, fuzzy
+msgid "Password:"
+msgstr "Passwort"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/login.html:44
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/login.html:48
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:19
+#: templates/login.html:26
+msgid "Log in"
+msgstr "Einloggen"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/object_history.html:22
+msgid "Date/time"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/object_history.html:23
+#, fuzzy
+msgid "User"
+msgstr "Benutzername"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/object_history.html:24
+msgid "Action"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/object_history.html:38
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/pagination.html:10
+msgid "Show all"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/pagination.html:11
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/submit_line.html:3
+msgid "Save"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/search_form.html:7
+msgid "Search"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/search_form.html:9
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/search_form.html:9
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/submit_line.html:8
+msgid "Save as new"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/submit_line.html:9
+msgid "Save and add another"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/submit_line.html:10
+msgid "Save and continue editing"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/add_form.html:6
+msgid ""
+"First, enter a username and password. Then, you'll be able to edit more user "
+"options."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/add_form.html:8
+msgid "Enter a username and password."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:31
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:38
+#: templates/index.html:98 templates/login.html:22
+msgid "Password"
+msgstr "Passwort"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:44
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:42
+#, fuzzy
+msgid "Password (again)"
+msgstr "Passwort"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:45
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html:26
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html:76
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/delete.html:12
+msgid "Remove"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html:27
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html:75
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html:17
+msgid "Delete?"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/logged_out.html:10
+#, fuzzy
+msgid "Log in again"
+msgstr "Einloggen"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_done.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:8
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:12
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:24
+#, fuzzy
+msgid "Password change"
+msgstr "Passwort"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_done.html:11
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_done.html:15
+msgid "Password change successful"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_done.html:17
+msgid "Your password was changed."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:26
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:32
+#, fuzzy
+msgid "Old password"
+msgstr "Passwort"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:37
+#, fuzzy
+msgid "New password"
+msgstr "Passwort"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_change_form.html:48
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:26
+msgid "Change my password"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:11
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:7
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:11
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:15
+#, fuzzy
+msgid "Password reset"
+msgstr "Passwort"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:11
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:23
+#, fuzzy
+msgid "New password:"
+msgstr "Passwort"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:25
+msgid "Confirm password:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:11
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:17
+msgid ""
+"We've emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:21
+#, fuzzy
+msgid "Email address:"
+msgstr "E-Mail-Adresse"
+
+#: env/lib/python2.7/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:21
+msgid "Reset my password"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:8
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:29
+msgid "Bookmarklets"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:11
+msgid "Documentation bookmarklets"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:15
+msgid ""
+"\n"
+"<p class=\"help\">To install bookmarklets, drag the link to your bookmarks\n"
+"toolbar, or right-click the link and add it to your bookmarks. Now you can\n"
+"select the bookmarklet from any page in the site.  Note that some of these\n"
+"bookmarklets require you to be viewing the site from a computer designated\n"
+"as \"internal\" (talk to your system administrator if you aren't sure if\n"
+"your computer is \"internal\").</p>\n"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:25
+msgid "Documentation for this page"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:26
+msgid ""
+"Jumps you from any page to the documentation for the view that generates "
+"that page."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:28
+msgid "Show object ID"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:29
+msgid ""
+"Shows the content-type and unique ID for pages that represent a single "
+"object."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:31
+msgid "Edit this object (current window)"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:32
+msgid "Jumps to the admin page for pages that represent a single object."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:34
+msgid "Edit this object (new window)"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:35
+msgid "As above, but opens the admin page in a new window."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:17
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:9
+msgid "Tags"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:18
+msgid "List of all the template tags and their functions."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:20
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:9
+msgid "Filters"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:21
+msgid ""
+"Filters are actions which can be applied to variables in a template to alter "
+"the output."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:23
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:16
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:10
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:14
+msgid "Models"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:24
+msgid ""
+"Models are descriptions of all the objects in the system and their "
+"associated fields. Each model has a list of fields which can be accessed as "
+"template variables"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:26
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:8
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:9
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:12
+msgid "Views"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:27
+msgid ""
+"Each page on the public site is generated by a view. The view defines which "
+"template is used to generate the page and which objects are available to "
+"that template."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:30
+msgid "Tools for your browser to quickly access admin functionality."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:10
+msgid "Please install docutils"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:17
+#, python-format
+msgid ""
+"The admin documentation system requires Python's <a href=\"%(link)s"
+"\">docutils</a> library."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:19
+#, python-format
+msgid ""
+"Please ask your administrators to install <a href=\"%(link)s\">docutils</a>."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:21
+#, python-format
+msgid "Model: %(name)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:35
+msgid "Field"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:36
+msgid "Type"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:37
+msgid "Description"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:52
+msgid "Back to Models Documentation"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:18
+msgid "Model documentation"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:43
+msgid "Model groups"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:8
+msgid "Templates"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:13
+#, python-format
+msgid "Template: %(name)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:16
+#, python-format
+msgid "Template: \"%(name)s\""
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:20
+#, python-format
+msgid "Search path for template \"%(name)s\" on %(grouper)s:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:23
+msgid "(does not exist)"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:28
+msgid "Back to Documentation"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:12
+msgid "Template filters"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:16
+msgid "Template filter documentation"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:22
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:43
+msgid "Built-in filters"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:23
+#, python-format
+msgid ""
+"To use these filters, put <code>%(code)s</code> in your template before "
+"using the filter."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:12
+msgid "Template tags"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:16
+msgid "Template tag documentation"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:22
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:43
+msgid "Built-in tags"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:23
+#, python-format
+msgid ""
+"To use these tags, put <code>%(code)s</code> in your template before using "
+"the tag."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:12
+#, python-format
+msgid "View: %(name)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:23
+msgid "Context:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:28
+msgid "Templates:"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:32
+msgid "Back to Views Documentation"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:16
+msgid "View documentation"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:22
+msgid "Jump to site"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:35
+#, python-format
+msgid "Views by URL on %(name)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:40
+#, python-format
+msgid "View function: %(name)s"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/approve.html:4
+msgid "Approve a comment"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/approve.html:7
+msgid "Really make this comment public?"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/approve.html:12
+msgid "Approve"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/approved.html:4
+msgid "Thanks for approving"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/approved.html:7
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/deleted.html:7
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/flagged.html:7
+msgid ""
+"Thanks for taking the time to improve the quality of discussion on our site"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/delete.html:4
+msgid "Remove a comment"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/delete.html:7
+msgid "Really remove this comment?"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/deleted.html:4
+msgid "Thanks for removing"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/flag.html:4
+msgid "Flag this comment"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/flag.html:7
+msgid "Really flag this comment?"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/flag.html:12
+msgid "Flag"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/flagged.html:4
+msgid "Thanks for flagging"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/form.html:17
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/preview.html:32
+msgid "Post"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/form.html:18
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/preview.html:33
+msgid "Preview"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/posted.html:4
+msgid "Thanks for commenting"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/posted.html:7
+msgid "Thank you for your comment"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/preview.html:4
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/preview.html:13
+msgid "Preview your comment"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/preview.html:11
+msgid "Please correct the error below"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/preview.html:11
+msgid "Please correct the errors below"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/preview.html:16
+msgid "and"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/preview.html:16
+msgid "Post your comment"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/comments/templates/comments/preview.html:16
+msgid "or make changes"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/formtools/templates/formtools/wizard/wizard_form.html:15
+msgid "first step"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/formtools/templates/formtools/wizard/wizard_form.html:16
+msgid "prev step"
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django/contrib/formtools/templates/formtools/wizard/wizard_form.html:18
+msgid "submit"
+msgstr ""
+
+#: templates/base.html:13 templates/index.html:14
+msgid "Historical Languages eLearning - by Open Philology Project"
+msgstr "Lernen Historischer Sprachen - mit dem Open Philology Project"
+
+#: templates/base.html:38
+msgid "Learn"
+msgstr "Lernen"
+
+#: templates/base.html:41
+msgid "Read"
+msgstr "Lesen"
+
+#: templates/base.html:44
+msgid "Create"
+msgstr "Erstellen"
+
+#: templates/base.html:65
+msgid "Login"
+msgstr "Einloggen"
 
 #: templates/create.html:14
 msgid "Help Create Digital Editions"
@@ -270,85 +1181,81 @@ msgid ""
 "(and more fun) Greek learning tools."
 msgstr ""
 
-#: templates/index.html:50
+#: templates/index.html:56
 msgid "Login to Ancient Geek!"
 msgstr ""
 
-#: templates/index.html:65
+#: templates/index.html:71
 msgid "Get your Greek on."
 msgstr ""
 
-#: templates/index.html:68
+#: templates/index.html:74
 msgid ""
 "Learn Ancient Greek as you read Thucydides' harrowing tale of the war "
 "between "
 msgstr ""
 
-#: templates/index.html:68
+#: templates/index.html:74
 msgid " (the Spartans) and "
 msgstr ""
 
-#: templates/index.html:68
+#: templates/index.html:74
 msgid " (the Athenians)"
 msgstr ""
 
-#: templates/index.html:68
+#: templates/index.html:74
 msgid "."
 msgstr ""
 
-#: templates/index.html:72 templates/index.html.py:188
+#: templates/index.html:78 templates/index.html.py:194
 msgid "Start Learning!"
 msgstr "Starten!"
 
-#: templates/index.html:76
+#: templates/index.html:82
 msgid "Sign up"
 msgstr "Anmelden"
 
-#: templates/index.html:80
+#: templates/index.html:86
 msgid "Full Name"
 msgstr "Vollständiger Name"
 
-#: templates/index.html:84
+#: templates/index.html:90
 msgid "Email Address"
 msgstr "E-Mail-Adresse"
 
-#: templates/index.html:88 templates/login.html:18
+#: templates/index.html:94 templates/login.html:18
 msgid "Username"
 msgstr "Benutzername"
 
-#: templates/index.html:92 templates/login.html:22
-msgid "Password"
-msgstr "Passwort"
-
-#: templates/index.html:95
+#: templates/index.html:101
 msgid "Create Account"
 msgstr ""
 
-#: templates/index.html:104
+#: templates/index.html:110
 msgid "Game your way through Greek."
 msgstr ""
 
-#: templates/index.html:106
+#: templates/index.html:112
 msgid ""
 "Develop your mad Greek skillz through games and choose the path to Greek "
 "glory that suits your personal learning style."
 msgstr ""
 
-#: templates/index.html:111
+#: templates/index.html:117
 msgid "Keep it original."
 msgstr "Spiele deinen Weg zu Griechisch."
 
-#: templates/index.html:113
+#: templates/index.html:119
 msgid ""
 "Explore Classical texts in their original languages, the way they were meant "
 "to be read, enhanced by data contributed by people like you."
 msgstr ""
 
-#: templates/index.html:118
+#: templates/index.html:124
 msgid "Be a scholar!"
 msgstr ""
 
-#: templates/index.html:120
+#: templates/index.html:126
 msgid ""
 "Contribute micropublications like translations and annotations to help "
 "create brand new, digital editions of Classical works!"
@@ -522,10 +1429,6 @@ msgstr ""
 msgid "Third Declension: Consonant Stems"
 msgstr ""
 
-#: templates/login.html:26
-msgid "Log in"
-msgstr "Einloggen"
-
 #: templates/module.html:14
 msgid "Lessons"
 msgstr ""
@@ -594,6 +1497,72 @@ msgstr ""
 #: templates/vocab.html:66
 msgid "Alphabetical"
 msgstr ""
+
+#: templates/js/grammar-display.html:3
+msgid "Table of Contents"
+msgstr "Inhaltsverzeichnis"
+
+#: templates/js/notes.html:4
+msgid "Preferences"
+msgstr "Präferenzen"
+
+#: templates/js/notes.html:5
+msgid "Add Annotation"
+msgstr "Annotation hinzufügen"
+
+#: templates/js/notes.html:6
+msgid "Show Resources"
+msgstr "Ressourcen anzeigen"
+
+#: templates/js/notes.html:8
+msgid ""
+"Hover over a sentence in the text to see available annotations, or to add "
+"your own!"
+msgstr "Bewege die Maus über ein Wort im Text, um die verfügbaren Annotationen zu sehen oder füge deine Eigine hinzu."
+
+#: templates/js/notes.html:16
+msgid "from"
+msgstr "von"
+
+#: templates/js/notes.html:20
+msgid "Parse"
+msgstr "Parsen"
+
+#: templates/js/notes.html:34
+msgid "Translations"
+msgstr "Übersetzungen"
+
+#: templates/js/notes.html:36
+msgid "English"
+msgstr "Englisch"
+
+#: templates/js/notes.html:37
+msgid "Farsi"
+msgstr "Farsi"
+
+#: templates/js/notes.html:55
+msgid "Other Resources"
+msgstr "Weitere Ressourcen"
+
+#: templates/js/notes.html:57
+msgid "View Sentence as Tree"
+msgstr "Satz als Baum anzeigen"
+
+#: templates/js/notes.html:58
+msgid "Contribute Annotation"
+msgstr "Annotation beitragen"
+
+#: templates/js/notes.html:60
+msgid "Related Grammar Topics"
+msgstr "Verwandte Grammatikthemen"
+
+#: templates/js/notes.html:69
+msgid "None found"
+msgstr "Keine gefunden"
+
+#: templates/js/page.html:11
+msgid "by"
+msgstr "von"
 
 #~ msgid "HOME"
 #~ msgstr "HOME"
