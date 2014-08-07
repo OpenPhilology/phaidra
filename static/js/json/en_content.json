@@ -36,7 +36,7 @@
 						"title": "Identify the letter!",
 						"question": "How does <strong lang=\"grc\">β</strong> sound and what is it called?",
 						"options": [ [
-							{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+							{ "value": "gamma - giant", "display": "Gamma - like <u>g</u>iant" },
 							{ "value": "gamma - good", "display": "Gamma - like <u>g</u>ood" },
 							{ "value": "sigma - signal", "display": "Sigma - like <u>s</u>ignal" },
 							{ "value": "beta - book", "display": "Beta - like <u>b</u>ook" }
@@ -113,7 +113,7 @@
 							{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
 						]],
 						"answers": ["α", "β", "γ"],
-						"successMsg": "Correctomundo!",
+						"successMsg": "Correct!",
 						"hintMsg": "<strong>Not Quite.</strong>The correct answer was <strong><span lang=\"grc\">α</span>, <span lang=\"grc\">β</span>, <span lang=\"grc\">γ</span>.</strong></strong>",
 						"failureMsg": "<strong>The correct answer was <span lang=\"grc\">α</span>, <span lang=\"grc\">β</span>, <span lang=\"grc\">γ</span>.</strong>",
 						"require_order": "true",
@@ -773,12 +773,12 @@
 						"question": "How would you pronounce <span lang=\"grc\">ὁδός</span>, <em>way</em>?",
 						"options": [ [
 							{ "value": "Oh-dos", "display": "Oh-dos" },
-							{ "value": "Hoh-dos", "display": "Hoh-dos" },
+							{ "value": "Ho-dos", "display": "Ho-dos" },
 							{ "value": "Roh-dos", "display": "Roh-dos" }
 						]],
-						"answers": ["Hoh-dos"],
-						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὁ</span> is pronounced like \"hoh\".",
-						"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ὁ</span> is pronounced like \"hoh\" because of the rough breathing.",
+						"answers": ["Ho-dos"],
+						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὁ</span> is pronounced like \"ho\".",
+						"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ὁ</span> is pronounced like \"ho\" because of the rough breathing.",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
 						"require_all": "true"
@@ -800,6 +800,23 @@
 						"require_order": "false",
 						"require_all": "true"
 					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Pronounciation Challenge!",
+						"question": "How would you pronounce <span lang=\"grc\">ὑπόθεσις</span>, <em>hypothesis</em>?",
+						"options": [ [
+							{ "value": "U-po-the-sis", "display": "U-po-the-sis" },
+							{ "value": "Hu-po-the-sis", "display": "Hu-po-the-sis" },
+							{ "value": "I-po-the-sis", "display": "I-po-the-sis" }
+						]],
+						"answers": ["Hu-po-the-sis"],
+						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὑ</span> is pronounced like \"Hu\".",
+						"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ὑ</span> is pronounced like \"Hu\" because of the rough breathing.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/smooth.html",
@@ -811,13 +828,30 @@
 						"title": "Pronounciation Challenge!",
 						"question": "How would you pronounce <span lang=\"grc\">ὀλιγαρχία</span>, <em>oligarchy</em>?",
 						"options": [ [
-							{ "value": "Roh-li-gar-khia", "display": "Roh-li-gar-khia" },
-							{ "value": "Hoh-li-gar-khia", "display": "Hoh-li-gar-khia" },
-							{ "value": "Oh-li-gar-khia", "display": "Oh-li-gar-khia" }
+							{ "value": "Ro-li-gar-khia", "display": "Ro-li-gar-khia" },
+							{ "value": "Ho-li-gar-khia", "display": "Ho-li-gar-khia" },
+							{ "value": "O-li-gar-khia", "display": "O-li-gar-khia" }
 						]],
-						"answers": ["Oh-li-gar-khia"],
-						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὀ</span> sounds like 'oh', because of its smooth breathing.",
+						"answers": ["O-li-gar-khia"],
+						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὀ</span> sounds like 'o', because of its smooth breathing.",
 						"hintMsg": "<strong>Not Quite</strong> Remember that smooth breathings don't affect pronunciation. So <span lang=\"grc\">ὀλιγαρχία</span> simply sounds like 'Oh-li-gar-khia'.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": { "orientation": "vertical" },
+						"title": "Pronounciation Challenge!",
+						"question": "How would you pronounce <span lang=\"grc\">ἄνθρωπός</span>, <em>man</em>?",
+						"options": [ [
+							{ "value": "An-thro-pos", "display": "An-thro-pos" },
+							{ "value": "Han-thro-pos", "display": "Han-thro-pos" },
+							{ "value": "En-thro-pos", "display": "En-thro-pos" }
+						]],
+						"answers": ["An-thro-pos"],
+						"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ἀ</span> sounds like 'a', because of its smooth breathing.",
+						"hintMsg": "<strong>Not Quite</strong> Remember that smooth breathings don't affect pronunciation. So <span lang=\"grc\">ἄνθρωπός</span> simply sounds like 'An-thro-pos'.",
 						"failureMsg": "<strong>The correct answer was...</strong>",
 						"require_order": "false",
 						"require_all": "true"
