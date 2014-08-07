@@ -40,7 +40,7 @@ class UserObjectsOnlyAuthorization(Authorization):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
 		submissions = []
-		table = gdb.query("""START u=node(*) MATCH (u)-[:submissions]->(s) WHERE HAS (u.username) AND u.username='""" + bundle.request.user.username + """' RETURN s""")		
+		table = gdb.query("""START u=node(*) MATCH (u)-[:submits]->(s) WHERE HAS (u.username) AND u.username='""" + bundle.request.user.username + """' RETURN s""")		
 			
 		# create the objects which was queried for and set all necessary attributes
 		for s in table:
