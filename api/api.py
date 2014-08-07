@@ -383,15 +383,16 @@ class SubmissionResource(Resource):
 				userNode = gdb.nodes.create(username=request.user.username)
 				userNode.labels.add("User")
 			
+			
 			subms = gdb.nodes.create(
-				response = data.get("response"), # string 
-				task = data.get("task"), # string 
+				response = data.get("response"),
+				task = data.get("task"), 
 				smyth = data.get("smyth"),	# string
-				time = data.get("time"),	 # integer
-				accuracy = data.get("accuracy"), # integer
+				time = data.get("time"),	 # catch this so that it doesn't lead to submission problems
+				accuracy = data.get("accuracy"),
 				encounteredWords = data.get("encounteredWords"), # array
-				slideType = data.get("slideType"), # string
-				timestamp = data.get("timestamp") # datetime
+				slideType = data.get("slideType"),
+				timestamp = data.get("timestamp") 
 			)
 			
 			subms.labels.add("Submission")
