@@ -388,7 +388,7 @@ class SubmissionResource(Resource):
 				response = data.get("response"),
 				task = data.get("task"), 
 				smyth = data.get("smyth"),	# string
-				time = data.get("time") if data.get("time") is not None else 0,	 # catch this so that it doesn't lead to submission problems
+				time = data.get("time"),	 # catch this so that it doesn't lead to submission problems
 				accuracy = data.get("accuracy"),
 				encounteredWords = data.get("encounteredWords"), # array
 				slideType = data.get("slideType"),
