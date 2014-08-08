@@ -55,8 +55,8 @@ msgid ""
 "You can help create a digital edition of a Classical work, no matter what "
 "skill level you're at. You'll be improving your Ancient Greek and "
 "contributing to Open Data at the same time!"
-msgstr "مهم نیست در چه مرحله ای از زبان هستی، می توانی به ایجاد نسخه دیجیتال آثار کلاسیک کمک کنی. با این کار
-دانش خود را در یونانی باستان ارتقا می دهی و هم زمان به ایجاد داده های باز برای همه کمک می کنی."
+msgstr "مهم نیست در چه مرحله ای از زبان هستی، می توانی به ایجاد نسخه دیجیتال آثار کلاسیک کمک کنی. با این کار"
+"دانش خود را در یونانی باستان ارتقا می دهی و هم زمان به ایجاد داده های باز برای همه کمک می کنی."
 
 #: templates/create.html:19
 msgid "Digital Editions in Progress"
@@ -74,8 +74,8 @@ msgstr "آماده هستی از مهارت های خود در زبان یونا
 msgid ""
 "When you feel like you've learned enough, dive right in to more advanced "
 "(and more fun) Greek learning tools."
-msgstr "هر وقت فکر کردی به اندازه کافی یاد گرفتی، وارد مراحل پیشرفته تر استفاده از ابزارهای یادگیری یونانی بشو
-(و لذت بیشتری ببر)"
+msgstr "هر وقت فکر کردی به اندازه کافی یاد گرفتی، وارد مراحل پیشرفته تر استفاده از ابزارهای یادگیری یونانی بشو"
+"(و لذت بیشتری ببر)"
 
 #: templates/home.html:32
 msgid "Start Reading"
@@ -163,7 +163,7 @@ msgid ""
 "glory that suits your personal learning style."
 msgstr 
 "مهارت‌های یونانی خاص خودت را از طریق بازی توسعه بده و راه خودت را به سمت شکوه "
-"یونان که متناسب با سبک یادگیری خودت است، انتخاب کن
+"یونان که متناسب با سبک یادگیری خودت است، انتخاب کن"
 
 #: templates/index.html:119
 msgid "Keep it original."
