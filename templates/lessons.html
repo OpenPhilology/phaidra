@@ -1,9 +1,9 @@
-{% extends "base.html" 
+{% extends "base.html" %} 
 {% load i18n %}
 
 	{# Determine which navigation element is 'active'  #}
 	{% block nav %} 
-		{% with 'active' as lessons_active 
+		{% with 'active' as lessons_active %} 
 			{{ block.super }}
 		{% endwith %}
 	{% endblock %}
