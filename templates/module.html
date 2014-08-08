@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+	{# Determine which CSS file to load #}
+	{% block css %}
+		{% with 'lessons' as css_file %}
+			{{ block.super }}
+		{% endwith %}
+	{% endblock %}
+
+
 	{# Determine which navigation element is 'active'  #}
 	{% block nav %}
 		{% with 'active' as lessons_active %}
@@ -10,13 +18,24 @@
 
 	{% block content %}
 
+
+	{% get_current_language_bidi as LANGUAGE_BIDI %}
+
+	<!-- Move this logic into CSS -->
 	<div class="col-md-1 hidden-sm hidden-xs" style="padding: 20px">
-		<a href="/lessons/"><span class="glyphicon glyphicon-arrow-left" style="margin-right: 5px"></span>{% trans "Lessons" %}</a>
+		<a href="/lessons/">
+			{% if LANGUAGE_BIDI %}
+				<span class="glyphicon glyphicon-arrow-right" style="margin-left: 5px"></span>
+			{% else %}
+				<span class="glyphicon glyphicon-arrow-left" style="margin-right: 5px"></span>
+			{% endif %}
+			{% trans "Lessons" %}
+		</a>
 	</div>
 	<div class="col-md-10">
 		<div class="row slide">
 			<div class="corner right">
-				<a href="#" data-toggle="tooltip" data-placement="left" title="Turn Page"></a>
+				<a href="#" data-toggle="tooltip" data-placement="left" title="{% trans 'Turn Page' %}"></a>
 			</div>
 			<div class="lesson-header">
 				<h1><img src="/static/images/tree-loader.gif"> {% trans "Loading Lesson" %}</h1>

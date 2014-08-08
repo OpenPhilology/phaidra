@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], function($, _, Backbone, PageTemplate) { 
+define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html', 'utils'], function($, _, Backbone, PageTemplate, Utils) { 
 
 	var View = Backbone.View.extend({
 		events: { 
@@ -12,6 +12,7 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 		template: _.template(PageTemplate),
 		initialize: function(options) {
 			this.options = options;
+			this.$el.addClass('loading');
 
 			// Bind to our document model and our word collection
 			this.model.on('populated', this.reRender, this);
@@ -24,6 +25,13 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			this.model.populate(this.options.CTS);
 		},
 		render: function() {
+
+			this.$el.addClass('loading');
+
+			var side;
+			if (dir === 'rtl')
+				side = (side === 'right') ? 'left': 'right';
+
 			this.$el.html(this.template({ 
 				side: this.options.side, 
 				author: this.model.get('author'),
@@ -53,15 +61,25 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/page.html'], functio
 			}).tooltip();
 
 			var ref = this.options.CTS.split(':');
-			this.$el.find('h1 a').html(ref[ref.length-1]);
+			var title = this.$el.find('h1 a');
+
+			if (locale === 'fa')
+				title.html(Utils.convertToPersian(ref[ref.length - 1]));
+			else
+				title.html(ref[ref.length-1]);
+
+			this.$el.removeClass('loading');
 
 			return this;	
 		},
 		turnPage: function(e) {
+			this.$el.addClass('loading');
 			if (e) e.preventDefault();
 			Backbone.history.navigate(this.$el.find('.corner a').attr('href'), { trigger: true });		
 		},
 		turnToPage: function(CTS) {
+			this.$el.addClass('loading');
+
 			this.options.CTS = CTS;
 			this.model.populate(CTS);
 		},

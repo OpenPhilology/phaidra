@@ -33,6 +33,15 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 
 		return urls;
 	};
+	
+	var persian = { 0: '۰', 1: '۱', 2: '۲', 3: '۳', 4:'۴', 5:'۵', 6: '۶', 7: '۷', 8: '۸', 9: '۹'};
+
+	Utils.convertToPersian = function(text) {
+		for (var i = 0; i < 10; i++) {
+			text = text.replace(eval('/' + i + '/g'), persian[i]);
+		}
+		return text;
+	};
 
 	Utils.getHelpTopics = function(smyth) {
 		// Get links to relevant content from Utils.Content based on smyth in the exercise

@@ -323,6 +323,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		},
 		parse: function(response) {
 			this.set(response);
+			this.set('translated', true);
 		},
 		// TODO: Flesh out this implementation to cover more query filters
 		getGrammar: function() {

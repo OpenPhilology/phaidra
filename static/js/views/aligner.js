@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'collections', 'text!templates/aligner.html'], function($, _, Backbone, Collections, AlignerTemplate) { 
+define(['jquery', 'underscore', 'backbone', 'collections', 'text!/templates/js/aligner.html'], function($, _, Backbone, Collections, AlignerTemplate) { 
 
 	var View = Backbone.View.extend({
 		events: { },

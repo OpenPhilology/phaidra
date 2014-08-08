@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+	{# Determine which CSS file to load #}
+	{% block css %}
+		{% with 'global' as css_file %}
+			{{ block.super }}
+		{% endwith %}
+	{% endblock %}
+
 	{# Determine which navigation element is 'active'  #}
 	{% block nav %}
 		{{ block.super }}
@@ -7,7 +14,7 @@
 
 	{% block content %}
 
-	<div class="col-md-7 col-md-offset-2">
+	<div class="col-md-7 col-md-offset-2" style="direction: ltr; float: left">
 		<h1>About Us</h1>
 		<hr>
 		<h2>The Project</h2>

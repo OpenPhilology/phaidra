@@ -1,27 +1,30 @@
 {% load i18n %}
+{% load set_var %}
 {% get_current_language_bidi as LANGUAGE_BIDI %}
-<!DOCTYPE html>
 {% if LANGUAGE_BIDI %}
-	<html dir="rtl">
+	{% set dir = "rtl" %}
 {% else %}
-	<html dir="ltr">
+	{% set dir = "ltr" %}
 {% endif %}
-<head>
+
+<!DOCTYPE html>
+<html dir="{{ dir }}">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
-		{% trans "Historical Languages eLearning - by Open Philology Project" %}
+		{% trans "Ancient Geek - by the Open Philology Project" %}
 	</title>
 
 	<!-- CSS -->
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/static/css/phaidra.css" rel="stylesheet">
+
+	<link href="/static/css/index.{{ dir }}.css" rel="stylesheet">
 
 	<!-- JS -->
 	<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
 	<script src="/static/js/lib/jquery-2.0.3.js"></script>
-	<script>var csrf_token = "{{ csrf_token }}";</script>
+	<script>var csrf_token = "{{ csrf_token }}"; var locale = "{{ LANGUAGE_CODE }}"; var dir = "{{ dir }}"; </script>
 
 	<style>
 		[lang="grc"] {
@@ -66,12 +69,17 @@
 			<img class="wiggle" src="/static/images/glasses.svg" style="position: absolute; left: 104px; top: 83px; width: 112px; height: 112px"> 
 		</div>
 
-		<div class="col-md-8 col-md-push-4">
+		{% if LANGUAGE_BIDI %}
+			<div class="col-md-8">
+		{% else %}
+			<div class="col-md-8 col-md-push-4">
+		{% endif %}
 			<div id="greeting-text">
 				<h1>{% trans "Get your Greek on." %}</h1>
 
 				<p class="lead" style="line-height: 40px">
-					{% trans "Learn Ancient Greek as you read Thucydides' harrowing tale of the war between " %}<br><span lang="grc">οἱ Λακεδαιμόνιοι</span>{% trans " (the Spartans) and " %}<span lang="grc">οἱ ᾿Αθηναῖοι</span>{% trans " (the Athenians)" %}{% trans "." %} 
+					{% trans "Learn Ancient Greek as you read Thucydides' harrowing tale of the war between" %}
+					<br><span lang="grc">οἱ Λακεδαιμόνιοι</span> {% trans "(the Spartans) and" %} <span lang="grc">οἱ ᾿Αθηναῖοι</span> {% trans "(the Athenians)." %} 
 				</p>
 
 				<p class="text-align: center">
@@ -130,63 +138,78 @@
 	<div class="row well">
 		<div class="row" style="margin-top: 30px">
 			<div class="col-md-10 col-md-offset-1">
-				<h3>Here's how it works.</h3>
+				<h3>{% trans "Here's how it works." %}</h3>
 				<hr>
 			</div>
 			<div class="col-md-5 col-md-offset-1">
 				<blockquote style="line-height: 36px">
-					<strong>You choose the way you want to learn Greek</strong> &mdash; whether it's through pure immersion or structured lessons, Ancient Geek supports you in both ways.<Br><br>
-					You'll have all the tools you need to grapple with <em>real</em> Ancient Greek from day one, not just contrived textbook examples. 
+					{% blocktrans %}
+						<strong>You choose the way you want to learn Greek</strong> &mdash; whether it's through pure immersion or structured lessons, Ancient Geek supports you in both ways.<Br><br>
+						You'll have all the tools you need to grapple with <em>real</em> Ancient Greek from day one, not just contrived textbook examples. 
+					{% endblocktrans %}
 				</blockquote>
 			</div>
 			<div class="col-md-5" style="text-align: center">
 				<img src="/static/images/reader.png" class="img-thumbnail">
 				<hr>
-				If you want to get straight to reading, you can use the <br>
-				<strong>Ancient Geek Reader</strong>, and dip in and out of the grammar<br>
-				only as needed.
+				{% blocktrans %}
+					If you want to get straight to reading, you can use the<br>
+					<strong>Ancient Geek Reader</strong>, and dip in and out of the grammar<br>
+					only as needed.
+				{% endblocktrans %}
 			</div>
 		</div>
 		<hr style="border: 2px solid #FFF">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<h3>Your mission.</h3>
+				<h3>{% trans "Your mission." %}</h3>
 				<hr>
 			</div>
 			<div class="col-md-5 col-md-offset-1">
 				<blockquote style="line-height: 36px">
-				You'll practice each lesson through enjoyable <strong>interactive exercises</strong> that will help you develop the skills you need.
+				{% trans "You'll practice each lesson through enjoyable <strong>interactive exercises</strong> that will help you develop the skills you need." %}
 				<br><br>
-				For example, you'll learn how to take Greek sentences and <strong>represent them as parse trees</strong>. Not only does this prove that you get the Greek, but you'll be able to compare your interpretations against those of others. 
+				{% trans "For example, you'll learn how to take Greek sentences and <strong>represent them as parse trees</strong>. Not only does this prove that you get the Greek, but you'll be able to compare your interpretations against those of others." %} 
 				<br><br>
-				When you're ready, you can create trees for new, unanalyzed sentences and contribute your interpretation to the Digital Humanities community as a micropublication. 
+				{% trans "When you're ready, you can create trees for new, unanalyzed sentences and contribute your interpretation to the Digital Humanities community as a micropublication." %} 
 				</blockquote>
 			</div>
 			<div class="col-md-5" style="text-align: center">
 				<img src="/static/images/treebanking.png" class="img-thumbnail">
 				<hr>
-				You'll learn how to build parse trees on sentences others have done,<br>
-				then <strong>contribute trees for brand new, digital texts</strong>.
+				{% blocktrans %}
+					You'll learn how to build parse trees on sentences others have done,<br>
+					then <strong>contribute trees for brand new, digital texts</strong>.
+				{% endblocktrans %}
 			</div>
 		</div>
 		<hr style="border: 2px solid #FFF">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<h3>What then?</h3>
+				<h3>{% trans "What then?" %}</h3>
 				<hr>
 			</div>
 			<div class="col-md-5 col-md-offset-1">
-				<blockquote style="line-height: 36px">Did you know there are still unexplored Classical texts? Many have never been digital before, much less translated or treebanked. <strong>That's where you come in.</strong> There are millions of words of newly digitized Greek just waiting to be analyzed, and you can help us do it by playing the same games that taught you your alphas from your betas.<br><br>
+				<blockquote style="line-height: 36px">
+					{% blocktrans %}
+						Did you know there are still unexplored Classical texts? Many have never been digital before, much less translated or treebanked. <strong>That's where you come in.</strong> There are millions of words of newly digitized Greek just waiting to be analyzed, and you can help us do it by playing the same games that taught you your alphas from your betas.
+					{% endblocktrans %}	
+
+					<br><br>
 				
-					The best part is that you're not alone &mdash; Ancient Geeks all over the world will contribute to creating <strong>new digital editions</strong> of these unexplored texts, using their newly acquired ancient language skills coupled with their diverse range of modern languages.
+					{% blocktrans %}
+						The best part is that you're not alone &mdash; Ancient Geeks all over the world will contribute to creating <strong>new digital editions</strong> of these unexplored texts, using their newly acquired ancient language skills coupled with their diverse range of modern languages.
+					{% endblocktrans %}
 				</blockquote>
 			</div>
 			<div class="col-md-5" style="text-align: center">
 				<img src="/static/images/diged.png" class="img-thumbnail">
 				<hr>
-				Any contribution big or small is helpful!<br>
-				You can continue to improve your Greek while<br>
-				contributing to open data.
+				{% blocktrans %}
+					Any contribution big or small is helpful!<br>
+					You can continue to improve your Greek while<br>
+					contributing to open data.
+				{% endblocktrans %}
 			</div>
 		</div>
 		<hr>
@@ -195,7 +218,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<p style="text-align: center; color: #999; margin-top: 30px">
+		<p style="text-align: center; color: #999; margin-top: 30px; direction: ltr">
 			Built with Geek love in Leipzig, Germany by lent, moritz, efranzini {@informatik.uni-leipzig.de} (<a href="/aboutus/">About Us</a>, <a href="https://github.com/OpenPhilology/phaidra" target="_blank">Github</a>), 
 			<br><a href="http://www.dh.uni-leipzig.de/wo/" target="_blank">Open Philology Project</a>, with support from Alexander von Humboldt Foundation, the European Social Fund (ESF), &amp; the Sächische AufbauBank (SAB).
 		</p>

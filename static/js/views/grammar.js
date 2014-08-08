@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/grammar-display.html'], function($, _, Backbone, Utils, Template) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/grammar-display.html'], function($, _, Backbone, Utils, Template) { 
 
 	var View = Backbone.View.extend({
 		events: { 

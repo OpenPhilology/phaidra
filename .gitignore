@@ -2,6 +2,6 @@ data.py
 env/*
 logs/*
 *.pyc
-*.sass-cache/*
-*/.sass-cache/*
+.sass-cache/*
+.sass-cache/
 *.*~
