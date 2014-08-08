@@ -432,8 +432,8 @@ msgstr "اثر"
 
 #: templates/js/page.html:11
 msgid ","
-msgstr ""
+msgstr "،"
 
 #: templates/js/page.html:11
 msgid "Jump to another section"
-msgstr ""
+msgstr "برو به یک قسمت دیگر"
