@@ -49,8 +49,9 @@ LANGUAGES = (
 
 CTS_LANG = (
 	'grc',
-	'eng',
-	'fas',
+	'en',
+	'fa',
+	'hr',
 )
 
 SITE_ID = 1

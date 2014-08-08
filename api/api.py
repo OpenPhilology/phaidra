@@ -546,6 +546,7 @@ class WordResource(Resource):
 	form = fields.CharField(attribute='form', null = True, blank = True)
 	lemma = fields.CharField(attribute='lemma', null = True, blank = True)
 	ref = fields.CharField(attribute='ref', null = True, blank = True)
+	lang = fields.CharField(attribute='lang', null = True, blank = True)
 	
 	sentence_resource_uri = fields.CharField(attribute='sentence_resource_uri', null = True, blank = True)
 	
@@ -699,17 +700,20 @@ class WordResource(Resource):
 			
 			# filter word on parameters
 			for key in query_params:
-				if len(key.split('__')) > 1:
-					if key.split('__')[1] == 'contains':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
-					elif key.split('__')[1] == 'startswith':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
-					elif key.split('__')[1] == 'endswith':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
-					elif key.split('__')[1] == 'isnot':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
-				else:
-					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
+				if key in ['tbwid', 'head', 'length', 'cid']:
+					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """=""" +query_params[key]+ """ AND """
+				else:				
+					if len(key.split('__')) > 1:
+						if key.split('__')[1] == 'contains':
+							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+						elif key.split('__')[1] == 'startswith':
+							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+						elif key.split('__')[1] == 'endswith':
+							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+						elif key.split('__')[1] == 'isnot':
+							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
+					else:
+						q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
 			q = q + """RETURN w, s ORDER BY ID(w)"""
 			
@@ -1017,8 +1021,7 @@ class SentenceResource(Resource):
 						if w['head'] == id:
 							aim_words.append(w)   
 							
-				aim_words.append(verb)
-					
+				aim_words.append(verb)	
 				# check if not verbs only are returned
 				if len(aim_words) > 1:
 					# consider params
