@@ -350,15 +350,15 @@ msgstr "وارد سیستم نشده ای"
 
 #: templates/profile.html:18
 msgid "Would you care to log in?"
-msgstr "اولویت‌ها"
+msgstr "لطفاً وارد سیستم شو"
 
 #: templates/js/grammar-display.html:3
 msgid "Table of Contents"
-msgstr ""
+msgstr "فهرست"
 
 #: templates/js/notes.html:4
 msgid "Preferences"
-msgstr ""
+msgstr "ترجیحات"
 
 #: templates/js/notes.html:5
 msgid "Add Annotation"
@@ -416,4 +416,4 @@ msgstr "چیزی پیدا نشد"
 
 #: templates/js/page.html:11
 msgid "by"
-msgstr "توسط"
+msgstr "اثر"
