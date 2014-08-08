@@ -12,6 +12,7 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html', 'uti
 		template: _.template(PageTemplate),
 		initialize: function(options) {
 			this.options = options;
+			this.$el.addClass('loading');
 
 			// Bind to our document model and our word collection
 			this.model.on('populated', this.reRender, this);
@@ -24,6 +25,13 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html', 'uti
 			this.model.populate(this.options.CTS);
 		},
 		render: function() {
+
+			this.$el.addClass('loading');
+
+			var side;
+			if (dir === 'rtl')
+				side = (side === 'right') ? 'left': 'right';
+
 			this.$el.html(this.template({ 
 				side: this.options.side, 
 				author: this.model.get('author'),
@@ -60,13 +68,18 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html', 'uti
 			else
 				title.html(ref[ref.length-1]);
 
+			this.$el.removeClass('loading');
+
 			return this;	
 		},
 		turnPage: function(e) {
+			this.$el.addClass('loading');
 			if (e) e.preventDefault();
 			Backbone.history.navigate(this.$el.find('.corner a').attr('href'), { trigger: true });		
 		},
 		turnToPage: function(CTS) {
+			this.$el.addClass('loading');
+
 			this.options.CTS = CTS;
 			this.model.populate(CTS);
 		},

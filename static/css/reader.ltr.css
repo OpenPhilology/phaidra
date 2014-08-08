@@ -9,6 +9,10 @@
 .progress-bar {
   float: left; }
 
+blockquote {
+  border-left: 5px solid;
+  border-right: 0; }
+
 /* Color Scheme! */
 /* Fonts! */
 /* Mix-ins */
@@ -115,99 +119,6 @@
 
   100% {
     transform: rotateZ(2deg); } }
-
-html, body {
-  height: 100%; }
-
-body {
-  color: #333;
-  font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  background-repeat: repeat-x;
-  background-position: left bottom;
-  background-attachment: fixed; }
-
-a {
-  color: #1fadad; }
-  a:hover {
-    color: #178282; }
-
-blockquote {
-  line-height: 40px; }
-
-[lang="grc"], div[lang="grc"] {
-  font-family: 'Cambria', 'Times New Romans' !important;
-  font-size: 1.3em;
-  letter-spacing: 0.1em; }
-  [lang="grc"] em, div[lang="grc"] em {
-    background-color: #FFF0A3;
-    border-radius: 3px;
-    padding: 3px;
-    font-style: normal; }
-  [lang="grc"] em[data-toggle="tooltip"], div[lang="grc"] em[data-toggle="tooltip"] {
-    cursor: pointer; }
-
-.masc {
-  color: #1fadad; }
-
-.fem {
-  color: #d15241; }
-
-.neut {
-  color: #49a556; }
-
-p {
-  line-height: 3em; }
-
-p span[lang="grc"] {
-  border: 1px solid #EEE;
-  padding: 2px;
-  border-radius: 3px;
-  background-color: #F6F6F6;
-  margin-left: 3px;
-  margin-right: 3px; }
-
-/* Override Bootstrap Styles */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Garamond'; }
-
-.btn {
-  border: 1px solid #EEE;
-  text-decoration: none;
-  border-radius: 2px; }
-  .btn.btn-link {
-    border: 0;
-    color: #1fadad;
-    text-decoration: none; }
-
-label {
-  font-weight: normal;
-  font-size: 1.2em; }
-
-.label {
-  padding: 0.4em 0.6em 0.3em;
-  margin: 0px 3px; }
-  .label.label-default {
-    background-color: #BBB; }
-  .label.label-primary {
-    background-color: #1fadad; }
-  .label.label-danger {
-    background-color: #d15241; }
-  .label.label-success {
-    background-color: #a3d55f; }
-  .label.label-info {
-    background-color: #4e6087; }
-
-.container {
-  max-width: none !important;
-  width: 100%;
-  padding: 0;
-  height: 100%; }
-
-.row {
-  margin: 0; }
-
-.alert.alert-success strong {
-  color: #19641A !important; }
 
 /* Header */
 .banner {
@@ -327,6 +238,99 @@ label {
       .user-info a.username:hover img, .user-info a.log-in-link:hover img {
         box-shadow: 2px 2px 3px #455577; }
 
+html, body {
+  height: 100%; }
+
+body {
+  color: #333;
+  font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-attachment: fixed; }
+
+a {
+  color: #1fadad; }
+  a:hover {
+    color: #178282; }
+
+blockquote {
+  line-height: 40px; }
+
+[lang="grc"], div[lang="grc"] {
+  font-family: 'Cambria', 'Times New Romans' !important;
+  font-size: 1.3em;
+  letter-spacing: 0.1em; }
+  [lang="grc"] em, div[lang="grc"] em {
+    background-color: #FFF0A3;
+    border-radius: 3px;
+    padding: 3px;
+    font-style: normal; }
+  [lang="grc"] em[data-toggle="tooltip"], div[lang="grc"] em[data-toggle="tooltip"] {
+    cursor: pointer; }
+
+.masc {
+  color: #1fadad; }
+
+.fem {
+  color: #d15241; }
+
+.neut {
+  color: #49a556; }
+
+p {
+  line-height: 3em; }
+
+p span[lang="grc"] {
+  border: 1px solid #EEE;
+  padding: 2px;
+  border-radius: 3px;
+  background-color: #F6F6F6;
+  margin-left: 3px;
+  margin-right: 3px; }
+
+/* Override Bootstrap Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Garamond'; }
+
+.btn {
+  border: 1px solid #EEE;
+  text-decoration: none;
+  border-radius: 2px; }
+  .btn.btn-link {
+    border: 0;
+    color: #1fadad;
+    text-decoration: none; }
+
+label {
+  font-weight: normal;
+  font-size: 1.2em; }
+
+.label {
+  padding: 0.4em 0.6em 0.3em;
+  margin: 0px 3px; }
+  .label.label-default {
+    background-color: #BBB; }
+  .label.label-primary {
+    background-color: #1fadad; }
+  .label.label-danger {
+    background-color: #d15241; }
+  .label.label-success {
+    background-color: #a3d55f; }
+  .label.label-info {
+    background-color: #4e6087; }
+
+.container {
+  max-width: none !important;
+  width: 100%;
+  padding: 0;
+  height: 100%; }
+
+.row {
+  margin: 0; }
+
+.alert.alert-success strong {
+  color: #19641A !important; }
+
 /*
 *	Style for main viewport
 */
@@ -412,6 +416,17 @@ label {
       font-size: 24px;
       position: absolute; }
 
+.loading:before {
+  content: url(/static/images/tree-loader.gif);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+  text-align: center;
+  padding: 20px; }
+
 /**
  * Used to style the reading environment.
  */
@@ -430,12 +445,17 @@ label {
   #reader .col-md-6, #reader .col-md-12 {
     padding-left: 0;
     padding-right: 0; }
+  #reader .well {
+    margin-right: 15px;
+    background-color: #FFF;
+    direction: ltr; }
   #reader .page {
     padding: 10px 80px 80px 80px;
     position: relative;
     margin-top: 0;
     direction: ltr; }
     #reader .page h1 {
+      direction: ltr;
       text-align: center; }
   #reader .page-content {
     line-height: 3em; }
