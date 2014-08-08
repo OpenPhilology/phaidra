@@ -1,0 +1,456 @@
+/*
+*	Global CSS
+*/
+
+/** RTL Support!!!! **/
+@media (min-width: 992px) {
+	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+		float: $left;
+		direction: $dir;
+	}
+}
+.progress-bar {
+	float: $left;
+}
+
+/* Color Scheme! */
+$color-pri-one: #D15241; //#F44D61; //#BE1E2D; 		// Bright red
+$color-pri-two: #1FADAD; 		// Teal
+$color-pri-two-darker: rgba(9, 61, 61, 0.3);
+$color-pri-two-lighter: #56C7C7;
+$color-pri-three: #523D5B;		// Purple
+
+$color-sec-one: #931926;		// Deep red
+$color-sec-two: #4E6087;		// Indigo
+$color-sec-two-lighter: #62749C; 
+$color-sec-three: #F05629;	 	// Orange
+$color-sec-four: #F4BC78;		// Yellow
+
+$color-light-green: #A3D55F;
+$color-dark-green: #49A556;
+
+$text-light-color: #EEE;
+$text-dark-color: #666;
+
+/* Fonts! */
+$font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+/* Mix-ins */
+// Background-color transition
+@mixin transition($prop, $len, $style) {
+	$trans: $prop $len $style;
+
+	-webkit-transition: $trans;
+	-moz-transition: $trans;
+	-o-transition: $trans;
+	-ms-transition: $trans;
+	transition: $trans;
+}
+@mixin gradient($top-color, $top-percent, $bottom-color, $bottom-percent) {
+	background-image: linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+	background-image: -o-linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+	background-image: -moz-linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+	background-image: -webkit-linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+	background-image: -ms-linear-gradient(bottom, $top-color $top-percent, $bottom-color $bottom-percent);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop($top-percent / 100, $top-color),
+		color-stop($bottom-percent / 100, $bottom-color)
+	);
+
+	background-color: $top-color;
+}
+@mixin animate($name, $duration, $timing-function, $delay, $iteration-count) {
+	-webkit-animation: $name $duration $timing-function $delay $iteration-count;
+	-moz-animation: $name $duration $timing-function $delay $iteration-count;
+	-o-animation: $name $duration $timing-function $delay $iteration-count;
+	animation: $name $duration $timing-function $delay $iteration-count;
+}
+@mixin wiggle {
+	@include animate(wiggle, .2s, ease, 0, 3);
+}
+
+// CSS3 Animations
+@-webkit-keyframes bounce {
+	0% {
+		top: 92px;
+		animation-timing-function:ease-in;
+	}
+	37% {
+		top: 62px;
+		animation-timing-function:ease-out;
+	}
+	55% {
+		top: 92px;
+		animation-timing-function:ease-in;
+	}
+	73% {
+		top: 78px;
+		animation-timing-function:ease-out;
+	}
+	82% {
+		top: 92px;
+		animation-timing-function:ease-in;
+	}
+	91% {
+		top: 88px;
+		animation-timing-function:ease-out;
+	}
+	100% {
+		top: 92px;
+		animation-timing-function:ease-in;
+	}
+}
+@keyframes bounce {
+	0% {
+		top: 92px;
+		animation-timing-function:ease-in;
+	}
+	37% {
+		top: 62px;
+		animation-timing-function:ease-out;
+	}
+	55% {
+		top: 92px;
+		animation-timing-function:ease-in;
+	}
+	73% {
+		top: 78px;
+		animation-timing-function:ease-out;
+	}
+	82% {
+		top: 92px;
+		animation-timing-function:ease-in;
+	}
+	91% {
+		top: 88px;
+		animation-timing-function:ease-out;
+	}
+	100% {
+		top: 92px;
+		animation-timing-function:ease-in;
+	}
+}
+.bounce {
+	@include animate(bounce, 1s, ease, .5s, 1);
+}
+@-webkit-keyframes wiggle {
+	0% {
+		-webkit-transform: rotateZ(2deg);
+	}
+	50% {
+		-webkit-transform: rotateZ(-2deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(2deg);
+	}
+}
+
+@-moz-keyframes wiggle {
+	0% {
+		-moz-transform: rotateZ(2deg);
+	}
+	50% {
+		-moz-transform: rotateZ(-2deg);
+	}
+	100% {
+		-moz-transform: rotateZ(2deg);
+	}
+}
+@-o-keyframes wiggle {
+	0% {
+		-o-transform: rotateZ(2deg);
+	}
+	50% {
+		-o-transform: rotateZ(-2deg);
+	}
+	100% {
+		-o-transform: rotateZ(2deg);
+	}
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotateZ(2deg);
+	}
+	50% {
+		transform: rotateZ(-2deg);
+	}
+	100% {
+		transform: rotateZ(2deg);
+	}
+}
+html, body {
+	height: 100%;
+}
+body {
+	color: #333;
+	font-family: $font-family;
+	//background-image: url('/static/images/footer_graphic.png');
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	background-attachment: fixed;
+}
+a {
+	color: $color-pri-two;
+
+	&:hover {
+		color: darken($color-pri-two, 10%);
+	}
+}
+blockquote {
+	line-height: 40px;
+}
+[lang="grc"], div[lang="grc"] {
+	font-family: 'Cambria', 'Times New Romans' !important;
+	font-size: 1.3em;
+	letter-spacing: 0.1em;
+
+	em {
+		background-color: #FFF0A3;
+		border-radius: 3px;
+		padding: 3px;
+		font-style: normal;
+	}
+	em[data-toggle="tooltip"] {
+		cursor: pointer;
+	}
+}
+.masc {
+	color: $color-pri-two; // #3882C5;
+}
+.fem {
+	color: $color-pri-one; //#E04A62;
+}
+.neut {
+	color: $color-dark-green; //#3C8818;
+}
+p {
+	line-height: 3em;
+}
+
+p span[lang="grc"] {
+	border: 1px solid #EEE;
+	padding: 2px;
+	border-radius: 3px;
+	background-color: #F6F6F6;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+/* Override Bootstrap Styles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Garamond';
+}
+.btn {
+	border: 1px solid #EEE;
+	text-decoration: none;
+	border-radius: 2px;
+
+	&.btn-link {
+		border: 0;
+		color: $color-pri-two;
+		text-decoration: none;
+	}
+}
+label {
+	font-weight: normal;
+	font-size: 1.2em;
+}
+.label {
+	padding: 0.4em 0.6em 0.3em;
+	margin: 0px 3px;
+	
+	&.label-default {
+		background-color: #BBB;
+	}
+	&.label-primary {
+		background-color: $color-pri-two;
+	}
+	&.label-danger {
+		background-color: $color-pri-one;
+	}
+	&.label-success {
+		background-color: $color-light-green;
+	}
+	&.label-info {
+		background-color: $color-sec-two;
+	}
+}
+.container {
+	max-width: none !important;
+	width: 100%;
+	padding: 0;
+	height: 100%;
+}
+.row {
+	margin: 0;
+}
+.alert {
+	&.alert-success {
+		strong {
+			color: #19641A !important;
+		}
+	}
+}
+
+@import "header";
+
+/*
+*	Style for main viewport
+*/
+#main {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	padding-top: $banner-height;
+	width: 100%;
+	
+	.lesson-right-menu {
+		position: relative;
+		height: 40%;
+
+		a {
+			color: $color-sec-two;
+			position: absolute;
+			font-size: 70px;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	strong {
+		margin-left: 2px;
+		margin-right: 2px;
+		letter-spacing: 0.05em;
+		color: $color-sec-two;
+	}
+}
+/* Styles related to the intro page */
+.thuc {
+	display: inline-block;
+
+	.wiggle {
+		@include animate(wiggle, .2s, ease, 2s, 3);
+		display: inline-block;
+	}
+}
+.wiggle {
+	@include animate(wiggle, .5s, ease, 0, 3);
+}
+
+// Used as navigation in Reader and in Lessons
+.corner {
+	content: "";
+	position: fixed;
+	border-style: solid;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
+
+	&.left {
+		@include if-ltr {
+			top: $banner-height;
+			#{if-ltr('left', 'right')}: 0;
+			border-color: #EEE #FFF;
+			border-width: 60px 60px 0 0;
+
+			a {
+				top: -60px;
+				border-width: 0 0 60px 60px;
+				border-color: #FFF $color-pri-one;
+
+				&::after {
+					left: -55px;
+					top: 1px;
+					content: "\e091";
+				}
+				&:hover {
+					border-color: #FFF lighten($color-pri-one, 5%);
+				}
+			}
+		}
+
+		@include if-rtl {
+			top: $banner-height;
+			#{if-ltr('right', 'left')}: 0;
+			border-color: #EEE #FFF;
+			border-width: 0 60px 60px 0;
+
+			a {
+				right: -60px;
+				border-width: 60px 0 0 60px;
+				border-color: $color-pri-one #FFF;
+
+				&::after {
+					right: 5px;
+					top: -57px;
+					content: "\e092";
+				}
+				&:hover {
+					border-color: lighten($color-pri-one, 5%) #FFF;
+				}
+			}
+		}
+	}
+	&.right {
+		@include if-rtl {
+			top: $banner-height;
+			#{if-ltr('left', 'right')}: 0;
+			border-color: #EEE #FFF;
+			border-width: 60px 60px 0 0;
+
+			a {
+				top: -60px;
+				border-width: 0 0 60px 60px;
+				border-color: #FFF $color-pri-one;
+
+				&::after {
+					left: -55px;
+					top: 1px;
+					content: "\e091";
+				}
+				&:hover {
+					border-color: #FFF lighten($color-pri-one, 5%);
+				}
+			}
+		}
+
+		@include if-ltr {
+			top: $banner-height;
+			#{if-ltr('right', 'left')}: 0;
+			border-color: #EEE #FFF;
+			border-width: 0 60px 60px 0;
+
+			a {
+				right: -60px;
+				border-width: 60px 0 0 60px;
+				border-color: $color-pri-one #FFF;
+
+				&::after {
+					right: 5px;
+					top: -57px;
+					content: "\e092";
+				}
+				&:hover {
+					border-color: lighten($color-pri-one, 5%) #FFF;
+				}
+			}
+		}
+	}
+
+	a {
+		top: 0;
+		position: absolute;
+		border-style: solid;
+		color: #FFF;
+
+		&::after {
+			font-family: 'Glyphicons Halflings';
+			font-size: 24px;
+			position: absolute;
+		}
+
+	}
+}
+

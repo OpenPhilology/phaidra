@@ -1,0 +1,72 @@
+@import "directional";
+@import "global";
+
+#toc {
+	background-color: darken($color-sec-two, 10%);
+	color: #BBB;
+	width: 20%;
+	padding: 20px;
+	float: left;
+	overflow-y: scroll;
+	position: fixed;
+	height: 100%;
+
+	h2 {
+		color: #DDD;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	li {
+		margin: 0 -20px 0 -20px;
+
+
+		&.selected {
+			background-color: $color-pri-two;
+			a {
+				color: #EEE;
+			}
+		}
+	}
+
+	ul li {
+		padding: 10px 10px 10px 20px;
+
+	}
+	ul ul li {
+		padding: 10px 10px 10px 40px;
+	}
+	ul ul ul li {
+		padding: 10px 10px 10px 60px;
+	}
+}
+
+#grammar-container {
+	position: absolute;
+	left: 20%;
+	padding: 10px;
+	top: $banner-height;
+	width: 80%;
+
+	div[data-url^="/"] {
+		border: 1px solid #DDD;
+		padding: 60px;
+		margin: 10px;
+		background-color: #FFF;
+		position: relative;
+	}
+
+	.corner {
+		position: absolute;
+		box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+		
+		&.right {
+			top: -1px;
+			right: -1px;
+		}
+	}
+}
+

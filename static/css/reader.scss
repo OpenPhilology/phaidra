@@ -1,0 +1,164 @@
+@import "directional";
+@import "global";
+
+/**
+ * Used to style the reading environment.
+ */
+
+.progress-bar-morph {
+	background-color: $color-sec-four; 
+}
+.progress-bar-syn {
+	background-color: $color-pri-one; 
+}
+.progress-bar-voc {
+	background-color: $color-pri-two; 
+}
+
+#reader {
+	background-color: rgba(255, 255, 255, .8);
+	min-height: 100%;
+
+	.col-md-6, .col-md-12 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.page {
+		padding: 10px 80px 80px 80px;
+		position: relative;
+		margin-top: 0;
+
+		// TODO: Change this to reflect the language of the text being read.
+		direction: ltr;
+
+		h1 {
+			text-align: center;
+		}
+	}
+
+	.page-content {
+		line-height: 3em; 
+
+		span[lang="grc"] {
+			cursor: pointer;
+			padding: 5px;
+
+			&.punct {
+				padding: 1px !important;
+				margin-left: -8px;
+			}
+			&:hover {
+				background-color: lighten($color-sec-four, 20%);
+			}
+		}
+		.selected, .selected:hover {
+			background-color: lighten($color-sec-four, 10%) !important;
+		}
+	}
+
+
+	.notes-container {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		direction: $dir;
+
+		.notes {
+			background-color: #F7F7F7;
+			border-top: 1px solid #AAA;
+			box-shadow: 0 0 8px 0 rgba(0, 0, 0, .3);
+			height: 75px;
+			max-height: 75px;
+			padding: 5px 10px 30px 10px;
+			@include animate(all, .5s, linear, 0, 1);
+
+			.resources-header {
+				span {
+					margin-left: 20px;
+
+					&[lang="grc"] {
+						margin-left: 0px !important;
+						margin-right: 0px !important;
+					}
+				}
+				.selected {
+					background-color: lighten($color-sec-four, 10%) !important;
+					border: 0;
+					border-raidus: 0px !important;
+					padding: 6px;
+				}
+			}
+
+			&.expanded {
+				height: auto;
+				min-height: 75px;
+				max-height: 300px;
+				overflow: auto;
+				@include animate(all, .5s, linear, 0, 1);
+
+				.glyphicon-chevron-up {
+					-webkit-transform: rotate(180deg);
+					-moz-transform: rotate(180deg);
+					transform: rotate(180deg);
+				}
+
+				.resources {
+					display: block;
+				}
+				.intro {
+					display: none;
+				}
+			}
+
+			.label {
+				padding: 5px 6px 2px 5px;
+				position: relative;
+				top: -1px;
+				margin: 0 0 0 3px;
+			}
+
+			.resources {
+				display: none;
+			}
+			.intro {
+				display: block;
+			}
+		}
+
+		span[lang="grc"], *[lang="grc"], a[lang="grc"] {
+			border: 1px solid #EEE;
+			padding: 2px;
+			border-radius: 3px;
+			background-color: #FFF;
+			margin-left: 3px;
+			margin-right: 3px;
+			font-family: 'Cambria', 'Times New Romans' !important;
+		}
+
+		.notes-nav {
+			position: absolute;
+			#{if-ltr('right', 'left')}: 5px;
+			z-index: 1;
+
+			span.glyphicon {
+				padding: 10px;
+			}
+		}
+	}
+
+	.knowledge-container {
+		position: fixed;
+		bottom: 0;
+		z-index: 10;
+		width: 100%;
+
+		.progress {
+			margin: 0;
+			height: 13px;
+			border-radius: 0;
+			cursor: pointer;
+		}
+	}
+}
+

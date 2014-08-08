@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+	{# Determine which CSS file to load #}
+	{% block css %}
+		{% with 'reader' as css_file %}
+			{{ block.super }}
+		{% endwith %}
+	{% endblock %}
+
 	{# Determine which navigation element is 'active'  #}
 	{% block nav %}
 		{% with 'active' as reader_active %}

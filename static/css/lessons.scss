@@ -1,0 +1,669 @@
+@import "directional";
+@import "global";
+/**
+ * Styles used on the lessons.
+ */ 
+@mixin context-bg($color) {
+	border: 2px $color solid;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+	line-height: 2em;
+
+	background-color: lighten($color, 50%);
+
+	.glyphicon {
+		margin-right: 3px;
+		color: lighten($color, 40%);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		background-color: $color;
+		color: #FFF;
+		margin: -10px -10px 10px;
+		padding: 10px;
+		letter-spacing: 0.1em;
+	}
+}
+.bg-success {
+	@include context-bg($color-dark-green);
+
+	strong {
+		color: darken($color-dark-green, 10%) !important;
+	}
+}
+.bg-info {
+	@include context-bg($color-sec-two);
+}
+.bg-primary {
+	@include context-bg($color-pri-two);
+	color: #333;
+
+	strong {
+		color: darken($color-pri-two, 10%) !important;
+	}
+}
+.bg-error {
+	@include context-bg($color-pri-one);
+
+	strong {
+		color: darken($color-pri-one, 10%) !important;
+	}
+}
+/* The speech bubble that Thuc uses to speak */
+.speech {
+	$color: lighten($color-sec-four, 10%);
+	position: relative;
+	padding: 15px;
+	margin: 1em 0 3em;
+	background-color: $color;
+	border-radius: 3px;
+	line-height: 2em;
+	margin-bottom: 10px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		border-width: 15px 15px 15px 0;
+		border-color: transparent $color;
+		display: block;
+		width: 0;
+		z-index: 1;
+		left: -15px;
+		top: 25px;
+	}
+}
+/* Lesson-related styles */
+.achievements {
+	.box {
+		$color: lighten($color-sec-two, 40%);
+
+		height: 125px;
+		width: 125px;
+		display: inline-block;
+		background-color: $color;
+		color: #333;
+		margin: 5px;
+		border-radius: 2px;
+		text-align: center;
+		padding: 30px;
+		text-decoration: none;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color, 8%);
+			@include transition(background-color, .2s, ease-out);
+		}
+
+		strong {
+			font-size: 24px;
+			font-weight: normal;
+		}
+	}
+}
+.feedback-container {
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 2px;
+
+	h3 {
+		color: lighten($color-pri-three, 10%);
+		letter-spacing: 0.1em;
+	}
+	h4 {
+		color: $color-pri-three;
+		letter-spacing: 0.1em;
+		font-weight: normal;
+	}
+	.badge {
+		margin-right: 5px;
+
+		&.vocab {
+			background-color: $color-pri-two;
+		}
+		&.lesson {
+			background-color: $color-pri-one;
+		}
+		&.treebank {
+			background-color: $color-dark-green;
+		}
+	}
+
+	#pies {
+		text-align: center;
+	}
+	#vocab-pie {
+		& + h4 {
+			color: $color-pri-two;
+			margin-bottom: 0px;
+		}
+	}
+	#morph-pie + h4 {
+		color: $color-sec-four;
+		margin-bottom: 0px;
+	}
+	#syn-pie + h4 {
+		color: $color-pri-one;		
+		margin-bottom: 0px;
+	}
+
+	#records {
+		.sparkline {
+			display: inline-block;
+
+			path {
+				stroke: #888;
+				stroke-width: 2px;
+				fill: none;
+			}
+		}
+	}
+}
+/*
+*	Progress bar displayed above every lesson-in-progress
+*/
+.lesson-progress {
+	margin-bottom: 10px;
+	text-align: center;
+
+	.bar {
+		$c: #DDD;
+
+		display: inline-block;
+		height: 10px;
+		background: linear-gradient(to left, #FFF 50%, $color-pri-two 50%);
+		background-size: 200% 100%;
+		background-position: right bottom;
+		transition: all 0.5s ease-out;
+
+		border: {
+			top: 1px solid $c;
+			bottom: 1px solid $c;
+			left: 1px solid $c;
+		}
+
+		&:first-child {
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		&:last-child {
+			border-right: 1px solid $c;
+			border-bottom-right-radius: 3px;
+			border-top-right-radius: 3px;
+		}
+
+		&.complete {
+			$b: $color-pri-two;
+			background-position: left bottom;
+		}
+	}
+}
+/*
+*	The lesson boxes visible on the lessons screen
+*/
+.module-container {
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 2px;
+	padding: 20px;
+	text-align: center;
+	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+div.module {
+	background-color: #DDD;
+}
+.module {
+	border-radius: 3px;
+	background-color: lighten($color-sec-two, 50%);
+	text-align: center;
+	display: inline-block;
+	padding: 20px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	width: 100%;
+	min-height: 150px;
+	vertical-align: top;
+	position: relative;
+	box-shadow:	0px 0px 4px 0px rgba(0, 0, 0, .1);
+	color: #333 !important;
+
+	img {
+		height: 65px;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}	
+
+	&.nouns {
+		background-color: $color-pri-two;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color-pri-two, 5%);
+			@include transition(background-color, .2s, ease-in);
+
+			box-shadow: 2px 2px 3px #CCC;
+			position: relative;
+			top: -3px;
+		}
+
+		h3 {
+			color: #FFF;
+		}
+	}
+	&.morph {
+		background-color: $color-sec-two;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color-sec-two, 5%);
+			@include transition(background-color, .2s, ease-in);
+
+			box-shadow: 2px 2px 3px #CCC;
+			position: relative;
+			top: -3px;
+		}
+
+		h3 {
+			color: #FFF;
+		}
+	}
+	&.verbs {
+		background-color: $color-sec-two;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color-sec-two, 5%);
+			@include transition(background-color, .2s, ease-in);
+
+			box-shadow: 2px 2px 3px #CCC;
+			position: relative;
+			top: -3px;
+		}
+
+		h3 {
+			color: #FFF;
+		}
+	}
+	&.basics {
+		background-color: $color-pri-one;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color-pri-one, 5%);
+			@include transition(background-color, .2s, ease-in);
+			box-shadow: 2px 2px 3px #CCC;
+			position: relative;
+			top: -3px;
+		}
+
+		h3 {
+			color: #FFF;
+		}
+	}
+
+	h3 {
+		font-size: 12px;
+		font-weight: normal;
+		letter-spacing: 0.1em;
+		color: #999;
+		font-family: 'Helvetica';
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	div {
+		position: absolute;
+		bottom: 10px;
+		text-align: center;
+		width: 100%;
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+
+	.circle {
+
+		$circle-color: #FFF;
+
+		display: inline-block;
+		width: 13px;
+		height: 13px;
+		border: 2px solid $circle-color;
+		border-radius: 10px;
+		margin: 2px;
+
+		&.complete {
+			background-color: $circle-color;
+		}
+	}
+}
+
+/*
+*	Slide Styles	
+*/
+.lesson-header {
+	h1 {
+		display: inline-block;
+		margin-top: 0;
+		color: darken($color-sec-two, 10%);
+		text-transform: uppercase;
+		font-size: 24px;
+	}
+}
+// Styling for Alphabet units
+.alphabet {
+	list-style-type: none;
+	border: 1px solid #EEE;
+	width: 100%;
+	padding-left: 0;
+	margin-bottom: 20px !important;
+	
+	li {
+		font-family: 'Cambria', 'Times New Romans' !important;
+		display: inline;
+		font-size: 24px;
+		padding: 5px 10px;
+		color: #AAA;
+		margin-left: -3px;
+		margin-right: -3px;
+
+		&.learned {
+			color: #333;
+			background-color: desaturate(lighten($color-pri-one, 30%), 0%);
+		}
+		&.current {
+			color: #FFF;
+			background-color: $color-pri-one;
+		}
+	}
+}
+.letter {
+	text-align: center;
+	padding: 30px;
+	box-sizing: border-box;
+
+	img {
+		height: 200px;
+		max-width: 200px;
+		max-width: 100%;
+	}
+
+	&.bg-light {
+		background-color: #F4CDA2;	
+	}
+	&.bg-med {
+		background-color: desaturate(lighten($color-pri-two, 40%), 30%);
+	}
+	&.bg-dark {
+		background-color: desaturate(lighten($color-sec-two, 35%), 5%);
+	}
+
+	hr {
+		border: 1px solid #FFF;
+	}
+
+	a {
+		background-color: #FFF;
+		padding: 6px 9px 3px 6px;
+		border-radius: 2px;
+		margin: 6px;
+	}
+}
+
+.slide {
+	padding: 20px;
+	border-radius: 3px;
+	min-height: 300px;
+	border-radius: 2px;
+	background: rgba(255, 255, 255, 0.7);
+
+	.slide-unit {
+		display: none;
+	}
+
+	.exercise {
+		.badge {
+			background-color: #BBB;
+			border-radius: 3px;
+			margin-right: 10px;
+		}
+	}
+	.direct-select {
+		text-align: center;
+		font-size: 2em;
+		margin-bottom: 20px;
+
+		&.vertical {
+			a {
+				margin-right: auto;
+				margin-left: auto;
+				text-align: left;
+				display: block;
+				max-width: 400px;
+			}
+			.badge {
+				border: 1px solid #FFF;
+				vertical-align: middle;
+			}
+			small {
+				margin-left: 35px;
+			}
+		}
+
+		&.horizontal {
+			a {
+				position: relative;
+				margin-bottom: 25px;
+				white-space: nowrap;
+				display: inline-block;
+			}
+			.badge {
+				position: absolute;
+				top: 20px;
+				margin-right: 0;
+				left: 40%;
+				top: 110%;
+				border: 1px solid #FFF;
+				@include transition(background-color, 0.2s, ease-in);
+			}
+		}
+
+		a small {
+			font-size: .5em;
+			font-family: $font-family;
+			letter-spacing: normal;
+		}
+
+		a.selected, a.selected:hover {
+			background-color: $color-sec-two;
+			color: #FFF;
+			border: 1px solid transparent;
+			box-shadow: 2px 2px 3px #CCC;
+
+			.badge {
+				background-color: $color-pri-two;
+			}
+		}
+
+		a.success, a.success:hover {
+			background-color: $color-dark-green;
+			color: #FFF;
+			border: 1px solid transparent;
+			box-shadow: 2px 2px 3px #CCC;
+
+			@include wiggle;
+
+			.badge {
+				background-color: $color-pri-two;
+			}
+		}
+
+		a.failure, a.failure:hover {
+			background-color: $color-pri-one;
+			color: #FFF;
+			border: 1px solid transparent;
+			box-shadow: 2px 2px 3px #CCC;
+
+			.badge {
+				background-color: $color-sec-four;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			border: 1px solid #DDD;
+			border-radius: 3px;
+			padding: 10px;
+			margin: 5px;
+			@include transition(background-color, 0.2s, ease-in);
+
+			&:hover {
+				background-color: $color-pri-two;
+				border: 1px solid transparent;
+				color: #FFF;
+				@include transition(background-color, 0.2s, ease-out);
+				box-shadow: 2px 2px 3px #CCC;
+
+				.badge {
+					background-color: $color-pri-one;
+					color: #FFF;
+					@include transition(background-color, 0.2s, ease-out);
+				}
+			}
+		}
+
+	}
+
+	ul {
+		display: block;
+		margin-bottom: 0;
+
+		/* Corresponds to Multi Composition Slide options */
+		&.short-multi {
+			li {
+				list-style: none;
+				display: inline-block;
+				font-size: 16px;
+				line-height: 36px;
+				margin: 2px;
+			}
+			a {
+				padding: 5px 20px;
+				color: #666;
+				text-decoration: none;
+				border-radius: 3px;
+
+			}
+			&.options {
+				a {
+					$color: #EEE;
+
+					border: 1px solid darken($color, 5%);
+					@include transition(background-color, .2s, ease-out);
+					@include gradient($color, 20, lighten($color, 7%), 100);
+
+					&:hover {
+						@include gradient($color-pri-two, 20, lighten($color-pri-two, 7%), 100);
+						border-color: darken($color-pri-two, 5%);
+						color: #FFF;
+					}
+				}
+			}
+			&.answers {
+				a {
+					$color: $color-pri-two;
+
+					border: 1px solid darken($color, 5%);
+					@include transition(background-color, .2s, ease-out);
+					@include gradient($color, 20, lighten($color, 7%), 100);
+					color: #FFF;
+
+					&:hover {
+						@include gradient($color-pri-one, 20, lighten($color-pri-one, 7%), 100);
+						border-color: darken($color-pri-one, 5%);
+					}
+				}
+			}
+		}
+		&.inline {
+			display: inline-block;
+			margin-right: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}
+/*
+*	Used in lessons to show the parts of the word
+*	e.g. past indicative augment, stem, ending.
+*/
+.word-breakdown {
+	text-align: center;
+
+	table {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	td.part {
+		span[lang="grc"] {
+			font-size: 3em;
+		}
+		hr {
+			margin-bottom: 0;
+			border-top: 1px solid #888;
+		}
+		.caret {
+			color: #AAA;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+}
+/*
+*	Styles inflection tables
+*/
+table.inflection-table {
+	font-size: 0.9em;
+
+	span[lang="grc"] strong {
+		color: $color-pri-two;
+		background-color: #f5f5f5;
+		padding: 3px;
+	}
+
+	tr.current {
+		background-color: $color-pri-one;
+		color: #FFF;
+
+		span[lang="grc"] {
+			color: #FFF;
+
+			em {
+				color: $color-pri-two;
+				background-color: #FFF;
+			}
+		}
+	}
+	tr.future {
+		span[lang="grc"] {
+			color: #CCC;
+		}
+	}
+	tr.past {
+		color: #333;
+		span[lang="grc"] {
+			color: #333;
+		}
+	}
+}
+

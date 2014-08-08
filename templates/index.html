@@ -1,28 +1,30 @@
 {% load i18n %}
+{% load set_var %}
 {% get_current_language_bidi as LANGUAGE_BIDI %}
-{% get_current_language as LANGUAGE_CODE %}
-<!DOCTYPE html>
 {% if LANGUAGE_BIDI %}
-	<html dir="rtl">
+	{% set dir = "rtl" %}
 {% else %}
-	<html dir="ltr">
+	{% set dir = "ltr" %}
 {% endif %}
-<head>
+
+<!DOCTYPE html>
+<html dir="{{ dir }}">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
-		{% trans "Historical Languages eLearning - by Open Philology Project" %}
+		{% trans "Ancient Geek - by the Open Philology Project" %}
 	</title>
 
 	<!-- CSS -->
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/static/css/phaidra.css" rel="stylesheet">
+
+	<link href="/static/css/index.{{ dir }}.css" rel="stylesheet">
 
 	<!-- JS -->
 	<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
 	<script src="/static/js/lib/jquery-2.0.3.js"></script>
-	<script>var csrf_token = "{{ csrf_token }}"; var locale = "{{ LANGUAGE_CODE }}";</script>
+	<script>var csrf_token = "{{ csrf_token }}"; var locale = "{{ LANGUAGE_CODE }}"; var dir = "{{ dir }}"; </script>
 
 	<style>
 		[lang="grc"] {

@@ -1,27 +1,35 @@
 {% load i18n %}
+{% load set_var %}
 {% get_current_language_bidi as LANGUAGE_BIDI %}
-<!DOCTYPE html>
 {% if LANGUAGE_BIDI %}
-	<html dir="rtl">
+	{% set dir = "rtl" %}
 {% else %}
-	<html dir="ltr">
+	{% set dir = "ltr" %}
 {% endif %}
+
+<!DOCTYPE html>
+<html dir="{{ dir }}">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
-		{% trans "Historical Languages eLearning - by Open Philology Project" %}
+		{% trans "Ancient Geek - by the Open Philology Project" %}
 	</title>
 
 	<!-- CSS -->
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/static/css/phaidra.css" rel="stylesheet">
+	<!--<link href="/static/css/phaidra.css" rel="stylesheet">-->
+
+	{% block css %}
+		<link href="/static/css/{{ css_file }}.{{ dir }}.css" rel="stylesheet">
+	{% endblock %}
+
 	<link href="/static/js/lib/daphnejs/dist/daphne.css" rel="stylesheet">
 
 	<!-- JS -->
 	<script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
 	<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
-	<script>var csrf_token = "{{ csrf_token }}";</script>
+	<script>var csrf_token = "{{ csrf_token }}"; var locale = "{{ LANGUAGE_CODE }}"; var dir = "{{ dir }}"; </script>
 
 </head>
 <body>
