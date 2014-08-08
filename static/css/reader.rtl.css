@@ -430,6 +430,10 @@ label {
   #reader .col-md-6, #reader .col-md-12 {
     padding-left: 0;
     padding-right: 0; }
+  #reader .well {
+    margin-left: 15px;
+    background-color: #FFF;
+    direction: rtl; }
   #reader .page {
     padding: 10px 80px 80px 80px;
     position: relative;

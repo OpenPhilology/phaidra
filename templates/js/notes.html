@@ -37,7 +37,7 @@
 			<a href="#" class="btn btn-link btn-show-trans" data-lang="fas" data-toggle="tooltip">{% trans "Farsi" %}</a>
 
 			<!-- TODO: Probably move this into a JS interaction -->
-			<div class="well" style="background-color: #FFF; margin-right: 15px; <% if (lang == "fas") print('direction: rtl') %>">
+			<div class="well">
 				<% var wordsFound = 0; %>
 				<% for (var i = 0; i < word.translations.length; i++) { %>
 					<% if (word.translations[i]["CTS"].indexOf(lang) != -1) { %>

@@ -23,6 +23,12 @@
 		padding-right: 0;
 	}
 
+	.well {
+		margin-#{$right}: 15px;
+		background-color: #FFF;
+		direction: $dir;
+	}
+
 	.page {
 		padding: 10px 80px 80px 80px;
 		position: relative;
