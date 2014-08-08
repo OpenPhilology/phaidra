@@ -1,3 +1,5 @@
+@import "directional";
+
 /*
 *	Global CSS
 */
@@ -183,6 +185,9 @@ $font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 		transform: rotateZ(2deg);
 	}
 }
+
+@import "header";
+
 html, body {
 	height: 100%;
 }
@@ -296,7 +301,6 @@ label {
 	}
 }
 
-@import "header";
 
 /*
 *	Style for main viewport
@@ -351,7 +355,7 @@ label {
 	&.left {
 		@include if-ltr {
 			top: $banner-height;
-			#{if-ltr('left', 'right')}: 0;
+			left: 0;
 			border-color: #EEE #FFF;
 			border-width: 60px 60px 0 0;
 
@@ -373,7 +377,7 @@ label {
 
 		@include if-rtl {
 			top: $banner-height;
-			#{if-ltr('right', 'left')}: 0;
+			right: 0;
 			border-color: #EEE #FFF;
 			border-width: 0 60px 60px 0;
 
@@ -396,7 +400,7 @@ label {
 	&.right {
 		@include if-rtl {
 			top: $banner-height;
-			#{if-ltr('left', 'right')}: 0;
+			left: 0;
 			border-color: #EEE #FFF;
 			border-width: 60px 60px 0 0;
 
@@ -405,7 +409,7 @@ label {
 				border-width: 0 0 60px 60px;
 				border-color: #FFF $color-pri-one;
 
-				&::after {
+				&:after {
 					left: -55px;
 					top: 1px;
 					content: "\e091";
@@ -418,7 +422,7 @@ label {
 
 		@include if-ltr {
 			top: $banner-height;
-			#{if-ltr('right', 'left')}: 0;
+			right: 0;
 			border-color: #EEE #FFF;
 			border-width: 0 60px 60px 0;
 

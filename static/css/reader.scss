@@ -1,4 +1,3 @@
-@import "directional";
 @import "global";
 
 /**
@@ -33,6 +32,7 @@
 		direction: ltr;
 
 		h1 {
+			direction: $dir;
 			text-align: center;
 		}
 	}

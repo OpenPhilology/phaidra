@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html'], function($, _, Backbone, PageTemplate) { 
+define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html', 'utils'], function($, _, Backbone, PageTemplate, Utils) { 
 
 	var View = Backbone.View.extend({
 		events: { 
@@ -53,7 +53,12 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html'], fun
 			}).tooltip();
 
 			var ref = this.options.CTS.split(':');
-			this.$el.find('h1 a').html(ref[ref.length-1]);
+			var title = this.$el.find('h1 a');
+
+			if (locale === 'fa')
+				title.html(Utils.convertToPersian(ref[ref.length - 1]));
+			else
+				title.html(ref[ref.length-1]);
 
 			return this;	
 		},

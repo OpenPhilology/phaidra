@@ -1,0 +1,1006 @@
+/*
+*	Global CSS
+*/
+/** RTL Support!!!! **/
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: right;
+    direction: rtl; } }
+.progress-bar {
+  float: right; }
+
+/* Color Scheme! */
+/* Fonts! */
+/* Mix-ins */
+@-webkit-keyframes bounce {
+  0% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  37% {
+    top: 62px;
+    animation-timing-function: ease-out; }
+
+  55% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  73% {
+    top: 78px;
+    animation-timing-function: ease-out; }
+
+  82% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  91% {
+    top: 88px;
+    animation-timing-function: ease-out; }
+
+  100% {
+    top: 92px;
+    animation-timing-function: ease-in; } }
+
+@keyframes bounce {
+  0% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  37% {
+    top: 62px;
+    animation-timing-function: ease-out; }
+
+  55% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  73% {
+    top: 78px;
+    animation-timing-function: ease-out; }
+
+  82% {
+    top: 92px;
+    animation-timing-function: ease-in; }
+
+  91% {
+    top: 88px;
+    animation-timing-function: ease-out; }
+
+  100% {
+    top: 92px;
+    animation-timing-function: ease-in; } }
+
+.bounce {
+  -webkit-animation: bounce 1s ease 0.5s 1;
+  -moz-animation: bounce 1s ease 0.5s 1;
+  -o-animation: bounce 1s ease 0.5s 1;
+  animation: bounce 1s ease 0.5s 1; }
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotateZ(2deg); }
+
+  50% {
+    -webkit-transform: rotateZ(-2deg); }
+
+  100% {
+    -webkit-transform: rotateZ(2deg); } }
+
+@-moz-keyframes wiggle {
+  0% {
+    -moz-transform: rotateZ(2deg); }
+
+  50% {
+    -moz-transform: rotateZ(-2deg); }
+
+  100% {
+    -moz-transform: rotateZ(2deg); } }
+
+@-o-keyframes wiggle {
+  0% {
+    -o-transform: rotateZ(2deg); }
+
+  50% {
+    -o-transform: rotateZ(-2deg); }
+
+  100% {
+    -o-transform: rotateZ(2deg); } }
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(2deg); }
+
+  50% {
+    transform: rotateZ(-2deg); }
+
+  100% {
+    transform: rotateZ(2deg); } }
+
+html, body {
+  height: 100%; }
+
+body {
+  color: #333;
+  font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-attachment: fixed; }
+
+a {
+  color: #1fadad; }
+  a:hover {
+    color: #178282; }
+
+blockquote {
+  line-height: 40px; }
+
+[lang="grc"], div[lang="grc"] {
+  font-family: 'Cambria', 'Times New Romans' !important;
+  font-size: 1.3em;
+  letter-spacing: 0.1em; }
+  [lang="grc"] em, div[lang="grc"] em {
+    background-color: #FFF0A3;
+    border-radius: 3px;
+    padding: 3px;
+    font-style: normal; }
+  [lang="grc"] em[data-toggle="tooltip"], div[lang="grc"] em[data-toggle="tooltip"] {
+    cursor: pointer; }
+
+.masc {
+  color: #1fadad; }
+
+.fem {
+  color: #d15241; }
+
+.neut {
+  color: #49a556; }
+
+p {
+  line-height: 3em; }
+
+p span[lang="grc"] {
+  border: 1px solid #EEE;
+  padding: 2px;
+  border-radius: 3px;
+  background-color: #F6F6F6;
+  margin-left: 3px;
+  margin-right: 3px; }
+
+/* Override Bootstrap Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Garamond'; }
+
+.btn {
+  border: 1px solid #EEE;
+  text-decoration: none;
+  border-radius: 2px; }
+  .btn.btn-link {
+    border: 0;
+    color: #1fadad;
+    text-decoration: none; }
+
+label {
+  font-weight: normal;
+  font-size: 1.2em; }
+
+.label {
+  padding: 0.4em 0.6em 0.3em;
+  margin: 0px 3px; }
+  .label.label-default {
+    background-color: #BBB; }
+  .label.label-primary {
+    background-color: #1fadad; }
+  .label.label-danger {
+    background-color: #d15241; }
+  .label.label-success {
+    background-color: #a3d55f; }
+  .label.label-info {
+    background-color: #4e6087; }
+
+.container {
+  max-width: none !important;
+  width: 100%;
+  padding: 0;
+  height: 100%; }
+
+.row {
+  margin: 0; }
+
+.alert.alert-success strong {
+  color: #19641A !important; }
+
+/* Header */
+.banner {
+  color: #EEE;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -o-linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -moz-linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -webkit-linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -ms-linear-gradient(bottom, #4e6087 0, #576b97 100);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4e6087), color-stop(1, #576b97));
+  background-color: #4e6087;
+  background-color: #4e6087;
+  position: fixed;
+  width: 100%;
+  height: 43px;
+  z-index: 1; }
+  .banner #search-form {
+    margin: 7px 0px; }
+    .banner #search-form .form-group {
+      margin-bottom: 7px; }
+  .banner #logo-container {
+    padding-top: 4px; }
+    .banner #logo-container img {
+      height: 35px;
+      margin-right: 4px; }
+  .banner .user-data a {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    margin-left: 10px;
+    color: #EEE;
+    letter-spacing: 0.08em; }
+
+.navigation {
+  text-align: center; }
+  .navigation span {
+    text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22);
+    font-size: 12px; }
+  .navigation span + span {
+    margin-left: 5px;
+    font-size: 14px; }
+  .navigation .glyphicon-flash {
+    color: #f4bc78; }
+  .navigation .glyphicon-bookmark {
+    color: #d66556; }
+  .navigation .glyphicon-comment {
+    color: #1fadad; }
+  .navigation a {
+    display: inline-block;
+    padding: 10px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .navigation a:hover {
+      background-color: #576b97;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in; }
+    .navigation a.active {
+      background-color: #6378a5;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in; }
+    .navigation a strong {
+      font-size: 18px;
+      font-weight: normal; }
+      .navigation a strong span {
+        margin-right: 5px; }
+    .navigation a small {
+      display: block;
+      font-size: 11px; }
+    .navigation a.progress-book {
+      color: #eeeeee; }
+    .navigation a.progress-voc {
+      color: #eeeeee; }
+    .navigation a.progress-lessons {
+      color: #eeeeee; }
+
+.user-info {
+  margin: 4px; }
+  .user-info img {
+    margin-right: 10px; }
+  .user-info a {
+    color: #EEE; }
+  .user-info a.username, .user-info a.log-in-link {
+    border: 0;
+    background-color: #3b4967;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    padding: 0 10px;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block; }
+    .user-info a.username:hover, .user-info a.log-in-link:hover {
+      background-color: #6378a5;
+      -webkit-transition: background-color 0.2s ease-out;
+      -moz-transition: background-color 0.2s ease-out;
+      -o-transition: background-color 0.2s ease-out;
+      -ms-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out;
+      box-shadow: 2px 2px 3px #455577;
+      color: #FFF; }
+      .user-info a.username:hover img, .user-info a.log-in-link:hover img {
+        box-shadow: 2px 2px 3px #455577; }
+
+/*
+*	Style for main viewport
+*/
+#main {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  padding-top: 43px;
+  width: 100%; }
+  #main .lesson-right-menu {
+    position: relative;
+    height: 40%; }
+    #main .lesson-right-menu a {
+      color: #4e6087;
+      position: absolute;
+      font-size: 70px;
+      top: 0;
+      left: 0; }
+  #main strong {
+    margin-left: 2px;
+    margin-right: 2px;
+    letter-spacing: 0.05em;
+    color: #4e6087; }
+
+/* Styles related to the intro page */
+.thuc {
+  display: inline-block; }
+  .thuc .wiggle {
+    -webkit-animation: wiggle 0.2s ease 2s 3;
+    -moz-animation: wiggle 0.2s ease 2s 3;
+    -o-animation: wiggle 0.2s ease 2s 3;
+    animation: wiggle 0.2s ease 2s 3;
+    display: inline-block; }
+
+.wiggle {
+  -webkit-animation: wiggle 0.5s ease 0 3;
+  -moz-animation: wiggle 0.5s ease 0 3;
+  -o-animation: wiggle 0.5s ease 0 3;
+  animation: wiggle 0.5s ease 0 3; }
+
+.corner {
+  content: "";
+  position: fixed;
+  border-style: solid;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3); }
+  .corner.left {
+    top: 43px;
+    right: 0;
+    border-color: #EEE #FFF;
+    border-width: 0 60px 60px 0; }
+    .corner.left a {
+      right: -60px;
+      border-width: 60px 0 0 60px;
+      border-color: #d15241 white; }
+      .corner.left a::after {
+        right: 5px;
+        top: -57px;
+        content: "\e092"; }
+      .corner.left a:hover {
+        border-color: #d66556 white; }
+  .corner.right {
+    top: 43px;
+    left: 0;
+    border-color: #EEE #FFF;
+    border-width: 60px 60px 0 0; }
+    .corner.right a {
+      top: -60px;
+      border-width: 0 0 60px 60px;
+      border-color: white #d15241; }
+      .corner.right a:after {
+        left: -55px;
+        top: 1px;
+        content: "\e091"; }
+      .corner.right a:hover {
+        border-color: white #d66556; }
+  .corner a {
+    top: 0;
+    position: absolute;
+    border-style: solid;
+    color: #FFF; }
+    .corner a::after {
+      font-family: 'Glyphicons Halflings';
+      font-size: 24px;
+      position: absolute; }
+
+/**
+ * Styles used on the lessons.
+ */
+.bg-success {
+  border: 2px #49a556 solid;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  line-height: 2em;
+  background-color: #f3faf4; }
+  .bg-success .glyphicon {
+    margin-right: 3px;
+    color: #d0ead4; }
+  .bg-success h1, .bg-success h2, .bg-success h3, .bg-success h4, .bg-success h5, .bg-success h6 {
+    background-color: #49a556;
+    color: #FFF;
+    margin: -10px -10px 10px;
+    padding: 10px;
+    letter-spacing: 0.1em; }
+  .bg-success strong {
+    color: #398244 !important; }
+
+.bg-info {
+  border: 2px #4e6087 solid;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  line-height: 2em;
+  background-color: #e4e8f0; }
+  .bg-info .glyphicon {
+    margin-right: 3px;
+    color: #c4ccdd; }
+  .bg-info h1, .bg-info h2, .bg-info h3, .bg-info h4, .bg-info h5, .bg-info h6 {
+    background-color: #4e6087;
+    color: #FFF;
+    margin: -10px -10px 10px;
+    padding: 10px;
+    letter-spacing: 0.1em; }
+
+.bg-primary {
+  border: 2px #1fadad solid;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  line-height: 2em;
+  background-color: #d4f7f7;
+  color: #333; }
+  .bg-primary .glyphicon {
+    margin-right: 3px;
+    color: #a9f0f0; }
+  .bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5, .bg-primary h6 {
+    background-color: #1fadad;
+    color: #FFF;
+    margin: -10px -10px 10px;
+    padding: 10px;
+    letter-spacing: 0.1em; }
+  .bg-primary strong {
+    color: #178282 !important; }
+
+.bg-error {
+  border: 2px #d15241 solid;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  line-height: 2em;
+  background-color: white; }
+  .bg-error .glyphicon {
+    margin-right: 3px;
+    color: #f9e8e5; }
+  .bg-error h1, .bg-error h2, .bg-error h3, .bg-error h4, .bg-error h5, .bg-error h6 {
+    background-color: #d15241;
+    color: #FFF;
+    margin: -10px -10px 10px;
+    padding: 10px;
+    letter-spacing: 0.1em; }
+  .bg-error strong {
+    color: #b43c2b !important; }
+
+/* The speech bubble that Thuc uses to speak */
+.speech {
+  position: relative;
+  padding: 15px;
+  margin: 1em 0 3em;
+  background-color: #f8d3a7;
+  border-radius: 3px;
+  line-height: 2em;
+  margin-bottom: 10px; }
+  .speech:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #f8d3a7;
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: -15px;
+    top: 25px; }
+
+/* Lesson-related styles */
+.achievements .box {
+  height: 125px;
+  width: 125px;
+  display: inline-block;
+  background-color: #c4ccdd;
+  color: #333;
+  margin: 5px;
+  border-radius: 2px;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out; }
+  .achievements .box:hover {
+    background-color: #dee2ec;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+  .achievements .box strong {
+    font-size: 24px;
+    font-weight: normal; }
+
+.feedback-container {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 2px; }
+  .feedback-container h3 {
+    color: #6e517a;
+    letter-spacing: 0.1em; }
+  .feedback-container h4 {
+    color: #523d5b;
+    letter-spacing: 0.1em;
+    font-weight: normal; }
+  .feedback-container .badge {
+    margin-right: 5px; }
+    .feedback-container .badge.vocab {
+      background-color: #1fadad; }
+    .feedback-container .badge.lesson {
+      background-color: #d15241; }
+    .feedback-container .badge.treebank {
+      background-color: #49a556; }
+  .feedback-container #pies {
+    text-align: center; }
+  .feedback-container #vocab-pie + h4 {
+    color: #1fadad;
+    margin-bottom: 0px; }
+  .feedback-container #morph-pie + h4 {
+    color: #f4bc78;
+    margin-bottom: 0px; }
+  .feedback-container #syn-pie + h4 {
+    color: #d15241;
+    margin-bottom: 0px; }
+  .feedback-container #records .sparkline {
+    display: inline-block; }
+    .feedback-container #records .sparkline path {
+      stroke: #888;
+      stroke-width: 2px;
+      fill: none; }
+
+/*
+*	Progress bar displayed above every lesson-in-progress
+*/
+.lesson-progress {
+  margin-bottom: 10px;
+  text-align: center; }
+  .lesson-progress .bar {
+    display: inline-block;
+    height: 10px;
+    background: linear-gradient(to left, white 50%, #1fadad 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid #dddddd; }
+    .lesson-progress .bar:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px; }
+    .lesson-progress .bar:last-child {
+      border-right: 1px solid #dddddd;
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px; }
+    .lesson-progress .bar.complete {
+      background-position: left bottom; }
+
+/*
+*	The lesson boxes visible on the lessons screen
+*/
+.module-container {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  padding: 20px;
+  text-align: center; }
+  .module-container .col-xs-1, .module-container .col-xs-2, .module-container .col-xs-3, .module-container .col-xs-4, .module-container .col-xs-5, .module-container .col-xs-6, .module-container .col-xs-7, .module-container .col-xs-8, .module-container .col-xs-9, .module-container .col-xs-10, .module-container .col-xs-11, .module-container .col-xs-12, .module-container .col-sm-1, .module-container .col-sm-2, .module-container .col-sm-3, .module-container .col-sm-4, .module-container .col-sm-5, .module-container .col-sm-6, .module-container .col-sm-7, .module-container .col-sm-8, .module-container .col-sm-9, .module-container .col-sm-10, .module-container .col-sm-11, .module-container .col-sm-12, .module-container .col-md-1, .module-container .col-md-2, .module-container .col-md-3, .module-container .col-md-4, .module-container .col-md-5, .module-container .col-md-6, .module-container .col-md-7, .module-container .col-md-8, .module-container .col-md-9, .module-container .col-md-10, .module-container .col-md-11, .module-container .col-md-12, .module-container .col-lg-1, .module-container .col-lg-2, .module-container .col-lg-3, .module-container .col-lg-4, .module-container .col-lg-5, .module-container .col-lg-6, .module-container .col-lg-7, .module-container .col-lg-8, .module-container .col-lg-9, .module-container .col-lg-10, .module-container .col-lg-11, .module-container .col-lg-12 {
+    padding-left: 5px;
+    padding-right: 5px; }
+
+div.module {
+  background-color: #DDD; }
+
+.module {
+  border-radius: 3px;
+  background-color: #e4e8f0;
+  text-align: center;
+  display: inline-block;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  width: 100%;
+  min-height: 150px;
+  vertical-align: top;
+  position: relative;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  color: #333 !important; }
+  .module img {
+    height: 65px; }
+  .module:hover {
+    text-decoration: none; }
+  .module.nouns {
+    background-color: #1fadad;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module.nouns:hover {
+      background-color: #23c3c3;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+    .module.nouns h3 {
+      color: #FFF; }
+  .module.morph {
+    background-color: #4e6087;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module.morph:hover {
+      background-color: #576b97;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+    .module.morph h3 {
+      color: #FFF; }
+  .module.verbs {
+    background-color: #4e6087;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module.verbs:hover {
+      background-color: #576b97;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+    .module.verbs h3 {
+      color: #FFF; }
+  .module.basics {
+    background-color: #d15241;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module.basics:hover {
+      background-color: #d66556;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+    .module.basics h3 {
+      color: #FFF; }
+  .module h3 {
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    color: #999;
+    font-family: 'Helvetica';
+    margin-left: 10px;
+    margin-right: 10px; }
+  .module div {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    margin-left: -20px;
+    margin-right: -20px; }
+  .module .circle {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 2px; }
+    .module .circle.complete {
+      background-color: white; }
+
+/*
+*	Slide Styles	
+*/
+.lesson-header h1 {
+  display: inline-block;
+  margin-top: 0;
+  color: #3b4967;
+  text-transform: uppercase;
+  font-size: 24px; }
+
+.alphabet {
+  list-style-type: none;
+  border: 1px solid #EEE;
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 20px !important; }
+  .alphabet li {
+    font-family: 'Cambria', 'Times New Romans' !important;
+    display: inline;
+    font-size: 24px;
+    padding: 5px 10px;
+    color: #AAA;
+    margin-left: -3px;
+    margin-right: -3px; }
+    .alphabet li.learned {
+      color: #333;
+      background-color: #efc2bc; }
+    .alphabet li.current {
+      color: #FFF;
+      background-color: #d15241; }
+
+.letter {
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box; }
+  .letter img {
+    height: 200px;
+    max-width: 200px;
+    max-width: 100%; }
+  .letter.bg-light {
+    background-color: #F4CDA2; }
+  .letter.bg-med {
+    background-color: #b8e0e0; }
+  .letter.bg-dark {
+    background-color: #b7bfd1; }
+  .letter hr {
+    border: 1px solid #FFF; }
+  .letter a {
+    background-color: #FFF;
+    padding: 6px 9px 3px 6px;
+    border-radius: 2px;
+    margin: 6px; }
+
+.slide {
+  padding: 20px;
+  border-radius: 3px;
+  min-height: 300px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.7); }
+  .slide .slide-unit {
+    display: none; }
+  .slide .exercise .badge {
+    background-color: #BBB;
+    border-radius: 3px;
+    margin-right: 10px; }
+  .slide .direct-select {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px; }
+    .slide .direct-select.vertical a {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+      display: block;
+      max-width: 400px; }
+    .slide .direct-select.vertical .badge {
+      border: 1px solid #FFF;
+      vertical-align: middle; }
+    .slide .direct-select.vertical small {
+      margin-left: 35px; }
+    .slide .direct-select.horizontal a {
+      position: relative;
+      margin-bottom: 25px;
+      white-space: nowrap;
+      display: inline-block; }
+    .slide .direct-select.horizontal .badge {
+      position: absolute;
+      top: 20px;
+      margin-right: 0;
+      left: 40%;
+      top: 110%;
+      border: 1px solid #FFF;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in; }
+    .slide .direct-select a small {
+      font-size: .5em;
+      font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      letter-spacing: normal; }
+    .slide .direct-select a.selected, .slide .direct-select a.selected:hover {
+      background-color: #4e6087;
+      color: #FFF;
+      border: 1px solid transparent;
+      box-shadow: 2px 2px 3px #CCC; }
+      .slide .direct-select a.selected .badge, .slide .direct-select a.selected:hover .badge {
+        background-color: #1fadad; }
+    .slide .direct-select a.success, .slide .direct-select a.success:hover {
+      background-color: #49a556;
+      color: #FFF;
+      border: 1px solid transparent;
+      box-shadow: 2px 2px 3px #CCC;
+      -webkit-animation: wiggle 0.2s ease 0 3;
+      -moz-animation: wiggle 0.2s ease 0 3;
+      -o-animation: wiggle 0.2s ease 0 3;
+      animation: wiggle 0.2s ease 0 3; }
+      .slide .direct-select a.success .badge, .slide .direct-select a.success:hover .badge {
+        background-color: #1fadad; }
+    .slide .direct-select a.failure, .slide .direct-select a.failure:hover {
+      background-color: #d15241;
+      color: #FFF;
+      border: 1px solid transparent;
+      box-shadow: 2px 2px 3px #CCC; }
+      .slide .direct-select a.failure .badge, .slide .direct-select a.failure:hover .badge {
+        background-color: #f4bc78; }
+    .slide .direct-select a {
+      text-decoration: none;
+      border: 1px solid #DDD;
+      border-radius: 3px;
+      padding: 10px;
+      margin: 5px;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in; }
+      .slide .direct-select a:hover {
+        background-color: #1fadad;
+        border: 1px solid transparent;
+        color: #FFF;
+        -webkit-transition: background-color 0.2s ease-out;
+        -moz-transition: background-color 0.2s ease-out;
+        -o-transition: background-color 0.2s ease-out;
+        -ms-transition: background-color 0.2s ease-out;
+        transition: background-color 0.2s ease-out;
+        box-shadow: 2px 2px 3px #CCC; }
+        .slide .direct-select a:hover .badge {
+          background-color: #d15241;
+          color: #FFF;
+          -webkit-transition: background-color 0.2s ease-out;
+          -moz-transition: background-color 0.2s ease-out;
+          -o-transition: background-color 0.2s ease-out;
+          -ms-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out; }
+  .slide ul {
+    display: block;
+    margin-bottom: 0;
+    /* Corresponds to Multi Composition Slide options */ }
+    .slide ul.short-multi li {
+      list-style: none;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 36px;
+      margin: 2px; }
+    .slide ul.short-multi a {
+      padding: 5px 20px;
+      color: #666;
+      text-decoration: none;
+      border-radius: 3px; }
+    .slide ul.short-multi.options a {
+      border: 1px solid #e1e1e1;
+      -webkit-transition: background-color 0.2s ease-out;
+      -moz-transition: background-color 0.2s ease-out;
+      -o-transition: background-color 0.2s ease-out;
+      -ms-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out;
+      background-image: linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -o-linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -moz-linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -webkit-linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -ms-linear-gradient(bottom, #eeeeee 20, white 100);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #eeeeee), color-stop(1, white));
+      background-color: #eeeeee; }
+      .slide ul.short-multi.options a:hover {
+        background-image: linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -o-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -moz-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -webkit-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -ms-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #1fadad), color-stop(1, #24cbcb));
+        background-color: #1fadad;
+        border-color: #1b9797;
+        color: #FFF; }
+    .slide ul.short-multi.answers a {
+      border: 1px solid #1b9797;
+      -webkit-transition: background-color 0.2s ease-out;
+      -moz-transition: background-color 0.2s ease-out;
+      -o-transition: background-color 0.2s ease-out;
+      -ms-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out;
+      background-image: linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -o-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -moz-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -webkit-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -ms-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #1fadad), color-stop(1, #24cbcb));
+      background-color: #1fadad;
+      color: #FFF; }
+      .slide ul.short-multi.answers a:hover {
+        background-image: linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -o-linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -moz-linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -webkit-linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -ms-linear-gradient(bottom, #d15241 20, #d86c5e 100);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #d15241), color-stop(1, #d86c5e));
+        background-color: #d15241;
+        border-color: #c84230; }
+    .slide ul.inline {
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 20px; }
+
+/*
+*	Used in lessons to show the parts of the word
+*	e.g. past indicative augment, stem, ending.
+*/
+.word-breakdown {
+  text-align: center; }
+  .word-breakdown table {
+    margin-left: auto;
+    margin-right: auto; }
+  .word-breakdown td {
+    padding: 10px; }
+  .word-breakdown td.part span[lang="grc"] {
+    font-size: 3em; }
+  .word-breakdown td.part hr {
+    margin-bottom: 0;
+    border-top: 1px solid #888; }
+  .word-breakdown td.part .caret {
+    color: #AAA;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+/*
+*	Styles inflection tables
+*/
+table.inflection-table {
+  font-size: 0.9em; }
+  table.inflection-table span[lang="grc"] strong {
+    color: #1fadad;
+    background-color: #f5f5f5;
+    padding: 3px; }
+  table.inflection-table tr.current {
+    background-color: #d15241;
+    color: #FFF; }
+    table.inflection-table tr.current span[lang="grc"] {
+      color: #FFF; }
+      table.inflection-table tr.current span[lang="grc"] em {
+        color: #1fadad;
+        background-color: #FFF; }
+  table.inflection-table tr.future span[lang="grc"] {
+    color: #CCC; }
+  table.inflection-table tr.past {
+    color: #333; }
+    table.inflection-table tr.past span[lang="grc"] {
+      color: #333; }
