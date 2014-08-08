@@ -171,8 +171,8 @@ msgstr ""
 
 #: static/js/views/notes.js:58
 msgid "Information about"
-msgstr ""
+msgstr "اطلاعات مربوط به"
 
 #: static/js/views/notes.js:67
 msgid "Show Resources"
-msgstr ""
+msgstr "نشان دادن منابع"
