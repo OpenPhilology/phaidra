@@ -1177,7 +1177,7 @@ class DocumentResource(Resource):
 				
 			new_obj.__dict__['_data']['sentences'] = sentenceArray
 
-		# get a dictionary or related translation of this sentence # ordering here is a problem child
+		# get a dictionary or related translation of this document
 		relatedDocuments = gdb.query("""START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" 
 						+ document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
 		
