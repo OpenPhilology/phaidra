@@ -897,7 +897,7 @@ class SentenceResource(Resource):
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
 		
-		# get a dictionary or related translation of this sentence # ordering here is a problem child
+		# get a dictionary of related translation of this sentence # ordering here is a problem child
 		relatedSentences = gdb.query("""START s=node(*) MATCH (s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='""" 
 						+ sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
 		
@@ -1053,12 +1053,12 @@ class SentenceResource(Resource):
 class DocumentResource(Resource):
 	
 	CTS = fields.CharField(attribute='CTS')
-	name = fields.CharField(attribute='name', null = True, blank = True)	
-	name_eng = fields.CharField(attribute='name_eng', null = True, blank = True)
-	lang = fields.CharField(attribute='lang', null = True, blank = True)
-	author = fields.CharField(attribute='author', null = True, blank = True)
+	lang = fields.CharField(attribute='lang', null = True, blank = True)	
 	sentences = fields.ListField(attribute='sentences', null = True, blank = True)
-		
+	name = fields.CharField(attribute='name_grc', null = True, blank = True)
+	author = fields.CharField(attribute='author_grc', null = True, blank = True)
+	translations = fields.DictField(attribute='translations', null = True, blank = True)
+	
 	class Meta:
 		
 		resource_name = 'document'
@@ -1176,6 +1176,19 @@ class DocumentResource(Resource):
 			sentenceArray.append(sent['data'])
 				
 			new_obj.__dict__['_data']['sentences'] = sentenceArray
+
+		# get a dictionary or related translation of this sentence # ordering here is a problem child
+		relatedDocuments = gdb.query("""START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" 
+						+ document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
+		
+		new_obj.__dict__['_data']['translations']={}
+		for rd in relatedDocuments:
+			doc = rd[0]
+			url = doc['self'].split('/')
+			if doc['data']['lang'] in CTS_LANG:
+				new_obj.__dict__['_data']['translations'][doc['data']['lang']] = doc['data']
+				new_obj.__dict__['_data']['translations'][doc['data']['lang']]['resource_uri']= API_PATH + 'document/' + url[len(url)-1] +'/'
+
 
 		return new_obj
  
