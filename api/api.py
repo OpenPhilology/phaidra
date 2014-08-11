@@ -1055,8 +1055,8 @@ class DocumentResource(Resource):
 	CTS = fields.CharField(attribute='CTS')
 	lang = fields.CharField(attribute='lang', null = True, blank = True)	
 	sentences = fields.ListField(attribute='sentences', null = True, blank = True)
-	name = fields.CharField(attribute='name_grc', null = True, blank = True)
-	author = fields.CharField(attribute='author_grc', null = True, blank = True)
+	name = fields.CharField(attribute='name', null = True, blank = True)
+	author = fields.CharField(attribute='author', null = True, blank = True)
 	translations = fields.DictField(attribute='translations', null = True, blank = True)
 	
 	class Meta:
