@@ -1148,9 +1148,180 @@
 						"includeHTML": "/static/content/en/slides/3.nouns/case.html"
 					},
 					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "Do you remember the first in the list of cases?",
+						"options": [[
+								{ "value": "nominative", "display": "nominative" },
+								{ "value": "accusative", "display": "accusative" },
+								{ "value": "dative", "display": "dative" }
+						]],
+						"answers": ["nominative"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong> Remember the first case is the nominative.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "Do you remember the third in the list of cases?",
+						"options": [[
+								{ "value": "vocative", "display": "vocative" },
+								{ "value": "accusative", "display": "accusative" },
+								{ "value": "dative", "display": "dative" }
+						]],
+						"answers": ["dative"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong> Remember the first case is the dative.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "Do you remember the last in the list of cases?",
+						"options": [[
+								{ "value": "vocative", "display": "vocative" },
+								{ "value": "accusative", "display": "genitive" },
+								{ "value": "dative", "display": "dative" }
+						]],
+						"answers": ["vocative"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong> Remember the first case is the vocative.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/3.nouns/articles.html",
 						"smyth": "s332"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "Which of these definite articles indicates the <strong>neuter accusative plural</strong>?",
+						"options": [[
+								{ "value": "τά", "display": "<span lang=\"grc\">τά</span>" },
+								{ "value": "τοῖς", "display": "<span lang=\"grc\">τοῖς</span>" },
+								{ "value": "αἱ", "display": "<span lang=\"grc\">αἱ</span>" }
+						]],
+						"answers": ["τά"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong> Remember that the neuter accusative plural is <span lang=\"grc\"><em>τά</em>",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "Which of these definite articles indicates the <strong>feminine genitive singular</strong>?",
+						"options": [[
+								{ "value": "αἱ", "display": "<span lang=\"grc\">αἱ</span>" },
+								{ "value": "τῶν", "display": "<span lang=\"grc\">τῶν</span>" },
+								{ "value": "τῆς", "display": "<span lang=\"grc\">τῆς</span>" }
+						]],
+						"answers": ["τῆς"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong> Remember that the feminine genitive singular is <span lang=\"grc\"><em>τῆς</em>.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "Which of these definite articles indicates the <strong>masculine dative singular</strong>?",
+						"options": [[
+								{ "value": "τῷ", "display": "<span lang=\"grc\">τῷ</span>" },
+								{ "value": "τοῖς", "display": "<span lang=\"grc\">τοῖς</span>" },
+								{ "value": "τοῦ", "display": "<span lang=\"grc\">τοῦ</span>" }
+						]],
+						"answers": ["τῷ"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong> Remember that the masculine dative singular is <span lang=\"grc\"><em>τῷ</em>.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "What is this: <strong><span lang=\"grc\">τήν</span></strong> ?",
+						"options": [[
+								{ "value": "feminine accusative plural", "display": "feminine accusative plural" },
+								{ "value": "feminine accusative singular", "display": "feminine accusative singular" },
+								{ "value": "feminine genitive singular", "display": "feminine genitive singular" }
+						]],
+						"answers": ["feminine accusative singular"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong> Remember this is the feminine accusative singular.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "What is this: <strong><span lang=\"grc\">οἱ</span></strong> ?",
+						"options": [[
+								{ "value": "masculine nominative singular ", "display": "masculine nominative singular" },
+								{ "value": "neuter accusative plural", "display": "neuter accusative plural" },
+								{ "value": "masculine nominative plural", "display": "masculine nominative plural" }
+						]],
+						"answers": ["masculine nominative plural"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong> Remember this is the masculine nominative plural.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
+					},
+					{
+						"type": "slide_direct_select",
+						"settings": {
+							"orientation": "vertical"
+						},
+						"title": "Know your Greek!",
+						"question": "What is this: <strong><span lang=\"grc\">ταῖς</span></strong> ?",
+						"options": [[
+								{ "value": "feminine genitive singular", "display": "feminine genitive singular" },
+								{ "value": "feminine dative plural", "display": "feminine dative plural" },
+								{ "value": "feminine genitive plural", "display": "feminine genitive plural" }
+						]],
+						"answers": ["feminine dative plural"],
+						"successMsg": "<strong>Right Answer!</strong>",
+						"hintMsg": "<strong>Not Quite</strong> Remember this is the feminine dative plural.",
+						"failureMsg": "<strong>The correct answer was...</strong>",
+						"require_order": "false",
+						"require_all": "true"
 					},
 					{
 						"type": "slide_info",
