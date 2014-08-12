@@ -192,7 +192,6 @@ class UserDocumentResource(Resource):
     
     CTS = fields.CharField(attribute='CTS')
     name = fields.CharField(attribute='name', null = True, blank = True)    
-    name_eng = fields.CharField(attribute='name_eng', null = True, blank = True)
     lang = fields.CharField(attribute='lang', null = True, blank = True)
     author = fields.CharField(attribute='author', null = True, blank = True)
     sentences = fields.ListField(attribute='sentences', null = True, blank = True)

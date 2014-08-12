@@ -30,6 +30,10 @@ v1_api.register(VisualizationResource())
 v1_api.register(UserDocumentResource())
 v1_api.register(UserSentenceResource())
 
+js_info_dict = {
+	'packages': ('phaidra',)
+}
+
 urlpatterns = patterns('',
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -50,6 +54,10 @@ urlpatterns = patterns('',
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^login/', 'web.views.login'),
 	url(r'^aboutus/', 'web.views.aboutus'),
+
+	# JS Localization
+	url(r'^templates/(?P<path>\w+)', 'web.views.static'),
+	url(r'^jsi8n/$', 'django.views.i18n.javascript_catalog', js_info_dict),
 
     # front-end logout with javascript disabled does not use the tastypie api logout, but the one of django 
     url(r'^logout/', 'django.contrib.auth.views.logout', {'next_page': '/home'}),

@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html', 'daphne'], function($, _, Backbone, Utils, NotesTemplate, Daphne) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes.html', 'daphne'], function($, _, Backbone, Utils, NotesTemplate, Daphne) { 
 
 	var View = Backbone.View.extend({
 		tagName: 'div', 
@@ -21,27 +21,43 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			return this;	
 		},
 		renderDetails: function() {
+			
+
 			var selected = this.model.words.findWhere({ selected: true });
 			var that = this;
 
-			selected.fetch({
-				success: function() { 
-					// Give the user the definite article with the definition
-					if (selected.get('pos') == 'noun') {
-						selected.set('article', Utils.getDefiniteArticle(selected.get('gender')));
-					}
+			var populate = function() {
+				that.$el.removeClass('loading');
 
-					that.$el.html(that.template({
-						word: selected.attributes,
-						lang: that.lang || 'eng', 	// This will obviously be set by user profile for their 'default', not 'eng' 
-						grammar: selected.getGrammar()
-					}));
-
-					// Bind events
-					that.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
-					that.$el.addClass('expanded');
+				// Give the user the definite article with the definition
+				if (selected.get('pos') == 'noun') {
+					selected.set('article', Utils.getDefiniteArticle(selected.get('gender')));
 				}
-			});
+
+				that.$el.html(that.template({
+					word: selected.attributes,
+					lang: that.lang || 'eng', 	// This will obviously be set by user profile for their 'default', not 'eng' 
+					grammar: selected.getGrammar()
+				}));
+
+				// Bind events
+				that.$el.find('a[data-toggle="tooltip"]').tooltip({ container: 'body' });
+				that.$el.addClass('expanded');
+
+			}.bind(this);
+
+			if (selected.get('translated')) {
+				populate();
+			}
+			else {
+				this.$el.addClass('loading');
+				selected.fetch({
+					success: function() { 
+						populate();
+					}
+				});
+			}
+
 		},
 		toggleParse: function(e) {
 			e.preventDefault();
@@ -55,7 +71,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 			if (model.get('hovered') && !model.get('selected') && 
 				(this.model.words.findWhere({ selected: true }) == undefined)) {
 				this.$el.find('.intro').html(
-					'Information about <span lang="' + model.get('lang') +'">' + model.get('value') + '</span>'
+					gettext('Information about') + ' <span lang="' + model.get('lang') +'">' + model.get('value') + '</span>'
 				);
 				this.$el.removeClass('expanded');
 				this.$el.find('.notes-nav a').eq(1).attr('title', 'Hide Resources');
@@ -63,8 +79,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!templates/notes.html'
 
 			// This will perform a fetch on the model for full data
 			else if (model.get('selected')) {
-				this.$el.find('.intro').html('<img src="/static/images/tree-loader.gif"> Loading');
-				this.$el.find('.notes-nav a').eq(1).attr('title', 'Show Resources');
+				this.$el.find('.notes-nav a').eq(1).attr('title', gettext('Show Resources'));
 				this.renderDetails();
 			}
 

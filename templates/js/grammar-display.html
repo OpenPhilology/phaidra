@@ -1,5 +1,6 @@
+{% load i18n %}
 <div id="toc">
-	<h2>Table of Contents</h2>
+	<h2>{% trans "Table of Contents" %}</h2>
 	<ul>
 		<% for (var i = 0; i < content.length; i++) { %>	
 			<li> <%= content[i].title %> </li>

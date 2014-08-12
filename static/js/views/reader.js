@@ -7,7 +7,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 
 			// Default to beginning of Thuc
 			if (!options.CTS)
-				this.options.CTS = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.89.1';
+				this.options.CTS = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.89.1';
 
 			// Fetch the list of Documents available to the reader
 			this.documents = new Collections.Documents();

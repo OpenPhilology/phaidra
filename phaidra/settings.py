@@ -49,8 +49,9 @@ LANGUAGES = (
 
 CTS_LANG = (
 	'grc',
-	'eng',
-	'fas',
+	'en',
+	'fa',
+	'hr',
 )
 
 SITE_ID = 1
@@ -90,8 +91,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	'/opt/phaidra/static',
-	'/opt/phaidra/static/raw'
+	'/opt/phaidra/static'
 )
 
 # List of finder classes that know how to find static files in
@@ -133,7 +133,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 	'/opt/phaidra/templates/',
-	'/opt/phaidra/static/js/templates/'
+	'/opt/phaidra/templates/js'
 )
 
 INSTALLED_APPS = (

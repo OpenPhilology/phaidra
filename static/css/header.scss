@@ -1,0 +1,135 @@
+$banner-height: 43px;
+
+/* Header */
+.banner {
+	color: #EEE; 
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
+	@include gradient($color-sec-two, 0, lighten($color-sec-two, 5%), 100);
+	background-color: $color-sec-two;
+	position: fixed;
+	width: 100%;
+	height: $banner-height;
+	z-index: 1;
+
+	#search-form {
+		margin: 7px 0px;
+
+		.form-group {
+			margin-bottom: 7px;
+		}
+	}
+
+	#logo-container {
+		padding-top: 4px;	
+		
+		img {
+			height: 35px;
+			margin-right: 4px;
+		}
+	}
+
+	.user-data {
+		a {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 18px;
+			margin-left: 10px;
+			color: #EEE;
+			letter-spacing: 0.08em;
+		}
+	}
+}
+.navigation {
+	text-align: center;
+
+	span {
+		text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22);
+		font-size: 12px;
+	}
+	span + span {
+		margin-left: 5px;
+		font-size: 14px;
+	}
+
+	.glyphicon-flash {
+		color: $color-sec-four;
+	}
+	.glyphicon-bookmark {
+		color: lighten($color-pri-one, 5%);
+	}
+	.glyphicon-comment {
+		color: $color-pri-two;
+	}
+
+	a {
+		display: inline-block;
+		padding: 10px 10px;
+		cursor: pointer;
+		text-decoration: none;
+		font-size: 16px;
+		letter-spacing: 0.1em;
+		@include transition(background-color, .2s, ease-out);
+
+		&:hover {
+			background-color: lighten($color-sec-two, 5%);	
+			@include transition(background-color, .2s, ease-in);
+		}
+		&.active {
+			background-color: lighten($color-sec-two, 10%);	
+			@include transition(background-color, .2s, ease-in);
+		}
+
+		strong {
+			font-size: 18px;
+			font-weight: normal;
+
+			span {
+				margin-right: 5px;
+			}
+		}
+		small {
+			display: block;
+			font-size: 11px;
+		}
+		&.progress-book {
+			color: $text-light-color;
+		}
+		&.progress-voc {
+			color: $text-light-color;
+		}
+		&.progress-lessons {
+			color: $text-light-color;
+		}
+	}
+
+}
+.user-info {
+	margin: 4px;
+
+	img {
+		margin-right: 10px;
+	}
+	a {
+		color: #EEE;
+	}
+	a.username, a.log-in-link {
+		border: 0;
+		background-color: darken($color-sec-two, 10%);
+		@include transition(background-color, .2s, ease-out);
+		padding: 0 10px;
+		text-decoration: none;
+		border-radius: 2px;
+		display: inline-block;
+
+		&:hover {
+			background-color: lighten($color-sec-two, 10%);
+			@include transition(background-color, .2s, ease-out);
+			box-shadow: 2px 2px 3px darken($color-sec-two, 5%);
+			color: #FFF;
+
+			img {
+				box-shadow: 2px 2px 3px darken($color-sec-two, 5%);
+			}
+		}
+	}
+}

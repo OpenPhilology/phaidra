@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+	{# Determine which CSS file to load #}
+	{% block css %}
+		{% with 'profile' as css_file %}
+			{{ block.super }}
+		{% endwith %}
+	{% endblock %}
+
+
 	{% block content %}
 
 		<div class="col-md-4 col-md-offset-1">

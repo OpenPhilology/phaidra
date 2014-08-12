@@ -40,7 +40,7 @@ class UserObjectsOnlyAuthorization(Authorization):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
 		submissions = []
-		table = gdb.query("""START u=node(*) MATCH (u)-[:submissions]->(s) WHERE HAS (u.username) AND u.username='""" + bundle.request.user.username + """' RETURN s""")		
+		table = gdb.query("""START u=node(*) MATCH (u)-[:submits]->(s) WHERE HAS (u.username) AND u.username='""" + bundle.request.user.username + """' RETURN s""")		
 			
 		# create the objects which was queried for and set all necessary attributes
 		for s in table:
@@ -546,6 +546,7 @@ class WordResource(Resource):
 	form = fields.CharField(attribute='form', null = True, blank = True)
 	lemma = fields.CharField(attribute='lemma', null = True, blank = True)
 	ref = fields.CharField(attribute='ref', null = True, blank = True)
+	lang = fields.CharField(attribute='lang', null = True, blank = True)
 	
 	sentence_resource_uri = fields.CharField(attribute='sentence_resource_uri', null = True, blank = True)
 	
@@ -699,17 +700,20 @@ class WordResource(Resource):
 			
 			# filter word on parameters
 			for key in query_params:
-				if len(key.split('__')) > 1:
-					if key.split('__')[1] == 'contains':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
-					elif key.split('__')[1] == 'startswith':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
-					elif key.split('__')[1] == 'endswith':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
-					elif key.split('__')[1] == 'isnot':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
-				else:
-					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
+				if key in ['tbwid', 'head', 'length', 'cid']:
+					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """=""" +query_params[key]+ """ AND """
+				else:				
+					if len(key.split('__')) > 1:
+						if key.split('__')[1] == 'contains':
+							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+						elif key.split('__')[1] == 'startswith':
+							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+						elif key.split('__')[1] == 'endswith':
+							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+						elif key.split('__')[1] == 'isnot':
+							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
+					else:
+						q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
 			q = q + """RETURN w, s ORDER BY ID(w)"""
 			
@@ -893,7 +897,7 @@ class SentenceResource(Resource):
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
 		
-		# get a dictionary or related translation of this sentence # ordering here is a problem child
+		# get a dictionary of related translation of this sentence # ordering here is a problem child
 		relatedSentences = gdb.query("""START s=node(*) MATCH (s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='""" 
 						+ sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
 		
@@ -1017,8 +1021,7 @@ class SentenceResource(Resource):
 						if w['head'] == id:
 							aim_words.append(w)   
 							
-				aim_words.append(verb)
-					
+				aim_words.append(verb)	
 				# check if not verbs only are returned
 				if len(aim_words) > 1:
 					# consider params
@@ -1050,12 +1053,12 @@ class SentenceResource(Resource):
 class DocumentResource(Resource):
 	
 	CTS = fields.CharField(attribute='CTS')
-	name = fields.CharField(attribute='name', null = True, blank = True)	
-	name_eng = fields.CharField(attribute='name_eng', null = True, blank = True)
-	lang = fields.CharField(attribute='lang', null = True, blank = True)
-	author = fields.CharField(attribute='author', null = True, blank = True)
+	lang = fields.CharField(attribute='lang', null = True, blank = True)	
 	sentences = fields.ListField(attribute='sentences', null = True, blank = True)
-		
+	name = fields.CharField(attribute='name', null = True, blank = True)
+	author = fields.CharField(attribute='author', null = True, blank = True)
+	translations = fields.DictField(attribute='translations', null = True, blank = True)
+	
 	class Meta:
 		
 		resource_name = 'document'
@@ -1173,6 +1176,19 @@ class DocumentResource(Resource):
 			sentenceArray.append(sent['data'])
 				
 			new_obj.__dict__['_data']['sentences'] = sentenceArray
+
+		# get a dictionary or related translation of this document
+		relatedDocuments = gdb.query("""START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" 
+						+ document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
+		
+		new_obj.__dict__['_data']['translations']={}
+		for rd in relatedDocuments:
+			doc = rd[0]
+			url = doc['self'].split('/')
+			if doc['data']['lang'] in CTS_LANG:
+				new_obj.__dict__['_data']['translations'][doc['data']['lang']] = doc['data']
+				new_obj.__dict__['_data']['translations'][doc['data']['lang']]['resource_uri']= API_PATH + 'document/' + url[len(url)-1] +'/'
+
 
 		return new_obj
  
