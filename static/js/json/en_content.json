@@ -1850,29 +1850,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
-					}
-				]
-			}
-		]
-	},
-	{
-		"title": "Traditional Unit",
-		"modules": [
-			{
-				"title": "Translation",
-				"slides": [
+					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.trad/a1.html"
-					}
-				]
-			},
-			{
-				"title": "Syntax",
-				"slides": [
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.trad/t1.html"
+						"includeHTML": "/static/content/en/slides/test.ag/t2.html"
 					}
 				]
 			}
