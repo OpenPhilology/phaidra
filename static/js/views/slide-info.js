@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/templates/js/slide-info.html', 'daphne'], function($, _, Backbone, Models, Collections, Template, Daphne) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/templates/js/slide-info.html', 'daphne', 'morea'], function($, _, Backbone, Models, Collections, Template, Daphne, Morea) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',
@@ -24,6 +24,28 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 					width: el.getAttribute('data-width') || 200,
 					height: 400,
 					initialScale: 0.9
+				});
+			});
+
+			this.$el.find('[data-toggle="morea"]').each(function(i, el) {
+				var data = JSON.parse(el.innerHTML);
+				el.innerHTML = '';
+
+				new Morea(el, {
+					mode: el.getAttribute('data-mode'),
+					data: data,
+					langs: {
+						"grc": {
+							"hr": "Greek",
+							"resource_uri": "",
+							"dir": "ltr"
+						},
+						"en": {
+							"hr": "English",
+							"resource_uri": "",
+							"dir": "ltr"
+						}
+					}
 				});
 			});
 

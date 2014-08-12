@@ -12,7 +12,8 @@ requirejs.config({
 		'jquery-ui-core': 'lib/jquery-ui-core',
 		'jquery-ui-slide': 'lib/jquery-ui-effects-slide',
 		'text': 'lib/text',
-		'daphne': 'lib/daphnejs/src/daphne'
+		'daphne': 'lib/daphnejs/src/daphne',
+		'morea': 'lib/moreajs/src/morea'
 	},
 	'shim': {
 		'underscore': {
@@ -27,6 +28,9 @@ requirejs.config({
 		},
 		'd3': {
 			'exports': 'd3'
+		},
+		'morea': {
+			'exports': 'morea'
 		},
 		'daphne': {
 			'exports': 'daphne',
