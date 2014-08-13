@@ -47,7 +47,7 @@ class UserSentenceResource(Resource):
         resource_name = 'user_sentence'
         object_class = DataObject
         authorization = Authorization() 
-        authentication = BasicAuthentication()   
+        authentication = SessionAuthentication()   
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
@@ -137,7 +137,7 @@ class UserSentenceResource(Resource):
         new_obj.__dict__['_data']['id'] = kwargs['pk']
         new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
         
-        # get a dictionary or related translation of this sentence
+        # get a dictionary of related translation of this sentence # shall this be more strict (only user)
         relatedSentences = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w)-[:translation]->(t)<-[:words]-(s1) WHERE HAS (s.CTS) AND s.CTS='""" 
                         + sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
         
@@ -197,10 +197,10 @@ class UserSentenceResource(Resource):
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
         
         self.method_check(request, allowed=['post'])
-        #self.is_authenticated(request)
+        self.is_authenticated(request)
         
-        #if not request.user or not request.user.is_authenticated():
-            #return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s.' % request.user })
+        if not request.user or not request.user.is_authenticated():
+            return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s.' % request.user })
 
         data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
         if data.get("document_resource_uri") is None :
@@ -278,7 +278,7 @@ class UserDocumentResource(Resource):
         object_class = DataObject
         allowed_methods = ['get', 'post']
         authorization = Authorization()
-        authentication = BasicAuthentication()
+        authentication = SessionAuthentication()
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
