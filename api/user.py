@@ -47,7 +47,7 @@ class UserSentenceResource(Resource):
         resource_name = 'user_sentence'
         object_class = DataObject
         authorization = Authorization() 
-        authentication = SessionAuthentication()   
+        authentication = BasicAuthentication()   
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
@@ -108,7 +108,7 @@ class UserSentenceResource(Resource):
             new_obj = DataObject(url[len(url)-1])
             new_obj.__dict__['_data'] = sentence['data']        
             new_obj.__dict__['_data']['id'] = url[len(url)-1]
-            new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + urlDoc[len(urlDoc)-1] +'/'
+            new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'user_document/' + urlDoc[len(urlDoc)-1] +'/'
             sentences.append(new_obj)
                 
         return sentences
@@ -135,11 +135,10 @@ class UserSentenceResource(Resource):
         new_obj = DataObject(kwargs['pk'])
         new_obj.__dict__['_data'] = sentence.properties
         new_obj.__dict__['_data']['id'] = kwargs['pk']
-        new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
+        new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'user_document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
         
         # get a dictionary of related translation of this sentence # shall this be more strict (only user)
-        relatedSentences = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w)-[:translation]->(t)<-[:words]-(s1) WHERE HAS (s.CTS) AND s.CTS='""" 
-                        + sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
+        relatedSentences = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w)-[:translation]->(t)<-[:words]-(s1) WHERE HAS (s.CTS) AND s.CTS='""" + sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
         
         new_obj.__dict__['_data']['translations']={}
         for rs in relatedSentences:
@@ -233,7 +232,7 @@ class UserSentenceResource(Resource):
             for w in data.get("words"):
                 sentencestring = sentencestring + "" + w["value"] + " "
                 word = gdb.nodes.create( CTS = w["CTS"], lang = w["lang"], length = len(w["value"]), tbwid = w["tbwid"], value = w["value"])
-                word.labels.add("UserWord")
+                word.labels.add("Word")
                 # loop to create links to translations
                 for cts in w["translations"]:
                     translation = gdb.query("""START w=node(*) MATCH (w:`Word`) WHERE HAS (w.CTS) AND w.CTS='""" + cts +"""' RETURN w""")
@@ -278,7 +277,7 @@ class UserDocumentResource(Resource):
         object_class = DataObject
         allowed_methods = ['get', 'post']
         authorization = Authorization()
-        authentication = SessionAuthentication()
+        authentication = BasicAuthentication()
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
@@ -373,14 +372,13 @@ class UserDocumentResource(Resource):
             url = sent['self'].split('/')
             # this might seems a little hacky, but API resources are very decoupled,
             # which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
-            sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
+            sent['data']['resource_uri'] = API_PATH + 'User_sentence/' + url[len(url)-1] + '/'
             sentenceArray.append(sent['data'])
                 
             new_obj.__dict__['_data']['sentences'] = sentenceArray
 
         # get a dictionary of related translations of this document
-        relatedDocuments = gdb.query("""START d=node(*) MATCH (d:`UserDocument`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" 
-                        + document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
+        relatedDocuments = gdb.query("""START d=node(*) MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" + document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
         
         new_obj.__dict__['_data']['translations']={}
         for rd in relatedDocuments:
