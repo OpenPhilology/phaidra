@@ -1,5 +1,5 @@
 // directional-scss | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT
-$dir: rtl !default;
+$dir: ltr !default;
 
 // Default $dir if not valid
 @if $dir != ltr and $dir != rtl {

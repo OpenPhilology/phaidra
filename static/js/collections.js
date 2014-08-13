@@ -75,10 +75,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			*/
 
 			// Set attributes on this object
-			that.meta('title', Utils.Content[that.meta('module')]["title"]);
+			that.meta('moduleTitle', Utils.Content[that.meta('module')]["title"]);
+			that.meta('sectionTitle', Utils.Content[that.meta('module')].modules[that.meta('section')]["title"]);
 
 			for (var i = 0; i < slide_data.length; i++) {
-				slide_data[i]["title"] = that.meta('title');
+				slide_data[i]["title"] = that.meta('sectionTitle');
 				if (slide_data[i]["smyth"] && slide_data[i]["tasks"] && slide_data[i]["type"] == 'slide_info') {
 					// Create data needed for a an exercise
 					console.log("Adding an exercise for " + slide_data[i]["smyth"]);

@@ -58,7 +58,8 @@ define(
 
 				this.lesson.bind('add', _.bind(this.addSlide, this));
 				this.lesson.populate();
-				this.$el.find('.lesson-header h1').html(this.lesson.meta('title'));
+				this.$el.find('.lesson-header h1').html(this.lesson.meta('moduleTitle'));
+				this.$el.find('.lesson-header h2').html(this.lesson.meta('sectionTitle'));
 				
 			},
 			addSlide: function(model, collection, options) {
@@ -75,8 +76,10 @@ define(
 				// Create a progress bar section for each slide
 				if (model.get('index') < model.collection.meta('initLength') - 1) {
 					var progress = this.$el.find('.lesson-progress');
-					progWidth = (100 / model.collection.meta('initLength') - 1); 
+					progWidth = (100 / (model.collection.meta('initLength') - 1)); 
 					progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
+
+					console.log("num slides", model.collection.meta('initLength'), "width per slide", progWidth);
 				}
 			},
 			render: function() {
