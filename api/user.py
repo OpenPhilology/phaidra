@@ -47,7 +47,7 @@ class UserSentenceResource(Resource):
         resource_name = 'user_sentence'
         object_class = DataObject
         authorization = Authorization() 
-        authentication = BasicAuthentication()   
+        authentication = SessionAuthentication()   
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
@@ -343,7 +343,7 @@ class UserDocumentResource(Resource):
                 url = sent['self'].split('/')
                 
                 sent['data'] = {}
-                sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
+                sent['data']['resource_uri'] = API_PATH + 'user_sentence/' + url[len(url)-1] + '/'
                 sentenceArray.append(sent['data'])
                 
             new_obj.__dict__['_data']['sentences'] = sentenceArray
@@ -372,7 +372,7 @@ class UserDocumentResource(Resource):
             url = sent['self'].split('/')
             # this might seems a little hacky, but API resources are very decoupled,
             # which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
-            sent['data']['resource_uri'] = API_PATH + 'User_sentence/' + url[len(url)-1] + '/'
+            sent['data']['resource_uri'] = API_PATH + 'user_sentence/' + url[len(url)-1] + '/'
             sentenceArray.append(sent['data'])
                 
             new_obj.__dict__['_data']['sentences'] = sentenceArray
