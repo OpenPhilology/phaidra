@@ -270,6 +270,7 @@ class UserDocumentResource(Resource):
     lang = fields.CharField(attribute='lang', null = True, blank = True)
     author = fields.CharField(attribute='author', null = True, blank = True)
     sentences = fields.ListField(attribute='sentences', null = True, blank = True)
+    translations = fields.DictField(attribute='translations', null = True, blank = True)
         
     class Meta:
         
@@ -277,7 +278,7 @@ class UserDocumentResource(Resource):
         object_class = DataObject
         allowed_methods = ['get', 'post']
         authorization = Authorization()
-        authentication = BasicAuthentication()
+        authentication = SessionAuthentication()
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
