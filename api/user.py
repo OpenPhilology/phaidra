@@ -46,7 +46,8 @@ class UserSentenceResource(Resource):
         
         resource_name = 'user_sentence'
         object_class = DataObject
-        authorization = Authorization()    
+        authorization = Authorization() 
+        authentication = SessionAuthentication()   
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
@@ -107,7 +108,7 @@ class UserSentenceResource(Resource):
             new_obj = DataObject(url[len(url)-1])
             new_obj.__dict__['_data'] = sentence['data']        
             new_obj.__dict__['_data']['id'] = url[len(url)-1]
-            new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + urlDoc[len(urlDoc)-1] +'/'
+            new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'user_document/' + urlDoc[len(urlDoc)-1] +'/'
             sentences.append(new_obj)
                 
         return sentences
@@ -134,11 +135,10 @@ class UserSentenceResource(Resource):
         new_obj = DataObject(kwargs['pk'])
         new_obj.__dict__['_data'] = sentence.properties
         new_obj.__dict__['_data']['id'] = kwargs['pk']
-        new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
+        new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'user_document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
         
-        # get a dictionary or related translation of this sentence # ordering here is a problem child
-        relatedSentences = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w)-[:translation]->(t)<-[:words]-(s1) WHERE HAS (s.CTS) AND s.CTS='""" 
-                        + sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
+        # get a dictionary of related translation of this sentence # shall this be more strict (only user)
+        relatedSentences = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w)-[:translation]->(t)<-[:words]-(s1) WHERE HAS (s.CTS) AND s.CTS='""" + sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
         
         new_obj.__dict__['_data']['translations']={}
         for rs in relatedSentences:
@@ -148,8 +148,8 @@ class UserSentenceResource(Resource):
                 if sent['data']['CTS'].find(lang) != -1:
                     new_obj.__dict__['_data']['translations'][lang] = API_PATH + 'sentence/' + url[len(url)-1] +'/'        
         
-        # get the words    and related information    
-        words = gdb.query("""START d=node(*) MATCH (d:UserSentence)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+        # get the words and related information    
+        words = gdb.query("""START d=node(*) MATCH (d:`UserSentence`)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
         wordArray = []
         for w in words:
             word = w[0]
@@ -157,10 +157,10 @@ class UserSentenceResource(Resource):
             word['data']['resource_uri'] = API_PATH + 'word/' + url[len(url)-1] + '/'
             wordNode = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + url[len(url)-1] + '/')
             
-            # get the lemma    
-            lemmaRels = wordNode.relationships.incoming(types=["values"])
-            if len(lemmaRels) > 0:
-                word['data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
+            # get the lemma # not on user document translations   
+            #lemmaRels = wordNode.relationships.incoming(types=["values"])
+            #if len(lemmaRels) > 0:
+            #    word['data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
             
             # get the full translation
             if bundle.request.GET.get('full'):            
@@ -188,6 +188,81 @@ class UserSentenceResource(Resource):
         return new_obj
 
 
+    # means csrftoken and sessionid  is required, if resource on session auth?!    
+    def post_list(self, request, **kwargs):
+        """
+        Create a new sentence object, and the word objects containing the translations, build the relations; return the json data.
+        """
+        gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+        
+        self.method_check(request, allowed=['post'])
+        self.is_authenticated(request)
+        
+        if not request.user or not request.user.is_authenticated():
+            return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s.' % request.user })
+
+        data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
+        if data.get("document_resource_uri") is None :
+            raise ValidationError('document_resource_uri required.')
+        documentResourceUriArray = data.get("document_resource_uri").split('/')
+        documentId = documentResourceUriArray[len(documentResourceUriArray)-2]
+        
+        # get the user and document via neo look-up or create a new one
+        if request.user.username is not None:
+            documentTable = gdb.query("""START u=node(*) MATCH (u:`User`)-[:owns]->(d:`UserDocument`) WHERE HAS (u.username) AND ID(d)=""" + documentId +""" AND u.username='""" + request.user.username + """' RETURN u,d""")        
+            # test for user node
+            try:
+                documentTable.elements[0][0]
+            except ValidationError:
+                return self.error_response(request, {'error': 'User does not exist.'}, response_class=HttpBadRequest)
+            
+            try:
+                documentTable.elements[0][1]
+            except ValidationError:
+                return self.error_response(request, {'error': 'Document does not exist.'}, response_class=HttpBadRequest)
+            
+            document = gdb.nodes.get(documentTable[0][1]['self'])
+                                      
+            # create sentence object        
+            sentence = gdb.nodes.create(CTS = data.get("CTS"), length = len(data.get("words")))
+            sentence.labels.add("UserSentence")
+                
+            # loop to create words
+            sentencestring = ''
+            for w in data.get("words"):
+                sentencestring = sentencestring + "" + w["value"] + " "
+                word = gdb.nodes.create( CTS = w["CTS"], lang = w["lang"], length = len(w["value"]), tbwid = w["tbwid"], value = w["value"])
+                word.labels.add("Word")
+                # loop to create links to translations
+                for cts in w["translations"]:
+                    translation = gdb.query("""START w=node(*) MATCH (w:`Word`) WHERE HAS (w.CTS) AND w.CTS='""" + cts +"""' RETURN w""")
+                    transNode = gdb.nodes.get(translation[0][0]['self'])
+                    transNode.translation(word)
+                    word.translation(transNode)
+                    
+                sentence.words(word)
+                    
+            # sentence as string
+            sentence['sentence'] = sentencestring
+            # documetn sentence relation
+            document.sentences(sentence)
+            
+            # maybe here some extra resource _uro_informatin to return    
+            #data['resource_uri'] = '/api/v1/document_user/' + str(document.id) + '/'
+                
+            if sentence is None :            
+                raise ValidationError('Document node could not be created.')
+            
+            # save sentence to document
+            #userNode.owns(document)
+                  
+            return self.create_response(request, data)
+        
+        else:
+            return self.error_response(request, {'error': 'User is required.' }, response_class=HttpBadRequest)
+
+
+
 class UserDocumentResource(Resource):
     
     CTS = fields.CharField(attribute='CTS')
@@ -195,6 +270,7 @@ class UserDocumentResource(Resource):
     lang = fields.CharField(attribute='lang', null = True, blank = True)
     author = fields.CharField(attribute='author', null = True, blank = True)
     sentences = fields.ListField(attribute='sentences', null = True, blank = True)
+    translations = fields.DictField(attribute='translations', null = True, blank = True)
         
     class Meta:
         
@@ -260,19 +336,15 @@ class UserDocumentResource(Resource):
             new_obj.__dict__['_data'] = document['data']        
             new_obj.__dict__['_data']['id'] = urlDoc[len(urlDoc)-1]
             
-            #documentNode = gdb.nodes.get(document['self'])
-            #sentences = documentNode.relationships.outgoing(types=["sentences"])
-    
             sentences = gdb.query("""START d=node(*) MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE d.CTS='""" +document['data']['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
             sentenceArray = []
             for s in sentences:
                 
                 sent = s[0]
                 url = sent['self'].split('/')
-                # this might seems a little hacky, but API resources are very decoupled,
-                # which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
+                
                 sent['data'] = {}
-                sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
+                sent['data']['resource_uri'] = API_PATH + 'user_sentence/' + url[len(url)-1] + '/'
                 sentenceArray.append(sent['data'])
                 
             new_obj.__dict__['_data']['sentences'] = sentenceArray
@@ -301,33 +373,44 @@ class UserDocumentResource(Resource):
             url = sent['self'].split('/')
             # this might seems a little hacky, but API resources are very decoupled,
             # which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
-            sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
+            sent['data']['resource_uri'] = API_PATH + 'user_sentence/' + url[len(url)-1] + '/'
             sentenceArray.append(sent['data'])
                 
             new_obj.__dict__['_data']['sentences'] = sentenceArray
 
+        # get a dictionary of related translations of this document
+        relatedDocuments = gdb.query("""START d=node(*) MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" + document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
+        
+        new_obj.__dict__['_data']['translations']={}
+        for rd in relatedDocuments:
+            doc = rd[0]
+            url = doc['self'].split('/')
+            if doc['data']['lang'] in CTS_LANG:
+                new_obj.__dict__['_data']['translations'][doc['data']['lang']] = doc['data']
+                new_obj.__dict__['_data']['translations'][doc['data']['lang']]['resource_uri']= API_PATH + 'document/' + url[len(url)-1] +'/'
+
+
         return new_obj
     
     
-        # means csrftoken and sessionid  is required, if resource on session auth?!    
+    # means csrftoken and sessionid  is required, if resource on session auth?!    
     def post_list(self, request, **kwargs):
         """
-        Create a new submission object, which relates to the slide it responds to and the user who submitted it.
-        Return the submission object, complete with whether or not they got the answer correct.
+        Create a new document object and return it if the user is authenticated and exists. Create a new neo node in case the users doesn't exist on this side.
         """
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
         
         self.method_check(request, allowed=['post'])
-        #self.is_authenticated(request)
+        self.is_authenticated(request)
         
-        #if not request.user or not request.user.is_authenticated():
-            #return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s.' % request.user })
+        if not request.user or not request.user.is_authenticated():
+            return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s.' % request.user })
 
         data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
         # get the user via neo look-up or create a newone
         if request.user.username is not None:
-            userTable = gdb.query("""START u=node(*) MATCH (u)-[:submits]->(s) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
+            userTable = gdb.query("""START u=node(*) MATCH (u:`User`) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
         
             if len(userTable) > 0:    
                 userurl = userTable[0][0]['self']
@@ -341,11 +424,10 @@ class UserDocumentResource(Resource):
                 CTS = data.get("CTS"),  
                 author = data.get("author"), 
                 lang = data.get("lang"),    
-                name = data.get("name"),     
-                name_eng = data.get("name_eng")
+                name = data.get("name")
             )
             document.labels.add("UserDocument")
-            data['resource_uri'] = '/api/v1/document_user/' + str(document.id) + '/'
+            data['resource_uri'] = '/api/v1/user_document/' + str(document.id) + '/'
             
             if document is None :
                 # in case an error wasn't already raised             

@@ -995,7 +995,7 @@ class SentenceResource(Resource):
 						for w in nodes[word.value['tbwid']].children:
 							if (w.value['relation'] == "OBJ_CO" or w.value['relation'] == "ADV_CO") and w.value['pos'] != "participle" and w.value['pos'] != "verb":
 								i.append(w.value['tbwid'])
-								aim_words.append(w.value)
+								#aim_words.append(w.value) # Is are checked later
 					
 					elif word.value['relation'] == "AuxP":
 						aim_words.append(word.value)
@@ -1014,12 +1014,16 @@ class SentenceResource(Resource):
 							if w.value['relation'] == "ATR" and w.value['pos'] != "verb":
 								aim_words.append(w.value)
 					
-				# refinement of u
+				# refinement of u coords # i want u if i is not empty
 				for id in u:
 					for id2 in i:
 						w = nodes[id2].value
 						if w['head'] == id:
-							aim_words.append(w)   
+							aim_words.append(w)
+					if len(i) > 0:
+						w2 = nodes[id].value
+						aim_words.append(w2)
+						  
 							
 				aim_words.append(verb)	
 				# check if not verbs only are returned
@@ -1177,7 +1181,7 @@ class DocumentResource(Resource):
 				
 			new_obj.__dict__['_data']['sentences'] = sentenceArray
 
-		# get a dictionary or related translation of this document
+		# get a dictionary of related translations of this document
 		relatedDocuments = gdb.query("""START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" 
 						+ document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
 		
