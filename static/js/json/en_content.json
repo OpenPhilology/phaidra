@@ -2019,20 +2019,11 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
-					}
-				]
-			},
-			{
-				"title": "Treebanking",
-				"slides": [
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
+						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
+						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
 					},
 					{
 						"type": "slide_info",
