@@ -2007,17 +2007,12 @@
 		"title": "Ancient Geek",
 		"modules": [
 			{
-				"title": "Gateway",
+				"title": "Alignment",
 				"slides": [
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
-					}
-				]
-			},
-			{
-				"title": "Alignment",
-				"slides": [
+					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.ag/a1.html"
@@ -2031,6 +2026,10 @@
 			{
 				"title": "Treebanking",
 				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
+					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
