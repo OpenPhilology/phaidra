@@ -2007,6 +2007,15 @@
 		"title": "Ancient Geek",
 		"modules": [
 			{
+				"title": "Gateway",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
+					}
+				]
+			},
+			{
 				"title": "Alignment",
 				"slides": [
 					{
