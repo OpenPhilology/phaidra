@@ -856,7 +856,7 @@ class SentenceResource(Resource):
 		
 		# default querying	
 		else:	
-			table = gdb.query("""START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) RETURN s, d ORDER BY ID(s)""")
+			table = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) RETURN s, d ORDER BY ID(s)""")
 			
 		# create the objects which was queried for and set all necessary attributes
 		for t in table:
@@ -898,7 +898,7 @@ class SentenceResource(Resource):
 		new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
 		
 		# get a dictionary of related translation of this sentence # ordering here is a problem child
-		relatedSentences = gdb.query("""START s=node(*) MATCH (s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='""" 
+		relatedSentences = gdb.query("""MATCH (s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='""" 
 						+ sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
 		
 		new_obj.__dict__['_data']['translations']={}
@@ -910,7 +910,7 @@ class SentenceResource(Resource):
 					new_obj.__dict__['_data']['translations'][lang] = API_PATH + 'sentence/' + url[len(url)-1] +'/'		
 		
 		# get the words	and related information	
-		words = gdb.query("""START d=node(*) MATCH (d)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+		words = gdb.query("""MATCH (d)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
 		wordArray = []
 		for w in words:
 			word = w[0]
