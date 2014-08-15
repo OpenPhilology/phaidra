@@ -1,20 +1,93 @@
 [
 	{
-		"title": "Experiments!",
+		"title": "Diagnostic Test",
 		"modules": [
 			{
-				"title": "Parse trees",
-				"slides": []
+				"title": "Alignment and Treebanking",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t7.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a7.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a8.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t8.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a9.html"
+					}
+				]
 			}
 		]
-	},        
+	},
 	{
 		"title": "Alphabet",
 		"category": "basics",
 		"thumbnail": "icon_grk_amphora.png",
 		"modules": [
 			{
-				"title": "Alphabet",
+				"title": "Alpha - Theta",
 				"slides": [
 					{	
 						"type": "slide_info",
@@ -261,7 +334,12 @@
 						"failureMsg": "<strong>The correct answer was <span lang=\"grc\">η</span>, <span lang=\"grc\">θ</span>",
 						"require_order": "true",
 						"require_all": "true"
-					},
+					}
+				]
+			},
+			{
+				"title": "Theta - Rho",
+				"slides": [
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/1.alphabet/iota.html"
@@ -579,9 +657,14 @@
 						"failureMsg": "<strong>The correct answer was \"Ο\" in ostrich.</strong>",
 						"require_order": "false",
 						"require_all": "true"
-					},
+					}
+				]
+			},
+			{
+				"title": "Alphabet",
+				"slides": [
 					{
-						"type": "slide_info",
+						"type": "Sigma - Omega",
 						"includeHTML": "/static/content/en/slides/1.alphabet/sigma.html"
 					},
 					{
@@ -2008,6 +2091,36 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/12.thirddecconson/concl.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Aorist Indicative Active",
+		"modules": [
+			{
+				"title": "Aorist Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html"
 					}
 				]
 			}	

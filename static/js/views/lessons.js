@@ -10,7 +10,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			},
 			render: function() {
 				var container = this.$el.find('.module-container .row');
-				for (var i = 1; i < Utils.Content.length; i++) {
+				for (var i = 0; i < Utils.Content.length; i++) {
 					var unit = Utils.Content[i];
 					console.log(unit);
 
