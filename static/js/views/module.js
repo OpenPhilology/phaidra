@@ -95,21 +95,31 @@ define(
 					window.dispatchEvent(new Event('resize'));
 				});
 
-				// Display proper progress to the user
+				this.recordTimestamp(slide);
+				this.updateProgress(slide);
+				this.updateNavigation(slide);
+			},
+			// Update the navigation link
+			updateNavigation: function(slide) {
+				if (!this.slides[slide + 1])
+					this.$el.find('.corner a').hide();
+				else {
+					var url = '/' + Backbone.history.fragment.split('/').splice(0, 5).join('/') + '/' + (1 + slide);
+					this.$el.find('.corner a').attr('href', url);
+				}
+			},
+			// Record the time that the user started viewing the slide
+			recordTimestamp: function(slide) {
+				this.slides[slide].data('startTime', new Date());
+			},
+			// Display proper progress to the user
+			updateProgress: function(slide) {
 				var progress = this.$el.find('.lesson-progress').children();
 				for (var i = 0; i < progress.length; i++) {
 					if (i < slide)
 						$(progress[i]).addClass('complete');	
 					else
 						$(progress[i]).removeClass('complete');
-				}
-
-				// Update the navigation link
-				if (!this.slides[slide + 1])
-					this.$el.find('.corner a').hide();
-				else {
-					var url = '/' + Backbone.history.fragment.split('/').splice(0, 5).join('/') + '/' + (1 + slide);
-					this.$el.find('.corner a').attr('href', url);
 				}
 			},
 			navigate: function(e) {

@@ -1,90 +1,43 @@
-requirejs.config({
-	'baseUrl': '/static/js',
-	'paths': {
-		// Lib paths
-		'jquery': 'lib/jquery-2.1.1',
-		'bootstrap': '../bootstrap/js/bootstrap.min',
-		'json2': 'lib/json2',
-		'underscore': 'lib/underscore-min',
-		'backbone': 'lib/backbone',
-		'd3': 'lib/d3.v3.min',
-		'jquery-ui': 'lib/jquery-ui-draggable',
-		'jquery-ui-core': 'lib/jquery-ui-core',
-		'jquery-ui-slide': 'lib/jquery-ui-effects-slide',
-		'text': 'lib/text',
-		'daphne': 'lib/daphnejs/src/daphne',
-		'morea': 'lib/moreajs/src/morea'
-	},
-	'shim': {
-		'underscore': {
-			'exports': '_'
-		},
-		'backbone': {
-			'deps': ['jquery', 'underscore'],
-			'exports': 'Backbone'
-		},
-		'bootstrap': {
-			'deps': ['jquery']
-		},
-		'd3': {
-			'exports': 'd3'
-		},
-		'morea': {
-			'exports': 'morea'
-		},
-		'daphne': {
-			'exports': 'daphne',
-			'deps': ['d3']
-		},
-		'jquery-ui-core': {
-			'deps': ['jquery']
-		},
-		'jquery-ui': {
-			'deps': ['jquery']
-		},
-		'jquery-ui-slide': {
-			'deps': ['jquery', 'jquery-ui-core']
-		}
-	}
-});
-
-require(['jquery', 'underscore', 'backbone', 'router', 'd3', 'bootstrap'], function($, _, Backbone, Phaidra, d3) {
+require(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap'], function($, _, Backbone, d3) {
 	$(document).ready(function() {
-		var app = new Phaidra.Router();
-		Backbone.history.start({ pushState: true });
+		
+		var app = window.location.pathname.split('/')[1];
+		
+		// TODO: Investigate more flexible ways of doing this 
+
+		switch(app) {
+			case "lessons":
+			case "module":
+				require(['apps/lesson-router'], function(Lessons) {
+					new Lessons.Router();
+					Backbone.history.start({ pushState: true });
+				});
+				break;
+			case "reader":
+				require(['apps/reader-router'], function(Reader) {
+					new Reader.Router();
+					Backbone.history.start({ pushState: true });
+				});
+				break;
+			case "create":
+				require(['apps/create-router'], function(Create) {
+					new Create.Router();
+					Backbone.history.start({ pushState: true });
+				});
+				break;
+			default:
+				require(['apps/default-router'], function(Default) {
+					new Default.Router();
+					Backbone.history.start({ pushState: true });
+				});
+		}
+
 
 		// Activate Bootstrap JS Components
 		$('.module .circle').tooltip({ container: 'body'});
 		$('div[data-toggle="tooltip"]').tooltip();
 		$('a[data-toggle="tooltip"]').tooltip();
 
-		/* Make our SVGs manipulatable via JS
-		jQuery('img.svg').each(function(){
-			var $img = jQuery(this);
-			var imgID = $img.attr('id');
-			var imgClass = $img.attr('class');
-			var imgURL = $img.attr('src');
-
-			jQuery.get(imgURL, function(data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = jQuery(data).find('svg');
-
-			// Add replaced image's ID to the new SVG
-			if(typeof imgID !== 'undefined') {
-				$svg = $svg.attr('id', imgID);
-			}
-			// Add replaced image's classes to the new SVG
-			if(typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass+' replaced-svg');
-			}
-
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-
-			}, 'xml');
-		});*/
+		console.log(window);
 	});
 });

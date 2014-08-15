@@ -9,9 +9,9 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		parse: function(response) {
 			if (response && response.meta)
 				this.meta = response.meta;
-
-			return response && response.objects && (_.isArray(response.objects) ? response.objects[0] : response.objects) 
-				|| response;
+			this.set(response.objects);
+			this.set("locale", locale);
+			this.set("language", locale.split('-')[0]);
 		}
 	});
 
@@ -178,7 +178,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				encounteredWords: '',
 				slideType: this.get('type'),
 				smyth: this.get('smyth') || '',
-				timestamp: (new Date()).toISOString()
+				timestamp: (new Date()).toISOString(),
+				start_time: this.get('startTime')
 			};
 
 			$.ajax({
