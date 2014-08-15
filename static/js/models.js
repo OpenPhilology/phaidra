@@ -179,7 +179,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				slideType: this.get('type'),
 				smyth: this.get('smyth') || '',
 				timestamp: (new Date()).toISOString(),
-				start_time: this.get('startTime')
+				starttime: (new Date(data.start_time)).toISOString()
 			};
 
 			$.ajax({

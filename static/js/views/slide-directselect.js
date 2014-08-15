@@ -20,10 +20,10 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 		},
 		draw: function() {
 			this.$el.html(this.template(this.model.attributes));
-			this.model.set('startTime', this.$el.data('startTime'));
 		},
 		selectAnswer: function(e) {
 			e.preventDefault();
+			this.model.set('startTime', this.$el.data('startTime'));
 
 			if (this.finished)
 				return false;
