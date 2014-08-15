@@ -28,12 +28,10 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			});
 
 			this.$el.find('[data-toggle="morea"]').each(function(i, el) {
-				var data = JSON.parse(el.innerHTML);
-				el.innerHTML = '';
-
 				new Morea(el, {
 					mode: el.getAttribute('data-mode'),
-					data: data,
+					dataUrl: el.getAttribute('data-dataUrl'),
+					targets: el.getAttribute('data-targets').split(","),
 					langs: {
 						"grc": {
 							"hr": "Greek",

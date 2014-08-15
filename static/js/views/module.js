@@ -78,8 +78,6 @@ define(
 					var progress = this.$el.find('.lesson-progress');
 					progWidth = (100 / (model.collection.meta('initLength') - 1)); 
 					progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
-
-					console.log("num slides", model.collection.meta('initLength'), "width per slide", progWidth);
 				}
 			},
 			render: function() {
@@ -92,7 +90,10 @@ define(
 				for (var i = 0; i < this.slides.length; i++) {
 					this.slides[i].hide();
 				}
-				this.slides[slide].show('slide', { direction: 'right' }, 500);
+				this.slides[slide].show('slide', { direction: 'right' }, 500, function() {
+					// Trigger resize for formerly hidden elements
+					window.dispatchEvent(new Event('resize'));
+				});
 
 				// Display proper progress to the user
 				var progress = this.$el.find('.lesson-progress').children();

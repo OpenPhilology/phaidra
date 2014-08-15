@@ -10,6 +10,8 @@
 	},        
 	{
 		"title": "Alphabet",
+		"category": "basics",
+		"thumbnail": "icon_grk_amphora.png",
 		"modules": [
 			{
 				"title": "Alphabet",
@@ -754,6 +756,8 @@
 	},
 	{
 		"title": "Diacritics & Dipthongs",
+		"category": "verbs",
+		"thumbnail": "icon_grk_parthenon.png",
 		"modules": [
 			{	"title": "Diacritics and Dipthongs",
 				"slides": [
@@ -1011,6 +1015,8 @@
 	},
 	{
 		"title": "Introduction to Nouns",
+		"category": "nouns",
+		"thumbnail": "icon_grk_monster.png",
 		"modules": [
 			{
 				"title": "Nouns in Ancient Greek",
@@ -2011,17 +2017,8 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a1.html"
+						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
 					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
-					}
-				]
-			},
-			{
-				"title": "Treebanking",
-				"slides": [
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
@@ -2029,6 +2026,66 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.ag/t2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t7.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a7.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a8.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t8.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a9.html"
 					}
 				]
 			}

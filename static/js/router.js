@@ -1,7 +1,7 @@
 define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module', 
-		'views/login', 'views/index', 'views/home', 'views/reader', 'views/grammar', 'views/aligner'], 
+		'views/login', 'views/index', 'views/home', 'views/reader', 'views/grammar', 'views/lessons'], 
 		function($, _, Backbone, Models, Collections, ModuleView, 
-		LoginView, IndexView, HomeView, ReaderView, GrammarView, AlignerView) { 
+		LoginView, IndexView, HomeView, ReaderView, GrammarView, LessonView) { 
 
 	var Router = {};
 	Router.Router = Backbone.Router.extend({
@@ -109,8 +109,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 
 		// Lesson Routes
 		showLessons: function() {
-			if (!this.index_view) {
-				this.index_view = new IndexView({ el: '#main' })
+			if (!this.lesson_view) {
+				this.lesson_view = new LessonView({ el: '#main' })
 					.render();
 			}
 		},

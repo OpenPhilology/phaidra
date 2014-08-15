@@ -1,15 +1,17 @@
-<div class="row" style="text-align: center">
+<div class="row">
 	<p>
-		1) Click a word &nbsp; &nbsp; 2) Click a word it depends on. <strong>Simple as that!</strong>
+		1) Click a word &nbsp; &nbsp; 2) Click the word it depends on. <strong>See further explanation below.</strong>
 	</p>
-	<div data-toggle="daphne" data-mode="play" data-width="500" style="min-width: 300px; text-align: left">
+	<div data-toggle="daphne" data-mode="play" style="text-align: left">
 	[
-		{ "id": 1, "head": 2, "relation": "ATR", "value": "οἱ", "pos": "article" },
-		{ "id": 2, "head": 0, "relation": "SBJ", "value": "πόλεμοι", "pos": "noun" }
+		{ "id": 1, "head": 2, "relation": "ATR", "value": "The", "pos": "article" },
+		{ "id": 2, "head": 3, "relation": "SBJ", "value": "man", "pos": "noun" },
+		{ "id": 3, "head": 0, "relation": "PRED", "value": "eats", "pos": "verb" },
+		{ "id": 4, "head": 5, "relation": "OBJ", "value": "an", "pos": "article" },
+		{ "id": 5, "head": 3, "relation": "ATR", "value": "apple", "pos": "noun" }
 	]
 	</div>
-
-	<h4>Glossary</h4>
-	<strong>οἱ</strong>: the, 
-	<strong>πόλεμοι</strong>: wars
+	<p style="text-align: left">
+		Build your own parse tree! A parse tree is a way to show that you understand the grammar and function of a Greek sentence. The root is the starting point on which you build the tree. All you have to do it figure out which words in the sentence "depend" on other words. Take the English sentence: <em>The man eats an apple.</em> The action verb of the sentences is <em>eats</em>, while the subject is <em>man</em>. The object is <em>apple</em>. Therefore, <em>man</em> and <em>apple</em> depend on <em>eats</em>. The article <em>The</em> depends on the word <em>man</em>, so in a tree it would be placed under it.
+	</p>
 </div>
