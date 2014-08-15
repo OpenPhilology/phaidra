@@ -274,7 +274,7 @@ class SubmissionResource(Resource):
 	response = fields.CharField(attribute='response', null = True, blank = True) 
 	task = fields.CharField(attribute='task', null = True, blank = True)
 	smyth = fields.CharField(attribute='smyth', null = True, blank = True)
-	time = fields.IntegerField(attribute='time', null = True, blank = True, default = 0)
+	starttime = fields.IntegerField(attribute='starttime', null = True, blank = True, default = 0)
 	accuracy = fields.IntegerField(attribute='accuracy', null = True, blank = True)
 	encounteredWords = fields.ListField(attribute='encounteredWords', null = True, blank = True)
 	slideType = fields.CharField(attribute='slideType', null = True, blank = True)
@@ -388,7 +388,7 @@ class SubmissionResource(Resource):
 				response = data.get("response"),
 				task = data.get("task"), 
 				smyth = data.get("smyth"),	# string
-				time = data.get("time"),	 # catch this so that it doesn't lead to submission problems
+				starttime = data.get("starttime"),	 # catch this so that it doesn't lead to submission problems
 				accuracy = data.get("accuracy"),
 				encounteredWords = data.get("encounteredWords"), # array
 				slideType = data.get("slideType"),
@@ -879,10 +879,6 @@ class SentenceResource(Resource):
 	
 	def obj_get(self, bundle, **kwargs):
 		
-		fo = open("foo.txt", "w+")
-		millis = int(round(time.time() * 1000))
-		fo.write("%s start sentence get method: \n" % millis)
-		
 		# query parameters (optional) for short sentence approach
 		attrlist = ['CTS', 'length', 'case', 'dialect', 'head', 'form', 'posClass', 'cid', 'gender', 'tbwid', 'pos', 'value', 'degree', 'number','lemma', 'relation', 'isIndecl', 'ref', 'posAdd', 'mood', 'tense', 'voice', 'person']
 		query_params = {}
@@ -892,14 +888,8 @@ class SentenceResource(Resource):
 			elif obj.split('__')[0] in attrlist and bundle.request.GET.get(obj) is not None:
 				query_params[obj] = bundle.request.GET.get(obj)
 		
-		millis = int(round(time.time() * 1000))
-		fo.write("%s create the database obj and query the sentence: \n" % millis)
-		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		sentence = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
-		
-		millis = int(round(time.time() * 1000))
-		fo.write("%s get the sentence meta: \n" % millis)
 			
 		# get the sentence parameters			
 		new_obj = DataObject(kwargs['pk'])
@@ -907,15 +897,9 @@ class SentenceResource(Resource):
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
 		
-		millis = int(round(time.time() * 1000))
-		fo.write("%s query for translated sentences: \n" % millis)
-		
 		# get a dictionary of related translation of this sentence # ordering here is a problem child
 		relatedSentences = gdb.query("""START s=node(*) MATCH (s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='""" 
 						+ sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
-		
-		millis = int(round(time.time() * 1000))
-		fo.write("%s save translated sentences: \n" % millis)
 		
 		new_obj.__dict__['_data']['translations']={}
 		for rs in relatedSentences:
@@ -924,9 +908,6 @@ class SentenceResource(Resource):
 			for lang in CTS_LANG:
 				if sent['data']['CTS'].find(lang) != -1:
 					new_obj.__dict__['_data']['translations'][lang] = API_PATH + 'sentence/' + url[len(url)-1] +'/'		
-		
-		millis = int(round(time.time() * 1000))
-		fo.write("%s start words loop: \n" % millis)
 		
 		# get the words	and related information	
 		words = gdb.query("""START d=node(*) MATCH (d)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
@@ -942,12 +923,9 @@ class SentenceResource(Resource):
 			if len(lemmaRels) > 0:
 				word['data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
 			
-			millis = int(round(time.time() * 1000))
-			fo.write("%s start full and get relted words to a word: \n" % millis)
-			
 			# get the full translation
 			if bundle.request.GET.get('full'):			
-				translations = gdb.query("""START d=node(*) MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+				translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
 				translationArray = []
 				for t in translations:
 					trans = t[0]
@@ -967,10 +945,6 @@ class SentenceResource(Resource):
 		
 		
 		new_obj.__dict__['_data']['words'] = wordArray
-		
-		millis = int(round(time.time() * 1000))
-		fo.write("%s end of fct: \n" % millis)
-		fo.close()
 
 		return new_obj
 	
