@@ -2013,6 +2013,36 @@
 			}	
 		]
 	},
+	{	
+		"title": "Aorist Indicative Active",
+		"modules": [
+			{
+				"title": "Aorist Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html"
+					}
+				]
+			}	
+		]
+	},
 	{
 		"title": "Ancient Geek",
 		"modules": [
