@@ -2,7 +2,7 @@ requirejs.config({
 	'baseUrl': '/static/js',
 	'paths': {
 		// Lib paths
-		'jquery': 'lib/jquery-2.0.3',
+		'jquery': 'lib/jquery-2.1.1',
 		'bootstrap': '../bootstrap/js/bootstrap.min',
 		'json2': 'lib/json2',
 		'underscore': 'lib/underscore-min',
