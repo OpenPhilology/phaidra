@@ -847,7 +847,7 @@
 						"type": "slide_direct_select",
 						"settings": { "orientation": "vertical" },
 						"title": "Pronounciation Challenge!",
-						"question": "How would you pronounce <span lang=\"grc\">ἄνθρωπός</span>, <em>man</em>?",
+						"question": "How would you pronounce <span lang=\"grc\">ἄνθρωπος</span>, <em>man</em>?",
 						"options": [ [
 							{ "value": "An-thro-pos", "display": "An-thro-pos" },
 							{ "value": "Han-thro-pos", "display": "Han-thro-pos" },
@@ -2004,6 +2004,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/concl.html"
 					}
 				]
 			}	
