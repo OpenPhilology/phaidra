@@ -36,7 +36,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes.h
 
 				that.$el.html(that.template({
 					word: selected.attributes,
-					lang: that.lang || 'eng', 	// This will obviously be set by user profile for their 'default', not 'eng' 
+					lang: that.lang || locale.split('-')[0], 	// Locale is set in base.html, comes from Django. 
 					grammar: selected.getGrammar()
 				}));
 

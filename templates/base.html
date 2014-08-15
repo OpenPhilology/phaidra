@@ -29,7 +29,12 @@
 
 	<!-- JS -->
 	<script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
-	<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
+	<script src="/static/js/lib/require.js"></script>
+	<script>
+		require(['/static/js/config.js'], function() {
+			require(['/static/js/main.js']);
+		});
+	</script>
 	<script>var csrf_token = "{{ csrf_token }}"; var locale = "{{ LANGUAGE_CODE }}"; var dir = "{{ dir }}"; </script>
 
 </head>
