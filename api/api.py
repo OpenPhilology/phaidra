@@ -879,7 +879,7 @@ class SentenceResource(Resource):
 	
 	def obj_get(self, bundle, **kwargs):
 		
-		fo = open("foo.txt", "wb")
+		fo = open("foo.txt", "w+")
 		millis = int(round(time.time() * 1000))
 		fo.write("%s start sentence get method: \n" % millis)
 		
