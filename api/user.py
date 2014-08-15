@@ -76,7 +76,7 @@ class UserSentenceResource(Resource):
         if len(query_params) > 0:
             
             # generate query
-            q = """START d=node(*) MATCH (d:UserDocument)-[:sentences]->(s:UserSentence) WHERE """
+            q = """MATCH (d:UserDocument)-[:sentences]->(s:UserSentence) WHERE """
             
             # filter word on parameters
             for key in query_params:
@@ -96,7 +96,7 @@ class UserSentenceResource(Resource):
         
         # default querying    
         else:    
-            table = gdb.query("""START d=node(*) MATCH (d:UserDocument)-[:sentences]->(s:UserSentence) WHERE HAS (s.CTS) RETURN s, d ORDER BY ID(s)""")
+            table = gdb.query("""MATCH (d:UserDocument)-[:sentences]->(s:UserSentence) WHERE HAS (s.CTS) RETURN s, d ORDER BY ID(s)""")
             
         # create the objects which was queried for and set all necessary attributes
         for t in table:
@@ -138,7 +138,7 @@ class UserSentenceResource(Resource):
         new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'user_document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
         
         # get a dictionary of related translation of this sentence # shall this be more strict (only user)
-        relatedSentences = gdb.query("""START s=node(*) MATCH (s)-[:words]->(w)-[:translation]->(t)<-[:words]-(s1) WHERE HAS (s.CTS) AND s.CTS='""" + sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
+        relatedSentences = gdb.query("""MATCH (s:`UserSentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='""" + sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
         
         new_obj.__dict__['_data']['translations']={}
         for rs in relatedSentences:
@@ -149,7 +149,7 @@ class UserSentenceResource(Resource):
                     new_obj.__dict__['_data']['translations'][lang] = API_PATH + 'sentence/' + url[len(url)-1] +'/'        
         
         # get the words and related information    
-        words = gdb.query("""START d=node(*) MATCH (d:`UserSentence`)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+        words = gdb.query("""MATCH (d:`UserSentence`)-[:words]->(w:`Word`) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
         wordArray = []
         for w in words:
             word = w[0]
@@ -164,7 +164,7 @@ class UserSentenceResource(Resource):
             
             # get the full translation
             if bundle.request.GET.get('full'):            
-                translations = gdb.query("""START d=node(*) MATCH (d)-[:translation]->(w) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+                translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
                 translationArray = []
                 for t in translations:
                     trans = t[0]
@@ -209,7 +209,7 @@ class UserSentenceResource(Resource):
         
         # get the user and document via neo look-up or create a new one
         if request.user.username is not None:
-            documentTable = gdb.query("""START u=node(*) MATCH (u:`User`)-[:owns]->(d:`UserDocument`) WHERE HAS (u.username) AND ID(d)=""" + documentId +""" AND u.username='""" + request.user.username + """' RETURN u,d""")        
+            documentTable = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`) WHERE HAS (u.username) AND ID(d)=""" + documentId +""" AND u.username='""" + request.user.username + """' RETURN u,d""")        
             # test for user node
             try:
                 documentTable.elements[0][0]
@@ -235,7 +235,7 @@ class UserSentenceResource(Resource):
                 word.labels.add("Word")
                 # loop to create links to translations
                 for cts in w["translations"]:
-                    translation = gdb.query("""START w=node(*) MATCH (w:`Word`) WHERE HAS (w.CTS) AND w.CTS='""" + cts +"""' RETURN w""")
+                    translation = gdb.query("""MATCH (w:`Word`) WHERE HAS (w.CTS) AND w.CTS='""" + cts +"""' RETURN w""")
                     transNode = gdb.nodes.get(translation[0][0]['self'])
                     transNode.translation(word)
                     word.translation(transNode)
@@ -306,7 +306,7 @@ class UserDocumentResource(Resource):
         if len(query_params) > 0:
             
             # generate query
-            q = """START d=node(*) MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE """
+            q = """MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE """
             
             # filter word on parameters
             for key in query_params:
@@ -326,7 +326,7 @@ class UserDocumentResource(Resource):
         
         # default querying    
         else: 
-            table = gdb.query("""START d=node(*) MATCH (d:`UserDocument`) RETURN DISTINCT d ORDER BY ID(d)""")
+            table = gdb.query("""MATCH (d:`UserDocument`) RETURN DISTINCT d ORDER BY ID(d)""")
         # create the objects which was queried for and set all necessary attributes
         for t in table:
             document = t[0]        
@@ -336,7 +336,7 @@ class UserDocumentResource(Resource):
             new_obj.__dict__['_data'] = document['data']        
             new_obj.__dict__['_data']['id'] = urlDoc[len(urlDoc)-1]
             
-            sentences = gdb.query("""START d=node(*) MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE d.CTS='""" +document['data']['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
+            sentences = gdb.query("""MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE d.CTS='""" +document['data']['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
             sentenceArray = []
             for s in sentences:
                 
@@ -366,7 +366,7 @@ class UserDocumentResource(Resource):
         new_obj.__dict__['_data'] = document.properties
         new_obj.__dict__['_data']['id'] = kwargs['pk']
         
-        sentences = gdb.query("""START d=node(*) MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE d.CTS='""" +document.properties['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
+        sentences = gdb.query("""MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE d.CTS='""" +document.properties['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
         sentenceArray = []
         for s in sentences:
             sent = s[0]
@@ -379,7 +379,7 @@ class UserDocumentResource(Resource):
             new_obj.__dict__['_data']['sentences'] = sentenceArray
 
         # get a dictionary of related translations of this document
-        relatedDocuments = gdb.query("""START d=node(*) MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" + document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
+        relatedDocuments = gdb.query("""MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" + document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
         
         new_obj.__dict__['_data']['translations']={}
         for rd in relatedDocuments:
@@ -410,7 +410,7 @@ class UserDocumentResource(Resource):
 
         # get the user via neo look-up or create a newone
         if request.user.username is not None:
-            userTable = gdb.query("""START u=node(*) MATCH (u:`User`) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
+            userTable = gdb.query("""MATCH (u:`User`) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
         
             if len(userTable) > 0:    
                 userurl = userTable[0][0]['self']

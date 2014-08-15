@@ -40,7 +40,7 @@ class UserObjectsOnlyAuthorization(Authorization):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
 		submissions = []
-		table = gdb.query("""START u=node(*) MATCH (u)-[:submits]->(s) WHERE HAS (u.username) AND u.username='""" + bundle.request.user.username + """' RETURN s""")		
+		table = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) WHERE HAS (u.username) AND u.username='""" + bundle.request.user.username + """' RETURN s""")		
 			
 		# create the objects which was queried for and set all necessary attributes
 		for s in table:
@@ -373,7 +373,7 @@ class SubmissionResource(Resource):
 
 		# get the user via neo look-up or create a newone
 		if request.user.username is not None:
-			userTable = gdb.query("""START u=node(*) MATCH (u)-[:submits]->(s) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
+			userTable = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
 		
 			if len(userTable) > 0:	
 				userurl = userTable[0][0]['self']
@@ -458,7 +458,7 @@ class LemmaResource(Resource):
 		if len(query_params) > 0:
 			
 			# generate query
-			q = """START l=node(*) MATCH (l)-[:values]->(w) WHERE """
+			q = """MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE """
 			
 			# filter word on parameters
 			for key in query_params:
@@ -487,7 +487,7 @@ class LemmaResource(Resource):
 		
 		# default querying	
 		else:	
-			table = gdb.query("""START l=node(*) MATCH (l)-[:values]->(w) WHERE HAS (l.CITE) RETURN DISTINCT l ORDER BY ID(l)""")
+			table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (l.CITE) RETURN DISTINCT l ORDER BY ID(l)""")
 			
 		# create the objects which was queried for and set all necessary attributes
 		for t in table:
@@ -614,7 +614,7 @@ class WordResource(Resource):
 				return self.error_response(request, {'error': 'Smyth key does not exist.'}, response_class=HttpBadRequest)
 			
 			# generate query
-			q = """START s=node(*) MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE """
+			q = """MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE """
 			
 			# filter word on parameters
 			for key in query_params:
@@ -696,7 +696,7 @@ class WordResource(Resource):
 		if len(query_params) > 0:
 			
 			# generate query
-			q = """START s=node(*) MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE """
+			q = """MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE """
 			
 			# filter word on parameters
 			for key in query_params:
@@ -782,7 +782,7 @@ class WordResource(Resource):
 		if len(lemmaRels) > 0:
 			new_obj.__dict__['_data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
 			
-		translations = gdb.query("""START d=node(*) MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +word.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+		translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +word.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
 		translationArray = []
 		for t in translations:
 			trans = t[0]
@@ -836,7 +836,7 @@ class SentenceResource(Resource):
 		if len(query_params) > 0:
 			
 			# generate query
-			q = """START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE """
+			q = """MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE """
 			
 			# filter word on parameters
 			for key in query_params:
@@ -1095,7 +1095,7 @@ class DocumentResource(Resource):
 		if len(query_params) > 0:
 			
 			# generate query
-			q = """START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE """
+			q = """MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE """
 			
 			# filter word on parameters
 			for key in query_params:
@@ -1115,7 +1115,7 @@ class DocumentResource(Resource):
 		
 		# default querying	
 		else:	
-			table = gdb.query("""START d=node(*) MATCH (d:`Document`) RETURN DISTINCT d ORDER BY ID(d)""")
+			table = gdb.query("""MATCH (d:`Document`) RETURN DISTINCT d ORDER BY ID(d)""")
 			
 		# create the objects which was queried for and set all necessary attributes
 		for t in table:
@@ -1129,7 +1129,7 @@ class DocumentResource(Resource):
 			#documentNode = gdb.nodes.get(document['self'])
 			#sentences = documentNode.relationships.outgoing(types=["sentences"])
 	
-			sentences = gdb.query("""START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE d.CTS='""" +document['data']['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
+			sentences = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE d.CTS='""" +document['data']['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
 			sentenceArray = []
 			for s in sentences:
 				
@@ -1169,7 +1169,7 @@ class DocumentResource(Resource):
 		new_obj.__dict__['_data'] = document.properties
 		new_obj.__dict__['_data']['id'] = kwargs['pk']
 		
-		sentences = gdb.query("""START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE d.CTS='""" +document.properties['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
+		sentences = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE d.CTS='""" +document.properties['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
 		sentenceArray = []
 		for s in sentences:
 			sent = s[0]
@@ -1182,7 +1182,7 @@ class DocumentResource(Resource):
 			new_obj.__dict__['_data']['sentences'] = sentenceArray
 
 		# get a dictionary of related translations of this document
-		relatedDocuments = gdb.query("""START d=node(*) MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" 
+		relatedDocuments = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='""" 
 						+ document.properties['CTS'] + """' RETURN DISTINCT d1 ORDER BY ID(d1)""")
 		
 		new_obj.__dict__['_data']['translations']={}
@@ -1224,7 +1224,7 @@ class VisualizationResource(Resource):
 	def calculateKnowledgeMap(self, user):
 		
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
-		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submits]->(s) WHERE HAS (n.username) AND n.username =  '""" + user + """' RETURN s""")	
+		submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + user + """' RETURN s""")	
 		
 		# get the file entry:
 		filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
@@ -1315,7 +1315,7 @@ class VisualizationResource(Resource):
 								
 			for wordRef in wordRangeArray:
 					
-				w = gdb.query("""START n=node(*) MATCH (n:`Word`) WHERE HAS (n.CTS) AND HAS (n.head) AND n.CTS = '""" +wordRef+ """' RETURN n""")
+				w = gdb.query("""MATCH (n:`Word`) WHERE HAS (n.CTS) AND HAS (n.head) AND n.CTS = '""" +wordRef+ """' RETURN n""")
 				
 				knownDict[wordRef] = False
 				
@@ -1370,14 +1370,14 @@ class VisualizationResource(Resource):
 			smythFlat = callFunction[1]
 								
 			# get the sentences of that document
-			sentenceTable = gdb.query("""START n=node(*) MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s ORDER BY ID(s)""")
+			sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s ORDER BY ID(s)""")
 			
 			for s in sentenceTable.elements:
 				
 				node = gdb.nodes.get(s[0]['self'])			
 				#words = node.relationships.outgoing(types=["words"])
 				
-				words = gdb.query("""START s=node(*) MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE s.CTS = '""" +node.properties['CTS']+ """' RETURN w ORDER BY ID(w)""")
+				words = gdb.query("""MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE s.CTS = '""" +node.properties['CTS']+ """' RETURN w ORDER BY ID(w)""")
 				
 				for w in words:
 					word = w[0]
@@ -1434,7 +1434,7 @@ class VisualizationResource(Resource):
 			smythFlat = callFunction[1]
 				
 			# get the sentences of that document
-			sentenceTable = gdb.query("""START n=node(*) MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s ORDER BY ID(s)""")
+			sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s ORDER BY ID(s)""")
 			
 			for s in sentenceTable.elements:
 				
@@ -1520,7 +1520,7 @@ class VisualizationResource(Resource):
 		smythFlat = callFunction[1]
 			
 		# get the sentences of that document
-		sentenceTable = gdb.query("""START n=node(*) MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
+		sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
 		
 		# helper arrays also for statistics, contain the cts as a key and a boolean as an entry
 		all = {}	
@@ -1608,7 +1608,7 @@ class VisualizationResource(Resource):
 
 		# process accuracy of grammar of submissions of a user
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
-		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submits]->(s) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")			
+		submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")			
 									
 		# get the accuray per smyth key
 		for sub in submissions.elements:
@@ -1663,15 +1663,20 @@ class VisualizationResource(Resource):
 
 		# process time of grammar of submissions of a user
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
-		submissions = gdb.query("""START n=node(*) MATCH (n)-[:submits]->(s) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")			
+		submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")			
 		
 		# get the current time
 		unix = datetime(1970,1,1)
 									
 		# get the accuray per smyth key
 		for sub in submissions.elements:
-				
-			t=dateutil.parser.parse(sub[0]['data']['timestamp'].replace('T', ' '))
+			
+			if len(sub[0]['data']['smyth']) == 0:
+				return self.error_response(request, {'error': 'Smyth keys are necessary for calculating averaged lesson progress.'}, response_class=HttpBadRequest)
+			
+			t=sub[0]['data']['timestamp']
+			t=t[:len(t)-5]
+			t=dateutil.parser.parse(t.replace('T', ' '))
 			diff = (t-unix).total_seconds()																			
 			try:					
 				time[sub[0]['data']['smyth']].append(diff)  
