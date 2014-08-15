@@ -10,6 +10,8 @@
 	},        
 	{
 		"title": "Alphabet",
+		"category": "basics",
+		"thumbnail": "icon_grk_amphora.png",
 		"modules": [
 			{
 				"title": "Alphabet",
@@ -754,6 +756,8 @@
 	},
 	{
 		"title": "Diacritics & Dipthongs",
+		"category": "verbs",
+		"thumbnail": "icon_grk_parthenon.png",
 		"modules": [
 			{	"title": "Diacritics and Dipthongs",
 				"slides": [
@@ -1011,6 +1015,8 @@
 	},
 	{
 		"title": "Introduction to Nouns",
+		"category": "nouns",
+		"thumbnail": "icon_grk_monster.png",
 		"modules": [
 			{
 				"title": "Nouns in Ancient Greek",
