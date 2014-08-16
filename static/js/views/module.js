@@ -118,17 +118,25 @@ define(
 				var frag = Backbone.history.fragment.split('/');
 
 				if (!this.slides[slide + 1]) {
-					// Add in the Summary slide
+					// Add in the summary slide
 					if (this.lesson.meta('initLength') === slide + 1) {
 						this.lesson.add({ type: "slide_last" }, { at: (1 + slide)});
 					}
 					// Let them continue to the next unit
 					else {
 						frag = Backbone.history.fragment.split('/');
-						frag[1] = (parseInt(frag[1]) + 1).toString();
+						var mod = frag[1], section = frag[3];
+						if (Utils.Content[mod].modules[section]) {
+							frag[3] = (parseInt(frag[3]) + 1).toString();
+						}
+						else {
+							frag[1] = (parseInt(frag[1]) + 1).toString();
+						}
 						slide = -1;
+						this.undelegateEvents();		
 					}
 				}
+				// Otherwise, simply proceed to next slide
 				url = '/' + frag.splice(0, 5).join('/') + '/' + (1 + slide);
 				this.$el.find('.corner a').attr('href', url);
 			},
