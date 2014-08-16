@@ -1,20 +1,15 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/login', 'views/index', 'views/home'], 
-		function($, _, Backbone, Models, Collections, LoginView, IndexView, HomeView) { 
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/login', 'views/index', 'views/profile'], 
+		function($, _, Backbone, Models, Collections, LoginView, IndexView, ProfileView) { 
 
 	var Router = {};
 	Router.Router = Backbone.Router.extend({
 		routes: {
 			"": "index",
-
-			// Form handles login page
-			"login/": "showLogin",
-
-			// Traditional Grammar Routes
+			"login/": "login",
+			"profile/": "profile",
 			"grammar/:smyth": "showGrammar",
 		},
 		initialize: function() {
-			// Create/Populate necessary models and collections
-
 			// javascript function for api logout and redirect
 			$("#logout-link").click(function(e) {
 				e.preventDefault();
@@ -37,15 +32,19 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/logi
 			});
 		},
 		index: function() {
-			/*if (!this.index_view) {
-				this.index_view = new IndexView({ el: '.container' }).render();
-			}*/
 		},
 
 		// Form handles login page 
-		showLogin: function() {
+		login: function() {
 			if (!this.login_view) {
 				this.login_view = new LoginView({ el: '#loginform'})
+					.render();
+			}
+		},
+		// Profile 
+		profile: function() {
+			if (!this.profile_view) {
+				this.profile_view = new ProfileView({ el: '#main'})
 					.render();
 			}
 		},

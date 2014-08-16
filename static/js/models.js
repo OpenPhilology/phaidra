@@ -9,9 +9,13 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		parse: function(response) {
 			if (response && response.meta)
 				this.meta = response.meta;
-			this.set(response.objects);
+			this.set(response.objects.filter(function(obj) {
+				return obj.username === U;
+			})[0]);
 			this.set("locale", locale);
 			this.set("language", locale.split('-')[0]);
+
+			console.log(this);
 		}
 	});
 
@@ -79,6 +83,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 							var word = words[i - 1];
 							
 							that.set('question', 'What is the <strong>person</strong> of <span lang="grc" data-cts="' + word.CTS + '">' + word.value + '</span>?');
+							that.set('encounteredWords', [word.CTS]);
 							that.set('title', 'Morph fun!');
 							that.set('options', [
 								[{ "value": "1st", "display": "1st" },
@@ -116,6 +121,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 								{ "value" : "pl", "display": "Plural" }]
 							]);
 							that.set('answers', [word.number]);
+							that.set('encounteredWords', [word.CTS]);
 							that.set('require_all', true);
 							that.set('require_order', false);
 							that.set('successMsg', '<strong>CORRECT!</strong> <span lang="grc">' + word.value + '</span> is ' + word.number + '.');
@@ -140,7 +146,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				attempt = [attempt]
 
 			// Check if all submitted attempts are somewhere in answers
-			if (this.get('require_all') === "false") {
+			if (this.get('require_all').toString() === "false") {
 				for (var i = 0; i < attempt.length; i++)
 					if (this.get('answers').indexOf(attempt[i]) == -1)
 						correct = false;
@@ -148,7 +154,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				correct = correct ? true: false;
 			}
 			// Require order implies that require_all is also true
-			else if (this.get('require_order') === "true") {
+			else if (this.get('require_order').toString() === "true") {
 				if (this.get('answers').length !== attempt.length)
 					correct = false;
 				else {
@@ -161,12 +167,13 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				}
 			}
 			// All Required, but order is not required
-			else if (this.get('require_all') === "true" && this.get('require_order') === "false")
+			else if (this.get('require_all').toString() === "true" && this.get('require_order').toString() === "false")
 				correct = $(attempt).not(this.get('answers')).length == 0 && $(this.get('answers')).not(attempt).length == 0;
 			else
 				correct = false;
 
 			this.sendSubmission(attempt, correct);
+			this.set('accuracy', (correct ? 100 : 0));
 
 			return correct;
 		},
@@ -174,12 +181,12 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			var data = {
 				response: JSON.stringify(attempt),
 				task: this.get('task') || 'static_exercise',
-				accuracy: (correct ? 100 : 0),
-				encounteredWords: '',
+				accuracy: this.get('accuracy'),
+				encounteredWords: this.get('encounteredWords'),
 				slideType: this.get('type'),
 				smyth: this.get('smyth') || '',
 				timestamp: (new Date()).toISOString(),
-				starttime: (new Date(data.start_time)).toISOString()
+				starttime: (new Date(this.get('startTime'))).toISOString()
 			};
 
 			$.ajax({

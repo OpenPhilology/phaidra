@@ -472,3 +472,28 @@ label {
 	text-align: center;
 	padding: 20px;
 }
+.pie-container {
+	text-align: center;
+
+	#vocab, #morph, #syn {
+		display: inline-block;
+		margin: 10px;
+		max-width: 200px;
+		vertical-align: text-top;
+	}
+
+	p {
+		font-size: 0.9em;
+		line-height: 2em;
+	}
+
+	#vocab h3 {
+		color: $color-pri-one;
+	}
+	#morph h3 {
+		color: $color-pri-two;
+	}
+	#syn h3 {
+		color: $color-pri-three;
+	}
+}

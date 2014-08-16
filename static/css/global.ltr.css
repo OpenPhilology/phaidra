@@ -426,3 +426,20 @@ label {
   z-index: 2;
   text-align: center;
   padding: 20px; }
+
+.pie-container {
+  text-align: center; }
+  .pie-container #vocab, .pie-container #morph, .pie-container #syn {
+    display: inline-block;
+    margin: 10px;
+    max-width: 200px;
+    vertical-align: text-top; }
+  .pie-container p {
+    font-size: 0.9em;
+    line-height: 2em; }
+  .pie-container #vocab h3 {
+    color: #d15241; }
+  .pie-container #morph h3 {
+    color: #1fadad; }
+  .pie-container #syn h3 {
+    color: #523d5b; }

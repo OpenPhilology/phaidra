@@ -1,8 +1,8 @@
 define(
 	['jquery', 'underscore', 'backbone', 'jquery-ui-core', 'jquery-ui-slide', 'models', 'collections', 
-		'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect'], 
+		'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect', 'views/slide-last', 'utils'], 
 	function($, _, Backbone, jQueryUICore, jQueryUISlide, Models, Collections, 
-		InfoSlideView, MultiCompSlideView, DirectSelectSlideView) { 
+		InfoSlideView, MultiCompSlideView, DirectSelectSlideView, LastSlideView, Utils) { 
 
 		var View = Backbone.View.extend({
 			events: {
@@ -28,6 +28,13 @@ define(
 				this.map = {
 					'slide_info': function(model) {
 						return new InfoSlideView({
+							model: model
+						}).render()
+							.$el
+							.appendTo(that.$el.find('#lesson-content'));
+					},
+					'slide_last': function(model) {
+						return new LastSlideView({
 							model: model
 						}).render()
 							.$el
@@ -67,16 +74,16 @@ define(
 				var that = this;
 
 				// Set for easy navigation to next slide
-				model.set('index', model.collection.indexOf(model));
+				model.set('index', this.lesson.indexOf(model));
 
 				// The Module view keeps references to the various slide views
 				var view = this.map[model.attributes.type](model);
 				this.slides.push(view);
 
 				// Create a progress bar section for each slide
-				if (model.get('index') < model.collection.meta('initLength') - 1) {
+				if (model.get('index') < this.lesson.meta('initLength') - 1) {
 					var progress = this.$el.find('.lesson-progress');
-					progWidth = (100 / (model.collection.meta('initLength') - 1)); 
+					progWidth = (100 / (this.lesson.meta('initLength') - 1)); 
 					progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
 				}
 			},
@@ -90,23 +97,40 @@ define(
 				for (var i = 0; i < this.slides.length; i++) {
 					this.slides[i].hide();
 				}
-				this.slides[slide].show('slide', { direction: 'right' }, 500, function() {
-					// Trigger resize for formerly hidden elements
-					window.dispatchEvent(new Event('resize'));
-				});
+				if (this.slides[slide]) {
+					this.slides[slide].show('slide', { direction: 'right' }, 500, function() {
+						// Trigger resize for formerly hidden elements
+						window.dispatchEvent(new Event('resize'));
+					});
 
-				this.recordTimestamp(slide);
-				this.updateProgress(slide);
+					this.recordTimestamp(slide);
+					this.updateProgress(slide);
+				}
+				else {
+					this.$el.html("<h1>Looks like you overshot!</h1><a href=\"/lessons\">Return to Lessons</a>");
+				}
+
 				this.updateNavigation(slide);
 			},
 			// Update the navigation link
 			updateNavigation: function(slide) {
-				if (!this.slides[slide + 1])
-					this.$el.find('.corner a').hide();
-				else {
-					var url = '/' + Backbone.history.fragment.split('/').splice(0, 5).join('/') + '/' + (1 + slide);
-					this.$el.find('.corner a').attr('href', url);
+
+				var frag = Backbone.history.fragment.split('/');
+
+				if (!this.slides[slide + 1]) {
+					// Add in the Summary slide
+					if (this.lesson.meta('initLength') === slide + 1) {
+						this.lesson.add({ type: "slide_last" }, { at: (1 + slide)});
+					}
+					// Let them continue to the next unit
+					else {
+						frag = Backbone.history.fragment.split('/');
+						frag[1] = (parseInt(frag[1]) + 1).toString();
+						slide = -1;
+					}
 				}
+				url = '/' + frag.splice(0, 5).join('/') + '/' + (1 + slide);
+				this.$el.find('.corner a').attr('href', url);
 			},
 			// Record the time that the user started viewing the slide
 			recordTimestamp: function(slide) {
