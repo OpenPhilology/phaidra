@@ -1,25 +1,31 @@
-[{
+[ {
 	"identify_morph_person": {
-		"question": "What is the person of <span class=\"greek-text\" data-cts=\"CTS\">WORD</span>?",
+		"title": "Morph Q",
+		"question": "What is the person of <span class=\"greek-text\">WORD</span>?",
 		"options": [
 			[{ "value": "1st", "display": "1st Person" },
 			{ "value": "2nd", "display": "2nd Person" },
 			{ "value": "3rd", "display": "3rd Person"}]
 		],
+		"answers": "[word.person]",
+		"encounteredWords": "[word.CTS]",
 		"require_all": true,
 		"require_order": false
 	},
 	"identify_morph_number": {
-		"question": "What is the number of <span class=\"greek-text\" data-cts=\"CTS\">WORD</span>?",
+		"title": "Morph Q",
+		"question": "What is the number of <span class=\"greek-text\">WORD</span>?",
 		"options": [
 			[{ "value": "sg", "display": "Singular" },
 			{ "value" : "pl", "display": "Plural" }]
 		],
+		"answers": "[word.numer]",
 		"require_all": true,
 		"require_order": false
 	},
 	"identify_morph_tense": {
-		"content": "What is the tense of <span class=\"greek-text\" data-cts=\"CTS\">WORD</span>?",
+		"title": "Morph Q",
+		"question": "What is the tense of <span class=\"greek-text\">WORD</span>?",
 		"options": [
 			[{ "value": "pres", "display": "Present" },
 			{ "value": "imperf", "display": "Imperfect" },
@@ -29,7 +35,7 @@
 			{ "value": "aor", "display": "Aorist"}]
 		],
 		"require_all": true,
-		"require_order": false
-	},
-
+		"require_order": false,
+		"answers": "[word.tense]"
+	}
 }]

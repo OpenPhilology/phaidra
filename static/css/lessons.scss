@@ -129,24 +129,6 @@
 		}
 	}
 
-	#pies {
-		text-align: center;
-	}
-	#vocab-pie {
-		& + h4 {
-			color: $color-pri-two;
-			margin-bottom: 0px;
-		}
-	}
-	#morph-pie + h4 {
-		color: $color-sec-four;
-		margin-bottom: 0px;
-	}
-	#syn-pie + h4 {
-		color: $color-pri-one;		
-		margin-bottom: 0px;
-	}
-
 	#records {
 		.sparkline {
 			display: inline-block;
@@ -167,7 +149,6 @@
 	text-align: center;
 
 	.bar {
-		$c: #DDD;
 
 		display: inline-block;
 		height: 10px;
@@ -175,22 +156,6 @@
 		background-size: 200% 100%;
 		background-position: right bottom;
 		transition: all 0.5s ease-out;
-
-		border: {
-			top: 1px solid $c;
-			bottom: 1px solid $c;
-			left: 1px solid $c;
-		}
-
-		&:first-child {
-			border-top-left-radius: 3px;
-			border-bottom-left-radius: 3px;
-		}
-		&:last-child {
-			border-right: 1px solid $c;
-			border-bottom-right-radius: 3px;
-			border-top-right-radius: 3px;
-		}
 
 		&.complete {
 			$b: $color-pri-two;

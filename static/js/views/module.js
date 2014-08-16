@@ -6,7 +6,7 @@ define(
 
 		var View = Backbone.View.extend({
 			events: {
-				'click .corner a': 'navigate'
+				'click .corner.right a': 'navigate'
 			},
 			initialize: function(options) {
 

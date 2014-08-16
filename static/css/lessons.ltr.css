@@ -427,6 +427,23 @@ label {
   text-align: center;
   padding: 20px; }
 
+.pie-container {
+  text-align: center; }
+  .pie-container #vocab, .pie-container #morph, .pie-container #syn {
+    display: inline-block;
+    margin: 10px;
+    max-width: 200px;
+    vertical-align: text-top; }
+  .pie-container p {
+    font-size: 0.9em;
+    line-height: 2em; }
+  .pie-container #vocab h3 {
+    color: #d15241; }
+  .pie-container #morph h3 {
+    color: #1fadad; }
+  .pie-container #syn h3 {
+    color: #523d5b; }
+
 /**
  * Styles used on the lessons.
  */
@@ -573,17 +590,6 @@ label {
       background-color: #d15241; }
     .feedback-container .badge.treebank {
       background-color: #49a556; }
-  .feedback-container #pies {
-    text-align: center; }
-  .feedback-container #vocab-pie + h4 {
-    color: #1fadad;
-    margin-bottom: 0px; }
-  .feedback-container #morph-pie + h4 {
-    color: #f4bc78;
-    margin-bottom: 0px; }
-  .feedback-container #syn-pie + h4 {
-    color: #d15241;
-    margin-bottom: 0px; }
   .feedback-container #records .sparkline {
     display: inline-block; }
     .feedback-container #records .sparkline path {
@@ -603,17 +609,7 @@ label {
     background: linear-gradient(to left, white 50%, #1fadad 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all 0.5s ease-out;
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
-    border-left: 1px solid #dddddd; }
-    .lesson-progress .bar:first-child {
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px; }
-    .lesson-progress .bar:last-child {
-      border-right: 1px solid #dddddd;
-      border-bottom-right-radius: 3px;
-      border-top-right-radius: 3px; }
+    transition: all 0.5s ease-out; }
     .lesson-progress .bar.complete {
       background-position: left bottom; }
 
