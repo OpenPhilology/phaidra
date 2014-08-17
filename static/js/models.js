@@ -136,8 +136,10 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			else
 				correct = false;
 
-			this.sendSubmission(attempt, correct);
 			this.set('accuracy', (correct ? 100 : 0));
+			this.set('endtime', (new Date()));
+			this.set('starttime', (new Date(this.get('startTime'))));
+			this.sendSubmission(attempt, correct);
 
 			return correct;
 		},
@@ -149,8 +151,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				encounteredWords: this.get('encounteredWords'),
 				slideType: this.get('type'),
 				smyth: this.get('smyth') || '',
-				timestamp: (new Date()).toISOString(),
-				starttime: (new Date(this.get('startTime'))).toISOString()
+				timestamp: this.get('endtime').toISOString(),
+				starttime: this.get('starttime').toISOString()
 			};
 
 			$.ajax({

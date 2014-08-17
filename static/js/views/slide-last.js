@@ -6,15 +6,18 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 		events: { },
 		initialize: function(options) {
 			this.options = options;
+			this.collection = options.collection;
+			this.collection.on('completed', this.draw, this); 
 		},
 		render: function() {
-			//this.$el.html(this.template(this.model.attributes));
-			this.$el.html('Last slide, here\'s a summary of what you learned.');
-			
 			return this;
 		},
-		navigate: function(e) {
-			e.preventDefault();
+		draw: function() {
+
+			this.$el.html(this.template({
+				"stats": this.collection.makeStats()
+			}));
+			
 		}
 	});
 

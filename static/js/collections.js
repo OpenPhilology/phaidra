@@ -111,14 +111,58 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			while (matches.length < 5) {
 				matches = matches.concat(matches);
 			}
-			return _.shuffle(matches).splice(0, 5);
+			var subset = _.shuffle(matches).splice(0, 5);
+			this.meta('initLength', this.meta('initLength') + subset.length);
+
+			return subset;
 		},
 		insertQuestions: function(smyth) {
 			// Here we find out what questions are available for this subject
 			var questions = Utils.Questions.filter(function(q) {
 				return q.smyth === smyth;
 			});
+			this.meta('initLength', this.meta('initLength') + questions.length);
 			return questions;
+		},
+		makeStats: function() {
+			var stats = {
+				"avgSpeed": "1s",
+				"quickestQuestion": "5ms",
+				"skillCount": "5"
+			};
+
+			// Get slides which were questions
+			var answered = _.reject(this.models, function(m) {
+				return typeof(m.get('accuracy')) === 'undefined';
+			});
+
+			// Accuracy array
+			var vals = answered.map(function(a) {
+				return a.get('accuracy');
+			});
+			stats.accuracy = (_.reduce(vals, function(memo, num) {
+				return memo + num;
+			}, 0) / vals.length).toFixed(2);
+
+			// Time difference array
+			var times = answered.map(function(a) {
+				return (a.get('endtime') - a.get('starttime')) / 1000;
+			});
+			stats.quickestQuestion = 100000000000;
+			stats.avgSpeed = (_.reduce(times, function(memo, num) {
+				stats.quickestQuestion = num < stats.quickestQuestion ? num : stats.quickestQuestion;
+				return memo + num;
+			}, 0) / times.length).toFixed(2);
+			stats.quickestQuestion = stats.quickestQuestion.toFixed(2);
+
+			// Skill array -- ignore our added in # signs
+			var skills = answered.map(function(m) {
+				var end = m.get('smyth').indexOf('#') || m.get('smyth').length;
+				return m.get('smyth').substring(0, end);
+			});
+			stats.skillCount = skills.length;
+
+			return stats;
 		}
 	});
 

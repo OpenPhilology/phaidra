@@ -497,3 +497,25 @@ label {
 		color: $color-pri-three;
 	}
 }
+.skill-summary {
+	text-align: center;
+	margin-top: 50px;
+
+	.glyphicon {
+		display: block;
+		font-size: 7em;
+
+		&.glyphicon-flash {
+			color: $color-sec-four;
+		}
+		&.glyphicon-fire {
+			color: $color-pri-one;
+		}
+		&.glyphicon-eye-open {
+			color: $color-pri-three;
+		}
+	}
+	p {
+		line-height: 2em;
+	}
+}

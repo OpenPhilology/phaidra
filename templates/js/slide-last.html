@@ -11,8 +11,25 @@
 	</div>
 	<div class="col-md-8 col-sm-8">
 
-		<div class="speech">
-
+		<div class="row">
+			<div class="col-md-4 skill-summary">
+				<span class="glyphicon glyphicon-fire"></span>
+				<h3>Speed</h3>
+				<h4><%= stats.avgSpeed %>s</h4>
+				<p><em>per question on average</em></p>
+			</div>
+			<div class="col-md-4 skill-summary">
+				<span class="glyphicon glyphicon-eye-open"></span>
+				<h3>Accuracy</h3>
+				<h4><%= stats.accuracy %>%</h4>
+				<p><em>answered correctly</em></p>
+			</div>
+			<div class="col-md-4 skill-summary">
+				<span class="glyphicon glyphicon-flash"></span>
+				<h3>Skills</h3>
+				<h4><%= stats.skillCount %>%</h4>
+				<p><em>new skills learned</em></p>
+			</div>
 		</div>
 
 		<a data-toggle="tooltip" title="Continue" href="/module/2/section/0/slide/0" style="font-size: 18px; text-decoration: none; text-align: center; background-color: #D15241; color: #FFF; padding: 10px; border-radius: 3px; box-shadow: 2px 2px 3px #CCC; display: block;">

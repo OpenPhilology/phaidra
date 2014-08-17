@@ -444,6 +444,21 @@ label {
   .pie-container #syn h3 {
     color: #523d5b; }
 
+.skill-summary {
+  text-align: center;
+  margin-top: 50px; }
+  .skill-summary .glyphicon {
+    display: block;
+    font-size: 7em; }
+    .skill-summary .glyphicon.glyphicon-flash {
+      color: #f4bc78; }
+    .skill-summary .glyphicon.glyphicon-fire {
+      color: #d15241; }
+    .skill-summary .glyphicon.glyphicon-eye-open {
+      color: #523d5b; }
+  .skill-summary p {
+    line-height: 2em; }
+
 /**
  * Styles used on the lessons.
  */

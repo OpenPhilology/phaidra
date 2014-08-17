@@ -28,35 +28,40 @@ define(
 				this.map = {
 					'slide_info': function(model) {
 						return new InfoSlideView({
-							model: model
+							model: model,
+							collection: that.lesson
 						}).render()
 							.$el
 							.appendTo(that.$el.find('#lesson-content'));
 					},
 					'slide_last': function(model) {
 						return new LastSlideView({
-							model: model
+							model: model,
+							collection: that.lesson
 						}).render()
 							.$el
 							.appendTo(that.$el.find('#lesson-content'));
 					},
 					'slide_multi_comp': function(model) {
 						return new MultiCompSlideView({
-							model: model
+							model: model,
+							collection: that.lesson
 						}).render()
 							.$el
 							.appendTo(that.$el.find('#lesson-content'));
 					},
 					'slide_treebank': function(model) {
 						return new TreebankingView({
-							model: model
+							model: model,
+							collection: that.lesson
 						}).render()
 							.$el
 							.appendTo(that.$el.find('#lesson-content'));
 					},
 					'slide_direct_select': function(model) {
 						return new DirectSelectSlideView({
-							model: model
+							model: model,
+							collection: that.lesson
 						}).render()
 							.$el
 							.appendTo(that.$el.find('#lesson-content'));
@@ -81,10 +86,17 @@ define(
 				this.slides.push(view);
 
 				// Create a progress bar section for each slide
-				if (model.get('index') < this.lesson.meta('initLength') - 1) {
-					var progress = this.$el.find('.lesson-progress');
-					progWidth = (100 / (this.lesson.meta('initLength') - 1)); 
+				var progress = this.$el.find('.lesson-progress');
+				progWidth = (100 / (this.lesson.meta('initLength') - 1)); 
+
+				// Since we add in slides async, this needs to automatically adjust
+				var sections = progress.find('.bar');
+				for (var i = 0; i < sections.length; i++) {
+					sections[i].style.width = progWidth + '%';
+				}
+				while (sections.length < (this.lesson.meta('initLength') -1)) {
 					progress.append('<div class="bar" style="width: ' + progWidth + '%"></div>');
+					sections = progress.find('.bar');
 				}
 			},
 			render: function() {
@@ -124,12 +136,14 @@ define(
 					}
 					// Let them continue to the next unit
 					else {
+						this.lesson.trigger('completed');
 						frag = Backbone.history.fragment.split('/');
-						var mod = frag[1], section = frag[3];
-						if (Utils.Content[mod].modules[section]) {
+						var mod = parseInt(frag[1]), section = parseInt(frag[3]);
+						if (Utils.Content[mod].modules[section + 1]) {
 							frag[3] = (parseInt(frag[3]) + 1).toString();
 						}
 						else {
+							frag[3] = "0";
 							frag[1] = (parseInt(frag[1]) + 1).toString();
 						}
 						slide = -1;
