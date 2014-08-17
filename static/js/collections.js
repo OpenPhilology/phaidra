@@ -65,53 +65,32 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		},
 		populate: function(collection) {
 			var that = this;
+			var module = Utils.Content[this.meta('module')];
+			var section = module.modules[this.meta('section')];
+			var slides = section.slides;
 
-			// Get the data we care about -- specific section of a module
-			var slide_data = Utils.Content[that.meta('module')]["modules"][that.meta('section')]["slides"];
+			// Set attributes on this section
+			this.meta('initLength', slides.length);
+			this.meta('moduleTitle', module.title);
+			this.meta('sectionTitle', section.title);
 
-			/*
-			Goes through and creates either an individual slide, or a cluster of slides,
-			based on data from the JSON file.
-			*/
+			for (var i = 0, slide; slide = slides[i]; i++) {
+				slide.title = this.meta('sectionTitle');
+				this.add(slide);
 
-			// Set attributes on this object
-			that.meta('moduleTitle', Utils.Content[that.meta('module')]["title"]);
-			that.meta('sectionTitle', Utils.Content[that.meta('module')].modules[that.meta('section')]["title"]);
-
-			for (var i = 0; i < slide_data.length; i++) {
-				slide_data[i]["title"] = that.meta('sectionTitle');
-				if (slide_data[i]["smyth"] && slide_data[i]["tasks"] && slide_data[i]["type"] == 'slide_info') {
-					// Create data needed for a an exercise
-					console.log("Adding an exercise for " + slide_data[i]["smyth"]);
-					
-					var j = Math.floor((Math.random() * slide_data[i]["tasks"].length) + 1);
-
-					slide_data.splice(i+1, 0, {
-						"smyth": slide_data[i]["smyth"],
-						"task": slide_data[i]["tasks"][j - 1]
-					});
-
-					j = Math.floor((Math.random() * slide_data[i]["tasks"].length) + 1);
-					slide_data.splice(i+1, 0, {
-						"smyth": slide_data[i]["smyth"],
-						"task": slide_data[i]["tasks"][j - 1]
-					});
-
-					j = Math.floor((Math.random() * slide_data[i]["tasks"].length) + 1);
-					slide_data.splice(i+1, 0, {
-						"smyth": slide_data[i]["smyth"],
-						"task": slide_data[i]["tasks"][j - 1]
-					});
-					i += 3;
+				// It had a Smyth ref, check for exercises
+				if (slide.smyth) {
+					var questions = this.insertQuestions(slide.smyth, i);
+					this.add(questions);
 				}
 			}
-
-			that.meta('initLength', slide_data.length);
-
-			// Build with slide data
-			for (var i = 0; i < slide_data.length; i++) {
-				that.add(new Models.Slide(slide_data[i]));
-			}
+		},
+		insertQuestions: function(smyth, index) {
+			// Here we find out what questions are available for this subject
+			var questions = Utils.Questions.filter(function(q) {
+				return q.smyth === smyth;
+			});
+			return questions;
 		}
 	});
 

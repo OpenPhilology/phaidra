@@ -1,9 +1,12 @@
-define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.json'], function($, _, Smyth, Content) {
+// Here is where we will localize the textbook content (i.e. loading de_content.json)
+
+define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.json', 'text!json/en_question_bank.json', 'text!json/en_tasks.json'], function($, _, Smyth, Content, Questions, Tasks) {
 	var Utils = {};
 	Utils.Smyth = JSON.parse(Smyth);
 
-	// Here is where we will localize the textbook content
 	Utils.Content = JSON.parse(Content);
+	Utils.Questions = JSON.parse(Questions);
+	Utils.Tasks = JSON.parse(Tasks);
 
 	Utils.getDefiniteArticle = function(gender) {
 		var map = {
