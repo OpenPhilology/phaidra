@@ -17,51 +17,70 @@
 
 {% block content %}
 
-<!-- TODO: Move all these terrible inline styles out... -->
-<div class="col-md-10 col-md-offset-1" style="margin-top: 30px;">
-	<div class="well" style="background-color: #D15241; color: #FFF">
-		<a style="float: right" href="/module/1/section/0/slide/0" class="btn btn-default">Start Learning Greek</a>
-		<img src="/static/images/icon_grk_amphora.png" alt="The Greek Alphabet" style="float: left; padding: 20px">
-		<h1>Learn the Alphabet</h1>
-		<p>There's no better way to start than with your ABC's!</p>
-	</div>
-</div>
-<div class="col-md-8 col-md-offset-1" style="margin-top: 30px;">
+	{% if not user.is_authenticated %}
+		<div class="col-md-4 col-md-offset-1" style="margin-top: 100px;">
+			<div class="thuc">
+				<img src="/static/images/new_thuc.png" style="background-color: #1fadad; height: 300px;" class="img-circle">
+				<img class="bounce" src="/static/images/glasses.svg" style="position: absolute; left: 109px; top: 92px; width: 102px; height: 102px"> 
+			</div>
 
-	<h3>{% trans "Ready to put your Greek skills to use?" %}</h3>	
-	<p>{% trans "When you feel like you've learned enough, dive right in to more advanced (and more fun) Greek learning tools." %}</p>
-
-	<hr>
-
-	<div class="row">
-		<div class="col-md-4" style="text-align: center">
-			<span class="glyphicon glyphicon-bookmark" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
-			<h3><a href="/reader/">{% trans "Start Reading" %}</a></h3>
-			<p>
-				{% trans "Start reading Thucydides' war story of the Spartans versus the Athenians." %}
-			</p>
 		</div>
-		<div class="col-md-4" style="text-align: center">
-			<span class="glyphicon glyphicon-book" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
-			<h3><a href="/create/">{% trans "Create Translations" %}</a></h3>
-			<p>
-				{% trans "Contribute to brand new, digital editions of Classical works." %}
-			</p>
+		<div class="col-md-7" style="margin-top: 100px;">
+			<h1>Where do you think you're going?</h1>
+			<blockquote>
+				<p>Ancient Geek is current in <strong>private beta testing</strong>, because we are currently collecting usage data.</p>
+				<p>Please <a href="/login">login</a> or get it touch with us if you're interested in being a tester.</p> 
+				<footer>Thucydides <em>(ca 460 - 395 BC)</em></footer>
+			</blockquote>
 		</div>
-		<div class="col-md-4" style="text-align: center">
-			<span class="glyphicon glyphicon-leaf" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
-			<h3><a href="/create/">{% trans "Build Parse Trees" %}</a></h3>
-			<p>
-				{% trans "Show off your syntactic chops by building parse trees of previously unanalysed sentences." %}
-			</p>
-		</div>
-	</div>
 
-</div>
+	{% else %}
+			<!-- TODO: Move all these terrible inline styles out... -->
+			<div class="col-md-10 col-md-offset-1" style="margin-top: 30px;">
+				<div class="well" style="background-color: #D15241; color: #FFF">
+					<a style="float: right" href="/module/1/section/0/slide/0" class="btn btn-default">Start Learning Greek</a>
+					<img src="/static/images/icon_grk_amphora.png" alt="The Greek Alphabet" style="float: left; padding: 20px">
+					<h1>Learn the Alphabet</h1>
+					<p>There's no better way to start than with your ABC's!</p>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-1" style="margin-top: 30px;">
 
-<div style="position: fixed; bottom: -50px; right: 0; z-index: -10; width: 400px; text-align: right">
-	<img src="/static/images/thuc.svg" width="100%" height="100%" style="opacity: .3; float: right">
-	<img src="/static/images/glasses.svg" style="position: absolute; left: 126px; top: 92px; width: 133px; opacity: .6"> 
-</div>
+				<h3>{% trans "Ready to put your Greek skills to use?" %}</h3>	
+				<p>{% trans "When you feel like you've learned enough, dive right in to more advanced (and more fun) Greek learning tools." %}</p>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-4" style="text-align: center">
+						<span class="glyphicon glyphicon-bookmark" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
+						<h3><a href="/reader/">{% trans "Start Reading" %}</a></h3>
+						<p>
+							{% trans "Start reading Thucydides' war story of the Spartans versus the Athenians." %}
+						</p>
+					</div>
+					<div class="col-md-4" style="text-align: center">
+						<span class="glyphicon glyphicon-book" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
+						<h3><a href="/create/">{% trans "Create Translations" %}</a></h3>
+						<p>
+							{% trans "Contribute to brand new, digital editions of Classical works." %}
+						</p>
+					</div>
+					<div class="col-md-4" style="text-align: center">
+						<span class="glyphicon glyphicon-leaf" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
+						<h3><a href="/create/">{% trans "Build Parse Trees" %}</a></h3>
+						<p>
+							{% trans "Show off your syntactic chops by building parse trees of previously unanalysed sentences." %}
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div style="position: fixed; bottom: -50px; right: 0; z-index: -10; width: 400px; text-align: right">
+				<img src="/static/images/thuc.svg" width="100%" height="100%" style="opacity: .3; float: right">
+				<img src="/static/images/glasses.svg" style="position: absolute; left: 126px; top: 92px; width: 133px; opacity: .6"> 
+			</div>
+	{% endif %}
 
 {% endblock %}
