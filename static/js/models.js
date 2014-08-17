@@ -32,12 +32,15 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		constructor: function(attributes, options) {
 			Backbone.Model.prototype.constructor.call(this, attributes);
 
+			// Either fetch the HTML
 			if (attributes.includeHTML)
 				this.fetchHTML(attributes, options);
-
-			if (attributes.type === 'slide_direct_select')
+			// Or generate an exercise
+			else if (attributes.task)
+				this.fillAttributes(attributes, options);
+			// Or the slide is from the question bank
+			else
 				this.set('populated', true);
-
 		},
 		defaults: {
 			'modelName': 'slide',
@@ -58,7 +61,46 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			});
 		},
 		fillAttributes: function(attributes, options) {
+			var that = this;
+			var s = this.get('smyth');
+			var entry = Utils.Smyth[s];
 			
+			if (entry) {
+				var url = '/api/v1/' + this.get('endpoint') + '/?format=json&' + entry.query;
+
+				$.ajax({
+					url: url,
+					dataType: 'text',
+					success: function(response) {
+						
+						// TODO: Ask maria to include frequency on words
+						var objs = JSON.parse(response).objects;
+						var groups = _.groupBy(objs, function(o) {
+						   return o.lemma;
+						});
+						var keepers = objs.filter(function(o) {
+							return groups[o.lemma].length > 1;
+						});
+						var chosen = _.shuffle(keepers).splice(0, 1)[0];
+						
+						var answer = chosen[that.get('answerField')];
+						that.set('answers', [answer]);
+						that.set('encounteredCTS', chosen.CTS);
+
+						// Treat question like template string to splice in value
+						var data = {};
+						data[that.get('endpoint')] = chosen.value;
+						var compiled = _.template(that.get('question'));
+						that.set('question', compiled(data));
+
+						that.set('populated', true);
+						that.trigger('populated');
+					},
+					error: function(x, y, z) {
+						console.log(x, y, z);
+					}
+				});
+			}
 		},
 		checkAnswer: function(attempt) {
 

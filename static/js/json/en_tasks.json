@@ -1,41 +1,114 @@
-[ {
-	"identify_morph_person": {
+[
+	{
+		"task": "identify_morph_person",
+		"type": "slide_direct_select",
+		"endpoint": "word",
 		"title": "Morph Q",
-		"question": "What is the person of <span class=\"greek-text\">WORD</span>?",
+		"question": "What is the person of <strong lang='grc'><%= word %></strong>?",
 		"options": [
-			[{ "value": "1st", "display": "1st Person" },
+			{ "value": "1st", "display": "1st Person" },
 			{ "value": "2nd", "display": "2nd Person" },
-			{ "value": "3rd", "display": "3rd Person"}]
+			{ "value": "3rd", "display": "3rd Person"}
 		],
-		"answers": "[word.person]",
+		"answerField": "person",
 		"encounteredWords": "[word.CTS]",
 		"require_all": true,
 		"require_order": false
 	},
-	"identify_morph_number": {
+	{
+		"task": "identify_morph_number",
+		"type": "slide_direct_select",
+		"endpoint": "word",
 		"title": "Morph Q",
-		"question": "What is the number of <span class=\"greek-text\">WORD</span>?",
+		"question": "What is the number of <strong lang='grc'><%= word %></strong>?",
 		"options": [
-			[{ "value": "sg", "display": "Singular" },
-			{ "value" : "pl", "display": "Plural" }]
+			{ "value": "sg", "display": "Singular" },
+			{ "value" : "pl", "display": "Plural" }
 		],
-		"answers": "[word.numer]",
+		"answerField": "number",
 		"require_all": true,
 		"require_order": false
 	},
-	"identify_morph_tense": {
+	{
+		"task": "identify_morph_tense",
+		"type": "slide_direct_select",
+		"endpoint": "word",
 		"title": "Morph Q",
-		"question": "What is the tense of <span class=\"greek-text\">WORD</span>?",
+		"question": "What is the tense of <strong lang='grc'><%= word %></strong>?",
 		"options": [
-			[{ "value": "pres", "display": "Present" },
+			{ "value": "pres", "display": "Present" },
 			{ "value": "imperf", "display": "Imperfect" },
 			{ "value": "perfect", "display": "Pluperfect" },
 			{ "value": "futperf", "display": "Future Perfect" },
 			{ "value": "fut", "display": "Future" },
-			{ "value": "aor", "display": "Aorist"}]
+			{ "value": "aor", "display": "Aorist"}
 		],
 		"require_all": true,
 		"require_order": false,
-		"answers": "[word.tense]"
+		"answerField": "tense"
+	},
+	{
+		"task": "identify_morph_voice",
+		"type": "slide_direct_select",
+		"endpoint": "word",
+		"title": "Morph Q",
+		"question": "What is the voice of <strong lang='grc'><%= word %></strong>?",
+		"options": [
+			{ "value": "act", "display": "Active" },
+			{ "value": "mid", "display": "Middle" },
+			{ "value": "pass", "display": "Passive"}
+		],
+		"require_all": true,
+		"require_order": false,
+		"answerField": "voice"
+	},
+	{
+		"task": "identify_morph_mood",
+		"type": "slide_direct_select",
+		"endpoint": "word",
+		"title": "Morph Q",
+		"question": "What is the mood of <strong lang='grc'><%= word %></strong>?",
+		"options": [
+			{ "value": "ind", "display": "Indicative" },
+			{ "value": "inf", "display": "Infinitive" },
+			{ "value": "subj", "display": "Subjunctive" },
+			{ "value": "imp", "display": "Imperative" },
+			{ "value": "opt", "display": "Optitative"}
+		],
+		"require_all": true,
+		"require_order": false,
+		"answerField": "mood"
+	},
+	{
+		"task": "identify_morph_gender",
+		"type": "slide_direct_select",
+		"endpoint": "word",
+		"title": "Morph Q",
+		"question": "What is the gender of <strong lang='grc'><%= word %></strong>?",
+		"options": [
+			{ "value": "masc", "display": "Masculine" },
+			{ "value": "fem", "display": "Feminine" },
+			{ "value": "neut", "display": "Neuter"}
+		],
+		"require_all": true,
+		"require_order": false,
+		"answerField": "gender"
+	},
+	{
+		"task": "identify_morph_case",
+		"type": "slide_direct_select",
+		"endpoint": "word",
+		"title": "Morph Q",
+		"question": "What is the case of <strong lang='grc'><%= word %></strong>?",
+		"options": [
+			{ "value": "nom", "display": "Nominative" },
+			{ "value": "gen", "display": "Genitive" },
+			{ "value": "dat", "display": "Dative" },
+			{ "value": "acc", "display": "Accusative" },
+			{ "value": "voc", "display": "Vocative"}
+		],
+		"require_all": true,
+		"require_order": false,
+		"answerField": "case"
 	}
-}]
+]

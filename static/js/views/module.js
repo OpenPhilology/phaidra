@@ -77,7 +77,7 @@ define(
 				model.set('index', this.lesson.indexOf(model));
 
 				// The Module view keeps references to the various slide views
-				var view = this.map[model.attributes.type](model);
+				var view = this.map[model.get('type')](model);
 				this.slides.push(view);
 
 				// Create a progress bar section for each slide

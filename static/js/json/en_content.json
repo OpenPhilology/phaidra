@@ -492,22 +492,26 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec0.html",
-						"smyth": "s216"
+						"smyth": "s216",
+						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
 					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec.html",
-						"smyth": "s217#a"
+						"smyth": "s217#a",
+						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
 					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec1.html",
-						"smyth": "s217#c"
+						"smyth": "s217#c",
+						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
 					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec2.html",
-						"smyth": "s222"
+						"smyth": "s222",
+						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
 					},
 					{
 						"type": "slide_info",
@@ -538,12 +542,14 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/6.seconddec/seconddec.html",
-						"smyth": "s228#a"
+						"smyth": "s228#a",
+						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
 					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/6.seconddec/seconddec1.html",
-						"smyth": "s228#b"
+						"smyth": "s228#b",
+						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
 					},
 					{
 						"type": "slide_info",
@@ -811,88 +817,6 @@
 					}
 				]
 			}	
-		]
-	},
-	{
-		"title": "Ancient Geek",
-		"modules": [
-			{
-				"title": "Alignment",
-				"slides": [
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t2.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a1.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t3.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a3.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a4.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t4.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t5.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a5.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a6.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t6.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t7.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a7.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a8.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t8.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/a9.html"
-					}
-				]
-			}
 		]
 	}
 ]

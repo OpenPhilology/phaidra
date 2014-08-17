@@ -77,15 +77,43 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			for (var i = 0, slide; slide = slides[i]; i++) {
 				slide.title = this.meta('sectionTitle');
 				this.add(slide);
-
-				// It had a Smyth ref, check for exercises
-				if (slide.smyth) {
-					var questions = this.insertQuestions(slide.smyth, i);
-					this.add(questions);
-				}
+				this.insertExercises(slide, slide.smyth);
 			}
 		},
-		insertQuestions: function(smyth, index) {
+		insertExercises: function(slide, smyth, index) {
+			if (!slide.smyth)
+				return;
+
+			var newSlides = [];
+			if (slide.tasks) {
+				var tasks = this.insertTasks(slide.tasks, slide.smyth);
+				newSlides = newSlides.concat(tasks);
+			}
+
+			var questions = this.insertQuestions(slide.smyth);
+			newSlides = newSlides.concat(questions);
+			newSlides = _.shuffle(newSlides);
+
+			if (newSlides.length === 0)
+				return;
+			else if (index) 
+				this.add(newSlides, { at: index });
+			else 
+				this.add(newSlides);
+		},
+		insertTasks: function(tasks, smyth) {
+			var matches = Utils.Tasks.filter(function(t) {
+				t.smyth = smyth;
+				return tasks.indexOf(t.task) !== -1;
+			});
+
+			// Create at least five tasks
+			while (matches.length < 5) {
+				matches = matches.concat(matches);
+			}
+			return _.shuffle(matches).splice(0, 5);
+		},
+		insertQuestions: function(smyth) {
 			// Here we find out what questions are available for this subject
 			var questions = Utils.Questions.filter(function(q) {
 				return q.smyth === smyth;

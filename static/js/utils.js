@@ -2,7 +2,7 @@
 
 define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.json', 'text!json/en_question_bank.json', 'text!json/en_tasks.json'], function($, _, Smyth, Content, Questions, Tasks) {
 	var Utils = {};
-	Utils.Smyth = JSON.parse(Smyth);
+	Utils.Smyth = JSON.parse(Smyth)[0];
 
 	Utils.Content = JSON.parse(Content);
 	Utils.Questions = JSON.parse(Questions);

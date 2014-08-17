@@ -97,7 +97,7 @@
 	},
 	"s768#a": {
 		"title": "εἰμί in the Present Tense",
-		"query": "pos=verb&lemma=εἰμί&tense=pres"
+		"query": "pos=verb&lemma=εἰμί&tense=pres&mood=ind"
 	},
 	"s768#b": {
 		"title": "εἰμί in the Future Tense",
