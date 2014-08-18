@@ -274,7 +274,7 @@ class SubmissionResource(Resource):
 	response = fields.CharField(attribute='response', null = True, blank = True) 
 	task = fields.CharField(attribute='task', null = True, blank = True)
 	smyth = fields.CharField(attribute='smyth', null = True, blank = True)
-	starttime = fields.IntegerField(attribute='starttime', null = True, blank = True, default = 0)
+	starttime = fields.DateField(attribute='starttime', null = True, blank = True)
 	accuracy = fields.IntegerField(attribute='accuracy', null = True, blank = True)
 	encounteredWords = fields.ListField(attribute='encounteredWords', null = True, blank = True)
 	slideType = fields.CharField(attribute='slideType', null = True, blank = True)
