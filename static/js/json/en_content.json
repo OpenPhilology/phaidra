@@ -14,6 +14,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.trad/s1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s2.html"
 					}
 				]
 			},
@@ -30,7 +34,15 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/texp.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.ag/t2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t3.html"
 					},
 					{
 						"type": "slide_info",
@@ -41,10 +53,6 @@
 						"type": "slide_info",
 						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
-					},
-					{
-						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t3.html"
 					},
 					{
 						"type": "slide_info",
@@ -106,6 +114,7 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a10.html"
 					},
 					{
@@ -118,10 +127,12 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a11.html"
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a12.html"
 					},
 					{
@@ -130,6 +141,7 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a13.html"
 					},
 					{

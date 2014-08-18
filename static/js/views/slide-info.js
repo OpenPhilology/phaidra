@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/templates/js/slide-info.html', 'daphne', 'morea'], function($, _, Backbone, Models, Collections, Template, Daphne, Morea) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/templates/js/slide-info.html', 'daphne', 'morea', 'utils'], function($, _, Backbone, Models, Collections, Template, Daphne, Morea, Utils) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',
@@ -42,6 +42,10 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			});
 
 			this.$el.find('[data-toggle="morea"]').each(function(i, el) {
+
+				el.addEventListener('submitted', that.submitAlignment.bind(that));
+				el.addEventListener('completed', that.completeAlignment.bind(that));
+
 				new Morea(el, {
 					mode: el.getAttribute('data-mode'),
 					dataUrl: el.getAttribute('data-dataUrl'),
@@ -74,7 +78,21 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			this.model.checkAnswer(this.model.get('response'));
 
 			setTimeout(function() {
-				console.log("Navigate to Next Slide.");
+				$('.corner a').click();
+			}, 2000);
+		},
+		submitAlignment: function(e) {
+			this.model.set('starttime', new Date(this.$el.data('starttime')));
+			this.model.set(e.detail);
+			this.model.checkAnswer(this.model.get('response'));
+		},
+		completeAlignment: function(e) {
+			this.model.set('starttime', new Date(this.$el.data('starttime')));
+			this.model.set(e.detail);
+			this.model.checkAnswer(this.model.get('response'));
+
+			setTimeout(function() {
+				$('.corner a').click();
 			}, 2000);
 		}
 	});

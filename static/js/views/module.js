@@ -109,6 +109,9 @@ define(
 				for (var i = 0; i < this.slides.length; i++) {
 					this.slides[i].hide();
 				}
+				// Trigger delayed rendering if needed
+				this.lesson.at(slide).delayedRender();
+
 				if (this.slides[slide]) {
 					this.slides[slide].show('slide', { direction: 'right' }, 500, function() {
 						// Trigger resize for formerly hidden elements
@@ -117,12 +120,12 @@ define(
 
 					this.recordTimestamp(slide);
 					this.updateProgress(slide);
+
+					if (this.lesson.at(1 + slide))
+						this.lesson.at(1 + slide).delayedRender();
 				}
 				else {
 					this.$el.html("<h1>Looks like you overshot!</h1><a href=\"/lessons\">Return to Lessons</a>");
-				}
-				if (this.slides[slide + 1]) {
-					this.lesson.at(slide + 1).delayedRender();
 				}
 
 				this.updateNavigation(slide);
