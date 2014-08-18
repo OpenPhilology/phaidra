@@ -1,7 +1,22 @@
 [
 	{
 		"title": "Diagnostic Test",
+		"category": "basics",
+		"thumbnail": "/static/images/icon_grk_amphora.png",
 		"modules": [
+			{
+				"title": "Traditional Method",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s1.html"
+					}
+				]
+			},
 			{
 				"title": "Alignment and Treebanking",
 				"slides": [
@@ -19,10 +34,12 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a1.html"
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
 					},
 					{
@@ -31,10 +48,12 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a3.html"
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a4.html"
 					},
 					{
@@ -47,6 +66,7 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a5.html"
 					},
 					{
@@ -63,10 +83,12 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a7.html"
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a8.html"
 					},
 					{
@@ -75,6 +97,7 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a9.html"
 					},
 					{
@@ -119,8 +142,8 @@
 	},
 	{
 		"title": "Alphabet",
-		"category": "basics",
-		"thumbnail": "icon_grk_amphora.png",
+		"category": "foundational",
+		"thumbnail": "/static/images/alphabet/lambda.svg",
 		"modules": [
 			{
 				"title": "Alpha - Theta",
@@ -282,7 +305,7 @@
 	{
 		"title": "Diacritics & Dipthongs",
 		"category": "verbs",
-		"thumbnail": "icon_grk_parthenon.png",
+		"thumbnail": "/static/images/icon_grk_parthenon.png",
 		"modules": [
 			{	"title": "Diacritics and Dipthongs",
 				"slides": [
@@ -346,7 +369,7 @@
 	{
 		"title": "Introduction to Nouns",
 		"category": "nouns",
-		"thumbnail": "icon_grk_monster.png",
+		"thumbnail": "/static/images/icon_grk_monster.png",
 		"modules": [
 			{
 				"title": "Nouns in Ancient Greek",

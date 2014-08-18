@@ -202,14 +202,13 @@ div.module {
 		text-decoration: none;
 	}	
 
-	&.nouns {
-		background-color: $color-pri-two;
+	@mixin tile($color) {
+		background-color: $color;
 		@include transition(background-color, .2s, ease-out);
 
 		&:hover {
-			background-color: lighten($color-pri-two, 5%);
+			background-color: lighten($color, 5%);
 			@include transition(background-color, .2s, ease-in);
-
 			box-shadow: 2px 2px 3px #CCC;
 			position: relative;
 			top: -3px;
@@ -219,55 +218,18 @@ div.module {
 			color: #FFF;
 		}
 	}
-	&.morph {
-		background-color: $color-sec-two;
-		@include transition(background-color, .2s, ease-out);
 
-		&:hover {
-			background-color: lighten($color-sec-two, 5%);
-			@include transition(background-color, .2s, ease-in);
-
-			box-shadow: 2px 2px 3px #CCC;
-			position: relative;
-			top: -3px;
-		}
-
-		h3 {
-			color: #FFF;
-		}
+	&.nouns {
+		@include tile($color-pri-two);
 	}
 	&.verbs {
-		background-color: $color-sec-two;
-		@include transition(background-color, .2s, ease-out);
-
-		&:hover {
-			background-color: lighten($color-sec-two, 5%);
-			@include transition(background-color, .2s, ease-in);
-
-			box-shadow: 2px 2px 3px #CCC;
-			position: relative;
-			top: -3px;
-		}
-
-		h3 {
-			color: #FFF;
-		}
+		@include tile($color-sec-two);
 	}
 	&.basics {
-		background-color: $color-pri-one;
-		@include transition(background-color, .2s, ease-out);
-
-		&:hover {
-			background-color: lighten($color-pri-one, 5%);
-			@include transition(background-color, .2s, ease-in);
-			box-shadow: 2px 2px 3px #CCC;
-			position: relative;
-			top: -3px;
-		}
-
-		h3 {
-			color: #FFF;
-		}
+		@include tile($color-pri-one);
+	}
+	&.foundational {
+		@include tile($color-sec-four);
 	}
 
 	h3 {

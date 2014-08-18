@@ -1518,6 +1518,16 @@ class VisualizationResource(Resource):
 		callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
 		vocKnowledge = callFunction[0]
 		smythFlat = callFunction[1]
+		lemmaKnowledge = []
+		
+		for CTS in vocKnowledge:
+			# get the lemmas of known words
+			lemma = gdb.query("""MATCH (n:`Word`) WHERE HAS (n.CTS) AND n.CTS = '""" +CTS+ """' RETURN n.lemma""")
+			try:
+				lemmaKnowledge.append(lemma.elements[0][0])
+			except IndexError as i:
+				continue		
+			
 			
 		# get the sentences of that document
 		sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
@@ -1540,39 +1550,36 @@ class VisualizationResource(Resource):
 				all[word.properties['CTS']] = True
 				# scan the submission for vocab information
 				for smyth in smythFlat:
-					# was this word seen?
-					if word.properties['CTS'] in vocKnowledge:	
-						
-						# if word morph already known don't apply filter again
-						try:
-							morphKnown[word.properties['CTS']]
-						except KeyError as k:
-							# loop over params to get morph known infos
-							badmatch = False
-							for p in smythFlat[smyth].keys():
-								try:
-									word.properties[p]
-									if smythFlat[smyth][p] != word.properties[p]:
+					# if word morph already known (earlier smythhhit), don't apply filter again
+					try:
+						morphKnown[word.properties['CTS']]
+					except KeyError as k:
+						# loop over params to get morph known infos
+						badmatch = False
+						for p in smythFlat[smyth].keys():
+							try:
+								word.properties[p]
+								if smythFlat[smyth][p] != word.properties[p]:
+									badmatch = True
+									break
+							# check for fuzzy filtering attributes
+							except KeyError as k:
+								if len(p.split('__')) > 1:
+									try:
+										badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], word.properties[p.split('__')[0]])
+									except KeyError as k:
 										badmatch = True
-										break
-								# check for fuzzy filtering attributes
-								except KeyError as k:
-									if len(p.split('__')) > 1:
-										try:
-											badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], word.properties[p.split('__')[0]])
-										except KeyError as k:
-											badmatch = True
-											break																					
-									else:
-										badmatch = True
-										break
-							
-							if not badmatch:
-								morphKnown[word.properties['CTS']] = True # all params are fine											
+										break																					
+								else:
+									badmatch = True
+									break
 						
-						# know this vocab
-						vocabKnown[word.properties['CTS']] = True
+						if not badmatch:
+							morphKnown[word.properties['CTS']] = True # all params are fine											
 				
+				# was this word seen? Check if lemma of actual word is lemma of any known one		
+				if word.properties['CTS'] in vocKnowledge or word.properties['lemma'] in lemmaKnowledge:	
+					vocabKnown[word.properties['CTS']] = True
 			# after reading words update overall no
 			wordCount = wordCount + len(words)
 		
