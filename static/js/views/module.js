@@ -121,6 +121,9 @@ define(
 				else {
 					this.$el.html("<h1>Looks like you overshot!</h1><a href=\"/lessons\">Return to Lessons</a>");
 				}
+				if (this.slides[slide + 1]) {
+					this.lesson.at(slide + 1).delayedRender();
+				}
 
 				this.updateNavigation(slide);
 			},
@@ -153,10 +156,11 @@ define(
 				// Otherwise, simply proceed to next slide
 				url = '/' + frag.splice(0, 5).join('/') + '/' + (1 + slide);
 				this.$el.find('.corner a').attr('href', url);
+				this.$el.find('a[title="Continue"]').attr('href', url);
 			},
 			// Record the time that the user started viewing the slide
 			recordTimestamp: function(slide) {
-				this.slides[slide].data('startTime', new Date());
+				this.slides[slide].data('starttime', new Date());
 			},
 			// Display proper progress to the user
 			updateProgress: function(slide) {

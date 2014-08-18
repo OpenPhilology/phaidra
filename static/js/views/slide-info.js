@@ -17,6 +17,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			return this;
 		},
 		draw: function() {
+			var that = this;
+
 			this.$el.html(this.template(this.model.attributes));
 			this.$el.find('a[data-toggle="popover"]').popover();
 			this.$el.find('em[data-toggle="tooltip"]').tooltip();
@@ -26,6 +28,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			this.$el.find('[data-toggle="daphne"]').each(function(i, el) {
 				var words = JSON.parse(el.innerHTML);
 				el.innerHTML = '';
+
+				el.addEventListener('submitted', that.submitTree.bind(that));
+				el.addEventListener('completed', that.completeTree.bind(that));
 
 				new Daphne(el, {
 					data: words,
@@ -57,6 +62,20 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			});
 
 			return this;
+		},
+		submitTree: function(e) {
+			this.model.set('starttime', new Date(this.$el.data('starttime')));
+			this.model.set(e.detail);
+			this.model.checkAnswer(this.model.get('response'));
+		},
+		completeTree: function(e) {
+			this.model.set('starttime', new Date(this.$el.data('starttime')));
+			this.model.set(e.detail);
+			this.model.checkAnswer(this.model.get('response'));
+
+			setTimeout(function() {
+				console.log("Navigate to Next Slide.");
+			}, 2000);
 		}
 	});
 
