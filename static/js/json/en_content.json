@@ -106,6 +106,7 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a10.html"
 					},
 					{
@@ -118,10 +119,12 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a11.html"
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a12.html"
 					},
 					{
@@ -130,6 +133,7 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a13.html"
 					},
 					{

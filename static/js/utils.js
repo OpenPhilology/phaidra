@@ -54,5 +54,16 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 		// Use smyth ref and mistake made to give reasonable hints	
 	};
 
+	Utils.fireEvent = function(el, type) {
+		if (el.fireEvent) {
+			el.fireEvent('on' + type);
+		}
+		else {
+			var e = document.createEvent('Events');
+			e.initEvent(type, true, false);
+			el.dispatchEvent(e);
+		}
+	}
+
 	return Utils;
 });

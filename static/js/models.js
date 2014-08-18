@@ -56,6 +56,9 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			});
 		},
 		delayedRender: function() {
+			if (this.get('populated'))
+				return;
+
 			if (this.get('includeHTML'))
 				this.fetchHTML();
 			else if (this.get('task'))
