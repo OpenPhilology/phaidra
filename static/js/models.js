@@ -85,7 +85,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 						
 						var answer = chosen[that.get('answerField')];
 						that.set('answers', [answer]);
-						that.set('encounteredCTS', chosen.CTS);
+						that.set('encounteredWords', [chosen.CTS]);
 
 						// Treat question like template string to splice in value
 						var data = {};

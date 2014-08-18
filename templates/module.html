@@ -22,22 +22,9 @@
 	{% get_current_language_bidi as LANGUAGE_BIDI %}
 
 	{% if not user.is_authenticated %}
-		<div class="col-md-4 col-md-offset-1" style="margin-top: 100px;">
-			<div class="thuc">
-				<img src="/static/images/new_thuc.png" style="background-color: #1fadad; height: 300px;" class="img-circle">
-				<img class="bounce" src="/static/images/glasses.svg" style="position: absolute; left: 109px; top: 92px; width: 102px; height: 102px"> 
-			</div>
-
-		</div>
-		<div class="col-md-7" style="margin-top: 100px;">
-			<h1>Where do you think you're going?</h1>
-			<blockquote>
-				<p>Ancient Geek is current in <strong>private beta testing</strong>, because we are currently collecting usage data.</p>
-				<p>Please <a href="/login">login</a> or get it touch with us if you're interested in being a tester.</p> 
-				<footer>Thucydides <em>(ca 460 - 395 BC)</em></footer>
-			</blockquote>
-		</div>
-
+		<script>
+			window.location.replace('/login');
+		</script>
 	{% else %}
 		<!-- Move this logic into CSS -->
 		<div class="col-md-10 col-md-offset-1">

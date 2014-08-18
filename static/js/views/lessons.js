@@ -24,7 +24,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 							var str = '<a href="/module/' + i + '/section/0/slide/0" class="module ' + (unit.category || 'noun') + '">';
 
 							if (unit.thumbnail) {
-								str += '<img src="/static/images/' + (unit.thumbnail || 'blah.png') + '">';
+								str += '<img src="' + (unit.thumbnail || 'blah.png') + '">';
 							}
 
 							str += '<div>';

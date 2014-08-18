@@ -1,7 +1,22 @@
 [
 	{
 		"title": "Diagnostic Test",
+		"category": "basics",
+		"thumbnail": "/static/images/icon_grk_amphora.png",
 		"modules": [
+			{
+				"title": "Traditional Method",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
+					}
+				]
+			},
 			{
 				"title": "Alignment and Treebanking",
 				"slides": [
@@ -83,8 +98,8 @@
 	},
 	{
 		"title": "Alphabet",
-		"category": "basics",
-		"thumbnail": "icon_grk_amphora.png",
+		"category": "foundational",
+		"thumbnail": "/static/images/alphabet/lambda.svg",
 		"modules": [
 			{
 				"title": "Alpha - Theta",
@@ -246,7 +261,7 @@
 	{
 		"title": "Diacritics & Dipthongs",
 		"category": "verbs",
-		"thumbnail": "icon_grk_parthenon.png",
+		"thumbnail": "/static/images/icon_grk_parthenon.png",
 		"modules": [
 			{	"title": "Diacritics and Dipthongs",
 				"slides": [
@@ -310,7 +325,7 @@
 	{
 		"title": "Introduction to Nouns",
 		"category": "nouns",
-		"thumbnail": "icon_grk_monster.png",
+		"thumbnail": "/static/images/icon_grk_monster.png",
 		"modules": [
 			{
 				"title": "Nouns in Ancient Greek",
