@@ -1,0 +1,1199 @@
+[ 
+	{
+		"smyth": "s1#beta",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">β</strong> sound and what is it called?",
+		"options": [
+			{ "value": "gamma - giant", "display": "Gamma - like <u>g</u>iant" },
+			{ "value": "gamma - good", "display": "Gamma - like <u>g</u>ood" },
+			{ "value": "sigma - signal", "display": "Sigma - like <u>s</u>ignal" },
+			{ "value": "beta - book", "display": "Beta - like <u>b</u>ook" }
+		],
+		"answers": ["beta - book"],
+		"successMsg": "<strong>Right Answer!</strong> Remember that Beta sounds like the \"b\" in book.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>beta like book.</strong>",
+		"failureMsg": "<strong>The correct answer was beta like book</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#gamma",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "horizontal" },
+		"title": "Identify the letter!",
+		"question": "Which of these are <strong>gammas</strong>?",
+		"options": [
+			{ "value": "Α", "display": "<span lang=\"grc\">Α</span>" },
+			{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+			{ "value": "Β", "display": "<span lang=\"grc\">Β</span>" },
+			{ "value": "β", "display": "<span lang=\"grc\">β</span>" },
+			{ "value": "Γ", "display": "<span lang=\"grc\">Γ</span>" },
+			{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
+		],
+		"answers": ["γ", "Γ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified gamma, <span class=\"grc\">Γ γ</span>, pronounced like the \"g\" in <u>g</u>rammar.",
+		"hintMsg": "<strong>Not Quite.</strong>The correct answer was <strong><span class=\"grc\">Γ γ</span>.</strong>",
+		"failureMsg": "<strong>The correct answer <span class=\"grc\">Γ γ</span>.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#gamma",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">γ</strong> sound and what is it called?",
+		"options": [
+			{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+			{ "value": "gamma - grammar", "display": "Gamma - like <u>g</u>rammar" },
+			{ "value": "sigma - signal", "display": "Sigma - like <u>s</u>ignal" },
+			{ "value": "beta - book", "display": "Beta - like <u>b</u>ook" }
+		],
+		"answers": ["gamma - grammar"],
+		"successMsg": "<strong>Right Answer!</strong> ",
+		"hintMsg": "<strong>Not Quite.</strong> Remember that gamma sounds like the <strong>\"g\" in grammar.</strong>",
+		"failureMsg": "<strong>The correct answer was \"g\" like grammar.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#epsilon",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">ε</strong> sound and what is it called?",
+		"options": [
+			{ "value": "epsilon - get", "display": "Epsilon - like g<u>e</u>t" },
+			{ "value": "beta - book", "display": "Beta - like <u>b</u>ook" },
+			{ "value": "zeta - wisdom", "display": "Zdeta - like wi<u>sd</u>om" },
+			{ "value": "delta - door", "display": "Delta - like <u>d</u>oor" }
+		],
+		"answers": ["epsilon - get"],
+		"successMsg": "<strong>Right Answer!</strong> Remember that Epsilon sounds like the \"ε\" in get.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>epsilon like hair.</strong>",
+		"failureMsg": "<strong>The correct answer was epsilon like get.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#delta",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "horizontal" },
+		"title": "Identify the letter!",
+		"question": "Which of these are <strong>delta</strong>?",
+		"options": [
+			{ "value": "Α", "display": "<span lang=\"grc\">Α</span>" },
+			{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+			{ "value": "Δ", "display": "<span lang=\"grc\">Δ</span>" },
+			{ "value": "δ", "display": "<span lang=\"grc\">δ</span>" },
+			{ "value": "Ζ", "display": "<span lang=\"grc\">Ζ</span>" },
+			{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" }	
+		],
+		"answers": ["δ", "Δ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified delta, <span class=\"grc\">Δ δ</span>, pronounced like the \"d\" in <u>d</u>oor.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong><span class=\"grc\">Δ δ</span></strong>",
+		"failureMsg": "<strong>The correct answer was <span class=\"grc\">Ζ δ</span>.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#zeta",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "What is the capital equivalent of <strong lang=\"grc\">ζ</strong>?",
+		"options": [
+			{ "value": "Δ", "display": "<span lang=\"grc\">Δ</span>" },
+			{ "value": "Ζ", "display": "<span lang=\"grc\">Ζ</span>" },
+			{ "value": "Ε", "display": "<span lang=\"grc\">Ε</span>" }	
+		],
+		"answers": ["Ζ"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite.</strong>",
+		"failureMsg": "<strong>The correct answer was \"Ζ\" in long.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#eta",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">η</strong> sound and what is it called?",
+		"options": [
+			{ "value": "epsilon - get", "display": "Epsilon - like g<u>e</u>t" },
+			{ "value": "alpha - apple", "display": "Alpha - like <u>a</u>pple" },
+			{ "value": "eta - hair", "display": "Eta - like h<u>ai</u>r" },
+			{ "value": "eta - eat", "display": "Eta - like <u>ea</u>t" }
+		],
+		"answers": ["eta - hair"],
+		"successMsg": "<strong>Right Answer!</strong> Remember that Eta sounds like the \"η\" in hair.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>eta like hair.</strong>",
+		"failureMsg": "<strong>The correct answer was eta like hair.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#theta",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "Which of these is a <strong>theta</strong>?",
+		"options": [
+			{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+			{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
+			{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
+		],
+		"answers": ["θ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified theta, <span class=\"grc\">θ</span>, pronounced like the \"th\" in <u>th</u>under.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"th\" like <u>th</u>under</strong>",
+		"failureMsg": "<strong>The correct answer was \"th\" like <u>th</u>under.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#eta",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">η</strong> sound and what is it called?",
+		"options": [
+			{ "value": "epsilon - get", "display": "Epsilon - like g<u>e</u>t" },
+			{ "value": "delta - door", "display": "Door - like <u>d</u>oor" },
+			{ "value": "eta - hair", "display": "Eta - like h<u>ai</u>r" },
+			{ "value": "eta - eat", "display": "Eta - like <u>ea</u>t" }
+		],
+		"answers": ["eta - hair"],
+		"successMsg": "<strong>Right Answer!</strong> Remember that Eta sounds like the \"η\" in hair.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>eta like hair.</strong>",
+		"failureMsg": "<strong>The correct answer was eta like hair.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#zeta",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "horizontal" },
+		"title": "Identify the letter!",
+		"question": "Which of these are <strong>zeta</strong>?",
+		"options": [
+			{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+			{ "value": "Ζ", "display": "<span lang=\"grc\">Ζ</span>" },
+			{ "value": "Η", "display": "<span lang=\"grc\">Η</span>" },
+			{ "value": "η", "display": "<span lang=\"grc\">η</span>" },
+			{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
+			{ "value": "Θ", "display": "<span lang=\"grc\">Θ</span>" }	
+		],
+		"answers": ["ζ", "Ζ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified zeta, <span class=\"grc\">Ζ ζ</span>, pronounced like the \"sd\" in wi<u>sd</u>om.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong><span class=\"grc\">Ζ ζ</span></strong>",
+		"failureMsg": "<strong>The correct answer was <span class=\"grc\">Ζ ζ</span>.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#delta",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">δ</strong> sound and what is it called?",
+		"options": [
+			{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+			{ "value": "delta - door", "display": "Delta - like <u>d</u>oor" },
+			{ "value": "eta - hair", "display": "Eta - like h<u>ai</u>r" },
+			{ "value": "sigma - signal", "display": "Sigma - like <u>s</u>ignal" }
+		],
+		"answers": ["delta - door"],
+		"successMsg": "<strong>Right Answer!</strong> Remember that delta sounds like the \"δ\" in door.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>delta like door.</strong>",
+		"failureMsg": "<strong>The correct answer was delta like door.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#lambda",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">λ</strong> sound and what is it called?",
+		"options": [
+			{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+			{ "value": "lambda - long", "display": "Lambda - like <u>l</u>ong" },
+			{ "value": "zdeta - wisdom", "display": "Zdeta - like wi<u>sd</u>om" },
+			{ "value": "gamma - grammar", "display": "Gamma - like <u>g</u>rammar" }
+		],
+		"answers": ["lambda - long"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite.</strong> Remember that lambda sounds like the <strong>\"λ\" in long.</strong>",
+		"failureMsg": "<strong>The correct answer was \"λ\" in long.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#theta",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "Which of these is a <strong>theta</strong>?",
+		"options": [
+			{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+			{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
+			{ "value": "γ", "display": "<span lang=\"grc\">γ</span>" }
+		],
+		"answers": ["θ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified theta, <span class=\"grc\">θ</span>, pronounced like the \"th\" in <u>th</u>under.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"th\" like <u>th</u>under</strong>",
+		"failureMsg": "<strong>The correct answer was \"th\" like <u>th</u>under.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#kappa",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">κ</strong> sound and what is it called?",
+		"options": [
+			{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+			{ "value": "kappa - coat", "display": "Kappa - like <u>c</u>oat" },
+			{ "value": "zdeta - wisdom", "display": "Zdeta - like wi<u>sd</u>om" },
+			{ "value": "kappa - cherry", "display": "Kappa - like <u>ch</u>erry" }
+		],
+		"answers": ["kappa - coat"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite.</strong> Remember that kappa sounds like the <strong>\"κ\" in coat.",
+		"failureMsg": "<strong>The correct answer was kappa like coat.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#iota",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "Which of these is a <strong>iota</strong>?",
+		"options": [
+			{ "value": "λ", "display": "<span lang=\"grc\">λ</span>" },
+			{ "value": "ι", "display": "<span lang=\"grc\">ι</span>" },
+			{ "value": "η", "display": "<span lang=\"grc\">η</span>" }
+		],
+		"answers": ["ι"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified iota, <span class=\"grc\">ι</span>, pronounced like the \"i\" in <u>ea</u>st.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"i\" like <u>ea</u>st</strong>",
+		"failureMsg": "<strong>The correct answer was \"i\" like <u>ea</u>st</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#nu",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">ν</strong> sound and what is it called?",
+		"options": [
+			{ "value": "gamma - gigantic", "display": "Gamma - like <u>g</u>iant" },
+			{ "value": "gamma - good", "display": "Gamma - like <u>g</u>ood" },
+			{ "value": "üpsilon - food", "display": "Upsilon - like f<u>oo</u>d" },
+			{ "value": "nu - nose", "display": "Nu - like <u>n</u>ose" }
+		],
+		"answers": ["nu - nose"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite.</strong> Remember that Nu sounds like the <strong>\"n\" in nose.</strong>",
+		"failureMsg": "<strong>The correct answer was \"n\" like book.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#xi",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "Which of these is a <strong>xi</strong>?",
+		"options": [
+			{ "value": "θ", "display": "<span lang=\"grc\">θ</span>" },
+			{ "value": "ζ", "display": "<span lang=\"grc\">ζ</span>" },
+			{ "value": "ξ", "display": "<span lang=\"grc\">ξ</span>" }
+		],
+		"answers": ["ξ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified xi, <span class=\"grc\">ξ</span>, pronounced like the \"x\" in <u>x</u>ylophon.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"ξ\", pronounced like the \"x\" in <u>x</u>ylophon.",
+		"failureMsg": "<strong>The correct answer was \"ξ\" like <u>x</u>ylophon</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#mu",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "What is the capital equivalent of <strong lang=\"grc\">μ</strong>?",
+		"options": [
+			{ "value": "Μ", "display": "<span lang=\"grc\">Μ</span>" },
+			{ "value": "Η", "display": "<span lang=\"grc\">Η</span>" },
+			{ "value": "Ν", "display": "<span lang=\"grc\">Ν</span>" }	
+		],
+		"answers": ["Μ"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was \"Μ\" in long.</strong>",
+		"failureMsg": "<strong>The correct answer was \"Μ\" in long.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#rho",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "horizontal" },
+		"title": "Identify the letter!",
+		"question": "Which of these are <strong>rho</strong>?",
+		"options": [
+			{ "value": "τ", "display": "<span lang=\"grc\">τ</span>" },
+			{ "value": "Τ", "display": "<span lang=\"grc\">Τ</span>" },
+			{ "value": "Ρ", "display": "<span lang=\"grc\">Ρ</span>" },
+			{ "value": "ρ", "display": "<span lang=\"grc\">ρ</span>" },
+			{ "value": "Π", "display": "<span lang=\"grc\">Π</span>" },
+			{ "value": "π", "display": "<span lang=\"grc\">π</span>" }	
+		],
+		"answers": ["ρ", "Ρ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified rho, <span class=\"grc\">Ρ ρ</span>, pronounced like the \"r\" in <u>r</u>ose.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong><span class=\"grc\">Ρ ρ</span></strong>",
+		"failureMsg": "<strong>The correct answer was <span class=\"grc\">Ρ ρ</span></strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#pi",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "Which of these is a <strong>pi</strong>?",
+		"options": [
+			{ "value": "π", "display": "<span lang=\"grc\">π</span>" },
+			{ "value": "ρ", "display": "<span lang=\"grc\">ρ</span>" },
+			{ "value": "τ", "display": "<span lang=\"grc\">τ</span>" }
+		],
+		"answers": ["π"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified pi, <span class=\"grc\">τ</span>, pronounced like the \"p\" in <u>p</u>en.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"π\"</strong>",
+		"failureMsg": "<strong>The correct answer was \"p\" like <u>p</u>en.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#rho",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">ρ</strong> sound and what is it called?",
+		"options": [
+			{ "value": "rho - rose", "display": "Rho - like <u>r</u>ose" },
+			{ "value": "pi - pen", "display": "Pi - like <u>p</u>en" },
+			{ "value": "üpsilon - food", "display": "Upsilon - like f<u>oo</u>d" },
+			{ "value": "nu - nose", "display": "Nu - like <u>n</u>ose" }
+		],
+		"answers": ["rho - rose"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"r\" like rose.</strong>",
+		"failureMsg": "<strong>The correct answer was \"r\" like rose.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#omicron",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "What is the capital equivalent of <strong lang=\"grc\">ο</strong>?",
+		"options": [
+			{ "value": "Δ", "display": "<span lang=\"grc\">Δ</span>" },
+			{ "value": "Ω", "display": "<span lang=\"grc\">Ω</span>" },
+			{ "value": "Ο", "display": "<span lang=\"grc\">Ο</span>" }	
+		],
+		"answers": ["Ο"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was \"Ο\" in ostrich.</strong>",
+		"failureMsg": "<strong>The correct answer was \"Ο\" in ostrich.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#sigma",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "Which of these are a <strong>sigma</strong>?",
+		"options": [
+			{ "value": "ς", "display": "<span lang=\"grc\">ς</span>" },
+			{ "value": "ο", "display": "<span lang=\"grc\">ο</span>" },
+			{ "value": "σ", "display": "<span lang=\"grc\">σ</span>" }
+		],
+		"answers": ["ς", "σ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified sigma, <span class=\"grc\">σ,ς</span>, pronounced like the \"s\" in <u>s</u>ignal.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer is <strong>\"ς\", \"σ\".</strong>",
+		"failureMsg": "<strong>The correct answer is \"ς\", \"σ\".</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#tau",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "Which of these is a <strong>tau</strong>?",
+		"options": [
+			{ "value": "ς", "display": "<span lang=\"grc\">ς</span>" },
+			{ "value": "ν", "display": "<span lang=\"grc\">ν</span>" },
+			{ "value": "τ", "display": "<span lang=\"grc\">τ</span>" }
+		],
+		"answers": ["τ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified tau, <span class=\"grc\">τ</span>, pronounced like the \"t\" in <u>t</u>ower.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"t\" like <u>t</u>ower.</strong>",
+		"failureMsg": "<strong>The correct answer was \"t\" like <u>t</u>ower.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#chi",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "How does <strong lang=\"grc\">χ</strong> sound and what is it called?",
+		"options": [
+			{ "value": "kappa - coat", "display": "Kappa - like <u>c</u>oat" },
+			{ "value": "chi - kiosk", "display": "Chi - like <u>k</u>iosk" },
+			{ "value": "Phi - flower", "display": "Phi- like <u>f</u>lower" },
+			{ "value": "Tau - tower", "display": "Tau - like <u>t</u>ower" }
+		],
+		"answers": ["chi - kiosk"],
+		"successMsg": "<strong>Right Answer!</strong> Remember that Chi sounds like the \"k\" in kiosk.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"k\" like kiosk.</strong>",
+		"failureMsg": "<strong>The correct answer was \"k\" like kiosk.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#phi",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Identify the letter!",
+		"question": "Which of these is a <strong>Phi</strong>?",
+		"options": [
+			{ "value": "φ", "display": "<span lang=\"grc\">φ</span>" },
+			{ "value": "ψ", "display": "<span lang=\"grc\">ψ</span>" },
+			{ "value": "χ", "display": "<span lang=\"grc\">χ</span>" }
+		],
+		"answers": ["φ"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified phi, <span class=\"grc\">φ</span>, pronounced like the \"f\" in <u>f</u>lower.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"f\" like <u>f</u>lower.</strong>",
+		"failureMsg": "<strong>The correct answer was \"f\" like <u>f</u>lower.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1#omega",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "horizontal" },
+		"title": "Identify the letter!",
+		"question": "Which of these are <strong>omega</strong>?",
+		"options": [
+			{ "value": "Φ", "display": "<span lang=\"grc\">Φ</span>" },
+			{ "value": "φ", "display": "<span lang=\"grc\">φ</span>" },
+			{ "value": "Χ", "display": "<span lang=\"grc\">Χ</span>" },
+			{ "value": "χ", "display": "<span lang=\"grc\">χ</span>" },
+			{ "value": "ω", "display": "<span lang=\"grc\">ω</span>" },
+			{ "value": "Ω", "display": "<span lang=\"grc\">Ω</span>" }	
+		],
+		"answers": ["ω", "Ω"],
+		"successMsg": "<strong>Right Answer!</strong> You've identified omega, <span class=\"grc\">Ω ω</span>, pronounced like the \"o\" in <u>o</u>strich.",
+		"hintMsg": "<strong>Not Quite.</strong> The correct answer was <strong>\"ω\", \"Ω\".</strong>",
+		"failureMsg": "<strong>The correct answer was \"ω\", \"Ω\".</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s9",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Pronounciation Challenge!",
+		"question": "How would you pronounce <span lang=\"grc\">ὁδός</span>, <em>way</em>?",
+		"options": [
+			{ "value": "Oh-dos", "display": "Oh-dos" },
+			{ "value": "Ho-dos", "display": "Ho-dos" },
+			{ "value": "Roh-dos", "display": "Roh-dos" }
+		],
+		"answers": ["Ho-dos"],
+		"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὁ</span> is pronounced like \"ho\".",
+		"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ὁ</span> is pronounced like \"ho\" because of the rough breathing.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s9",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Pronounciation Challenge!",
+		"question": "How would you spell <strong>Hellēnes</strong>, <em>Greeks</em>?",
+		"options": [
+			{ "value": "´Ελληνες", "display": "<span lang=\"grc\">´Ελληνες</span>" },
+			{ "value": "`Ελληνες", "display": "<span lang=\"grc\">`Ελληνες</span>" },
+			{ "value": "῾´Ελληνες", "display": "<span lang=\"grc\">῾´Ελληνες</span>" }
+		],
+		"answers": ["῾´Ελληνες"],
+		"successMsg": "<strong>Right Answer!</strong> You remembered that the He sound must come from a rough breathing, such as <span lang=\"grc\">῾´Ε</span>.",
+		"hintMsg": "<strong>Not Quite</strong> Remember that in Greek, the H sound must come from a rough breathing, such as <span lang=\"grc\">῾´Ε</span>.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s9",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Pronounciation Challenge!",
+		"question": "How would you pronounce <span lang=\"grc\">ὑπόθεσις</span>, <em>hypothesis</em>?",
+		"options": [
+			{ "value": "U-po-the-sis", "display": "U-po-the-sis" },
+			{ "value": "Hu-po-the-sis", "display": "Hu-po-the-sis" },
+			{ "value": "I-po-the-sis", "display": "I-po-the-sis" }
+		],
+		"answers": ["Hu-po-the-sis"],
+		"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὑ</span> is pronounced like \"Hu\".",
+		"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ὑ</span> is pronounced like \"Hu\" because of the rough breathing.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s9",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Pronounciation Challenge!",
+		"question": "How would you pronounce <span lang=\"grc\">ὁδός</span>, <em>way</em>?",
+		"options": [
+			{ "value": "Oh-dos", "display": "Oh-dos" },
+			{ "value": "Ho-dos", "display": "Ho-dos" },
+			{ "value": "Roh-dos", "display": "Roh-dos" }
+		],
+		"answers": ["Ho-dos"],
+		"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὁ</span> is pronounced like \"ho\".",
+		"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ὁ</span> is pronounced like \"ho\" because of the rough breathing.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s9",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Pronounciation Challenge!",
+		"question": "How would you spell <strong>Hellēnes</strong>, <em>Greeks</em>?",
+		"options": [
+			{ "value": "´Ελληνες", "display": "<span lang=\"grc\">´Ελληνες</span>" },
+			{ "value": "`Ελληνες", "display": "<span lang=\"grc\">`Ελληνες</span>" },
+			{ "value": "῾´Ελληνες", "display": "<span lang=\"grc\">῾´Ελληνες</span>" }
+		],
+		"answers": ["῾´Ελληνες"],
+		"successMsg": "<strong>Right Answer!</strong> You remembered that the He sound must come from a rough breathing, such as <span lang=\"grc\">῾´Ε</span>.",
+		"hintMsg": "<strong>Not Quite</strong> Remember that in Greek, the H sound must come from a rough breathing, such as <span lang=\"grc\">῾´Ε</span>.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s9",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Pronounciation Challenge!",
+		"question": "How would you pronounce <span lang=\"grc\">ὑπόθεσις</span>, <em>hypothesis</em>?",
+		"options": [
+			{ "value": "U-po-the-sis", "display": "U-po-the-sis" },
+			{ "value": "Hu-po-the-sis", "display": "Hu-po-the-sis" },
+			{ "value": "I-po-the-sis", "display": "I-po-the-sis" }
+		],
+		"answers": ["Hu-po-the-sis"],
+		"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὑ</span> is pronounced like \"Hu\".",
+		"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ὑ</span> is pronounced like \"Hu\" because of the rough breathing.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s9",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Pronounciation Challenge!",
+		"question": "How would you pronounce <span lang=\"grc\">ὀλιγαρχία</span>, <em>oligarchy</em>?",
+		"options": [
+			{ "value": "Ro-li-gar-khia", "display": "Ro-li-gar-khia" },
+			{ "value": "Ho-li-gar-khia", "display": "Ho-li-gar-khia" },
+			{ "value": "O-li-gar-khia", "display": "O-li-gar-khia" }
+		],
+		"answers": ["O-li-gar-khia"],
+		"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ὀ</span> sounds like 'o', because of its smooth breathing.",
+		"hintMsg": "<strong>Not Quite</strong> Remember that smooth breathings don't affect pronunciation. So <span lang=\"grc\">ὀλιγαρχία</span> simply sounds like 'Oh-li-gar-khia'.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s9",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Pronounciation Challenge!",
+		"question": "How would you pronounce <span lang=\"grc\">ἄνθρωπος</span>, <em>man</em>?",
+		"options": [
+			{ "value": "An-thro-pos", "display": "An-thro-pos" },
+			{ "value": "Han-thro-pos", "display": "Han-thro-pos" },
+			{ "value": "En-thro-pos", "display": "En-thro-pos" }
+		],
+		"answers": ["An-thro-pos"],
+		"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">ἀ</span> sounds like 'a', because of its smooth breathing.",
+		"hintMsg": "<strong>Not Quite</strong> Remember that smooth breathings don't affect pronunciation. So <span lang=\"grc\">ἄνθρωπός</span> simply sounds like 'An-thro-pos'.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s4",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "horizontal" },
+		"title": "What is the long version of <span lang=\"grc\">ε</span>, epsilon?",
+		"question": "What is the long version of <span lang=\"grc\">ε</span>, epsilon?",
+		"options": [
+			{ "value": "η", "display": "<span lang=\"grc\">η</span>" },
+			{ "value": "υ", "display": "<span lang=\"grc\">υ</span>" },
+			{ "value": "ω", "display": "<span lang=\"grc\">ω</span>" }
+		],
+		"answers": ["η"],
+		"successMsg": "<strong>Right Answer!</strong> You remembered that <span lang=\"grc\">η</span>, eta, is the long version of <span lang=\"grc\">ε</span>, epsilon.",
+		"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">η</span>, eta, is the long version of <span lang=\"grc\">ε</span>, epsilon.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s4",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "horizontal" },
+		"title": "Vowel Lengths!",
+		"question": "Which of these vowels can NOT be <strong>long</strong>?",
+		"options": [
+			{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+			{ "value": "ε", "display": "<span lang=\"grc\">ε</span>" },
+			{ "value": "η", "display": "<span lang=\"grc\">η</span>" },
+			{ "value": "ι", "display": "<span lang=\"grc\">ι</span>" },
+			{ "value": "ο", "display": "<span lang=\"grc\">ο</span>" },
+			{ "value": "ω", "display": "<span lang=\"grc\">ω</span>" },
+			{ "value": "υ", "display": "<span lang=\"grc\">υ</span>" }
+		],
+		"answers": ["α", "ε", "υ", "ο", "ι"],
+		"successMsg": "<strong>Right Answer!</strong> These are all vowels that are either short, or can be short or long.",
+		"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ω</span> and <span lang=\"grc\">η</span> can only be long vowels. The short vowels are <span lang=\"grc\">α, ε, ι, ο, υ</span>.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s4",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "horizontal" },
+		"title": "Vowel Lengths!",
+		"question": "Which of these vowels MUST be <strong>long</strong>?",
+		"options": [
+			{ "value": "α", "display": "<span lang=\"grc\">α</span>" },
+			{ "value": "ε", "display": "<span lang=\"grc\">ε</span>" },
+			{ "value": "η", "display": "<span lang=\"grc\">η</span>" },
+			{ "value": "ι", "display": "<span lang=\"grc\">ι</span>" },
+			{ "value": "ο", "display": "<span lang=\"grc\">ο</span>" },
+			{ "value": "ω", "display": "<span lang=\"grc\">ω</span>" },
+			{ "value": "υ", "display": "<span lang=\"grc\">υ</span>" }
+		],
+		"answers": ["η", "ω"],
+		"successMsg": "<strong>Right Answer!</strong> These are all vowels that must be long.",
+		"hintMsg": "<strong>Not Quite</strong> Remember that <span lang=\"grc\">ω</span> and <span lang=\"grc\">η</span> can only be long vowels. The short vowels are <span lang=\"grc\">α, ε, ι, ο, υ</span>.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s149",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Accents",
+		"question": "Which of these words contains an <strong>acute</strong> accent?",
+		"options": [
+			{ "value": "ὁδός (way)", "display": "<span lang=\"grc\">ὁδός</span> (way)" },
+			{ "value": "σῶμα (body)", "display": "<span lang=\"grc\">σῶμα</span> (body)" },
+			{ "value": "ὑπὸ (by)", "display": "<span lang=\"grc\">ὑπὸ ...</span> (by)" }
+		],
+		"answers": ["ὁδός (way)"],
+		"successMsg": "<strong>Right Answer!</strong> The <span lang=\"grc\">ό</span> in <span lang=\"grc\">ὁδός</span> has an acute accent.",
+		"hintMsg": "<strong>Not Quite</strong> Remember, the acute accent points right: ´ .",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s149",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Accents",
+		"question": "Which of these words contains a <strong>circumflex</strong> accent?",
+		"options": [
+			{ "value": "ὁδός (way)", "display": "<span lang=\"grc\">ὁδός</span> (way)" },
+			{ "value": "σῶμα (body)", "display": "<span lang=\"grc\">σῶμα</span> (body)" },
+			{ "value": "ὑπὸ (by)", "display": "<span lang=\"grc\">ὑπὸ ...</span> (by)" }
+		],
+		"answers": ["σῶμα (body)"],
+		"successMsg": "<strong>Right Answer!</strong> The <span lang=\"grc\">ῶ</span> in <span lang=\"grc\">σῶμα</span> has a circumflex accent.",
+		"hintMsg": "<strong>Not Quite</strong> Remember, the circumflex is crazy and wavy: ῀",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s149",
+		"type": "slide_direct_select",
+		"settings": { "orientation": "vertical" },
+		"title": "Accents",
+		"question": "Which of these words contains a <strong>grave</strong> accent?",
+		"options": [
+			{ "value": "ὁδός (way)", "display": "<span lang=\"grc\">ὁδός</span> (way)" },
+			{ "value": "σῶμα (body)", "display": "<span lang=\"grc\">σῶμα</span> (body)" },
+			{ "value": "ὑπὸ (by)", "display": "<span lang=\"grc\">ὑπὸ ...</span> (by)" }
+		],
+		"answers": ["ὑπὸ (by)"],
+		"successMsg": "<strong>Right Answer!</strong> The <span lang=\"grc\">ὸ</span> in <span lang=\"grc\">ὑπὸ</span> has a grave accent.",
+		"hintMsg": "<strong>Not Quite</strong> Remember, the grave accent points to the left: `",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s194",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Select all the characteristics of a <strong>Noun</strong> in Ancient Greek.",
+		"options": [
+				{ "value": "Gender", "display": "Gender" },
+				{ "value": "Tense", "display": "Tense" },
+				{ "value": "Number", "display": "Number" },
+				{ "value": "Person", "display": "Person" },
+				{ "value": "Case", "display": "Case" }
+		],
+		"answers": ["Gender", "Number", "Case"],
+		"successMsg": "<strong>Right Answer!</strong> When you see a noun, you'll need to figure out these three characteristics.",
+		"hintMsg": "<strong>Not Quite</strong> Nouns in Greek have three characteristics: Gender, Number, and Case.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s196",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Exercise: Pick the correct definite article",
+		"question": "Which definite article (\"the\") corresponds to <strong>feminine nouns</strong>, such as <span lang=\"grc\" class=\"fem\">ἡμέρα</span> (day)?",
+		"options": [
+				{ "value": "ὁ", "display": "<span lang=\"grc\">ὁ</span>" },
+				{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+				{ "value": "τό", "display": "<span lang=\"grc\">τό</span>" }
+		],
+		"answers": ["ἡ"],
+		"successMsg": "<strong>Right Answer!</strong> The definite article for feminine nouns like <span lang=\"grc\">ἡμέρα</span> is <span lang=\"grc\">ἡ</span>.",
+		"hintMsg": "<strong>Not Quite</strong>",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s196",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Exercise: Pick the correct definite article",
+		"question": "Which definite article (\"the\") corresponds to <strong>masculine nouns</strong>, such as <span lang=\"grc\" class=\"masc\">πόλεμος</span> (battle)?",
+		"options": [
+				{ "value": "ὁ", "display": "<span lang=\"grc\">ὁ</span>" },
+				{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+				{ "value": "τό", "display": "<span lang=\"grc\">τό</span>" }
+		],
+		"answers": ["ὁ"],
+		"successMsg": "<strong>Right Answer!</strong> The definite article for masculine nouns like <span lang=\"grc\" class=\"masc\">πόλεμος</span> is <span lang=\"grc\">ὁ</span>.",
+		"hintMsg": "<strong>Not Quite</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s196",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Exercise: Pick the correct definite article",
+		"question": "Which definite article (\"the\") corresponds to <strong>neuter nouns</strong>, such as <span lang=\"grc\" class=\"neut\">ἔργον</span> (work)?",
+		"options": [
+				{ "value": "ὁ", "display": "<span lang=\"grc\">ὁ</span>" },
+				{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+				{ "value": "τό", "display": "<span lang=\"grc\">τό</span>" }
+		],
+		"answers": ["τό"],
+		"successMsg": "<strong>Right Answer!</strong> The definite article for neuter nouns like <span lang=\"grc\">ἔργον</span> is <span lang=\"grc\">τό</span>.",
+		"hintMsg": "<strong>Not Quite</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s195",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Which definite article (\"the\") agrees with <strong>plural, feminine</strong> nouns like <span lang=\"grc\" class=\"fem\">ἡμέραι</span> (\"days\")?",
+		"options": [
+				{ "value": "τά", "display": "<span lang=\"grc\">τά</span>" },
+				{ "value": "ἡ", "display": "<span lang=\"grc\">ἡ</span>" },
+				{ "value": "αἱ", "display": "<span lang=\"grc\">αἱ</span>" }
+		],
+		"answers": ["αἱ"],
+		"successMsg": "<strong>Right Answer!</strong> You noticed that the ending of the article and the noun itself match!",
+		"hintMsg": "<strong>Not Quite</strong> Look at the endings and see how they're similar: <span lang=\"grc\"><em>αἱ</em> ἡμέρ<em>αι</em></span> (\"the days\").",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s201",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Do you remember the first in the list of cases?",
+		"options": [
+				{ "value": "nominative", "display": "nominative" },
+				{ "value": "accusative", "display": "accusative" },
+				{ "value": "dative", "display": "dative" }
+		],
+		"answers": ["nominative"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong> Remember the first case is the nominative.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s201",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Do you remember the third in the list of cases?",
+		"options": [
+				{ "value": "vocative", "display": "vocative" },
+				{ "value": "accusative", "display": "accusative" },
+				{ "value": "dative", "display": "dative" }
+		],
+		"answers": ["dative"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong> Remember the first case is the dative.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s201",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Do you remember the last in the list of cases?",
+		"options": [
+				{ "value": "vocative", "display": "vocative" },
+				{ "value": "accusative", "display": "genitive" },
+				{ "value": "dative", "display": "dative" }
+		],
+		"answers": ["vocative"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong> Remember the first case is the vocative.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s332",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Which of these definite articles indicates the <strong>neuter accusative plural</strong>?",
+		"options": [
+				{ "value": "τά", "display": "<span lang=\"grc\">τά</span>" },
+				{ "value": "τοῖς", "display": "<span lang=\"grc\">τοῖς</span>" },
+				{ "value": "αἱ", "display": "<span lang=\"grc\">αἱ</span>" }
+		],
+		"answers": ["τά"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong> Remember that the neuter accusative plural is <span lang=\"grc\"><em>τά</em>",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s332",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Which of these definite articles indicates the <strong>feminine genitive singular</strong>?",
+		"options": [
+				{ "value": "αἱ", "display": "<span lang=\"grc\">αἱ</span>" },
+				{ "value": "τῶν", "display": "<span lang=\"grc\">τῶν</span>" },
+				{ "value": "τῆς", "display": "<span lang=\"grc\">τῆς</span>" }
+		],
+		"answers": ["τῆς"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong> Remember that the feminine genitive singular is <span lang=\"grc\"><em>τῆς</em>.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s332",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Which of these definite articles indicates the <strong>masculine dative singular</strong>?",
+		"options": [
+				{ "value": "τῷ", "display": "<span lang=\"grc\">τῷ</span>" },
+				{ "value": "τοῖς", "display": "<span lang=\"grc\">τοῖς</span>" },
+				{ "value": "τοῦ", "display": "<span lang=\"grc\">τοῦ</span>" }
+		],
+		"answers": ["τῷ"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong> Remember that the masculine dative singular is <span lang=\"grc\"><em>τῷ</em>.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s332",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "What is this: <strong><span lang=\"grc\">τήν</span></strong> ?",
+		"options": [
+				{ "value": "feminine accusative plural", "display": "feminine accusative plural" },
+				{ "value": "feminine accusative singular", "display": "feminine accusative singular" },
+				{ "value": "feminine genitive singular", "display": "feminine genitive singular" }
+		],
+		"answers": ["feminine accusative singular"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong> Remember this is the feminine accusative singular.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s332",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "What is this: <strong><span lang=\"grc\">οἱ</span></strong> ?",
+		"options": [
+				{ "value": "masculine nominative singular", "display": "masculine nominative singular" },
+				{ "value": "neuter accusative plural", "display": "neuter accusative plural" },
+				{ "value": "masculine nominative plural", "display": "masculine nominative plural" }
+		],
+		"answers": ["masculine nominative plural"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong> Remember this is the masculine nominative plural.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s332",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "What is this: <strong><span lang=\"grc\">ταῖς</span></strong> ?",
+		"options": [
+				{ "value": "feminine genitive singular", "display": "feminine genitive singular" },
+				{ "value": "feminine dative plural", "display": "feminine dative plural" },
+				{ "value": "feminine genitive plural", "display": "feminine genitive plural" }
+		],
+		"answers": ["feminine dative plural"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong> Remember this is the feminine dative plural.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "938",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "horizontal" 
+			},
+		"title": "Exercise: Select the Subject of this Sentence",
+		"question": "Which of these words is the subject of the following English sentence:",
+		"options": [
+			{
+				"value": "The ships",
+				"display": "The ships"
+			},
+			{
+				"value": "sailed",
+				"display": "sailed"
+			},
+			{
+				"value": "to Sicily",
+				"display": "to Sicily"
+			}
+		],
+		"answers": ["The ships"],
+		"successMsg": "<strong>Right Answer!</strong> \"The Ships\" is the subject of this sentence, because it performs the action of the verb, \"sailed\". If this sentence were in Greek, \"The ships\" would be in the <strong>nominative case</strong>.", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s910",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "horizontal" 
+			},
+		"title": "Exercise: Select the <strong>Complement</strong> of this Sentence",
+		"question": "Which of these words is the complement to the subject?",
+		"options": [
+			{
+				"value": "The day",
+				"display": "<span lang=\"grc\">ἡ ἡμέρα</span><br><small>The day</small>"
+			},
+			{
+				"value": "is",
+				"display": "<span lang=\"grc\">ἐστὶ</span><br><small>is</small>"
+			},
+			{
+				"value": "long",
+				"display": "<span lang=\"grc\">μακρά</span><br><small>long</small>"
+			}
+		],
+		"answers": ["long"],
+		"successMsg": "<strong>Right Answer!</strong> You noticed that 'long' is the complement to the subject, 'the day'.", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "938",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "vertical" 
+			},
+		"title": "Exercise: Pick the Correct Case",
+		"question": "In which case does the <strong>subject of a sentence</strong> belong?",
+		"options": [
+			{
+				"value": "Nominative",
+				"display": "Nominative"
+			},
+			{
+				"value": "Genitive",
+				"display": "Genitive"
+			},
+			{
+				"value": "Dative",
+				"display": "Dative"
+			}
+		],
+		"answers": ["Nominative"],
+		"successMsg": "<strong>Right Answer!</strong> Subjects of a sentence always belong in the nominative case.", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1590",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "horizontal"
+		},
+		"title": "Exercise: Select the Direct Object",
+		"question": "In the following sentence, which word or words are the direct object, and would belong in the <strong>accusative case</strong> if they were written in Greek?",
+		"options": [
+			{
+				"value": "The king",
+				"display": "The king"
+			},
+			{  
+				"value": "gave",
+				"display": "gave"
+			},
+			{
+				"value": "an order",
+				"display": "an order"
+			}
+		],
+		"answers": ["an order"],
+		"successMsg": "<strong>Right Answer!</strong>",
+		"hintMsg": "<strong>Not Quite</strong>",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1590",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "horizontal" 
+			},
+		"title": "Exercise: Select the Direct Object",
+		"question": "Which of these words is in the accusative case?",
+		"options": [
+			{
+				"value": "The city",
+				"display": "ἡ πόλις<br><small>The city</small>"
+			},
+			{
+				"value": "has",
+				"display": "ἔχει<br><small>has</small>"
+			},
+			{
+				"value": "an army",
+				"display": "στρατίαν<br><small>an army</small>"
+			}
+		],
+		"answers": ["an army"],
+		"successMsg": "<strong>Right Answer!</strong>", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	}
+]

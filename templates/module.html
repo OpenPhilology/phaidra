@@ -21,36 +21,32 @@
 
 	{% get_current_language_bidi as LANGUAGE_BIDI %}
 
-	<!-- Move this logic into CSS -->
-	<div class="col-md-1 hidden-sm hidden-xs" style="padding: 20px">
-		<a href="/lessons/">
-			{% if LANGUAGE_BIDI %}
-				<span class="glyphicon glyphicon-arrow-right" style="margin-left: 5px"></span>
-			{% else %}
-				<span class="glyphicon glyphicon-arrow-left" style="margin-right: 5px"></span>
-			{% endif %}
-			{% trans "Lessons" %}
-		</a>
-	</div>
-	<div class="col-md-10">
-		<div class="row slide">
-			<div class="corner right">
-				<a href="#" data-toggle="tooltip" data-placement="left" title="{% trans 'Turn Page' %}"></a>
-			</div>
-			<div class="lesson-header">
-				<h1><img src="/static/images/tree-loader.gif"> {% trans "Loading Lesson" %}</h1>
-				<h2></h2>
-			</div>
-			{% spaceless %}
-				<div class="lesson-progress"></div>
-			{% endspaceless %}
+	{% if not user.is_authenticated %}
+		<script>
+			window.location.replace('/login');
+		</script>
+	{% else %}
+		<!-- Move this logic into CSS -->
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row slide">
+				<div class="corner right">
+					<a href="#" data-toggle="tooltip" data-placement="left" title="{% trans 'Turn Page' %}"></a>
+				</div>
+				<div class="lesson-header">
+					<h1><img src="/static/images/tree-loader.gif"> {% trans "Loading Lesson" %}</h1>
+					<h2></h2>
+				</div>
+				{% spaceless %}
+					<div class="lesson-progress"></div>
+				{% endspaceless %}
 
-			<div id="lesson-content"></div>
+				<div id="lesson-content"></div>
 
-			<div id="lesson-feedback">
-				{# These are the types of feedback a user can receive #}
+				<div id="lesson-feedback">
+					{# These are the types of feedback a user can receive #}
+				</div>
 			</div>
 		</div>
-	</div>
+	{% endif %}
 
 {% endblock %}

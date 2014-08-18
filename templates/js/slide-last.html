@@ -11,24 +11,25 @@
 	</div>
 	<div class="col-md-8 col-sm-8">
 
-		<div class="speech">
-			<h2>Well done!</h2>
-			<p>
-				You've finished "Greek Alphabet". Check out the skills you've earned with this lesson:
-			</p>
-
-			<br>
-
-			<h3>You learned how to...</h3>
-			<span class="label" style="display: inline-block; float: right; font-size: 4em; background-color: #F4BC78">+ 2</span>
-
-			<p>
-				<span class="glyphicon glyphicon-flash" style="display: inline-block; color: #F4BC78; background-color: #FFF; border-radius: 10px; padding: 2px 3px 4px;"></span> Read and identify lowercase and uppercase Greek letters
-			</p>
-			<p>
-				<span class="glyphicon glyphicon-flash" style="display: inline-block; color: #F4BC78; background-color: #FFF; border-radius: 10px; padding: 2px 3px 4px;"></span> Identify Greek punctuation
-			</p>
-
+		<div class="row">
+			<div class="col-md-4 skill-summary">
+				<span class="glyphicon glyphicon-fire"></span>
+				<h3>Speed</h3>
+				<h4><%= stats.avgSpeed %>s</h4>
+				<p><em>per question on average</em></p>
+			</div>
+			<div class="col-md-4 skill-summary">
+				<span class="glyphicon glyphicon-eye-open"></span>
+				<h3>Accuracy</h3>
+				<h4><%= stats.accuracy %>%</h4>
+				<p><em>answered correctly</em></p>
+			</div>
+			<div class="col-md-4 skill-summary">
+				<span class="glyphicon glyphicon-flash"></span>
+				<h3>Skills</h3>
+				<h4><%= stats.skillCount %>%</h4>
+				<p><em>new skills learned</em></p>
+			</div>
 		</div>
 
 		<a data-toggle="tooltip" title="Continue" href="/module/2/section/0/slide/0" style="font-size: 18px; text-decoration: none; text-align: center; background-color: #D15241; color: #FFF; padding: 10px; border-radius: 3px; box-shadow: 2px 2px 3px #CCC; display: block;">

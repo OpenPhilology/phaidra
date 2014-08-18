@@ -17,51 +17,57 @@
 
 {% block content %}
 
-<!-- TODO: Move all these terrible inline styles out... -->
-<div class="col-md-10 col-md-offset-1" style="margin-top: 30px;">
-	<div class="well" style="background-color: #D15241; color: #FFF">
-		<a style="float: right" href="/module/1/section/0/slide/0" class="btn btn-default">Start Learning Greek</a>
-		<img src="/static/images/icon_grk_amphora.png" alt="The Greek Alphabet" style="float: left; padding: 20px">
-		<h1>Learn the Alphabet</h1>
-		<p>There's no better way to start than with your ABC's!</p>
-	</div>
-</div>
-<div class="col-md-8 col-md-offset-1" style="margin-top: 30px;">
+	{% if not user.is_authenticated %}
+		<script>
+			window.location.replace('/login');
+		</script>
+	{% else %}
+			<!-- TODO: Move all these terrible inline styles out... -->
+			<div class="col-md-10 col-md-offset-1" style="margin-top: 30px;">
+				<div class="well" style="background-color: #D15241; color: #FFF">
+					<a style="float: right" href="/module/1/section/0/slide/0" class="btn btn-default">Start Learning Greek</a>
+					<img src="/static/images/icon_grk_amphora.png" alt="The Greek Alphabet" style="float: left; padding: 20px">
+					<h1>Learn the Alphabet</h1>
+					<p>There's no better way to start than with your ABC's!</p>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-1" style="margin-top: 30px;">
 
-	<h3>{% trans "Ready to put your Greek skills to use?" %}</h3>	
-	<p>{% trans "When you feel like you've learned enough, dive right in to more advanced (and more fun) Greek learning tools." %}</p>
+				<h3>{% trans "Ready to put your Greek skills to use?" %}</h3>	
+				<p>{% trans "When you feel like you've learned enough, dive right in to more advanced (and more fun) Greek learning tools." %}</p>
 
-	<hr>
+				<hr>
 
-	<div class="row">
-		<div class="col-md-4" style="text-align: center">
-			<span class="glyphicon glyphicon-bookmark" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
-			<h3><a href="/reader/">{% trans "Start Reading" %}</a></h3>
-			<p>
-				{% trans "Start reading Thucydides' war story of the Spartans versus the Athenians." %}
-			</p>
-		</div>
-		<div class="col-md-4" style="text-align: center">
-			<span class="glyphicon glyphicon-book" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
-			<h3><a href="/create/">{% trans "Create Translations" %}</a></h3>
-			<p>
-				{% trans "Contribute to brand new, digital editions of Classical works." %}
-			</p>
-		</div>
-		<div class="col-md-4" style="text-align: center">
-			<span class="glyphicon glyphicon-leaf" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
-			<h3><a href="/create/">{% trans "Build Parse Trees" %}</a></h3>
-			<p>
-				{% trans "Show off your syntactic chops by building parse trees of previously unanalysed sentences." %}
-			</p>
-		</div>
-	</div>
+				<div class="row">
+					<div class="col-md-4" style="text-align: center">
+						<span class="glyphicon glyphicon-bookmark" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
+						<h3><a href="/reader/">{% trans "Start Reading" %}</a></h3>
+						<p>
+							{% trans "Start reading Thucydides' war story of the Spartans versus the Athenians." %}
+						</p>
+					</div>
+					<div class="col-md-4" style="text-align: center">
+						<span class="glyphicon glyphicon-book" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
+						<h3><a href="/create/">{% trans "Create Translations" %}</a></h3>
+						<p>
+							{% trans "Contribute to brand new, digital editions of Classical works." %}
+						</p>
+					</div>
+					<div class="col-md-4" style="text-align: center">
+						<span class="glyphicon glyphicon-leaf" style="color: #1FADAD; font-size: 3em; text-shadow: 1px 1px 2px rgba(30, 9, 82, 0.22)"></span>
+						<h3><a href="/create/">{% trans "Build Parse Trees" %}</a></h3>
+						<p>
+							{% trans "Show off your syntactic chops by building parse trees of previously unanalysed sentences." %}
+						</p>
+					</div>
+				</div>
 
-</div>
+			</div>
 
-<div style="position: fixed; bottom: -50px; right: 0; z-index: -10; width: 400px; text-align: right">
-	<img src="/static/images/thuc.svg" width="100%" height="100%" style="opacity: .3; float: right">
-	<img src="/static/images/glasses.svg" style="position: absolute; left: 126px; top: 92px; width: 133px; opacity: .6"> 
-</div>
+			<div style="position: fixed; bottom: -50px; right: 0; z-index: -10; width: 400px; text-align: right">
+				<img src="/static/images/thuc.svg" width="100%" height="100%" style="opacity: .3; float: right">
+				<img src="/static/images/glasses.svg" style="position: absolute; left: 126px; top: 92px; width: 133px; opacity: .6"> 
+			</div>
+	{% endif %}
 
 {% endblock %}

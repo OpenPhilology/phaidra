@@ -2,12 +2,14 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 
 		var View = Backbone.View.extend({
 			events: { },
-			initialize: function() {
-				this.drawDonut('#vocab-pie', '15', '#1FADAD', 'Vocabulary'); 		
-				this.drawDonut('#morph-pie', '20', '#F4BC78', 'Morphology'); 		
-				this.drawDonut('#syn-pie', '10', '#D15241', 'Syntax'); 		
+			initialize: function(options) {
+				var s = options.statistics;
 
-				this.drawSparkline('#records .sparkline', [1, 10, 5, 7, 2, 8, 5, 9, 2, 1], '#333');
+				this.drawDonut('#vocab', (s.vocab * 10), '#1FADAD', 'Vocabulary'); 		
+				this.drawDonut('#morph', (s.morphology * 10), '#F4BC78', 'Morphology'); 		
+				this.drawDonut('#syn', (s.syntax * 10), '#D15241', 'Syntax'); 		
+
+				//this.drawSparkline('#records .sparkline', [1, 10, 5, 7, 2, 8, 5, 9, 2, 1], '#333');
 			},
 			render: function() {
 				return this;	
@@ -31,6 +33,8 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				graph.append('svg:path').attr('d', line(data));
 			},
 			drawDonut: function(selector, percentComplete, color, label) {
+				selector += ' .pie';
+				$(selector).html("");
 
 				var width = 100,
 					height = 100,
@@ -83,7 +87,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				svg.append('text')
 					.attr('dy', '.35em')
 					.style('text-anchor', 'middle')
-					.text(percentComplete + '%');
+					.text(percentComplete.toFixed(2) + '%');
 
 			}
 		});

@@ -129,24 +129,6 @@
 		}
 	}
 
-	#pies {
-		text-align: center;
-	}
-	#vocab-pie {
-		& + h4 {
-			color: $color-pri-two;
-			margin-bottom: 0px;
-		}
-	}
-	#morph-pie + h4 {
-		color: $color-sec-four;
-		margin-bottom: 0px;
-	}
-	#syn-pie + h4 {
-		color: $color-pri-one;		
-		margin-bottom: 0px;
-	}
-
 	#records {
 		.sparkline {
 			display: inline-block;
@@ -167,7 +149,6 @@
 	text-align: center;
 
 	.bar {
-		$c: #DDD;
 
 		display: inline-block;
 		height: 10px;
@@ -175,22 +156,6 @@
 		background-size: 200% 100%;
 		background-position: right bottom;
 		transition: all 0.5s ease-out;
-
-		border: {
-			top: 1px solid $c;
-			bottom: 1px solid $c;
-			left: 1px solid $c;
-		}
-
-		&:first-child {
-			border-top-left-radius: 3px;
-			border-bottom-left-radius: 3px;
-		}
-		&:last-child {
-			border-right: 1px solid $c;
-			border-bottom-right-radius: 3px;
-			border-top-right-radius: 3px;
-		}
 
 		&.complete {
 			$b: $color-pri-two;
@@ -237,14 +202,13 @@ div.module {
 		text-decoration: none;
 	}	
 
-	&.nouns {
-		background-color: $color-pri-two;
+	@mixin tile($color) {
+		background-color: $color;
 		@include transition(background-color, .2s, ease-out);
 
 		&:hover {
-			background-color: lighten($color-pri-two, 5%);
+			background-color: lighten($color, 5%);
 			@include transition(background-color, .2s, ease-in);
-
 			box-shadow: 2px 2px 3px #CCC;
 			position: relative;
 			top: -3px;
@@ -254,55 +218,18 @@ div.module {
 			color: #FFF;
 		}
 	}
-	&.morph {
-		background-color: $color-sec-two;
-		@include transition(background-color, .2s, ease-out);
 
-		&:hover {
-			background-color: lighten($color-sec-two, 5%);
-			@include transition(background-color, .2s, ease-in);
-
-			box-shadow: 2px 2px 3px #CCC;
-			position: relative;
-			top: -3px;
-		}
-
-		h3 {
-			color: #FFF;
-		}
+	&.nouns {
+		@include tile($color-pri-two);
 	}
 	&.verbs {
-		background-color: $color-sec-two;
-		@include transition(background-color, .2s, ease-out);
-
-		&:hover {
-			background-color: lighten($color-sec-two, 5%);
-			@include transition(background-color, .2s, ease-in);
-
-			box-shadow: 2px 2px 3px #CCC;
-			position: relative;
-			top: -3px;
-		}
-
-		h3 {
-			color: #FFF;
-		}
+		@include tile($color-sec-two);
 	}
 	&.basics {
-		background-color: $color-pri-one;
-		@include transition(background-color, .2s, ease-out);
-
-		&:hover {
-			background-color: lighten($color-pri-one, 5%);
-			@include transition(background-color, .2s, ease-in);
-			box-shadow: 2px 2px 3px #CCC;
-			position: relative;
-			top: -3px;
-		}
-
-		h3 {
-			color: #FFF;
-		}
+		@include tile($color-pri-one);
+	}
+	&.foundational {
+		@include tile($color-sec-four);
 	}
 
 	h3 {

@@ -65,53 +65,104 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		},
 		populate: function(collection) {
 			var that = this;
+			var module = Utils.Content[this.meta('module')];
+			var section = module.modules[this.meta('section')];
+			var slides = section.slides;
 
-			// Get the data we care about -- specific section of a module
-			var slide_data = Utils.Content[that.meta('module')]["modules"][that.meta('section')]["slides"];
+			// Set attributes on this section
+			this.meta('initLength', slides.length);
+			this.meta('moduleTitle', module.title);
+			this.meta('sectionTitle', section.title);
 
-			/*
-			Goes through and creates either an individual slide, or a cluster of slides,
-			based on data from the JSON file.
-			*/
+			for (var i = 0, slide; slide = slides[i]; i++) {
+				slide.title = this.meta('sectionTitle');
+				this.add(slide);
+				this.insertExercises(slide, slide.smyth);
+			}
+		},
+		insertExercises: function(slide, smyth, index) {
+			if (!slide.smyth)
+				return;
 
-			// Set attributes on this object
-			that.meta('moduleTitle', Utils.Content[that.meta('module')]["title"]);
-			that.meta('sectionTitle', Utils.Content[that.meta('module')].modules[that.meta('section')]["title"]);
-
-			for (var i = 0; i < slide_data.length; i++) {
-				slide_data[i]["title"] = that.meta('sectionTitle');
-				if (slide_data[i]["smyth"] && slide_data[i]["tasks"] && slide_data[i]["type"] == 'slide_info') {
-					// Create data needed for a an exercise
-					console.log("Adding an exercise for " + slide_data[i]["smyth"]);
-					
-					var j = Math.floor((Math.random() * slide_data[i]["tasks"].length) + 1);
-
-					slide_data.splice(i+1, 0, {
-						"smyth": slide_data[i]["smyth"],
-						"task": slide_data[i]["tasks"][j - 1]
-					});
-
-					j = Math.floor((Math.random() * slide_data[i]["tasks"].length) + 1);
-					slide_data.splice(i+1, 0, {
-						"smyth": slide_data[i]["smyth"],
-						"task": slide_data[i]["tasks"][j - 1]
-					});
-
-					j = Math.floor((Math.random() * slide_data[i]["tasks"].length) + 1);
-					slide_data.splice(i+1, 0, {
-						"smyth": slide_data[i]["smyth"],
-						"task": slide_data[i]["tasks"][j - 1]
-					});
-					i += 3;
-				}
+			var newSlides = [];
+			if (slide.tasks) {
+				var tasks = this.insertTasks(slide.tasks, slide.smyth);
+				newSlides = newSlides.concat(tasks);
 			}
 
-			that.meta('initLength', slide_data.length);
+			var questions = this.insertQuestions(slide.smyth);
+			newSlides = newSlides.concat(questions);
+			newSlides = _.shuffle(newSlides);
 
-			// Build with slide data
-			for (var i = 0; i < slide_data.length; i++) {
-				that.add(new Models.Slide(slide_data[i]));
+			if (newSlides.length === 0)
+				return;
+			else if (index) 
+				this.add(newSlides, { at: index });
+			else 
+				this.add(newSlides);
+		},
+		insertTasks: function(tasks, smyth) {
+			var matches = Utils.Tasks.filter(function(t) {
+				t.smyth = smyth;
+				return tasks.indexOf(t.task) !== -1;
+			});
+
+			// Create at least five tasks
+			while (matches.length < 5) {
+				matches = matches.concat(matches);
 			}
+			var subset = _.shuffle(matches).splice(0, 5);
+			this.meta('initLength', this.meta('initLength') + subset.length);
+
+			return subset;
+		},
+		insertQuestions: function(smyth) {
+			// Here we find out what questions are available for this subject
+			var questions = Utils.Questions.filter(function(q) {
+				return q.smyth === smyth;
+			});
+			this.meta('initLength', this.meta('initLength') + questions.length);
+			return questions;
+		},
+		makeStats: function() {
+			var stats = {
+				"avgSpeed": "1s",
+				"quickestQuestion": "5ms",
+				"skillCount": "5"
+			};
+
+			// Get slides which were questions
+			var answered = _.reject(this.models, function(m) {
+				return typeof(m.get('accuracy')) === 'undefined';
+			});
+
+			// Accuracy array
+			var vals = answered.map(function(a) {
+				return a.get('accuracy');
+			});
+			stats.accuracy = (_.reduce(vals, function(memo, num) {
+				return memo + num;
+			}, 0) / vals.length).toFixed(2);
+
+			// Time difference array
+			var times = answered.map(function(a) {
+				return (a.get('endtime') - a.get('starttime')) / 1000;
+			});
+			stats.quickestQuestion = 100000000000;
+			stats.avgSpeed = (_.reduce(times, function(memo, num) {
+				stats.quickestQuestion = num < stats.quickestQuestion ? num : stats.quickestQuestion;
+				return memo + num;
+			}, 0) / times.length).toFixed(2);
+			stats.quickestQuestion = stats.quickestQuestion.toFixed(2);
+
+			// Skill array -- ignore our added in # signs
+			var skills = answered.map(function(m) {
+				var end = m.get('smyth').indexOf('#') || m.get('smyth').length;
+				return m.get('smyth').substring(0, end);
+			});
+			stats.skillCount = skills.length;
+
+			return stats;
 		}
 	});
 

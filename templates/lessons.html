@@ -18,6 +18,12 @@
 
 	{% block content %} 
 
+
+	{% if not user.is_authenticated %}
+		<script>
+			window.location.replace('/login');
+		</script>
+	{% else %}
 		<div class="col-md-4 col-md-push-8 feedback-container">
 			<div class="hidden-sm hidden-xs">
 				<img src="/static/images/thuc.png" style="height: 100px; float: right">
@@ -29,7 +35,10 @@
 			</div>
 		</div>
 		<div class="col-md-offset-1 col-md-7 col-md-pull-4 module-container">
-			<div class="row"></div>
+			<div class="row">
+				<h1><img src="/static/images/tree-loader.gif"> Loading Lessons...</h1>
+			</div>
 		</div>
+	{% endif %}
 
 {% endblock %} 

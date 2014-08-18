@@ -10,6 +10,9 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			},
 			render: function() {
 				var container = this.$el.find('.module-container .row');
+				container.html('');
+
+				// Pull the lesson outline from our content
 				for (var i = 0; i < Utils.Content.length; i++) {
 					var unit = Utils.Content[i];
 					console.log(unit);
@@ -21,7 +24,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 							var str = '<a href="/module/' + i + '/section/0/slide/0" class="module ' + (unit.category || 'noun') + '">';
 
 							if (unit.thumbnail) {
-								str += '<img src="/static/images/' + (unit.thumbnail || 'blah.png') + '">';
+								str += '<img src="' + (unit.thumbnail || 'blah.png') + '">';
 							}
 
 							str += '<div>';

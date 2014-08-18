@@ -9,9 +9,13 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		parse: function(response) {
 			if (response && response.meta)
 				this.meta = response.meta;
-			this.set(response.objects);
+			this.set(response.objects.filter(function(obj) {
+				return obj.username === U;
+			})[0]);
 			this.set("locale", locale);
 			this.set("language", locale.split('-')[0]);
+
+			console.log(this);
 		}
 	});
 
@@ -28,17 +32,15 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		constructor: function(attributes, options) {
 			Backbone.Model.prototype.constructor.call(this, attributes);
 
+			// Either fetch the HTML
 			if (attributes.includeHTML)
 				this.fetchHTML(attributes, options);
-
-			// Slide is dynamic if it has a task defined
-			if (attributes.task)
-				this.fillAttributes(attributes, options)
-
-			// Or it has all set attributes already (as is case for hand-written slides) 
-			else if (this.get('type') == 'slide_direct_select' || this.get('type') == 'slide_multi_comp') {
+			// Or generate an exercise
+			else if (attributes.task)
+				this.fillAttributes(attributes, options);
+			// Or the slide is from the question bank
+			else
 				this.set('populated', true);
-			}
 		},
 		defaults: {
 			'modelName': 'slide',
@@ -47,90 +49,58 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			var that = this;
 			$.ajax({
 				url: attributes.includeHTML,
-				async: false,
 				dataType: 'text',
 				success: function(response) {
 					that.set('content', response);
+					that.set('populated', true);
+					that.trigger('populated');
 				},
 				error: function(x, y, z) {
 					console.log(x, y, z);
 				}
 			});
 		},
-		// TODO: Map these to a conf file or something similar (see ~ static/js/exercises.json)
 		fillAttributes: function(attributes, options) {
-			
 			var that = this;
+			var s = this.get('smyth');
+			var entry = Utils.Smyth[s];
+			
+			if (entry) {
+				var url = '/api/v1/' + this.get('endpoint') + '/?format=json&' + entry.query;
 
-			// Attrs we care about: Smyth ref, task
-			this.set('query', Utils.Smyth[0][this.attributes.smyth]["query"])
-			this.set('type', 'slide_direct_select');
+				$.ajax({
+					url: url,
+					dataType: 'text',
+					success: function(response) {
+						
+						// TODO: Ask maria to include frequency on words
+						var objs = JSON.parse(response).objects;
+						var groups = _.groupBy(objs, function(o) {
+						   return o.lemma;
+						});
+						var keepers = objs.filter(function(o) {
+							return groups[o.lemma].length > 1;
+						});
+						var chosen = _.shuffle(keepers).splice(0, 1)[0];
+						
+						var answer = chosen[that.get('answerField')];
+						that.set('answers', [answer]);
+						that.set('encounteredWords', [chosen.CTS]);
 
-			var taskMapper = {
-				'identify_morph_person': function() {
-					$.ajax({
-						'dataType': 'text',
-						'url': '/api/v1/word/?format=json&' + that.get('query'),
-						'success': function(response) {
-							response = JSON.parse(response);
-							var len = response.objects.length;
-							var words = response.objects;
-							var i = Math.floor((Math.random() * len) + 1);
-							var word = words[i - 1];
-							
-							that.set('question', 'What is the <strong>person</strong> of <span lang="grc" data-cts="' + word.CTS + '">' + word.value + '</span>?');
-							that.set('title', 'Morph fun!');
-							that.set('options', [
-								[{ "value": "1st", "display": "1st" },
-								{ "value": "2nd", "display": "2nd" },
-								{ "value": "3rd", "display": "3rd" }]
-							]);
-							that.set('answers', [word.person]);
-							that.set('require_all', true);
-							that.set('require_order', false);
-							that.set('successMsg', '<strong>CORRECT!</strong> <span lang="grc">' + word.value + '</span> is in the ' + word.person + ' person.');
-							that.set('hintMsg', 'Not quite.');
-							that.trigger('populated');
-							that.set('populated', true);
-						},
-						error: function(x, y, z) {
-							console.log(x, y, z);
-						}
-					});
-				},
-				'identify_morph_number': function() {
-					$.ajax({
-						'dataType': 'text',
-						'url': '/api/v1/word/?format=json&' + that.get('query'),
-						'success': function(response) {
-							response = JSON.parse(response);
-							var len = response.meta.total_count;
-							var words = response.objects;
-							var i = Math.floor((Math.random() * len) + 1);
-							var word = words[i - 1];
-							
-							that.set('question', 'What is the <strong>number</strong> of <span lang="grc" data-cts="' + word.CTS + '">' + word.value + '</span>?');
-							that.set('title', 'Morph fun!');
-							that.set('options', [
-								[{ "value": "sg", "display": "Singular" },
-								{ "value" : "pl", "display": "Plural" }]
-							]);
-							that.set('answers', [word.number]);
-							that.set('require_all', true);
-							that.set('require_order', false);
-							that.set('successMsg', '<strong>CORRECT!</strong> <span lang="grc">' + word.value + '</span> is ' + word.number + '.');
-							that.set('hintMsg', 'Not quite.');
-							that.trigger('populated');
-							that.set('populated', true);
-						},
-						error: function(x, y, z) {
-							console.log(x, y, z);
-						}
-					});
-				}
-			};
+						// Treat question like template string to splice in value
+						var data = {};
+						data[that.get('endpoint')] = chosen.value;
+						var compiled = _.template(that.get('question'));
+						that.set('question', compiled(data));
 
-			taskMapper[attributes.task]();
+						that.set('populated', true);
+						that.trigger('populated');
+					},
+					error: function(x, y, z) {
+						console.log(x, y, z);
+					}
+				});
+			}
 		},
 		checkAnswer: function(attempt) {
 
@@ -140,7 +110,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				attempt = [attempt]
 
 			// Check if all submitted attempts are somewhere in answers
-			if (this.get('require_all') === "false") {
+			if (this.get('require_all').toString() === "false") {
 				for (var i = 0; i < attempt.length; i++)
 					if (this.get('answers').indexOf(attempt[i]) == -1)
 						correct = false;
@@ -148,7 +118,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				correct = correct ? true: false;
 			}
 			// Require order implies that require_all is also true
-			else if (this.get('require_order') === "true") {
+			else if (this.get('require_order').toString() === "true") {
 				if (this.get('answers').length !== attempt.length)
 					correct = false;
 				else {
@@ -161,11 +131,14 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				}
 			}
 			// All Required, but order is not required
-			else if (this.get('require_all') === "true" && this.get('require_order') === "false")
+			else if (this.get('require_all').toString() === "true" && this.get('require_order').toString() === "false")
 				correct = $(attempt).not(this.get('answers')).length == 0 && $(this.get('answers')).not(attempt).length == 0;
 			else
 				correct = false;
 
+			this.set('accuracy', (correct ? 100 : 0));
+			this.set('endtime', (new Date()));
+			this.set('starttime', (new Date(this.get('startTime'))));
 			this.sendSubmission(attempt, correct);
 
 			return correct;
@@ -174,12 +147,12 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			var data = {
 				response: JSON.stringify(attempt),
 				task: this.get('task') || 'static_exercise',
-				accuracy: (correct ? 100 : 0),
-				encounteredWords: '',
+				accuracy: this.get('accuracy'),
+				encounteredWords: this.get('encounteredWords'),
 				slideType: this.get('type'),
 				smyth: this.get('smyth') || '',
-				timestamp: (new Date()).toISOString(),
-				starttime: (new Date(data.start_time)).toISOString()
+				timestamp: this.get('endtime').toISOString(),
+				starttime: this.get('starttime').toISOString()
 			};
 
 			$.ajax({
