@@ -910,7 +910,7 @@ class SentenceResource(Resource):
 					new_obj.__dict__['_data']['translations'][lang] = API_PATH + 'sentence/' + url[len(url)-1] +'/'		
 		
 		# get the words	and related information	
-		words = gdb.query("""MATCH (d)-[:words]->(w) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+		words = gdb.query("""MATCH (d:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
 		wordArray = []
 		for w in words:
 			word = w[0]
