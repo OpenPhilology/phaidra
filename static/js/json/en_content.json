@@ -9,11 +9,11 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
+						"includeHTML": "/static/content/en/slides/test.trad/intro.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
+						"includeHTML": "/static/content/en/slides/test.trad/s1.html"
 					}
 				]
 			},
@@ -34,10 +34,12 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a1.html"
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
 					},
 					{
@@ -46,10 +48,12 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a3.html"
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a4.html"
 					},
 					{
@@ -62,6 +66,7 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a5.html"
 					},
 					{
@@ -78,10 +83,12 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a7.html"
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a8.html"
 					},
 					{
@@ -90,7 +97,44 @@
 					},
 					{
 						"type": "slide_info",
+						"delayRender": true,
 						"includeHTML": "/static/content/en/slides/test.ag/a9.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t9.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a10.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t10.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t11.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a11.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a12.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t12.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a13.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t13.html"
 					}
 				]
 			}

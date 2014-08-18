@@ -23,7 +23,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 		},
 		selectAnswer: function(e) {
 			e.preventDefault();
-			this.model.set('startTime', this.$el.data('startTime'));
+			this.model.set('starttime', new Date(this.$el.data('starttime')));
 
 			if (this.finished)
 				return false;

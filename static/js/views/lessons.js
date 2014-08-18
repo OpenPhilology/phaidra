@@ -15,7 +15,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				// Pull the lesson outline from our content
 				for (var i = 0; i < Utils.Content.length; i++) {
 					var unit = Utils.Content[i];
-					console.log(unit);
 
 					var div = $('<div>', {
 						class: 'col-md-3 col-sm-4',
