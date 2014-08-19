@@ -5,9 +5,9 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 			initialize: function(options) {
 				var s = options.statistics;
 
-				this.drawDonut('#vocab', (s.vocab * 10), '#1FADAD', 'Vocabulary'); 		
-				this.drawDonut('#morph', (s.morphology * 10), '#F4BC78', 'Morphology'); 		
-				this.drawDonut('#syn', (s.syntax * 10), '#D15241', 'Syntax'); 		
+				this.drawDonut('#vocab', (s.vocab * 100), '#D15241', 'Vocabulary'); 		
+				this.drawDonut('#morph', (s.morphology * 100), '#1FADAD', 'Morphology'); 		
+				this.drawDonut('#syn', (s.syntax * 100), '#523D5B', 'Syntax'); 		
 
 				//this.drawSparkline('#records .sparkline', [1, 10, 5, 7, 2, 8, 5, 9, 2, 1], '#333');
 			},
