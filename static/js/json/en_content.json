@@ -18,6 +18,14 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.trad/s2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s3.html"
 					}
 				]
 			},

@@ -157,8 +157,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 
 			// Skill array -- ignore our added in # signs
 			var skills = answered.map(function(m) {
-				var end = m.get('smyth').indexOf('#') || m.get('smyth').length;
-				return m.get('smyth').substring(0, end);
+				var s = m.get('smyth');
+				if (s) {
+					var end = m.get('smyth').indexOf('#') || m.get('smyth').length;
+					return m.get('smyth').substring(0, end);
+				};
 			});
 			stats.skillCount = skills.length;
 
