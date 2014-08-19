@@ -750,11 +750,7 @@ class WordResource(Resource):
 			
 			for d in documentTable:
 				document = d[0]
-				wordTable = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)
-										WHERE d.CTS = '"""+ document['data']['CTS'] +"""'
-										MATCH (s:`Sentence`)-[:words]->(w:`Word`) 
-										RETURN w,s ORDER BY ID(w)""")
-				#wordTable = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS = '""" + document['data']['CTS'] + """' RETURN w,s ORDER BY ID(w)""")
+				wordTable = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS = '""" + document['data']['CTS'] + """' RETURN w,s ORDER BY ID(w)""")
 							
 				# get sent id
 				for w in wordTable:
@@ -911,13 +907,7 @@ class SentenceResource(Resource):
 		new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
 		
 		# get a dictionary of related translation of this sentence # ordering here is a problem child
-		relatedSentences = gdb.query("""MATCH (s:`Sentence`)-[:words]->(w:`Word`) 
-										WHERE HAS (s.CTS) AND s.CTS='"""+ sentence.properties['CTS'] +"""'
-										MATCH (t:`Word`)<-[:words]-(s1:`Sentence`)
-										MATCH (w:`Word`)-[:translation]->(t:`Word`) 
-										RETURN DISTINCT s1 ORDER BY ID(s1)""")
-		
-		#relatedSentences = gdb.query("""MATCH (s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='"""+ sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
+		relatedSentences = gdb.query("""MATCH (s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='"""+ sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
 
 		
 		new_obj.__dict__['_data']['translations']={}
@@ -1200,18 +1190,10 @@ class DocumentResource(Resource):
 			sentenceArray.append(sent['data'])
 				
 			new_obj.__dict__['_data']['sentences'] = sentenceArray
-
-		#relatedDocuments = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='"""+ document.properties['CTS'] +"""' RETURN DISTINCT d1 ORDER BY ID(d1)""")
-
+			
+		
 		# get a dictionary of related translations of this document
-		relatedDocuments = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) 
-										WHERE HAS (d.CTS) AND d.CTS='"""+ document.properties['CTS'] +"""'
-										MATCH (s:`Sentence`)-[:words]->(w:`Word`)
-										MATCH (w:`Word`)-[:translation]->(t:`Word`) 
-										MATCH (t:`Word`)<-[:words]-(s1:`Sentence`)
-										MATCH (s1:`Sentence`)<-[:sentences]-(d1:`Document`) 
-										RETURN DISTINCT d1 ORDER BY ID(d1)""")
-										
+		relatedDocuments = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`)<-[:sentences]-(d1:`Document`) WHERE HAS (d.CTS) AND d.CTS='"""+ document.properties['CTS'] +"""' RETURN DISTINCT d1 ORDER BY ID(d1)""")
 		
 		new_obj.__dict__['_data']['translations']={}
 		for rd in relatedDocuments:
