@@ -25,6 +25,26 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s7.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s8.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.trad/tr1.html"
 					},
 					{
