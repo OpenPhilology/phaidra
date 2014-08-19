@@ -3,7 +3,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 		tagName: 'div',
 		className: 'slide-unit',
 		template: _.template(Template),
-		events: { },
+		events: { 
+			'click input': 'setFormData'
+		},
 		initialize: function(options) {
 			this.options = options;
 
@@ -94,6 +96,19 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			setTimeout(function() {
 				$('.corner a').click();
 			}, 2000);
+		},
+		setFormData: function(e) {
+			this.model.set('starttime', new Date(this.$el.data('starttime')));
+			var map = this.model.get('response') || {};
+			this.$el.find('form input:checked').each(function(i, el) {
+				map[el.getAttribute('name')] = el.getAttribute('value');
+			});
+			this.model.set('response', map);
+			this.model.set('task', 'traditional_method_s' + _.last(window.location.pathname.split('/')));
+
+			var attempt = {}, el = e.target;
+			attempt[el.getAttribute('name')] = el.getAttribute('value');
+			this.model.checkAnswer(attempt);
 		}
 	});
 

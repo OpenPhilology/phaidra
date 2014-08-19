@@ -148,11 +148,11 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			}
 			else if (this.get('type') === 'slide_info') {
 				// Means we are manually checking in either morea.js or daphne.js
-				attempt = this.get('response');
+				if (!attempt)
+					attempt = this.get('response');
 			}
 
 			this.set('endtime', (new Date()));
-			this.set('starttime', (new Date(this.get('starttime'))));
 			this.sendSubmission(attempt);
 
 			return correct;
