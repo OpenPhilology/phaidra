@@ -23,6 +23,7 @@ from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
 from tastypie.resources import Resource, ModelResource
+from tastypie.cache import SimpleCache
 from tastypie.serializers import Serializer
 
 from datetime import datetime
@@ -255,8 +256,13 @@ class DataObject(object):
     		
     		self.__dict__['_data']['id'] = id
          	
+    #def __getattr__(self, name):
+    #    return self._data.get(name, None)
+       
     def __getattr__(self, name):
-        return self._data.get(name, None)
+		if name.startswith('__'):
+			raise AttributeError
+		return self._data.get(name, None)
 
     def __setattr__(self, name, value):
         self.__dict__['_data'][name] = value
@@ -431,6 +437,7 @@ class LemmaResource(Resource):
 		resource_name = 'lemma'
 		object_class = DataObject
 		authorization = ReadOnlyAuthorization()
+		cache = SimpleCache(timeout=None)
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -580,6 +587,7 @@ class WordResource(Resource):
 		resource_name = 'word'
 		object_class = DataObject
 		authorization = ReadOnlyAuthorization()
+		cache = SimpleCache(timeout=None)
 	
 	def prepend_urls(self, *args, **kwargs):	
 		
@@ -808,6 +816,7 @@ class SentenceResource(Resource):
 		resource_name = 'sentence'
 		object_class = DataObject
 		authorization = ReadOnlyAuthorization()	
+		cache = SimpleCache(timeout=None)
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -1068,6 +1077,7 @@ class DocumentResource(Resource):
 		resource_name = 'document'
 		object_class = DataObject
 		authorization = ReadOnlyAuthorization()
+		cache = SimpleCache(timeout=None)
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
