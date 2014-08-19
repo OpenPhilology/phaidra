@@ -459,6 +459,56 @@ label {
   .skill-summary p {
     line-height: 2em; }
 
+.report {
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+  .report a {
+    display: block;
+    background-color: #acb6cc;
+    padding: 5px;
+    color: #EEE;
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin: 5px;
+    position: relative;
+    -webkit-transition: background-color 2s cubic;
+    -moz-transition: background-color 2s cubic;
+    -o-transition: background-color 2s cubic;
+    -ms-transition: background-color 2s cubic;
+    transition: background-color 2s cubic; }
+    .report a:hover {
+      background-color: #4e6087;
+      -webkit-transition: background-color 2s cubic;
+      -moz-transition: background-color 2s cubic;
+      -o-transition: background-color 2s cubic;
+      -ms-transition: background-color 2s cubic;
+      transition: background-color 2s cubic; }
+    .report a:hover:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 10px solid rgba(0, 0, 0, 0);
+      border-bottom: 10px solid rgba(0, 0, 0, 0);
+      border-right: 10px solid #ebeef3;
+      position: absolute;
+      right: -14px;
+      top: 2px; }
+    .report a:hover:after {
+      width: 100px;
+      background-color: #ebeef3;
+      position: absolute;
+      padding: 2px 8px;
+      top: -1px;
+      color: #4e6087;
+      border-radius: 5px;
+      left: 32px;
+      content: attr(data-title);
+      height: 25px;
+      line-height: 22px; }
+
 /**
  * Styles used on the lessons.
  */

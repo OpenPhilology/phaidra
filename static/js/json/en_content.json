@@ -42,6 +42,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.trad/tr5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/survey.html"
 					}
 				]
 			},
