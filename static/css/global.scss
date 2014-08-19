@@ -528,19 +528,22 @@ label {
 
 	a {
 		display: block;
-		background-color: $c;
-		padding: 5px;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
+		@include gradient($color-sec-two, 0, lighten($color-sec-two, 5%), 100);
+		padding: 6px;
 		color: #EEE;
-		height: 23px;
-		width: 23px;
+		height: 28px;
+		width: 28px;
 		border-radius: 50%;
+		border: 2px solid #FFF;
 		font-size: 12px;
 		margin: 5px;
 		position: relative;
 		@include transition(background-color, 2s, cubic);
 
 		&:hover {
-			background-color: $color-sec-two;
+			box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .3);
+			@include gradient(darken($color-sec-two, 5%), 0, $color-sec-two, 100);
 			@include transition(background-color, 2s, cubic);
 		}
 
