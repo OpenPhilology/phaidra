@@ -1245,6 +1245,8 @@ class VisualizationResource(Resource):
 						
 		vocab = {}
 		smyth = {}		
+		lemmas = {}
+		lemmaFreq = 0
 		# flatten the smyth and collect the vocab knowledge
 		for sub in submissions.elements:			
 			
@@ -1255,6 +1257,14 @@ class VisualizationResource(Resource):
 						vocab[word] = vocab[word]+1
 					except KeyError as k:
 						vocab[word] = 1
+						# if vocab appears first time, get the lemmas frequency (two vocs can have same lemma, so save lemma as key)
+						try:
+							lemma = gdb.query("""MATCH (l:`Lemma`)-[:values]->(n:`Word`) WHERE n.CTS = '""" + word + """' RETURN l.value, l.frequency""")
+							if lemma.elements[0][0] is not None and lemma.elements[0][0] != "":
+								lemmas[lemma.elements[0][0]] = lemma.elements[0][1]
+						# in case of weird submission test data for encounteredWords
+						except IndexError as i:
+							continue
 					if sub[0]['data']['smyth'] not in smyth:
 						# get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
 						params = {}
@@ -1267,8 +1277,12 @@ class VisualizationResource(Resource):
 							continue
 			except KeyError as k:
 				continue
+		
+		# get the lemma/vocab overall count
+		for freq in lemmas:
+			lemmaFreq = lemmaFreq + int(lemmas[freq])
 
-		return [vocab, smyth]
+		return [vocab, smyth, lemmaFreq]
 	
 	
 	def check_fuzzy_filters(self, filter, request_attribute, word_attribute ):
@@ -1528,17 +1542,7 @@ class VisualizationResource(Resource):
 		callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
 		vocKnowledge = callFunction[0]
 		smythFlat = callFunction[1]
-		lemmaKnowledge = set()
-		
-		for CTS in vocKnowledge:
-			# get the lemmas of known words
-			lemma = gdb.query("""MATCH (n:`Word`) WHERE HAS (n.CTS) AND n.CTS = '""" +CTS+ """' RETURN n.lemma""")
-			try:
-				if lemma.elements[0][0] is not None and lemma.elements[0][0] != "":
-					lemmaKnowledge.add(lemma.elements[0][0])
-			except IndexError as i:
-				continue		
-			
+		lemmaFreqs = callFunction[2]
 			
 		# get the sentences of that document
 		sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
@@ -1558,7 +1562,7 @@ class VisualizationResource(Resource):
 			
 				word = w.end
 				all[word.properties['CTS']] = True
-				# scan the submission for vocab information
+				# compare all smyth keys the user knows to the actual word's morphology
 				for smyth in smythFlat:
 					# if word morph already known (earlier smyth hit), don't apply filter again
 					try:
@@ -1586,15 +1590,12 @@ class VisualizationResource(Resource):
 						
 						if not badmatch:
 							morphKnown[word.properties['CTS']] = True # all params are fine											
-				
-				# was this word seen? Check if lemma of actual word is lemma of any known one		
-				if word.properties['lemma'] in lemmaKnowledge:	
-					vocabKnown[word.properties['CTS']] = True
+
 			# after reading words update overall no
 			wordCount = wordCount + len(words)
 		
 		# after reading everything return the statistics
-		data['statistics'] = {'all': wordCount, 'vocab': float(len(vocabKnown))/float(len(all)), 'morphology': float(len(morphKnown))/float(len(all)), 'syntax': float(len(syntaxKnown))/float(len(all))}
+		data['statistics'] = {'all': wordCount, 'vocab': float(lemmaFreqs)/float(len(all)), 'morphology': float(len(morphKnown))/float(len(all)), 'syntax': float(len(syntaxKnown))/float(len(all))}
 	
 		return self.create_response(request, data)
 	
