@@ -22,9 +22,7 @@
 	<link rel="shortcut icon" href="/static/images/logo.ico">
 
 	<!-- JS -->
-	<script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
 	<script src="/static/js/lib/jquery-2.0.3.js"></script>
-	<script>var csrf_token = "{{ csrf_token }}"; var locale = "{{ LANGUAGE_CODE }}"; var dir = "{{ dir }}"; </script>
 
 	<style>
 		[lang="grc"] {
@@ -63,17 +61,12 @@
 		</div>
 	</header>
 	<div class="row" id="splash">
+		<div class="col-md-12">
+			<div class="thuc" style="float: left; display: inline-block; margin-right: 20px; position: initial">
+				<img src="/static/images/new_thuc.png">
+				<img class="wiggle" src="/static/images/glasses.svg" style="position: absolute; left: 116px; top: 83px; width: 112px; height: 112px;"> 
+			</div>
 
-		<div class="thuc">
-			<img src="/static/images/new_thuc.png">
-			<img class="wiggle" src="/static/images/glasses.svg" style="position: absolute; left: 104px; top: 83px; width: 112px; height: 112px"> 
-		</div>
-
-		{% if LANGUAGE_BIDI %}
-			<div class="col-md-8">
-		{% else %}
-			<div class="col-md-8 col-md-push-4">
-		{% endif %}
 			<div id="greeting-text">
 				<h1>{% trans "Get your Greek on." %}</h1>
 
