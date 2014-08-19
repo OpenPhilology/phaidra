@@ -364,8 +364,6 @@
 	},
 	{
 		"title": "Diacritics & Dipthongs",
-		"category": "verbs",
-		"thumbnail": "/static/images/icon_grk_parthenon.png",
 		"modules": [
 			{	"title": "Diacritics and Dipthongs",
 				"slides": [
@@ -491,6 +489,7 @@
 	},
 	{
 		"title": "Introduction to Cases",
+		"category": "nouns",
 		"modules": [
 			{
 				"title": "Nominative Case",
@@ -596,9 +595,10 @@
 	},
 	{
 		"title": "First or α- Declension",
+		"category": "nouns",
 		"modules": [
 			{
-				"title": "The First or α- Declension",
+				"title": "Feminine Nouns Ending in -α",
 				"slides": [
 					{
 						"type": "slide_info",
@@ -611,21 +611,30 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec0.html",
-						"smyth": "s216",
-						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
+						"smyth": "s216"
 					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec.html",
 						"smyth": "s217#a",
 						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
-					},
+					}
+				]
+			},
+			{
+				"title": "Feminine Nouns Ending in -η",
+				"slides": [
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec1.html",
 						"smyth": "s217#c",
 						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
-					},
+					}
+				]
+			},
+			{
+				"title": "Masculine Nouns Ending in -ης",
+				"slides": [
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec2.html",
@@ -646,9 +655,10 @@
 	},
 	{	
 		"title": "Second Declension",
+		"category": "nouns",
 		"modules": [
 			{
-				"title": "The Second Declension",
+				"title": "Masculine Nouns Ending in -ος",
 				"slides": [
 					{
 						"type": "slide_info",
@@ -663,7 +673,12 @@
 						"includeHTML": "/static/content/en/slides/6.seconddec/seconddec.html",
 						"smyth": "s228#a",
 						"tasks": ["identify_morph_case", "identify_morph_number", "identify_morph_gender"]
-					},
+					}
+				]
+			},
+			{
+				"title": "Neuter Nouns Ending in -ον",
+				"slides": [
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/6.seconddec/seconddec1.html",
@@ -680,6 +695,8 @@
 	},
 	{	
 		"title": "Introduction to Verbs",
+		"thumbnail": "/static/images/icon_grk_parthenon.png",
+		"category": "verbs",
 		"modules": [
 			{
 				"title": "Verbs in Ancient Greek",
@@ -722,10 +739,10 @@
 	},
 	{	
 		"title": "Present Indicative Active",
+		"category": "verbs",
 		"modules": [
 			{
 				"title": "Present Indicative Active",
-				"vocab": [""],
 				"slides": [
 					{
 						"type": "slide_info",
@@ -761,6 +778,7 @@
 	},
 	{	
 		"title": "Future Indicative Active",
+		"category": "verbs",
 		"modules": [
 			{
 				"title": "Form the Future, Indicative, Active for Regular Verbs",
@@ -841,10 +859,10 @@
 	},
 	{	
 		"title": "Imperfect Indicative Active",
+		"category": "verbs",
 		"modules": [
 			{
 				"title": "Imperfect Indicative Active",
-				"vocab": [""],
 				"slides": [
 					{
 						"type": "slide_info",
@@ -876,6 +894,7 @@
 	},
 	{	
 		"title": "Third Declension: Consonant Stem",
+		"category": "nouns",
 		"modules": [
 			{
 				"title": "Third Declension: Consonant Stem",
@@ -910,6 +929,7 @@
 	},
 	{	
 		"title": "Aorist Indicative Active",
+		"category": "verbs",
 		"modules": [
 			{
 				"title": "Aorist Indicative Active",
