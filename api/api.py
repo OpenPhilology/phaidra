@@ -1518,13 +1518,14 @@ class VisualizationResource(Resource):
 		callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
 		vocKnowledge = callFunction[0]
 		smythFlat = callFunction[1]
-		lemmaKnowledge = []
+		lemmaKnowledge = set()
 		
 		for CTS in vocKnowledge:
 			# get the lemmas of known words
 			lemma = gdb.query("""MATCH (n:`Word`) WHERE HAS (n.CTS) AND n.CTS = '""" +CTS+ """' RETURN n.lemma""")
 			try:
-				lemmaKnowledge.append(lemma.elements[0][0])
+				if lemma.elements[0][0] is not None and lemma.elements[0][0] != "":
+					lemmaKnowledge.add(lemma.elements[0][0])
 			except IndexError as i:
 				continue		
 			
@@ -1540,8 +1541,7 @@ class VisualizationResource(Resource):
 		wordCount = 0
 		for s in sentenceTable.elements:
 			
-			node = gdb.nodes.get(s[0]['self'])
-			
+			node = gdb.nodes.get(s[0]['self'])			
 			words = node.relationships.outgoing(types=["words"])
 				
 			for w in words:
@@ -1550,7 +1550,7 @@ class VisualizationResource(Resource):
 				all[word.properties['CTS']] = True
 				# scan the submission for vocab information
 				for smyth in smythFlat:
-					# if word morph already known (earlier smythhhit), don't apply filter again
+					# if word morph already known (earlier smyth hit), don't apply filter again
 					try:
 						morphKnown[word.properties['CTS']]
 					except KeyError as k:
@@ -1578,7 +1578,7 @@ class VisualizationResource(Resource):
 							morphKnown[word.properties['CTS']] = True # all params are fine											
 				
 				# was this word seen? Check if lemma of actual word is lemma of any known one		
-				if word.properties['CTS'] in vocKnowledge or word.properties['lemma'] in lemmaKnowledge:	
+				if word.properties['lemma'] in lemmaKnowledge:	
 					vocabKnown[word.properties['CTS']] = True
 			# after reading words update overall no
 			wordCount = wordCount + len(words)
