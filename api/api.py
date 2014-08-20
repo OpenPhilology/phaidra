@@ -255,9 +255,6 @@ class DataObject(object):
     	if not hasattr(id, 'id') and id is not None:
     		
     		self.__dict__['_data']['id'] = id
-         	
-    #def __getattr__(self, name):
-    #    return self._data.get(name, None)
        
     def __getattr__(self, name):
 		if name.startswith('__'):
@@ -287,11 +284,12 @@ class SubmissionResource(Resource):
 	timestamp = fields.DateField(attribute='timestamp', null = True, blank = True)
 	
 	class Meta:
-		allowed_methods = ['post', 'get', 'patch']
-		authentication = SessionAuthentication() 
-		authorization = UserObjectsOnlyAuthorization()
 		object_class = DataObject
 		resource_name = 'submission'
+		allowed_methods = ['post', 'get', 'patch']
+		authentication = SessionAuthentication() 
+		authorization = UserObjectsOnlyAuthorization()	
+		cache = SimpleCache(timeout=None)
 
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -428,14 +426,12 @@ class LemmaResource(Resource):
 	CITE = fields.CharField(attribute='CITE')
 	value = fields.CharField(attribute='value')
 	posAdd = fields.CharField(attribute='posAdd', null = True, blank = True)
-	frequency = fields.IntegerField(attribute='frequency', null = True, blank = True)
-	
+	frequency = fields.IntegerField(attribute='frequency', null = True, blank = True)	
 	values = fields.ListField(attribute='values', null = True, blank = True)
 	
 	class Meta:
-	
-		resource_name = 'lemma'
-		object_class = DataObject
+		object_class = DataObject	
+		resource_name = 'lemma'		
 		authorization = ReadOnlyAuthorization()
 		cache = SimpleCache(timeout=None)
 	
@@ -583,9 +579,8 @@ class WordResource(Resource):
 	translations = fields.ListField(attribute='translations', null = True, blank = True)
 	
 	class Meta:
-	
-		resource_name = 'word'
 		object_class = DataObject
+		resource_name = 'word'
 		authorization = ReadOnlyAuthorization()
 		cache = SimpleCache(timeout=None)
 	
@@ -812,9 +807,8 @@ class SentenceResource(Resource):
 	translations = fields.DictField(attribute='translations', null = True, blank = True)
 	
 	class Meta:
-		
-		resource_name = 'sentence'
 		object_class = DataObject
+		resource_name = 'sentence'	
 		authorization = ReadOnlyAuthorization()	
 		cache = SimpleCache(timeout=None)
 	
@@ -1073,9 +1067,8 @@ class DocumentResource(Resource):
 	translations = fields.DictField(attribute='translations', null = True, blank = True)
 	
 	class Meta:
-		
-		resource_name = 'document'
 		object_class = DataObject
+		resource_name = 'document'	
 		authorization = ReadOnlyAuthorization()
 		cache = SimpleCache(timeout=None)
 	
@@ -1152,15 +1145,6 @@ class DocumentResource(Resource):
 				sentenceArray.append(sent['data'])
 				
 			new_obj.__dict__['_data']['sentences'] = sentenceArray
-
-			#sentenceArray = []
-			#for s in range(0, len(sentences), 1):
-				#sent = sentences[s].end
-				#properties = {} #sent.properties #sent.properties['resource_uri']
-				#properties['resource_uri'] = API_PATH + 'sentence/' + str(sent.id) + '/'
-				#sentenceArray.append(properties)
-				
-			#new_obj.__dict__['_data']['sentences'] = sentenceArray
 			
 			documents.append(new_obj)		
 				
@@ -1215,8 +1199,6 @@ class VisualizationResource(Resource):
 	class Meta:
 		#queryset = Word.objects.all()
 		resource_name = 'visualization'
-		#always_return_data = True
-		#excludes = ['require_order', 'require_all']
 		authorization = ReadOnlyAuthorization()
 
 	def prepend_urls(self, *args, **kwargs):	
