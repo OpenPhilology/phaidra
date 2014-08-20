@@ -433,7 +433,7 @@ class LemmaResource(Resource):
 		object_class = DataObject	
 		resource_name = 'lemma'		
 		authorization = ReadOnlyAuthorization()
-		#cache = SimpleCache(timeout=None)
+		cache = SimpleCache(timeout=None)
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -582,7 +582,7 @@ class WordResource(Resource):
 		object_class = DataObject
 		resource_name = 'word'
 		authorization = ReadOnlyAuthorization()
-		#cache = SimpleCache(timeout=None)
+		cache = SimpleCache(timeout=None)
 	
 	def prepend_urls(self, *args, **kwargs):	
 		
@@ -810,7 +810,7 @@ class SentenceResource(Resource):
 		object_class = DataObject
 		resource_name = 'sentence'	
 		authorization = ReadOnlyAuthorization()	
-		#cache = SimpleCache(timeout=None)
+		cache = SimpleCache(timeout=None)
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -1070,7 +1070,7 @@ class DocumentResource(Resource):
 		object_class = DataObject
 		resource_name = 'document'	
 		authorization = ReadOnlyAuthorization()
-		#cache = SimpleCache(timeout=None)
+		cache = SimpleCache(timeout=None)
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
