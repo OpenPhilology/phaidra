@@ -45,6 +45,22 @@
 					},
 					{
 						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s9.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s10.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s11.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s12.html"
+					},
+					{
+						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.trad/tr1.html"
 					},
 					{
