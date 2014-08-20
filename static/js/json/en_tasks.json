@@ -12,6 +12,8 @@
 		],
 		"answerField": "person",
 		"encounteredWords": "[word.CTS]",
+		"successMsg": "<strong>Correct!</strong>",
+		"hintMsg": "<strong>Not Quite</strong>",
 		"require_all": true,
 		"require_order": false
 	},
@@ -26,6 +28,8 @@
 			{ "value" : "pl", "display": "Plural" }
 		],
 		"answerField": "number",
+		"successMsg": "<strong>Correct!</strong>",
+		"hintMsg": "<strong>Not Quite</strong>",
 		"require_all": true,
 		"require_order": false
 	},
@@ -45,6 +49,8 @@
 		],
 		"require_all": true,
 		"require_order": false,
+		"successMsg": "<strong>Correct!</strong>",
+		"hintMsg": "<strong>Not Quite</strong>",
 		"answerField": "tense"
 	},
 	{
@@ -60,6 +66,8 @@
 		],
 		"require_all": true,
 		"require_order": false,
+		"successMsg": "<strong>Correct!</strong>",
+		"hintMsg": "<strong>Not Quite</strong>",
 		"answerField": "voice"
 	},
 	{
@@ -77,6 +85,8 @@
 		],
 		"require_all": true,
 		"require_order": false,
+		"successMsg": "<strong>Correct!</strong>",
+		"hintMsg": "<strong>Not Quite</strong>",
 		"answerField": "mood"
 	},
 	{
@@ -92,6 +102,8 @@
 		],
 		"require_all": true,
 		"require_order": false,
+		"successMsg": "<strong>Correct!</strong>",
+		"hintMsg": "<strong>Not Quite</strong>",
 		"answerField": "gender"
 	},
 	{
@@ -109,6 +121,8 @@
 		],
 		"require_all": true,
 		"require_order": false,
+		"successMsg": "<strong>Correct!</strong>",
+		"hintMsg": "<strong>Not Quite</strong>",
 		"answerField": "case"
 	}
 ]
