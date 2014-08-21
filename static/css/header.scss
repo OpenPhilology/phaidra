@@ -28,6 +28,15 @@ $banner-height: 43px;
 		}
 	}
 
+	a {
+		color: #FFF;
+		text-decoration: none;
+
+		&:hover {
+			color: #EEE;
+		}
+	}
+
 	.user-data {
 		a {
 			display: inline-block;

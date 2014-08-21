@@ -120,9 +120,14 @@ class CreateUserResource(ModelResource):
 				'error': e,
 				'error_message': 'Username already in use.'
 			})	
-		return self.create_response(request, {
-				'success': True
-		})
+			
+		body = json.loads(request.body) if type(request.body) is str else request.body
+		body['success']	= True
+		return self.create_response(request, body)
+		
+		#return self.create_response(request, {
+		#		'success': True
+		#})
 						
 class UserResource(ModelResource):
 	class Meta:
@@ -926,22 +931,22 @@ class SentenceResource(Resource):
 			if len(lemmaRels) > 0:
 				word['data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
 			
-			# get the full translation
-			if bundle.request.GET.get('full'):			
-				translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
-				translationArray = []
-				for t in translations:
-					trans = t[0]
-					transurl = trans['self'].split('/')
-					trans['data']['resource_uri'] = API_PATH + 'word/' + transurl[len(transurl)-1] + '/'
-					translationArray.append(trans['data'])
-				word['data']['translations'] = translationArray
+			# get the full translation # forse API into full representation if cache is enabled
+			#if bundle.request.GET.get('full'):			
+			translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+			translationArray = []
+			for t in translations:
+				trans = t[0]
+				transurl = trans['self'].split('/')
+				trans['data']['resource_uri'] = API_PATH + 'word/' + transurl[len(transurl)-1] + '/'
+				translationArray.append(trans['data'])
+			word['data']['translations'] = translationArray
 				
 			wordArray.append(word['data'])
 			
 		# if short=True return only words of the short sentence
 		if bundle.request.GET.get('short'):
-			wordArray =  self.shorten(wordArray, query_params)
+			wordArray = self.shorten(wordArray, query_params)
 			if wordArray is None:
 				#return None
 				raise BadRequest("Sentence doesn't hit your query.")

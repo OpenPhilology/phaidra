@@ -88,7 +88,9 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 						var keepers = objs.filter(function(o) {
 							return groups[o.lemma].length > 1;
 						});
-						var chosen = _.shuffle(keepers).splice(0, 1)[0];
+
+						var toUse = keepers.length === 0 ? objs : keepers;
+						var chosen = _.shuffle(toUse).splice(0, 1)[0];
 						
 						var answer = chosen[that.get('answerField')];
 						that.set('answers', [answer]);

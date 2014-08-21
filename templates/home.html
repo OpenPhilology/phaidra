@@ -19,7 +19,7 @@
 
 	{% if not user.is_authenticated %}
 		<script>
-			window.location.replace('/login');
+			window.location.replace('/login?url=' + window.location.pathname);
 		</script>
 	{% else %}
 			<!-- TODO: Move all these terrible inline styles out... -->

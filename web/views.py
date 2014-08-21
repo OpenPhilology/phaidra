@@ -4,6 +4,7 @@ import hashlib
 
 from django.http import HttpResponse
 from django.template import RequestContext, loader
+from web.utils import get_client_ip
 
 def index(request):
 	template = loader.get_template('index.html')
@@ -83,6 +84,17 @@ def profile(request):
 def aboutus(request):
 	template = loader.get_template('aboutus.html')
 	context = RequestContext(request, {
+		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
+	})
+
+	return HttpResponse(template.render(context))
+
+def gateway(request):
+	template = loader.get_template('gateway.html')
+	ip = get_client_ip(request)
+
+	context = RequestContext(request, {
+		'ip_addr': ip,
 		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
 	})
 

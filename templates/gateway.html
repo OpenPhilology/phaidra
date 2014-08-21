@@ -1,0 +1,101 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Ancient Geek - by the Open Philology Project
+	</title>
+
+	<!-- CSS -->
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/css/global.ltr.css" rel="stylesheet">
+	<link rel="shortcut icon" href="/static/images/logo.ico">
+
+	<!-- JS -->
+	<script src="/static/js/lib/jquery-2.1.1.js"></script>
+
+	<script>
+		$(function() {
+			var data = {
+				'username': "{{ ip_addr }}",
+				'password': "{{ ip_addr }}",
+				'email': 'blah@blah.com'
+			};
+
+			$.ajax({
+				url: '/api/v1/create_user/',
+				data: JSON.stringify(data),
+				processData: false,
+				headers: { 'X-CSRFToken': window.csrf_token },
+				dataType: 'json',
+				contentType: 'application/json',
+				type: 'POST',
+				success: function(response) {
+					$('input[name="username"]').val('{{ ip_addr }}');
+					$('input[name="password"]').val('{{ ip_addr }}');
+				},
+				error: function(response) {
+					alert("An error occured communicating with the API. Please try again later.");
+				}
+			});
+
+			$('form').on('submit', function(e) {
+				e.preventDefault();
+				var data = {	
+					'username': $('#username').val(),
+					'password': $('#password').val()
+				};
+
+				$.ajax({
+					url: '/api/v1/user/login/',
+					type: 'POST',
+					contentType: 'application/json; charset=utf-8', 
+					dataType: 'json',
+					data: JSON.stringify(data),
+					success: function(response_text) {
+						var loc = Math.round(Math.random());
+						var dest = '/module/0/section/' + loc + '/slide/0';
+						window.location.assign(dest);	
+					},
+					error: function(response_text) {
+						alert("An error occured communicating with the API. Please try again later.");
+					}
+				});
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div class="container" style="background: rgba(255, 255, 255, 0.7)">
+		<header class="row banner" style="position: static">
+			<div class="col-md-12" style="padding: 11px; font-size: 16px; letter-spacing: 1px; text-align: center">
+				<a href="/">Ancient Geek</a>
+			</div>
+		</header>
+		<div class="row">
+			<div class="panel panel-default" style="margin-top: 30px; margin-left: auto; margin-right: auto; max-width: 450px;">
+				<div class="panel-body">
+					<div class="thuc" style="position: relative; background-color: #1FADAD; margin: -15px; display: block">
+						<img src="/static/images/new_thuc.png" style="background-color: #1fadad; height: 250px;" class="img-circle">
+						<img src="/static/images/glasses.svg" style="position: absolute; right: 0; bottom: 0; height: 100px;"> 
+					</div>
+					<br>
+					<h1></h1>
+					<p>You'll be given a series of exercises that test your knowledge of Ancient Greek. When you've had enough, you can click the "Skip to Survey" button to conclude the trial. Thanks for your help!</p>
+					<hr>
+					<form role="form" id="login-form" style="text-align: center">
+						<input type="hidden" id="username" name="username">
+						<input type="hidden" id="password" name="password">
+						<button type="submit" class="btn btn-danger btn-lg">Get Started</button>
+					</div>
+					{% csrf_token %}
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
