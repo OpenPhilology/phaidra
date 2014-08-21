@@ -87,7 +87,7 @@ define(['jquery', 'underscore', 'backbone', 'd3'], function($, _, Backbone, d3) 
 				svg.append('text')
 					.attr('dy', '.35em')
 					.style('text-anchor', 'middle')
-					.text(percentComplete.toFixed(2) + '%');
+					.text(percentComplete.toFixed(0) + '%');
 
 			}
 		});
