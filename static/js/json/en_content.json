@@ -235,6 +235,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/test.ag/t13.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/survey.html"
 					}
 				]
 			}
