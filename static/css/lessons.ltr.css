@@ -1105,3 +1105,18 @@ table.inflection-table {
     color: #333; }
     table.inflection-table tr.past span[lang="grc"] {
       color: #333; }
+
+.alert.as-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0;
+  height: 43px;
+  font-size: 14px;
+  padding: 10px;
+  overflow: hiden;
+  line-height: 26px; }
+  .alert.as-header a.btn {
+    margin: -5px 5px -5px -5px; }
