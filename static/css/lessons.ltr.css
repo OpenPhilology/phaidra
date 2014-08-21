@@ -145,6 +145,11 @@ blockquote {
     .banner #logo-container img {
       height: 35px;
       margin-right: 4px; }
+  .banner a {
+    color: #FFF;
+    text-decoration: none; }
+    .banner a:hover {
+      color: #EEE; }
   .banner .user-data a {
     display: inline-block;
     vertical-align: top;

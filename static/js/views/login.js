@@ -26,7 +26,12 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 					dataType: 'json',
 					data: JSON.stringify(data),
 					success: function(response_text) {
-						window.location.assign("/home/");	
+						var dest = '/home/';
+						if (window.location.search) {
+							dest = window.location.search.split("=")[1];
+						}
+
+						window.location.assign(dest);	
 					},
 					error: function(response_text) {
 						alert("Try again");
