@@ -48,11 +48,13 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 
 				el.addEventListener('submitted', that.submitAlignment.bind(that));
 				el.addEventListener('completed', that.completeAlignment.bind(that));
+				var targets = el.getAttribute('data-targets').split(",");
+				targets.push('grc');
 
 				new Morea(el, {
 					mode: el.getAttribute('data-mode'),
 					dataUrl: el.getAttribute('data-dataUrl'),
-					targets: el.getAttribute('data-targets').split(","),
+					targets: targets,
 					langs: {
 						"grc": {
 							"hr": "Greek",
