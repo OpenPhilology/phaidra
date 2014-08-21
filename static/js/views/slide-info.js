@@ -4,7 +4,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 		className: 'slide-unit',
 		template: _.template(Template),
 		events: { 
-			'click input': 'setFormData'
+			'click input': 'setFormData',
+			'submit form': 'submitForm'
 		},
 		initialize: function(options) {
 			this.options = options;
@@ -79,9 +80,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			this.model.set(e.detail);
 			this.model.checkAnswer(this.model.get('response'));
 
-			setTimeout(function() {
-				$('.corner a').click();
-			}, 2000);
+			this.advanceSlide();
 		},
 		submitAlignment: function(e) {
 			this.model.set('starttime', new Date(this.$el.data('starttime')));
@@ -93,22 +92,44 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			this.model.set(e.detail);
 			this.model.checkAnswer(this.model.get('response'));
 
-			setTimeout(function() {
-				$('.corner a').click();
-			}, 2000);
+			this.advanceSlide();
 		},
 		setFormData: function(e) {
 			this.model.set('starttime', new Date(this.$el.data('starttime')));
-			var map = this.model.get('response') || {};
-			this.$el.find('form input:checked').each(function(i, el) {
-				map[el.getAttribute('name')] = el.getAttribute('value');
+			var map = {};
+			this.$el.find('input[name="' + e.target.name + '"]:checked').each(function(i, el) {
+				if (!map[el.getAttribute('name')]) {
+					map[el.getAttribute('name')] = [];
+				}
+				map[el.getAttribute('name')].push(el.getAttribute('value'));
 			});
 			this.model.set('response', map);
-			this.model.set('task', 'traditional_method_s' + _.last(window.location.pathname.split('/')));
+			this.model.set('task', 'traditional_method_' + window.location.pathname.split('/'));
 
 			var attempt = {}, el = e.target;
 			attempt[el.getAttribute('name')] = el.getAttribute('value');
 			this.model.checkAnswer(attempt);
+		},
+		submitForm: function(e) {
+			e.preventDefault();
+			this.model.set('starttime', new Date(this.$el.data('starttime')));
+			var map = {};
+			this.$el.find('textarea, input[type="hidden"], input[type="text"]').each(function(i, el) {
+				map[el.getAttribute('name')] = $(el).val();
+			});
+			this.model.set('response', map);
+			this.model.set('task', 'traditional_method_' + window.location.pathname.split('/'));
+			this.model.checkAnswer(map);
+
+			$(e.target).find('input[type="submit"]').val('Submitted!').prop('disabled', 'disabled');
+			this.advanceSlide();
+		},
+		advanceSlide: function(time) {
+			time = time || 200;
+
+			setTimeout(function() {
+				$('.corner a').click();
+			}, time);
 		}
 	});
 

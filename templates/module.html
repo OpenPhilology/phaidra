@@ -30,14 +30,14 @@
 		<div class="col-md-10 col-md-offset-1">
 			<div class="row slide">
 				<div class="corner right">
-					<a href="#" data-toggle="tooltip" data-placement="left" title="{% trans 'Turn Page' %}"></a>
+					<a href="#" data-toggle="tooltip" data-placement="left" title="{% trans 'Continue' %}"></a>
 				</div>
 				<div class="lesson-header">
 					<h1><img src="/static/images/tree-loader.gif"> {% trans "Loading Lesson" %}</h1>
 					<h2></h2>
 				</div>
 				{% spaceless %}
-					<div class="lesson-progress"></div>
+					<div class="lesson-progress" style="display: none"></div>
 				{% endspaceless %}
 
 				<div id="lesson-content"></div>
