@@ -7,6 +7,7 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
 from django.conf.urls import url
 from django.core.exceptions import ValidationError
+from django.core.cache import cache
 from django.db import IntegrityError
 from django.contrib.auth import authenticate, login, logout
 
@@ -20,7 +21,7 @@ from tastypie.bundle import Bundle
 from tastypie.authentication import SessionAuthentication, BasicAuthentication, Authentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.utils import trailing_slash
-from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
+from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest, HttpConflict
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
 from tastypie.resources import Resource, ModelResource
 from tastypie.cache import SimpleCache
@@ -120,7 +121,13 @@ class CreateUserResource(ModelResource):
 				'error': e,
 				'error_message': 'Username already in use.'
 			})	
-			
+		#except IntegrityError as e:					
+		#	return self.error_response(request, {
+		#		'error': e,
+		#		'error_message': 'Username already in use.',
+		#		'success': False,
+		#	}, response_class=HttpConflict)
+		
 		body = json.loads(request.body) if type(request.body) is str else request.body
 				
 		return self.create_response(request, body)
@@ -812,7 +819,7 @@ class SentenceResource(Resource):
 		object_class = DataObject
 		resource_name = 'sentence'	
 		authorization = ReadOnlyAuthorization()	
-		cache = SimpleCache(timeout=None)
+		# cache = SimpleCache(timeout=None) # caching is not that easy for this resource
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -884,6 +891,19 @@ class SentenceResource(Resource):
 	
 	def obj_get(self, bundle, **kwargs):
 		
+		# get the actual cached objects 
+		if cache.get("sentence_%s"%kwargs['pk']) is not None and not bundle.request.GET.get('full') and not bundle.request.GET.get('short'):
+			return cache.get("sentence_%s"%kwargs['pk'])
+		
+		elif bundle.request.GET.get('short') and not bundle.request.GET.get('full') and cache.get("sentence_short_%s"%kwargs['pk']) is not None:
+			return cache.get("sentence_short_%s"%kwargs['pk'])
+		
+		elif bundle.request.GET.get('full') and not bundle.request.GET.get('short') and cache.get("sentence_full_%s"%kwargs['pk']) is not None:
+			return cache.get("sentence_full_%s"%kwargs['pk'])
+		
+		elif cache.get("sentence_full_short%s"%kwargs['pk']) is not None and not bundle.request.GET.get('full') and not bundle.request.GET.get('short'):
+			return cache.get("sentence_full_short_%s"%kwargs['pk'])
+	
 		# query parameters (optional) for short sentence approach
 		attrlist = ['CTS', 'length', 'case', 'dialect', 'head', 'form', 'posClass', 'cid', 'gender', 'tbwid', 'pos', 'value', 'degree', 'number','lemma', 'relation', 'isIndecl', 'ref', 'posAdd', 'mood', 'tense', 'voice', 'person']
 		query_params = {}
@@ -929,20 +949,22 @@ class SentenceResource(Resource):
 				word['data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
 			
 			# get the full translation # forse API into full representation if cache is enabled
-			#if bundle.request.GET.get('full'):			
-			translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
-			translationArray = []
-			for t in translations:
-				trans = t[0]
-				transurl = trans['self'].split('/')
-				trans['data']['resource_uri'] = API_PATH + 'word/' + transurl[len(transurl)-1] + '/'
-				translationArray.append(trans['data'])
-			word['data']['translations'] = translationArray
+			if bundle.request.GET.get('full'):	
+				
+				translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
+				translationArray = []
+				for t in translations:
+					trans = t[0]
+					transurl = trans['self'].split('/')
+					trans['data']['resource_uri'] = API_PATH + 'word/' + transurl[len(transurl)-1] + '/'
+					translationArray.append(trans['data'])
+					word['data']['translations'] = translationArray
 				
 			wordArray.append(word['data'])
 			
 		# if short=True return only words of the short sentence
 		if bundle.request.GET.get('short'):
+
 			wordArray = self.shorten(wordArray, query_params)
 			if wordArray is None:
 				#return None
@@ -950,6 +972,23 @@ class SentenceResource(Resource):
 		
 		
 		new_obj.__dict__['_data']['words'] = wordArray
+		
+		# deal with caching here
+		if bundle.request.GET.get('full') and bundle.request.GET.get('short'):	
+			if cache.get("sentence_full_short_%s"%kwargs['pk']) is None:
+				cache.set("sentence_full_short_%s"%kwargs['pk'], new_obj, None)
+		
+		if bundle.request.GET.get('short'):					
+			if cache.get("sentence_short_%s"%kwargs['pk']) is None:
+				cache.set("sentence_short_%s"%kwargs['pk'], new_obj, None)
+				
+		elif bundle.request.GET.get('full'):
+			if cache.get("sentence_full_%s"%kwargs['pk']) is None:
+				cache.set("sentence_full_%s"%kwargs['pk'], new_obj, None)
+			
+		else:
+			if cache.get("sentence_%s"%kwargs['pk']) is None:	
+				cache.set("sentence_%s"%kwargs['pk'], new_obj, None)
 
 		return new_obj
 	
