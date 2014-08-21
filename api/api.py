@@ -20,7 +20,7 @@ from tastypie.bundle import Bundle
 from tastypie.authentication import SessionAuthentication, BasicAuthentication, Authentication
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.utils import trailing_slash
-from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
+from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest, HttpConflict
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
 from tastypie.resources import Resource, ModelResource
 from tastypie.cache import SimpleCache
@@ -115,19 +115,19 @@ class CreateUserResource(ModelResource):
 			)
 			user.save()
 		except IntegrityError as e:
-			return self.create_response(request, {
-				'success': False,
-				'error': e,
-				'error_message': 'Username already in use.'
-			})	
 			
+			return self.error_response(
+									request, {
+											'success': False,
+											'error_message': 'Username already in use.',
+											'error': e, 
+											},
+									response_class=HttpConflict)
+		
 		body = json.loads(request.body) if type(request.body) is str else request.body
 		body['success']	= True
 		return self.create_response(request, body)
-		
-		#return self.create_response(request, {
-		#		'success': True
-		#})
+
 						
 class UserResource(ModelResource):
 	class Meta:
