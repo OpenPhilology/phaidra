@@ -96,9 +96,12 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 		},
 		setFormData: function(e) {
 			this.model.set('starttime', new Date(this.$el.data('starttime')));
-			var map = this.model.get('response') || {};
-			this.$el.find('form input:checked').each(function(i, el) {
-				map[el.getAttribute('name')] = el.getAttribute('value');
+			var map = {};
+			this.$el.find('input[name="' + e.target.name + '"]:checked').each(function(i, el) {
+				if (!map[el.getAttribute('name')]) {
+					map[el.getAttribute('name')] = [];
+				}
+				map[el.getAttribute('name')].push(el.getAttribute('value'));
 			});
 			this.model.set('response', map);
 			this.model.set('task', 'traditional_method_' + window.location.pathname.split('/'));
