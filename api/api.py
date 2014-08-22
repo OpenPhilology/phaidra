@@ -201,6 +201,13 @@ class UserResource(ModelResource):
 		else:
 			return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s' % request.user.is_authenticated() })
 	
+	def obj_get_list(self, bundle, **kwargs):
+		
+		try:
+			return [bundle.request.user]
+			#return self.authorized_read_list(bundle.request, bundle)
+		except ValueError:
+			raise BadRequest("Invalid resource lookup data provided (mismatched type).")
 	
 	def patch_detail(self, request, **kwargs):
 		""" 
