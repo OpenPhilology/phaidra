@@ -48,11 +48,13 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 
 				el.addEventListener('submitted', that.submitAlignment.bind(that));
 				el.addEventListener('completed', that.completeAlignment.bind(that));
+				var targets = el.getAttribute('data-targets').split(",");
+				targets.push('grc');
 
 				new Morea(el, {
 					mode: el.getAttribute('data-mode'),
 					dataUrl: el.getAttribute('data-dataUrl'),
-					targets: el.getAttribute('data-targets').split(","),
+					targets: targets,
 					langs: {
 						"grc": {
 							"hr": "Greek",
@@ -79,8 +81,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			this.model.set('starttime', new Date(this.$el.data('starttime')));
 			this.model.set(e.detail);
 			this.model.checkAnswer(this.model.get('response'));
-
-			this.advanceSlide();
 		},
 		submitAlignment: function(e) {
 			this.model.set('starttime', new Date(this.$el.data('starttime')));
@@ -91,8 +91,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			this.model.set('starttime', new Date(this.$el.data('starttime')));
 			this.model.set(e.detail);
 			this.model.checkAnswer(this.model.get('response'));
-
-			this.advanceSlide();
 		},
 		setFormData: function(e) {
 			this.model.set('starttime', new Date(this.$el.data('starttime')));
@@ -122,7 +120,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			this.model.checkAnswer(map);
 
 			$(e.target).find('input[type="submit"]').val('Submitted!').prop('disabled', 'disabled');
-			this.advanceSlide();
 		},
 		advanceSlide: function(time) {
 			time = time || 200;
