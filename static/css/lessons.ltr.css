@@ -1052,7 +1052,7 @@ table.inflection-table {
   height: 43px;
   font-size: 14px;
   padding: 10px;
-  overflow: hiden;
+  overflow: hidden;
   line-height: 26px; }
   .alert.as-header a.btn {
     margin: -5px 5px -5px -5px; }
