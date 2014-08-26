@@ -298,6 +298,7 @@ class SubmissionResource(Resource):
 	encounteredWords = fields.ListField(attribute='encounteredWords', null = True, blank = True)
 	slideType = fields.CharField(attribute='slideType', null = True, blank = True)
 	timestamp = fields.DateField(attribute='timestamp', null = True, blank = True)
+	user = fields.CharField(attribute='user', null = True, blank = True)
 	
 	class Meta:
 		object_class = DataObject
@@ -306,7 +307,7 @@ class SubmissionResource(Resource):
 		authentication = SessionAuthentication() 
 		#authorization = UserObjectsOnlyAuthorization()
 		authorization = Authorization()	
-		cache = SimpleCache(timeout=None)
+		#cache = SimpleCache(timeout=None)
 
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -341,15 +342,17 @@ class SubmissionResource(Resource):
 			
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
 		submissions = []
-		table = gdb.query("""MATCH (s:`Submission`) RETURN s""")		
+		table = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) RETURN s, u""")		
 			
 		# create the objects which was queried for and set all necessary attributes
 		for s in table:
-			submission = s[0]	
+			submission = s[0]
+			user = s[1]	
 			url = submission['self'].split('/')						
 			new_obj = DataObject(url[len(url)-1])
 			new_obj.__dict__['_data'] = submission['data']		
-			new_obj.__dict__['_data']['id'] = url[len(url)-1]						
+			new_obj.__dict__['_data']['id'] = url[len(url)-1]	
+			new_obj.__dict__['_data']['user'] = user['data']['username']				
 			submissions.append(new_obj)
 				
 		return submissions
