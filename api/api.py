@@ -114,19 +114,13 @@ class CreateUserResource(ModelResource):
 				data.get("email"),
 				data.get("password")
 			)
-			user.save()
-		except IntegrityError as e:
-			return self.create_response(request, {
-				'success': False,
+			user.save()	
+		except IntegrityError as e:					
+			return self.error_response(request, {
 				'error': e,
-				'error_message': 'Username already in use.'
-			})	
-		#except IntegrityError as e:					
-		#	return self.error_response(request, {
-		#		'error': e,
-		#		'error_message': 'Username already in use.',
-		#		'success': False,
-		#	}, response_class=HttpConflict)
+				'error_message': 'Username already in use.',
+				'success': False,
+			}, response_class=HttpConflict)
 		
 		body = json.loads(request.body) if type(request.body) is str else request.body
 				
@@ -179,15 +173,16 @@ class UserResource(ModelResource):
 				response.set_cookie("csrftoken", get_new_csrf_key())
 				return response
 			else:
-				return self.create_response(request, {
+				return self.error_response(request, {
 					'success': False,
 					'reason': 'disabled',
-				}, HttpForbidden)
-		else:
-			return self.create_response(request, {
+				}, response_class=HttpForbidden)
+		else:				
+			return self.error_response(request, {
+				'error_message': 'Incorrect username or password.',
 				'success': False,
-				'error_message': 'Incorrect username or password'
-			})
+			}, response_class=HttpUnauthorized)
+
 			
 	def logout(self, request, **kwargs):
 		""" 
@@ -293,21 +288,20 @@ class SubmissionResource(Resource):
 	response = fields.CharField(attribute='response', null = True, blank = True) 
 	task = fields.CharField(attribute='task', null = True, blank = True)
 	smyth = fields.CharField(attribute='smyth', null = True, blank = True)
-	starttime = fields.DateField(attribute='starttime', null = True, blank = True)
+	starttime = fields.CharField(attribute='starttime', null = True, blank = True)
 	accuracy = fields.IntegerField(attribute='accuracy', null = True, blank = True)
 	encounteredWords = fields.ListField(attribute='encounteredWords', null = True, blank = True)
 	slideType = fields.CharField(attribute='slideType', null = True, blank = True)
-	timestamp = fields.DateField(attribute='timestamp', null = True, blank = True)
-	user = fields.CharField(attribute='user', null = True, blank = True)
+	timestamp = fields.CharField(attribute='timestamp', null = True, blank = True)
+	#user = fields.CharField(attribute='user', null = True, blank = True)
 	
 	class Meta:
 		object_class = DataObject
 		resource_name = 'submission'
 		allowed_methods = ['post', 'get', 'patch']
 		authentication = SessionAuthentication() 
-		#authorization = UserObjectsOnlyAuthorization()
-		authorization = Authorization()	
-		#cache = SimpleCache(timeout=None)
+		authorization = UserObjectsOnlyAuthorization()
+		cache = SimpleCache(timeout=None)
 
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -333,29 +327,29 @@ class SubmissionResource(Resource):
 	
 	
 	def obj_get_list(self, bundle, **kwargs):
+				
+		try:
+			return self.authorized_read_list(bundle.request, bundle)
+		except ValueError:
+			raise BadRequest("Invalid resource lookup data provided (mismatched type).")
 		
-		# switched off for paper analyses
-		#try:
-			#return self.authorized_read_list(bundle.request, bundle)
-		#except ValueError:
-			#raise BadRequest("Invalid resource lookup data provided (mismatched type).")
-			
-		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
-		submissions = []
-		table = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) RETURN s, u""")		
+		# enabled this for paper analyses	
+		#gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		#submissions = []
+		#table = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) RETURN s, u""")		
 			
 		# create the objects which was queried for and set all necessary attributes
-		for s in table:
-			submission = s[0]
-			user = s[1]	
-			url = submission['self'].split('/')						
-			new_obj = DataObject(url[len(url)-1])
-			new_obj.__dict__['_data'] = submission['data']		
-			new_obj.__dict__['_data']['id'] = url[len(url)-1]	
-			new_obj.__dict__['_data']['user'] = user['data']['username']				
-			submissions.append(new_obj)
+		#for s in table:
+			#submission = s[0]
+			#user = s[1]	
+			#url = submission['self'].split('/')						
+			#new_obj = DataObject(url[len(url)-1])
+			#new_obj.__dict__['_data'] = submission['data']		
+			#new_obj.__dict__['_data']['id'] = url[len(url)-1]	
+			#new_obj.__dict__['_data']['user'] = user['data']['username']				
+			#submissions.append(new_obj)
 				
-		return submissions
+		#return submissions
 	
 	
 	def obj_get(self, bundle, **kwargs):
