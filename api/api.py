@@ -304,7 +304,8 @@ class SubmissionResource(Resource):
 		resource_name = 'submission'
 		allowed_methods = ['post', 'get', 'patch']
 		authentication = SessionAuthentication() 
-		authorization = UserObjectsOnlyAuthorization()	
+		#authorization = UserObjectsOnlyAuthorization()
+		authorization = Authorization()	
 		cache = SimpleCache(timeout=None)
 
 	def detail_uri_kwargs(self, bundle_or_obj):
@@ -328,32 +329,31 @@ class SubmissionResource(Resource):
 			self.unauthorized_result(e)
 
 		return auth_result
-
-	#def get_object_list(self, request):
-		
-		#gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
-		#submissions = []
-		#table = gdb.query("""START u=node(*) MATCH (u)-[:submissions]->(s) RETURN s""")		
-			
-		# create the objects which was queried for and set all necessary attributes
-		#for s in table:
-			#submission = s[0]	
-			#url = submission['self'].split('/')						
-			#new_obj = DataObject(url[len(url)-1])
-			#new_obj.__dict__['_data'] = submission['data']		
-			#new_obj.__dict__['_data']['id'] = url[len(url)-1]						
-			#submissions.append(new_obj)
-				
-		#return submissions
+	
 	
 	def obj_get_list(self, bundle, **kwargs):
 		
-		try:
-			return self.authorized_read_list(bundle.request, bundle)
-		except ValueError:
-			raise BadRequest("Invalid resource lookup data provided (mismatched type).")
-		
-		#return self.get_object_list(bundle.request)
+		# switched off for paper analyses
+		#try:
+			#return self.authorized_read_list(bundle.request, bundle)
+		#except ValueError:
+			#raise BadRequest("Invalid resource lookup data provided (mismatched type).")
+			
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
+		submissions = []
+		table = gdb.query("""MATCH (s:`Submission`) RETURN s""")		
+			
+		# create the objects which was queried for and set all necessary attributes
+		for s in table:
+			submission = s[0]	
+			url = submission['self'].split('/')						
+			new_obj = DataObject(url[len(url)-1])
+			new_obj.__dict__['_data'] = submission['data']		
+			new_obj.__dict__['_data']['id'] = url[len(url)-1]						
+			submissions.append(new_obj)
+				
+		return submissions
+	
 	
 	def obj_get(self, bundle, **kwargs):
 		
