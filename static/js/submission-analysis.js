@@ -85,8 +85,10 @@ parse.prototype.analyse = function(objects) {
 	this.createLineChart(usersByTSlide, usersByASlide);
 	this.createDifferenceChart(usersByTSlide, usersByASlide);
 
-	window.A = this.calcTimeData(ag, "ag");
-	window.T = this.calcTimeData(trad, "traditional");
+	var aTimeData = this.calcTimeData(ag, "ag");
+	var tTimeData = this.calcTimeData(trad, "traditional");
+
+	this.createTimeChart(tTimeData, aTimeData);
 };
 
 parse.prototype.calcDelta = function(group) {
@@ -479,7 +481,7 @@ parse.prototype.calcTimeData = function(data, method) {
 		return d.submissions;
 	});
 	subs = _.flatten(subs);
-	subs.filter(function(s) {
+	subs = subs.filter(function(s) {
 		return s.method === method;
 	});
 
@@ -495,17 +497,229 @@ parse.prototype.calcTimeData = function(data, method) {
 		});
 		delete groups["NaN"];
 		_.forEach(groups, function(subs, key) {
-			var s = _.pluck(subs, 'timestamp').sort();
-			var start = new Date(s[0]);
-			var end = new Date(s[s.length - 1]);
+			var starttimes = _.pluck(subs, 'starttime').sort();
+			var endtimes = _.pluck(subs, 'timestamp').sort();
+			var start = new Date(starttimes[0]).getTime();
+			var end = new Date(endtimes[endtimes.length - 1]).getTime();
 			var diff = end - start;
-			(map[key] || (map[key] = [])).push(parseFloat((diff / 1000) / 60).toFixed(2) + "m");	
+			(map[key] || (map[key] = [])).push({
+				"diff": diff,
+				"method": subs[0].method, 
+				"task": subs[0].task
+			});	
 		});
 	});
 	// Times that each user spent on each slide
+	var that = this;
 	window.map = map;
 
-	return subs;
+	// Filter outliers
+	function filterOutliers(array) {
+		var values = array.concat();
+		values.sort(function(a, b) {
+			return a-b;
+		});
+		var q1 = values[Math.floor((values.length / 4))];
+		var q3 = values[Math.ceil((values.length * (3/4)))];
+		var iqr = q3 - q1;
+		var maxValue = q3 + iqr*1.5;
+		var minValue = q1 - iqr*1.5;
+		var filteredValues = values.filter(function(x) {
+			return (x < maxValue) || (x > minValue);
+		});
+
+		return filteredValues;
+	}
+
+	var avgMap = _.map(map, function(obj, key) {
+		var times = _.pluck(obj, 'diff');
+		times = filterOutliers(times);
+		var avg = _.reduce(times, function(memo, num) {
+			return memo + num;
+		}, 0) / times.length;
+		
+		var method = obj[0].method;
+		var task = method === 'traditional' ? that.getTradTask(obj[0].task) : obj[0].task;
+
+		var data = {};
+		data[method + "_avg"] = avg;
+		data[method + "_method"] = method;
+		data[method + "_task"] = task;
+		data["slide"] = key;
+
+		return data;
+	});
+
+	return avgMap;
+};
+
+parse.prototype.getTradTask = function(task) {
+	if (task.indexOf('section,0') === -1)
+		return;
+
+	var parts = task.split(',');
+	var multichoice = [1, 2, 5, 6, 9, 10, 13, 14, 17, 18, 21, 22]
+	var task = (multichoice.indexOf(parseInt(parts[6])) !== -1) ? 'multi_choice' : 'translation';
+
+	return task;
+};
+
+parse.prototype.createTimeChart = function(T, A) {
+	var merged = _.flatten(_.zip(T, A));
+	var data = merged.reduce(function(map, obj) {
+		if (obj && obj.slide) {
+			obj.slide = parseInt(obj.slide);
+			var i = obj.slide - 1;
+			(map[i] || (map[i] = {}));
+			map[i] = _.extend(map[i], obj);
+		}
+		return map;
+	}, []);
+	
+	var margin = { top: 20, right: 20, bottom: 30, left: 50 },
+	width = 1000 - margin.left - margin.right, 
+	height = 500 - margin.top - margin.bottom;
+
+	var x0 = d3.scale.ordinal()
+		.rangeRoundBands([0, width], .1);
+	var x1 = d3.scale.ordinal();
+	var y = d3.time.scale()
+		.range([height, 0]);
+	
+	var taskNames = ['build_parse_tree', 'align_sentence', 'multi_choice', 'translation'];
+	var color = d3.scale.ordinal()
+		.domain(taskNames)
+		.range(["#4e6087", "#1FADAD", "#d15241", "#f4bc78"]);
+	
+	var xAxis = d3.svg.axis()
+		.scale(x0)
+		.orient("bottom");
+	
+	var yAxis = d3.svg.axis()
+		.scale(y)
+		.tickFormat(d3.time.format("%M:%S"))
+		.orient("left");
+	
+	var svg = d3.select('#time-avgs').append('svg')
+		.attr('width', width + margin.left + margin.right)
+		.attr('height', height + margin.top + margin.bottom)
+	.append('g')
+		.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+	
+	data.forEach(function(d) {
+		
+		if (d.ag_avg)
+			d[d.ag_task] = +d.ag_avg;
+		if (d.traditional_avg)
+			d[d.traditional_task] = +d.traditional_avg;
+
+		d.tasks = taskNames.map(function(name) {
+			if (!d[name]) d[name] = undefined;
+
+			console.log("time", +d[name], (+d[name] / 1000) + "s")
+
+			return { name: name, value: +d[name] };
+		});
+	});
+	
+	x0.domain(data.map(function(d) {
+		return d.slide;
+	}));
+	x1.domain(taskNames).rangeRoundBands([0, x0.rangeBand()]);
+	y.domain([0, d3.max(data, function(d) {
+		return d3.max(d.tasks, function(d) { return d.value; });
+	})]);
+
+	svg.append('g')
+		.attr('class', 'x axis')
+		.attr('transform', 'translate(0,' + height + ')')
+		.call(xAxis);
+	
+	svg.append('g')
+		.attr('class', 'y axis')
+		.call(yAxis)
+	.append('text')
+		.attr('transform', 'rotate(-90)')
+		.attr('y', 6)
+		.attr('dy', '.71em')
+		.style('text-anchor', 'end')
+		.text('Time Spent');
+	
+	var task = svg.selectAll('.task')
+		.data(data)
+	.enter().append('g')
+		.attr('class', 'g')
+		.attr('transform', function(d) {
+			return 'translate(' + x0(d.slide) + ',0)';
+		});
+	
+	task.selectAll('rect')
+		.data(function(d) {
+			return d.tasks;
+		})
+	.enter().append('rect')
+		.attr('width', x1.rangeBand())
+		.attr('x', function(d) {
+			return x1(d.name);
+		})
+		.attr('y', function(d) {
+			return y(d.value);
+		})
+		.attr('height', function(d) {
+			return height - y(d.value);
+		})
+		.style('fill', function(d) {
+			return color(d.value);
+		});
+
+	var legendData = [
+		{"name": "Align Sentence",
+		"value": "align_sentence"},
+		{"name": "Build Parse Tree",
+		"value": "build_parse_tree"},
+		{"name": "Translation",
+		"value": "translation"},
+		{"name": "Multiple Choice",
+		"value": "multi_choice"}
+	];
+	var legend = svg.selectAll('.legend')
+		.data(legendData)
+	.enter().append('g')
+		.attr('class', 'legend')
+		.attr('transform', function(d, i) {
+			return 'translate(0,' + i * 20 + ')';
+		});
+	
+	legend.append('rect')	
+		.attr('x', width - 18)
+		.attr('width', 18)
+		.attr('height', 18)
+		.style('fill', function(d) {
+			return color(d.value);
+		});
+	
+	legend.append('text')
+		.attr('x', width - 24)
+		.attr('y', 9)
+		.attr('dy', '.35em')
+		.style('text-anchor', 'end')
+		.text(function(d) {
+			return d.name;
+		});
+	
+	// Put this data in a table
+	data.forEach(function(d) {
+		var row = document.createElement('tr');
+
+		var aAvg = d.ag_avg;
+		var tAvg = d.traditional_avg;
+
+		row.innerHTML += '<td>' + d.slide + '</td>';
+		row.innerHTML += '<td>' + Math.round(tAvg / 1000) + 's</td>';
+		row.innerHTML += '<td>' + Math.round(aAvg / 1000) + 's</td>';
+
+		document.querySelector('#avg-time-table tbody').appendChild(row);
+	});
 };
 
 new parse();

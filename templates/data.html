@@ -32,14 +32,14 @@
 		}
 		.line.trad {
 			stroke-width: 2px;
-			stroke: #523D5B;
+			stroke: rgb(209, 82, 65);
 		}
 		.line.ag {
 			stroke-width: 2px;
 			stroke: #1FADAD;
 		}
 		.area.above {
-			fill: #523D5B;
+			fill: rgb(209, 82, 65);
 		}
 		.area.below {
 			fill: #1FADAD;
@@ -48,7 +48,7 @@
 			display: inline-block;
 		}
 		span.trad {
-			color: #523D5B;
+			color: rgb(209, 82, 65);
 			font-weight: bold;
 		}
 		span.ag {
@@ -59,7 +59,7 @@
 			background-color: #E7FFFF;
 		}
 		.trad-light {
-			background-color: #FBF0FF;
+			background-color: rgb(252, 229, 226);
 		}
 		.well {
 			text-align: center;
@@ -77,7 +77,7 @@
 			background-color: #1FADAD;
 		}
 		.cube.trad {
-			background-color: #523D5B;
+			background-color: rgb(209, 82, 65);
 		}
 		.table-wrapper {
 			position: relative;
@@ -104,14 +104,38 @@
 	<h1>Weekend Test Results</h1>
 	<hr>
 	<div class="row">
+		<div class="col-md-12">
+			<h2>Time spent per Slide <small>Traditional vs. Alignment/Treebanking Methods</small></h2>
+			<div id="time-avgs"></div>
+			<hr>
+			<p>Explanation</p>
+		</div>
+		<div class="col-md-12">
+			<div class="table-wrapper">
+				<div class="table-scroll" style="height: 300px">
+					<table class="table" id="avg-time-table">
+						<thead>
+							<tr>
+								<th width="10%"><span class="text">Slide</span></th>
+								<th width="20%"><span class="text"><span class="cube trad"></span>Avg. Time Spent</span></th>
+								<th width="20%"><span class="text"><span class="cube ag"></span>Avg. Time Spent</span></th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
 		<div class="col-md-6">
 			<h2>User Retention <small>% change between slides</small></h2>
-			<div id="difference-numbers"></div>
-			<hr>
 			<span class="cube ag"></span> Alignment/Treebanking &nbsp; &nbsp;
 			<span class="cube trad"></span> Traditional
+			<div id="difference-numbers"></div>
 			<hr>
-			<p>When the <span class="ag">Alignment/Treebanking Format</span> retained more users from the previous slide to the current slide, the difference is filled in with purple. When the <span class="trad">Traditional Format</span> retained users better, the difference is teal. </p>
+			<em>When the <span class="ag">Alignment/Treebanking Format</span> retained more users from the previous slide to the current slide, the difference is filled in with teal. When the <span class="trad">Traditional Format</span> retained users better, the difference is purple. </em>
 		</div>
 		<div class="col-md-6">
 			<div class="table-wrapper">
@@ -136,10 +160,9 @@
 	<div class="row">
 		<div class="col-md-6">
 			<h2>Raw Participation Numbers <small>Users per Slide</small></h2>
-			<div id="raw-numbers"></div>
-			<hr>
 			<span class="cube ag"></span> Alignment/Treebanking &nbsp; &nbsp;
 			<span class="cube trad"></span> Traditional
+			<div id="raw-numbers"></div>
 		</div>
 		<div class="col-md-6">
 			<div class="table-wrapper">
