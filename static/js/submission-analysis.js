@@ -496,19 +496,31 @@ parse.prototype.calcTimeData = function(data, method) {
 			return parseInt(s.slide);
 		});
 		delete groups["NaN"];
+
+		var userStartTimes = [];
+
 		_.forEach(groups, function(subs, key) {
-			var starttimes = _.pluck(subs, 'starttime').sort();
 			var endtimes = _.pluck(subs, 'timestamp').sort();
-			var start = new Date(starttimes[0]).getTime();
+			var start = new Date(endtimes[0]).getTime();
 			var end = new Date(endtimes[endtimes.length - 1]).getTime();
+
+			if (start === end) {
+				start = new Date(_.pluck(subs, 'starttime').sort()[0]).getTime();
+			}
 			var diff = end - start;
-			(map[key] || (map[key] = [])).push({
-				"diff": diff,
-				"method": subs[0].method, 
-				"task": subs[0].task
-			});	
+			if (diff > 0) {
+				(map[key] || (map[key] = [])).push({
+					"diff": diff,
+					"method": subs[0].method, 
+					"task": subs[0].task,
+					"user": user,
+					"start": new Date(start),
+					"end": new Date(end)
+				});	
+			}
 		});
 	});
+
 	// Times that each user spent on each slide
 	var that = this;
 	window.map = map;
@@ -531,12 +543,22 @@ parse.prototype.calcTimeData = function(data, method) {
 		return filteredValues;
 	}
 
+	var str = "";
+	str += ("Slide\tMin\tMax\tAvg\tUsers\n");
+
 	var avgMap = _.map(map, function(obj, key) {
 		var times = _.pluck(obj, 'diff');
 		times = filterOutliers(times);
+
+		// Our one tricky outlier which the outliers filter does not catch
+		if (times.indexOf(8283453) !== -1)
+			times.splice(times.indexOf(8283453), 1);
+
 		var avg = _.reduce(times, function(memo, num) {
 			return memo + num;
 		}, 0) / times.length;
+
+		str += (key + "\t" + this.prettyTime(_.min(times)) + "\t" + this.prettyTime(_.max(times)) + "\t" + this.prettyTime(avg) + "\t" + times.length +"\n");
 		
 		var method = obj[0].method;
 		var task = method === 'traditional' ? that.getTradTask(obj[0].task) : obj[0].task;
@@ -548,7 +570,9 @@ parse.prototype.calcTimeData = function(data, method) {
 		data["slide"] = key;
 
 		return data;
-	});
+	}.bind(this));
+
+	console.log(str);
 
 	return avgMap;
 };
@@ -588,8 +612,8 @@ parse.prototype.createTimeChart = function(T, A) {
 	
 	var taskNames = ['build_parse_tree', 'align_sentence', 'multi_choice', 'translation'];
 	var color = d3.scale.ordinal()
-		.domain(taskNames)
-		.range(["#4e6087", "#1FADAD", "#d15241", "#f4bc78"]);
+		.domain(taskNames.concat(undefined))
+		.range(["#4e6087", "#1FADAD", "#d15241", "#f4bc78", '#EEE']);
 	
 	var xAxis = d3.svg.axis()
 		.scale(x0)
@@ -616,9 +640,7 @@ parse.prototype.createTimeChart = function(T, A) {
 		d.tasks = taskNames.map(function(name) {
 			if (!d[name]) d[name] = undefined;
 
-			console.log("time", +d[name], (+d[name] / 1000) + "s")
-
-			return { name: name, value: +d[name] };
+			return { name: name, value: d[name] };
 		});
 	});
 	
@@ -658,18 +680,21 @@ parse.prototype.createTimeChart = function(T, A) {
 			return d.tasks;
 		})
 	.enter().append('rect')
-		.attr('width', x1.rangeBand())
+		.attr('width', 9)
 		.attr('x', function(d) {
-			return x1(d.name);
+			return d.name === 'multi_choice' || d.name === 'translation' ? 5 : 15;
+			//return x1(d.name);
 		})
 		.attr('y', function(d) {
-			return y(d.value);
+			if (y(d.value))
+				return y(d.value);
 		})
 		.attr('height', function(d) {
-			return height - y(d.value);
+			if (y(d.value))
+				return height - y(d.value);
 		})
 		.style('fill', function(d) {
-			return color(d.value);
+			return color(d.name);
 		});
 
 	var legendData = [
@@ -711,15 +736,34 @@ parse.prototype.createTimeChart = function(T, A) {
 	data.forEach(function(d) {
 		var row = document.createElement('tr');
 
-		var aAvg = d.ag_avg;
-		var tAvg = d.traditional_avg;
-
 		row.innerHTML += '<td>' + d.slide + '</td>';
-		row.innerHTML += '<td>' + Math.round(tAvg / 1000) + 's</td>';
-		row.innerHTML += '<td>' + Math.round(aAvg / 1000) + 's</td>';
+		row.innerHTML += '<td>' + this.prettyTime(d.traditional_avg) + '</td>';
+		row.innerHTML += '<td>' + this.prettyTime(d.ag_avg) + '</td>';
+
+		var bg = d.ag_avg > d.traditional_avg ? 'ag-light' : 'trad-light';
+		bg = d.ag_avg === d.traditional_avg ? '' : bg;
+		bg = (!d.traditional_avg && d.traditional_avg != 0) ? '' : bg;
+		row.className = bg;
 
 		document.querySelector('#avg-time-table tbody').appendChild(row);
-	});
+	}.bind(this));
+};
+
+parse.prototype.prettyTime = function(t) {
+	var seconds = Math.round((t / 1000) % 60);
+	var minutes = Math.round((t / (1000 * 60)) % 60);
+	var hours = Math.round((t / (1000 * 60 * 60)) % 24);
+
+	var str = "";
+	if (hours) str += hours + ":"
+	if (minutes < 10 && hours > 0) minutes = "0" + minutes;
+	if (seconds < 10) seconds = "0" + seconds;
+	str = str + minutes + ":" + seconds;
+	
+	if (!seconds && !minutes && !hours) return "";
+
+	return str;
+	
 };
 
 new parse();
