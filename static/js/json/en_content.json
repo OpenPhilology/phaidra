@@ -407,7 +407,9 @@
 		]
 	},
 	{
-		"title": "Diacritics & Dipthongs",
+		"title": "Diacritics and Dipthongs",
+		"thumbnail": "/static/images/icon_grk_parthenon.png",
+		"category": "verbs",
 		"modules": [
 			{	"title": "Diacritics and Dipthongs",
 				"slides": [
@@ -739,7 +741,6 @@
 	},
 	{	
 		"title": "Introduction to Verbs",
-		"thumbnail": "/static/images/icon_grk_parthenon.png",
 		"category": "verbs",
 		"modules": [
 			{
@@ -873,6 +874,7 @@
 	},
 	{	
 		"title": "Adjectives: First and Second Declension",
+		"category": "nouns",
 		"modules": [
 			{
 				"title": "Adjectives: First and Second Declension",

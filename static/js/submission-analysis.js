@@ -113,10 +113,13 @@ parse.prototype.sortTradSlides = function(submissions) {
 		var parts = s.task.split(',');
 
 		if ((parts[4] === undefined || parts[6] === undefined) && (s.task !== 'build_parse_tree' && s.task !== 'align_sentence' && s.slideType !== 'slide_direct_select')) 
-			console.log(s);
-		if (typeof(parts[6]) !== 'undefined' && parseInt(parts[4]) !== 1 && typeof(parts[4]) !== 'undefined' && parseInt(parts[6]) !== 28 && parseInt(parts[6]) !== 24) {
+			s = undefined;
+		if (typeof(parts[6]) !== 'undefined' && parseInt(parts[4]) !== 1 && typeof(parts[4]) !== 'undefined' && parseInt(parts[6]) < 23) {
 			s.slide = parts[6];
 			s.method = "traditional";
+		}
+		else {
+			s = undefined;
 		}
 	}
 
@@ -262,8 +265,8 @@ parse.prototype.sortIntoSlides = function(submissions) {
 
 parse.prototype.createLineChart = function(usersByTSlide, usersByASlide) {
 	var margin = { top: 20, right: 20, bottom: 30, left: 50 },
-	width = 500 - margin.left - margin.right, 
-	height = 250 - margin.top - margin.bottom;
+	width = 1000 - margin.left - margin.right, 
+	height = 300 - margin.top - margin.bottom;
 
 	var x = d3.scale.linear().range([0, width]);
 	var y = d3.scale.linear().range([height, 0]);
@@ -344,8 +347,8 @@ parse.prototype.createDifferenceChart = function(T, A) {
 	window.delta = data;
 
 	var margin = { top: 20, right: 20, bottom: 30, left: 50 },
-	width = 500 - margin.left - margin.right, 
-	height = 250 - margin.top - margin.bottom;
+	width = 1000 - margin.left - margin.right, 
+	height = 300 - margin.top - margin.bottom;
 
 	var x = d3.scale.linear()
 		.range([0, width]);
@@ -442,7 +445,7 @@ parse.prototype.createDifferenceChart = function(T, A) {
 		.attr('y', -50)
 		.attr('dy', '.71em')
 		.style('text-anchor', 'end')
-		.text('Delta');
+		.text('Retention Delta (%)');
 	
 	this.fillTables(data);
 };
@@ -602,7 +605,7 @@ parse.prototype.createTimeChart = function(T, A) {
 	
 	var margin = { top: 20, right: 20, bottom: 30, left: 50 },
 	width = 1000 - margin.left - margin.right, 
-	height = 500 - margin.top - margin.bottom;
+	height = 300 - margin.top - margin.bottom;
 
 	var x0 = d3.scale.ordinal()
 		.rangeRoundBands([0, width], .1);
@@ -655,7 +658,12 @@ parse.prototype.createTimeChart = function(T, A) {
 	svg.append('g')
 		.attr('class', 'x axis')
 		.attr('transform', 'translate(0,' + height + ')')
-		.call(xAxis);
+		.call(xAxis)
+	.append("text")
+		.attr('y', 8)
+		.attr('dy', '.71em')
+		.style('text-anchor', 'end')
+		.text('Slide');
 	
 	svg.append('g')
 		.attr('class', 'y axis')
@@ -665,7 +673,7 @@ parse.prototype.createTimeChart = function(T, A) {
 		.attr('y', 6)
 		.attr('dy', '.71em')
 		.style('text-anchor', 'end')
-		.text('Time Spent');
+		.text('Time Spent (Minutes)');
 	
 	var task = svg.selectAll('.task')
 		.data(data)
