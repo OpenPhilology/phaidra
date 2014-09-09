@@ -1,12 +1,14 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($, _, Backbone, Models, Collections) { 
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/create-index'], function($, _, Backbone, Models, Collections, CreateIndex) { 
 
 	var Router = {};
 	Router.Router = Backbone.Router.extend({
 		routes: {
-			"create/": "index",
 		},
 		initialize: function() {
 			// Create/Populate necessary models and collections
+			this.documents = new Collections.Documents();
+			this.documents.bind('add', this.index, this);
+			this.documents.fetch();
 
 			// javascript function for api logout and redirect
 			$("#logout-link").click(function(e) {
@@ -29,9 +31,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections'], function($
 				});
 			});
 		},
-		index: function() {
-		},
-
+		index: function(model) {
+			new CreateIndex({
+				model: model
+			}).render().$el.appendTo('#create-editions');
+		}
 	});
 	
 	return Router;

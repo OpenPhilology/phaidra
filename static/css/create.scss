@@ -1,0 +1,35 @@
+@import "global";
+
+.author {
+	display: inline-block;
+	background-color: $color-pri-two;
+	position: relative;
+	width: 100%;
+
+	img {
+		height: 200px;
+	}
+	&:after {
+		background-image: url(/static/images/glasses.svg);
+		background-size: 70px;
+		content: '';
+		position: absolute;
+		width: 70px;
+		height: 23px;
+		top: 72px;
+		left: 61px;
+	}
+}
+.edition {
+	border: 1px solid #EEE;
+	padding: 10px;
+	margin: 5px;
+
+	.progress {
+		height: 10px;
+		border-radius: 0;
+	}
+	.progress-bar {
+		background-color: $color-pri-one;
+	}
+}

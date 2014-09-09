@@ -180,7 +180,26 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 					return el.resource_uri;
 				});
 			}
-			this.add(response.objects);
+			var docs = this.calcCompletion(response.objects);
+			this.add(docs);
+		},
+		calcCompletion: function(docs) {
+			docs.forEach(function(m) {
+				// Use CTS to group
+				var work = m.CTS.split(':')[3].split('.');
+				var common = work[0] + work[1];
+				m.family = common;
+			});
+			docs.forEach(function(m) {
+				var orig = docs.filter(function(model) {
+					return model.common === m.common && model.lang === 'grc';
+				})[0];
+
+				m.completion = (m.sentences.length / orig.sentences.length) * 100;
+
+			}.bind(this));
+			
+			return docs;
 		}
 	});
 
