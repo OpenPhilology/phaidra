@@ -4,14 +4,14 @@
 /** RTL Support!!!! **/
 @media (min-width: 992px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-    float: left;
-    direction: ltr; } }
+    float: right;
+    direction: rtl; } }
 .progress-bar {
-  float: left; }
+  float: right; }
 
 blockquote {
-  border-left: 5px solid;
-  border-right: 0; }
+  border-right: 5px solid;
+  border-left: 0; }
 
 /* Color Scheme! */
 /* Fonts! */
@@ -319,34 +319,34 @@ label {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3); }
   .corner.left {
     top: 43px;
-    left: 0;
-    border-color: #EEE #FFF;
-    border-width: 60px 60px 0 0; }
-    .corner.left a {
-      top: -60px;
-      border-width: 0 0 60px 60px;
-      border-color: white #d15241; }
-      .corner.left a::after {
-        left: -55px;
-        top: 1px;
-        content: "\e091"; }
-      .corner.left a:hover {
-        border-color: white #d66556; }
-  .corner.right {
-    top: 43px;
     right: 0;
     border-color: #EEE #FFF;
     border-width: 0 60px 60px 0; }
-    .corner.right a {
+    .corner.left a {
       right: -60px;
       border-width: 60px 0 0 60px;
       border-color: #d15241 white; }
-      .corner.right a::after {
+      .corner.left a::after {
         right: 5px;
         top: -57px;
         content: "\e092"; }
-      .corner.right a:hover {
+      .corner.left a:hover {
         border-color: #d66556 white; }
+  .corner.right {
+    top: 43px;
+    left: 0;
+    border-color: #EEE #FFF;
+    border-width: 60px 60px 0 0; }
+    .corner.right a {
+      top: -60px;
+      border-width: 0 0 60px 60px;
+      border-color: white #d15241; }
+      .corner.right a:after {
+        left: -55px;
+        top: 1px;
+        content: "\e091"; }
+      .corner.right a:hover {
+        border-color: white #d66556; }
   .corner a {
     top: 0;
     position: absolute;

@@ -60,14 +60,14 @@ blockquote {
 .banner {
   color: #EEE;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
-  background-image: linear-gradient(bottom, #4e6087 0, #576b97 100);
-  background-image: -o-linear-gradient(bottom, #4e6087 0, #576b97 100);
-  background-image: -moz-linear-gradient(bottom, #4e6087 0, #576b97 100);
-  background-image: -webkit-linear-gradient(bottom, #4e6087 0, #576b97 100);
-  background-image: -ms-linear-gradient(bottom, #4e6087 0, #576b97 100);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4e6087), color-stop(1, #576b97));
-  background-color: #4e6087;
-  background-color: #4e6087;
+  background-image: linear-gradient(bottom, #373e4e 0, #424a5d 100);
+  background-image: -o-linear-gradient(bottom, #373e4e 0, #424a5d 100);
+  background-image: -moz-linear-gradient(bottom, #373e4e 0, #424a5d 100);
+  background-image: -webkit-linear-gradient(bottom, #373e4e 0, #424a5d 100);
+  background-image: -ms-linear-gradient(bottom, #373e4e 0, #424a5d 100);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #373e4e), color-stop(1, #424a5d));
+  background-color: #373e4e;
+  background-color: #373e4e;
   position: fixed;
   width: 100%;
   height: 43px;
@@ -121,14 +121,14 @@ blockquote {
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .navigation a:hover {
-      background-color: #576b97;
+      background-color: #424a5d;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
       -ms-transition: background-color 0.2s ease-in;
       transition: background-color 0.2s ease-in; }
     .navigation a.active {
-      background-color: #6378a5;
+      background-color: #4c566c;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
@@ -157,7 +157,7 @@ blockquote {
     color: #EEE; }
   .user-info a.username, .user-info a.log-in-link {
     border: 0;
-    background-color: #3b4967;
+    background-color: #222630;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
@@ -168,16 +168,16 @@ blockquote {
     border-radius: 2px;
     display: inline-block; }
     .user-info a.username:hover, .user-info a.log-in-link:hover {
-      background-color: #6378a5;
+      background-color: #4c566c;
       -webkit-transition: background-color 0.2s ease-out;
       -moz-transition: background-color 0.2s ease-out;
       -o-transition: background-color 0.2s ease-out;
       -ms-transition: background-color 0.2s ease-out;
       transition: background-color 0.2s ease-out;
-      box-shadow: 2px 2px 3px #455577;
+      box-shadow: 2px 2px 3px #2c323f;
       color: #FFF; }
       .user-info a.username:hover img, .user-info a.log-in-link:hover img {
-        box-shadow: 2px 2px 3px #455577; }
+        box-shadow: 2px 2px 3px #2c323f; }
 
 html, body {
   height: 100%; }
@@ -258,7 +258,7 @@ label {
   .label.label-success {
     background-color: #a3d55f; }
   .label.label-info {
-    background-color: #4e6087; }
+    background-color: #373e4e; }
 
 .container {
   max-width: none !important;
@@ -285,7 +285,7 @@ label {
     position: relative;
     height: 40%; }
     #main .lesson-right-menu a {
-      color: #4e6087;
+      color: #373e4e;
       position: absolute;
       font-size: 70px;
       top: 0;
@@ -294,7 +294,7 @@ label {
     margin-left: 2px;
     margin-right: 2px;
     letter-spacing: 0.05em;
-    color: #4e6087; }
+    color: #373e4e; }
 
 /* Styles related to the intro page */
 .thuc {
@@ -407,13 +407,13 @@ label {
   .report a {
     display: block;
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
-    background-image: linear-gradient(bottom, #4e6087 0, #576b97 100);
-    background-image: -o-linear-gradient(bottom, #4e6087 0, #576b97 100);
-    background-image: -moz-linear-gradient(bottom, #4e6087 0, #576b97 100);
-    background-image: -webkit-linear-gradient(bottom, #4e6087 0, #576b97 100);
-    background-image: -ms-linear-gradient(bottom, #4e6087 0, #576b97 100);
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4e6087), color-stop(1, #576b97));
-    background-color: #4e6087;
+    background-image: linear-gradient(bottom, #373e4e 0, #424a5d 100);
+    background-image: -o-linear-gradient(bottom, #373e4e 0, #424a5d 100);
+    background-image: -moz-linear-gradient(bottom, #373e4e 0, #424a5d 100);
+    background-image: -webkit-linear-gradient(bottom, #373e4e 0, #424a5d 100);
+    background-image: -ms-linear-gradient(bottom, #373e4e 0, #424a5d 100);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #373e4e), color-stop(1, #424a5d));
+    background-color: #373e4e;
     padding: 6px;
     color: #EEE;
     height: 28px;
@@ -430,13 +430,13 @@ label {
     transition: background-color 2s cubic; }
     .report a:hover {
       box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
-      background-image: linear-gradient(bottom, #455577 0, #4e6087 100);
-      background-image: -o-linear-gradient(bottom, #455577 0, #4e6087 100);
-      background-image: -moz-linear-gradient(bottom, #455577 0, #4e6087 100);
-      background-image: -webkit-linear-gradient(bottom, #455577 0, #4e6087 100);
-      background-image: -ms-linear-gradient(bottom, #455577 0, #4e6087 100);
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #455577), color-stop(1, #4e6087));
-      background-color: #455577;
+      background-image: linear-gradient(bottom, #2c323f 0, #373e4e 100);
+      background-image: -o-linear-gradient(bottom, #2c323f 0, #373e4e 100);
+      background-image: -moz-linear-gradient(bottom, #2c323f 0, #373e4e 100);
+      background-image: -webkit-linear-gradient(bottom, #2c323f 0, #373e4e 100);
+      background-image: -ms-linear-gradient(bottom, #2c323f 0, #373e4e 100);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2c323f), color-stop(1, #373e4e));
+      background-color: #2c323f;
       -webkit-transition: background-color 2s cubic;
       -moz-transition: background-color 2s cubic;
       -o-transition: background-color 2s cubic;
@@ -458,7 +458,7 @@ label {
       position: absolute;
       padding: 2px 8px;
       top: -1px;
-      color: #4e6087;
+      color: #373e4e;
       border-radius: 5px;
       left: 32px;
       content: attr(data-title);
@@ -488,17 +488,17 @@ label {
     color: #398244 !important; }
 
 .bg-info {
-  border: 2px #4e6087 solid;
+  border: 2px #373e4e solid;
   border-radius: 3px;
   padding: 10px;
   margin-bottom: 10px;
   line-height: 2em;
-  background-color: #e4e8f0; }
+  background-color: #b7becd; }
   .bg-info .glyphicon {
     margin-right: 3px;
-    color: #c4ccdd; }
+    color: #9aa3b7; }
   .bg-info h1, .bg-info h2, .bg-info h3, .bg-info h4, .bg-info h5, .bg-info h6 {
-    background-color: #4e6087;
+    background-color: #373e4e;
     color: #FFF;
     margin: -10px -10px 10px;
     padding: 10px;
@@ -569,7 +569,7 @@ label {
   height: 125px;
   width: 125px;
   display: inline-block;
-  background-color: #c4ccdd;
+  background-color: #9aa3b7;
   color: #333;
   margin: 5px;
   border-radius: 2px;
@@ -582,7 +582,7 @@ label {
   -ms-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out; }
   .achievements .box:hover {
-    background-color: #dee2ec;
+    background-color: #b1b8c8;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
@@ -651,7 +651,7 @@ div.module {
 
 .module {
   border-radius: 3px;
-  background-color: #e4e8f0;
+  background-color: #b7becd;
   text-align: center;
   display: inline-block;
   padding: 20px;
@@ -687,14 +687,14 @@ div.module {
     .module.nouns h3 {
       color: #FFF; }
   .module.verbs {
-    background-color: #4e6087;
+    background-color: #373e4e;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
     .module.verbs:hover {
-      background-color: #576b97;
+      background-color: #424a5d;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
@@ -774,7 +774,7 @@ div.module {
 .lesson-header h1 {
   display: inline-block;
   margin-top: 0;
-  color: #3b4967;
+  color: #222630;
   text-transform: uppercase;
   font-size: 24px; }
 .lesson-header h2 {
@@ -817,7 +817,7 @@ div.module {
   .letter.bg-med {
     background-color: #b8e0e0; }
   .letter.bg-dark {
-    background-color: #b7bfd1; }
+    background-color: #9097a8; }
   .letter hr {
     border: 1px solid #FFF; }
   .letter a {
@@ -875,7 +875,7 @@ div.module {
       font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       letter-spacing: normal; }
     .slide .direct-select a.selected, .slide .direct-select a.selected:hover {
-      background-color: #4e6087;
+      background-color: #373e4e;
       color: #FFF;
       border: 1px solid transparent;
       box-shadow: 2px 2px 3px #CCC; }
