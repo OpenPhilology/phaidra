@@ -29,6 +29,26 @@
 				{% trans "You can help create a digital edition of a Classical work, no matter what skill level you're at. You'll be improving your Ancient Greek and contributing to Open Data at the same time!" %}
 			</p>
 			<hr>
+			<div class="lead" id="language-selector">
+				<span>I speak</span>
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle">
+						All Languages
+					</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a data-lang="en" href="#" class="active">English</a></li>
+						<li><a data-lang="fa" href="#">Farsi</a></li>
+						<li><a data-lang="hr" href="#">Croatian</a></li>
+						<li><a data-lang="fr" href="#">French</a></li>
+						<li><a data-lang="pt" href="#">Portuguese</a></li>
+					</ul>
+				</div>
+			</div>
 			<div class="row" id="create-editions"></div>
 
 		</div>

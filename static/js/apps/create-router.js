@@ -5,11 +5,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/crea
 		routes: {
 		},
 		initialize: function() {
-			// Create/Populate necessary models and collections
-			this.documents = new Collections.Documents();
-			this.documents.bind('add', this.index, this);
-			this.documents.fetch();
-
 			// javascript function for api logout and redirect
 			$("#logout-link").click(function(e) {
 				e.preventDefault();
@@ -30,11 +25,14 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/crea
 					}
 				});
 			});
+
+			this.index();
 		},
-		index: function(model) {
-			new CreateIndex({
-				model: model
-			}).render().$el.appendTo('#create-editions');
+		index: function() {
+			var index = new CreateIndex({
+				el: '#main'
+			});
+			index.render();
 		}
 	});
 	

@@ -469,10 +469,22 @@ label {
   display: inline-block;
   background-color: #1fadad;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  height: 200px;
+  overflow: hidden; }
   .author img {
-    height: 200px; }
+    height: 200px;
+    -webkit-transition: height 0.1s linear;
+    -moz-transition: height 0.1s linear;
+    -o-transition: height 0.1s linear;
+    -ms-transition: height 0.1s linear;
+    transition: height 0.1s linear; }
   .author:after {
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    transition: all 0.1s linear;
     background-image: url(/static/images/glasses.svg);
     background-size: 70px;
     content: '';
@@ -483,11 +495,79 @@ label {
     left: 61px; }
 
 .edition {
-  border: 1px solid #EEE;
   padding: 10px;
-  margin: 5px; }
+  border: 1px solid #EEE;
+  margin-bottom: 10px;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  position: relative; }
+  .edition:hover {
+    text-decoration: none;
+    color: inherit; }
+    .edition:hover .author {
+      background-color: #23c3c3;
+      -webkit-transition: background-color 0.1s linear;
+      -moz-transition: background-color 0.1s linear;
+      -o-transition: background-color 0.1s linear;
+      -ms-transition: background-color 0.1s linear;
+      transition: background-color 0.1s linear; }
+      .edition:hover .author img {
+        height: 220px;
+        -webkit-transition: height 0.1s linear;
+        -moz-transition: height 0.1s linear;
+        -o-transition: height 0.1s linear;
+        -ms-transition: height 0.1s linear;
+        transition: height 0.1s linear; }
+      .edition:hover .author:after {
+        -webkit-transition: all 0.1s linear;
+        -moz-transition: all 0.1s linear;
+        -o-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+        background-size: 79px;
+        width: 79px;
+        height: 26px;
+        top: 81px;
+        left: 66px; }
+    .edition:hover:before {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      content: 'Greek out!';
+      border-radius: 2px;
+      padding: 2px 15px;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #FFF;
+      z-index: 1;
+      -webkit-transition: background-color 0.1s cubic;
+      -moz-transition: background-color 0.1s cubic;
+      -o-transition: background-color 0.1s cubic;
+      -ms-transition: background-color 0.1s cubic;
+      transition: background-color 0.1s cubic; }
+  .edition:before {
+    position: absolute;
+    display: none;
+    right: 20px;
+    top: 0;
+    content: '';
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background-color 0.1s cubic;
+    -moz-transition: background-color 0.1s cubic;
+    -o-transition: background-color 0.1s cubic;
+    -ms-transition: background-color 0.1s cubic;
+    transition: background-color 0.1s cubic; }
   .edition .progress {
     height: 10px;
     border-radius: 0; }
   .edition .progress-bar {
     background-color: #d15241; }
+
+#language-selector {
+  text-align: center; }
+  #language-selector .btn-group {
+    text-align: left; }
+  #language-selector > span {
+    margin-right: 10px; }
