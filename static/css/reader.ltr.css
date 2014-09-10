@@ -494,7 +494,10 @@ label {
     direction: ltr; }
     #reader .page h1 {
       direction: ltr;
-      text-align: center; }
+      text-align: center;
+      font-size: 24px; }
+      #reader .page h1 small {
+        font-size: inherit; }
   #reader .page-content {
     line-height: 3em; }
     #reader .page-content span[lang="grc"] {
@@ -583,6 +586,39 @@ label {
       height: 13px;
       border-radius: 0;
       cursor: pointer; }
+  #reader .comment {
+    position: absolute;
+    left: 30px;
+    line-height: 5px;
+    padding: 10px;
+    border: 2px solid #DDD;
+    border-radius: 3px;
+    text-decoration: none; }
+    #reader .comment:hover {
+      text-decoration: none; }
+      #reader .comment:hover ~ span {
+        background-color: #FCEBD6; }
+    #reader .comment:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 7px solid #dddddd;
+      position: absolute;
+      right: -8px;
+      top: 5px; }
+    #reader .comment:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 7px solid white;
+      position: absolute;
+      right: -5px;
+      top: 5px;
+      z-index: 1; }
 
 .report {
   display: none !important; }
