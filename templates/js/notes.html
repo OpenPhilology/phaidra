@@ -1,11 +1,6 @@
 {% load i18n %}
 <!-- Gets populated with Notes about Greek text -->
-<div class="notes-nav">
-	<a href="#" data-toggle="tooltip" title="{% trans "Preferences" %}"><span class="glyphicon glyphicon-cog"></span></a>
-	<a href="#" data-toggle="tooltip" title="{% trans "Add Annotation" %}"><span class="glyphicon glyphicon-comment"></span></a> 
-	<a href="#" data-toggle="tooltip" title="{% trans "Show Resources" %}"><span class="glyphicon glyphicon-chevron-up"></span></a> 
-</div>
-<p class="intro">{% trans "Hover over a sentence in the text to see available annotations, or to add your own!" %}</p>
+<p class="intro">{% trans "Click a word to see resources for it, or click the comment icon to add your own annotation." %}</p>
 
 <div class="resources">
 	<div class="row">
@@ -57,7 +52,6 @@
 			<h3>{% trans "Other Resources" %}</h3>
 			<ul>
 				<li> <a href="#" class="parse-tree-view">{% trans "View Sentence as Tree" %}</a></li>
-				<li> <a href="#">{% trans "Contribute Annotation" %}</a></li>
 			</ul>
 			<h3>{% trans "Related Grammar Topics" %}</h3>
 			<ul>

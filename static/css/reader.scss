@@ -40,6 +40,11 @@
 		h1 {
 			direction: $dir;
 			text-align: center;
+			font-size: 24px;
+
+			small {
+				font-size: inherit;
+			}
 		}
 	}
 
@@ -164,6 +169,50 @@
 			height: 13px;
 			border-radius: 0;
 			cursor: pointer;
+		}
+	}
+
+	.comment {
+		position: absolute;
+		left: 30px;
+		line-height: 5px;
+		padding: 10px;
+		border: 2px solid #DDD;
+		border-radius: 3px;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+
+			& ~ span {
+				background-color: #FCEBD6;
+			}
+		}
+
+		$border: 7px;
+
+		&:after {
+			content: "";
+			width: 0;
+			height: 0;
+			border-top: $border solid transparent;
+			border-bottom: $border solid transparent;
+			border-left: $border solid #DDD;
+			position: absolute;
+			right: -8px;
+			top: 5px;
+		}
+		&:before {
+			content: "";
+			width: 0;
+			height: 0;
+			border-top: $border solid transparent;
+			border-bottom: $border solid transparent;
+			border-left: $border solid #FFF;
+			position: absolute;
+			right: -5px;
+			top: 5px;
+			z-index: 1;
 		}
 	}
 }

@@ -89,12 +89,10 @@ def aboutus(request):
 
 	return HttpResponse(template.render(context))
 
-def gateway(request):
-	template = loader.get_template('gateway.html')
-	ip = get_client_ip(request)
+def data(request):
+	template = loader.get_template('data.html')
 
 	context = RequestContext(request, {
-		'ip_addr': ip,
 		'email_hash': hashlib.md5(request.user.email).hexdigest() if request.user.is_authenticated() else ''
 	})
 
