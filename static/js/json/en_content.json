@@ -1003,5 +1003,33 @@
 				]
 			}	
 		]
+	},
+	{	
+		"title": "Treebanking",
+		"category": "basics",
+		"thumbnail": "/static/images/tree.png",
+		"modules": [
+			{
+				"title": "Treebanking",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/exercises.html"
+					}
+				]
+			}	
+		]
 	}
 ]
