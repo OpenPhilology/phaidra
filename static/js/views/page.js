@@ -55,13 +55,13 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html', 'uti
 
 			// Update the 'next or previous' page links
 			var that = this;
-			this.$el.find('a').attr('href', function() {
+			this.$el.find('.corner a').attr('href', function() {
 				var cts = that.options.side == 'left' ? that.model.getPrevCTS(that.options.CTS) : that.model.getNextCTS(that.options.CTS); 
 				return '/reader/' + (cts || '');
 			}).tooltip();
 
 			var ref = this.options.CTS.split(':');
-			var title = this.$el.find('h1 a');
+			var title = this.$el.find('.section');
 
 			if (locale === 'fa')
 				title.html(Utils.convertToPersian(ref[ref.length - 1]));
