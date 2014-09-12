@@ -1,24 +1,22 @@
 {% load i18n %}
 <div class="col-md-6">
-		<div class="well">
-			<span lang="grc"><%= word.value %></span> {% trans "from" %} <span lang="grc"><%= word.article || '' %> <%= word.lemma %></span>
-		</div>
-	<p class="resources-header">
-		<span id="parse-vals"> 
-			<a href="#" title="Parse">
-				<strong>{% trans "See Morphology" %} &raquo;</strong><span class="vals" style="display: none">
-					<%= word.pos || '' %>
-					<%= word.case || '' %>
-					<%= word.number || '' %>
-					<%= word.gender || '' %>
-					<%= word.tense || '' %>
-					<%= word.voice || '' %>
-					<%= word.mood || '' %>
-					<%= word.person || '' %>
-				</span>
-			</a>
-		</span>
-	</p>
+	<div class="well">
+		<span lang="grc"><%= word.value %></span> {% trans "from" %} <span lang="grc"><%= word.article || '' %> <%= word.lemma %></span>
+	</div>
+	<span id="parse-vals"> 
+		<a href="#" title="Parse">
+			<strong>{% trans "See Morphology" %} &raquo;</strong><span class="vals" style="display: none">
+				<%= word.pos || '' %>
+				<%= word.case || '' %>
+				<%= word.number || '' %>
+				<%= word.gender || '' %>
+				<%= word.tense || '' %>
+				<%= word.voice || '' %>
+				<%= word.mood || '' %>
+				<%= word.person || '' %>
+			</span>
+		</a>
+	</span>
 </div>
 <div class="col-md-6">
 	<h4>{% trans "Related Grammar Topics" %}</h4>

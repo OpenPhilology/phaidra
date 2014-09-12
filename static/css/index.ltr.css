@@ -242,6 +242,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #1fadad;
     text-decoration: none; }
 
+.nav-pills > li.active > a {
+  background-color: #d15241; }
+  .nav-pills > li.active > a:hover {
+    background-color: #c84230; }
+
+.nav > li > a {
+  padding: 8px 10px; }
+
 label {
   font-weight: normal;
   font-size: 1.2em; }

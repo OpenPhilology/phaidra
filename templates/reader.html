@@ -28,20 +28,33 @@
 		<!-- Container for High-level knowledge viz (auto-appended by js) -->
 	</div>
 
-
-<div class="modal fade">
-  <div class="modal-dialog" style="width: 90%;">
-      <div class="modal-content">
-	        <div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h4 class="modal-title">Parse Tree View</h4>
-			</div>
-			<div class="modal-body">
-				<p><strong>Double click any word node to see its morphological properties.</strong></p>
-				<div data-toggle="daphne"></div>
-			</div>
-		</div><!-- /.modal-content -->
+	<div class="modal fade" id="parse-tree-modal">
+	  <div class="modal-dialog" style="width: 90%;">
+		  <div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Parse Tree View</h4>
+				</div>
+				<div class="modal-body">
+					<p><strong>Double click any word node to see its morphological properties.</strong></p>
+					<div data-toggle="daphne"></div>
+				</div>
+			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+	</div><!-- /.modal -->
+
+	<div class="modal fade" id="alignment-modal">
+	  <div class="modal-dialog">
+		  <div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Aligned Translation</h4>
+				</div>
+				<div class="modal-body">
+					<div data-toggle="morea"></div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 		
 	{% endblock %}

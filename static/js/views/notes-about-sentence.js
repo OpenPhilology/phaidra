@@ -1,9 +1,11 @@
-define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes-about-sentence.html'], function($, _, Backbone, Utils, Template) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes-about-sentence.html', 'daphne', 'morea'], function($, _, Backbone, Utils, Template, Daphne, Morea) { 
 
 	var View = Backbone.View.extend({
 		tagName: 'div', 
 		template: _.template(Template),
 		events: { 
+			'click .parse-tree-view': 'showParseTree',
+			'click .alignment-view': 'showAlignment'
 		},
 		initialize: function(options) {
 			this.options = options;
@@ -16,6 +18,36 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes-a
 				grammar: this.model.getGrammar()
 			}));
 			return this;	
+		},
+		showParseTree: function(e) {
+			e.preventDefault();
+
+			var selectedWord = this.collection.words.findWhere({ selected: true });
+			var sentence = this.collection.words.where({ sentenceCTS: selectedWord.get('sentenceCTS') });
+			var words = sentence.map(function(el, i) {
+				el.attributes.id = el.attributes.tbwid;
+				return el.attributes;
+			});
+
+			new Daphne('[data-toggle="daphne"]', {
+				data: words,
+				mode: 'edit',
+				height: 600,
+				width: 1000,
+				initialScale: 0.9
+			});
+
+			$('#parse-tree-modal').modal('show');
+		},
+		showAlignment: function(e) {
+			e.preventDefault();
+
+			new Morea('[data-toggle="morea"]', {
+				dataUrl: this.model.get('sentence_resource_uri'),
+				mode: 'view'
+			});
+
+			$('#alignment-modal').modal('show');
 		}
 	});
 

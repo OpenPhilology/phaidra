@@ -6,7 +6,6 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 		template: _.template(Template),
 		events: { 
 			'click #reader-menu a': 'navigate',
-			'click .parse-tree-view': 'showParseTree'
 		},
 		initialize: function(options) {
 			this.options = options;	
@@ -14,6 +13,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 
 			// Contains references to our subviews
 			this.views = [];
+			this.currentView = 'about-word';
 		},
 		render: function() {
 			this.$el.html(Template);
@@ -24,6 +24,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 			// 'About' button has span inside, so need to select its parent sometimes
 			e.target = (e.target.tagName === 'A') ? e.target : e.target.parentElement;
 			var target = e.target.dataset.target;
+			this.currentView = target;
 			var els = this.$el.find('div[data-source]');
 
 			$.each(els, function(i, el) {
@@ -37,6 +38,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 			$(e.target.parentElement).addClass('active');
 			this.renderSubview(target);
 		},
+		// TODO: Require each of these views only if requested
 		makeView: function(view, options) {
 			switch (view) {
 				case 'about-word':
@@ -69,6 +71,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 				var options = {
 					el: this.$el.find('div[data-source="' + view + '"]'),
 					model: selected,
+					collection: this.model,
 					langs: _.uniq(_.pluck(selected.get('translations'), 'lang')),
 					lang: this.lang || locale.split('-')[0], 	// Locale is set in base.html, comes from Django. 
 					grammar: selected.getGrammar()
@@ -80,13 +83,12 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 			}.bind(this);
 
 			// Fetch word's details, or if we've fetched them before, simply display
-			if (selected.get('translated'))
-				subrender();
-			else 
-				selected.fetch({ success: subrender });
+			if (selected.get('translated')) subrender();
+			else selected.fetch({ success: subrender });
 
 		},
 		toggleNotes: function(model) {
+			// They're simply hovering over a word
 			if (model.get('hovered') && !model.get('selected') && 
 				(this.model.words.findWhere({ selected: true }) == undefined)) {
 				this.$el.find('.intro').html(
@@ -95,11 +97,10 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 				this.$el.removeClass('expanded');
 				this.$el.find('.notes-nav a').eq(1).attr('title', 'Hide Resources');
 			}
-
 			// This will perform a fetch on the model for full data
-			else if (model.get('selected') && !model.get('translated')) {
+			else if (model.get('selected')) {
 				this.$el.find('.notes-nav a').eq(1).attr('title', gettext('Show Resources'));
-				this.renderSubview('about-word');
+				this.renderSubview(this.currentView);
 			}
 
 		},
@@ -108,27 +109,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 			var selected = this.model.words.findWhere({ selected: true });
 			if (typeof(selected) != 'undefined')
 				selected.set('selected', false);
-		},
-		/*showParseTree: function(e) {
-			e.preventDefault();
-
-			var selectedWord = this.model.words.findWhere({ selected: true });
-			var sentence = this.model.words.where({ sentenceCTS: selectedWord.get('sentenceCTS') });
-			var words = sentence.map(function(el, i) {
-				el.attributes.id = el.attributes.tbwid;
-				return el.attributes;
-			});
-
-			new Daphne('[data-toggle="daphne"]', {
-				data: words,
-				mode: 'edit',
-				height: 600,
-				width: 1000,
-				initialScale: 0.9
-			});
-
-			$('.modal').modal('show');
-		}*/
+		}
 	});
 
 	return View;

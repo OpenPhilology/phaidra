@@ -1,22 +1,25 @@
 {% load i18n %}
 <div class="col-md-6">
 
-	<!-- TODO: Put in translations, refactor this CSS -->
 	<% for (var i = 0; i < langs.length; i++) { %>
-		<a href="#" class="btn btn-link btn-show-trans" data-lang="<%= langs[i] %>" data-toggle="tooltip"><%= langs[i] %></a>
+		<a href="#" class="btn btn-link btn-show-trans" data-lang="<%= langs[i] %>" data-toggle="tooltip"><% print(readableLang(langs[i])); %></a>
 	<% } %>
 
-	<!-- TODO: Probably move this into a JS interaction -->
 	<div class="well">
 		<% var wordsFound = 0; %>
 		<% for (var i = 0; i < word.translations.length; i++) { %>
-			<% if (word.translations[i]["CTS"].indexOf(lang) != -1) { %>
+			<% if (word.translations[i]["CTS"].indexOf(userLang) != -1) { %>
 				<%= word.translations[i]["value"] %>
 				<% wordsFound++ %>
 			<% } %>
 		<% } %>
 		<% if (wordsFound == 0) { %>
-			<em>No Alignment</em>
+			<em>{% trans "No Alignment in"%} <% print(readableLang(userLang)); %></em>
 		<% } %>
 	</div>
+</div>
+<div class="col-md-6">
+	<ul>
+		<li> <a href="#">View other instances of <span lang="grc"><%= word.value %></span></li>
+	</ul>
 </div>

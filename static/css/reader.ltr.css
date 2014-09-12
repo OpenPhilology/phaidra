@@ -501,7 +501,8 @@ label {
     margin-right: 15px;
     background-color: #FFF;
     direction: ltr;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    margin-top: 5px; }
   #reader .page {
     padding: 10px 80px 80px 80px;
     position: relative;
@@ -629,6 +630,9 @@ label {
   display: none !important; }
 
 #reader-menu {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   border-bottom: 1px dotted #DDD;
-  margin-bottom: 10px; }
+  margin-bottom: 15px;
+  font-size: 12px; }
+  #reader-menu .glyphicon {
+    margin-right: 5px; }

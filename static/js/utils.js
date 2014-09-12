@@ -53,6 +53,18 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 	Utils.makeHint = function(smyth, mistake) {
 		// Use smyth ref and mistake made to give reasonable hints	
 	};
+	Utils.getReadableLang = function(abbreviation) {
+		var langs = {
+			'grc': gettext('Ancient Greek'),
+			'fa': gettext('Farsi'),
+			'en': gettext('English'),
+			'hr': gettext('Croatian'), 
+			'pr': gettext('Portuguese'),
+			'fr': gettext('French')
+		};
+
+		return langs[abbreviation];
+	};
 
 	Utils.fireEvent = function(el, type) {
 		if (el.fireEvent) {

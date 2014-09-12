@@ -208,7 +208,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				this.set('direction', 'ltr');
 
 			// Give our document a human-readable language name
-			this.set('readable_lang', this.getReadableLang(this.get('lang')));
+			this.set('readable_lang', Utils.getReadableLang(this.get('lang')));
 
 			// Split all the words and add them to the collection.
 			for (var i = 0; i < response.sentences.length; i++) {
@@ -225,17 +225,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				}));
 			}
 		},
-		// TODO: Localize this for non-English
-		getReadableLang: function(abbreviation) {
-			var langs = {
-				'grc': 'Ancient Greek',
-				'fas': 'Farsi',
-				'eng': 'English'
-			};
-
-			return langs[abbreviation];
-		},
-		// TODO: Merge these functions, make them aware of text direction
 		getNextCTS: function(sentenceCTS) {
 
 			var current_resource_uri = this.words.findWhere({

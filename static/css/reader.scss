@@ -40,6 +40,7 @@
 		background-color: #FFF;
 		direction: $dir;
 		margin-bottom: 5px;
+		margin-top: 5px;
 	}
 
 	.page {
@@ -220,7 +221,12 @@
 	display: none !important;
 }
 #reader-menu {
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 	border-bottom: 1px dotted #DDD;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
+	font-size: 12px;
+
+	.glyphicon {
+		margin-right: 5px;
+	}
 }
