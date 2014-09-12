@@ -109,7 +109,7 @@
 
 			&.expanded {
 				height: auto;
-				min-height: 75px;
+				min-height: 260px;
 				max-height: 300px;
 				overflow: auto;
 				@include animate(all, .5s, linear, 0, 1);
@@ -228,5 +228,19 @@
 
 	.glyphicon {
 		margin-right: 5px;
+	}
+}
+.sentence-resources {
+	text-align: center;
+
+	.glyphicon {
+		display: block;
+		margin: 5px;
+		font-size: 24px;
+		color: darken($color-pri-two, 8%);
+	}
+
+	a:hover, a:hover span {
+		color: darken($color-pri-two, 12%);
 	}
 }

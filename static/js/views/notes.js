@@ -12,11 +12,12 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 			this.model.words.bind('change:selected change:hovered', this.toggleNotes, this);
 
 			// Contains references to our subviews
-			this.views = [];
 			this.currentView = 'about-word';
+			this.views = [];
 		},
 		render: function() {
 			this.$el.html(Template);
+			this.$el.find('a').tooltip({ container: 'body' });
 			return this;	
 		},
 		navigate: function(e) {
@@ -77,7 +78,21 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', '
 					grammar: selected.getGrammar()
 				};
 
-				this.makeView(view, options).render();
+				// TODO: Find out what the best way to do this is -- currently, when creating new views, Backbone
+				// prerves event handles from views that have been overwritten, and re-binds on each creation.
+				if (this.views[view]) {
+					this.views[view].options = options;
+					this.views[view].model = options.model;
+					this.views[view].collection = options.collection;
+					this.views[view].render();
+				}
+				else {
+					this.views[view] = this.makeView(view, options).render();
+				}
+				// Update the numbers in the title components
+				//this.$el.find('a[data-target="about-sentence"]').html(gettext('Sentence') + ' (' + options.langs.length + ')');
+
+				// Open it up
 				this.$el.addClass('expanded');
 
 			}.bind(this);

@@ -14,9 +14,11 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes-a
 			this.$el.html(this.template({ 
 				word: this.model.attributes,
 				langs: this.options.langs,
+				readableLang: Utils.getReadableLang,
 				lang: this.options.lang || locale.split('-')[0],
 				grammar: this.model.getGrammar()
 			}));
+			this.$el.find('a').tooltip();
 			return this;	
 		},
 		showParseTree: function(e) {
@@ -28,6 +30,8 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes-a
 				el.attributes.id = el.attributes.tbwid;
 				return el.attributes;
 			});
+
+			console.log("show parse tree is called");
 
 			new Daphne('[data-toggle="daphne"]', {
 				data: words,
@@ -41,6 +45,10 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes-a
 		},
 		showAlignment: function(e) {
 			e.preventDefault();
+			console.log('show alignment called');
+
+			// HACK til I fix the plugin
+			$('[data-toggle="morea"]').html('');
 
 			new Morea('[data-toggle="morea"]', {
 				dataUrl: this.model.get('sentence_resource_uri'),

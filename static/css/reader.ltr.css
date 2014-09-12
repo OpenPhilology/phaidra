@@ -549,7 +549,7 @@ label {
         padding: 6px; }
       #reader .notes-container .notes.expanded {
         height: auto;
-        min-height: 75px;
+        min-height: 260px;
         max-height: 300px;
         overflow: auto;
         -webkit-animation: all 0.5s linear 0 1;
@@ -636,3 +636,13 @@ label {
   font-size: 12px; }
   #reader-menu .glyphicon {
     margin-right: 5px; }
+
+.sentence-resources {
+  text-align: center; }
+  .sentence-resources .glyphicon {
+    display: block;
+    margin: 5px;
+    font-size: 24px;
+    color: #198a8a; }
+  .sentence-resources a:hover, .sentence-resources a:hover span {
+    color: #167979; }
