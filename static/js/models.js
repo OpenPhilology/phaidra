@@ -323,7 +323,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				return this.get('grammar');
 
 			// Go through Smyth and get the relevant topics
-			var matches = _.filter(Utils.Smyth[0], function(entry, key) {
+			var matches = _.filter(Utils.Smyth, function(entry, key) {
 
 				// If the query isn't relevant to figuring out grammar topics
 				if (!entry.query)

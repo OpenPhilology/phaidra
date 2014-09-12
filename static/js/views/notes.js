@@ -7,6 +7,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes.h
 		events: { 
 			'click a > .glyphicon-chevron-up': 'toggleNotes',
 			'click #parse-vals': 'toggleParse',
+			'click #reader-menu a': 'navigate',
 			'click .btn-show-trans': 'showTranslation',
 			'click .parse-tree-view': 'showParseTree'
 		},
@@ -20,14 +21,14 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes.h
 		render: function() {
 			return this;	
 		},
+		navigate: function(e) {
+			console.log(e.target);
+		},
 		renderDetails: function() {
-			
-
 			var selected = this.model.words.findWhere({ selected: true });
 			var that = this;
 
 			var populate = function() {
-				that.$el.removeClass('loading');
 
 				// Give the user the definite article with the definition
 				if (selected.get('pos') == 'noun') {
@@ -50,7 +51,6 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes.h
 				populate();
 			}
 			else {
-				this.$el.addClass('loading');
 				selected.fetch({
 					success: function() { 
 						populate();
@@ -64,8 +64,8 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes.h
 			var link = this.$el.find('#parse-vals');
 
 			link.find('.vals').toggle();
-			var toggle = link.find('.vals').is(':visible') ? 'Hide ' : '';
-			link.find('strong').html(toggle + 'Parse');
+			var toggle = link.find('.vals').is(':visible') ? 'Hide ' : 'See ';
+			link.find('strong').html(toggle + gettext('Morphology') + ' &raquo;');
 		},
 		toggleNotes: function(model) {
 			if (model.get('hovered') && !model.get('selected') && 

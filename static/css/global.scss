@@ -200,6 +200,16 @@ h1, h2, h3, h4, h5, h6 {
 		text-decoration: none;
 	}
 }
+.nav-pills > li.active > a {
+	background-color: $color-pri-one;
+
+	&:hover {
+		background-color: darken($color-pri-one, 5%);
+	}
+}
+.nav > li > a{
+	padding: 8px 10px;
+}
 label {
 	font-weight: normal;
 	font-size: 1.2em;

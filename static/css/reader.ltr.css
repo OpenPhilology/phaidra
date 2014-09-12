@@ -242,6 +242,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #1fadad;
     text-decoration: none; }
 
+.nav-pills > li.active > a {
+  background-color: #d15241; }
+  .nav-pills > li.active > a:hover {
+    background-color: #c84230; }
+
+.nav > li > a {
+  padding: 8px 10px; }
+
 label {
   font-weight: normal;
   font-size: 1.2em; }
@@ -483,10 +491,17 @@ label {
   #reader .col-md-6, #reader .col-md-12 {
     padding-left: 0;
     padding-right: 0; }
+  #reader h1, #reader h2, #reader h3, #reader h4, #reader h5, #reader h6 {
+    margin-top: 0; }
+  #reader #parse-vals a {
+    text-decoration: none; }
+    #reader #parse-vals a:hover {
+      text-decoration: none; }
   #reader .well {
     margin-right: 15px;
     background-color: #FFF;
-    direction: ltr; }
+    direction: ltr;
+    margin-bottom: 5px; }
   #reader .page {
     padding: 10px 80px 80px 80px;
     position: relative;
@@ -526,11 +541,6 @@ label {
       -moz-animation: all 0.5s linear 0 1;
       -o-animation: all 0.5s linear 0 1;
       animation: all 0.5s linear 0 1; }
-      #reader .notes-container .notes .resources-header span {
-        margin-left: 20px; }
-        #reader .notes-container .notes .resources-header span[lang="grc"] {
-          margin-left: 0px !important;
-          margin-right: 0px !important; }
       #reader .notes-container .notes .resources-header .selected {
         background-color: #f8d3a7 !important;
         border: 0;
@@ -563,13 +573,8 @@ label {
       #reader .notes-container .notes .intro {
         display: block; }
     #reader .notes-container span[lang="grc"], #reader .notes-container *[lang="grc"], #reader .notes-container a[lang="grc"] {
-      border: 1px solid #EEE;
-      padding: 2px;
-      border-radius: 3px;
-      background-color: #FFF;
       margin-left: 3px;
-      margin-right: 3px;
-      font-family: 'Cambria', 'Times New Romans' !important; }
+      margin-right: 3px; }
     #reader .notes-container .notes-nav {
       position: absolute;
       right: 5px;
@@ -622,3 +627,8 @@ label {
 
 .report {
   display: none !important; }
+
+#reader-menu {
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #DDD;
+  margin-bottom: 10px; }

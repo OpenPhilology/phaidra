@@ -242,6 +242,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #1fadad;
     text-decoration: none; }
 
+.nav-pills > li.active {
+  background-color: #373e4e; }
+
+.nav > li > a {
+  padding: 8px 10px; }
+
 label {
   font-weight: normal;
   font-size: 1.2em; }
