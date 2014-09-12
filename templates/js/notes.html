@@ -6,81 +6,19 @@
 	<div class="row">
 		<div class="col-md-12">
 			<ul class="nav nav-pills" id="reader-menu">
-				<li class="active"><a href="#">About <span lang="grc"><%= word.value %></span></a></li>
-				<li><a href="#">Translations</a></li>
-				<li><a href="#">About this Sentence</a></li>
-				<li><a href="#">User Annotations</a></li>
-				<li><a href="#">Translate!</a></li>
-				<li><a href="#">Build Parse Tree!</a></li>
+				<li class="active"><a href="#" data-target="about-word">Word</a></li>
+				<li><a href="#" data-target="translations">Translations</a></li>
+				<li><a href="#" data-target="about-sentence">Sentence</a></li>
+				<li><a href="#" data-target="user-annotations">User Annotations</a></li>
+				<li><a href="#" data-target="translate">Translate!</a></li>
+				<li><a href="#" data-target="build-parse-tree">Build Parse Tree!</a></li>
 			</ul>
 		</div>
 	</div>
-	<div class="row" id="section-about-word">
-		<div class="col-md-6">
-				<div class="well">
-					<span lang="grc"><%= word.value %></span> {% trans "comes from" %} <span lang="grc"><%= word.article || '' %> <%= word.lemma %></span>
-				</div>
-			<p class="resources-header">
-				<span id="parse-vals"> 
-					<a href="#" title="Parse">
-						<strong>{% trans "See Morphology" %} &raquo;</strong><span class="vals" style="display: none">
-							<%= word.pos || '' %>
-							<%= word.case || '' %>
-							<%= word.number || '' %>
-							<%= word.gender || '' %>
-							<%= word.tense || '' %>
-							<%= word.voice || '' %>
-							<%= word.mood || '' %>
-							<%= word.person || '' %>
-						</span>
-					</a>
-				</span>
-			</p>
-		</div>
-		<div class="col-md-6">
-			<h4>{% trans "Related Grammar Topics" %}</h4>
-			<ul>
-			<% if (grammar.length > 0) { %>
-				<% _.each(grammar, function(entry, index) { %>
-					<% if (index < 5) { %>
-						<li><a href="/grammar/<%= entry.key %>"><%= entry.title %></a></li>
-					<% } %>
-				<% }); %>
-			<% } else { %>
-				<li><em>{% trans "None found" %}</em></li>
-			<% } %>
-			</ul>
-		</div>
-	</div>
-	<div class="row" id="section-translation" style="display: none">
-		<div class="col-md-6">
-
-			<!-- TODO: Probably move this into a JS interaction -->
-			<div class="well" style="display: inline-block">
-				<% var wordsFound = 0; %>
-				<% for (var i = 0; i < word.translations.length; i++) { %>
-					<% if (word.translations[i]["CTS"].indexOf(lang) != -1) { %>
-						<%= word.translations[i]["value"] %>
-						<% wordsFound++ %>
-					<% } %>
-				<% } %>
-				<% console.log(wordsFound) %>
-				<% if (wordsFound == 0) { %>
-					<em>No Alignment</em>
-				<% } %>
-			</div>
-
-			<!-- TODO: Put in translations, refactor this CSS -->
-			<a href="#" class="btn btn-link btn-show-trans" data-lang="en" data-toggle="tooltip">{% trans "English" %}</a> 
-			<a href="#" class="btn btn-link btn-show-trans" data-lang="fa" data-toggle="tooltip">{% trans "Farsi" %}</a>
-		</div>
-	</div>
-	<div class="row" id="section-about-sentence" style="display: none">
-		<div class="col-md-6">
-			<h3>{% trans "Other Resources" %}</h3>
-			<ul>
-				<li> <a href="#" class="parse-tree-view">{% trans "View Sentence as Tree" %}</a></li>
-			</ul>
-		</div>
-	</div>
+	<div class="row" data-source="about-word"></div>
+	<div class="row" data-source="translations"></div>
+	<div class="row" data-source="about-sentence"></div>
+	<div class="row" data-source="translate"></div>
+	<div class="row" data-source="user-annotations"></div>
+	<div class="row" data-source="build-parse-tree"></div>
 </div>
