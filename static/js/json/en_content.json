@@ -407,7 +407,9 @@
 		]
 	},
 	{
-		"title": "Diacritics & Dipthongs",
+		"title": "Diacritics and Dipthongs",
+		"thumbnail": "/static/images/icon_grk_parthenon.png",
+		"category": "verbs",
 		"modules": [
 			{	"title": "Diacritics and Dipthongs",
 				"slides": [
@@ -739,7 +741,6 @@
 	},
 	{	
 		"title": "Introduction to Verbs",
-		"thumbnail": "/static/images/icon_grk_parthenon.png",
 		"category": "verbs",
 		"modules": [
 			{
@@ -873,6 +874,7 @@
 	},
 	{	
 		"title": "Adjectives: First and Second Declension",
+		"category": "nouns",
 		"modules": [
 			{
 				"title": "Adjectives: First and Second Declension",
@@ -997,6 +999,33 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Treebanking",
+		"category": "basics",
+		"modules": [
+			{
+				"title": "Treebanking",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/exercises.html"
 					}
 				]
 			}	

@@ -1,0 +1,27 @@
+{% load i18n %}
+<div class="col-md-6">
+
+	<% for (var i = 0; i < langs.length; i++) { %>
+		<a href="#" class="btn btn-link btn-show-trans" data-lang="<%= langs[i] %>" data-toggle="tooltip"><% print(readableLang(langs[i])); %></a>
+	<% } %>
+
+	<div class="well">
+		<% var wordsFound = 0; %>
+		<% for (var i = 0; i < word.translations.length; i++) { %>
+			<% if (word.translations[i]["CTS"].indexOf(userLang) != -1) { %>
+				<%= word.translations[i]["value"] %>
+				<% wordsFound++ %>
+			<% } %>
+		<% } %>
+		<% if (wordsFound == 0) { %>
+			<em>{% trans "No Alignment in"%} <% print(readableLang(userLang)); %></em>
+		<% } %>
+	</div>
+	<p>Click <strong>Sentence</strong> above to see translations for the entire sentence.</p>
+</div>
+<div class="col-md-6">
+	<hr>
+	<ul>
+		<li> <a href="#">View other instances of <span lang="grc"><%= word.value %></span></li>
+	</ul>
+</div>

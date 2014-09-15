@@ -54,7 +54,7 @@ urlpatterns = patterns('',
 	url(r'^profile/', 'web.views.profile'),
 	url(r'^login/', 'web.views.login'),
 	url(r'^aboutus/', 'web.views.aboutus'),
-	url(r'^gateway/', 'web.views.gateway'),
+	url(r'^data/', 'web.views.data'),
 
 	# JS Localization
 	url(r'^templates/(?P<path>\w+)', 'web.views.static'),

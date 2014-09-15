@@ -1,0 +1,16 @@
+{% load i18n %}
+<% var l = langs.map(function(l) { return readableLang(l); }); var lStr = l.join(', '); %>
+<div class="col-md-4 sentence-resources">
+	<a href="#" class="btn btn-link alignment-view"><span class="glyphicon glyphicon-align-center"></span> {% trans "See Aligned Translations" %} (<% print(l.length); %>)</a>
+	<p>
+		You can read this sentence aligned to: <strong><%= lStr %></strong>. <br>
+		<a href="#" class="btn btn-default">Add Your Translation</a>
+	</p>
+</div>
+
+<div class="col-md-4 sentence-resources">
+	<a href="#" class="btn btn-link parse-tree-view"><span class="glyphicon glyphicon-leaf"></span> {% trans "View Sentence as Tree" %}</a>
+	<p>See which words agree with and depend on one another in this sentence.<br>
+		<a href="#" class="btn btn-default">Add Your Tree</a>
+	</p>
+</div>

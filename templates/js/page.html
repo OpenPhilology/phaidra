@@ -8,16 +8,24 @@
 	</div>
 
 	<!-- Page header -->
-	<h1><%= work %> <small>{% trans "by" %} <%= author %>{% trans "," %} <a href="#" data-toggle="tooltip" title="{% trans 'Jump to another section' %}">section</a></small></h1>
+	<h1>
+		<span lang="<%= lang %>"><%= work %></span> 
+		<small>
+			{% trans "by" %} <span lang="<%= lang %>"><%= author %></span>
+			<a class="section" href="#" data-toggle="tooltip" title="{% trans 'Jump to another section' %}">section</a>
+		</small>
+	</h1> 
 	<hr>
 
 	<!-- Greek goes here! -->
 	<span class="page-content">
+		<a href="#" class="comment" data-toggle="tooltip" title="{% trans 'Annotate' %}">+</a>
 		<% _.each(words, function(word) { %>
 			<% if (word.get('sentenceCTS') == cts) { %>
 				<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('wordCTS') %>" class="<% if (word.get('value').match(/[\.,-\·\/#!$%\^&\*;:{}=\-_`~()]/)) print('punct'); %>"><%= word.get('value') %></span> 
 			<% } %>
 		<% }); %>
+		<Hr>
 	</span>
 
 </div>

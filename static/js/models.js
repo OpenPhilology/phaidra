@@ -14,8 +14,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			})[0]);
 			this.set("locale", locale);
 			this.set("language", locale.split('-')[0]);
-
-			console.log(this);
 		}
 	});
 
@@ -208,7 +206,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				this.set('direction', 'ltr');
 
 			// Give our document a human-readable language name
-			this.set('readable_lang', this.getReadableLang(this.get('lang')));
+			this.set('readable_lang', Utils.getReadableLang(this.get('lang')));
+			this.set('translations', response.translations);
 
 			// Split all the words and add them to the collection.
 			for (var i = 0; i < response.sentences.length; i++) {
@@ -225,22 +224,19 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				}));
 			}
 		},
-		// TODO: Localize this for non-English
-		getReadableLang: function(abbreviation) {
-			var langs = {
-				'grc': 'Ancient Greek',
-				'fas': 'Farsi',
-				'eng': 'English'
-			};
+		getNextCTS: function(CTS) {
+			var current_resource_uri = '';
 
-			return langs[abbreviation];
-		},
-		// TODO: Merge these functions, make them aware of text direction
-		getNextCTS: function(sentenceCTS) {
+			// If they're giving us a document or work-level CTS, derive the sentence-level
+			if (CTS.split(':')[4].split('.').length !== 3) {
+				current_resource_uri = this.words.at(1).get('sentence_resource_uri');
+			}
+			else {
+				var current_resource_uri = this.words.findWhere({
+					sentenceCTS: CTS
+				}).get('sentence_resource_uri');
+			}
 
-			var current_resource_uri = this.words.findWhere({
-				sentenceCTS: sentenceCTS
-			}).get('sentence_resource_uri');
 			var index = this.get('sentences').indexOf(current_resource_uri) + 1;
 			var nextPage = this.words.findWhere({
 				sentence_resource_uri: this.get('sentences')[index]
@@ -300,6 +296,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		}
 	});
 
+	Models.UserDocument = _.extend(Models.Document);
+
 	Models.Word = Backbone.Model.extend({
 		defaults: {
 			'modelName': 'word',
@@ -323,7 +321,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				return this.get('grammar');
 
 			// Go through Smyth and get the relevant topics
-			var matches = _.filter(Utils.Smyth[0], function(entry, key) {
+			var matches = _.filter(Utils.Smyth, function(entry, key) {
 
 				// If the query isn't relevant to figuring out grammar topics
 				if (!entry.query)

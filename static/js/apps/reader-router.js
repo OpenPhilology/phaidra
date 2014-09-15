@@ -1,49 +1,34 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/reader'], function($, _, Backbone, Models, Collections, ReaderView) { 
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/reader', 'views/library'], function($, _, Backbone, Models, Collections, ReaderView, LibraryView) { 
 
 	var Router = {};
 	Router.Router = Backbone.Router.extend({
 		routes: {
 			"reader/:cts": "updateReader",
-			"reader/": "showReader",
+			"reader/": "showLibrary",
 		},
 		initialize: function() {
-			// Create/Populate necessary models and collections
-
-			// javascript function for api logout and redirect
-			$("#logout-link").click(function(e) {
-				e.preventDefault();
-				var data = {
-					"format" : "json"
-				};
-				$.ajax({
-					url: '/api/v1/user/logout/',
-					type: 'GET',
-					data: data,
-					contentType: 'application/json; charset=utf-8', 
-					success: function(response_text) {
-						alert("You are logging out.");
-						window.location.assign("/home/");	
-					},
-					error: function(response_text) {
-						alert(response_text);
-					}
-				});
-			});
 		},
+		showLibrary: function() {
+			if (!this.library_view)
+				this.library_view = new LibraryView({ el: '#library' }).render();
 
-		// Reader Routes
-		showReader: function() {
-			this.updateReader(undefined);
+			this.library_view.$el.show();
+
+			if (this.reader_view) 
+				this.reader_view.$el.hide();
+
 		},
 		updateReader: function(CTS) {
-			if (!this.reader_view) {
-				this.reader_view = new ReaderView({ 
-					el: '#reader', 
-					CTS: CTS 
-				}).render();
-			}
-			else {
+			if (!this.reader_view) 
+				this.reader_view = new ReaderView({ el: '#reader', CTS: CTS }).render();
+			else
 				this.reader_view.turnToPage(CTS);
+
+			this.reader_view.$el.show();
+
+			// Hide the library if we're coming from there
+			if (this.library_view) {
+				this.library_view.$el.hide();
 			}
 		}
 	});

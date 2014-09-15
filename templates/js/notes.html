@@ -1,76 +1,24 @@
 {% load i18n %}
 <!-- Gets populated with Notes about Greek text -->
-<div class="notes-nav">
-	<a href="#" data-toggle="tooltip" title="{% trans "Preferences" %}"><span class="glyphicon glyphicon-cog"></span></a>
-	<a href="#" data-toggle="tooltip" title="{% trans "Add Annotation" %}"><span class="glyphicon glyphicon-comment"></span></a> 
-	<a href="#" data-toggle="tooltip" title="{% trans "Show Resources" %}"><span class="glyphicon glyphicon-chevron-up"></span></a> 
-</div>
-<p class="intro">{% trans "Hover over a sentence in the text to see available annotations, or to add your own!" %}</p>
+<p class="intro">{% trans "Click a word to see resources for it, or click the comment icon to add your own annotation." %}</p>
 
 <div class="resources">
 	<div class="row">
-		<div class="col-md-6">
-			<p class="resources-header">
-				<span lang="grc" class="selected"><%= word.value %></span>
-				<span>
-					{% trans "from" %} <span lang="grc"><%= word.article || '' %> <%= word.lemma %></span>
-				</span>
-				<span id="parse-vals"> 
-					<a href="#" class="btn btn-link" title="Parse">
-						<strong>{% trans "Parse" %}</strong><span class="vals" style="display: none">
-							<%= word.pos || '' %>
-							<%= word.case || '' %>
-							<%= word.number || '' %>
-							<%= word.gender || '' %>
-							<%= word.tense || '' %>
-							<%= word.voice || '' %>
-							<%= word.mood || '' %>
-							<%= word.person || '' %>
-						</span>
-					</a>
-				</span>
-			</p>
-			<!-- TODO: Put in translations, refactor this CSS -->
-			<h3 style="display: inline-block">{% trans "Translations" %}</h3> 
-
-			<a href="#" class="btn btn-link btn-show-trans" data-lang="en" data-toggle="tooltip">{% trans "English" %}</a> 
-			<a href="#" class="btn btn-link btn-show-trans" data-lang="fa" data-toggle="tooltip">{% trans "Farsi" %}</a>
-
-			<!-- TODO: Probably move this into a JS interaction -->
-			<div class="well">
-				<% var wordsFound = 0; %>
-				<% console.log(word.translations.length) %>
-				<% for (var i = 0; i < word.translations.length; i++) { %>
-					<% if (word.translations[i]["CTS"].indexOf(lang) != -1) { %>
-						<%= word.translations[i]["value"] %>
-						<% wordsFound++ %>
-					<% } %>
-				<% } %>
-				<% console.log(wordsFound) %>
-				<% if (wordsFound == 0) { %>
-					<em>No Alignment</em>
-				<% } %>
-			</div>
-
-		</div>
-		<div class="col-md-6">
-			<h3>{% trans "Other Resources" %}</h3>
-			<ul>
-				<li> <a href="#" class="parse-tree-view">{% trans "View Sentence as Tree" %}</a></li>
-				<li> <a href="#">{% trans "Contribute Annotation" %}</a></li>
-			</ul>
-			<h3>{% trans "Related Grammar Topics" %}</h3>
-			<ul>
-			<% if (grammar.length > 0) { %>
-				<% _.each(grammar, function(entry, index) { %>
-					<% if (index < 5) { %>
-						<li><a href="/grammar/<%= entry.key %>"><%= entry.title %></a></li>
-					<% } %>
-				<% }); %>
-			<% } else { %>
-				<li><em>{% trans "None found" %}</em></li>
-			<% } %>
+		<div class="col-md-12">
+			<ul class="nav nav-pills" id="reader-menu">
+				<li class="active"><a data-toggle="tooltip" title="Word's root, morphology, and related grammar" href="#" data-target="about-word"><span class="glyphicon glyphicon-book"></span> Grammar</a></li>
+				<li><a data-toggle="tooltip" title="Verified translations for this word" href="#" data-target="translations"><span class="glyphicon glyphicon-bookmark"></span> Translations</a></li>
+				<li><a data-toggle="tooltip" title="Full sentence aligned to modern languages and as a parse tree" href="#" data-target="about-sentence"><span class="glyphicon glyphicon-align-left"></span> Sentence</a></li>
+				<li><a data-toggle="tooltip" title="Translations and trees contributed by users" href="#" data-target="user-annotations"><span class="glyphicon glyphicon-comment"></span> User Annotations</a></li>
+				<li><a data-toggle="tooltip" title="Add your own translation of this sentence!" href="#" data-target="translate"><span class="glyphicon glyphicon-pencil"></span> Translate this Sentence!</a></li>
+				<li><a data-toggle="tooltip" title="Build this sentence as a parse tree!" href="#" data-target="build-parse-tree"><span class="glyphicon glyphicon-leaf"></span> Build this Parse Tree!</a></li>
 			</ul>
 		</div>
 	</div>
+	<div class="row" data-source="about-word"></div>
+	<div class="row" data-source="translations"></div>
+	<div class="row" data-source="about-sentence"></div>
+	<div class="row" data-source="translate"></div>
+	<div class="row" data-source="user-annotations"></div>
+	<div class="row" data-source="build-parse-tree"></div>
 </div>

@@ -16,8 +16,20 @@
 
 	{% block content %}
 
+	<div id="library" style="display: none">
+		<div class="row">
+			<div class="col-md-9 col-md-offset-1">
+				<h1>Ancient Geek Library</h1>
+				<p>Choose a work to read!</p>
+
+				<!-- Books in the Library go here. -->
+				<div class="row editions"></div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Container for Reader -->
-	<div id="reader">
+	<div id="reader" style="display: none">
 		<!-- Container for Pages -->
 		<div class="row page-container">
 		</div>
@@ -28,21 +40,52 @@
 		<!-- Container for High-level knowledge viz (auto-appended by js) -->
 	</div>
 
-
-<div class="modal fade">
-  <div class="modal-dialog" width="90%">
-      <div class="modal-content">
-	        <div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h4 class="modal-title">Parse Tree</h4>
-			</div>
-			<div class="modal-body" style="text-align: center"><div data-toggle="daphne"></div></div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
-			</div>
-		</div><!-- /.modal-content -->
+	<div class="modal fade" id="personal-edition">
+	  <div class="modal-dialog" style="width: 90%;">
+		  <div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Create a new Personal Edition</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						As you read books on AncientGeek, you can add notes, translations, parse trees, and more. These are all compiled together in your own, personal edition.
+					</p>
+					<p class="info">
+						<img src="/static/images/tree-loader.gif">
+					</p>
+				</div>
+			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+	</div><!-- /.modal -->
+
+	<div class="modal fade" id="parse-tree-modal">
+	  <div class="modal-dialog" style="width: 90%;">
+		  <div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Parse Tree View</h4>
+				</div>
+				<div class="modal-body">
+					<p><strong>Double click any word node to see its morphological properties.</strong></p>
+					<div data-toggle="daphne"></div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<div class="modal fade" id="alignment-modal">
+	  <div class="modal-dialog" style="width: 90%;">
+		  <div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Aligned Translation</h4>
+				</div>
+				<div class="modal-body">
+					<div data-toggle="morea"></div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 		
 	{% endblock %}

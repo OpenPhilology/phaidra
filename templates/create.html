@@ -3,7 +3,7 @@
 
 {# Determine which CSS file to load #}
 {% block css %}
-	{% with 'global' as css_file %}
+	{% with 'create' as css_file %}
 		{{ block.super }}
 	{% endwith %}
 {% endblock %}
@@ -23,45 +23,34 @@
 			window.location.replace('/login?url=' + window.location.pathname);
 		</script>
 	{% else %}
-		<div class="col-md-7 col-md-offset-1" style="background-color: rgba(255, 255, 255, 0.8)">
+		<div class="col-md-10 col-md-offset-1" style="background-color: rgba(255, 255, 255, 0.8)">
 			<h1>{% trans "Help Create Digital Editions" %}</h1>
 			<p>
 				{% trans "You can help create a digital edition of a Classical work, no matter what skill level you're at. You'll be improving your Ancient Greek and contributing to Open Data at the same time!" %}
 			</p>
 			<hr>
-			<h2>{% trans "Digital Editions in Progress" %}</h2>
-			<p>
-				Click the title of the work to view its contents. You can then contribute a translation, align an existing translation, or treebank a sentence.
-			</p>
+			<div class="lead" id="language-selector">
+				<span>I speak</span>
 
-			<h3><em>"Crito"</em> <small>(Greek into German)</small></h3>
-			<div class="progress">
-				<div class="progress-bar progress-bar-info" style="width: 33%" data-toggle="tooltip" title="100% Translated"></div>
-				<div class="progress-bar progress-bar-syntax" style="width: 11%" data-toggle="tooltip" title="33% Aligned"></div>
-				<div class="progress-bar progress-bar-success" style="width: 11%" data-toggle="tooltip" title="33% Treebanked"></div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle">
+						All Languages
+					</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a data-lang="en" href="#" class="active">English</a></li>
+						<li><a data-lang="fa" href="#">Farsi</a></li>
+						<li><a data-lang="hr" href="#">Croatian</a></li>
+						<li><a data-lang="fr" href="#">French</a></li>
+						<li><a data-lang="pt" href="#">Portuguese</a></li>
+					</ul>
+				</div>
 			</div>
-			<span>3 Contributors"</span>
+			<div class="row" id="create-editions"></div>
 
-			<hr>
-
-		</div>
-		<div class="col-md-3">
-			<h3>Suggestions for You</h3>
-			<div class="well">
-				<p>Can you align these two sentences?</p>
-				<p>Sent. A</p>
-				<p>Sent. B</p>
-
-				<a href="#" class="btn btn-default">Align</a> &nbsp; <a href="#">Suggest Another</a>
-			</div>
-
-			<hr>
-
-			<h3>{% trans "Your Contributions" %}</h3>
-			<strong>Thuc</strong><br>
-			<ul style="list-style-type: none; padding-left: 0">
-				<li><a href="#">1.90</a> &nbsp;&nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-up"></span> 20</a> &nbsp; <a href="#"><span class="glyphicon glyphicon-chevron-down"></span> 1</a> &nbsp; Translation" <span class="label label-success">Accepted</span></li>
-			</ul>
 		</div>
 	{% endif %}
 

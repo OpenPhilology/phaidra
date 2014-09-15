@@ -18,8 +18,10 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html', 'uti
 			this.model.on('populated', this.reRender, this);
 			this.model.words.on('change:selected', this.toggleHighlight, this); 
 
-			if (this.options.CTS == undefined) {
-				this.options.CTS = this.model.words.at(0).get('sentenceCTS');
+			// If we've been given a too-high-level CTS, derive the sentence
+			if (this.options.CTS.split(':')[4].split('.').length !== 3) {
+				var index = this.options.side === 'left' ? 0 : 1;
+				this.options.CTS = this.model.words.at(index).get('sentenceCTS');
 			}
 
 			this.model.populate(this.options.CTS);
@@ -55,13 +57,13 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html', 'uti
 
 			// Update the 'next or previous' page links
 			var that = this;
-			this.$el.find('a').attr('href', function() {
+			this.$el.find('.corner a').attr('href', function() {
 				var cts = that.options.side == 'left' ? that.model.getPrevCTS(that.options.CTS) : that.model.getNextCTS(that.options.CTS); 
 				return '/reader/' + (cts || '');
 			}).tooltip();
 
 			var ref = this.options.CTS.split(':');
-			var title = this.$el.find('h1 a');
+			var title = this.$el.find('.section');
 
 			if (locale === 'fa')
 				title.html(Utils.convertToPersian(ref[ref.length - 1]));

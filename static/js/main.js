@@ -41,7 +41,5 @@ require(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap'], function($, _, 
 					activateBootstrap();
 				});
 		}
-
-
 	});
 });

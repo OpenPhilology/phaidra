@@ -27,7 +27,7 @@ $color-pri-two-lighter: #56C7C7;
 $color-pri-three: #523D5B;		// Purple
 
 $color-sec-one: #931926;		// Deep red
-$color-sec-two: #4E6087;		// Indigo
+$color-sec-two: #373E4E; //#4E6087;		// Indigo
 $color-sec-two-lighter: #62749C; 
 $color-sec-three: #F05629;	 	// Orange
 $color-sec-four: #F4BC78;		// Yellow
@@ -199,6 +199,16 @@ h1, h2, h3, h4, h5, h6 {
 		color: $color-pri-two;
 		text-decoration: none;
 	}
+}
+.nav-pills > li.active > a {
+	background-color: $color-pri-one;
+
+	&:hover {
+		background-color: darken($color-pri-one, 5%);
+	}
+}
+.nav > li > a{
+	padding: 8px 10px;
 }
 label {
 	font-weight: normal;
