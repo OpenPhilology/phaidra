@@ -18,8 +18,10 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/page.html', 'uti
 			this.model.on('populated', this.reRender, this);
 			this.model.words.on('change:selected', this.toggleHighlight, this); 
 
-			if (this.options.CTS == undefined) {
-				this.options.CTS = this.model.words.at(0).get('sentenceCTS');
+			// If we've been given a too-high-level CTS, derive the sentence
+			if (this.options.CTS.split(':')[4].split('.').length !== 3) {
+				var index = this.options.side === 'left' ? 0 : 1;
+				this.options.CTS = this.model.words.at(index).get('sentenceCTS');
 			}
 
 			this.model.populate(this.options.CTS);

@@ -225,11 +225,19 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				}));
 			}
 		},
-		getNextCTS: function(sentenceCTS) {
+		getNextCTS: function(CTS) {
+			var current_resource_uri = '';
 
-			var current_resource_uri = this.words.findWhere({
-				sentenceCTS: sentenceCTS
-			}).get('sentence_resource_uri');
+			// If they're giving us a document or work-level CTS, derive the sentence-level
+			if (CTS.split(':')[4].split('.').length !== 3) {
+				current_resource_uri = this.words.at(1).get('sentence_resource_uri');
+			}
+			else {
+				var current_resource_uri = this.words.findWhere({
+					sentenceCTS: CTS
+				}).get('sentence_resource_uri');
+			}
+
 			var index = this.get('sentences').indexOf(current_resource_uri) + 1;
 			var nextPage = this.words.findWhere({
 				sentence_resource_uri: this.get('sentences')[index]

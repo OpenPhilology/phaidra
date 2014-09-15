@@ -5,10 +5,6 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 		initialize: function(options) {
 			this.options = options;
 
-			// Default to beginning of Thuc
-			if (!options.CTS)
-				this.options.CTS = 'urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.89.1';
-
 			// Fetch the list of Documents available to the reader
 			this.documents = new Collections.Documents();
 			this.documents.on('add', this.initializeReader, this);
@@ -30,7 +26,11 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 			return this;	
 		},
 		initializeReader: function(model) {
-			if (model.get('lang') == 'grc') {
+
+			// Fetch the document indicated by the URL
+			var doc = this.options.CTS.split(':')[3];
+
+			if (model.get('CTS').indexOf(doc) !== -1) {
 				this.model = model;
 				this.model.fetch({
 					success: this.fetchSuccess,
