@@ -41,6 +41,7 @@ class UserSentenceResource(Resource):
     document_resource_uri = fields.CharField(attribute='document_resource_uri', null = True, blank = True)
     words = fields.ListField(attribute='words', null = True, blank = True)
     translations = fields.DictField(attribute='translations', null = True, blank = True)
+    user = fields.CharField(attribute='user', null = True, blank = True)
     
     class Meta:
         
@@ -76,7 +77,7 @@ class UserSentenceResource(Resource):
         if len(query_params) > 0:
             
             # generate query
-            q = """MATCH (d:UserDocument)-[:sentences]->(s:UserSentence) WHERE """
+            q = """MATCH (u:`User`)-[:owns]->(d:UserDocument)-[:sentences]->(s:UserSentence) WHERE """
             
             # filter word on parameters
             for key in query_params:
@@ -90,18 +91,19 @@ class UserSentenceResource(Resource):
                 else:
                     q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
             q = q[:len(q)-4]
-            q = q + """RETURN s, d ORDER BY ID(s)"""
+            q = q + """RETURN s, d, u ORDER BY ID(s)"""
             
             table = gdb.query(q)
         
         # default querying    
         else:    
-            table = gdb.query("""MATCH (d:UserDocument)-[:sentences]->(s:UserSentence) WHERE HAS (s.CTS) RETURN s, d ORDER BY ID(s)""")
+            table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:UserDocument)-[:sentences]->(s:UserSentence) WHERE HAS (s.CTS) RETURN s, d, u ORDER BY ID(s)""")
             
         # create the objects which was queried for and set all necessary attributes
         for t in table:
             sentence = t[0]
-            document = t[1]        
+            document = t[1]   
+            user = t[2]     
             url = sentence['self'].split('/')
             urlDoc = document['self'].split('/')        
                 
@@ -109,6 +111,7 @@ class UserSentenceResource(Resource):
             new_obj.__dict__['_data'] = sentence['data']        
             new_obj.__dict__['_data']['id'] = url[len(url)-1]
             new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'user_document/' + urlDoc[len(urlDoc)-1] +'/'
+            new_obj.__dict__['_data']['user'] = user['data']['username']
             sentences.append(new_obj)
                 
         return sentences
@@ -130,12 +133,13 @@ class UserSentenceResource(Resource):
         
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
         sentence = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + kwargs['pk'] + '/')
-            
+        documentNode = sentence.relationships.incoming(types=["sentences"])[0].start
         # get the sentence parameters            
         new_obj = DataObject(kwargs['pk'])
         new_obj.__dict__['_data'] = sentence.properties
         new_obj.__dict__['_data']['id'] = kwargs['pk']
         new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'user_document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
+        new_obj.__dict__['_data']['user'] = str(documentNode.relationships.incoming(types=["owns"])[0].start.properties['username'])
         
         # get a dictionary of related translation of this sentence # shall this be more strict (only user)
         relatedSentences = gdb.query("""MATCH (s:`UserSentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='""" + sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
@@ -271,6 +275,7 @@ class UserDocumentResource(Resource):
     author = fields.CharField(attribute='author', null = True, blank = True)
     sentences = fields.ListField(attribute='sentences', null = True, blank = True)
     translations = fields.DictField(attribute='translations', null = True, blank = True)
+    user = fields.CharField(attribute='user', null = True, blank = True)
         
     class Meta:
         
@@ -306,7 +311,7 @@ class UserDocumentResource(Resource):
         if len(query_params) > 0:
             
             # generate query
-            q = """MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE """
+            q = """MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE """
             
             # filter word on parameters
             for key in query_params:
@@ -320,21 +325,23 @@ class UserDocumentResource(Resource):
                 else:
                     q = q + """HAS (d.""" +key+ """) AND d.""" +key+ """='""" +query_params[key]+ """' AND """
             q = q[:len(q)-4]
-            q = q + """RETURN DISTINCT d ORDER BY ID(d)"""
+            q = q + """RETURN DISTINCT d, u ORDER BY ID(d)"""
             
             table = gdb.query(q)
         
         # default querying    
         else: 
-            table = gdb.query("""MATCH (d:`UserDocument`) RETURN DISTINCT d ORDER BY ID(d)""")
+            table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`) RETURN DISTINCT d, u ORDER BY ID(d)""")
         # create the objects which was queried for and set all necessary attributes
         for t in table:
-            document = t[0]        
+            document = t[0] 
+            user = t[1]       
             urlDoc = document['self'].split('/')        
                 
             new_obj = DataObject(urlDoc[len(urlDoc)-1])
             new_obj.__dict__['_data'] = document['data']        
             new_obj.__dict__['_data']['id'] = urlDoc[len(urlDoc)-1]
+            new_obj.__dict__['_data']['user'] = user['data']['username']
             
             sentences = gdb.query("""MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE d.CTS='""" +document['data']['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
             sentenceArray = []
@@ -365,8 +372,9 @@ class UserDocumentResource(Resource):
         new_obj = DataObject(kwargs['pk'])
         new_obj.__dict__['_data'] = document.properties
         new_obj.__dict__['_data']['id'] = kwargs['pk']
+        new_obj.__dict__['_data']['user'] = str(document.relationships.incoming(types=["owns"])[0].start.properties['username'])
         
-        sentences = gdb.query("""MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE d.CTS='""" +document.properties['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
+        sentences = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE d.CTS='""" +document.properties['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
         sentenceArray = []
         for s in sentences:
             sent = s[0]
