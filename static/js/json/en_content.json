@@ -1007,7 +1007,6 @@
 	{	
 		"title": "Treebanking",
 		"category": "basics",
-		"thumbnail": "/static/images/tree.png",
 		"modules": [
 			{
 				"title": "Treebanking",

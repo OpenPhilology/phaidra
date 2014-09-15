@@ -203,6 +203,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		}
 	});
 
+	Collections.UserDocuments = _.extend(Collections.Documents, { 
+		model: Models.UserDocument,
+		url: '/api/v1/user_document/'
+	});
+
 	Collections.Words = Backbone.Collection.extend({
 		model: Models.Word
 	});

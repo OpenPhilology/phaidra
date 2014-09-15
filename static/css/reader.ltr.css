@@ -652,15 +652,23 @@ label {
   background-color: #1fadad;
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 300px;
   overflow: hidden; }
   .author img {
     height: 200px;
+    position: absolute;
+    bottom: 0;
     -webkit-transition: height 0.1s linear;
     -moz-transition: height 0.1s linear;
     -o-transition: height 0.1s linear;
     -ms-transition: height 0.1s linear;
     transition: height 0.1s linear; }
+  .author h3 {
+    margin: 10px;
+    color: #FFF; }
+    .author h3 small {
+      display: block;
+      color: #EEE; }
   .author:after {
     -webkit-transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
@@ -673,7 +681,7 @@ label {
     position: absolute;
     width: 70px;
     height: 23px;
-    top: 72px;
+    top: 172px;
     left: 61px; }
 
 .edition {
@@ -710,7 +718,7 @@ label {
         background-size: 79px;
         width: 79px;
         height: 26px;
-        top: 81px;
+        top: 172px;
         left: 66px; }
     .edition:hover:before {
       position: absolute;
@@ -743,6 +751,7 @@ label {
     transition: background-color 0.1s cubic; }
   .edition .progress {
     height: 10px;
-    border-radius: 0; }
+    border-radius: 0;
+    margin-bottom: 0; }
   .edition .progress-bar {
     background-color: #d15241; }

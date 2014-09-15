@@ -14,8 +14,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			})[0]);
 			this.set("locale", locale);
 			this.set("language", locale.split('-')[0]);
-
-			console.log(this);
 		}
 	});
 
@@ -209,6 +207,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 
 			// Give our document a human-readable language name
 			this.set('readable_lang', Utils.getReadableLang(this.get('lang')));
+			this.set('translations', response.translations);
 
 			// Split all the words and add them to the collection.
 			for (var i = 0; i < response.sentences.length; i++) {
@@ -296,6 +295,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			}
 		}
 	});
+
+	Models.UserDocument = _.extend(Models.Document);
 
 	Models.Word = Backbone.Model.extend({
 		defaults: {

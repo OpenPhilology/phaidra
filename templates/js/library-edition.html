@@ -1,13 +1,13 @@
 {% load i18n %}
 
-<div class="col-md-4 col-sm-6" data-lang="<%= model.get('lang') %>">
+<div class="col-md-4 col-sm-4 col-xs-6" data-lang="<%= model.get('lang') %>">
 	<a href="/reader/<%= model.get('CTS') %>" class="edition">
 		<div class="author">
+			<h3><%= model.get('author') %> <small><%= model.get('name') %></small></h3>
 			<img src="/static/images/new_thuc.png">
 		</div>
 		<div class="progress">
 			<div class="progress-bar" style="width: <%= model.get('completion') %>%" data-toggle="tooltip" title="% Translated or Treebanked"></div>
 		</div>
-		<h3><%= model.get('author') %> <small><%= model.get('name') %></small></h3>
 	</a>
 </div>
