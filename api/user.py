@@ -48,7 +48,7 @@ class UserSentenceResource(Resource):
         resource_name = 'user_sentence'
         object_class = DataObject
         authorization = Authorization() 
-        authentication = SessionAuthentication()   
+        authentication = BasicAuthentication()   
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
@@ -90,14 +90,23 @@ class UserSentenceResource(Resource):
                         q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
                 else:
                     q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
-            q = q[:len(q)-4]
-            q = q + """RETURN s, d, u ORDER BY ID(s)"""
+            # is user set if params not empty?
+         	if request.GET.get('user'):
+         		q = q + """ u.username='""" + request.GET.get('user') + """' RETURN s, d, u ORDER BY ID(s)"""         		
+         	else:
+         		q = q[:len(q)-4]
+         		q = q + """RETURN s, d, u ORDER BY ID(s)"""
             
-            table = gdb.query(q)
+        	table = gdb.query(q)
         
         # default querying    
         else:    
-            table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:UserDocument)-[:sentences]->(s:UserSentence) WHERE HAS (s.CTS) RETURN s, d, u ORDER BY ID(s)""")
+            # is user set if params are empty?
+        	if request.GET.get('user'):
+         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:UserSentence) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT s, d, u ORDER BY ID(d)""")
+         	else:
+         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:UserDocument)-[:sentences]->(s:UserSentence) RETURN s, d, u ORDER BY ID(s)""")
+            
             
         # create the objects which was queried for and set all necessary attributes
         for t in table:
@@ -283,7 +292,7 @@ class UserDocumentResource(Resource):
         object_class = DataObject
         allowed_methods = ['get', 'post']
         authorization = Authorization()
-        authentication = SessionAuthentication()
+        authentication = BasicAuthentication()
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
@@ -311,7 +320,7 @@ class UserDocumentResource(Resource):
         if len(query_params) > 0:
             
             # generate query
-            q = """MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE """
+            q = """MATCH (u:`User`)-[:owns]->(d:`UserDocument`) WHERE """
             
             # filter word on parameters
             for key in query_params:
@@ -323,15 +332,23 @@ class UserDocumentResource(Resource):
                     elif key.split('__')[1] == 'endswith':
                         q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
                 else:
-                    q = q + """HAS (d.""" +key+ """) AND d.""" +key+ """='""" +query_params[key]+ """' AND """
-            q = q[:len(q)-4]
-            q = q + """RETURN DISTINCT d, u ORDER BY ID(d)"""
+                    q = q + """HAS (d.""" +key+ """) AND d.""" +key+ """='""" +query_params[key]+ """' AND """     	
+         	# is user set if params not empty?
+         	if request.GET.get('user'):
+         		q = q + """ u.username='""" + request.GET.get('user') + """' RETURN d, u ORDER BY ID(d)"""         		
+         	else:
+         		q = q[:len(q)-4]
+         		q = q + """RETURN d, u ORDER BY ID(d)"""
             
-            table = gdb.query(q)
-        
+        	table = gdb.query(q)
+        	      
         # default querying    
         else: 
-            table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`) RETURN DISTINCT d, u ORDER BY ID(d)""")
+        	# is user set if params are empty?
+        	if request.GET.get('user'):
+         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT d, u ORDER BY ID(d)""")
+         	else:
+         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`) RETURN DISTINCT d, u ORDER BY ID(d)""")
         # create the objects which was queried for and set all necessary attributes
         for t in table:
             document = t[0] 
@@ -436,6 +453,7 @@ class UserDocumentResource(Resource):
             )
             document.labels.add("UserDocument")
             data['resource_uri'] = '/api/v1/user_document/' + str(document.id) + '/'
+            data['user'] = request.user.username
             
             if document is None :
                 # in case an error wasn't already raised             
