@@ -92,7 +92,7 @@ class UserSentenceResource(Resource):
                     q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
             # is user set if params not empty?
          	if request.GET.get('user'):
-         		q = q + """ u.username='""" + request.GET.get('user') + """' RETURN s, d, u ORDER BY ID(s)"""         		
+         		q = q + """ u.username='""" + request.GET.get('user') + """' RETURN s, d, u.username ORDER BY ID(s)"""         		
          	else:
          		q = q[:len(q)-4]
          		q = q + """RETURN s, d, u ORDER BY ID(s)"""
@@ -103,9 +103,9 @@ class UserSentenceResource(Resource):
         else:    
             # is user set if params are empty?
         	if request.GET.get('user'):
-         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:UserSentence) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT s, d, u ORDER BY ID(d)""")
+         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:UserSentence) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT s, d, u.username ORDER BY ID(d)""")
          	else:
-         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:UserDocument)-[:sentences]->(s:UserSentence) RETURN s, d, u ORDER BY ID(s)""")
+         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:UserDocument)-[:sentences]->(s:UserSentence) RETURN s, d, u.username ORDER BY ID(s)""")
             
             
         # create the objects which was queried for and set all necessary attributes
@@ -120,7 +120,7 @@ class UserSentenceResource(Resource):
             new_obj.__dict__['_data'] = sentence['data']        
             new_obj.__dict__['_data']['id'] = url[len(url)-1]
             new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'user_document/' + urlDoc[len(urlDoc)-1] +'/'
-            new_obj.__dict__['_data']['user'] = user['data']['username']
+            new_obj.__dict__['_data']['user'] = user
             sentences.append(new_obj)
                 
         return sentences
@@ -346,9 +346,9 @@ class UserDocumentResource(Resource):
         else: 
         	# is user set if params are empty?
         	if request.GET.get('user'):
-         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT d, u ORDER BY ID(d)""")
+         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT d, u.username ORDER BY ID(d)""")
          	else:
-         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`) RETURN DISTINCT d, u ORDER BY ID(d)""")
+         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`) RETURN DISTINCT d, u.username ORDER BY ID(d)""")
         # create the objects which was queried for and set all necessary attributes
         for t in table:
             document = t[0] 
@@ -358,7 +358,7 @@ class UserDocumentResource(Resource):
             new_obj = DataObject(urlDoc[len(urlDoc)-1])
             new_obj.__dict__['_data'] = document['data']        
             new_obj.__dict__['_data']['id'] = urlDoc[len(urlDoc)-1]
-            new_obj.__dict__['_data']['user'] = user['data']['username']
+            new_obj.__dict__['_data']['user'] = user
             
             sentences = gdb.query("""MATCH (d:`UserDocument`)-[:sentences]->(s:`UserSentence`) WHERE d.CTS='""" +document['data']['CTS']+ """' RETURN DISTINCT s ORDER BY ID(s)""")
             sentenceArray = []
