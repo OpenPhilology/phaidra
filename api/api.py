@@ -25,7 +25,7 @@ from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest, HttpC
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
 from tastypie.resources import Resource, ModelResource
 from tastypie.cache import SimpleCache
-from tastypie.serializers import Serializer
+from tastypie.validation import Validation
 
 from datetime import datetime
 
@@ -35,6 +35,22 @@ import json
 import operator
 import time
 import urlparse
+import string
+
+class ResourceValidation(Validation):
+	
+	def is_valid(self, bundle, request=None):
+		
+		invalidChars = string.punctuation.replace(".", "")
+		invalidChars = invalidChars.replace(":", "")
+		invalidChars = invalidChars.replace("-", "")
+		invalidChars = set(invalidChars)
+		errors = {}
+		
+		for key in request.GET:		
+			if any(char in invalidChars for char in request.GET.get(key)):
+				errors[key] = ['Invalid.']			
+		return errors
 
 class UserObjectsOnlyAuthorization(Authorization):
 	
@@ -100,6 +116,7 @@ class CreateUserResource(ModelResource):
 		always_return_data = True
 		authentication = Authentication()
 		authorization = Authorization()
+		validation =  ResourceValidation()
 		
 	def post_list(self, request, **kwargs):
 		"""
@@ -136,6 +153,7 @@ class UserResource(ModelResource):
 		always_return_data = True
 		authentication = SessionAuthentication()
 		authorization = Authorization()
+		validation =  ResourceValidation()
 
 	def prepend_urls(self):
 		params = (self._meta.resource_name, trailing_slash())
@@ -302,6 +320,7 @@ class SubmissionResource(Resource):
 		authentication = SessionAuthentication() 
 		authorization = UserObjectsOnlyAuthorization()
 		cache = SimpleCache(timeout=None)
+		validation =  ResourceValidation()
 
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -327,11 +346,15 @@ class SubmissionResource(Resource):
 	
 	
 	def obj_get_list(self, bundle, **kwargs):
-				
-		try:
-			return self.authorized_read_list(bundle.request, bundle)
-		except ValueError:
-			raise BadRequest("Invalid resource lookup data provided (mismatched type).")
+		
+		dict = self._meta.validation.is_valid(bundle, bundle.request)
+		if len(dict) > 0:
+			return dict
+		else:				
+			try:
+				return self.authorized_read_list(bundle.request, bundle)
+			except ValueError:
+				raise BadRequest("Invalid resource lookup data provided (mismatched type).")
 		
 		# enabled this for paper analyses	
 		#gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
@@ -399,8 +422,7 @@ class SubmissionResource(Resource):
 			else:
 				userNode = gdb.nodes.create(username=request.user.username)
 				userNode.labels.add("User")
-			
-			
+					
 			subms = gdb.nodes.create(
 				response = data.get("response"),
 				task = data.get("task"), 
@@ -447,6 +469,7 @@ class LemmaResource(Resource):
 		resource_name = 'lemma'		
 		authorization = ReadOnlyAuthorization()
 		cache = SimpleCache(timeout=None)
+		validation =  ResourceValidation()
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -531,7 +554,11 @@ class LemmaResource(Resource):
 	
 	def obj_get_list(self, bundle, **kwargs):
 		
-		return self.get_object_list(bundle.request)
+		dict = self._meta.validation.is_valid(bundle, bundle.request)
+		if len(dict) > 0:
+			return dict
+		else:
+			return self.get_object_list(bundle.request)
 	
 	def obj_get(self, bundle, **kwargs):
 		
@@ -596,6 +623,7 @@ class WordResource(Resource):
 		resource_name = 'word'
 		authorization = ReadOnlyAuthorization()
 		cache = SimpleCache(timeout=None)
+		validation =  ResourceValidation()
 	
 	def prepend_urls(self, *args, **kwargs):	
 		
@@ -778,8 +806,13 @@ class WordResource(Resource):
 			return words
 		
 	
-	def obj_get_list(self, bundle, **kwargs):		
-		return self.get_object_list(bundle.request)
+	def obj_get_list(self, bundle, **kwargs):
+				
+		dict = self._meta.validation.is_valid(bundle, bundle.request)
+		if len(dict) > 0:
+			return dict
+		else:
+			return self.get_object_list(bundle.request)
 	
 	
 	def obj_get(self, bundle, **kwargs):
@@ -824,6 +857,7 @@ class SentenceResource(Resource):
 		resource_name = 'sentence'	
 		authorization = ReadOnlyAuthorization()	
 		# cache = SimpleCache(timeout=None) # caching is not that easy for this resource
+		validation =  ResourceValidation()
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -894,7 +928,11 @@ class SentenceResource(Resource):
 	
 	def obj_get_list(self, bundle, **kwargs):
 		
-		return self.get_object_list(bundle.request)
+		dict = self._meta.validation.is_valid(bundle, bundle.request)
+		if len(dict) > 0:
+			return dict
+		else:
+			return self.get_object_list(bundle.request)
 	
 	def obj_get(self, bundle, **kwargs):
 		
@@ -980,7 +1018,7 @@ class SentenceResource(Resource):
 		
 		new_obj.__dict__['_data']['words'] = wordArray
 		
-		# deal with caching here
+		# deal with caching here -> all are different objects
 		if bundle.request.GET.get('full') and bundle.request.GET.get('short'):	
 			if cache.get("sentence_full_short_%s"%kwargs['pk']) is None:
 				cache.set("sentence_full_short_%s"%kwargs['pk'], new_obj, None)
@@ -1119,6 +1157,7 @@ class DocumentResource(Resource):
 		resource_name = 'document'	
 		authorization = ReadOnlyAuthorization()
 		cache = SimpleCache(timeout=None)
+		validation =  ResourceValidation()
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -1200,7 +1239,11 @@ class DocumentResource(Resource):
 	
 	def obj_get_list(self, bundle, **kwargs):
 		
-		return self.get_object_list(bundle.request)
+		dict = self._meta.validation.is_valid(bundle, bundle.request)
+		if len(dict) > 0:
+			return dict
+		else:
+			return self.get_object_list(bundle.request)
 	
 	def obj_get(self, bundle, **kwargs):
 		

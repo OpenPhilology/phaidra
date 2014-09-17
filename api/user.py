@@ -19,8 +19,7 @@ from tastypie.authorization import Authorization
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest
 from tastypie.exceptions import NotFound, BadRequest, Unauthorized
-from tastypie.resources import Resource, ModelResource
-from tastypie.serializers import Serializer
+from tastypie.resources import Resource
 
 from datetime import datetime
 
@@ -31,7 +30,7 @@ import operator
 import time
 import urlparse
 
-from api import DataObject
+from api import DataObject, ResourceValidation
 
 class UserSentenceResource(Resource):
     
@@ -48,7 +47,8 @@ class UserSentenceResource(Resource):
         resource_name = 'user_sentence'
         object_class = DataObject
         authorization = Authorization() 
-        authentication = BasicAuthentication()   
+        authentication = BasicAuthentication()  
+        validation =  ResourceValidation()
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
@@ -61,11 +61,11 @@ class UserSentenceResource(Resource):
 
 
     def get_object_list(self, request):
-        
-        gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)    
+    	
+    	gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)    
         attrlist = ['CTS', 'length', 'sentence']
         sentences = []
-        
+
         query_params = {}
         for obj in request.GET.keys():
             if obj in attrlist and request.GET.get(obj) is not None:
@@ -103,7 +103,10 @@ class UserSentenceResource(Resource):
         else:    
             # is user set if params are empty?
         	if request.GET.get('user'):
+        		user = '"%s"' % request.GET.get('user')
          		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:UserSentence) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT s, d, u.username ORDER BY ID(d)""")
+         		q = """MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:UserSentence) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT s, d, u.username ORDER BY ID(d)"""
+         		q = q
          	else:
          		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:UserDocument)-[:sentences]->(s:UserSentence) RETURN s, d, u.username ORDER BY ID(s)""")
             
@@ -126,8 +129,13 @@ class UserSentenceResource(Resource):
         return sentences
     
     def obj_get_list(self, bundle, **kwargs):
+    	
+    	dict = self._meta.validation.is_valid(bundle, bundle.request)
+    	if len(dict) > 0:
+    		return dict
+    	else:
+    		return self.get_object_list(bundle.request)
         
-        return self.get_object_list(bundle.request)
     
     def obj_get(self, bundle, **kwargs):
         
@@ -293,6 +301,7 @@ class UserDocumentResource(Resource):
         allowed_methods = ['get', 'post']
         authorization = Authorization()
         authentication = BasicAuthentication()
+        validation =  ResourceValidation()
     
     def detail_uri_kwargs(self, bundle_or_obj):
         
@@ -379,7 +388,11 @@ class UserDocumentResource(Resource):
     
     def obj_get_list(self, bundle, **kwargs):
         
-        return self.get_object_list(bundle.request)
+        dict = self._meta.validation.is_valid(bundle, bundle.request)
+    	if len(dict) > 0:
+    		return dict
+    	else:
+    		return self.get_object_list(bundle.request)
     
     def obj_get(self, bundle, **kwargs):
         

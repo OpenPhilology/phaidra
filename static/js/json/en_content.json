@@ -591,15 +591,18 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/4.cases/genitive_poss.html"
+						"includeHTML": "/static/content/en/slides/4.cases/genitive_poss.html",
+						"smyth": "s1297"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/4.cases/genitive_part.html"
+						"includeHTML": "/static/content/en/slides/4.cases/genitive_part.html",
+						"smyth": "s1306"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/4.cases/genitive_comp.html"
+						"includeHTML": "/static/content/en/slides/4.cases/genitive_comp.html",
+						"smyth": "s1315"
 					},
 					{
 						"type": "slide_info",
@@ -612,11 +615,13 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/4.cases/dative.html"
+						"includeHTML": "/static/content/en/slides/4.cases/dative.html",
+						"smyth": "s1450"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/4.cases/dative_in.html"
+						"includeHTML": "/static/content/en/slides/4.cases/dative_in.html",
+						"smyth": "s1506"
 					},
 					{
 						"type": "slide_info",
@@ -633,7 +638,8 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/4.cases/vocative.html"
+						"includeHTML": "/static/content/en/slides/4.cases/vocative.html",
+						"smyth": "s1283"
 					}
 				]
 			}
