@@ -9,20 +9,12 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 		},
 		initialize: function(options) {
 			this.options = options;
-
-			// Decide whether we can draw right away or must wait
-			if (this.model.get('populated'))
-				this.draw();
-			else
-				this.model.on('populated', this.draw, this);
+			this.model.on('change:populated', this.render, this);
 		},
 		render: function() {
-			return this;
-		},
-		draw: function() {
 			var that = this;
 
-			this.$el.html(this.template(this.model.attributes));
+			this.$el.html(this.template({ model: this.model }));
 			this.$el.find('a[data-toggle="popover"]').popover();
 			this.$el.find('em[data-toggle="tooltip"]').tooltip();
 

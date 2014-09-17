@@ -11,30 +11,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			"module/:mod/section/:sec": "showSection",
 			"module/:mod/section/:sect/slide/:slide": "showSlide"
 		},
-		initialize: function() {
-			// Create/Populate necessary models and collections
-
-			// javascript function for api logout and redirect
-			$("#logout-link").click(function(e) {
-				e.preventDefault();
-				var data = {
-					"format" : "json"
-				};
-				$.ajax({
-					url: '/api/v1/user/logout/',
-					type: 'GET',
-					data: data,
-					contentType: 'application/json; charset=utf-8', 
-					success: function(response_text) {
-						alert("You are logging out.");
-						window.location.assign("/home/");	
-					},
-					error: function(response_text) {
-						alert(response_text);
-					}
-				});
-			});
-		},
 		// Lesson Routes
 		showLessons: function() {
 			if (!this.lesson_view) {
@@ -53,9 +29,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 		},
 		showSlide: function(mod, sect, slide) {
 			if (!this.module_view)
-				this.module_view = new ModuleView({ el: $('.slide'), module: mod, section: sect }).render();
+				this.module_view = new ModuleView({ el: $('.slide'), module: mod, section: sect, slide: slide }).render();
 
-			this.module_view.showSlide(slide);
+			this.module_view.setCurrentSlide(slide);
 		}
 	});
 	
