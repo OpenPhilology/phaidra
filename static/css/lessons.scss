@@ -2,77 +2,6 @@
 /**
  * Styles used on the lessons.
  */ 
-@mixin context-bg($color) {
-	border: 2px $color solid;
-	border-radius: 3px;
-	padding: 10px;
-	margin-bottom: 10px;
-	line-height: 2em;
-
-	background-color: lighten($color, 50%);
-
-	.glyphicon {
-		margin-right: 3px;
-		color: lighten($color, 40%);
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		background-color: $color;
-		color: #FFF;
-		margin: -10px -10px 10px;
-		padding: 10px;
-		letter-spacing: 0.1em;
-	}
-}
-.bg-success {
-	@include context-bg($color-dark-green);
-
-	strong {
-		color: darken($color-dark-green, 10%) !important;
-	}
-}
-.bg-info {
-	@include context-bg($color-sec-two);
-}
-.bg-primary {
-	@include context-bg($color-pri-two);
-	color: #333;
-
-	strong {
-		color: darken($color-pri-two, 10%) !important;
-	}
-}
-.bg-error {
-	@include context-bg($color-pri-one);
-
-	strong {
-		color: darken($color-pri-one, 10%) !important;
-	}
-}
-/* The speech bubble that Thuc uses to speak */
-.speech {
-	$color: lighten($color-sec-four, 10%);
-	position: relative;
-	padding: 15px;
-	margin: 1em 0 3em;
-	background-color: $color;
-	border-radius: 3px;
-	line-height: 2em;
-	margin-bottom: 10px;
-
-	&:before {
-		content: '';
-		position: absolute;
-		border-style: solid;
-		border-width: 15px 15px 15px 0;
-		border-color: transparent $color;
-		display: block;
-		width: 0;
-		z-index: 1;
-		left: -15px;
-		top: 25px;
-	}
-}
 /* Lesson-related styles */
 .achievements {
 	.box {
@@ -616,5 +545,22 @@ table.inflection-table {
 
 	a.btn {
 		margin: -5px 5px -5px -5px;
+	}
+}
+
+.new-knowledge {
+	span.glyphicon {
+		margin-left: 10px;
+		margin-right: 10px;
+
+		&.glyphicon-flash {
+			color: $color-sec-four;	
+		}
+		&.glyphicon-inbox {
+			color: $color-pri-two;
+		}
+		&.glyphicon-bookmark {
+			color: $color-pri-one;
+		}
 	}
 }

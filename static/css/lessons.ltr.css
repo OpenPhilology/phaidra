@@ -242,6 +242,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #1fadad;
     text-decoration: none; }
 
+.nav-pills > li.active > a {
+  background-color: #d15241; }
+  .nav-pills > li.active > a:hover {
+    background-color: #c84230; }
+
+.nav > li > a {
+  padding: 8px 10px; }
+
 label {
   font-weight: normal;
   font-size: 1.2em; }
@@ -468,102 +476,6 @@ label {
 /**
  * Styles used on the lessons.
  */
-.bg-success {
-  border: 2px #49a556 solid;
-  border-radius: 3px;
-  padding: 10px;
-  margin-bottom: 10px;
-  line-height: 2em;
-  background-color: #f3faf4; }
-  .bg-success .glyphicon {
-    margin-right: 3px;
-    color: #d0ead4; }
-  .bg-success h1, .bg-success h2, .bg-success h3, .bg-success h4, .bg-success h5, .bg-success h6 {
-    background-color: #49a556;
-    color: #FFF;
-    margin: -10px -10px 10px;
-    padding: 10px;
-    letter-spacing: 0.1em; }
-  .bg-success strong {
-    color: #398244 !important; }
-
-.bg-info {
-  border: 2px #373e4e solid;
-  border-radius: 3px;
-  padding: 10px;
-  margin-bottom: 10px;
-  line-height: 2em;
-  background-color: #b7becd; }
-  .bg-info .glyphicon {
-    margin-right: 3px;
-    color: #9aa3b7; }
-  .bg-info h1, .bg-info h2, .bg-info h3, .bg-info h4, .bg-info h5, .bg-info h6 {
-    background-color: #373e4e;
-    color: #FFF;
-    margin: -10px -10px 10px;
-    padding: 10px;
-    letter-spacing: 0.1em; }
-
-.bg-primary {
-  border: 2px #1fadad solid;
-  border-radius: 3px;
-  padding: 10px;
-  margin-bottom: 10px;
-  line-height: 2em;
-  background-color: #d4f7f7;
-  color: #333; }
-  .bg-primary .glyphicon {
-    margin-right: 3px;
-    color: #a9f0f0; }
-  .bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5, .bg-primary h6 {
-    background-color: #1fadad;
-    color: #FFF;
-    margin: -10px -10px 10px;
-    padding: 10px;
-    letter-spacing: 0.1em; }
-  .bg-primary strong {
-    color: #178282 !important; }
-
-.bg-error {
-  border: 2px #d15241 solid;
-  border-radius: 3px;
-  padding: 10px;
-  margin-bottom: 10px;
-  line-height: 2em;
-  background-color: white; }
-  .bg-error .glyphicon {
-    margin-right: 3px;
-    color: #f9e8e5; }
-  .bg-error h1, .bg-error h2, .bg-error h3, .bg-error h4, .bg-error h5, .bg-error h6 {
-    background-color: #d15241;
-    color: #FFF;
-    margin: -10px -10px 10px;
-    padding: 10px;
-    letter-spacing: 0.1em; }
-  .bg-error strong {
-    color: #b43c2b !important; }
-
-/* The speech bubble that Thuc uses to speak */
-.speech {
-  position: relative;
-  padding: 15px;
-  margin: 1em 0 3em;
-  background-color: #f8d3a7;
-  border-radius: 3px;
-  line-height: 2em;
-  margin-bottom: 10px; }
-  .speech:before {
-    content: '';
-    position: absolute;
-    border-style: solid;
-    border-width: 15px 15px 15px 0;
-    border-color: transparent #f8d3a7;
-    display: block;
-    width: 0;
-    z-index: 1;
-    left: -15px;
-    top: 25px; }
-
 /* Lesson-related styles */
 .achievements .box {
   height: 125px;
@@ -1056,3 +968,13 @@ table.inflection-table {
   line-height: 26px; }
   .alert.as-header a.btn {
     margin: -5px 5px -5px -5px; }
+
+.new-knowledge span.glyphicon {
+  margin-left: 10px;
+  margin-right: 10px; }
+  .new-knowledge span.glyphicon.glyphicon-flash {
+    color: #f4bc78; }
+  .new-knowledge span.glyphicon.glyphicon-inbox {
+    color: #1fadad; }
+  .new-knowledge span.glyphicon.glyphicon-bookmark {
+    color: #d15241; }
