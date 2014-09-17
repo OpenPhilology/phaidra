@@ -39,11 +39,12 @@ import string
 
 class ResourceValidation(Validation):
 	
-	def is_valid(self, bundle, request=None):
+	def is_valid(self, bundle=None, request=None):
 		
 		invalidChars = string.punctuation.replace(".", "")
 		invalidChars = invalidChars.replace(":", "")
 		invalidChars = invalidChars.replace("-", "")
+		invalidChars = invalidChars.replace("#", "")
 		invalidChars = set(invalidChars)
 		errors = {}
 		
@@ -622,7 +623,7 @@ class WordResource(Resource):
 		object_class = DataObject
 		resource_name = 'word'
 		authorization = ReadOnlyAuthorization()
-		cache = SimpleCache(timeout=None)
+		#cache = SimpleCache(timeout=None)
 		validation =  ResourceValidation()
 	
 	def prepend_urls(self, *args, **kwargs):	
