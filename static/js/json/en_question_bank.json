@@ -1195,5 +1195,203 @@
 		"hintMsg": "<strong>Not quite.</strong>",
 		"require_order": "false",
 		"require_all": "true"
+	},
+	{
+		"smyth": "s1297",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "horizontal" 
+			},
+		"title": "Exercise: Select the Genitive of Possession",
+		"question": "Which of these words is in the genitive case?",
+		"options": [
+			{
+				"value": "The narration",
+				"display": "ἡ ἱστορία<br><small>The narration</small>"
+			},
+			{
+				"value": "of Thucydides",
+				"display": "τοῦ Θουκυδίδου<br><small>of Thucydides</small>"
+			},
+			{
+				"value": "is",
+				"display": "ἐστὶ<br><small>is</small>"
+			},
+			{
+				"value": "long",
+				"display": "μεγάλη<br><small>long</small>"
+			}
+		],
+		"answers": ["of Thucydides"],
+		"successMsg": "<strong>Right Answer!</strong>", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1306",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "horizontal" 
+			},
+		"title": "Exercise: Select the Partitive Genitive",
+		"question": "Which of these words is a partitive genitive?",
+		"options": [
+			{
+				"value": "The event",
+				"display": "ἡ συντυχία<br><small>The event</small>"
+			},
+			{
+				"value": "of (out of) the narrative",
+				"display": "τῆς ἱστορίας<br><small>of (out of) the narrative</small>"
+			},
+			{
+				"value": "is",
+				"display": "ἐστὶ<br><small>is</small>"
+			},
+			{
+				"value": "short",
+				"display": "βραχεῖα<br><small>short</small>"
+			}
+		],
+		"answers": ["of (out of) the narrative"],
+		"successMsg": "<strong>Right Answer!</strong>", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1315",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "horizontal" 
+			},
+		"title": "Exercise: Select the Genitive of Comparison",
+		"question": "Which of these words is a genitive of comparison?",
+		"options": [
+			{
+				"value": "Thucydides",
+				"display": "ὁ Θουκυδίδης<br><small>Thucydides</small>"
+			},
+			{
+				"value": "is",
+				"display": "ἐστὶ<br><small>is</small>"
+			},
+			{
+				"value": "wiser",
+				"display": "σώφρων<br><small>wiser</small>"
+			},
+			{
+				"value": "than the boy",
+				"display": "τοῦ παιδός<br><small>than the boy</small>"
+			}
+		],
+		"answers": ["than the boy"],
+		"successMsg": "<strong>Right Answer!</strong>", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1450",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "horizontal" 
+			},
+		"title": "Exercise: Select the Dative",
+		"question": "Which of these words is a dative?",
+		"options": [
+			{
+				"value": "The man",
+				"display": "ὁ ἀνήρ<br><small>The man</small>"
+			},
+			{
+				"value": "gives",
+				"display": "δίδωσι<br><small>gives</small>"
+			},
+			{
+				"value": "a rose",
+				"display": "δῶρον<br><small>a rose</small>"
+			},
+			{
+				"value": "to the girl",
+				"display": "τῇ κόρῃ<br><small>to the girl</small>"
+			}
+		],
+		"answers": ["to the girl"],
+		"successMsg": "<strong>Right Answer!</strong>", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1506",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "horizontal" 
+			},
+		"title": "Exercise: Select the Dative of Instrument",
+		"question": "Which of these words is a dative of instrument?",
+		"options": [
+			{
+				"value": "The girl",
+				"display": "ἡ κόρη<br><small>The girl</small>"
+			},
+			{
+				"value": "hits",
+				"display": "βάλλει<br><small>hits</small>"
+			},
+			{
+				"value": "the man",
+				"display": "τόν ἄνδρα<br><small>the man</small>"
+			},
+			{
+				"value": "with stones",
+				"display": "λίθοις<br><small>with stones</small>"
+			}
+		],
+		"answers": ["with stones"],
+		"successMsg": "<strong>Right Answer!</strong>", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s1283",
+		"type": "slide_direct_select",
+		"settings": 
+			{ 
+				"orientation" : "horizontal" 
+			},
+		"title": "Exercise: Select the Vocative",
+		"question": "Which of these words is in the vocative case?",
+		"options": [
+			{
+				"value": "O Zeus",
+				"display": "ὦ Ζεῦ<br><small>O Zeus</small>"
+			},
+			{
+				"value": "life",
+				"display": "ὁ βίος<br><small>life</small>"
+			},
+			{
+				"value": "is",
+				"display": "ἐστὶ<br><small>is</small>"
+			},
+			{
+				"value": "difficult",
+				"display": "χαλεπὸς<br><small>difficult</small>"
+			}
+		],
+		"answers": ["O Zeus"],
+		"successMsg": "<strong>Right Answer!</strong>", 
+		"hintMsg": "<strong>Not quite.</strong>",
+		"require_order": "false",
+		"require_all": "true"
 	}
 ]
