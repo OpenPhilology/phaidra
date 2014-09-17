@@ -1,0 +1,6 @@
+<div style="text-align: center; margin-bottom: 10px; font-size: 3em">
+	<% print(_.map(this.model.attributes.vocab.models, function(m) { return m.get('lemma'); }).join(', ')); %>
+</div>
+
+<div class="slide-feedback" style="display: none">
+</div>

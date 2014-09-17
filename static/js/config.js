@@ -5,7 +5,7 @@ requirejs.config({
 		'jquery': 'lib/jquery-2.1.1',
 		'bootstrap': '../bootstrap/js/bootstrap.min',
 		'json2': 'lib/json2',
-		'underscore': 'lib/underscore-min',
+		'underscore': 'lib/underscore',
 		'backbone': 'lib/backbone',
 		'd3': 'lib/d3.v3.min',
 		'jquery-ui': 'lib/jquery-ui-draggable',

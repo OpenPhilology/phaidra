@@ -47,7 +47,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 	Collections.Slides = Backbone.Collection.extend({
 		model: Models.Slide,
 		initialize: function(models, options) {
-			var that = this;
+			_.bindAll(this, 'insertVocab');
 
 			// Keep track of metadata about the collection
 			if (!this._meta)
@@ -60,8 +60,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 					this._meta[prop] = value;
 			};
 
-			that.meta('module', parseInt(options.module));
-			that.meta('section', parseInt(options.section));
+			this.meta('module', parseInt(options.module));
+			this.meta('section', parseInt(options.section));
 		},
 		populate: function(collection) {
 			var that = this;
@@ -74,11 +74,29 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			this.meta('moduleTitle', module.title);
 			this.meta('sectionTitle', section.title);
 
+			// Pull vocabulary for this section
+			this.meta('vocab', new Collections.Words([], { grammar: _.compact(_.pluck(slides, 'smyth')) }));
+			this.meta('vocab').on('populated', this.insertVocab, this);
+
+			// Add slides and exercises
 			for (var i = 0, slide; slide = slides[i]; i++) {
 				slide.title = this.meta('sectionTitle');
 				this.add(slide);
 				this.insertExercises(slide, slide.smyth);
 			}
+
+			// Initiate collection of vocabulary words
+			this.meta('vocab').populateVocab();
+
+		},
+		insertVocab: function(options) {
+			console.log("inserting vocab");
+
+			this.add({ type: 'slide_vocab', vocab: this.meta('vocab') }).at(1);
+			this.meta('initLength', this.meta('initLength') + 1);
+
+			if (options && options.success)
+				options.success();
 		},
 		insertExercises: function(slide, smyth, index) {
 			if (!slide.smyth)
@@ -107,14 +125,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				return tasks.indexOf(t.task) !== -1;
 			});
 
-			// Create at least five tasks
-			while (matches.length < 5) {
-				matches = matches.concat(matches);
-			}
-			var subset = _.shuffle(matches).splice(0, 5);
-			this.meta('initLength', this.meta('initLength') + subset.length);
+			this.meta('initLength', this.meta('initLength') + matches.length);
 
-			return subset;
+			return matches;
 		},
 		insertQuestions: function(smyth) {
 			// Here we find out what questions are available for this subject
@@ -203,13 +216,72 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		}
 	});
 
-	Collections.UserDocuments = _.extend(Collections.Documents, { 
+	Collections.UserDocuments = Backbone.Collection.extend ({ 
 		model: Models.UserDocument,
-		url: '/api/v1/user_document/'
+		url: '/api/v1/user_document/',
+		parse: function(response) {
+			
+			// Flatten our references to sentence URIs
+			for (var i = 0; i < response.objects.length; i++) {
+				response.objects[i].sentences = response.objects[i].sentences.map(function(el) {
+					return el.resource_uri;
+				});
+			}
+			this.add(response.objects);
+		}
 	});
 
 	Collections.Words = Backbone.Collection.extend({
-		model: Models.Word
+		model: Models.Word,
+		initialize: function(models, options) {
+			// Keep track of metadata about the collection
+			if (!this._meta)
+				this._meta = [];
+
+			this.meta = function(prop, value) {
+				if (value == undefined)
+					return this._meta[prop];
+				else
+					this._meta[prop] = value;
+			};
+
+			if (options && options.grammar) 
+				this.meta('grammar', options.grammar);
+		},
+		populateVocab: function(collection) {
+
+			var that = this;
+			var calls = [];
+
+			this.meta('grammar').forEach(function(val, i, arr) {
+				calls.push($.ajax('/api/v1/word/', {
+					data: { "smyth": val, "limit": 0 },
+					success: function(response) {
+						that.add(response.objects);			
+					},
+					error: function(x, y, z) {
+						console.log(x, y, z);
+					}
+				}));
+			});
+
+			// TODO: Figure out how to get this silly function to run *after* all success callbacks
+			$.when.apply(this, calls).then(function() {
+				that.trigger('populated');
+			});
+		},
+		filterVocabulary: function() {
+			var groupedByFreq = _.reduce(this.models, function(map, model) {
+				var lemma = model.attributes.lemma;
+				(map[lemma] || (map[lemma] = [])).push(model);
+				return map;
+			}, {});
+
+			// TODO: Write rules for choosing candidates for verbs
+			var candidates = this.where({ 'case': 'gen', 'number': 'sg' });
+			candidates = _.uniq(_.map(candidates, function(c) { return c.get('lemma'); }));
+			return candidates;
+		}
 	});
 
 	return Collections;

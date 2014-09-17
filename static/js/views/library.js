@@ -31,7 +31,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'text!/templates/js/l
 			console.log(collection);
 		},
 		createPersonalEdition: function(e) {
-			/*e.preventDefault();
+			e.preventDefault();
 			var target = e.target.getAttribute('href');
 
 			// If the user doesn't already have a personal edition for this work, prompt them to make one

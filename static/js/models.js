@@ -30,46 +30,57 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		constructor: function(attributes, options) {
 			Backbone.Model.prototype.constructor.call(this, attributes);
 
-			if (attributes.includeHTML && !attributes.delayRender)
-				this.fetchHTML(attributes, options);
-			else if (!attributes.task && !attributes.delayRender)
-				this.set('populated', true);
+			this.collection = options.collection;
+			this.options = options;
+			this.attributes = attributes;
 		},
 		defaults: {
 			'modelName': 'slide',
 		},
-		fetchHTML: function() {
+		populate: function(options) {
+			// Allows us to lazy-load everything
+			if (this.get('includeHTML'))
+				this.fetchHTML(options);
+			else if (this.get('task'))
+				this.fillAttributes(options);
+			else {
+				this.set('populated', true);
+				if (options && options.success) options.success();
+			}
+		},
+		fetchHTML: function(options) {
 			var that = this;
+			if (this.get('content')) {
+				this.set('populated', true);
+				if (options && options.success) options.success();
+
+				return;
+			}
+
+			// Fetch HTML if needed
 			$.ajax({
 				url: that.get('includeHTML'),
 				dataType: 'text',
 				success: function(response) {
 					that.set('content', response);
 					that.set('populated', true);
-					that.trigger('populated');
+					if (options && options.success) options.success();
 				},
 				error: function(x, y, z) {
+					if (options && options.error) options.error();
 					console.log(x, y, z);
 				}
 			});
 		},
-		delayedRender: function() {
-			if (this.get('populated'))
-				return;
-
-			if (this.get('includeHTML'))
-				this.fetchHTML();
-			else if (this.get('task'))
-				this.fillAttributes();
-		},
-		fillAttributes: function(attributes, options) {
-			if (this.get('populated'))
-				return;
-
+		fillAttributes: function(options) {
 			var that = this;
 			var s = this.get('smyth');
 			var entry = Utils.Smyth[s];
 			
+			var vocab = this.collection.meta('vocab');
+			var candidates = vocab.filterVocabulary();
+			console.log(candidates);
+
 			if (entry) {
 				var url = '/api/v1/' + this.get('endpoint') + '/?format=json&' + entry.query;
 
@@ -78,7 +89,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 					dataType: 'text',
 					success: function(response) {
 						
-						// TODO: Ask maria to include frequency on words
 						var objs = JSON.parse(response).objects;
 						var groups = _.groupBy(objs, function(o) {
 						   return o.lemma;
@@ -99,9 +109,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 						data[that.get('endpoint')] = chosen.value;
 						var compiled = _.template(that.get('question'));
 						that.set('question', compiled(data));
-
 						that.set('populated', true);
-						that.trigger('populated');
+						if (options && options.success) options.success();
 					},
 					error: function(x, y, z) {
 						console.log(x, y, z);
@@ -199,11 +208,9 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		},
 		parse: function(response) {
 
-			// TODO: Move this
-			if (response.lang == 'fas')
-				this.set('direction', 'rtl');
-			else
-				this.set('direction', 'ltr');
+			// Set direction of language
+			var textDir = response.lang === 'fas' ? 'rtl' : 'ltr';
+			this.set('direction', textDir);
 
 			// Give our document a human-readable language name
 			this.set('readable_lang', Utils.getReadableLang(this.get('lang')));
@@ -296,7 +303,42 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		}
 	});
 
-	Models.UserDocument = _.extend(Models.Document);
+	Models.UserDocument = Backbone.Model.extend({
+		defaults: {
+			modelName: 'user_document'
+		},
+		initialize: function(attributes) {
+			this.urlRoot = attributes.resource_uri;
+
+			Collections = require('collections');
+			this.words = new Collections.Words();
+		},
+		parse: function(response) {
+
+			// Set direction of language
+			var textDir = response.lang === 'fas' ? 'rtl' : 'ltr';
+			this.set('direction', textDir);
+
+			// Give our document a human-readable language name
+			this.set('readable_lang', Utils.getReadableLang(this.get('lang')));
+			this.set('translations', response.translations);
+
+			// Split all the words and add them to the collection.
+			for (var i = 0; i < response.sentences.length; i++) {
+				var tokens = response.sentences[i]["sentence"].trim().split(' ');
+
+				this.words.add(tokens.map(function(token, index) {
+					return {
+						sentenceCTS: response.sentences[i]["CTS"],
+						sentence_resource_uri: response.sentences[i]["resource_uri"],
+						lang: response.lang,
+						value: token,
+						index: index
+					};
+				}));
+			}
+		}
+	});
 
 	Models.Word = Backbone.Model.extend({
 		defaults: {

@@ -1,8 +1,8 @@
 define(
 	['jquery', 'underscore', 'backbone', 'jquery-ui-core', 'jquery-ui-slide', 'models', 'collections', 
-		'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect', 'views/slide-last', 'utils'], 
+		'views/slide-info', 'views/slide-multicomp', 'views/slide-directselect', 'views/slide-vocab', 'views/slide-last', 'utils'], 
 	function($, _, Backbone, jQueryUICore, jQueryUISlide, Models, Collections, 
-		InfoSlideView, MultiCompSlideView, DirectSelectSlideView, LastSlideView, Utils) { 
+		InfoSlideView, MultiCompSlideView, DirectSelectSlideView, VocabSlideView, LastSlideView, Utils) { 
 
 		var View = Backbone.View.extend({
 			events: {
@@ -11,6 +11,7 @@ define(
 			initialize: function(options) {
 
 				var that = this;
+				this.options = options;
 
 				// If we're loading this module initially, fetch lesson content
 				if (!this.lesson) {
@@ -21,60 +22,34 @@ define(
 				}
 
 				// Keep a handy reference to all the slides for nav purposes
-				if (!this.slides) 
-					this.slides = [];
+				this.slides = [];
 
 				// Create a slide-type-to-view mapper
 				this.map = {
 					'slide_info': function(model) {
-						return new InfoSlideView({
-							model: model,
-							collection: that.lesson
-						}).render()
-							.$el
-							.appendTo(that.$el.find('#lesson-content'));
+						return new InfoSlideView({ model: model, collection: that.lesson });
 					},
 					'slide_last': function(model) {
-						return new LastSlideView({
-							model: model,
-							collection: that.lesson
-						}).render()
-							.$el
-							.appendTo(that.$el.find('#lesson-content'));
+						return new LastSlideView({ model: model, collection: that.lesson });
 					},
 					'slide_multi_comp': function(model) {
-						return new MultiCompSlideView({
-							model: model,
-							collection: that.lesson
-						}).render()
-							.$el
-							.appendTo(that.$el.find('#lesson-content'));
+						return new MultiCompSlideView({ model: model, collection: that.lesson });
 					},
-					'slide_treebank': function(model) {
-						return new TreebankingView({
-							model: model,
-							collection: that.lesson
-						}).render()
-							.$el
-							.appendTo(that.$el.find('#lesson-content'));
+					'slide_vocab': function(model) {
+						return new VocabSlideView({ model: model, collection: that.lesson });
 					},
 					'slide_direct_select': function(model) {
-						return new DirectSelectSlideView({
-							model: model,
-							collection: that.lesson
-						}).render()
-							.$el
-							.appendTo(that.$el.find('#lesson-content'));
+						return new DirectSelectSlideView({ model: model, collection: that.lesson });
 					}
 				};
 
-				this.lesson.bind('add', _.bind(this.addSlide, this));
+				this.lesson.bind('add', _.bind(this.buildSlide, this));
 				this.lesson.populate();
 				this.$el.find('.lesson-header h1').html(this.lesson.meta('moduleTitle'));
 				this.$el.find('.lesson-header h2').html(this.lesson.meta('sectionTitle'));
 				
 			},
-			addSlide: function(model, collection, options) {
+			buildSlide: function(model, collection, options) {
 				var selector = '#' + model.get('type');
 				var that = this;
 
@@ -83,6 +58,7 @@ define(
 
 				// The Module view keeps references to the various slide views
 				var view = this.map[model.get('type')](model);
+				view.$el.appendTo('#lesson-content');
 				this.slides.push(view);
 
 				// Create a progress bar section for each slide
@@ -102,32 +78,37 @@ define(
 			render: function() {
 				return this;	
 			},
-			showSlide: function(slide) {
+			setCurrentSlide: function(slide) {
 				slide = parseInt(slide);
-
+				var that = this;
+				this.lesson.at(slide).populate({ 
+					success: function() {
+						that.lesson.at(slide).set('selected', true);	
+						that.showSlide(slide);
+					},
+					error: function() {
+						console.log("population failed");
+					}
+				});
+			},
+			showSlide: function(slide) {
 				// Show the correct slide view
 				for (var i = 0; i < this.slides.length; i++) {
-					this.slides[i].hide();
+					this.slides[i].$el.hide();
 				}
-				// Trigger delayed rendering if needed
-				this.lesson.at(slide).delayedRender();
 
-				if (this.slides[slide]) {
-					this.slides[slide].show('slide', { direction: 'right' }, 500, function() {
-						// Trigger resize for formerly hidden elements
-						window.dispatchEvent(new Event('resize'));
-					});
-
-					this.recordTimestamp(slide);
-					this.updateProgress(slide);
-
-					if (this.lesson.at(1 + slide))
-						this.lesson.at(1 + slide).delayedRender();
-				}
-				else {
+				if (!this.slides[slide]) {
 					this.$el.html("<h1>Looks like you overshot!</h1><a href=\"/lessons\">Return to Lessons</a>");
+					return;
 				}
 
+				this.slides[slide].$el.show('slide', { direction: 'right' }, 500, function() {
+					// Trigger resize for formerly hidden elements
+					window.dispatchEvent(new Event('resize'));
+				});
+
+				this.recordTimestamp(slide);
+				this.updateProgress(slide);
 				this.updateNavigation(slide);
 			},
 			// Update the navigation link
@@ -163,7 +144,7 @@ define(
 			},
 			// Record the time that the user started viewing the slide
 			recordTimestamp: function(slide) {
-				this.slides[slide].data('starttime', new Date());
+				this.slides[slide].$el.data('starttime', new Date());
 			},
 			// Display proper progress to the user
 			updateProgress: function(slide) {
