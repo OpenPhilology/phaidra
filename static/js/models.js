@@ -43,6 +43,10 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				this.fetchHTML(options);
 			else if (this.get('task'))
 				this.fillAttributes(options);
+			else {
+				this.set('populated', true);
+				if (options && options.success) options.success();
+			}
 		},
 		fetchHTML: function(options) {
 			var that = this;
@@ -63,6 +67,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 					if (options && options.success) options.success();
 				},
 				error: function(x, y, z) {
+					if (options && options.error) options.error();
 					console.log(x, y, z);
 				}
 			});

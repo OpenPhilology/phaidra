@@ -85,6 +85,9 @@ define(
 					success: function() {
 						that.lesson.at(slide).set('selected', true);	
 						that.showSlide(slide);
+					},
+					error: function() {
+						console.log("population failed");
 					}
 				});
 			},
