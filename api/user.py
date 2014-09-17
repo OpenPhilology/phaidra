@@ -58,9 +58,9 @@ class UserSentenceResource(Resource):
     """
     Returns some figures for grammar and title the user has struggled with
     """
-    
     def translations(self, request, **kwargs):
     	
+    	# because this is a non object based implementation authentication on this return data set has to be done explicit
     	if not request.user or not request.user.is_authenticated():
             return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s.' % request.user })
     	
@@ -240,13 +240,6 @@ class UserSentenceResource(Resource):
                 word['data']['translations'] = translationArray
                 
             wordArray.append(word['data'])
-            
-        # if short=True return only words of the short sentence
-        if bundle.request.GET.get('short'):
-            wordArray =  self.shorten(wordArray, query_params)
-            if wordArray is None:
-                #return None
-                raise BadRequest("Sentence doesn't hit your query.")
         
         
         new_obj.__dict__['_data']['words'] = wordArray
