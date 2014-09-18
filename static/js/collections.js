@@ -70,7 +70,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			var slides = section.slides;
 
 			// Set attributes on this section
-			this.meta('initLength', slides.length);
+			this.meta('initLength', 0);
 			this.meta('moduleTitle', module.title);
 			this.meta('sectionTitle', section.title);
 
@@ -81,7 +81,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			// Add slides and exercises
 			for (var i = 0, slide; slide = slides[i]; i++) {
 				slide.title = this.meta('sectionTitle');
+				slide.index = this.meta('initLength');
+				console.log("incremented to ", this.meta('initLength'));
 				this.add(slide);
+				this.meta('initLength', (1 + this.meta('initLength')));
+
 				this.insertExercises(slide, slide.smyth);
 			}
 
@@ -90,10 +94,10 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 
 		},
 		insertVocab: function(options) {
-			console.log("inserting vocab");
+			console.log(this.meta('vocab'));
 
-			this.add({ type: 'slide_vocab', vocab: this.meta('vocab') }).at(1);
-			this.meta('initLength', this.meta('initLength') + 1);
+			//this.add({ type: 'slide_vocab', vocab: this.meta('vocab'), populated: true }).at(1);
+			//this.meta('initLength', this.meta('initLength') + 1);
 
 			if (options && options.success)
 				options.success();
@@ -112,10 +116,15 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			newSlides = newSlides.concat(questions);
 			newSlides = _.shuffle(newSlides);
 
+			// Give all the slides an index -- needed for inserting slides later
+			newSlides.forEach(function(s) {
+				console.log("incremented to ", this.meta('initLength'));
+				s.index = this.meta('initLength');
+				this.meta('initLength', (1 + this.meta('initLength')));
+			}.bind(this));
+
 			if (newSlides.length === 0)
 				return;
-			else if (index) 
-				this.add(newSlides, { at: index });
 			else 
 				this.add(newSlides);
 		},
@@ -125,8 +134,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				return tasks.indexOf(t.task) !== -1;
 			});
 
-			this.meta('initLength', this.meta('initLength') + matches.length);
-
 			return matches;
 		},
 		insertQuestions: function(smyth) {
@@ -134,7 +141,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			var questions = Utils.Questions.filter(function(q) {
 				return q.smyth === smyth;
 			});
-			this.meta('initLength', this.meta('initLength') + questions.length);
 			return questions;
 		},
 		makeStats: function() {
@@ -257,6 +263,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				calls.push($.ajax('/api/v1/word/', {
 					data: { "smyth": val, "limit": 0 },
 					success: function(response) {
+						console.log("adding " + response.objects.length);
 						that.add(response.objects);			
 					},
 					error: function(x, y, z) {
@@ -265,8 +272,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				}));
 			});
 
-			// TODO: Figure out how to get this silly function to run *after* all success callbacks
-			$.when.apply(this, calls).then(function() {
+			$.when.apply(this, calls).done(function() {
+				that.meta('populated', true);
 				that.trigger('populated');
 			});
 		},
@@ -276,9 +283,22 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				(map[lemma] || (map[lemma] = [])).push(model);
 				return map;
 			}, {});
+			
+			var candidates = [];
 
-			// TODO: Write rules for choosing candidates for verbs
-			var candidates = this.where({ 'case': 'gen', 'number': 'sg' });
+			// Try to get good definitions based on what alignment data is likely to be like
+			switch(this.models[0].get('pos')) {
+				case 'noun':
+					candidates = this.where({ 'case': 'gen', 'number': 'sg' });
+					break;
+				case 'verb':
+					candidates = this.where({ 'pos': 'verb' });
+					break;
+				default:
+					candidates = this.where({ 'lang': 'grc' });
+					break;
+			}
+
 			candidates = _.uniq(_.map(candidates, function(c) { return c.get('lemma'); }));
 			return candidates;
 		}

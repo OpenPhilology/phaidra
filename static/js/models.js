@@ -76,47 +76,40 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			var that = this;
 			var s = this.get('smyth');
 			var entry = Utils.Smyth[s];
-			
-			var vocab = this.collection.meta('vocab');
-			var candidates = vocab.filterVocabulary();
-			console.log(candidates);
 
-			if (entry) {
-				var url = '/api/v1/' + this.get('endpoint') + '/?format=json&' + entry.query;
+			// This differs based on if they loaded an exercise slide first, or started at beginning
+			function useVocab() {
+				if (!entry)
+					return;
+					
+				var vocab = that.collection.meta('vocab');
+				var candidates = vocab.filterVocabulary();
 
-				$.ajax({
-					url: url,
-					dataType: 'text',
-					success: function(response) {
-						
-						var objs = JSON.parse(response).objects;
-						var groups = _.groupBy(objs, function(o) {
-						   return o.lemma;
-						});
-						var keepers = objs.filter(function(o) {
-							return groups[o.lemma].length > 1;
-						});
+				// Pick an example based on vocab for this unit
+				var chosen = _.shuffle(_.filter(vocab.models, function(v) {
+					return candidates.indexOf(v.get('lemma')) !== -1;
+				})).splice(0, 1)[0];
 
-						var toUse = keepers.length === 0 ? objs : keepers;
-						var chosen = _.shuffle(toUse).splice(0, 1)[0];
-						
-						var answer = chosen[that.get('answerField')];
-						that.set('answers', [answer]);
-						that.set('encounteredWords', [chosen.CTS]);
+				that.set('answers', [chosen.get(that.get('answerField'))]);
+				that.set('encounteredWords', [chosen.get('CTS')]);
 
-						// Treat question like template string to splice in value
-						var data = {};
-						data[that.get('endpoint')] = chosen.value;
-						var compiled = _.template(that.get('question'));
-						that.set('question', compiled(data));
-						that.set('populated', true);
-						if (options && options.success) options.success();
-					},
-					error: function(x, y, z) {
-						console.log(x, y, z);
-					}
-				});
+				// Treat question like template string to splice in value
+				var data = {};
+				data[that.get('endpoint')] = chosen.get('value');
+				var compiled = _.template(that.get('question'));
+
+				that.set('question', compiled(data));
+				that.set('populated', true);
+				if (options && options.success) options.success();
 			}
+			useVocab.bind(this);
+
+			if (this.collection.meta('vocab').meta('populated'))
+				useVocab();
+			else
+				this.collection.meta('vocab').on('populated', useVocab, this);
+
+
 		},
 		checkAnswer: function(attempt) {
 

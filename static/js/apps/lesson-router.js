@@ -9,7 +9,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 			"module/": "forwardModule",
 			"module/:mod": "showModule",
 			"module/:mod/section/:sec": "showSection",
-			"module/:mod/section/:sect/slide/:slide": "showSlide"
+			"module/:mod/section/:sec/slide/:slide": "showSlide"
 		},
 		// Lesson Routes
 		showLessons: function() {
@@ -18,20 +18,18 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 					.render();
 			}
 		},
-		forwardModule: function() {
-			Backbone.history.navigate('module/3/section/0/slide/0', { trigger: true });
-		},
 		showModule: function(mod) {
-			Backbone.history.navigate('module/3/section/0/slide/0', { trigger: true });
+			this.showSlide(mod, 0, 0);
 		},
 		showSection: function(mod, sect) {
-			this.showSlide(3, 0, 0);
+			this.showSlide(mod, sect, 0);
 		},
 		showSlide: function(mod, sect, slide) {
 			if (!this.module_view)
 				this.module_view = new ModuleView({ el: $('.slide'), module: mod, section: sect, slide: slide }).render();
 
-			this.module_view.setCurrentSlide(slide);
+			// Select current slide
+			this.module_view.routerNavigate(slide);
 		}
 	});
 	
