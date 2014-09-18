@@ -149,7 +149,7 @@ class UserResource(ModelResource):
 	class Meta:
 		queryset = AppUser.objects.all()
 		resource_name = 'user'
-		fields = ['username', 'first_name', 'last_name', 'last_login']
+		fields = ['username', 'first_name', 'last_name', 'last_login', 'lang']
 		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
 		authentication = SessionAuthentication()
