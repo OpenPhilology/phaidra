@@ -129,21 +129,25 @@ class UserSentenceResource(Resource):
             
             # filter word on parameters
             for key in query_params:
-                if len(key.split('__')) > 1:
-                    if key.split('__')[1] == 'contains':
-                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
-                    elif key.split('__')[1] == 'startswith':
-                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
-                    elif key.split('__')[1] == 'endswith':
-                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
-                else:
-                    q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
-            # is user set if params not empty?
+            	if key in ['tbwid', 'head', 'length', 'cid']:
+					q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """=""" +query_params[key]+ """ AND """
+            	else:
+					if len(key.split('__')) > 1:
+						if key.split('__')[1] == 'contains':
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+						elif key.split('__')[1] == 'startswith':
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+						elif key.split('__')[1] == 'endswith':
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					else:
+						q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
+			
+			# is user set if params not empty?
          	if request.GET.get('user'):
          		q = q + """ u.username='""" + request.GET.get('user') + """' RETURN s, d, u.username ORDER BY ID(s)"""         		
          	else:
          		q = q[:len(q)-4]
-         		q = q + """RETURN s, d, u ORDER BY ID(s)"""
+         		q = q + """RETURN s, d, u.username ORDER BY ID(s)"""
             
         	table = gdb.query(q)
         

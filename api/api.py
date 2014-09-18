@@ -22,7 +22,7 @@ from tastypie.authentication import SessionAuthentication, BasicAuthentication, 
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest, HttpConflict
-from tastypie.exceptions import NotFound, BadRequest, Unauthorized
+from tastypie.exceptions import NotFound, BadRequest, Unauthorized, ImmediateHttpResponse
 from tastypie.resources import Resource, ModelResource
 from tastypie.cache import SimpleCache
 from tastypie.validation import Validation
@@ -149,7 +149,7 @@ class UserResource(ModelResource):
 	class Meta:
 		queryset = AppUser.objects.all()
 		resource_name = 'user'
-		fields = ['username', 'first_name', 'last_name', 'last_login', 'lang']
+		fields = ['username', 'first_name', 'last_name', 'last_login', 'lang', 'readingCTS']
 		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
 		authentication = SessionAuthentication()
@@ -408,10 +408,6 @@ class SubmissionResource(Resource):
 
 		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
-		# check if thte authenticated and the data user has the same username
-		#if request.user.username != data['user']:
-			 #return self.create_response(request, { 'success': False, 'error_message': 'Authenticated and submitting user is not identical, authenticated: %s , submitting: %s' % (request.user, data['user'])})
-
 		# get the user via neo look-up or create a newone
 		if request.user.username is not None:
 			userTable = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
@@ -661,8 +657,8 @@ class WordResource(Resource):
 				grammarParams = fileContent[0][request.GET.get('smyth')]['query'].split('&')		
 				for pair in grammarParams:
 					query_params[pair.split('=')[0]] = pair.split('=')[1]
-			except KeyError as k:	
-				return words				
+			except KeyError as k:
+				return words			
 		
 		# query by ordinary filters		
 		for obj in request.GET.keys():
@@ -714,30 +710,32 @@ class WordResource(Resource):
 				
 			return words	
 		
-		# default querying on big dataset
-		else:	
+		# default querying on big dataset (CTS required)
+		elif request.GET.get('document_CTS'):	
 
-			documentTable = gdb.query("""MATCH (n:`Document`) RETURN n ORDER BY ID(n)""")	
-			
-			for d in documentTable:
-				document = d[0]
-				wordTable = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS = '""" + document['data']['CTS'] + """' RETURN w,s ORDER BY ID(w)""")
+			# delted this so our word list is smaller
+			#documentTable = gdb.query("""MATCH (n:`Document`) RETURN n ORDER BY ID(n)""")	
+			#for d in documentTable:
+			#document = d[0]
+			wordTable = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS = '""" + request.GET.get('document_CTS') + """' RETURN w,s ORDER BY ID(w)""")
 							
-				# get sent id
-				for w in wordTable:
-					word = w[0]
-					sentence = w[1]
-					url = word['self'].split('/')
-					urlSent = sentence['self'].split('/')	
+			# get sent id
+			for w in wordTable:
+				word = w[0]
+				sentence = w[1]
+				url = word['self'].split('/')
+				urlSent = sentence['self'].split('/')	
 						
-					new_obj = DataObject(url[len(url)-1])
-					new_obj.__dict__['_data'] = word['data']
+				new_obj = DataObject(url[len(url)-1])
+				new_obj.__dict__['_data'] = word['data']
 									
-					new_obj.__dict__['_data']['id'] = url[len(url)-1]
-					new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
+				new_obj.__dict__['_data']['id'] = url[len(url)-1]
+				new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
 									
-					words.append(new_obj)
+				words.append(new_obj)
 							
+			return words
+		else:
 			return words
 		
 	
