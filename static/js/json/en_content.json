@@ -1040,11 +1040,19 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/12.thirddecconson/intro.html"
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/intro.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon_pent.html"
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow1.html"
 					}
 				]
 			}	
