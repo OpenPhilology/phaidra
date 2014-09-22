@@ -1005,6 +1005,46 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact4.html"
+					}
+				]
+			},
+			{
+				"title": "Aorist Indicative Active: Second Aorist",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon_pent.html"
+					}
+				]
+			}			
+		]
+	},
+	{	
+		"title": "Third Declension: Vowel Stem",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Third Declension: Vowel Stem",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon_pent.html"
 					}
 				]
 			}	
