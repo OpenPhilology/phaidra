@@ -44,6 +44,7 @@ define(
 				};
 
 				this.lesson.bind('add', _.bind(this.buildSlide, this));
+				this.lesson.bind('change:selected', _.bind(this.showSlide, this));
 				this.lesson.populate();
 				this.$el.find('.lesson-header h1').html(this.lesson.meta('moduleTitle'));
 				this.$el.find('.lesson-header h2').html(this.lesson.meta('sectionTitle'));
@@ -53,12 +54,16 @@ define(
 				var selector = '#' + model.get('type');
 				var that = this;
 
-				// Set for easy navigation to next slide
-				model.set('index', this.lesson.indexOf(model));
-
 				// The Module view keeps references to the various slide views
 				var view = this.map[model.get('type')](model);
-				view.$el.appendTo('#lesson-content');
+
+				// Insert our views in order
+
+				if (model.get('index') === 0)
+					$('#lesson-content').append(view.$el);
+				else 
+					$('#lesson-content').children().eq((model.get('index') - 1)).after(view.$el);
+
 				this.slides.push(view);
 
 				// Create a progress bar section for each slide
@@ -78,20 +83,33 @@ define(
 			render: function() {
 				return this;	
 			},
-			setCurrentSlide: function(slide) {
-				slide = parseInt(slide);
+			routerNavigate: function(index) {
+				var model = this.lesson.models.filter(function(m) {
+					return m.get('index') === parseInt(index);
+				})[0];
+				this.setCurrentSlide(model);
+			},
+			setCurrentSlide: function(model) {
+
+				// Deselect previous slide
+				var selected = this.lesson.findWhere({ 'selected' : true });
+				if (selected) selected.set('selcted', false);
+
+				console.log("set current slide", model.get('index'));
 				var that = this;
-				this.lesson.at(slide).populate({ 
+				model.populate({ 
 					success: function() {
-						that.lesson.at(slide).set('selected', true);	
-						that.showSlide(slide);
+						model.set('selected', true);
 					},
 					error: function() {
 						console.log("population failed");
 					}
 				});
 			},
-			showSlide: function(slide) {
+			showSlide: function(model) {
+				console.log("show slide shown");
+				
+				var slide = model.get('index');
 				// Show the correct slide view
 				for (var i = 0; i < this.slides.length; i++) {
 					this.slides[i].$el.hide();
