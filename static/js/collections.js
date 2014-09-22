@@ -263,7 +263,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 
 			// First, see if there are queries associated with these smyth units
 			var queries = _.compact(_.map(this.meta('grammar'), function(val) {
-				return Utils.Smyth[val].query;
+				if (Utils.Smyth[val]) return Utils.Smyth[val].query;
 			}));
 			
 			if (queries.length === 0) {
