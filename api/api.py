@@ -22,7 +22,7 @@ from tastypie.authentication import SessionAuthentication, BasicAuthentication, 
 from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie.utils import trailing_slash
 from tastypie.http import HttpUnauthorized, HttpForbidden, HttpBadRequest, HttpConflict
-from tastypie.exceptions import NotFound, BadRequest, Unauthorized
+from tastypie.exceptions import NotFound, BadRequest, Unauthorized, ImmediateHttpResponse
 from tastypie.resources import Resource, ModelResource
 from tastypie.cache import SimpleCache
 from tastypie.validation import Validation
@@ -39,11 +39,17 @@ import string
 
 class ResourceValidation(Validation):
 	
-	def is_valid(self, bundle, request=None):
+	def is_valid(self, bundle=None, request=None):
 		
+		# allowed for CTS
 		invalidChars = string.punctuation.replace(".", "")
 		invalidChars = invalidChars.replace(":", "")
 		invalidChars = invalidChars.replace("-", "")
+		#allowed for word attributes
+		invalidChars = invalidChars.replace("_", "")
+		#allowed for smyth keys
+		invalidChars = invalidChars.replace("#", "")
+		
 		invalidChars = set(invalidChars)
 		errors = {}
 		
@@ -148,7 +154,7 @@ class UserResource(ModelResource):
 	class Meta:
 		queryset = AppUser.objects.all()
 		resource_name = 'user'
-		fields = ['username', 'first_name', 'last_name', 'last_login']
+		fields = ['username', 'first_name', 'last_name', 'last_login', 'lang', 'readingCTS']
 		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
 		authentication = SessionAuthentication()
@@ -407,10 +413,6 @@ class SubmissionResource(Resource):
 
 		data = self.deserialize(request, request.body, format=request.META.get('CONTENT_TYPE', 'application/json'))
 
-		# check if thte authenticated and the data user has the same username
-		#if request.user.username != data['user']:
-			 #return self.create_response(request, { 'success': False, 'error_message': 'Authenticated and submitting user is not identical, authenticated: %s , submitting: %s' % (request.user, data['user'])})
-
 		# get the user via neo look-up or create a newone
 		if request.user.username is not None:
 			userTable = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
@@ -622,7 +624,7 @@ class WordResource(Resource):
 		object_class = DataObject
 		resource_name = 'word'
 		authorization = ReadOnlyAuthorization()
-		cache = SimpleCache(timeout=None)
+		#cache = SimpleCache(timeout=None)
 		validation =  ResourceValidation()
 	
 	def prepend_urls(self, *args, **kwargs):	
@@ -630,72 +632,6 @@ class WordResource(Resource):
 		return [
 			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'smyth', trailing_slash()), self.wrap_view('smyth'), name="api_%s" % 'smyth')
 			]
-	
-	"""
-	returns a list of words to a given smyth key. Doesn't work via objects. Returns a json object returninig a list of words.
-	"""
-	def smyth(self, request, **kwargs):
-		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
-		data = {}
-		data['words'] = []
-		query_params = {}
-		
-		# this might tricky, because no error response creatable of unsuccessful
-		if request.GET.get('smyth'):
-			
-			# get the file entry:
-			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
-			fileContent = {}
-			with open(filename, 'r') as json_data:
-				fileContent = json.load(json_data)
-				json_data.close()
-				
-			try:
-				grammarParams = fileContent[0][request.GET.get('smyth')]['query'].split('&')		
-				for pair in grammarParams:
-					query_params[pair.split('=')[0]] = pair.split('=')[1]
-			except KeyError as k:	
-				return self.error_response(request, {'error': 'Smyth key does not exist.'}, response_class=HttpBadRequest)
-			
-			# generate query
-			q = """MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE """
-			
-			# filter word on parameters
-			for key in query_params:
-				if len(key.split('__')) > 1:
-					if key.split('__')[1] == 'contains':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
-					elif key.split('__')[1] == 'startswith':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
-					elif key.split('__')[1] == 'endswith':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
-					elif key.split('__')[1] == 'isnot':
-						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
-				else:
-					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
-			q = q[:len(q)-4]
-			q = q + """RETURN w, s ORDER BY ID(w)"""
-			
-			table = gdb.query(q)
-				
-			# create the objects which was queried for and set all necessary attributes
-			for t in table:
-				word = t[0]
-				sentence = t[1]		
-				url = word['self'].split('/')
-				urlSent = sentence['self'].split('/')		
-				
-				tmp = {}
-				for key in word['data']:
-					tmp[key] = word['data'][key]	
-				tmp['resource_uri'] = API_PATH + 'word/' + url[len(url)-1]
-				tmp['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
-				data['words'].append(tmp)
-			
-			return self.create_response(request, data)
-		
-		else:
-			return self.error_response(request, {'error': 'Smyth key missed.'}, response_class=HttpBadRequest)
 	
 	def detail_uri_kwargs(self, bundle_or_obj):
 		
@@ -726,8 +662,8 @@ class WordResource(Resource):
 				grammarParams = fileContent[0][request.GET.get('smyth')]['query'].split('&')		
 				for pair in grammarParams:
 					query_params[pair.split('=')[0]] = pair.split('=')[1]
-			except KeyError as k:	
-				return words				
+			except KeyError as k:
+				return words			
 		
 		# query by ordinary filters		
 		for obj in request.GET.keys():
@@ -779,30 +715,32 @@ class WordResource(Resource):
 				
 			return words	
 		
-		# default querying on big dataset
-		else:	
+		# default querying on big dataset (CTS required)
+		elif request.GET.get('document_CTS'):	
 
-			documentTable = gdb.query("""MATCH (n:`Document`) RETURN n ORDER BY ID(n)""")	
-			
-			for d in documentTable:
-				document = d[0]
-				wordTable = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS = '""" + document['data']['CTS'] + """' RETURN w,s ORDER BY ID(w)""")
+			# delted this so our word list is smaller
+			#documentTable = gdb.query("""MATCH (n:`Document`) RETURN n ORDER BY ID(n)""")	
+			#for d in documentTable:
+			#document = d[0]
+			wordTable = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS = '""" + request.GET.get('document_CTS') + """' RETURN w,s ORDER BY ID(w)""")
 							
-				# get sent id
-				for w in wordTable:
-					word = w[0]
-					sentence = w[1]
-					url = word['self'].split('/')
-					urlSent = sentence['self'].split('/')	
+			# get sent id
+			for w in wordTable:
+				word = w[0]
+				sentence = w[1]
+				url = word['self'].split('/')
+				urlSent = sentence['self'].split('/')	
 						
-					new_obj = DataObject(url[len(url)-1])
-					new_obj.__dict__['_data'] = word['data']
+				new_obj = DataObject(url[len(url)-1])
+				new_obj.__dict__['_data'] = word['data']
 									
-					new_obj.__dict__['_data']['id'] = url[len(url)-1]
-					new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
+				new_obj.__dict__['_data']['id'] = url[len(url)-1]
+				new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
 									
-					words.append(new_obj)
+				words.append(new_obj)
 							
+			return words
+		else:
 			return words
 		
 	

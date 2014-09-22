@@ -47,9 +47,57 @@ class UserSentenceResource(Resource):
         resource_name = 'user_sentence'
         object_class = DataObject
         authorization = Authorization() 
-        authentication = BasicAuthentication()  
+        authentication = SessionAuthentication()  
         validation =  ResourceValidation()
-    
+        
+    def prepend_urls(self):
+		return [
+			url(r"^(?P<resource_name>%s)/%s%s$" % (self._meta.resource_name, 'translations', trailing_slash()), self.wrap_view('translations'), name="api_%s" % 'translations')
+			]
+	
+    """
+    Returns some figures for grammar and title the user has struggled with
+    """
+    def translations(self, request, **kwargs):
+    	
+    	# because this is a non object based implementation authentication on this return data set has to be done explicit
+    	if not request.user or not request.user.is_authenticated():
+            return self.create_response(request, { 'success': False, 'error_message': 'You are not authenticated, %s.' % request.user })
+    	
+    	dict = self._meta.validation.is_valid({}, request)
+    	if len(dict) > 0:
+    		return dict
+    	
+    	gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+    	data = {}
+    	data['objects'] = []
+    	
+    	if request.GET.get('CTS'):
+    		
+    		translations = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:`UserSentence`)-[:words]->
+    			(w:`Word`)<-[:translation]-(t:`Word`)<-[:words]-(s1:`Sentence`)
+    			WHERE HAS (s1.CTS) AND s1.CTS='""" + request.GET.get('CTS') + """' RETURN DISTINCT s, d, u.username ORDER BY ID(s)""")
+    		
+    		# create the objects which was queried for and set all necessary attributes
+    		for t in translations:
+    			sentence = t[0]
+    			document = t[1]
+    			user = t[2]
+    			url = sentence['self'].split('/')
+    			urlDoc = document['self'].split('/')
+    			
+    			new_obj = {}
+    			new_obj = sentence['data']
+    			new_obj['id'] = url[len(url)-1]
+    			new_obj['document_resource_uri'] = API_PATH + 'user_document/' + urlDoc[len(urlDoc)-1] +'/'
+    			new_obj['user'] = user
+    			data['objects'].append(new_obj)
+    			
+    		return self.create_response(request, data)
+    	else:
+    		return self.error_response(request, {'error': 'CTS parameter of greek sentence required.'}, response_class=HttpBadRequest)
+
+
     def detail_uri_kwargs(self, bundle_or_obj):
         
         kwargs = {}
@@ -81,21 +129,25 @@ class UserSentenceResource(Resource):
             
             # filter word on parameters
             for key in query_params:
-                if len(key.split('__')) > 1:
-                    if key.split('__')[1] == 'contains':
-                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
-                    elif key.split('__')[1] == 'startswith':
-                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
-                    elif key.split('__')[1] == 'endswith':
-                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
-                else:
-                    q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
-            # is user set if params not empty?
+            	if key in ['tbwid', 'head', 'length', 'cid']:
+					q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """=""" +query_params[key]+ """ AND """
+            	else:
+					if len(key.split('__')) > 1:
+						if key.split('__')[1] == 'contains':
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+						elif key.split('__')[1] == 'startswith':
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+						elif key.split('__')[1] == 'endswith':
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					else:
+						q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
+			
+			# is user set if params not empty?
          	if request.GET.get('user'):
          		q = q + """ u.username='""" + request.GET.get('user') + """' RETURN s, d, u.username ORDER BY ID(s)"""         		
          	else:
          		q = q[:len(q)-4]
-         		q = q + """RETURN s, d, u ORDER BY ID(s)"""
+         		q = q + """RETURN s, d, u.username ORDER BY ID(s)"""
             
         	table = gdb.query(q)
         
@@ -103,10 +155,7 @@ class UserSentenceResource(Resource):
         else:    
             # is user set if params are empty?
         	if request.GET.get('user'):
-        		user = '"%s"' % request.GET.get('user')
-         		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:UserSentence) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT s, d, u.username ORDER BY ID(d)""")
-         		q = """MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:UserSentence) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT s, d, u.username ORDER BY ID(d)"""
-         		q = q
+        		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:`UserDocument`)-[:sentences]->(s:UserSentence) WHERE u.username='""" + request.GET.get('user') + """' RETURN DISTINCT s, d, u.username ORDER BY ID(d)""")
          	else:
          		table = gdb.query("""MATCH (u:`User`)-[:owns]->(d:UserDocument)-[:sentences]->(s:UserSentence) RETURN s, d, u.username ORDER BY ID(s)""")
             
@@ -195,13 +244,6 @@ class UserSentenceResource(Resource):
                 word['data']['translations'] = translationArray
                 
             wordArray.append(word['data'])
-            
-        # if short=True return only words of the short sentence
-        if bundle.request.GET.get('short'):
-            wordArray =  self.shorten(wordArray, query_params)
-            if wordArray is None:
-                #return None
-                raise BadRequest("Sentence doesn't hit your query.")
         
         
         new_obj.__dict__['_data']['words'] = wordArray
@@ -300,7 +342,7 @@ class UserDocumentResource(Resource):
         object_class = DataObject
         allowed_methods = ['get', 'post']
         authorization = Authorization()
-        authentication = BasicAuthentication()
+        authentication = SessionAuthentication()
         validation =  ResourceValidation()
     
     def detail_uri_kwargs(self, bundle_or_obj):
