@@ -817,7 +817,7 @@
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/8.presentindicativeactive/presindact2.html",
 						"smyth": "s768#a",
-						"tasks": ["identify_morph_person", "identify_morph_number"]
+						"tasks": ["identify_morph_tense"]
 					},
 					{
 						"type": "slide_info",
@@ -853,21 +853,21 @@
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact1.html",
 						"smyth": "s532",
-						"tasks": ["identify_morph_person", "identify_morph_number"]
+						"tasks": ["identify_morph_person"]
 					},
 					{
 						"title": "Forming the Future Active Indicative for Stop Verbs",
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact2.html",
 						"smyth": "s537",
-						"tasks": ["identify_morph_person", "identify_morph_number"]
+						"tasks": ["identify_morph_tense"]
 					},
 					{
 						"title": "Future Active Indicative of εἰμί",
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact3.html",
 						"smyth": "s768#b",
-						"tasks": ["identify_morph_person", "identify_morph_number"]
+						"tasks": ["identify_morph_number"]
 					},
 					{
 						"title": "The Future Indicative Active in the Pentecontaetia",
@@ -938,7 +938,7 @@
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/11.imperfectindicativeactive/imperfindact2.html",
 						"smyth": "s768#c",
-						"tasks": ["identify_morph_person", "identify_morph_number"]
+						"tasks": ["identify_morph_tense"]
 					}
 				]
 			}	

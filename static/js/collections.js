@@ -80,13 +80,17 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 
 			// Add slides and exercises
 			for (var i = 0, slide; slide = slides[i]; i++) {
-				slide.title = this.meta('sectionTitle');
-				slide.index = this.meta('initLength');
-				console.log("incremented to ", this.meta('initLength'));
-				this.add(slide);
-				this.meta('initLength', (1 + this.meta('initLength')));
+				if (this.at(4)) console.log(this.at(4).attributes.idx, " - beginning");
 
+				slide.title = this.meta('sectionTitle');
+				slide.idx = this.meta('initLength');
+				this.add(slide);
+				if (this.at(4)) console.log(this.at(4).attributes.idx, " - mid");
+
+				this.meta('initLength', (1 + this.meta('initLength')));
 				this.insertExercises(slide, slide.smyth);
+
+				if (this.at(4)) console.log(this.at(4).attributes.idx, " - end");
 			}
 
 			// Initiate collection of vocabulary words
@@ -103,6 +107,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				options.success();
 		},
 		insertExercises: function(slide, smyth, index) {
+			if (this.at(4)) console.log(this.at(4).attributes.idx, " - insert exercises");
+
 			if (!slide.smyth)
 				return;
 
@@ -116,17 +122,24 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			newSlides = newSlides.concat(questions);
 			newSlides = _.shuffle(newSlides);
 
+			console.log(this.meta('initLength'));
+			if (this.at(4)) console.log(this.at(4).attributes.idx, " - after added tasks and questions");
+			console.log(this.meta('initLength'));
+
 			// Give all the slides an index -- needed for inserting slides later
 			newSlides.forEach(function(s) {
-				console.log("incremented to ", this.meta('initLength'));
-				s.index = this.meta('initLength');
+				s.idx = this.meta('initLength');
 				this.meta('initLength', (1 + this.meta('initLength')));
 			}.bind(this));
+
+			if (this.at(4)) console.log(this.at(4).attributes.idx, " - after new slides foreach");
 
 			if (newSlides.length === 0)
 				return;
 			else 
 				this.add(newSlides);
+
+			console.log(this.at(4).attributes.idx);
 		},
 		insertTasks: function(tasks, smyth) {
 			var matches = Utils.Tasks.filter(function(t) {
@@ -263,7 +276,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				calls.push($.ajax('/api/v1/word/', {
 					data: { "smyth": val, "limit": 0 },
 					success: function(response) {
-						console.log("adding " + response.objects.length);
 						that.add(response.objects);			
 					},
 					error: function(x, y, z) {
