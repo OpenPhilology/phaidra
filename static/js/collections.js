@@ -261,24 +261,37 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			var that = this;
 			var calls = [];
 
-			this.meta('grammar').forEach(function(val, i, arr) {
-				calls.push($.ajax('/api/v1/word/', {
-					data: { "smyth": val, "limit": 0 },
-					success: function(response) {
-						that.add(response.objects);			
-					},
-					error: function(x, y, z) {
-						console.log(x, y, z);
-					}
-				}));
-			});
+			// First, see if there are queries associated with these smyth units
+			var queries = _.compact(_.map(this.meta('grammar'), function(val) {
+				return Utils.Smyth[val].query;
+			}));
+			
+			if (queries.length === 0) {
+				triggerPopulated();
+			}
+			else {
+				this.meta('grammar').forEach(function(val, i, arr) {
+					calls.push($.ajax('/api/v1/word/', {
+						data: { "smyth": val, "limit": 0 },
+						success: function(response) {
+							that.add(response.objects);			
+						},
+						error: function(x, y, z) {
+							console.log(x, y, z);
+						}
+					}));
+				});
 
-			$.when.apply(this, calls).done(function() {
+				$.when.apply(this, calls).done(triggerPopulated);
+			}
+
+			function triggerPopulated() {
 				that.meta('populated', true);
 				that.trigger('populated');
-			});
+			}
 		},
 		filterVocabulary: function() {
+			if (this.models.length === 0) return [];
 			var groupedByFreq = _.reduce(this.models, function(map, model) {
 				var lemma = model.attributes.lemma;
 				(map[lemma] || (map[lemma] = [])).push(model);
