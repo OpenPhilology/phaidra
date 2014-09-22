@@ -1005,6 +1005,54 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact4.html"
+					}
+				]
+			},
+			{
+				"title": "Aorist Indicative Active: Second Aorist",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact6.html"
+					}
+				]
+			}			
+		]
+	},
+	{	
+		"title": "Third Declension: Vowel Stem",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Third Declension: Vowel Stem",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow1.html"
 					}
 				]
 			}	
@@ -1032,6 +1080,22 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/treebanking/exercises.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/exercises1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/exercises2.html"
 					}
 				]
 			}	
