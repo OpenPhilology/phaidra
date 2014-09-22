@@ -817,7 +817,7 @@
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/8.presentindicativeactive/presindact2.html",
 						"smyth": "s768#a",
-						"tasks": ["identify_morph_tense"]
+						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
 						"type": "slide_info",

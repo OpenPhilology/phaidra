@@ -80,17 +80,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 
 			// Add slides and exercises
 			for (var i = 0, slide; slide = slides[i]; i++) {
-				if (this.at(4)) console.log(this.at(4).attributes.idx, " - beginning");
-
 				slide.title = this.meta('sectionTitle');
 				slide.idx = this.meta('initLength');
 				this.add(slide);
-				if (this.at(4)) console.log(this.at(4).attributes.idx, " - mid");
-
 				this.meta('initLength', (1 + this.meta('initLength')));
 				this.insertExercises(slide, slide.smyth);
-
-				if (this.at(4)) console.log(this.at(4).attributes.idx, " - end");
 			}
 
 			// Initiate collection of vocabulary words
@@ -107,8 +101,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				options.success();
 		},
 		insertExercises: function(slide, smyth, index) {
-			if (this.at(4)) console.log(this.at(4).attributes.idx, " - insert exercises");
-
 			if (!slide.smyth)
 				return;
 
@@ -122,24 +114,19 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			newSlides = newSlides.concat(questions);
 			newSlides = _.shuffle(newSlides);
 
-			console.log(this.meta('initLength'));
-			if (this.at(4)) console.log(this.at(4).attributes.idx, " - after added tasks and questions");
-			console.log(this.meta('initLength'));
-
 			// Give all the slides an index -- needed for inserting slides later
-			newSlides.forEach(function(s) {
-				s.idx = this.meta('initLength');
-				this.meta('initLength', (1 + this.meta('initLength')));
+			var idx = this.meta('initLength');
+			newSlides = JSON.parse(JSON.stringify(newSlides));
+			newSlides.forEach(function(s, i) {
+				s.idx = idx + i;
+				idx++;
 			}.bind(this));
-
-			if (this.at(4)) console.log(this.at(4).attributes.idx, " - after new slides foreach");
+			this.meta('initLength', idx);
 
 			if (newSlides.length === 0)
 				return;
 			else 
 				this.add(newSlides);
-
-			console.log(this.at(4).attributes.idx);
 		},
 		insertTasks: function(tasks, smyth) {
 			var matches = Utils.Tasks.filter(function(t) {
