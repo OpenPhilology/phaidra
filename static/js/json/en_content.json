@@ -1072,6 +1072,22 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/treebanking/exercises.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/exercises1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/exercises2.html"
 					}
 				]
 			}	
