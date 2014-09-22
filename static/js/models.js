@@ -37,15 +37,29 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		defaults: {
 			'modelName': 'slide',
 		},
+		// TODO: Refactor this
 		populate: function(options) {
+			if (this.get('populated')) {
+				if (options && options.success) options.success();
+				return;
+			}
+
 			// Allows us to lazy-load everything
 			if (this.get('includeHTML'))
 				this.fetchHTML(options);
 			else if (this.get('task'))
 				this.fillAttributes(options);
-			else {
+			else if (this.get('type') !== 'slide_vocab') {
 				this.set('populated', true);
 				if (options && options.success) options.success();
+			}
+			else if (this.get('type') === 'slide_vocab') {
+				if (this.collection.meta('vocab').meta('populated')) {
+					if (options && options.success) options.success();
+				}
+				else {
+					this.collection.meta('vocab').on('populated', options.success, this);
+				}
 			}
 		},
 		fetchHTML: function(options) {
@@ -84,6 +98,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 					
 				var vocab = that.collection.meta('vocab');
 				var candidates = vocab.filterVocabulary();
+				that.collection.meta('vocab').meta('candidates', candidates);
 
 				// Pick an example based on vocab for this unit
 				var chosen = _.shuffle(_.filter(vocab.models, function(v) {
@@ -98,6 +113,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				data[that.get('endpoint')] = chosen.get('value');
 				var compiled = _.template(that.get('question'));
 
+				console.log("use vocab called");
+
 				that.set('question', compiled(data));
 				that.set('populated', true);
 				if (options && options.success) options.success();
@@ -108,7 +125,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				useVocab();
 			else
 				this.collection.meta('vocab').on('populated', useVocab, this);
-
 
 		},
 		checkAnswer: function(attempt) {

@@ -56,15 +56,15 @@ define(
 
 				// The Module view keeps references to the various slide views
 				var view = this.map[model.get('type')](model);
+				var index = model.collection.indexOf(model);
 
 				// Insert our views in order
-
-				if (model.collection.indexOf(model) === 0)
+				if (index === 0)
 					$('#lesson-content').append(view.$el);
 				else 
-					$('#lesson-content').children().eq((model.collection.indexOf(model) - 1)).after(view.$el);
+					$('#lesson-content').children().eq(index - 1).after(view.$el);
 
-				this.slides.push(view);
+				this.slides.splice(index, 0, view);
 
 				// Create a progress bar section for each slide
 				var progress = this.$el.find('.lesson-progress');
@@ -91,7 +91,7 @@ define(
 
 				// Deselect previous slide
 				var selected = this.lesson.findWhere({ 'selected' : true });
-				if (selected) selected.set('selcted', false);
+				if (selected) selected.set('selected', false);
 
 				var that = this;
 				model.populate({ 
