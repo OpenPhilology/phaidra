@@ -59,10 +59,10 @@ define(
 
 				// Insert our views in order
 
-				if (model.get('index') === 0)
+				if (model.collection.indexOf(model) === 0)
 					$('#lesson-content').append(view.$el);
 				else 
-					$('#lesson-content').children().eq((model.get('index') - 1)).after(view.$el);
+					$('#lesson-content').children().eq((model.collection.indexOf(model) - 1)).after(view.$el);
 
 				this.slides.push(view);
 
@@ -84,10 +84,8 @@ define(
 				return this;	
 			},
 			routerNavigate: function(index) {
-				var model = this.lesson.models.filter(function(m) {
-					return m.get('index') === parseInt(index);
-				})[0];
-				this.setCurrentSlide(model);
+				console.log(this.lesson.at(index));
+				this.setCurrentSlide(this.lesson.at(index));
 			},
 			setCurrentSlide: function(model) {
 
@@ -95,7 +93,6 @@ define(
 				var selected = this.lesson.findWhere({ 'selected' : true });
 				if (selected) selected.set('selcted', false);
 
-				console.log("set current slide", model.get('index'));
 				var that = this;
 				model.populate({ 
 					success: function() {
@@ -109,7 +106,7 @@ define(
 			showSlide: function(model) {
 				console.log("show slide shown");
 				
-				var slide = model.get('index');
+				var slide = model.collection.indexOf(model);
 				// Show the correct slide view
 				for (var i = 0; i < this.slides.length; i++) {
 					this.slides[i].$el.hide();
