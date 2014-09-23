@@ -978,3 +978,10 @@ table.inflection-table {
     color: #1fadad; }
   .new-knowledge span.glyphicon.glyphicon-bookmark {
     color: #d15241; }
+
+.vocabulary .card {
+  border: 1px solid #EEE;
+  margin: 5px;
+  padding: 20px; }
+  .vocabulary .card h1 {
+    font-size: 36px; }

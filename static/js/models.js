@@ -113,8 +113,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				data[that.get('endpoint')] = chosen.get('value');
 				var compiled = _.template(that.get('question'));
 
-				console.log("use vocab called");
-
 				that.set('question', compiled(data));
 				that.set('populated', true);
 				if (options && options.success) options.success();
@@ -363,6 +361,123 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		parse: function(response) {
 			this.set(response);
 			this.set('translated', true);
+		},
+		getPhrase: function() {
+			
+			var words = this.collection.where({ sentence_resource_uri: this.get('sentence_resource_uri') });
+			words = words.map(function(word) {
+				word.attributes.id = word.attributes.tbwid;
+				return word.attributes;
+			});
+
+			var dataMap = words.reduce(function(map, node) {
+				map[node.id] = node;
+				return map;
+			}, []);
+
+			var instance = this.get('tbwid');
+			var node = dataMap[instance];
+			var success = true;
+			while (node.pos !== 'verb') {
+				node = dataMap[node.head];
+				if (!node || !node.pos) {
+					success = false;
+					break;
+				}
+			}
+
+			if (!success) return false;
+
+			var treeData = [];
+			var target = dataMap[instance]; 
+			words.forEach(function(node) {
+				var head = dataMap[node.head];
+				if (head)
+					(head.children || (head.children = [])).push(node);
+				else
+					treeData.push(node);
+			});
+
+			var path = [];
+			while (target !== node) {
+				path.push(target);
+				target = dataMap[target.head];
+			}
+
+			var results = [node];
+			function extractChildren(child) {
+				var children = child.children;
+				if (children) {
+					for (var i = 0, child; child = children[i]; i++) {
+						if (ofInterest(child)) {
+							results.push(child);
+							extractChildren(child);
+						}
+					}
+				}
+			}
+			function ofInterest(child) {
+				if (path.indexOf(child) !== -1) return true;
+				if (child.relation === 'AuxC') return false;
+				if (child.pos === 'verb') return false;
+				if (child.pos === 'participle' && (child.relation === 'ADV' || child.relation === 'ADV_CO')) return false;
+
+				return true;
+			}
+			extractChildren(node);
+
+			results.forEach(function(r) {
+				delete r.children;
+			});
+			results =  _.sortBy(results, function(r) { return r.id; });
+			
+			// TODO Something is wrong with our extractChildren function.
+			// See for example: urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.91.3
+			results = _.uniq(results, false, function(r) { return r.CTS; });
+
+			return results;
+		},
+		fetchSentence: function(wordCTS, options) {
+			// Populate a section of words by their sentence CTS id
+			var starter = this.collection.findWhere({ CTS: wordCTS });
+			var that = this;
+			var sentence = this.collection.filter(function(model) {
+				return starter.get('sentence_resource_uri') === model.get('sentence_resource_uri');
+			});
+				
+			// If it has a lemma property, we know its been populated
+			if (starter.get('populated')) {
+				this.trigger('change:populated');
+			}
+			else {
+				$.ajax({
+					url: starter.get('sentence_resource_uri'),
+					dataType: 'json',
+					doc: that,
+					data: { full: true },
+					options: options,
+					success: function(response) {
+						this.doc.set('translations', response.translations);
+						
+						for (var i = 0; i < response.words.length; i++) {
+							response.words[i].sentence_resource_uri = starter.get('sentence_resource_uri');
+
+							var target = this.doc.collection.findWhere(
+								{ CTS: response.words[i]["CTS"] }
+							);
+							if (!target)
+								this.doc.collection.add(response.words[i]);
+							else
+								target.set(response.words[i]);
+						}
+
+						this.doc.set('populated', true);
+					},
+					error: function(x, y, z) {
+						console.log(x, y, z);
+					}
+				});
+			}
 		},
 		// TODO: Flesh out this implementation to cover more query filters
 		getGrammar: function() {

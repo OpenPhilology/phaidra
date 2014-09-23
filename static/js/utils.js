@@ -75,7 +75,32 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 			e.initEvent(type, true, false);
 			el.dispatchEvent(e);
 		}
-	}
+	};
+
+	Utils.parseCTS = function(CTS) {
+		/*	CTS example:	urn:	cts:	greekLit:	tlg0003.tlg001.perseus-grc:		1.89.1:		13
+							urn:	cts:	namespace:	work:							passage:	word
+		*/ 
+		var split = CTS.split(":");
+		var work = split[3].split(".");
+
+		var obj = {
+			"urn": split[0],
+			"cts": split[1],
+			"namespace": split[2],
+			"work": {
+				"textgroup": work[0],
+				"text": work[1],
+				"translation": work[2]
+			},
+			"sentence": split[4]
+		};
+
+		if (split.length === 6)
+			obj["word"] = split[5];
+
+		return obj;
+	};
 
 	return Utils;
 });

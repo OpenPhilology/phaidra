@@ -8,13 +8,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			'submit form': 'submitForm'
 		},
 		initialize: function(options) {
-			console.log("info view initialized");
 			this.options = options;
 			this.model.on('change:populated', this.render, this);
 		},
 		render: function() {
 			var that = this;
-			console.log("info view render");
 
 			this.$el.html(this.template({ model: this.model }));
 			this.$el.find('a[data-toggle="popover"]').popover();
