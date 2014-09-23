@@ -1,6 +1,9 @@
-<div style="text-align: center; margin-bottom: 10px; font-size: 3em">
-	<% print(_.map(this.model.attributes.vocab.models, function(m) { return m.get('lemma'); }).join(', ')); %>
-</div>
+<h1>Vocab for this Unit</h1>
+<ul>
+<% _.each(model.get('vocab').filterVocabulary(), function(el) { %>
+	<li> <span lang="grc"><%= el %></span></li>
+<% }); %>
+</ul>
 
 <div class="slide-feedback" style="display: none">
 </div>

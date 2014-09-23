@@ -48,6 +48,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		model: Models.Slide,
 		initialize: function(models, options) {
 			_.bindAll(this, 'insertVocab');
+			_.bindAll(this, 'insertSlides');
 
 			// Keep track of metadata about the collection
 			if (!this._meta)
@@ -67,36 +68,41 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			var that = this;
 			var module = Utils.Content[this.meta('module')];
 			var section = module.modules[this.meta('section')];
-			var slides = section.slides;
 
 			// Set attributes on this section
 			this.meta('initLength', 0);
 			this.meta('moduleTitle', module.title);
 			this.meta('sectionTitle', section.title);
+			this.meta('slides', section.slides);
 
 			// Pull vocabulary for this section
-			this.meta('vocab', new Collections.Words([], { grammar: _.compact(_.pluck(slides, 'smyth')) }));
+			this.meta('vocab', new Collections.Words([], { grammar: _.compact(_.pluck(this.meta('slides'), 'smyth')) }));
 			this.meta('vocab').on('populated', this.insertVocab, this);
-
-			// Add slides and exercises
-			for (var i = 0, slide; slide = slides[i]; i++) {
-				slide.title = this.meta('sectionTitle');
-				this.add(slide);
-				this.meta('initLength', (1 + this.meta('initLength')));
-				console.log("length, after slide add", this.meta('initLength'));
-				this.insertExercises(slide, slide.smyth);
-				console.log("length, after exercise add", this.meta('initLength'));
-			}
+			this.insertSlides(this.meta('slides'));
 
 			// Initiate collection of vocabulary words
 			this.meta('vocab').populateVocab();
 
 		},
-		insertVocab: function(options) {
-			console.log(this.meta('vocab'));
+		insertSlides: function(slides) {
 
-			//this.add({ type: 'slide_vocab', vocab: this.meta('vocab'), populated: true }).at(1);
-			//this.meta('initLength', this.meta('initLength') + 1);
+			// Create skeleton vocab slide
+			var vocSlide = { type: 'slide_vocab' };
+			slides.splice(1, 0, vocSlide);
+
+			for (var i = 0, slide; slide = slides[i]; i++) {
+				slide.title = this.meta('sectionTitle');
+				this.add(slide);
+				this.meta('initLength', (1 + this.meta('initLength')));
+				this.insertExercises(slide, slide.smyth);
+			}
+		},
+		insertVocab: function(options) {
+			console.log("insert vocab called");
+
+			var slide = this.findWhere({ type: 'slide_vocab' });
+			slide.set('vocab', this.meta('vocab'));
+			slide.set('populated', true);
 
 			if (options && options.success)
 				options.success();
@@ -255,24 +261,37 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			var that = this;
 			var calls = [];
 
-			this.meta('grammar').forEach(function(val, i, arr) {
-				calls.push($.ajax('/api/v1/word/', {
-					data: { "smyth": val, "limit": 0 },
-					success: function(response) {
-						that.add(response.objects);			
-					},
-					error: function(x, y, z) {
-						console.log(x, y, z);
-					}
-				}));
-			});
+			// First, see if there are queries associated with these smyth units
+			var queries = _.compact(_.map(this.meta('grammar'), function(val) {
+				if (Utils.Smyth[val]) return Utils.Smyth[val].query;
+			}));
+			
+			if (queries.length === 0) {
+				triggerPopulated();
+			}
+			else {
+				this.meta('grammar').forEach(function(val, i, arr) {
+					calls.push($.ajax('/api/v1/word/', {
+						data: { "smyth": val, "limit": 0 },
+						success: function(response) {
+							that.add(response.objects);			
+						},
+						error: function(x, y, z) {
+							console.log(x, y, z);
+						}
+					}));
+				});
 
-			$.when.apply(this, calls).done(function() {
+				$.when.apply(this, calls).done(triggerPopulated);
+			}
+
+			function triggerPopulated() {
 				that.meta('populated', true);
 				that.trigger('populated');
-			});
+			}
 		},
 		filterVocabulary: function() {
+			if (this.models.length === 0) return [];
 			var groupedByFreq = _.reduce(this.models, function(map, model) {
 				var lemma = model.attributes.lemma;
 				(map[lemma] || (map[lemma] = [])).push(model);
