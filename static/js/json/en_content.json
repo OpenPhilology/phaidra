@@ -1080,14 +1080,45 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/15.adjectivesthird/3ending.html"
-					},
-					{
-						"type": "slide_info",
+					}
+				]				
+			},
+			{
+				"title": "Adjectives: Third Declension",
+				"slides": [
+					{	"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/15.adjectivesthird/2ending.html"
 					},
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/15.adjectivesthird/2ending1.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Adverbs",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Adverbs",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs1.html"
 					}
 				]
 			}	
