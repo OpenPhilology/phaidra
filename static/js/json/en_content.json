@@ -1067,23 +1067,27 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/intro.html"
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/intro.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/history.html"
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/history.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/adjectives.html"
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/adjectives.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/3ending.html"
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/3ending.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/2ending.html"
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/2ending.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/2ending1.html"
 					}
 				]
 			}	
