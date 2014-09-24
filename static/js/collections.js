@@ -256,6 +256,28 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			if (options && options.grammar) 
 				this.meta('grammar', options.grammar);
 		},
+		add: function(newWord) {
+			newWord = _.isArray(newWord) ? newWord : [newWord];	
+			var duplicates = [];
+			for (var i = 0, word; word = newWord[i]; i++) {
+				var dup = this.any(function(w) {
+					return w.equiv(word);
+				}.bind(this));
+				if (dup) duplicates.push(word);
+			};
+			duplicates = _.compact(duplicates);
+			
+			// Carefully merge in duplicates
+			duplicates.forEach(function(d) {
+				var model = this.findWhere({ CTS: d.CTS });
+				var keys = Object.keys(model.attributes);
+				for (var key in model.attributes) {
+					if (d[key]) model.set(key, d[key]);
+				}
+			}.bind(this));
+
+			Backbone.Collection.prototype.add.call(this, newWord);
+		},
 		populateVocab: function(collection) {
 
 			var that = this;

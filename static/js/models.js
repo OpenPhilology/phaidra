@@ -362,6 +362,9 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			this.set(response);
 			this.set('translated', true);
 		},
+		equiv: function(other) {
+			return this.get('CTS') === other.CTS;
+		},
 		getDefinition: function(lang) {
 			if (!this.get('translations').length) return false;
 
@@ -549,26 +552,17 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				$.ajax({
 					url: starter.get('sentence_resource_uri'),
 					dataType: 'json',
-					doc: that,
+					model: that,
 					data: { full: true },
 					options: options,
 					success: function(response) {
-						this.doc.set('translations', response.translations);
-						
 						for (var i = 0; i < response.words.length; i++) {
 							response.words[i].sentence_resource_uri = starter.get('sentence_resource_uri');
-
-							var target = this.doc.collection.findWhere(
-								{ CTS: response.words[i]["CTS"] }
-							);
-							if (!target)
-								this.doc.collection.add(response.words[i]);
-							else
-								target.set(response.words[i]);
+							this.model.collection.add(response.words[i]);
 						}
 
 						// Now go fetch alternative definitions for this word based on lemma
-						this.doc.fetchAlternativeDefinitions();
+						this.model.fetchAlternativeDefinitions();
 					},
 					error: function(x, y, z) {
 						console.log(x, y, z);

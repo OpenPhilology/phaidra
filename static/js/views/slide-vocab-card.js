@@ -42,20 +42,21 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 				alignment.words = _.uniq(alignment.words, false, function(t) {
 					return t.CTS;
 				});
+				alignment.words.forEach(function(w) {
+					if (w.lang === 'grc') return;
+					
+					w.translations = phrase.filter(function(p) {
+						if (!p.translations) return false;
+						return p.translations.filter(function(t) {
+							return w.CTS === t.CTS;
+						}).length !== 0;
+					});
+				});
+
 				alignment.translations = i === 0 ? { 'en': '/' } : { 'grc': '/' }; 
 				alignment.CTS = s[0].CTS.split(':').slice(0, 5).join(':');
 				return alignment;
-			});
-
-			/*this.$el.find('[data-toggle="daphne"]').each(function(i, el) {
-				new Daphne(el, {
-					data: phrase,
-					mode: 'edit',
-					width: el.getAttribute('data-width') || 200,
-					height: 400,
-					initialScale: 0.9
-				});
-			});*/
+			}.bind(phrase));
 
 			this.$el.find('[data-toggle="morea"]').each(function(i, el) {
 				new Morea(el, {
@@ -78,6 +79,18 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			});
 
 			return this;
+		},
+		renderParseTree: function(e) {
+			/*this.$el.find('[data-toggle="daphne"]').each(function(i, el) {
+				new Daphne(el, {
+					data: phrase,
+					mode: 'edit',
+					width: el.getAttribute('data-width') || 200,
+					height: 400,
+					initialScale: 0.9
+				});
+			});*/
+
 		}
 	});
 	return View;
