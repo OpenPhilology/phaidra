@@ -1119,6 +1119,10 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs2.html"
 					}
 				]
 			}	
