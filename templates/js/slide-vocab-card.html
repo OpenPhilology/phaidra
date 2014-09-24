@@ -10,6 +10,16 @@
 <% } %>
 
 <hr>
+<h3>Choices</h3>
+
+<% var choices = model.getVocabChoices(); %>
+<ul>
+	<% _.each(choices, function(choice, i) { %>
+		<li> <%= choice %> </li>
+	<% }); %>
+</ul>
+
+<hr>
 
 <% var url = model.get('sentence_resource_uri'); %>
 <div data-toggle="morea" data-targets="en,grc" data-dataUrl="<%= url %>" data-orientation="horizontal"></div>

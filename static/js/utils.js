@@ -139,7 +139,7 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 		switch (lang) {
 			case 'en':
 				if (pos === 'verb')
-					list = ['they', 'he', 'she', 'being', 'it', 'was', 'as', 'having', 'been', 'that', 'to', 'them', 'should', 'would', 'who', 'were', 'so', 'in', 'by', 'of'];
+					list = ['they', 'he', 'she', 'being', 'it', 'was', 'as', 'having', 'been', 'that', 'to', 'them', 'should', 'would', 'who', 'were', 'so', 'by', 'of'];
 				else if (pos === 'noun')
 					list = ['a', 'the', 'by', 'to', 'for', 'an', 'after', 'in', 'on', 'with']
 				break;
@@ -148,6 +148,11 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 		}
 
 		return list;
+	};
+
+	Utils.stripVocabCount = function(str) {
+		var arr = str.split(' ');
+		return arr.slice(0, arr.length - 1).join(' ').trim();
 	};
 
 	return Utils;

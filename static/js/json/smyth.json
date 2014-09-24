@@ -107,6 +107,14 @@
 		"variants": ["lemma__endswith=πω", "lemma__endswith=βω", "lemma__endswidth=πτω", "lemma__endswith=ϕω", "lemma__endswith=κω", "lemma__endswith=γω", "lemma__endswith=ττω"], 
 		"samples": ["πέμπω"]
 	},
+	"s542": {
+		"title": "First Aorist",
+		"query": "pos=verb&tense=aor&posAdd__contains=aor1"
+	},
+	"s546": {
+		"title": "Second Aorist",
+		"query": "pos=verb&tense=aor&posAdd__contains=aor2"
+	},
 	"s768#a": {
 		"title": "εἰμί in the Present Tense",
 		"query": "pos=verb&lemma=εἰμί&tense=pres&mood=ind"

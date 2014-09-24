@@ -366,7 +366,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			return this.get('CTS') === other.CTS;
 		},
 		getDefinition: function(lang) {
-			if (!this.get('translations').length) return false;
+			if (!this.get('translations') || !this.get('translations').length) return false;
+			if (this.get('alignments')) return this.get('alignments');
 
 			lang = lang || 'en';
 
@@ -410,7 +411,25 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			}, [])).reverse();
 			alignments = _.uniq(_.flatten(alignments));
 
+			this.set('alignments', alignments);
+
 			return alignments;
+		},
+		getVocabChoices: function() {
+			var answer = Utils.stripVocabCount(this.getDefinition()[0]);
+			var others = []; 
+			var shuffled = _.shuffle(this.collection.models);
+			for (var i = 0, model; model = shuffled[i]; i++) {
+				if (others.length < 6) {
+					word = model.getDefinition();
+					if (!word) continue;
+
+					word = Utils.stripVocabCount(word[0]);
+					if (word.indexOf(answer) === -1) others.push(word);
+				}
+			}
+			others.push(answer);
+			return others;
 		},
 		fetchAlternativeDefinitions: function(options) {
 			var query = this.get('lemma_resource_uri');

@@ -1000,19 +1000,23 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact.html",
+						"smyth": "s542"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact1.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact1.html",
+						"smyth": "s542"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html",
+						"smyth": "s542"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact3.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact3.html",
+						"smyth": "s542"
 					},
 					{
 						"type": "slide_info",
@@ -1025,11 +1029,13 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact5.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact5.html",
+						"smyth": "s546"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact6.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact6.html",
+						"smyth": "s546"
 					}
 				]
 			}			
