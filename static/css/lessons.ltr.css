@@ -984,4 +984,11 @@ table.inflection-table {
   margin: 5px;
   padding: 20px; }
   .vocabulary .card h1 {
-    font-size: 36px; }
+    font-size: 3em;
+    text-align: center; }
+  .vocabulary .card h2 {
+    text-align: center; }
+.vocabulary .parse-tree {
+  display: none; }
+  .vocabulary .parse-tree.open {
+    display: block; }

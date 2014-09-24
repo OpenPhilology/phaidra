@@ -5,7 +5,6 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slid
 		template: _.template(Template),
 		events: { },
 		initialize: function(options) {
-			console.log("vocab slide called");
 			this.options = options;
 			this.cards = [];
 			this.model.on('change:populated', this.render, this);

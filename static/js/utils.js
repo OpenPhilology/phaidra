@@ -8,14 +8,22 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 	Utils.Questions = JSON.parse(Questions);
 	Utils.Tasks = JSON.parse(Tasks);
 
-	Utils.getDefiniteArticle = function(gender) {
+	Utils.getDefiniteArticle = function(gender, number) {
+		number = number || 'sg';
 		var map = {
-			'masc': 'ὁ',
-			'fem': 'ἡ',
-			'neut': 'τό'
+			'sg': {
+				'masc': 'ὁ',
+				'fem': 'ἡ',
+				'neut': 'τό'
+			},
+			'pl': {
+				'masc': 'οἱ',
+				'fem': 'αἱ',
+				'neut': 'τά'
+			}
 		};
 
-		return map[gender];
+		return map[number][gender];
 	};
 
 	Utils.getHTMLbySmyth = function(smyth) {

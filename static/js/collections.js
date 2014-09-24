@@ -308,6 +308,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				case 'verb':
 					candidates = this.where({ 'pos': 'verb' });
 					break;
+				case 'adj':
+					candidates = this.where({ 'gender': 'fem' });
+					break;
 				default:
 					candidates = this.where({ 'lang': 'grc' });
 					break;

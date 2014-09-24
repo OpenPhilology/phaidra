@@ -362,6 +362,43 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			this.set(response);
 			this.set('translated', true);
 		},
+		getDefinition: function(lang) {
+			lang = lang || 'en';
+			var translations = this.get('translations').filter(function(t) {
+				return t.lang === lang;
+			});
+			var alignedWords = translations.reduce(function(memo, word) {
+				memo += ' ' + word.value;
+				return memo.trim();
+			}, '');
+			return alignedWords;
+		},
+		getDictForm: function() {
+			var form = '';
+
+			switch (this.get('pos')) {
+				case 'verb':
+					form = this.get('lemma');
+					break;
+				case 'noun':
+					form = Utils.getDefiniteArticle(this.get('gender'), 'sg') + ' '; 
+					form += this.get('lemma');
+
+					// Try to find the genitive
+					var gen = this.collection.findWhere({ 'lemma': this.get('lemma'), 'case': 'gen', 'number': 'sg' });
+					if (gen) form += ', ' + Utils.getDefiniteArticle(this.get('gender'), 'pl') + ' ' + gen.get('value');
+
+					break;
+				case 'adj':
+					form = this.get('lemma');
+					break;
+				default:
+					form = this.get('lemma');
+					break;
+			}
+
+			return form;
+		},
 		getPhrase: function() {
 			
 			var words = this.collection.where({ sentence_resource_uri: this.get('sentence_resource_uri') });

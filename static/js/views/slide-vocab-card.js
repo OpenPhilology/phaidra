@@ -1,6 +1,7 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'morea', 'daphne'], function($, _, Backbone, Models, Collections, Morea, Daphne) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/templates/js/slide-vocab-card.html', 'morea', 'daphne'], function($, _, Backbone, Models, Collections, Template, Morea, Daphne) {
 	var View = Backbone.View.extend({
 		events: { },
+		template: _.template(Template),
 		initialize: function(options) {
 			this.model = this.collection.findWhere({ lemma: this.el.dataset.lemma });
 			this.model.on('change:populated', this.render, this);
@@ -15,6 +16,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'morea', 'd
 				return;
 			}
 
+			this.$el.html(this.template({
+				model: this.model
+			}));
+
+			// Construct phrasal alignment data
 			var sentences = [phrase];
 			sentences.push(phrase.reduce(function(memo, word) {
 				if (word.translations) {	
@@ -39,7 +45,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'morea', 'd
 				return alignment;
 			});
 
-			this.$el.find('[data-toggle="daphne"]').each(function(i, el) {
+			/*this.$el.find('[data-toggle="daphne"]').each(function(i, el) {
 				new Daphne(el, {
 					data: phrase,
 					mode: 'edit',
@@ -47,11 +53,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'morea', 'd
 					height: 400,
 					initialScale: 0.9
 				});
-			});
+			});*/
 
 			this.$el.find('[data-toggle="morea"]').each(function(i, el) {
 				new Morea(el, {
-					mode: el.getAttribute('data-mode'),
+					mode: 'display',
 					data: alignments,
 					targets: el.getAttribute('data-targets').split(','),
 					langs: {

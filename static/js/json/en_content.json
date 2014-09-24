@@ -899,11 +899,15 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/3ending.html"
+						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/3ending.html",
+						"smyth": "s286",
+						"tasks": ["identify_morph_gender", "identify_morph_case", "identify_morph_number"]
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/2ending.html"
+						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/2ending.html",
+						"smyth": "s288",
+						"tasks": ["identify_morph_gender", "identify_morph_case", "identify_morph_number"]
 					}
 				]
 			}	

@@ -568,10 +568,21 @@ table.inflection-table {
 .vocabulary {
 	.card {
 		h1 {
-			font-size: 36px;
+			font-size: 3em;
+			text-align: center;
+		}
+		h2 {
+			text-align: center;
 		}
 		border: 1px solid #EEE;
 		margin: 5px;
 		padding: 20px;
+	}
+	.parse-tree {
+		display: none;
+
+		&.open {
+			display: block;
+		}
 	}
 }

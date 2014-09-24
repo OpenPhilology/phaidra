@@ -114,11 +114,10 @@ define(
 					return;
 				}
 
-				this.slides[slide].$el.show();
-				/*'slow', function() {
+				this.slides[slide].$el.show('slow', function() {
 					// Trigger resize for formerly hidden elements
 					window.dispatchEvent(new Event('resize'));
-				});*/
+				});
 
 				this.recordTimestamp(slide);
 				this.updateProgress(slide);

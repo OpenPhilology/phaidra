@@ -80,6 +80,14 @@
 		"title": "Feminine Nouns in the Second Declension",
 		"query": "pos=noun&gender=fem&posAdd__contains=os_ou"
 	},
+	"s286": {
+		"title": "Three-termination Adjectives",
+		"query": "pos=adj&posAdd__contains=os_h_on"
+	},
+	"s288": {
+		"title": "Two-termination Adjectives",
+		"query": "pos=adj&posAdd__contains=os_on"
+	},
 	"s332": {
 		"title": "Articles Declension",
 		"query": null
