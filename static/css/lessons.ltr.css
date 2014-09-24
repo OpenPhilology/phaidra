@@ -979,16 +979,28 @@ table.inflection-table {
   .new-knowledge span.glyphicon.glyphicon-bookmark {
     color: #d15241; }
 
-.vocabulary .card {
-  border: 1px solid #EEE;
-  margin: 5px;
-  padding: 20px; }
-  .vocabulary .card h1 {
-    font-size: 3em;
+.vocabulary {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
+  .vocabulary .card {
+    border: 1px solid #EEE;
+    margin: 5px;
+    padding: 20px;
+    box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, 0.1); }
+    .vocabulary .card h1, .vocabulary .card h2, .vocabulary .card h3 {
+      text-align: center; }
+    .vocabulary .card h1 {
+      font-size: 3em; }
+  .vocabulary .alt-definitions {
+    color: #999;
+    text-align: center;
+    font-style: italic; }
+  .vocabulary .btn {
+    margin-left: auto;
+    margin-right: auto; }
+  .vocabulary .parse-tree {
+    display: none;
     text-align: center; }
-  .vocabulary .card h2 {
-    text-align: center; }
-.vocabulary .parse-tree {
-  display: none; }
-  .vocabulary .parse-tree.open {
-    display: block; }
+    .vocabulary .parse-tree.open {
+      display: block; }

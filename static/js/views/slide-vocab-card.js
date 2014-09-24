@@ -9,15 +9,17 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 		},
 		render: function() {
 			var phrase = this.model.getPhrase();
+			var defs = this.model.getDefinition();
 			
 			// If our data's fucked, don't bother
-			if (!phrase) {
+			if (!phrase || !defs) {
 				this.remove();
 				return;
 			}
 
 			this.$el.html(this.template({
-				model: this.model
+				model: this.model,
+				defs: defs
 			}));
 
 			// Construct phrasal alignment data

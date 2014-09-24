@@ -363,15 +363,74 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			this.set('translated', true);
 		},
 		getDefinition: function(lang) {
+			if (!this.get('translations').length) return false;
+
 			lang = lang || 'en';
-			var translations = this.get('translations').filter(function(t) {
-				return t.lang === lang;
+
+			function extractTranslations(wordModel) {
+				if (!wordModel.get('translations') || wordModel.get('translations').length === 0) return []; 
+
+				var translations = wordModel.get('translations').filter(function(t) {
+					return t.lang === lang;
+				});
+				var blacklist = Utils.getVocabBlacklist(wordModel.get('pos'));
+
+				var alignedWords = translations.reduce(function(memo, word) {
+					if (blacklist.indexOf(word.value) === -1)
+						memo.push(word.value);
+					return memo;
+				}, []);
+				
+				return alignedWords.join(' ').trim();
+			}
+
+			var alignments = [extractTranslations(this)];
+
+			// If other instances of this lemma exist, with translations, include those.
+			var instances = this.collection.where({ lemma: this.get('lemma') });
+			if (instances && instances.length > 1) {
+				instances.forEach(function(inst) {
+					var words = extractTranslations(inst);
+					if (words.length > 0 && inst.get('pos') !== 'participle') {
+						alignments.push(words);
+					}
+				});
+			}
+
+			// Pull out the most common ones
+			alignments.sort();
+			var groups = _.groupBy(alignments);
+			alignments = _.compact(alignments.reduce(function(memo, a) {
+				var len = groups[a].length;
+				(memo[len] || (memo[len] = [])).push(a + '  (' + len + ')');
+				return memo;
+			}, [])).reverse();
+			alignments = _.uniq(_.flatten(alignments));
+
+			return alignments;
+		},
+		fetchAlternativeDefinitions: function(options) {
+			var query = this.get('lemma_resource_uri');
+			var that = this;
+
+			$.ajax(query, {
+				data: { full: true, limit: 20 },
+				success: function(response) {
+					for (var i = 0, value; value = response.values[i]; i++) {
+						var target = that.collection.findWhere({ CTS: value.CTS });
+						if (!target)
+							that.collection.add(value);
+						else {
+							target.set(value);
+						}
+					}
+					if (options && options.success) options.success();	
+					that.set('populated', true);
+				},
+				error: function(x, y, z) {
+					if (options && options.error) options.error();
+				}
 			});
-			var alignedWords = translations.reduce(function(memo, word) {
-				memo += ' ' + word.value;
-				return memo.trim();
-			}, '');
-			return alignedWords;
 		},
 		getDictForm: function() {
 			var form = '';
@@ -508,7 +567,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 								target.set(response.words[i]);
 						}
 
-						this.doc.set('populated', true);
+						// Now go fetch alternative definitions for this word based on lemma
+						this.doc.fetchAlternativeDefinitions();
 					},
 					error: function(x, y, z) {
 						console.log(x, y, z);

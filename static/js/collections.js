@@ -270,9 +270,14 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 				triggerPopulated();
 			}
 			else {
-				this.meta('grammar').forEach(function(val, i, arr) {
-					calls.push($.ajax('/api/v1/word/', {
-						data: { "smyth": val, "limit": 0 },
+				queries.forEach(function(query, i, arr) {
+
+					// If we're populating verbs, get all tenses	
+					//if (query.indexOf('pos=verb')) query = Utils.removeQueryParam(query, 'tense'); 
+					query = '/api/v1/word/?' + query;
+
+					calls.push($.ajax(query, {
+						data: { "limit": 0 },
 						success: function(response) {
 							that.add(response.objects);			
 						},
@@ -292,6 +297,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		},
 		filterVocabulary: function() {
 			if (this.models.length === 0) return [];
+
 			var groupedByFreq = _.reduce(this.models, function(map, model) {
 				var lemma = model.attributes.lemma;
 				(map[lemma] || (map[lemma] = [])).push(model);

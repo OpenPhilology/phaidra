@@ -1,13 +1,23 @@
 <h1 lang="grc"><%= model.getDictForm() %></h1>
-<h2><%= model.getDefinition() %></h2>
+<% var alignments = model.getDefinition(); %>
+<% if (alignments) { %>
+	<h2><% print(alignments[0]); %></h2>
+	<% if (alignments.length > 1) { %>
+		<p class="alt-definitions"><strong>Also:</strong> &nbsp; <% print(_.compact(alignments.slice(1,5)).join(', &nbsp; ')); %></p>
+	<% } %>
+<% } else { %>
+	<h2><em>No direct alignment found</em>');  %></h2>
+<% } %>
 
 <hr>
 
 <% var url = model.get('sentence_resource_uri'); %>
-<div data-toggle="morea" data-targets="en,grc" data-dataUrl="<%= url %>"></div>
+<div data-toggle="morea" data-targets="en,grc" data-dataUrl="<%= url %>" data-orientation="horizontal"></div>
 
-<hr>
-<a href="#" data-target="parse-tree">View Phrase as Parse Tree</a>
+<p style="text-align: center">
+	<a class="btn btn-default" href="#" data-target="parse-tree">View Phrase as Parse Tree</a>
+</p>
+
 <div class="parse-tree">
 	<div data-toggle="daphne" data-dataSource="<%= url %>" data-mode="display"></div>
 </div>
