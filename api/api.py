@@ -548,7 +548,7 @@ class LemmaResource(Resource):
 				val = values[v].end
 				val.properties['resource_uri'] = API_PATH + 'word/' + str(val.id) + '/'
 				valuesArray.append(val.properties)
-				
+
 			new_obj.__dict__['_data']['values'] = valuesArray			
 			lemmas.append(new_obj)
 				
@@ -578,6 +578,20 @@ class LemmaResource(Resource):
 		for v in range(0, len(values), 1):
 			val = values[v].end
 			val.properties['resource_uri'] = API_PATH + 'word/' + str(val.id) + '/'
+			val.properties['translations'] = []
+
+			# get the full translation # force API into full representation if cache is enabled
+			if bundle.request.GET.get('full'):	
+				
+				translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" + val.properties['CTS'] + """' RETURN DISTINCT w ORDER BY ID(w)""")
+				translationArray = []
+				for t in translations:
+					trans = t[0]
+					transurl = trans['self'].split('/')
+					trans['data']['resource_uri'] = API_PATH + 'word/' + transurl[len(transurl)-1] + '/'
+					translationArray.append(trans['data'])
+					val.properties['translations'] = translationArray
+			
 			valuesArray.append(val.properties)
 			
 		new_obj.__dict__['_data']['values'] = valuesArray
@@ -931,7 +945,7 @@ class SentenceResource(Resource):
 			if len(lemmaRels) > 0:
 				word['data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
 			
-			# get the full translation # forse API into full representation if cache is enabled
+			# get the full translation # force API into full representation if cache is enabled
 			if bundle.request.GET.get('full'):	
 				
 				translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
