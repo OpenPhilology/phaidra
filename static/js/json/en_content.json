@@ -1063,6 +1063,130 @@
 		]
 	},
 	{	
+		"title": "Adjectives: Third Declension",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Adjectives: Third Declension",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/adjectives.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/3ending.html"
+					}
+				]				
+			},
+			{
+				"title": "Adjectives: Third Declension",
+				"slides": [
+					{	"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/2ending.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/2ending1.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Adverbs",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Adverbs",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs2.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Perfect Indicative Active",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Perfect Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact1.html"
+					}
+				]
+			}			
+		]
+	},
+	{	
+		"title": "Pluperfect Indicative Active",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Pluperfect Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact1.html"
+					}
+				]
+			}			
+		]
+	},
+	{	
 		"title": "Treebanking",
 		"category": "basics",
 		"modules": [

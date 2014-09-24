@@ -10,7 +10,7 @@ class AppUser(AbstractUser):
 	unit = models.IntegerField(default=0)
 	lesson = models.IntegerField(default=0)
 	progress = models.IntegerField(default=0)
-	#readingCTS = models.CharField(max_length=200, blank=True)
+	readingCTS = models.CharField(max_length=200, blank=True)
 	
 	def __unicode__(self):
 		return unicode(self.username) or u''
