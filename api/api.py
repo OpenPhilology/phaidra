@@ -416,15 +416,16 @@ class SubmissionResource(Resource):
 		# get the user via neo look-up or create a newone
 		if request.user.username is not None:
 			userTable = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) WHERE HAS (u.username) AND u.username='""" + request.user.username + """' RETURN u""")
-		
-			if len(userTable) > 0:	
+			
+			if len(userTable) > 0:
 				userurl = userTable[0][0]['self']
-				userNode = gdb.nodes.get(userurl)			
+				userNode = gdb.nodes.get(userurl)
 			
 			else:
 				userNode = gdb.nodes.create(username=request.user.username)
 				userNode.labels.add("User")
-					
+				
+			# create the submission		
 			subms = gdb.nodes.create(
 				response = data.get("response"),
 				task = data.get("task"), 
@@ -441,15 +442,62 @@ class SubmissionResource(Resource):
 			if subms is None :
 				# in case an error wasn't already raised 			
 				raise ValidationError('Submission node could not be created.')
-		
+			
 			# Form the connections from the new Submission node to the existing slide and user nodes
 			userNode.submits(subms)
-	
+			
+			# set links between the smyth key filtered words and the user
+			# get the file entry:
+			filename = os.path.join(os.path.dirname(__file__), '../static/js/json/smyth.json')
+			fileContent = {}
+			query_params = {}
+			with open(filename, 'r') as json_data:
+				fileContent = json.load(json_data)
+				json_data.close()
+			
+			# create the query	
+			q = """MATCH (w:`Word`) WHERE """
+			try:
+				grammarParams = fileContent[0][data.get("smyth")]['query'].split('&')
+				for pair in grammarParams:
+					if len(pair.split('=')[0].split('__')) == 1:
+						attribute = pair.split('=')[0]
+						value= pair.split('=')[1]
+						q = q + """HAS (w.""" +attribute+ """) AND w.""" +attribute+ """='""" +value+ """' AND """
+					elif len(pair.split('=')[0].split('__')) > 1:
+						attribute = pair.split('=')[0].split('__')[0]
+						operator = pair.split('=')[0].split('__')[1]
+						value= pair.split('=')[1]
+						if operator == 'contains':
+							q = q + """HAS (w.""" +attribute+ """) AND w.""" +attribute+ """=~'.*""" +value+ """.*' AND """
+						elif operator == 'startswith':
+							q = q + """HAS (w.""" +attribute+ """) AND w.""" +attribute+ """=~'""" +value+ """.*' AND """
+						elif operator == 'endswith':
+							q = q + """HAS (w.""" +attribute+ """) AND w.""" +attribute+ """=~'.*""" +value+ """' AND """
+						elif operator == 'isnot':
+							q = q + """HAS (w.""" +attribute+ """) AND w.""" +attribute+ """<>'""" +value+ """' AND """
+				q = q[:len(q)-4]
+				q = q + """RETURN w"""		
+			except:
+				return self.error_response(request, {'error': 'Smyth data could not be processed.' }, response_class=HttpBadRequest)
+			
+			# set the user word links
+			table = gdb.query(q)
+			for t in table:
+				word = gdb.nodes.get(t[0]['self'])
+				userNode.knows_grammar(word)
+			
+			# set links between the lemmas of the encountered words an the user
+			for cts in data.get("encounteredWords"):
+				table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN l""")
+				for l in table:
+					lemma = gdb.nodes.get(l[0]['self'])
+					userNode.knows_vocab(lemma)
+					
 			# create the body
 			body = json.loads(request.body) if type(request.body) is str else request.body
-				
+			
 			return self.create_response(request, body)
-		
 		else:
 			return self.error_response(request, {'error': 'User is required.' }, response_class=HttpBadRequest)
 
