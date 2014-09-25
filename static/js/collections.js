@@ -256,23 +256,50 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			if (options && options.grammar) 
 				this.meta('grammar', options.grammar);
 		},
+		add: function(newWord) {
+			newWord = _.isArray(newWord) ? newWord : [newWord];	
+			var duplicates = [];
+			for (var i = 0, word; word = newWord[i]; i++) {
+				var dup = this.any(function(w) {
+					return w.equiv(word);
+				}.bind(this));
+				if (dup) duplicates.push(word);
+			};
+			duplicates = _.compact(duplicates);
+			
+			// Carefully merge in duplicates
+			duplicates.forEach(function(d) {
+				var model = this.findWhere({ CTS: d.CTS });
+				var keys = Object.keys(model.attributes);
+				for (var key in model.attributes) {
+					if (d[key]) model.set(key, d[key]);
+				}
+			}.bind(this));
+
+			Backbone.Collection.prototype.add.call(this, newWord);
+		},
 		populateVocab: function(collection) {
 
 			var that = this;
 			var calls = [];
 
 			// First, see if there are queries associated with these smyth units
-			var queries = _.compact(_.map(this.meta('grammar'), function(val) {
+			var queries = _.uniq(_.compact(_.map(this.meta('grammar'), function(val) {
 				if (Utils.Smyth[val]) return Utils.Smyth[val].query;
-			}));
+			})));
 			
 			if (queries.length === 0) {
 				triggerPopulated();
 			}
 			else {
-				this.meta('grammar').forEach(function(val, i, arr) {
-					calls.push($.ajax('/api/v1/word/', {
-						data: { "smyth": val, "limit": 0 },
+				queries.forEach(function(query, i, arr) {
+
+					// If we're populating verbs, get all tenses	
+					//if (query.indexOf('pos=verb')) query = Utils.removeQueryParam(query, 'tense'); 
+					query = '/api/v1/word/?' + query;
+
+					calls.push($.ajax(query, {
+						data: { "limit": 0 },
 						success: function(response) {
 							that.add(response.objects);			
 						},
@@ -292,6 +319,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 		},
 		filterVocabulary: function() {
 			if (this.models.length === 0) return [];
+
 			var groupedByFreq = _.reduce(this.models, function(map, model) {
 				var lemma = model.attributes.lemma;
 				(map[lemma] || (map[lemma] = [])).push(model);
@@ -307,6 +335,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 					break;
 				case 'verb':
 					candidates = this.where({ 'pos': 'verb' });
+					break;
+				case 'adj':
+					candidates = this.where({ 'gender': 'fem' });
 					break;
 				default:
 					candidates = this.where({ 'lang': 'grc' });

@@ -1,9 +1,5 @@
-<h1>Vocab for this Unit</h1>
-<ul>
+<div class="vocabulary">
 <% _.each(model.get('vocab').filterVocabulary(), function(el) { %>
-	<li> <span lang="grc"><%= el %></span></li>
+	<div class="card" data-lemma="<%= el %>"></div>
 <% }); %>
-</ul>
-
-<div class="slide-feedback" style="display: none">
 </div>

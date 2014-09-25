@@ -899,11 +899,15 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/3ending.html"
+						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/3ending.html",
+						"smyth": "s286",
+						"tasks": ["identify_morph_gender", "identify_morph_case", "identify_morph_number"]
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/2ending.html"
+						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/2ending.html",
+						"smyth": "s288",
+						"tasks": ["identify_morph_gender", "identify_morph_case", "identify_morph_number"]
 					}
 				]
 			}	
@@ -996,19 +1000,23 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact.html",
+						"smyth": "s542"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact1.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact1.html",
+						"smyth": "s542"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html",
+						"smyth": "s542"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact3.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact3.html",
+						"smyth": "s542"
 					},
 					{
 						"type": "slide_info",
@@ -1021,11 +1029,13 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact5.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact5.html",
+						"smyth": "s546"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact6.html"
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact6.html",
+						"smyth": "s546"
 					}
 				]
 			}			
@@ -1134,6 +1144,33 @@
 		"modules": [
 			{
 				"title": "Perfect Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact1.html"
+					}
+				]
+			}			
+		]
+	},
+	{	
+		"title": "Pluperfect Indicative Active",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Pluperfect Indicative Active",
 				"slides": [
 					{
 						"type": "slide_info",

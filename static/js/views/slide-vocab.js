@@ -1,20 +1,27 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/templates/js/slide-vocab.html'], function($, _, Backbone, Models, Collections, Template) {
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/slide-vocab-card', 'text!/templates/js/slide-vocab.html'], function($, _, Backbone, Models, Collections, VocabCardView, Template) {
 	var View = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide-unit',
 		template: _.template(Template),
 		events: { },
 		initialize: function(options) {
-			console.log("vocab slide called");
 			this.options = options;
+			this.cards = [];
 			this.model.on('change:populated', this.render, this);
 		},
 		render: function() {
-			console.log(this.model.get('vocab'));
 			this.$el.html(this.template({
 				model: this.model
 			}));
-			return this;	
+
+			this.$el.find('.card').each(function(i, el) {
+				if (!this.cards[el.dataset.lemma])  
+					this.cards[el.dataset.lemma] = new VocabCardView({ collection: this.model.get('vocab'), el: el }); 
+				else 
+					this.cards[el.dataset.lemma].render();
+			}.bind(this));
+			
+			return this;
 		}
 	});
 

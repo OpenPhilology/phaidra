@@ -84,7 +84,6 @@ define(
 				return this;	
 			},
 			routerNavigate: function(index) {
-				console.log(this.lesson.at(index));
 				this.setCurrentSlide(this.lesson.at(index));
 			},
 			setCurrentSlide: function(model) {
@@ -104,8 +103,6 @@ define(
 				});
 			},
 			showSlide: function(model) {
-				console.log("show slide shown");
-				
 				var slide = model.collection.indexOf(model);
 				// Show the correct slide view
 				for (var i = 0; i < this.slides.length; i++) {
@@ -117,7 +114,7 @@ define(
 					return;
 				}
 
-				this.slides[slide].$el.show('slide', { direction: 'right' }, 500, function() {
+				this.slides[slide].$el.show('slow', function() {
 					// Trigger resize for formerly hidden elements
 					window.dispatchEvent(new Event('resize'));
 				});

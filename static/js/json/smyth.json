@@ -80,6 +80,14 @@
 		"title": "Feminine Nouns in the Second Declension",
 		"query": "pos=noun&gender=fem&posAdd__contains=os_ou"
 	},
+	"s286": {
+		"title": "Three-termination Adjectives",
+		"query": "pos=adj&posAdd__contains=os_h_on"
+	},
+	"s288": {
+		"title": "Two-termination Adjectives",
+		"query": "pos=adj&posAdd__contains=os_on"
+	},
 	"s332": {
 		"title": "Articles Declension",
 		"query": null
@@ -98,6 +106,14 @@
 		"aspect": "morph",
 		"variants": ["lemma__endswith=πω", "lemma__endswith=βω", "lemma__endswidth=πτω", "lemma__endswith=ϕω", "lemma__endswith=κω", "lemma__endswith=γω", "lemma__endswith=ττω"], 
 		"samples": ["πέμπω"]
+	},
+	"s542": {
+		"title": "First Aorist",
+		"query": "pos=verb&tense=aor&posAdd__contains=aor1"
+	},
+	"s546": {
+		"title": "Second Aorist",
+		"query": "pos=verb&tense=aor&posAdd__contains=aor2"
 	},
 	"s768#a": {
 		"title": "εἰμί in the Present Tense",
