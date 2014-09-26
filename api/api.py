@@ -323,7 +323,7 @@ class SubmissionResource(Resource):
 		object_class = DataObject
 		resource_name = 'submission'
 		allowed_methods = ['post', 'get', 'patch']
-		authentication = SessionAuthentication() 
+		authentication = BasicAuthentication() 
 		authorization = UserObjectsOnlyAuthorization()
 		cache = SimpleCache(timeout=None)
 		validation =  ResourceValidation()
@@ -426,25 +426,25 @@ class SubmissionResource(Resource):
 				userNode.labels.add("User")
 				
 			# create the submission		
-			subms = gdb.nodes.create(
-				response = data.get("response"),
-				task = data.get("task"), 
-				smyth = data.get("smyth"),	# string
-				starttime = data.get("starttime"),	 # catch this so that it doesn't lead to submission problems
-				accuracy = data.get("accuracy"),
-				encounteredWords = data.get("encounteredWords"), # array
-				slideType = data.get("slideType"),
-				timestamp = data.get("timestamp") 
-			)
+			#subms = gdb.nodes.create(
+			#	response = data.get("response"),
+			#	task = data.get("task"), 
+			#	smyth = data.get("smyth"),	# string
+			#	starttime = data.get("starttime"),	 # catch this so that it doesn't lead to submission problems
+			#	accuracy = data.get("accuracy"),
+			#	encounteredWords = data.get("encounteredWords"), # array
+			#	slideType = data.get("slideType"),
+			#	timestamp = data.get("timestamp") 
+			#)
 			
-			subms.labels.add("Submission")
+			#subms.labels.add("Submission")
 			
-			if subms is None :
+			#if subms is None :
 				# in case an error wasn't already raised 			
-				raise ValidationError('Submission node could not be created.')
+				#raise ValidationError('Submission node could not be created.')
 			
 			# Form the connections from the new Submission node to the existing slide and user nodes
-			userNode.submits(subms)
+			#userNode.submits(subms)
 			
 			# set links between the smyth key filtered words and the user
 			# get the file entry:
@@ -487,12 +487,39 @@ class SubmissionResource(Resource):
 				word = gdb.nodes.get(t[0]['self'])
 				userNode.knows_grammar(word)
 			
-			# set links between the lemmas of the encountered words an the user
+			# set links between the lemmas of the encountered words (as vocab knowledge) and the encountered words themselves to check times_seen of the user
+			lemma_candidates = []
+			word_candidates = []
 			for cts in data.get("encounteredWords"):
-				table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN l""")
-				for l in table:
-					lemma = gdb.nodes.get(l[0]['self'])
-					userNode.knows_vocab(lemma)
+				table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN l,w""")
+				word_unknown = True
+				lemma_unknown = True
+				lemma = gdb.nodes.get(table[0][0]['self'])
+				word = gdb.nodes.get(table[0][1]['self'])
+				# check the ends of a user's relationships
+				for rel in userNode.relationships.outgoing(["knows_vocab"])[:]:
+					if word == rel.end:
+						counter = rel.properties['times_seen']+1
+						rel.properties = {'times_seen':counter}
+						#rel._set_properties(self, {'times_seen':counter})
+						#gdb.relationships.update()
+						#userNode.relationships.create("knows_vocab", word, times_seen=counter)
+												
+						word_unknown = False
+						lemma_unknown = False	
+					if lemma == rel.end:
+						lemma_unknown = False
+				# save candidates
+				if word_unknown:
+					word_candidates.append(word)
+				if lemma_unknown:
+					lemma_candidates.append(lemma)
+			
+			# create the actual relations after processing the words
+			for lemma in lemma_candidates:
+				userNode.knows_vocab(lemma)
+			for word in word_candidates:
+				userNode.knows_vocab(word, times_seen=1)
 					
 			# create the body
 			body = json.loads(request.body) if type(request.body) is str else request.body
