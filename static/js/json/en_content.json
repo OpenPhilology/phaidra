@@ -965,11 +965,15 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon.html"
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon.html",
+						"smyth": "s255#2",
+						"tasks": ["identify_morph_number", "identify_morph_case"]
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon1.html"
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon1.html",
+						"smyth": "s255#3",
+						"tasks": ["identify_morph_number", "identify_morph_case"]
 					},
 					{
 						"type": "slide_info",
@@ -1174,19 +1178,19 @@
 				"slides": [
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/17.perfectindact/intro.html"
+						"includeHTML": "/static/content/en/slides/18.pluperindact/intro.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/17.perfectindact/history.html"
+						"includeHTML": "/static/content/en/slides/18.pluperindact/history.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact.html"
+						"includeHTML": "/static/content/en/slides/18.pluperindact/pluperindact.html"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact1.html"
+						"includeHTML": "/static/content/en/slides/18.pluperindact/pluperindact1.html"
 					}
 				]
 			}			

@@ -467,7 +467,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 
 					// Try to find the genitive
 					var gen = this.collection.findWhere({ 'lemma': this.get('lemma'), 'case': 'gen', 'number': 'sg' });
-					if (gen) form += ', ' + Utils.getDefiniteArticle(this.get('gender'), 'pl') + ' ' + gen.get('value');
+					if (gen) form += ', ' + gen.get('value');
 
 					break;
 				case 'adj':
