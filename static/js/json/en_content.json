@@ -762,27 +762,33 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/7.verbs/verbs.html"
+						"includeHTML": "/static/content/en/slides/7.verbs/verbs.html",
+						"smyth": "s355"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/7.verbs/person.html"
+						"includeHTML": "/static/content/en/slides/7.verbs/person.html",
+						"smyth": "s364"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/7.verbs/number.html"
+						"includeHTML": "/static/content/en/slides/7.verbs/number.html",
+						"smyth": "s363"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/7.verbs/tense.html"
+						"includeHTML": "/static/content/en/slides/7.verbs/tense.html",
+						"smyth": "s359"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/7.verbs/mood.html"
+						"includeHTML": "/static/content/en/slides/7.verbs/mood.html",
+						"smyth": "s357"
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/7.verbs/voice.html"
+						"includeHTML": "/static/content/en/slides/7.verbs/voice.html",
+						"smyth": "s356"
 					}
 				]
 			}	
