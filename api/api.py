@@ -1382,7 +1382,7 @@ class VisualizationResource(Resource):
 		for freq in lemmas:
 			lemmaFreq = lemmaFreq + int(lemmas[freq])
 
-		return [vocab, smyth, lemmaFreq]
+		return [vocab, smyth, lemmas, lemmaFreq]
 	
 	
 	def check_fuzzy_filters(self, filter, request_attribute, word_attribute ):
@@ -1410,17 +1410,31 @@ class VisualizationResource(Resource):
 		
 		data = {}
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
+		
+		# get the user
+		if request.GET.get('user'):
+			user = request.GET.get('user')
+		else:
+			user= request.user.username
+			
+		try:
+			userTable = gdb.query("""MATCH (n:`User`) WHERE n.username =  '""" + user + """' RETURN n""")
+			userNode = gdb.nodes.get(userTable[0][0]['self'])
+		except:
+			return self.error_response(request, {'error': 'Login or hand over user.'}, response_class=HttpBadRequest)
+		
 		#fo = open("foo.txt", "wb")
 		#millis = int(round(time.time() * 1000))
 		#fo.write("%s start encountered method, get user: \n" % millis)	
 		
-		# /api/v1/visualization/encountered/?format=json&level=word&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.4:11-19&user=john
+		# /api/v1/visualization/encountered/?format=json&level=word&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.90.4:11-19&user=john
+		# return knowledge infos to all words in the range
 		if request.GET.get('level') == "word":
 			
 			knownDict = {}
 			data['words'] = []
 		
-			# calculate CTSs of the word range (later look them up within submissions of the user)
+			# calculate CTSs of the word range
 			wordRangeArray = []
 			cts = request.GET.get('range')
 			# get the stem
@@ -1428,95 +1442,74 @@ class VisualizationResource(Resource):
 			rangeStem = cts[0:endIndex]		
 			# get the numbers of the range and save the CTSs
 			numbersArray = cts.split(':')[len(cts.split(':'))-1].split('-')
-			####### make a error code wront range format here
+			####### make an error code wrong range format here
 			for num in range(int(numbersArray[0]), int(numbersArray[1])+1):
 				wordRangeArray.append(rangeStem + str(num))
 			
-			# preprocess knowledge of a user
-			callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
-			vocKnowledge = callFunction[0]
-			smythFlat = callFunction[1]
-								
+			# check for which words which knowledge is there					
 			for wordRef in wordRangeArray:
-					
-				w = gdb.query("""MATCH (n:`Word`) WHERE HAS (n.CTS) AND HAS (n.head) AND n.CTS = '""" +wordRef+ """' RETURN n""")
+
+				table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) AND HAS (w.head) AND w.CTS = '""" +wordRef+ """' RETURN w,l""")
+				word = gdb.nodes.get(table[0][0]['self'])
+				lemma = gdb.nodes.get(table[0][1]['self'])
 				
-				knownDict[wordRef] = False
+				value = word.properties['value']
+				times_seen = 0
+				morph_known = False
+				syn_known = False
+				voc_known = False
+				CTS = wordRef
 				
-				#for sub in submissions.elements:
-				for smyth in smythFlat:		
-					# was the word even known?
-					if wordRef in vocKnowledge:			
-			
-						# loop over params to get morph known infos							
-						badmatch = False			
-						for p in smythFlat[smyth].keys():
-							try:
-								w.elements[0][0]['data'][p]
-								if smythFlat[smyth][p] != w.elements[0][0]['data'][p]:
-									badmatch = True
-									break
-							# check for fuzzy filtering attributes
-							except KeyError as k:
-								if len(p.split('__')) > 1:
-									try:
-										badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], w.elements[0][0]['data'][p.split('__')[0]])
-									except KeyError as k:
-										badmatch = True
-										break																	
-								else:
-									badmatch = True
-									break
-									
-						if not badmatch:
-							knownDict[wordRef] = True												
-							
-				# save data
-				try:
-					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : vocKnowledge[wordRef], 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': True, 'CTS': w.elements[0][0]['data']['CTS']})
-				except KeyError as e:
-					##### here might goes the sentence end error code
-					data['words'].append({'value': w.elements[0][0]['data']['value'], 'timesSeen' : 0, 'morphKnown': knownDict[wordRef], 'synKnown': False, 'vocKnown': False, 'CTS': w.elements[0][0]['data']['CTS']})
+				# check the ends of a word's relationships
+				for rel in userNode.relationships.outgoing(["knows_vocab"])[:]:
+					if word == rel.end:
+						times_seen = rel.properties['times_seen']
+						voc_known = True
+					if lemma == rel.end:
+						voc_known = True
+				
+				for rel in userNode.relationships.outgoing(["knows_grammar"])[:]:		
+					if word == rel.end:
+						morph_known = True
+																
+				data['words'].append({'value': value, 'timesSeen' : times_seen, 'morphKnown': morph_known, 'synKnown': syn_known, 'vocKnown': voc_known, 'CTS': CTS})
 					
 			return self.create_response(request, data)
 		
 		
-		# if the viz of a book is requested calcualate the numbers on all submissions and then the percentage of viz data
-		# /api/v1/visualization/encountered/?format=json&level=book&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1&user=john
+		# /api/v1/visualization/encountered/?format=json&level=book&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc&user=john
+		# doesn the same as level=word; old approach soo much faster, because of use of boolean doctionaries
 		elif request.GET.get('level') == "book":
 			
 			knownDict = {}
 			data['words'] = []
-							
 			# preprocess knowledge of a user
 			callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
 			vocKnowledge = callFunction[0]
 			smythFlat = callFunction[1]
-								
+			lemmas = callFunction[2]
+			
 			# get the sentences of that document
 			sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s ORDER BY ID(s)""")
 			
 			for s in sentenceTable.elements:
-				
-				node = gdb.nodes.get(s[0]['self'])			
-				#words = node.relationships.outgoing(types=["words"])
-				
+				node = gdb.nodes.get(s[0]['self'])
 				words = gdb.query("""MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE s.CTS = '""" +node.properties['CTS']+ """' RETURN w ORDER BY ID(w)""")
 				
 				for w in words:
 					word = w[0]
-					#word = gdb.nodes.get(w[0]['self'])	
 					knownDict[word['data']['CTS']] = False
-				
-					for smyth in smythFlat:		
-						
+					
+					know_the_word = False
+					for smyth in smythFlat:
 						# scan the submission for vocab information
-						if word['data']['CTS'] in vocKnowledge:			
-			
+						if word['data']['CTS'] in vocKnowledge or word['data']['lemma'] in lemmas:
 							# loop over params to get morph known infos
-							# extract this maybe (hand over smyth, its value and word)							
-							badmatch = False			
+							# extract this maybe (hand over smyth, its value and word)
+							badmatch = False
+							
 							for p in smythFlat[smyth].keys():
+								
 								try:
 									word['data'][p]
 									if smythFlat[smyth][p] != word['data'][p]:
@@ -1529,25 +1522,28 @@ class VisualizationResource(Resource):
 											badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], word['data'][p.split('__')[0]])
 										except KeyError as k:
 											badmatch = True
-											break																					
+											break
 									else:
 										badmatch = True
 										break
-									
+								
 							if not badmatch:
-								knownDict[word['data']['CTS']] = True												
-							
+								knownDict[word['data']['CTS']] = True
+								
+							# vocab of word knwn?
+							know_the_word = True 
+								
 					# save data
 					try:
-						data['words'].append({'value': word['data']['value'], 'timesSeen' : vocKnowledge[word['data']['CTS']], 'morphKnown': knownDict[word['data']['CTS']], 'synKnown': False, 'vocKnown': True, 'CTS': word['data']['CTS']})
+						data['words'].append({'value': word['data']['value'], 'timesSeen' : vocKnowledge[word['data']['CTS']], 'morphKnown': knownDict[word['data']['CTS']], 'synKnown': False, 'vocKnown': know_the_word, 'CTS': word['data']['CTS']})
 					except KeyError as e:
-						data['words'].append({'value': word['data']['value'], 'timesSeen' : 0, 'morphKnown': knownDict[word['data']['CTS']], 'synKnown': False, 'vocKnown': False, 'CTS': word['data']['CTS']})
-						
+						data['words'].append({'value': word['data']['value'], 'timesSeen' : 0, 'morphKnown': knownDict[word['data']['CTS']], 'synKnown': False, 'vocKnown': know_the_word, 'CTS': word['data']['CTS']})
+
 			return self.create_response(request, data)
-			
 		
+			
 		# if the viz of a document is requested calcualate the numbers on all submissions and then the percentage of viz data
-		# /api/v1/visualization/encountered/?format=json&level=document&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1&user=john
+		# /api/v1/visualization/encountered/?format=json&level=document&range=urn:cts:greekLit:tlg0003.tlg001.perseus-grc&user=john
 		elif request.GET.get('level') == "document":
 			
 			data['sentences'] = []
@@ -1556,6 +1552,7 @@ class VisualizationResource(Resource):
 			callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
 			vocKnowledge = callFunction[0]
 			smythFlat = callFunction[1]
+			lemmas = callFunction[2] # values + freqs
 				
 			# get the sentences of that document
 			sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s ORDER BY ID(s)""")
@@ -1581,7 +1578,8 @@ class VisualizationResource(Resource):
 					# scan the submission for vocab information
 					for smyth in smythFlat:
 						# was this word seen?
-						if word.properties['CTS'] in vocKnowledge:	
+						# also already know the other words connected to known words via a lemma
+						if word.properties['CTS'] in vocKnowledge or word.properties['lemma'] in lemmas:	
 							
 							# if word morph already known don't apply filter again
 							if morphKnown[word.properties['CTS']]:
@@ -1638,64 +1636,35 @@ class VisualizationResource(Resource):
 		data = {}
 		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 		
-		# preprocess knowledge of a user
-		callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
-		vocKnowledge = callFunction[0]
-		smythFlat = callFunction[1]
-		lemmaFreqs = callFunction[2]
+		# get the user
+		if request.GET.get('user'):
+			user = request.GET.get('user')
+		else:
+			user= request.user.username
 			
-		# get the sentences of that document
-		sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`) WHERE HAS (s.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN s""")
+		try:
+			userTable = gdb.query("""MATCH (n:`User`) WHERE n.username =  '""" + user + """' RETURN n""")
+			userNode = gdb.nodes.get(userTable[0][0]['self'])
+		except:
+			return self.error_response(request, {'error': 'Login or hand over user.'}, response_class=HttpBadRequest)
 		
-		# helper arrays also for statistics, contain the cts as a key and a boolean as an entry
-		all = {}	
-		vocabKnown = {}
-		morphKnown = {}
-		syntaxKnown = {}
-		wordCount = 0
-		for s in sentenceTable.elements:
-			
-			node = gdb.nodes.get(s[0]['self'])			
-			words = node.relationships.outgoing(types=["words"])
-				
-			for w in words:
-			
-				word = w.end
-				all[word.properties['CTS']] = True
-				# compare all smyth keys the user knows to the actual word's morphology
-				for smyth in smythFlat:
-					# if word morph already known (earlier smyth hit), don't apply filter again
-					try:
-						morphKnown[word.properties['CTS']]
-					except KeyError as k:
-						# loop over params to get morph known infos
-						badmatch = False
-						for p in smythFlat[smyth].keys():
-							try:
-								word.properties[p]
-								if smythFlat[smyth][p] != word.properties[p]:
-									badmatch = True
-									break
-							# check for fuzzy filtering attributes
-							except KeyError as k:
-								if len(p.split('__')) > 1:
-									try:
-										badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], word.properties[p.split('__')[0]])
-									except KeyError as k:
-										badmatch = True
-										break																					
-								else:
-									badmatch = True
-									break
-						
-						if not badmatch:
-							morphKnown[word.properties['CTS']] = True # all params are fine											
-
-			# after reading words update overall no
-			wordCount = wordCount + len(words)
+		# preprocess knowledge of a user; callFunction = self.calculateKnowledgeMap(request.GET.get('user')); vocKnowledge = callFunction[0]; smythFlat = callFunction[1]; lemmaFreqs = callFunction[2]
+		knows_vocab = 0
+		knows_grammar = 0
+		knows_syntax = 0	
+		# get the sentences of that document
+		sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE HAS (n.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN count(w)""")
+		all = sentenceTable[0][0]
+		
+		sentenceTable = gdb.query("""MATCH (u:`User`)-[:knows_vocab]->(l:`Lemma`) RETURN l""")
+		
+		for lemma in sentenceTable:
+			knows_vocab = knows_vocab + lemma[0]['data']['frequency'] 
+		
+		knows_grammar = len(userNode.relationships.outgoing(["knows_grammar"])[:])
 		
 		# after reading everything return the statistics
-		data['statistics'] = {'all': wordCount, 'vocab': float(lemmaFreqs)/float(len(all)), 'morphology': float(len(morphKnown))/float(len(all)), 'syntax': float(len(syntaxKnown))/float(len(all))}
+		data['statistics'] = {'all': all, 'vocab': float(knows_vocab)/float(all), 'morphology': float(knows_grammar)/float(all), 'syntax': float(knows_syntax)/float(all)}
 	
 		return self.create_response(request, data)
 	
