@@ -965,11 +965,15 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon.html"
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon.html",
+						"smyth": "s255#2",
+						"tasks": ["identify_morph_number", "identify_morph_case"]
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon1.html"
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon1.html",
+						"smyth": "s255#3",
+						"tasks": ["identify_morph_number", "identify_morph_case"]
 					},
 					{
 						"type": "slide_info",
