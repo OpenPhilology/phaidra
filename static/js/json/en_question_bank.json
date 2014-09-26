@@ -1052,6 +1052,72 @@
 		"require_all": "true"
 	},
 	{
+		"smyth": "s356",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Select all the characteristics of a <strong>Verb</strong> in Ancient Greek.",
+		"options": [
+				{ "value": "Mood", "display": "Mood" },
+				{ "value": "Tense", "display": "Tense" },
+				{ "value": "Case", "display": "Case" },
+				{ "value": "Number", "display": "Number" },
+				{ "value": "Person", "display": "Person" },
+				{ "value": "Voice", "display": "Voice" }
+		],
+		"answers": ["Mood", "Tense", "Number", "Person", "Voice"],
+		"successMsg": "<strong>Right Answer!</strong> When you see a verb, you'll need to figure out these five characteristics.",
+		"hintMsg": "<strong>Not Quite</strong> Verbs in Greek have five characteristics: Mood, Tense, Number, Person and Voice",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s357",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Spot the names of the different <strong>Moods</strong> you've learned.",
+		"options": [
+				{ "value": "Imperative", "display": "Imperative" },
+				{ "value": "Optative", "display": "Optative" },
+				{ "value": "Perfect", "display": "Perfect" },
+				{ "value": "Future", "display": "Future" },
+				{ "value": "Subjunctive", "display": "Subjunctive" },
+				{ "value": "Indicative", "display": "Indicative" }
+		],
+		"answers": ["Imperative", "Optative", "Subjunctive", "Indicative"],
+		"successMsg": "<strong>Right Answer!</strong>.",
+		"hintMsg": "<strong>Not Quite</strong> The Ancient Greek moods are: Indicative, Subjunctive, Optative and Imperfect.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
+		"smyth": "s359",
+		"type": "slide_direct_select",
+		"settings": {
+			"orientation": "vertical"
+		},
+		"title": "Know your Greek!",
+		"question": "Select which of the following definitions describes the <strong>perfect tense</strong>.",
+		"options": [
+				{ "value": "An action in the future time with either simple aspect", "display": "An action in the future time with either simple aspect" },
+				{ "value": "An action in the present time with completed aspect", "display": "An action in the present time with completed aspect" },
+				{ "value": "An action in the past time with completed aspect", "display": "An action in the past time with completed aspect" }
+		],
+		"answers": ["An action in the present time with completed aspect"],
+		"successMsg": "<strong>Right Answer!</strong>.",
+		"hintMsg": "<strong>Not Quite</strong> It describes an action in the present time with completed aspect.",
+		"failureMsg": "<strong>The correct answer was...</strong>",
+		"require_order": "false",
+		"require_all": "true"
+	},
+	{
 		"smyth": "938",
 		"type": "slide_direct_select",
 		"settings": 

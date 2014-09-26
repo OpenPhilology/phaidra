@@ -102,6 +102,30 @@
 		"title": "Articles Declension",
 		"query": null
 	},
+	"s355": {
+		"title": "Introduction to verbs",
+		"query": null
+	},
+	"s356": {
+		"title": "Introduction to verb voices",
+		"query": null
+	},
+	"s357": {
+		"title": "Introduction to verb moods",
+		"query": null
+	},
+	"s359": {
+		"title": "Introduction to verb tenses",
+		"query": null
+	},
+	"s363": {
+		"title": "Introduction to verb numbers",
+		"query": null
+	},	
+	"s364": {
+		"title": "Introduction to verb persons",
+		"query": null
+	},
 	"s499": {
 		"title": "Form the Present, Active, Indicative for ω-stem Verbs",
 		"query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd__contains=w_stem"
