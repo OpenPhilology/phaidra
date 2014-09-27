@@ -323,7 +323,7 @@ class SubmissionResource(Resource):
 		object_class = DataObject
 		resource_name = 'submission'
 		allowed_methods = ['post', 'get', 'patch']
-		authentication = BasicAuthentication() 
+		authentication = SessionAuthentication() 
 		authorization = UserObjectsOnlyAuthorization()
 		cache = SimpleCache(timeout=None)
 		validation =  ResourceValidation()
@@ -426,25 +426,25 @@ class SubmissionResource(Resource):
 				userNode.labels.add("User")
 				
 			# create the submission		
-			#subms = gdb.nodes.create(
-			#	response = data.get("response"),
-			#	task = data.get("task"), 
-			#	smyth = data.get("smyth"),	# string
-			#	starttime = data.get("starttime"),	 # catch this so that it doesn't lead to submission problems
-			#	accuracy = data.get("accuracy"),
-			#	encounteredWords = data.get("encounteredWords"), # array
-			#	slideType = data.get("slideType"),
-			#	timestamp = data.get("timestamp") 
-			#)
+			subms = gdb.nodes.create(
+				response = data.get("response"),
+				task = data.get("task"), 
+				smyth = data.get("smyth"),	# string
+				starttime = data.get("starttime"),	 # catch this so that it doesn't lead to submission problems
+				accuracy = data.get("accuracy"),
+				encounteredWords = data.get("encounteredWords"), # array
+				slideType = data.get("slideType"),
+				timestamp = data.get("timestamp") 
+			)
 			
-			#subms.labels.add("Submission")
+			subms.labels.add("Submission")
 			
-			#if subms is None :
+			if subms is None :
 				# in case an error wasn't already raised 			
-				#raise ValidationError('Submission node could not be created.')
+				raise ValidationError('Submission node could not be created.')
 			
 			# Form the connections from the new Submission node to the existing slide and user nodes
-			#userNode.submits(subms)
+			userNode.submits(subms)
 			
 			# set links between the smyth key filtered words and the user
 			# get the file entry:
