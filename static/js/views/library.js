@@ -2,7 +2,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'text!/templates/js/l
 
 	var View = Backbone.View.extend({
 		events: { 
-			'click a.edition': 'createPersonalEdition'
+			//'click a.edition': 'createPersonalEdition'
 		},
 		initialize: function(options) {
 			var that = this;
