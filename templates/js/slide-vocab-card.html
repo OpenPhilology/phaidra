@@ -1,33 +1,53 @@
-<h1 lang="grc"><%= model.getDictForm() %></h1>
-<% var alignments = model.getDefinition(); %>
-<% if (alignments) { %>
-	<h2><% print(alignments[0]); %></h2>
-	<% if (alignments.length > 1) { %>
-		<p class="alt-definitions"><strong>Also:</strong> &nbsp; <% print(_.compact(alignments.slice(1,5)).join(', &nbsp; ')); %></p>
+<div class="definitions">
+	<% var alignments = model.getDefinition(); %>
+	<% if (alignments) { %>
+		<h1><% print(alignments[0]); %></h1>
+	<% } else { %>
+		<h2><em>No direct alignment found</em>');  %></h2>
 	<% } %>
-<% } else { %>
-	<h2><em>No direct alignment found</em>');  %></h2>
-<% } %>
+
+	<p>
+	from <span lang="grc"><%= model.getDictForm() %></span>
+	</p>
+</div>
+
+
+<div class="well">
+
+	<form>
+		<div class="input-group">
+			<input lang="grc" class="form-control input-lg" class="answer-input" title="<%= model.getHumanReadableMorph() %>" placeholder='<%= model.getHumanReadableMorph() %>'>
+			<span class="input-group-btn">
+				<button type="submit" style="height: 46px" class="btn btn-info">Go!</button>
+			</span>
+		</div>
+	</form>
+	<hr>
+	<p lang="grc" class="greek-sentence"><%= sentence %></p>
+
+</div>
+
+<p class="alt-definitions"><strong>Also:</strong> &nbsp; &nbsp; <em><% print(_.compact(alignments.slice(0,5)).join(', &nbsp; ')); %></em></p>
 
 <hr>
-<h3>Choices</h3>
 
-<% var choices = model.getVocabChoices(); %>
-<ul>
-	<% _.each(choices, function(choice, i) { %>
-		<li> <%= choice %> </li>
-	<% }); %>
-</ul>
-
-<hr>
-
-<% var url = model.get('sentence_resource_uri'); %>
-<div data-toggle="morea" data-targets="en,grc" data-dataUrl="<%= url %>" data-orientation="horizontal"></div>
-
-<p style="text-align: center">
-	<a class="btn btn-default" href="#" data-target="parse-tree">View Phrase as Parse Tree</a>
-</p>
-
-<div class="parse-tree">
-	<div data-toggle="daphne" data-dataSource="<%= url %>" data-mode="display"></div>
+<div class="vocab-notes-container">
+	<ul class="nav nav-tabs nav-justified">
+		<li><a class="btn btn-default" href="#" data-target="alignment"><span class="glyphicon glyphicon-align-center"></span> Translation</a></li>
+		<li><a class="btn btn-default" href="#" data-target="parse-tree"><span class="glyphicon glyphicon-leaf"></span> Parse Tree</a></li>
+		<li><a class="btn btn-default" href="#" data-target="grammar"><span class="glyphicon glyphicon-book"></span> Grammar</a></li>
+	</ul>
+	<div class="vocab-notes">
+		<% var url = model.get('sentence_resource_uri'); %>
+		<div data-source="">
+			<!--<p><em>Select a learning aid to help you answer this question.</em></p>-->
+		</div>
+		<div data-source="alignment" style="display: none">
+			<div data-toggle="morea" data-targets="en,grc" data-dataUrl="<%= url %>" data-orientation="horizontal"></div>
+		</div>
+		<div data-source="parse-tree" style="display: none">
+			<div data-toggle="daphne" data-dataSource="<%= url %>" data-mode="display"></div>
+		</div>
+		<div data-source="grammar" class="row" style="display: none"></div>
+	</div>
 </div>

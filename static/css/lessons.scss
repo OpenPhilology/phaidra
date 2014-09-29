@@ -566,7 +566,7 @@ table.inflection-table {
 }
 
 .vocabulary {
-	max-width: 600px;
+	max-width: 700px;
 	margin-left: auto; margin-right: auto;
 
 	.card {
@@ -577,9 +577,17 @@ table.inflection-table {
 			font-size: 3em;
 		}
 		border: 1px solid #EEE;
+		display: none;
 		margin: 5px;
 		padding: 20px;
 		box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, .1);
+
+		&.active {
+			display: block;
+		}
+	}
+	p {
+		text-align: center;
 	}
 	.alt-definitions {
 		color: #999;
@@ -596,6 +604,29 @@ table.inflection-table {
 
 		&.open {
 			display: block;
+		}
+	}
+	.vocab-notes-container {
+		p {
+			text-align: left;
+			color: #999;
+		}
+	}
+	.glyphicon {
+		margin-right: 10px;
+	}
+	ul.nav a {
+		font-size: 12px;
+		border: 0;
+	}
+	.greek-sentence {
+		.correct {
+			color: $color-dark-green; 
+			font-weight: bold;
+		}
+		.incorrect {
+			color: $color-pri-one;
+			font-weight: bold;
 		}
 	}
 }

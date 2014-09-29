@@ -365,9 +365,9 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		equiv: function(other) {
 			return this.get('CTS') === other.CTS;
 		},
-		getDefinition: function(lang) {
+		getDefinition: function(lang, thisModelOnly) {
 			if (!this.get('translations') || !this.get('translations').length) return false;
-			if (this.get('alignments')) return this.get('alignments');
+			if (this.get('alignments') && !thisModelOnly) return this.get('alignments');
 
 			lang = lang || 'en';
 
@@ -388,6 +388,10 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				return alignedWords.join(' ').trim();
 			}
 
+			// If you only want the translation for this exact model, not all models with this lemma 
+			if (thisModelOnly) 
+				return extractTranslations(this);
+
 			var alignments = [extractTranslations(this)];
 
 			// If other instances of this lemma exist, with translations, include those.
@@ -406,7 +410,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			var groups = _.groupBy(alignments);
 			alignments = _.compact(alignments.reduce(function(memo, a) {
 				var len = groups[a].length;
-				(memo[len] || (memo[len] = [])).push(a + '  (' + len + ')');
+				(memo[len] || (memo[len] = [])).push(a);
 				return memo;
 			}, [])).reverse();
 			alignments = _.uniq(_.flatten(alignments));
@@ -588,6 +592,25 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 					}
 				});
 			}
+		},
+		getHumanReadableMorph: function() {
+			var attrs = [];
+			switch (this.get('pos')) {
+				case 'verb':
+					attrs.push(Utils.getHumanReadableMorph(this.get('person')), 
+						Utils.getHumanReadableMorph(this.get('number')), 
+						Utils.getHumanReadableMorph(this.get('tense')),
+						Utils.getHumanReadableMorph(this.get('voice')),
+						Utils.getHumanReadableMorph(this.get('mood')));
+					break;
+				default:
+					attrs.push(Utils.getHumanReadableMorph(this.get('case')), 
+						Utils.getHumanReadableMorph(this.get('number')), 
+						Utils.getHumanReadableMorph(this.get('gender')));
+					break;
+			}
+
+			return attrs.join(', ');
 		},
 		// TODO: Flesh out this implementation to cover more query filters
 		getGrammar: function() {

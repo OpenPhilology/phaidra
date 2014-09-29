@@ -155,5 +155,22 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 		return arr.slice(0, arr.length - 1).join(' ').trim();
 	};
 
+	Utils.getHumanReadableMorph = function(str) {
+		var map = {
+			'fem': 'Feminine',
+			'sg': 'Singular',
+			'gen': 'Genitive',
+			'pl': 'Plural',
+			'nom': 'Nominative',
+			'aor': 'Aorist',
+			'act': 'Active',
+			'ind': 'Indicative',
+			'3rd': '3rd Person',
+			'2nd': '2nd Person',
+			'1st': '1st Person'
+		};
+		return map[str] || str;
+	};
+
 	return Utils;
 });
