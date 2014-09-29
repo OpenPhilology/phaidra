@@ -1009,13 +1009,11 @@ table.inflection-table {
     .vocabulary .parse-tree.open {
       display: block; }
   .vocabulary .vocab-notes-container p {
-    text-align: left;
-    color: #999; }
+    text-align: left; }
   .vocabulary .glyphicon {
     margin-right: 10px; }
   .vocabulary ul.nav a {
-    font-size: 12px;
-    border: 0; }
+    font-size: 12px; }
   .vocabulary .greek-sentence .correct {
     color: #49a556;
     font-weight: bold; }

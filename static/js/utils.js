@@ -28,21 +28,15 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 
 	Utils.getHTMLbySmyth = function(smyth) {
 		// Get the HTML links that match a Smyth unit
-		var urls = [];
+		if (!smyth) return [];
+		if (typeof(smyth) === "string") smyth = [smyth];
+		smyth = _.pluck(smyth, 'key');
 		
-		for (var i = 0; i < Utils.Content.length; i++) {
-			if (Utils.Content[i]["modules"]) {
-				for (var j = 0; j < Utils.Content[i]["modules"].length; j++) {
-					var slides = Utils.Content[i]["modules"][j]["slides"];
-					for (var k = 0; k < slides.length; k++) {
-						if (slides[k]["smyth"] == smyth)
-							urls.push(slides[k]["includeHTML"]);
-					}
-				}
-			}
-		}
+		var matches = _.flatten(Utils.Content.map(function(unit) {
+			return _.pluck(unit.modules, 'slides');
+		})).filter(function(slide) { return smyth.indexOf(slide.smyth) !== -1; });
 
-		return urls;
+		return _.pluck(matches, 'includeHTML');
 	};
 	
 	var persian = { 0: '۰', 1: '۱', 2: '۲', 3: '۳', 4:'۴', 5:'۵', 6: '۶', 7: '۷', 8: '۸', 9: '۹'};

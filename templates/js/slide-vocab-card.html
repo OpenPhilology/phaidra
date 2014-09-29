@@ -27,7 +27,9 @@
 
 </div>
 
-<p class="alt-definitions"><strong>Also:</strong> &nbsp; &nbsp; <em><% print(_.compact(alignments.slice(0,5)).join(', &nbsp; ')); %></em></p>
+<% if (alignments.length > 1) { %>
+	<p class="alt-definitions"><strong>Also:</strong> &nbsp; &nbsp; <em><% print(_.compact(alignments.slice(0,5)).join(', &nbsp; ')); %></em></p>
+<% } %>
 
 <hr>
 
@@ -39,9 +41,6 @@
 	</ul>
 	<div class="vocab-notes">
 		<% var url = model.get('sentence_resource_uri'); %>
-		<div data-source="">
-			<!--<p><em>Select a learning aid to help you answer this question.</em></p>-->
-		</div>
 		<div data-source="alignment" style="display: none">
 			<div data-toggle="morea" data-targets="en,grc" data-dataUrl="<%= url %>" data-orientation="horizontal"></div>
 		</div>

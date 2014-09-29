@@ -15,7 +15,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/grammar
 
 			this.$el.html(this.template({
 				content: Utils.Content, 
-				smyth: Utils.Smyth[0],
+				smyth: Utils.Smyth,
 				selected: that.options.smyth
 			}));
 

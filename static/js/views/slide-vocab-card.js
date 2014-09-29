@@ -1,7 +1,8 @@
 define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/templates/js/slide-vocab-card.html', 'morea', 'daphne', 'utils'], function($, _, Backbone, Models, Collections, Template, Morea, Daphne, Utils) {
 	var View = Backbone.View.extend({
 		events: { 
-			'submit form': 'checkAnswer'
+			'submit form': 'checkAnswer',
+			'click .nav-tabs a': 'toggleNotes'
 		},
 		template: _.template(Template),
 		initialize: function(options) {
@@ -9,8 +10,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			this.model.fetchSentence(this.model.get('CTS'));
 		},
 		render: function(options) {
-			var phrase = this.model.getPhrase();
-			var defs = this.model.getDefinition();
+			this.phrase = this.model.getPhrase();
+			this.defs = this.model.getDefinition();
 
 			// TODO: Deal with defaults
 			if (!options) {
@@ -19,7 +20,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			}
 			
 			// If our data's fucked, don't bother
-			if (!phrase || !defs) {
+			if (!this.phrase || !this.defs) {
 				this.model.set('active', false);		// Deactivate this slide
 
 				// Activate a new one -- TODO: find an intelligent way to do this?!
@@ -37,11 +38,12 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 				console.log("creating view for " + this.model.get('lemma'));
 			}
 
-			var alignment = this.constructPhrase(phrase);
+			var alignment = this.constructPhrase(this.phrase);
 
 			this.$el.html(this.template({
 				model: this.model,
-				defs: defs,
+				defs: this.defs,
+				options: options,
 				sentence: this.makeSampleSentence(alignment[0], options.answer),
 				Utils: Utils
 			}));
@@ -115,10 +117,11 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			return alignments;
 		},
 		renderAlignments: function(e) {
-			/*this.$el.find('[data-toggle="morea"]').each(function(i, el) {
+			var that = this;
+			this.$el.find('[data-toggle="morea"]').each(function(i, el) {
 				new Morea(el, {
 					mode: 'display',
-					data: that.constructPhrase(phrase),
+					data: that.constructPhrase(that.phrase),
 					targets: el.getAttribute('data-targets').split(','),
 					langs: {
 						"grc": {
@@ -133,19 +136,68 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 						}
 					}
 				});
-			});*/
+			});
+			this.$el.find('.vocab-notes div[data-source="alignment"]').show();
 		},
 		renderParseTree: function(e) {
-			/*this.$el.find('[data-toggle="daphne"]').each(function(i, el) {
+			var that = this;
+			this.$el.find('[data-toggle="daphne"]').each(function(i, el) {
 				new Daphne(el, {
-					data: phrase,
+					data: that.phrase,
 					mode: 'edit',
 					width: el.getAttribute('data-width') || 200,
 					height: 400,
 					initialScale: 0.9
 				});
-			});*/
+			});
+			this.$el.find('.vocab-notes div[data-source="parse-tree"]').show();
+		},
+		renderGrammar: function() {
+			var el = this.$el.find('.vocab-notes div[data-source="grammar"]');	
 
+			if (el.children().length !== 0) {
+				el.show();
+				return;
+			}
+
+			var that = this;
+			var urls = Utils.getHTMLbySmyth(this.model.getGrammar().reverse());
+
+			for (var i = 0, url; url = urls[i]; i++) {
+				el.append('<div data-url="' + url + '"></div>');	
+				$.ajax({
+					url: url,
+					dataType: 'text',
+					success: function(response) {
+						that.$el.find('div[data-url="' + this.url + '"]').append(response + '<hr>');
+					},
+					error: function(x, y, z) {
+						console.log(x, y, z);
+					}
+				});
+			}
+
+			el.show();
+		},
+		toggleNotes: function(e) {
+			e.preventDefault();
+			var target = e.target.dataset.target;
+
+			// First see if they want to de-toggle
+			if ($(e.target).hasClass('active')) {
+				$(e.target).removeClass('active'); 
+				this.$el.find('.vocab-notes div[data-source="' + target + '"]').hide();
+				return;
+			}
+
+			// Otherwise, find the correct note to show
+			this.$el.find('.vocab-notes[data-source]').hide();
+			this.$el.find('.nav li').removeClass('active');
+			this.$el.find('.nav a[data-target="' + target + '"]').parent().addClass('active');
+
+			if (target === 'alignment') this.renderAlignments();
+			else if (target === 'parse-tree') this.renderParseTree();
+			else if (target === 'grammar') this.renderGrammar();
 		}
 	});
 	return View;
