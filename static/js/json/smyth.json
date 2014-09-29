@@ -90,6 +90,14 @@
 		"query": "pos=noun&gender=neut&posAdd__contains=ma_matos",
 		"variants": ["posAdd__contains=ma_matos"]
 	},
+	"s268": {
+		"title": "Third declension nouns stems in -i and -u",
+		"query": "pos=noun&lemma__endswith=&posAdd__contains=is_ews"
+	},
+	"s275": {
+		"title": "Third declension nouns stems in -eu -au -ou",
+		"query": "pos=noun&lemma__endswith=&posAdd__contains=eus_ews"
+	},
 	"s286": {
 		"title": "Three-termination Adjectives",
 		"query": "pos=adj&posAdd__contains=os_h_on"
@@ -98,8 +106,16 @@
 		"title": "Two-termination Adjectives",
 		"query": "pos=adj&posAdd__contains=os_on"
 	},
+	"s299": {
+		"title": "Three termination adjectives third declension",
+		"query": "pos=adj&posAdd__contains=as_asa_an"
+	},
 	"s332": {
 		"title": "Articles Declension",
+		"query": null
+	},
+	"s343": {
+		"title": "Adverbs",
 		"query": null
 	},
 	"s355": {

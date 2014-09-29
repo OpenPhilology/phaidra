@@ -1016,7 +1016,8 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact1.html",
-						"smyth": "s542"
+						"smyth": "s542",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
 						"type": "slide_info",
@@ -1026,7 +1027,8 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact3.html",
-						"smyth": "s542"
+						"smyth": "s542",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
 						"type": "slide_info",
@@ -1040,7 +1042,8 @@
 					{
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact5.html",
-						"smyth": "s546"
+						"smyth": "s546",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
 					},
 					{
 						"type": "slide_info",
@@ -1068,11 +1071,15 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow.html"
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow.html",
+						"smyth": "s268",
+						"tasks": ["identify_morph_number", "identify_morph_case"]
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow1.html"
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow1.html",
+						"smyth": "s275",
+						"tasks": ["identify_morph_number", "identify_morph_case"]
 					}
 				]
 			}	
@@ -1099,7 +1106,9 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/15.adjectivesthird/3ending.html"
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/3ending.html",	
+						"smyth": "s299",
+						"tasks": ["identify_morph_gender", "identify_morph_case", "identify_morph_number"]	
 					}
 				]				
 			},
@@ -1134,7 +1143,8 @@
 					},
 					{
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs.html"
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs.html",
+						"smyth": "s343"
 					},
 					{
 						"type": "slide_info",
