@@ -36,7 +36,7 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 			return _.pluck(unit.modules, 'slides');
 		})).filter(function(slide) { return smyth.indexOf(slide.smyth) !== -1; });
 
-		return _.pluck(matches, 'includeHTML');
+		return matches;
 	};
 	
 	var persian = { 0: '۰', 1: '۱', 2: '۲', 3: '۳', 4:'۴', 5:'۵', 6: '۶', 7: '۷', 8: '۸', 9: '۹'};
@@ -141,7 +141,7 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 				list = [];
 		}
 
-		return list;
+		return [];
 	};
 
 	Utils.stripVocabCount = function(str) {
@@ -161,7 +161,10 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 			'ind': 'Indicative',
 			'3rd': '3rd Person',
 			'2nd': '2nd Person',
-			'1st': '1st Person'
+			'1st': '1st Person',
+			'masc': 'Masculine',
+			'imperf': 'Imperfect',
+			'fut': 'Future'
 		};
 		return map[str] || str;
 	};

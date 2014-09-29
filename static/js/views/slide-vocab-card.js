@@ -123,17 +123,8 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 					mode: 'display',
 					data: that.constructPhrase(that.phrase),
 					targets: el.getAttribute('data-targets').split(','),
-					langs: {
-						"grc": {
-							"hr": "Greek",
-							"resource_uri": "",
-							"dir": "ltr"
-						},
-						"en": {
-							"hr": "English",
-							"resource_uri": "",
-							"dir": "ltr"
-						}
+					langs: { "grc": { "hr": "Greek", "resource_uri": "", "dir": "ltr" },
+						"en": { "hr": "English", "resource_uri": "", "dir": "ltr" } 
 					}
 				});
 			});
@@ -155,18 +146,21 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 		renderGrammar: function() {
 			var el = this.$el.find('.vocab-notes div[data-source="grammar"]');	
 
-			if (el.children().length !== 0) {
+			if (el.find('div[data-url]').length !== 0) {
 				el.show();
 				return;
 			}
 
 			var that = this;
-			var urls = Utils.getHTMLbySmyth(this.model.getGrammar().reverse());
+			var topics = Utils.getHTMLbySmyth(this.model.getGrammar());
+			topics.forEach(function(topic) {
+				el.find('.table-of-contents').append('<li><a href="' + topic.key + '">' + topic.title + '</a></li>');
+			});
 
-			for (var i = 0, url; url = urls[i]; i++) {
-				el.append('<div data-url="' + url + '"></div>');	
+			for (var i = 0, topic; topic = topics[i]; i++) {
+				el.append('<div data-url="' + topic.includeHTML + '"></div>');	
 				$.ajax({
-					url: url,
+					url: topic.includeHTML,
 					dataType: 'text',
 					success: function(response) {
 						that.$el.find('div[data-url="' + this.url + '"]').append(response + '<hr>');
@@ -191,7 +185,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'text!/temp
 			}
 
 			// Otherwise, find the correct note to show
-			this.$el.find('.vocab-notes[data-source]').hide();
+			this.$el.find('.vocab-notes [data-source]').hide();
 			this.$el.find('.nav li').removeClass('active');
 			this.$el.find('.nav a[data-target="' + target + '"]').parent().addClass('active');
 
