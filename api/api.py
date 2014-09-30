@@ -58,21 +58,67 @@ class ResourceValidation(Validation):
 				errors[key] = ['Invalid.']			
 		return errors
 
-class UserObjectsOnlyAuthorization(Authorization):
+class SubmissionAuthorization(Authorization):
 	
 	def read_list(self, object_list, bundle):
 		
-		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)	
-		submissions = []
-		table = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) WHERE HAS (u.username) AND u.username='""" + bundle.request.user.username + """' RETURN s""")		
+		gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)		
+		attrlist = ['response', 'task', 'smyth', 'slideType', 'user', 'starttime', 'timestamp', 'accuracy']
+		
+		query_params = {}
+		for obj in bundle.request.GET.keys():
+			if obj in attrlist and bundle.request.GET.get(obj) is not None:
+				query_params[obj] = bundle.request.GET.get(obj)
+			elif obj.split('__')[0] in attrlist and bundle.request.GET.get(obj) is not None:
+				query_params[obj] = bundle.request.GET.get(obj)
+				
+		# implement filtering
+		if len(query_params) > 0:
+						
+			# generate query
+			q = """MATCH (u:`User`)-[:submits]->(s:`Submission`) WHERE """
 			
+			# filter word on parameters
+			for key in query_params:				
+				if len(key.split('__')) > 1:
+					if key.split('__')[1] == 'contains':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'startswith':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'endswith':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					elif key.split('__')[1] == 'isnot':
+						if key.split('__')[0] == 'accuracy':
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """<>""" +query_params[key]+ """ AND """
+						else:
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
+					elif key.split('__')[1] == 'gt':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """>""" +query_params[key]+ """ AND """
+					elif key.split('__')[1] == 'lt':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """<""" +query_params[key]+ """ AND """
+				else:
+					if key == 'accuracy':
+						q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """=""" +query_params[key]+ """ AND """
+					else:
+						q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
+			q = q[:len(q)-4]
+			q = q + """RETURN s"""
+			
+			table = gdb.query(q)
+	
+		# ordinary querying
+		else:	
+			table = gdb.query("""MATCH (u:`User`)-[:submits]->(s:`Submission`) WHERE HAS (u.username) AND u.username='""" + bundle.request.user.username + """' RETURN s""")		
+				
 		# create the objects which was queried for and set all necessary attributes
+		submissions = []
 		for s in table:
 			submission = s[0]	
 			url = submission['self'].split('/')						
 			new_obj = DataObject(url[len(url)-1])
 			new_obj.__dict__['_data'] = submission['data']		
-			new_obj.__dict__['_data']['id'] = url[len(url)-1]						
+			new_obj.__dict__['_data']['id'] = url[len(url)-1]
+			new_obj.__dict__['_data']['user'] = bundle.request.user.username						
 			submissions.append(new_obj)
 				
 		return submissions
@@ -323,8 +369,8 @@ class SubmissionResource(Resource):
 		object_class = DataObject
 		resource_name = 'submission'
 		allowed_methods = ['post', 'get', 'patch']
-		authentication = SessionAuthentication() 
-		authorization = UserObjectsOnlyAuthorization()
+		authentication = BasicAuthentication() 
+		authorization = SubmissionAuthorization()
 		cache = SimpleCache(timeout=None)
 		validation =  ResourceValidation()
 
@@ -343,11 +389,12 @@ class SubmissionResource(Resource):
 		Handles checking of permissions to see if the user has authorization
 		to GET this resource.
 		"""
+	
 		try:
 			auth_result = self._meta.authorization.read_list(object_list, bundle)
 		except Unauthorized as e:
 			self.unauthorized_result(e)
-
+			
 		return auth_result
 	
 	
@@ -431,7 +478,7 @@ class SubmissionResource(Resource):
 				task = data.get("task"), 
 				smyth = data.get("smyth"),	# string
 				starttime = data.get("starttime"),	 # catch this so that it doesn't lead to submission problems
-				accuracy = data.get("accuracy"),
+				accuracy = int(data.get("accuracy")),
 				encounteredWords = data.get("encounteredWords"), # array
 				slideType = data.get("slideType"),
 				timestamp = data.get("timestamp") 
@@ -500,11 +547,7 @@ class SubmissionResource(Resource):
 				for rel in userNode.relationships.outgoing(["knows_vocab"])[:]:
 					if word == rel.end:
 						counter = rel.properties['times_seen']+1
-						rel.properties = {'times_seen':counter}
-						#rel._set_properties(self, {'times_seen':counter})
-						#gdb.relationships.update()
-						#userNode.relationships.create("knows_vocab", word, times_seen=counter)
-												
+						rel.properties = {'times_seen':counter}											
 						word_unknown = False
 						lemma_unknown = False	
 					if lemma == rel.end:
@@ -586,7 +629,10 @@ class LemmaResource(Resource):
 					elif key.split('__')[1] == 'endswith':
 						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
 					elif key.split('__')[1] == 'isnot':
-						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
+						if key == 'frequency':
+							q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """<>""" +query_params[key]+ """ AND """
+						else:
+							q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
 					elif key.split('__')[1] == 'gt':
 						q = q + """HAS (l.""" +key.split('__')[0]+ """) AND l.""" +key.split('__')[0]+ """>""" +query_params[key]+ """ AND """
 					elif key.split('__')[1] == 'lt':
@@ -768,19 +814,26 @@ class WordResource(Resource):
 			q = """MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE """
 			
 			# filter word on parameters
-			for key in query_params:
-				if key in ['tbwid', 'head', 'length', 'cid']:
-					q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """=""" +query_params[key]+ """ AND """
-				else:				
-					if len(key.split('__')) > 1:
-						if key.split('__')[1] == 'contains':
-							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
-						elif key.split('__')[1] == 'startswith':
-							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
-						elif key.split('__')[1] == 'endswith':
-							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
-						elif key.split('__')[1] == 'isnot':
+			for key in query_params:				
+				if len(key.split('__')) > 1:
+					if key.split('__')[1] == 'contains':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'startswith':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'endswith':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					elif key.split('__')[1] == 'gt':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """>""" +query_params[key]+ """ AND """
+					elif key.split('__')[1] == 'lt':
+						q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<""" +query_params[key]+ """ AND """		
+					elif key.split('__')[1] == 'isnot':
+						if key.split('__')[0] in ['tbwid', 'head', 'length', 'cid']:
+							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>""" +query_params[key]+ """ AND """
+						else:
 							q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
+				else:
+					if key in ['tbwid', 'head', 'length', 'cid']:
+						q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """=""" +query_params[key]+ """ AND """
 					else:
 						q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
@@ -916,17 +969,26 @@ class SentenceResource(Resource):
 			q = """MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE """
 			
 			# filter word on parameters
-			for key in query_params:
-				if key in ['length']:
-					q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """=""" +query_params[key]+ """ AND """
-				else:					
-					if len(key.split('__')) > 1:
-						if key.split('__')[1] == 'contains':
-							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
-						elif key.split('__')[1] == 'startswith':
-							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
-						elif key.split('__')[1] == 'endswith':
-							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+			for key in query_params:					
+				if len(key.split('__')) > 1:
+					if key.split('__')[1] == 'contains':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'startswith':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+					elif key.split('__')[1] == 'endswith':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					elif key.split('__')[1] == 'gt':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """>""" +query_params[key]+ """ AND """
+					elif key.split('__')[1] == 'lt':
+						q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """<""" +query_params[key]+ """ AND """	
+					elif key.split('__')[1] == 'isnot':
+						if key.split('__')[0] == 'length':
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """<>""" +query_params[key]+ """ AND """
+						else:
+							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
+				else:
+					if key == 'length':
+						q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """=""" +query_params[key]+ """ AND """
 					else:
 						q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
@@ -1223,6 +1285,8 @@ class DocumentResource(Resource):
 						q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
 					elif key.split('__')[1] == 'endswith':
 						q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+					elif key.split('__')[1] == 'isnot':
+						q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
 				else:
 					q = q + """HAS (d.""" +key+ """) AND d.""" +key+ """='""" +query_params[key]+ """' AND """
 			q = q[:len(q)-4]
