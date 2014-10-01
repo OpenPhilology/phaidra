@@ -284,9 +284,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			var calls = [];
 
 			// First, see if there are queries associated with these smyth units
-			var queries = _.uniq(_.compact(_.map(this.meta('grammar'), function(val) {
-				if (Utils.Smyth[val]) return Utils.Smyth[val].query;
-			})));
+			var queries = _.uniq(_.compact(_.pluck(Utils.Smyth.filter(function(s) {
+				return s.ref.split('#')[0] === that.meta('grammar');
+			}), 'query')));
 			
 			if (queries.length === 0) {
 				triggerPopulated();

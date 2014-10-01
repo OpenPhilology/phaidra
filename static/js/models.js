@@ -620,14 +620,15 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				return this.get('grammar');
 
 			// Go through Smyth and get the relevant topics
-			var matches = _.filter(Utils.Smyth, function(entry, key) {
+			var matches = _.filter(Utils.Smyth, function(entry) {
 
 				// If the query isn't relevant to figuring out grammar topics
 				if (!entry.query)
 					return false;
 
 				var attrs = entry.query.split('&');
-				for (var i = 0; i < attrs.length; i++) {
+
+				for (var i = 0, attr; attr = attrs[i]; i++) {
 
 					// Try to make this legible...
 					var v = attrs[i].split('=');
@@ -644,14 +645,12 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 						if (that.get(prop).indexOf(value) != (that.get(prop).length - value.length))
 							return false;	
 					}
-					else {
-						// Last, simple value check
-						if (that.get(prop) != value)
-							return false;
+					// Last, simple value check
+					else if (that.get(prop) != value) {
+						return false;
 					}
 
 				}
-				entry.key = key;
 				return true;
 			}).reverse();
 

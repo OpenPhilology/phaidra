@@ -1,39 +1,40 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module', 'views/lessons'], 
-		function($, _, Backbone, Models, Collections, ModuleView, LessonView) { 
+/**
+ * LESSON ROUTER
+ * Deals with navigation between the lesson screen and the selected microlesson.
+ */ 
+define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/module', 'views/lessons', 'views/microlesson'], 
+		function($, _, Backbone, Models, Collections, ModuleView, LessonListView, MicrolessonView) { 
 
 	var Router = {};
 	Router.Router = Backbone.Router.extend({
 		routes: {
-			// Lesson Routes
 			"lessons/":"showLessons",
-			"lessons/:s": "showExercise",
-			"module/": "forwardModule",
-			"module/:mod": "showModule",
-			"module/:mod/section/:sec": "showSection",
-			"module/:mod/section/:sec/slide/:slide": "showSlide"
+			"lessons/:s": "showMicrolesson"
 		},
-		// Lesson Routes
 		showLessons: function() {
-			if (!this.lesson_view) {
-				this.lesson_view = new LessonView({ el: '#main' })
-					.render();
+			this.hideMicrolesson();
+
+			if (!this.lessonListView)
+				this.lessonListView = new LessonListView({ el: '#main' }).render();
+			else
+				this.lessonListView.$el.show();
+		},
+		hideLessons: function() {
+			if (this.lessonListView) 
+				this.lessonListView.$el.hide();
+		},
+		showMicrolesson: function(s) {
+			this.hideLessons();
+
+			if (!this.microlessonView)
+				this.microlessonView = new MicrolessonView({ el: '#main', ref: s });
+			if (this.microlessonView.options.ref !== s) {
+				this.microlessonView.initialize({ ref: s });
 			}
 		},
-		showExercise: function(s) {
-			console.log("show ", s);
-		},
-		showModule: function(mod) {
-			this.showSlide(mod, 0, 0);
-		},
-		showSection: function(mod, sect) {
-			this.showSlide(mod, sect, 0);
-		},
-		showSlide: function(mod, sect, slide) {
-			if (!this.module_view)
-				this.module_view = new ModuleView({ el: $('.slide'), module: mod, section: sect, slide: slide }).render();
-
-			// Select current slide
-			this.module_view.routerNavigate(slide);
+		hideMicrolesson: function() {
+			if (this.microlessonView)
+				this.microLessonView.$el.hide();
 		}
 	});
 	

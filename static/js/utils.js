@@ -55,7 +55,7 @@ define(['jquery', 'underscore', 'text!/static/json/smyth.json', 'text!/static/js
 		// Get the HTML links that match a Smyth unit
 		if (!smyth) return [];
 		if (typeof(smyth) === "string") smyth = [smyth];
-		smyth = _.pluck(smyth, 'key');
+		smyth = _.pluck(smyth, 'ref');
 		
 		var matches = _.flatten(Utils.Content.map(function(unit) {
 			return _.pluck(unit.modules, 'slides');

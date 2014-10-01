@@ -1020,3 +1020,6 @@ table.inflection-table {
   .vocabulary .greek-sentence .incorrect {
     color: #d15241;
     font-weight: bold; }
+
+.microlesson .note {
+  display: none; }
