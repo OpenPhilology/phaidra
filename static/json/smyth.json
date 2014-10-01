@@ -1,225 +1,238 @@
-[{
-	"s1": {
+[	
+	{
+		"ref": "s1",
 		"title": "The Ancient Greek Alphabet",
 		"query": null
 	},
-	"s4"  : {
+	{	
+		"ref": "s4",
 		"title": "Long and Short Vowels",
 		"query": null
 	},
-	"s5"  : {
+	{	
+		"ref": "s5",
 		"title": "Dipthongs",
 		"query": null
 	},
-	"s5"  : {
+	{
+		"ref": "s5",
 		"title": "Iota Subscript",
 		"query": null
 	},
-	"s9"  : {
+	{
+		"ref": "s9",
 		"title": "Rough Breathing",
 		"query": null
 	},
-	"s9"  : {
+	{
+		"ref": "s9",
 		"title": "Smooth Breathing",
 		"query": null
 	},
-	"s19#a": {
+	{
+		"ref": "s19#a",
 		"title": "The Gamma Nasal",
 		"query": "pos=noun&lemma__contains=γγ",
-		"variants": ["lemma__contains=γγ", "lemma__contains=γκ", "lemma__contains=γχ", "lemma__contains=γξ"]
+		"variants": [
+			"lemma__contains=γγ", 
+			"lemma__contains=γκ", 
+			"lemma__contains=γχ", 
+			"lemma__contains=γξ"
+		]
 	},
-	"s149"  : {
+	{
+		"ref": "s149",
 		"title": "Rules of Accents",
 		"query": null
 	},
-	"s188": {
+	{
+		"ref": "s188",
 		"title": "Marks of Punctuation",
 		"query": "pos=punct"
 	},
-	"s194": {
+	{
+		"ref": "s194",
 		"title": "Characteristics of Nouns in Ancient Greek",
 		"query": null
 	},
-	"s195": {
+	{
+		"ref": "s195",
 		"title": "Number in Ancient Greek Nouns",
 		"query": null
 	},
-	"s196": {
+	{
+		"ref": "s196",
 		"title": "Gender in Ancient Greek Nouns",
 		"query": null
 	},
-	"s201": {
+	{
+		"ref": "s201",
 		"title": "Case in Ancient Greek Nouns",
 		"query": null
 	},
-	"s216": {
+	{	
+		"ref": "s216",
 		"title": "The Alpha or First Declension",
 		"query": "pos=noun&posAdd=h_hs"
 	},
-	"s217#a": {
+	{
+		"ref": "s217#a",
 		"title": "Feminine Nouns in the First Declension (α-stem)",	
 		"query": "pos=noun&gender=fem&lemma__endswith=α&posAdd__contains=h_hs"
 	},
-	"s217#c": {
+	{
+		"ref": "s217#c",
 		"title": "Feminine Nouns in the First Declension (η-stem)",	
 		"query": "pos=noun&gender=fem&lemma__endswith=η&posAdd__contains=h_hs"
 	},
-	"s222": {
+	{
+		"ref": "s222",
 		"title": "Masculine Nouns in the First Declension (ης-stem)",
 		"query": "pos=noun&gender=masc&posAdd__contains=hs_ou"
 	},
-	"s228#a": {
+	{
+		"ref": "s228#a",
 		"title": "Masculine Nouns in the Second Declension (ος-stem)",
 		"query": "pos=noun&gender=masc&posAdd__contains=os_ou"
 	},
-	"s228#b": {
+	{
+		"ref": "s228#b",
 		"title": "Neuter Nouns in the Second Declension (ον-stem)",
 		"query": "pos=noun&gender=neut&posAdd__contains=os_ou"
 	},
-	"s232": {
+	{
+		"ref": "s232",
 		"title": "Feminine Nouns in the Second Declension",
 		"query": "pos=noun&gender=fem&posAdd__contains=os_ou"
 	},
-	"s255#2": {
+	{
+		"ref": "s255#2",
 		"title": "Feminine and Masculine Nouns in the Third Declension",
 		"query": "pos=noun&posAdd__contains=is_idos",
-		"variants": ["posAdd__contains=is_idos"]
+		"variants": [
+			"posAdd__contains=is_idos"
+		]
 	},
-	"s255#3": {
+	{
+		"ref": "s255#3",
 		"title": "Neuter Nouns in the Third Declension",
 		"query": "pos=noun&gender=neut&posAdd__contains=ma_matos",
-		"variants": ["posAdd__contains=ma_matos"]
+		"variants": [
+			"posAdd__contains=ma_matos"
+		]
 	},
-	"s268": {
-		"title": "Third declension nouns stems in -i and -u",
-		"query": "pos=noun&lemma__endswith=&posAdd__contains=is_ews"
-	},
-	"s275": {
-		"title": "Third declension nouns stems in -eu -au -ou",
-		"query": "pos=noun&lemma__endswith=&posAdd__contains=eus_ews"
-	},
-	"s286": {
+	{
+		"ref": "s286",
 		"title": "Three-termination Adjectives",
 		"query": "pos=adj&posAdd__contains=os_h_on"
 	},
-	"s288": {
+	{
+		"ref": "s288",
 		"title": "Two-termination Adjectives",
 		"query": "pos=adj&posAdd__contains=os_on"
 	},
-	"s299": {
-		"title": "Three termination adjectives third declension",
-		"query": "pos=adj&posAdd__contains=as_asa_an"
-	},
-	"s332": {
+	{
+		"ref": "s332",
 		"title": "Articles Declension",
 		"query": null
 	},
-	"s343": {
-		"title": "Adverbs",
-		"query": null
-	},
-	"s355": {
-		"title": "Introduction to verbs",
-		"query": null
-	},
-	"s356": {
-		"title": "Introduction to verb voices",
-		"query": null
-	},
-	"s357": {
-		"title": "Introduction to verb moods",
-		"query": null
-	},
-	"s359": {
-		"title": "Introduction to verb tenses",
-		"query": null
-	},
-	"s363": {
-		"title": "Introduction to verb numbers",
-		"query": null
-	},	
-	"s364": {
-		"title": "Introduction to verb persons",
-		"query": null
-	},
-	"s499": {
+	{
+		"ref": "s499",
 		"title": "Form the Present, Active, Indicative for ω-stem Verbs",
 		"query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd__contains=w_stem"
 	},
-	"s532": {
+	{
+		"ref": "s532",
 		"title": "Intro to Future Active Indicative",
 		"query": "pos=verb&tense=fut&mood=ind&voice=act"
 	},
-	"s537": {
+	{
+		"ref": "s537",
 		"title": "Form the Future, Active, Indicative for Stop Verbs",
 		"query": "pos=verb&tense=fut&mood=ind&voice=act",
-		"aspect": "morph",
-		"variants": ["lemma__endswith=πω", "lemma__endswith=βω", "lemma__endswidth=πτω", "lemma__endswith=ϕω", "lemma__endswith=κω", "lemma__endswith=γω", "lemma__endswith=ττω"]
+		"variants": [
+			"lemma__endswith=πω", 
+			"lemma__endswith=βω", 
+			"lemma__endswidth=πτω", 
+			"lemma__endswith=ϕω", 
+			"lemma__endswith=κω", 
+			"lemma__endswith=γω", 
+			"lemma__endswith=ττω"
+		]
 	},
-	"s542": {
+	{
+		"ref": "s542",
 		"title": "First Aorist",
 		"query": "pos=verb&tense=aor&posAdd__contains=aor1"
 	},
-	"s546": {
+	{
+		"ref": "s546",
 		"title": "Second Aorist",
 		"query": "pos=verb&tense=aor&posAdd__contains=aor2"
 	},
-	"s768#a": {
+	{
+		"ref": "s768#a",
 		"title": "εἰμί in the Present Tense",
 		"query": "pos=verb&lemma=εἰμί&tense=pres&mood=ind"
 	},
-	"s768#b": {
+	{
+		"ref": "s768#b",
 		"title": "εἰμί in the Future Tense",
 		"query": "pos=verb&lemma=εἰμί&tense=fut"
 	},
-	"s768#c": {
+	{
+		"ref": "s768#c",
 		"title": "εἰμί in the Imperfect Tense",
 		"query": "pos=verb&lemma=εἰμί&tense=imperf"
 	},
-	"s910": {
+	{
+		"ref": "s910",
 		"title": "Nominative Case Predicate Nouns",
 		"query": null
 	},
-	"s938": {
+	{
+		"ref": "s938",
 		"title": "Nominative Case",
-		"query": null
+		"query": "pos=noun&case=nom"
 	},
-	"s1283": {
+	{
+		"ref": "s1283",
 		"title": "Vocative Case",
-		"query": null
+		"query": "pos=noun&case=voc"
 	},
-	"s1297": {
+	{
+		"ref": "s1297",
 		"title": "Genitive Case Possession",
 		"query": null
 	},
-	"s1306": {
+	{
+		"ref": "s1306",
 		"title": "Genitive Case Partitive",
 		"query": null
 	},
-	"s1315": {
+	{
+		"ref": "s1315",
 		"title": "Genitive Case Comparison",
 		"query": null
 	},
-	"s1315": {
+	{
+		"ref": "s1450",
 		"title": "Dative Case",
-		"query": null
+		"query": "pos=noun&case=dat"
 	},
-	"s1506": {
+	{
+		"ref": "s1506",
 		"title": "Dative Case Instrument",
 		"query": null
 	},
-	"s1590": {
+	{
+		"ref": "s1590",
 		"title": "Accusative Case",
-		"query": null
+		"query": "pos=noun&case=acc"
 	},
-	"s1889": {
+	{
+		"ref": "s1889",
 		"title": "Form the Imperfect, Active, Indicative",
 		"query": "pos=verb&tense=imperf&mood=ind&voice=act&posAdd__contains=w_stem"
 	}
-},
-{
-	"meta": {
-		"perseus": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s",
-		"indicatives": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D44%3Asection%3D111%3Asubsection%3D124"
-	}
-}]
+]

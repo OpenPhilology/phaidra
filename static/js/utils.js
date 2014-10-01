@@ -1,29 +1,54 @@
 // Here is where we will localize the textbook content (i.e. loading de_content.json)
 
-define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.json', 'text!json/en_question_bank.json', 'text!json/en_tasks.json'], function($, _, Smyth, Content, Questions, Tasks) {
+define(['jquery', 'underscore', 'text!/static/json/smyth.json', 'text!/static/json/en_content.json', 'text!/static/json/en_question_bank.json', 'text!/static/json/en_tasks.json'], function($, _, Smyth, Content, Questions, Tasks) {
 	var Utils = {};
-	Utils.Smyth = JSON.parse(Smyth)[0];
 
-	Utils.Content = JSON.parse(Content);
-	Utils.Questions = JSON.parse(Questions);
-	Utils.Tasks = JSON.parse(Tasks);
+	/**
+	  * Our static content, used to programmatically generate exercises:
+	  */ 
+	Utils.Smyth = JSON.parse(Smyth);						// Smyth ref to query mapper
+	Utils.Content = JSON.parse(Content);					// Gives us the HTML which corresponds to Smyth, and meta material
+	Utils.Questions = JSON.parse(Questions);				// Statically written questions for non-text questions
+	Utils.Tasks = JSON.parse(Tasks);						// Templates for programmatically generated text-based questions
 
-	Utils.getDefiniteArticle = function(gender, number) {
-		number = number || 'sg';
-		var map = {
-			'sg': {
-				'masc': 'ὁ',
-				'fem': 'ἡ',
-				'neut': 'τό'
-			},
-			'pl': {
-				'masc': 'οἱ',
-				'fem': 'αἱ',
-				'neut': 'τά'
-			}
-		};
+	/**
+	  * SMYTH HELPER FUNCTIONS
+	  * These functions help with referencing all of our components (lesson content, tasks, and questions) back to
+	  * the source text data. See static/js/json/smyth.json for a clearer idea.
+	  */
+	Utils.Slides = (function() {
+		return _.flatten(_.pluck(_.flatten(_.pluck(Utils.Content, 'modules')), 'slides'));
+	})();
+	Utils.Microlessons = (function() {
+		var smyths = _.compact(_.pluck(Utils.Slides, 'smyth'));
+		return _.uniq(smyths.map(function(s) {
+			return s.split('#')[0];
+		}));
+	})();
+	Utils.getSmyth = function(smyth) {
+		return Utils.Smyth.filter(function(s) {
+			return smyth === s.ref;
+		})[0];
+	};
+	Utils.getRelatedSmyth = function(smyth) {
+		var generalSmyth = smyth.split('#')[0]; 
 
-		return map[number][gender];
+		return Utils.Smyth.filter(function(s) {
+			return generalSmyth === s.ref.split('#')[0];
+		});
+	};
+	// Get the lesson that contains the microlesson
+	Utils.getLesson = function(smyth) {
+		return Utils.Content.filter(function(lesson) {
+			var smyths = _.pluck(_.flatten(lesson.modules.map(function(m) {
+				return m.slides;
+			})), 'smyth');
+			return smyths.indexOf(smyth.split('#')[0]) !== -1;
+		})[0];
+	};
+	Utils.getThumbnail = function(smyth) {
+		smyth = smyth.split('#')[0];
+
 	};
 
 	Utils.getHTMLbySmyth = function(smyth) {
@@ -37,46 +62,6 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 		})).filter(function(slide) { return smyth.indexOf(slide.smyth) !== -1; });
 
 		return matches;
-	};
-	
-	var persian = { 0: '۰', 1: '۱', 2: '۲', 3: '۳', 4:'۴', 5:'۵', 6: '۶', 7: '۷', 8: '۸', 9: '۹'};
-
-	Utils.convertToPersian = function(text) {
-		for (var i = 0; i < 10; i++) {
-			text = text.replace(eval('/' + i + '/g'), persian[i]);
-		}
-		return text;
-	};
-
-	Utils.getHelpTopics = function(smyth) {
-		// Get links to relevant content from Utils.Content based on smyth in the exercise
-	};
-
-	Utils.makeHint = function(smyth, mistake) {
-		// Use smyth ref and mistake made to give reasonable hints	
-	};
-	Utils.getReadableLang = function(abbreviation) {
-		var langs = {
-			'grc': gettext('Ancient Greek'),
-			'fa': gettext('Farsi'),
-			'en': gettext('English'),
-			'hr': gettext('Croatian'), 
-			'pr': gettext('Portuguese'),
-			'fr': gettext('French')
-		};
-
-		return langs[abbreviation];
-	};
-
-	Utils.fireEvent = function(el, type) {
-		if (el.fireEvent) {
-			el.fireEvent('on' + type);
-		}
-		else {
-			var e = document.createEvent('Events');
-			e.initEvent(type, true, false);
-			el.dispatchEvent(e);
-		}
 	};
 
 	Utils.removeQueryParam = function(query, toRemove) {
@@ -101,29 +86,59 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 		return found;
 	};
 
-	Utils.parseCTS = function(CTS) {
-		/*	CTS example:	urn:	cts:	greekLit:	tlg0003.tlg001.perseus-grc:		1.89.1:		13
-							urn:	cts:	namespace:	work:							passage:	word
-		*/ 
-		var split = CTS.split(":");
-		var work = split[3].split(".");
+	Utils.getHelpTopics = function(smyth) {
+		// Get links to relevant content from Utils.Content based on smyth in the exercise
+	};
 
-		var obj = {
-			"urn": split[0],
-			"cts": split[1],
-			"namespace": split[2],
-			"work": {
-				"textgroup": work[0],
-				"text": work[1],
-				"translation": work[2]
+	Utils.makeHint = function(smyth, mistake) {
+		// Use smyth ref and mistake made to give reasonable hints	
+	};
+
+	
+	/**
+	 * Functions for working with Persian.
+	 */
+	var persian = { 0: '۰', 1: '۱', 2: '۲', 3: '۳', 4:'۴', 5:'۵', 6: '۶', 7: '۷', 8: '۸', 9: '۹'};
+
+	Utils.convertToPersian = function(text) {
+		for (var i = 0; i < 10; i++) {
+			text = text.replace(eval('/' + i + '/g'), persian[i]);
+		}
+		return text;
+	};
+
+	/**
+	 * Helper functions for working with Greek.
+	 */ 
+	Utils.getDefiniteArticle = function(gender, number) {
+		number = number || 'sg';
+		var map = {
+			'sg': {
+				'masc': 'ὁ',
+				'fem': 'ἡ',
+				'neut': 'τό'
 			},
-			"sentence": split[4]
+			'pl': {
+				'masc': 'οἱ',
+				'fem': 'αἱ',
+				'neut': 'τά'
+			}
 		};
 
-		if (split.length === 6)
-			obj["word"] = split[5];
+		return map[number][gender];
+	};
 
-		return obj;
+	Utils.getReadableLang = function(abbreviation) {
+		var langs = {
+			'grc': gettext('Ancient Greek'),
+			'fa': gettext('Farsi'),
+			'en': gettext('English'),
+			'hr': gettext('Croatian'), 
+			'pr': gettext('Portuguese'),
+			'fr': gettext('French')
+		};
+
+		return langs[abbreviation];
 	};
 
 	Utils.getVocabBlacklist = function(pos, lang) {
@@ -144,30 +159,40 @@ define(['jquery', 'underscore', 'text!json/smyth.json', 'text!json/en_content.js
 		return [];
 	};
 
-	Utils.stripVocabCount = function(str) {
-		var arr = str.split(' ');
-		return arr.slice(0, arr.length - 1).join(' ').trim();
-	};
-
 	Utils.getHumanReadableMorph = function(str) {
 		var map = {
-			'fem': 'Feminine',
-			'sg': 'Singular',
-			'gen': 'Genitive',
-			'pl': 'Plural',
-			'nom': 'Nominative',
-			'aor': 'Aorist',
-			'act': 'Active',
-			'ind': 'Indicative',
-			'3rd': '3rd Person',
-			'2nd': '2nd Person',
-			'1st': '1st Person',
-			'masc': 'Masculine',
-			'imperf': 'Imperfect',
-			'fut': 'Future'
+			'fem': gettext('Feminine'),
+			'sg': gettext('Singular'),
+			'gen': gettext('Genitive'),
+			'pl': gettext('Plural'),
+			'nom': gettext('Nominative'),
+			'aor': gettext('Aorist'),
+			'act': gettext('Active'),
+			'ind': gettext('Indicative'),
+			'3rd': gettext('3rd Person'),
+			'2nd': gettext('2nd Person'),
+			'1st': gettext('1st Person'),
+			'masc': gettext('Masculine'),
+			'imperf': gettext('Imperfect'),
+			'fut': gettext('Future')
 		};
 		return map[str] || str;
 	};
+
+	/**
+	 * General javascript utilities. 
+	 */
+	Utils.fireEvent = function(el, type) {
+		if (el.fireEvent) {
+			el.fireEvent('on' + type);
+		}
+		else {
+			var e = document.createEvent('Events');
+			e.initEvent(type, true, false);
+			el.dispatchEvent(e);
+		}
+	};
+
 
 	return Utils;
 });

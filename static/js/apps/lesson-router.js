@@ -6,6 +6,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 		routes: {
 			// Lesson Routes
 			"lessons/":"showLessons",
+			"lessons/:s": "showExercise",
 			"module/": "forwardModule",
 			"module/:mod": "showModule",
 			"module/:mod/section/:sec": "showSection",
@@ -17,6 +18,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/modu
 				this.lesson_view = new LessonView({ el: '#main' })
 					.render();
 			}
+		},
+		showExercise: function(s) {
+			console.log("show ", s);
 		},
 		showModule: function(mod) {
 			this.showSlide(mod, 0, 0);
