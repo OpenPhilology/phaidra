@@ -361,3 +361,10 @@ table.inflection-table {
 		left: 33%;
 	}
 }
+.answer-box {
+	background-color: lighten(desaturate($color-dark-green, 10%), 50%);
+	padding: 30px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}

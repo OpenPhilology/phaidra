@@ -782,3 +782,10 @@ table.inflection-table {
 .microlesson .task {
   position: fixed;
   left: 33%; }
+
+.answer-box {
+  background-color: #f4f9f5;
+  padding: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
