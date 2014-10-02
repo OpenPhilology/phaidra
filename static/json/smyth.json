@@ -142,7 +142,12 @@
 		"query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd__contains=w_stem"
 	},
 	{
-		"ref": "s532",
+		"ref": "s532#a",
+		"title": "The Future Tense",
+		"query": "pos=verb&tense=fut"
+	},
+	{
+		"ref": "s532#b",
 		"title": "Intro to Future Active Indicative",
 		"query": "pos=verb&tense=fut&mood=ind&voice=act"
 	},

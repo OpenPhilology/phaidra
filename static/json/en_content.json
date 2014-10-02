@@ -852,13 +852,14 @@
 					{
 						"title": "What do 'future', 'active', and 'indicative' imply?",
 						"type": "slide_info",
-						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact.html"
+						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact.html",
+						"smyth": "s532#a"
 					},
 					{
 						"title": "Future Indicative Active of λύω",
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact1.html",
-						"smyth": "s532",
+						"smyth": "s532#b",
 						"tasks": ["identify_morph_person"]
 					},
 					{

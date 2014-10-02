@@ -2,96 +2,6 @@
 /**
  * Styles used on the lessons.
  */ 
-/* Lesson-related styles */
-.achievements {
-	.box {
-		$color: lighten($color-sec-two, 40%);
-
-		height: 125px;
-		width: 125px;
-		display: inline-block;
-		background-color: $color;
-		color: #333;
-		margin: 5px;
-		border-radius: 2px;
-		text-align: center;
-		padding: 30px;
-		text-decoration: none;
-		@include transition(background-color, .2s, ease-out);
-
-		&:hover {
-			background-color: lighten($color, 8%);
-			@include transition(background-color, .2s, ease-out);
-		}
-
-		strong {
-			font-size: 24px;
-			font-weight: normal;
-		}
-	}
-}
-.feedback-container {
-	padding: 20px;
-	background: rgba(255, 255, 255, 0.7);
-	border-radius: 2px;
-
-	h3 {
-		color: lighten($color-pri-three, 10%);
-		letter-spacing: 0.1em;
-	}
-	h4 {
-		color: $color-pri-three;
-		letter-spacing: 0.1em;
-		font-weight: normal;
-	}
-	.badge {
-		margin-right: 5px;
-
-		&.vocab {
-			background-color: $color-pri-two;
-		}
-		&.lesson {
-			background-color: $color-pri-one;
-		}
-		&.treebank {
-			background-color: $color-dark-green;
-		}
-	}
-
-	#records {
-		.sparkline {
-			display: inline-block;
-
-			path {
-				stroke: #888;
-				stroke-width: 2px;
-				fill: none;
-			}
-		}
-	}
-}
-/*
-*	Progress bar displayed above every lesson-in-progress
-*/
-.lesson-progress {
-	margin-bottom: 10px;
-	text-align: center;
-
-	.bar {
-
-		display: inline-block;
-		height: 10px;
-		background: linear-gradient(to left, #FFF 50%, $color-pri-two 50%);
-		background-size: 200% 100%;
-		background-position: right bottom;
-		transition: all 0.5s ease-out;
-
-		&.complete {
-			$b: $color-pri-two;
-			background-position: left bottom;
-		}
-	}
-}
 /*
 *	The lesson boxes visible on the lessons screen
 */
@@ -197,25 +107,6 @@ div.module {
 	}
 }
 
-/*
-*	Slide Styles	
-*/
-.lesson-header {
-	h1 {
-		display: inline-block;
-		margin-top: 0;
-		color: darken($color-sec-two, 10%);
-		text-transform: uppercase;
-		font-size: 24px;
-	}
-
-	h2 {
-		margin-top: 0;
-		font-size: 20px;
-		color: #666;
-		letter-spacing: 1px;
-	}
-}
 // Styling for Alphabet units
 .alphabet {
 	list-style-type: none;
@@ -276,188 +167,6 @@ div.module {
 	}
 }
 
-.slide {
-	padding: 20px;
-	border-radius: 3px;
-	min-height: 300px;
-	border-radius: 2px;
-	background: rgba(255, 255, 255, 0.7);
-
-	.slide-unit {
-		display: none;
-	}
-
-	.exercise {
-		.badge {
-			background-color: #BBB;
-			border-radius: 3px;
-			margin-right: 10px;
-		}
-	}
-	.direct-select {
-		text-align: center;
-		font-size: 2em;
-		margin-bottom: 20px;
-
-		&.vertical {
-			a {
-				margin-right: auto;
-				margin-left: auto;
-				text-align: left;
-				display: block;
-				max-width: 400px;
-			}
-			.badge {
-				border: 1px solid #FFF;
-				vertical-align: middle;
-			}
-			small {
-				margin-left: 35px;
-			}
-		}
-
-		&.horizontal {
-			a {
-				position: relative;
-				margin-bottom: 25px;
-				white-space: nowrap;
-				display: inline-block;
-			}
-			.badge {
-				position: absolute;
-				top: 20px;
-				margin-right: 0;
-				left: 40%;
-				top: 110%;
-				border: 1px solid #FFF;
-				@include transition(background-color, 0.2s, ease-in);
-			}
-		}
-
-		a small {
-			font-size: .5em;
-			font-family: $font-family;
-			letter-spacing: normal;
-		}
-
-		a.selected, a.selected:hover {
-			background-color: $color-sec-two;
-			color: #FFF;
-			border: 1px solid transparent;
-			box-shadow: 2px 2px 3px #CCC;
-
-			.badge {
-				background-color: $color-pri-two;
-			}
-		}
-
-		a.success, a.success:hover {
-			background-color: $color-dark-green;
-			color: #FFF;
-			border: 1px solid transparent;
-			box-shadow: 2px 2px 3px #CCC;
-
-			@include wiggle;
-
-			.badge {
-				background-color: $color-pri-two;
-			}
-		}
-
-		a.failure, a.failure:hover {
-			background-color: $color-pri-one;
-			color: #FFF;
-			border: 1px solid transparent;
-			box-shadow: 2px 2px 3px #CCC;
-
-			.badge {
-				background-color: $color-sec-four;
-			}
-		}
-
-		a {
-			text-decoration: none;
-			border: 1px solid #DDD;
-			border-radius: 3px;
-			padding: 10px;
-			margin: 5px;
-			@include transition(background-color, 0.2s, ease-in);
-
-			&:hover {
-				background-color: $color-pri-two;
-				border: 1px solid transparent;
-				color: #FFF;
-				@include transition(background-color, 0.2s, ease-out);
-				box-shadow: 2px 2px 3px #CCC;
-
-				.badge {
-					background-color: $color-pri-one;
-					color: #FFF;
-					@include transition(background-color, 0.2s, ease-out);
-				}
-			}
-		}
-
-	}
-
-	ul {
-		display: block;
-		margin-bottom: 0;
-
-		/* Corresponds to Multi Composition Slide options */
-		&.short-multi {
-			li {
-				list-style: none;
-				display: inline-block;
-				font-size: 16px;
-				line-height: 36px;
-				margin: 2px;
-			}
-			a {
-				padding: 5px 20px;
-				color: #666;
-				text-decoration: none;
-				border-radius: 3px;
-
-			}
-			&.options {
-				a {
-					$color: #EEE;
-
-					border: 1px solid darken($color, 5%);
-					@include transition(background-color, .2s, ease-out);
-					@include gradient($color, 20, lighten($color, 7%), 100);
-
-					&:hover {
-						@include gradient($color-pri-two, 20, lighten($color-pri-two, 7%), 100);
-						border-color: darken($color-pri-two, 5%);
-						color: #FFF;
-					}
-				}
-			}
-			&.answers {
-				a {
-					$color: $color-pri-two;
-
-					border: 1px solid darken($color, 5%);
-					@include transition(background-color, .2s, ease-out);
-					@include gradient($color, 20, lighten($color, 7%), 100);
-					color: #FFF;
-
-					&:hover {
-						@include gradient($color-pri-one, 20, lighten($color-pri-one, 7%), 100);
-						border-color: darken($color-pri-one, 5%);
-					}
-				}
-			}
-		}
-		&.inline {
-			display: inline-block;
-			margin-right: 20px;
-			margin-bottom: 20px;
-		}
-	}
-}
 /*
 *	Used in lessons to show the parts of the word
 *	e.g. past indicative augment, stem, ending.
@@ -565,27 +274,20 @@ table.inflection-table {
 	}
 }
 
-.vocabulary {
-	max-width: 750px;
-	margin-left: auto; margin-right: auto;
+.task {
+	margin-left: auto; 
+	margin-right: auto;
 
-	.card {
-		h1, h2, h3 {
-			text-align: center;
-		}
-		h1 {
-			font-size: 3em;
-		}
-		border: 1px solid #EEE;
-		display: none;
-		margin: 5px;
-		padding: 20px;
-		box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, .1);
-
-		&.active {
-			display: block;
-		}
+	h1, h2, h3 {
+		text-align: center;
 	}
+	h1 {
+		font-size: 3em;
+	}
+	&.active {
+		display: block;
+	}
+
 	p {
 		text-align: center;
 	}
@@ -629,9 +331,33 @@ table.inflection-table {
 	}
 }
 .microlesson {
-	.study-notes {
+	ul.study-notes-nav {
+		margin-top: 20px;
+		list-style-type: none;
+		font-size: 12px;
+		position: fixed;
+		left: 33%;
+		line-height: 20px;
+		
+		a {
+			padding: 20px;
+			border-radius: 3px;
+			margin-bottom: 2px;
+		}
 	}
-	.note {
-		display: none;
+	.study-notes {
+		border: 1px solid darken($color-sec-two, 10%);
+		padding: 20px;
+		border-radius: 3px;
+		box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, .1);
+		background-color: $color-sec-two;
+	}
+	.left-nav {
+		width: 33%;
+		padding: 0;
+	}
+	.task {
+		position: fixed;
+		left: 33%;
 	}
 }

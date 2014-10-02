@@ -1,5 +1,22 @@
-<div class="microlesson" style="height: 100%; position: relative">
-	<div class="col-md-6" style="background-color: #FAFAFA; position: absolute; width: 33%; height: 100%; overflow-y: scroll">
+<div class="microlesson">
+	<ul class="study-notes-nav">
+		<li>
+			<a href="#" data-toggle="tooltip" title="Grammar" data-placement="right">
+				<span class="glyphicon glyphicon-book">
+			</a>
+		</li>
+		<li>
+			<a href="#" data-toggle="tooltip" title="Translation" data-placement="right">
+				<span class="glyphicon glyphicon-align-center">
+			</a>
+		</li>
+		<li>
+			<a href="#" data-toggle="tooltip" title="Parse Tree" data-placement="right">
+				<span class="glyphicon glyphicon-leaf">
+			</a>
+		</li>
+	</ul>
+	<div class="left-nav col-md-4">
 		<div class="study-notes">
 			<% var url = model.get('sentence_resource_uri'); %>
 			<div data-source="alignment" class="note">
@@ -9,14 +26,54 @@
 				<div data-toggle="daphne" data-dataSource="<%= url %>" data-mode="display"></div>
 			</div>
 			<div data-source="grammar" class="row note" style="display: block">
-				<div class="toc">
-					<h4><strong>TABLE OF CONTENTS</strong></h4>
-					<ul class="table-of-contents"></ul>
+				<!-- Grammar sections load asyncronously -->
+				<div class="panel-group" id="topic-panel">
+					<% _.each(toc, function(topic, i) { %>	
+						<% console.log(topic) %>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#topic-panel" href="#collapse-<%= i %>" data-topic="<%= topic.smyth %>">
+										<%= topic.title %>
+									</a>
+								</h4>
+							</div>
+							<div id="collapse-<%= i %>" class="panel-collapse collapse">
+								<div class="panel-body" data-url="<%= topic.includeHTML %>" data-topic="<%= topic.smyth %>"></div>
+							</div>
+						</div>
+					<% }); %>
 				</div>
+
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6" style="position: absolute; left: 33%; width: 67%; height: 100%; overflow-y: scroll">
-		<%= model.get('value') %>
+	<div class="task col-md-8">
+		<h1><%= model.get('value') %></h1>
+
+		<div class="definitions">
+			<% var alignments = model.getDefinition(); %>
+			<% if (alignments) { %>
+				<h1><% print(alignments[0]); %></h1>
+			<% } else { %>
+				<h2><em>No direct alignment found</em>');  %></h2>
+			<% } %>
+
+			<% if (alignments.length > 1) { %>
+				<p class="alt-definitions" style="margin-top: -15px">Also: &nbsp; &nbsp; <em><% print(_.compact(alignments.slice(1,5)).join(', &nbsp; ')); %></em></p>
+			<% } %>
+
+			<p lang="grc">from <strong><%= model.getDictForm() %></strong></p>
+		</div>
+		<form>
+			<div class="input-group">
+				<input lang="grc" class="form-control input-lg" class="answer-input" title="<%= model.getHumanReadableMorph() %>" placeholder='<%= model.getHumanReadableMorph() %>'>
+				<span class="input-group-btn">
+					<button type="submit" style="height: 46px" class="btn btn-success">Answer!</button>
+				</span>
+			</div>
+		</form>
+		<hr>
+		<p class="alt-definitions"><%= model.getHumanReadableMorph() %></p>
 	</div>
 </div>

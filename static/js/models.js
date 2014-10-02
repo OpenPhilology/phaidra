@@ -419,6 +419,45 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 
 			return alignments;
 		},
+		constructPhrase: function(phrase) {
+			// Construct phrasal alignment data
+			var sentences = [phrase];
+			sentences.push(phrase.reduce(function(memo, word) {
+				if (word.translations) {	
+					memo = memo.concat(word.translations.filter(function(w) { 
+						return w.lang === 'en'; 
+					}));
+				}
+				return memo;
+			}, []));
+
+			var alignments = sentences.map(function(s, i) {
+				var alignment = {};
+				alignment.lang = s[0].lang;
+				alignment.words = _.sortBy(s, function(t) { 
+					return s.lang === 'grc' ? t.id : parseInt(t.CTS.split(':')[5]); 
+				});
+				alignment.words = _.uniq(alignment.words, false, function(t) {
+					return t.CTS;
+				});
+				alignment.words.forEach(function(w) {
+					if (w.lang === 'grc') return;
+					
+					w.translations = phrase.filter(function(p) {
+						if (!p.translations) return false;
+						return p.translations.filter(function(t) {
+							return w.CTS === t.CTS;
+						}).length !== 0;
+					});
+				});
+
+				alignment.translations = i === 0 ? { 'en': '/' } : { 'grc': '/' }; 
+				alignment.CTS = s[0].CTS.split(':').slice(0, 5).join(':');
+				return alignment;
+			}.bind(phrase));
+
+			return alignments;
+		},
 		getVocabChoices: function() {
 			var answer = Utils.stripVocabCount(this.getDefinition()[0]);
 			var others = []; 
@@ -585,7 +624,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 						}
 
 						// Now go fetch alternative definitions for this word based on lemma
-						this.model.fetchAlternativeDefinitions();
+						this.model.fetchAlternativeDefinitions(options);
 					},
 					error: function(x, y, z) {
 						console.log(x, y, z);

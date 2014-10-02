@@ -2,7 +2,9 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'utils', 't
 
 	var View = Backbone.View.extend({
 		events: {
-			'click .corner.right a': 'skipQuestion'
+			'click .corner.right a': 'skipQuestion',
+			'click #topic-panel .panel-title a': 'viewGrammarTopic',
+			'click .study-notes-nav a': 'toggleNotes'
 		},
 		template: _.template(Template),
 		initialize: function(options) {
@@ -17,57 +19,106 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'utils', 't
 			this.collection.populateVocab();
 		},
 		selectNext: function() {
-			// TODO: power this by api
 			var oldModel = this.collection.findWhere({ selected: true });
 			if (oldModel) oldModel.set('selected', false);
 			this.model = this.collection.at(1);
 
-			// if there is no model, because this unit doesn't have any
-			if (this.model) this.model.set('selected', true);
-			else this.render();
+			var that = this;
+			this.model.fetchSentence(this.model.get('CTS'), {
+				success: function() {
+					that.model.set('selected', true);
+					that.phrase = that.model.getPhrase();
+					that.defs = that.model.getDefinition();
+				}
+			});
 		},
 		render: function() {
 			this.$el.html(this.template({
-				model: this.model
+				model: this.model,
+				toc: this.getTableOfContents(),
 			}));	
-			this.renderGrammar();
+			this.$el.find('[data-toggle="tooltip"]').tooltip();
 		},
-		renderGrammar: function() {
-			var el = this.$el.find('.study-notes');	
-
-			if (el.find('div[data-url]').length !== 0) {
-				el.show();
-				return;
-			}
-
-			var that = this;
+		getTableOfContents: function() {
 			var topics = Utils.getHTMLbySmyth(this.model.getGrammar() || this.options.ref);
-			topics.forEach(function(topic) {
+			return topics.map(function(topic) {
 				var title = Utils.Smyth.filter(function(s) { return s.ref === topic.smyth })[0].title;
-				el.find('.table-of-contents').append('<li><a href="#' + topic.ref + '">' + title + '</a></li>');
+				topic.title = title;
+				return topic;
 			});
-
-			for (var i = 0, topic; topic = topics[i]; i++) {
-				el.append('<div data-url="' + topic.includeHTML + '"></div>');	
-				$.ajax({
-					url: topic.includeHTML,
-					dataType: 'text',
-					success: function(response) {
-						that.$el.find('div[data-url="' + this.url + '"]').append(response + '<hr>');
-					},
-					error: function(x, y, z) {
-						console.log(x, y, z);
-					}
-				});
-			}
-
-			el.show();
 		},
 		selectModel: function() {
 
 		},
 		skipQuestion: function() {
 
+		},
+		viewGrammarTopic: function(e) {
+			var topic = e.target.dataset.topic;
+			var el = this.$el.find('.panel-body[data-topic="' + topic + '"]');
+
+			if (el.children().length !== 0)
+				return;
+
+			// We've get to fetch the grammar topic, so populate
+			$.ajax({
+				url: el[0].dataset.url,
+				dataType: 'text',
+				success: function(response) {
+					el.append(response);
+				},
+				error: function(response) {
+					el.append('Could not load this grammar topic -- please report this bug!');
+				}
+			});
+		},
+		toggleNotes: function(e) {
+			e.preventDefault();
+			var target = e.target.dataset.target;
+
+			// First see if they want to de-toggle
+			if ($(e.target).hasClass('active')) {
+				$(e.target).removeClass('active'); 
+				this.$el.find('.study-notes div[data-source="' + target + '"]').hide();
+				return;
+			}
+
+			// Otherwise, find the correct note to show
+			this.$el.find('.study-notes [data-source]').hide();
+			this.$el.find('.study-notes-nav li').removeClass('active');
+			this.$el.find('.study-notes-nav a[data-target="' + target + '"]').parent().addClass('active');
+
+			if (target === 'alignment') this.renderAlignments();
+			else if (target === 'parse-tree') this.renderParseTree();
+			else if (target === 'grammar') this.renderGrammar();
+
+		},
+		renderAlignments: function(e) {
+			var that = this;
+			this.$el.find('[data-toggle="morea"]').each(function(i, el) {
+				new Morea(el, {
+					mode: 'display',
+					data: that.constructPhrase(that.phrase),
+					targets: el.getAttribute('data-targets').split(','),
+					langs: { "grc": { "hr": "Greek", "resource_uri": "", "dir": "ltr" },
+						"en": { "hr": "English", "resource_uri": "", "dir": "ltr" } 
+					}
+				});
+			});
+			this.$el.find('.vocab-notes div[data-source="alignment"]').show();
+		},
+		renderParseTree: function(e) {
+			var that = this;
+			this.$el.find('[data-toggle="daphne"]').each(function(i, el) {
+				new Daphne(el, {
+					data: that.phrase,
+					mode: 'edit',
+					width: el.getAttribute('data-width') || 200,
+					height: 400,
+					initialScale: 0.9
+				});
+			});
+			this.$el.find('.vocab-notes div[data-source="parse-tree"]').show();
 		}
 	});
 
