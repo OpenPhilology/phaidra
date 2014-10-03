@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!/templates/js/microlesson.html'], function($, _, Backbone, WordCollection, Utils, Template) { 
+define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!/templates/js/microlesson.html', 'views/lessons/tasks/translate_word'], function($, _, Backbone, WordCollection, Utils, Template) { 
 
 	var View = Backbone.View.extend({
 		events: {
@@ -38,6 +38,7 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 				toc: this.getTableOfContents(),
 			}));	
 			this.$el.find('[data-toggle="tooltip"]').tooltip();
+			this.renderTask();
 
 			return this;
 		},
@@ -47,9 +48,9 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 
 				// Include the correct view for the assigned task on the fly
 				var task = 'translate_word';
-				var View = require('task-' + task);
-				this.task_view = new View({ model: this.model });
-				this.task_view.appendTo(this.$el.find('.task'));
+				var View = require('views/lessons/tasks/' + task);
+				this.task_view = new View({ model: this.model }).render();
+				this.task_view.$el.appendTo(this.$el.find('.task'));
 			}
 
 			this.task_view.render();
