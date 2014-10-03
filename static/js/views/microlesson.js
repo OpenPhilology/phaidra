@@ -38,6 +38,21 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'utils', 't
 				toc: this.getTableOfContents(),
 			}));	
 			this.$el.find('[data-toggle="tooltip"]').tooltip();
+
+			return this;
+		},
+		renderTask: function() {
+			if (!this.task_view) {
+				var tasks = Utils.getLesson(this.options.ref); 
+
+				// Include the correct view for the assigned task on the fly
+				var task = 'translate_word';
+				var View = require('task-' + task);
+				this.task_view = new View({ model: this.model });
+				this.task_view.appendTo(this.$el.find('.task'));
+			}
+
+			this.task_view.render();
 		},
 		getTableOfContents: function() {
 			var topics = Utils.getHTMLbySmyth(this.model.getGrammar() || this.options.ref);

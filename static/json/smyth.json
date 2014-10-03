@@ -2,36 +2,43 @@
 	{
 		"ref": "s1",
 		"title": "The Ancient Greek Alphabet",
-		"query": null
+		"require": false,
+		"query": "lang=grc"
 	},
 	{	
 		"ref": "s4",
 		"title": "Long and Short Vowels",
-		"query": null
+		"require": false,
+		"query": "lang=grc"
 	},
 	{	
 		"ref": "s5",
 		"title": "Dipthongs",
-		"query": null
+		"require": false,
+		"query": "lang=grc"
 	},
 	{
 		"ref": "s5",
 		"title": "Iota Subscript",
-		"query": null
+		"require": false,
+		"query": "lang=grc"
 	},
 	{
 		"ref": "s9",
 		"title": "Rough Breathing",
-		"query": null
+		"require": false,
+		"query": "lang=grc"
 	},
 	{
 		"ref": "s9",
 		"title": "Smooth Breathing",
-		"query": null
+		"require": false,
+		"query": "lang=grc"
 	},
 	{
 		"ref": "s19#a",
 		"title": "The Gamma Nasal",
+		"require": false,
 		"query": "pos=noun&lemma__contains=γγ",
 		"variants": [
 			"lemma__contains=γγ", 
@@ -42,33 +49,35 @@
 	},
 	{
 		"ref": "s149",
+		"require": false,
 		"title": "Rules of Accents",
-		"query": null
+		"query": "lang=grc"
 	},
 	{
 		"ref": "s188",
+		"require": false,
 		"title": "Marks of Punctuation",
 		"query": "pos=punct"
 	},
 	{
 		"ref": "s194",
 		"title": "Characteristics of Nouns in Ancient Greek",
-		"query": null
+		"query": "pos=noun"
 	},
 	{
 		"ref": "s195",
 		"title": "Number in Ancient Greek Nouns",
-		"query": null
+		"query": "pos=noun"
 	},
 	{
 		"ref": "s196",
 		"title": "Gender in Ancient Greek Nouns",
-		"query": null
+		"query": "pos=noun"
 	},
 	{
 		"ref": "s201",
 		"title": "Case in Ancient Greek Nouns",
-		"query": null
+		"query": "pos=noun"
 	},
 	{	
 		"ref": "s216",
@@ -134,7 +143,7 @@
 	{
 		"ref": "s332",
 		"title": "Articles Declension",
-		"query": null
+		"query": "pos=article"
 	},
 	{
 		"ref": "s499",
@@ -193,7 +202,7 @@
 	{
 		"ref": "s910",
 		"title": "Nominative Case Predicate Nouns",
-		"query": null
+		"query": "pos=noun&case=nom"
 	},
 	{
 		"ref": "s938",
@@ -208,17 +217,17 @@
 	{
 		"ref": "s1297",
 		"title": "Genitive Case Possession",
-		"query": null
+		"query": "pos=noun&case=gen"
 	},
 	{
 		"ref": "s1306",
 		"title": "Genitive Case Partitive",
-		"query": null
+		"query": "pos=noun&case=gen"
 	},
 	{
 		"ref": "s1315",
 		"title": "Genitive Case Comparison",
-		"query": null
+		"query": "pos=noun&case=gen"
 	},
 	{
 		"ref": "s1450",
@@ -228,7 +237,7 @@
 	{
 		"ref": "s1506",
 		"title": "Dative Case Instrument",
-		"query": null
+		"query": "pos=noun&case=dat"
 	},
 	{
 		"ref": "s1590",

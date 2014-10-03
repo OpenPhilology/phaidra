@@ -662,7 +662,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			var matches = _.filter(Utils.Smyth, function(entry) {
 
 				// If the query isn't relevant to figuring out grammar topics
-				if (!entry.query)
+				if (!entry.query || (entry.require === false))
 					return false;
 
 				var attrs = entry.query.split('&');

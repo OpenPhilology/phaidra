@@ -287,30 +287,23 @@ define(['jquery', 'underscore', 'backbone', 'models', 'utils'], function($, _, B
 			var queries = _.uniq(_.compact(_.pluck(Utils.Smyth.filter(function(s) {
 				return s.ref.split('#')[0] === that.meta('grammar');
 			}), 'query')));
+			queries = queries.length === 0 ? [""] : queries;
 			
-			if (queries.length === 0) {
-				triggerPopulated();
-			}
-			else {
-				queries.forEach(function(query, i, arr) {
+			// If there's no explicit query, then returning any word is fine
+			queries.forEach(function(query, i, arr) {
+				calls.push($.ajax({
+					url: '/api/v1/word?' + query,
+					data: { "limit": 0 },
+					success: function(response) {
+						that.add(response.objects);			
+					},
+					error: function(x, y, z) {
+						console.log(x, y, z);
+					}
+				}));
+			});
 
-					// If we're populating verbs, get all tenses	
-					//if (query.indexOf('pos=verb')) query = Utils.removeQueryParam(query, 'tense'); 
-					query = '/api/v1/word/?' + query;
-
-					calls.push($.ajax(query, {
-						data: { "limit": 0 },
-						success: function(response) {
-							that.add(response.objects);			
-						},
-						error: function(x, y, z) {
-							console.log(x, y, z);
-						}
-					}));
-				});
-
-				$.when.apply(this, calls).done(triggerPopulated);
-			}
+			$.when.apply(this, calls).done(triggerPopulated);
 
 			function triggerPopulated() {
 				that.meta('populated', true);
