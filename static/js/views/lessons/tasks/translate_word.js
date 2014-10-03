@@ -3,6 +3,7 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'collections/words', 
 	var View = Backbone.View.extend({
 		template: _.template(Template),
 		initialize: function(options) {
+			this.options = options;
 			console.log("init");
 		},
 		render: function() {
@@ -14,16 +15,10 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'collections/words', 
 			// If we cannot, then we must select a new model within the collection and destroy this view
 
 			if (!this.phrase || !this.defs) {
-				this.model.set('selected', false);
-				var len = this.model.collection.models.length;
-				var i = Math.floor((Math.random() * len) + 1) + 1;
-				this.model.collection.at(i).set('selected', true);
-
 				console.log('removing view for ' + this.model.get('lemma'));
 				this.remove();
-				return;
+				return false;
 			}
-
 
 			var alignment = this.constructPhrase(this.phrase);
 

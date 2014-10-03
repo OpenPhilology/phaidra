@@ -304,7 +304,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 
 			return attrs.join(', ');
 		},
-		// TODO: Flesh out this implementation to cover more query filters
+		// TODO: Completely re-do this function
 		getGrammar: function() {
 			var that = this;
 
@@ -315,8 +315,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			var matches = _.filter(Utils.Smyth, function(entry) {
 
 				// If the query isn't relevant to figuring out grammar topics
-				if (!entry.query || (entry.require === false))
-					return false;
+				if (!entry.query || entry.ref === 's1') return false;
 
 				var attrs = entry.query.split('&');
 

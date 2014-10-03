@@ -420,12 +420,12 @@
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/rough.html",
-						"smyth": "s9"
+						"smyth": "s9#a"
 					},
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/smooth.html",
-						"smyth": "s9"
+						"smyth": "s9#b"
 					},
 					{	
 						"type": "slide_info",
@@ -435,7 +435,7 @@
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/iota.html",
-						"smyth": "s5"
+						"smyth": "s5#b"
 					},
 					{	
 						"type": "slide_info",

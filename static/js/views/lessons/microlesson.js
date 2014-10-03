@@ -4,7 +4,7 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 
 	var View = Backbone.View.extend({
 		events: {
-			'click .corner.right a': 'skipQuestion',
+			'click .corner.right a': 'selectNext',
 			'click #topic-panel .panel-title a': 'viewGrammarTopic',
 			'click .study-notes-nav a': 'toggleNotes'
 		},
@@ -20,10 +20,12 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 			this.collection.on('change:selected', this.render, this);
 			this.collection.populateVocab();
 		},
-		selectNext: function() {
-			var oldModel = this.collection.findWhere({ selected: true });
-			if (oldModel) oldModel.set('selected', false);
-			this.model = this.collection.at(1);
+		selectNext: function(e) {
+			if (e) e.preventDefault();
+
+			var next = this.collection.getNextRandom(this.options.ref, this.model);
+			if (this.model) this.model.set({'selected': false}, {silent: true});
+			this.model = next;
 
 			var that = this;
 			this.model.fetchSentence(this.model.get('CTS'), {
@@ -34,7 +36,6 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 		},
 		render: function(model) {
 			this.model = model;
-
 			this.$el.html(this.template({
 				model: this.model,
 				toc: this.getTableOfContents(),
@@ -51,7 +52,14 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 			var tasks = ['translate_word', 'align_phrase', 'build_tree', 'identify_morph', 'provide_article'];
 			var i = Math.floor(Math.random() * (tasks.length - 1));
 			var View = require('views/lessons/tasks/' + tasks[0]);
-			this.task_view = new View({ model: this.model, el: '.subtask' }).render();
+
+			// Remove an existing view if needed
+			if (this.task_view) this.task_view.remove();
+
+			this.task_view = new View({ model: this.model, el: '.subtask' , ref: this.options.ref }).render();
+
+			// Meaning, we couldn't render this type of task with the selected word
+			if (!this.task_view) this.selectNext();
 		},
 		getTableOfContents: function() {
 			var topics = Utils.getHTMLbySmyth(this.model.getGrammar() || this.options.ref);
@@ -60,12 +68,6 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 				topic.title = title;
 				return topic;
 			});
-		},
-		selectModel: function() {
-
-		},
-		skipQuestion: function() {
-
 		},
 		viewGrammarTopic: function(e) {
 			var topic = e.target.dataset.topic;

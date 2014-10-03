@@ -2,37 +2,31 @@
 	{
 		"ref": "s1",
 		"title": "The Ancient Greek Alphabet",
-		"require": false,
 		"query": "lang=grc"
 	},
 	{	
 		"ref": "s4",
 		"title": "Long and Short Vowels",
-		"require": false,
 		"query": "lang=grc"
 	},
 	{	
-		"ref": "s5",
+		"ref": "s5#a",
 		"title": "Dipthongs",
-		"require": false,
 		"query": "lang=grc"
 	},
 	{
-		"ref": "s5",
+		"ref": "s5#b",
 		"title": "Iota Subscript",
-		"require": false,
 		"query": "lang=grc"
 	},
 	{
-		"ref": "s9",
+		"ref": "s9#a",
 		"title": "Rough Breathing",
-		"require": false,
 		"query": "lang=grc"
 	},
 	{
-		"ref": "s9",
+		"ref": "s9#b",
 		"title": "Smooth Breathing",
-		"require": false,
 		"query": "lang=grc"
 	},
 	{
