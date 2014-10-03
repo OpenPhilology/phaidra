@@ -129,20 +129,29 @@ class UserSentenceResource(Resource):
             
             # filter word on parameters
             for key in query_params:
-            	if key in ['tbwid', 'head', 'length', 'cid']:
-					q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """=""" +query_params[key]+ """ AND """
-            	else:
-					if len(key.split('__')) > 1:
-						if key.split('__')[1] == 'contains':
-							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
-						elif key.split('__')[1] == 'startswith':
-							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
-						elif key.split('__')[1] == 'endswith':
-							q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
-					else:
-						q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
-			
-			# is user set if params not empty?
+                if len(key.split('__')) > 1:
+                    if key.split('__')[1] == 'contains':
+                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
+                    elif key.split('__')[1] == 'startswith':
+                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+                    elif key.split('__')[1] == 'endswith':
+                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+                    elif key.split('__')[1] == 'gt':
+                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """>""" +query_params[key]+ """ AND """
+                    elif key.split('__')[1] == 'lt':
+                        q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """<""" +query_params[key]+ """ AND """
+                    elif key.split('__')[1] == 'isnot':
+                        if key.split('__')[0] == 'length':
+                            q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """<>""" +query_params[key]+ """ AND """
+                        else:
+                            q = q + """HAS (s.""" +key.split('__')[0]+ """) AND s.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
+                else:
+                    if key == 'length':
+                        q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """=""" +query_params[key]+ """ AND """
+                    else:
+                        q = q + """HAS (s.""" +key+ """) AND s.""" +key+ """='""" +query_params[key]+ """' AND """
+                        
+            # is user set if params not empty?
          	if request.GET.get('user'):
          		q = q + """ u.username='""" + request.GET.get('user') + """' RETURN s, d, u.username ORDER BY ID(s)"""         		
          	else:
@@ -226,12 +235,7 @@ class UserSentenceResource(Resource):
             url = word['self'].split('/')
             word['data']['resource_uri'] = API_PATH + 'word/' + url[len(url)-1] + '/'
             wordNode = gdb.nodes.get(GRAPH_DATABASE_REST_URL + "node/" + url[len(url)-1] + '/')
-            
-            # get the lemma # not on user document translations   
-            #lemmaRels = wordNode.relationships.incoming(types=["values"])
-            #if len(lemmaRels) > 0:
-            #    word['data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
-            
+
             # get the full translation
             if bundle.request.GET.get('full'):            
                 translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
@@ -382,6 +386,8 @@ class UserDocumentResource(Resource):
                         q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
                     elif key.split('__')[1] == 'endswith':
                         q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+                    elif key.split('__')[1] == 'isnot':
+                        q = q + """HAS (d.""" +key.split('__')[0]+ """) AND d.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
                 else:
                     q = q + """HAS (d.""" +key+ """) AND d.""" +key+ """='""" +query_params[key]+ """' AND """     	
          	# is user set if params not empty?
