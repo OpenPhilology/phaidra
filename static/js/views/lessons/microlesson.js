@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'utils', 'text!/templates/js/microlesson.html'], function($, _, Backbone, Models, Collections, Utils, Template) { 
+define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!/templates/js/microlesson.html'], function($, _, Backbone, WordCollection, Utils, Template) { 
 
 	var View = Backbone.View.extend({
 		events: {
@@ -13,7 +13,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'utils', 't
 			this.options = options;
 
 			// Instantiate our collection, tell it how to populate vocabulary
-			this.collection = new Collections.Words([], { grammar: options.ref });
+			this.collection = new WordCollection([], { grammar: options.ref });
 			this.collection.on('populated', this.selectNext, this);
 			this.collection.on('change:selected', this.render, this);
 			this.collection.populateVocab();

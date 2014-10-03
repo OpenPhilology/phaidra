@@ -12,10 +12,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 				var container = this.$el.find('.module-container .row');
 				container.html('');
 				
-				console.log(Utils.Smyth);
-				console.log(Utils.Microlessons);
-				console.log(Utils.getLesson('s9'));
-
 				// TODO: Move this into template
 				Utils.Microlessons.forEach(function(lesson) {
 					var data = Utils.getLesson(lesson);

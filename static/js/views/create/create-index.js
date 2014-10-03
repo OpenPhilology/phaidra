@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'utils', 'text!/templates/js/create-edition.html'], function($, _, Backbone, Models, Collections, Utils, EditionTemplate) { 
+define(['jquery', 'underscore', 'backbone', 'collections/documents', 'utils', 'text!/templates/js/create-edition.html'], function($, _, Backbone, DocumentsCollection, Utils, EditionTemplate) { 
 
 	var View = Backbone.View.extend({
 		events: { 
@@ -9,7 +9,7 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'utils', 't
 			this.options = options;
 
 			// Create/Populate necessary models and collections
-			this.documents = new Collections.Documents();
+			this.documents = new DocumentsCollection();
 			this.documents.bind('add', this.renderDocument, this);
 			this.documents.fetch();
 		},

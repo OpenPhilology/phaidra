@@ -1,40 +1,14 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/create-index'], function($, _, Backbone, Models, Collections, CreateIndex) { 
+define(['jquery', 'underscore', 'backbone', 'views/create-index'], function($, _, Backbone,  CreateIndex) { 
 
-	var Router = {};
-	Router.Router = Backbone.Router.extend({
+	return Backbone.Router.extend({
 		routes: {
 		},
 		initialize: function() {
-			// javascript function for api logout and redirect
-			$("#logout-link").click(function(e) {
-				e.preventDefault();
-				var data = {
-					"format" : "json"
-				};
-				$.ajax({
-					url: '/api/v1/user/logout/',
-					type: 'GET',
-					data: data,
-					contentType: 'application/json; charset=utf-8', 
-					success: function(response_text) {
-						alert("You are logging out.");
-						window.location.assign("/home/");	
-					},
-					error: function(response_text) {
-						alert(response_text);
-					}
-				});
-			});
-
-			this.index();
-		},
-		index: function() {
 			var index = new CreateIndex({
 				el: '#main'
 			});
 			index.render();
 		}
 	});
-	
-	return Router;
+
 });

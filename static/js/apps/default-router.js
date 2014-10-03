@@ -1,8 +1,6 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/login', 'views/index', 'views/profile'], 
-		function($, _, Backbone, Models, Collections, LoginView, IndexView, ProfileView) { 
+define(['jquery', 'underscore', 'backbone', 'views/login', 'views/index', 'views/profile'], function($, _, Backbone, LoginView, IndexView, ProfileView) { 
 
-	var Router = {};
-	Router.Router = Backbone.Router.extend({
+	return Backbone.Router.extend({
 		routes: {
 			"": "index",
 			"login/": "login",
@@ -60,5 +58,4 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/logi
 		}
 	});
 	
-	return Router;
 });

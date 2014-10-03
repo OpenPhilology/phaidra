@@ -2,11 +2,9 @@
  * LESSON ROUTER
  * Deals with navigation between the lesson screen and the selected microlesson.
  */ 
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/lessons', 'views/microlesson'], 
-		function($, _, Backbone, Models, Collections, LessonListView, MicrolessonView) { 
+define(['jquery', 'underscore', 'backbone', 'views/lessons/lessons', 'views/lessons/microlesson'], function($, _, Backbone, LessonListView, MicrolessonView) { 
 
-	var Router = {};
-	Router.Router = Backbone.Router.extend({
+	return Backbone.Router.extend({
 		routes: {
 			"lessons/":"showLessons",
 			"lessons/:s": "showMicrolesson"
@@ -37,6 +35,4 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/less
 				this.microLessonView.$el.hide();
 		}
 	});
-	
-	return Router;
 });

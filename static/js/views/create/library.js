@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'collections', 'text!/templates/js/library-edition.html'], function($, _, Backbone, Collections, EditionTemplate) { 
+define(['jquery', 'underscore', 'backbone', 'collections/documents', 'text!/templates/js/library-edition.html'], function($, _, Backbone, DocumentsCollection, Template) { 
 
 	var View = Backbone.View.extend({
 		events: { 
@@ -9,7 +9,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'text!/templates/js/l
 			this.options = options;
 
 			// Create/Populate necessary models and collections
-			this.documents = new Collections.Documents();
+			this.documents = new DocumentsCollection();
 			this.documents.bind('add', this.renderDocument, this);
 			this.documents.fetch();
 
@@ -19,7 +19,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'text!/templates/js/l
 		},
 		renderDocument: function(model) {
 			if (model.get('lang') === 'grc') {
-				var compiled = _.template(EditionTemplate);
+				var compiled = _.template(Template);
 				var html = compiled({ model: model });
 
 				this.$el.find('.editions').append(html);
@@ -33,12 +33,6 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'text!/templates/js/l
 		createPersonalEdition: function(e) {
 			e.preventDefault();
 			var target = e.target.getAttribute('href');
-
-			// If the user doesn't already have a personal edition for this work, prompt them to make one
-			this.userDocuments = new Collections.UserDocuments();
-			this.userDocuments.fetch({ success: this.renderPersonalEdition.bind(this) });
-
-			// Otherwise, just forward them to the Reader*/
 		},
 		submitModal: function(e) {
 

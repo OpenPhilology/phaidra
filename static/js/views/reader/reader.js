@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/notes', 'views/knowledge-book-level'], function($, _, Backbone, Collections, PageView, NotesView, KnowledgeView) { 
+define(['jquery', 'underscore', 'backbone', 'collections/documents', 'views/reader/page', 'views/reader/notes', 'views/reader/knowledge-book-level'], function($, _, Backbone, DocumentsCollection, PageView, NotesView, KnowledgeView) { 
 
 	var View = Backbone.View.extend({
 		events: { },
@@ -6,7 +6,7 @@ define(['jquery', 'underscore', 'backbone', 'collections', 'views/page', 'views/
 			this.options = options;
 
 			// Fetch the list of Documents available to the reader
-			this.documents = new Collections.Documents();
+			this.documents = new DocumentsCollection();
 			this.documents.on('add', this.initializeReader, this);
 			this.documents.fetch();
 

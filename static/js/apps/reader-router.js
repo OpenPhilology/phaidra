@@ -1,7 +1,6 @@
-define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/reader', 'views/library'], function($, _, Backbone, Models, Collections, ReaderView, LibraryView) { 
+define(['jquery', 'underscore', 'backbone', 'views/reader', 'views/library'], function($, _, Backbone, ReaderView, LibraryView) { 
 
-	var Router = {};
-	Router.Router = Backbone.Router.extend({
+	return Backbone.Router.extend({
 		routes: {
 			"reader/:cts": "updateReader",
 			"reader/": "showLibrary",
@@ -33,5 +32,4 @@ define(['jquery', 'underscore', 'backbone', 'models', 'collections', 'views/read
 		}
 	});
 	
-	return Router;
 });
