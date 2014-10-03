@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'collections/documents', 'views/reader/page', 'views/reader/notes', 'views/reader/knowledge-book-level'], function($, _, Backbone, DocumentsCollection, PageView, NotesView, KnowledgeView) { 
+define(['jquery', 'underscore', 'backbone', 'collections/documents', 'views/reader/page', 'views/reader/notes/notes', 'views/reader/knowledge-book-level'], function($, _, Backbone, DocumentsCollection, PageView, NotesView, KnowledgeView) { 
 
 	var View = Backbone.View.extend({
 		events: { },

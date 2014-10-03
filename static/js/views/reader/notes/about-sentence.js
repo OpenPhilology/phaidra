@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes-about-sentence.html', 'daphne', 'morea'], function($, _, Backbone, Utils, Template, Daphne, Morea) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/reader/notes/about-sentence.html', 'daphne', 'morea'], function($, _, Backbone, Utils, Template, Daphne, Morea) { 
 
 	var View = Backbone.View.extend({
 		tagName: 'div', 

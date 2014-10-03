@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'views/reader', 'views/library'], function($, _, Backbone, ReaderView, LibraryView) { 
+define(['jquery', 'underscore', 'backbone', 'views/reader/reader', 'views/create/library'], function($, _, Backbone, ReaderView, LibraryView) { 
 
 	return Backbone.Router.extend({
 		routes: {

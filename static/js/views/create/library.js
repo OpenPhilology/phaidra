@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'collections/documents', 'text!/templates/js/library-edition.html'], function($, _, Backbone, DocumentsCollection, Template) { 
+define(['jquery', 'underscore', 'backbone', 'collections/documents', 'text!/templates/js/create/library-edition.html'], function($, _, Backbone, DocumentsCollection, Template) { 
 
 	var View = Backbone.View.extend({
 		events: { 

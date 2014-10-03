@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/notes-translations.html'], function($, _, Backbone, Utils, Template) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/reader/notes/translations.html'], function($, _, Backbone, Utils, Template) { 
 
 	var View = Backbone.View.extend({
 		tagName: 'div', 

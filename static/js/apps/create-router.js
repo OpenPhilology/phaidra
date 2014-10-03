@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'views/create-index'], function($, _, Backbone,  CreateIndex) { 
+define(['jquery', 'underscore', 'backbone', 'views/create/create-index'], function($, _, Backbone,  CreateIndex) { 
 
 	return Backbone.Router.extend({
 		routes: {

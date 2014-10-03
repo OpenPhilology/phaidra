@@ -1,4 +1,6 @@
-define(['jquery', 'underscore', 'backbone', 'utils', 'views/notes-about-word', 'views/notes-translations', 'views/notes-about-sentence', 'views/notes-user-annotations', 'views/notes-translate', 'views/notes-build-parse-tree', 'text!/templates/js/notes.html'], function($, _, Backbone, Utils, AboutWordView, TranslationsView, AboutSentenceView, UserAnnotationsView, TranslateView, BuildParseTreeView, Template) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'views/reader/notes/about-word', 'views/reader/notes/translations', 'views/reader/notes/about-sentence', 'views/reader/notes/user-annotations', 
+	'views/reader/notes/translate', 'views/reader/notes/build-parse-tree', 'text!/templates/js/reader/notes/notes.html'], 
+	function($, _, Backbone, Utils, AboutWordView, TranslationsView, AboutSentenceView, UserAnnotationsView, TranslateView, BuildParseTreeView, Template) { 
 
 	var View = Backbone.View.extend({
 		tagName: 'div', 

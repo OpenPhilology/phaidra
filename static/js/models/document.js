@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, Utils) {
+define(['jquery', 'underscore', 'backbone', 'utils', 'collections/words'], function($, _, Backbone, Utils) {
 
 	return Backbone.Model.extend({
 
@@ -8,8 +8,8 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		initialize: function(attributes) {
 			this.urlRoot = attributes.resource_uri;
 
-			Collections = require('collections');
-			this.words = new Collections.Words();
+			WordsCollection = require('collections/words');
+			this.words = new WordsCollection();
 		},
 		parse: function(response) {
 

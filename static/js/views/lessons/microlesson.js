@@ -29,12 +29,12 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 			this.model.fetchSentence(this.model.get('CTS'), {
 				success: function() {
 					that.model.set('selected', true);
-					that.phrase = that.model.getPhrase();
-					that.defs = that.model.getDefinition();
 				}
 			});
 		},
-		render: function() {
+		render: function(model) {
+			this.model = model;
+
 			this.$el.html(this.template({
 				model: this.model,
 				toc: this.getTableOfContents(),
@@ -45,18 +45,13 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 			return this;
 		},
 		renderTask: function() {
-			if (!this.task_view) {
-				var tasks = Utils.getLesson(this.options.ref); 
+			var tasks = Utils.getLesson(this.options.ref); 
 
-				// TODO: get this in a smart way, not random
-				var tasks = ['translate_word', 'align_phrase', 'build_tree', 'identify_morph', 'provide_article'];
-				var i = Math.floor(Math.random() * (tasks.length - 1));
-				var View = require('views/lessons/tasks/' + tasks[i]);
-				this.task_view = new View({ model: this.model }).render();
-				this.task_view.$el.appendTo(this.$el.find('.task'));
-			}
-
-			this.task_view.render();
+			// TODO: get this in a smart way, not random
+			var tasks = ['translate_word', 'align_phrase', 'build_tree', 'identify_morph', 'provide_article'];
+			var i = Math.floor(Math.random() * (tasks.length - 1));
+			var View = require('views/lessons/tasks/' + tasks[0]);
+			this.task_view = new View({ model: this.model, el: '.subtask' }).render();
 		},
 		getTableOfContents: function() {
 			var topics = Utils.getHTMLbySmyth(this.model.getGrammar() || this.options.ref);

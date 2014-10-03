@@ -1,7 +1,7 @@
 define(['jquery', 'underscore', 'backbone', 'models/document', 'utils'], function($, _, Backbone, DocumentModel, Utils) {
 
 	return Backbone.Collection.extend({
-		model: Document,
+		model: DocumentModel,
 		url: '/api/v1/document/',
 		parse: function(response) {
 
