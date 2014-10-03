@@ -1,4 +1,6 @@
-define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!/templates/js/lessons/microlesson.html', 'views/lessons/tasks/translate_word'], function($, _, Backbone, WordCollection, Utils, Template) { 
+define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!/templates/js/lessons/microlesson.html', 
+	'views/lessons/tasks/translate_word', 'views/lessons/tasks/build_tree', 'views/lessons/tasks/identify_morph', 'views/lessons/tasks/provide_article', 'views/lessons/tasks/align_phrase'], 
+	function($, _, Backbone, WordCollection, Utils, Template) { 
 
 	var View = Backbone.View.extend({
 		events: {
@@ -46,9 +48,10 @@ define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!
 			if (!this.task_view) {
 				var tasks = Utils.getLesson(this.options.ref); 
 
-				// Include the correct view for the assigned task on the fly
-				var task = 'translate_word';
-				var View = require('views/lessons/tasks/' + task);
+				// TODO: get this in a smart way, not random
+				var tasks = ['translate_word', 'align_phrase', 'build_tree', 'identify_morph', 'provide_article'];
+				var i = Math.floor(Math.random() * (tasks.length - 1));
+				var View = require('views/lessons/tasks/' + tasks[i]);
 				this.task_view = new View({ model: this.model }).render();
 				this.task_view.$el.appendTo(this.$el.find('.task'));
 			}

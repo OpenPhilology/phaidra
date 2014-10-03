@@ -54,7 +54,7 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'utils'], function($,
 			queries.forEach(function(query, i, arr) {
 				calls.push($.ajax({
 					url: '/api/v1/word?' + query,
-					data: { "limit": 0 },
+					data: { "limit": 300 },
 					success: function(response) {
 						that.add(response.objects);			
 					},
