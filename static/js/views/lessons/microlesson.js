@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!/templates/js/microlesson.html', 'views/lessons/tasks/translate_word'], function($, _, Backbone, WordCollection, Utils, Template) { 
+define(['jquery', 'underscore', 'backbone', 'collections/words', 'utils', 'text!/templates/js/lessons/microlesson.html', 'views/lessons/tasks/translate_word'], function($, _, Backbone, WordCollection, Utils, Template) { 
 
 	var View = Backbone.View.extend({
 		events: {

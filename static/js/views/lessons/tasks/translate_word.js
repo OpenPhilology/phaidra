@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models/word', 'collections/words', 'utils', 'text!/templates/js/task-translate_word.html'], function($, _, Backbone, WordModel, WordsCollection, Utils, Template) {
+define(['jquery', 'underscore', 'backbone', 'models/word', 'collections/words', 'utils', 'text!/templates/js/lessons/tasks/translate_word.html'], function($, _, Backbone, WordModel, WordsCollection, Utils, Template) {
 
 	var View = Backbone.View.extend({
 		tagName: 'div',
