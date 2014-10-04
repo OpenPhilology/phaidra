@@ -1,0 +1,56 @@
+<div class="microlesson">
+	<ul class="study-notes-nav">
+		<li>
+			<a href="#" data-toggle="tooltip" title="Grammar" data-placement="right">
+				<span class="glyphicon glyphicon-book">
+			</a>
+		</li>
+		<li>
+			<a href="#" data-toggle="tooltip" title="Translation" data-placement="right">
+				<span class="glyphicon glyphicon-align-center">
+			</a>
+		</li>
+		<li>
+			<a href="#" data-toggle="tooltip" title="Parse Tree" data-placement="right">
+				<span class="glyphicon glyphicon-leaf">
+			</a>
+		</li>
+	</ul>
+	<div class="left-nav col-md-4">
+		<div class="study-notes">
+			<% var url = model.get('sentence_resource_uri'); %>
+			<div data-source="alignment" class="note">
+				<div data-toggle="morea" data-targets="en,grc" data-dataUrl="<%= url %>" data-orientation="horizontal"></div>
+			</div>
+			<div data-source="parse-tree" class="note">
+				<div data-toggle="daphne" data-dataSource="<%= url %>" data-mode="display"></div>
+			</div>
+			<div data-source="grammar" class="row note" style="display: block">
+				<!-- Grammar sections load asyncronously -->
+				<div class="panel-group" id="topic-panel">
+					<% _.each(toc, function(topic, i) { %>	
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#topic-panel" href="#collapse-<%= i %>" data-topic="<%= topic.smyth %>">
+										<%= topic.title %>
+									</a>
+								</h4>
+							</div>
+							<div id="collapse-<%= i %>" class="panel-collapse collapse">
+								<div class="panel-body" data-url="<%= topic.includeHTML %>" data-topic="<%= topic.smyth %>"></div>
+							</div>
+						</div>
+					<% }); %>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="task col-md-8">
+		<div class="corner right">
+			<a href="#" data-toggle="tooltip" data-placement="left" data-original-title="Skip Question"></a>
+		</div>
+		<div class="subtask"></div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<h1><%= model.get('value') %></h1>
+
+<div class="definitions">
+	<% var alignments = model.getDefinition(); %>
+	<% if (alignments) { %>
+		<h1><% print(alignments[0]); %></h1>
+	<% } else { %>
+		<h2><em>No direct alignment found</em>');  %></h2>
+	<% } %>
+
+</div>
+<div class="answer-box">
+	<form>
+		<div class="input-group">
+			<input lang="grc" class="form-control input-lg" class="answer-input" title="<%= model.getHumanReadableMorph() %>" placeholder='<%= model.getHumanReadableMorph() %>'>
+			<span class="input-group-btn">
+				<button type="submit" style="height: 46px" class="btn btn-success">Answer!</button>
+			</span>
+		</div>
+	</form>
+	<hr>
+	<p><%= sentence %>
+	<p class="alt-definitions"><%= model.getHumanReadableMorph() %></p>
+</div>
+
+<p lang="grc">from <strong><%= model.getDictForm() %></strong> (<%= model.get('pos') %>)</p>
+<% if (alignments.length > 1) { %>
+	<p class="alt-definitions" style="margin-top: -15px">Also: &nbsp; &nbsp; <em><% print(_.compact(alignments.slice(1,5)).join(', &nbsp; ')); %></em></p>
+<% } %>

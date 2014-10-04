@@ -6,7 +6,6 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 				'click #start-link': 'showForm'
 			},
 			initialize: function() {
-				console.log("initializing index");
 				// If user is already logged in, redirect
 			},
 			render: function() {

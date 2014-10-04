@@ -1,0 +1,1259 @@
+[
+	{
+		"title": "Diagnostic Test",
+		"category": "basics",
+		"thumbnail": "/static/images/icon_grk_amphora.png",
+		"modules": [
+			{
+				"title": "Traditional Method",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s7.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s8.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr7.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr8.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s9.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s10.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr9.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr10.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s11.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/s12.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/tr11.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/survey.html"
+					}
+				]
+			},
+			{
+				"title": "Alignment and Treebanking",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/texp.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t3.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a1.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a2.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a3.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t5.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a5.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/a6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t6.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t7.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a7.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a8.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t8.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a9.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t9.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a10.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t10.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t11.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a11.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a12.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t12.html"
+					},
+					{
+						"type": "slide_info",
+						"delayRender": true,
+						"includeHTML": "/static/content/en/slides/test.ag/a13.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.ag/t13.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/test.trad/survey.html"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Alphabet",
+		"category": "foundational",
+		"thumbnail": "/static/images/alphabet/lambda.svg",
+		"modules": [
+			{
+				"title": "Alpha - Theta",
+				"exercise_mode": "grouped",
+				"slides": [
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/alpha.html",
+						"smyth": "s1#alpha"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/beta.html",
+						"smyth": "s1#beta"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/gamma.html",
+						"smyth": "s1#gamma"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/delta.html",
+						"smyth": "s1#delta"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/epsilon.html",
+						"smyth": "s1#epsilon"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/zeta.html",
+						"smyth": "s1#zeta"
+					},	
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/eta.html",
+						"smyth": "s1#eta"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/theta.html",
+						"smyth": "s1#theta"
+					}
+				]
+			},
+			{
+				"title": "Theta - Rho",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/iota.html",
+						"smyth": "s1#iota"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/kappa.html",
+						"smyth": "s1#kappa"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/lambda.html",
+						"smyth": "s1#lambda"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/mu.html",
+						"smyth": "s1#mu"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/nu.html",
+						"smyth": "s1#nu"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/xi.html",
+						"smyth": "s1#xi"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/omicron.html",
+						"smyth": "s1#omicron"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/pi.html",
+						"smyth": "s1#pi"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/rho.html",
+						"smyth": "s1#rho"
+					}
+				]
+			},
+			{
+				"title": "Sigma - Omega",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/sigma.html",
+						"smyth": "s1#sigma"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/tau.html",
+						"smyth": "s1#tau"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/upsilon.html",
+						"smyth": "s1#upsilon"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/phi.html",
+						"smyth": "s1#phi"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/chi.html",
+						"smyth": "s1#chi"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/psi.html",
+						"smyth": "s1#psi"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/omega.html",
+						"smyth": "s1#omega"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/alphabettable.html",
+						"smyth": "s1"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/excep.html",
+						"smyth": "s19#a"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/1.alphabet/punctuation.html",
+						"smyth": "s188"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Diacritics and Dipthongs",
+		"thumbnail": "/static/images/icon_grk_parthenon.png",
+		"category": "verbs",
+		"modules": [
+			{	"title": "Diacritics and Dipthongs",
+				"slides": [
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/intro.html"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/rough.html",
+						"smyth": "s9#a"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/smooth.html",
+						"smyth": "s9#b"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/longshort.html",
+						"smyth": "s4"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/iota.html",
+						"smyth": "s5#b"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/accents.html",
+						"smyth": "s149"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/general.html",
+						"smyth": "s149"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/acute.html",
+						"smyth": "s149#a"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/grave.html",
+						"smyth": "s149#c"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/circumflex.html",
+						"smyth": "s149#b"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/2.diacritics/dipthongs.html"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Introduction to Nouns",
+		"category": "nouns",
+		"thumbnail": "/static/images/icon_grk_monster.png",
+		"modules": [
+			{
+				"title": "Nouns in Ancient Greek",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/nouns.html",
+						"smyth": "s194"
+					},	
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/nouns1.html",
+						"smyth": "s194"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/characteristics.html",
+						"smyth": "s194"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/gender.html",
+						"smyth": "s196"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/number.html",
+						"smyth": "s195"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/case.html",
+						"smyth": "s201"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/articles.html",
+						"smyth": "s332"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/treebank-nouns.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/3.nouns/treebank-exercises.html"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Introduction to Cases",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Nominative Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/nominative.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/nominative_subj.html",
+						"smyth": "s938"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/nominative_comp.html",
+						"smyth": "s910"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/nominative_pent.html"
+					}
+				]
+			},
+			{
+				"title": "Accusative Case",
+				"slides": [
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/accusative.html",
+						"smyth": "s1590"
+					},
+					{	
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/accusative_pent.html"
+					}
+				]
+			},
+			{
+				"title": "Genitive Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/genitive.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/genitive_poss.html",
+						"smyth": "s1297"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/genitive_part.html",
+						"smyth": "s1306"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/genitive_comp.html",
+						"smyth": "s1315"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/genitive_pent.html"
+					}
+				]
+			},
+			{
+				"title": "Dative Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/dative.html",
+						"smyth": "s1450"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/dative_in.html",
+						"smyth": "s1506"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/dative_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/dative_concl.html"
+					}
+				]
+			},
+			{
+				"title": "Vocative Case",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/4.cases/vocative.html",
+						"smyth": "s1283"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "First or α- Declension",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Feminine Nouns Ending in -α",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/5.firstdec/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/5.firstdec/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec0.html",
+						"smyth": "s216"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec.html",
+						"smyth": "s217#a",
+						"tasks": ["identify_morph:case", "identify_morph:number", "identify_morph:gender"]
+					}
+				]
+			},
+			{
+				"title": "Feminine Nouns Ending in -η",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec1.html",
+						"smyth": "s217#c",
+						"tasks": ["identify_morph:case", "identify_morph:number", "identify_morph:gender"]
+					}
+				]
+			},
+			{
+				"title": "Masculine Nouns Ending in -ης",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec2.html",
+						"smyth": "s222",
+						"tasks": ["identify_morph:case", "identify_morph:number", "identify_morph:gender"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec_pent.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/5.firstdec/firstdec_pent1.html"
+					}
+				]
+			}
+		]
+	},
+	{	
+		"title": "Second Declension",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Masculine Nouns Ending in -ος",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/6.seconddec/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/6.seconddec/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/6.seconddec/seconddec.html",
+						"smyth": "s228#a",
+						"tasks": ["identify_morph:case", "identify_morph:number", "identify_morph:gender"]
+					}
+				]
+			},
+			{
+				"title": "Neuter Nouns Ending in -ον",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/6.seconddec/seconddec1.html",
+						"smyth": "s228#b",
+						"tasks": ["identify_morph:case", "identify_morph:number", "identify_morph:gender"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/6.seconddec/seconddec_pent.html"
+					}
+				]
+			}
+		]		
+	},
+	{	
+		"title": "Introduction to Verbs",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Verbs in Ancient Greek",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/7.verbs/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/7.verbs/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/7.verbs/verbs.html",
+						"smyth": "s355"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/7.verbs/person.html",
+						"smyth": "s364"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/7.verbs/number.html",
+						"smyth": "s363"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/7.verbs/tense.html",
+						"smyth": "s359"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/7.verbs/mood.html",
+						"smyth": "s357"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/7.verbs/voice.html",
+						"smyth": "s356"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Present Indicative Active",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Present Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/8.presentindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/8.presentindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/8.presentindicativeactive/presindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/8.presentindicativeactive/presindact1.html",
+						"smyth": "s499",
+						"tasks": ["identify_morph:person", "identify_morph:number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/8.presentindicativeactive/presindact2.html",
+						"smyth": "s768#a",
+						"tasks": ["identify_morph:person", "identify_morph:number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/8.presentindicativeactive/presindact_pent.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Future Indicative Active",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Form the Future, Indicative, Active for Regular Verbs",
+				"slides": [
+					{
+						"title": "Introduction to Future Indicative Active",
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/history.html"
+					},
+					{
+						"title": "What do 'future', 'active', and 'indicative' imply?",
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact.html",
+						"smyth": "s532#a"
+					},
+					{
+						"title": "Future Indicative Active of λύω",
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact1.html",
+						"smyth": "s532#b",
+						"tasks": ["identify_morph:person"]
+					},
+					{
+						"title": "Forming the Future Active Indicative for Stop Verbs",
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact2.html",
+						"smyth": "s537",
+						"tasks": ["identify_morph:tense"]
+					},
+					{
+						"title": "Future Active Indicative of εἰμί",
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact3.html",
+						"smyth": "s768#b",
+						"tasks": ["identify_morph:number"]
+					},
+					{
+						"title": "The Future Indicative Active in the Pentecontaetia",
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/9.futureindicativeactive/futindact_pent.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Adjectives: First and Second Declension",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Adjectives: First and Second Declension",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/adjectives.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/3ending.html",
+						"smyth": "s286",
+						"tasks": ["identify_morph:gender", "identify_morph:case", "identify_morph:number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/10.adjectivesfirsec/2ending.html",
+						"smyth": "s288",
+						"tasks": ["identify_morph:gender", "identify_morph:case", "identify_morph:number"]
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Imperfect Indicative Active",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Imperfect Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/11.imperfectindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/11.imperfectindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/11.imperfectindicativeactive/imperfindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/11.imperfectindicativeactive/imperfindact1.html",
+						"smyth": "s1889",
+						"tasks": ["identify_morph:person", "identify_morph:number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/11.imperfectindicativeactive/imperfindact2.html",
+						"smyth": "s768#c",
+						"tasks": ["identify_morph:tense"]
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Third Declension: Consonant Stem",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Third Declension: Consonant Stem",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon.html",
+						"smyth": "s255#2",
+						"tasks": ["identify_morph:number", "identify_morph:case"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon1.html",
+						"smyth": "s255#3",
+						"tasks": ["identify_morph:number", "identify_morph:case"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/excep.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/12.thirddecconson/thirddeccon_pent.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Aorist Indicative Active",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Aorist Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact.html",
+						"smyth": "s542"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact1.html",
+						"smyth": "s542",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact2.html",
+						"smyth": "s542"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact3.html",
+						"smyth": "s542",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact4.html"
+					}
+				]
+			},
+			{
+				"title": "Aorist Indicative Active: Second Aorist",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact5.html",
+						"smyth": "s546",
+						"tasks": ["identify_morph_person", "identify_morph_number"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/13.aoristindicativeactive/aorindact6.html",
+						"smyth": "s546"
+					}
+				]
+			}			
+		]
+	},
+	{	
+		"title": "Third Declension: Vowel Stem",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Third Declension: Vowel Stem",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow.html",
+						"smyth": "s268",
+						"tasks": ["identify_morph_number", "identify_morph_case"]
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/14.thirddecvow/thirddecvow1.html",
+						"smyth": "s275",
+						"tasks": ["identify_morph_number", "identify_morph_case"]
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Adjectives: Third Declension",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Adjectives: Third Declension",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/adjectives.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/3ending.html",	
+						"smyth": "s299",
+						"tasks": ["identify_morph_gender", "identify_morph_case", "identify_morph_number"]	
+					}
+				]				
+			},
+			{
+				"title": "Adjectives: Third Declension",
+				"slides": [
+					{	"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/2ending.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/15.adjectivesthird/2ending1.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Adverbs",
+		"category": "nouns",
+		"modules": [
+			{
+				"title": "Adverbs",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs.html",
+						"smyth": "s343"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/16.adverbs/adverbs2.html"
+					}
+				]
+			}	
+		]
+	},
+	{	
+		"title": "Perfect Indicative Active",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Perfect Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/17.perfectindact/perindact1.html"
+					}
+				]
+			}			
+		]
+	},
+	{	
+		"title": "Pluperfect Indicative Active",
+		"category": "verbs",
+		"modules": [
+			{
+				"title": "Pluperfect Indicative Active",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/18.pluperindact/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/18.pluperindact/history.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/18.pluperindact/pluperindact.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/18.pluperindact/pluperindact1.html"
+					}
+				]
+			}			
+		]
+	},
+	{	
+		"title": "Treebanking",
+		"category": "basics",
+		"modules": [
+			{
+				"title": "Treebanking",
+				"slides": [
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro2.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/exercises.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro3.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/exercises1.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/intro4.html"
+					},
+					{
+						"type": "slide_info",
+						"includeHTML": "/static/content/en/slides/treebanking/exercises2.html"
+					}
+				]
+			}	
+		]
+	}
+]

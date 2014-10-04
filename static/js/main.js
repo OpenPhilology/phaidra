@@ -14,29 +14,29 @@ require(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap'], function($, _, 
 		switch(app) {
 			case "lessons":
 			case "module":
-				require(['apps/lesson-router'], function(Lessons) {
-					new Lessons.Router();
+				require(['apps/lesson-router'], function(Router) {
+					new Router();
 					Backbone.history.start({ pushState: true });
 					activateBootstrap();
 				});
 				break;
 			case "reader":
-				require(['apps/reader-router'], function(Reader) {
-					new Reader.Router();
+				require(['apps/reader-router'], function(Router) {
+					new Router();
 					Backbone.history.start({ pushState: true });
 					activateBootstrap();
 				});
 				break;
 			case "create":
-				require(['apps/create-router'], function(Create) {
-					new Create.Router();
+				require(['apps/create-router'], function(Router) {
+					new Router();
 					Backbone.history.start({ pushState: true });
 					activateBootstrap();
 				});
 				break;
 			default:
-				require(['apps/default-router'], function(Default) {
-					new Default.Router();
+				require(['apps/default-router'], function(Router) {
+					new Router();
 					Backbone.history.start({ pushState: true });
 					activateBootstrap();
 				});
