@@ -28,7 +28,6 @@ define(['jquery', 'underscore', 'backbone', 'collections/documents', 'text!/temp
 			return this;
 		},
 		renderPersonalEdition: function(collection) {
-			console.log(collection);
 		},
 		createPersonalEdition: function(e) {
 			e.preventDefault();

@@ -4,7 +4,6 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'collections/words', 
 		template: _.template(Template),
 		initialize: function(options) {
 			this.options = options;
-			console.log("init");
 		},
 		render: function() {
 			this.phrase = this.model.getPhrase();
@@ -15,7 +14,6 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'collections/words', 
 			// If we cannot, then we must select a new model within the collection and destroy this view
 
 			if (!this.phrase || !this.defs) {
-				console.log('removing view for ' + this.model.get('lemma'));
 				this.remove();
 				return false;
 			}

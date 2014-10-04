@@ -269,7 +269,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			// If it has a lemma property, we know its been populated
 			if (starter.get('populated')) {
 				this.trigger('change:populated');
-				console.log("triggering populated");
 				if (options && options.success) options.success();
 			}
 			else {

@@ -102,7 +102,6 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'utils'], function($,
 			return candidates;
 		},
 		getNextRandom: function(ref, model) {
-			console.log("getting next candidate");
 			var candidates = this.models.filter(function(m) {
 				var found = _.pluck(m.getGrammar(), 'ref').indexOf(ref) !== -1;
 				if (model !== undefined) {
@@ -113,7 +112,6 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'utils'], function($,
 
 			var index = Math.floor((Math.random() * candidates.length) + 1);
 			var next = this.findWhere({ lemma: candidates[index].get('lemma') });
-			console.log("decided upon", next);
 
 			return next;
 		}

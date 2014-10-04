@@ -5,7 +5,6 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'collections/words', 
 		className: 'subtask',
 		template: _.template(Template),
 		initialize: function(options) {
-			console.log("init");
 		},
 		render: function() {
 			this.$el.html(this.template({

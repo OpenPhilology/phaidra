@@ -56,8 +56,6 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'views/reader/notes/about-w
 					return new BuildParseTreeView(options);
 				case 'translations':
 					return new TranslationsView(options);
-				default:
-					console.log("didn't find this view");
 			}
 		},
 		renderSubview: function(view, options) {

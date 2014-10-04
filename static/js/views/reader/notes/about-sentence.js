@@ -31,8 +31,6 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/reader/
 				return el.attributes;
 			});
 
-			console.log("show parse tree is called");
-
 			new Daphne('[data-toggle="daphne"]', {
 				data: words,
 				mode: 'edit',
@@ -45,7 +43,6 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/reader/
 		},
 		showAlignment: function(e) {
 			e.preventDefault();
-			console.log('show alignment called');
 
 			// HACK til I fix the plugin
 			$('[data-toggle="morea"]').html('');
