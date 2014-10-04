@@ -450,17 +450,17 @@
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/acute.html",
-						"smyth": "s149"
+						"smyth": "s149#a"
 					},
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/grave.html",
-						"smyth": "s149"
+						"smyth": "s149#c"
 					},
 					{	
 						"type": "slide_info",
 						"includeHTML": "/static/content/en/slides/2.diacritics/circumflex.html",
-						"smyth": "s149"
+						"smyth": "s149#b"
 					},
 					{	
 						"type": "slide_info",

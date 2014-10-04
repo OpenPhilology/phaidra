@@ -23,7 +23,7 @@
 	<p class="alt-definitions"><%= model.getHumanReadableMorph() %></p>
 </div>
 
-<p lang="grc">from <strong><%= model.getDictForm() %></strong></p>
+<p lang="grc">from <strong><%= model.getDictForm() %></strong> (<%= model.get('pos') %>)</p>
 <% if (alignments.length > 1) { %>
 	<p class="alt-definitions" style="margin-top: -15px">Also: &nbsp; &nbsp; <em><% print(_.compact(alignments.slice(1,5)).join(', &nbsp; ')); %></em></p>
 <% } %>

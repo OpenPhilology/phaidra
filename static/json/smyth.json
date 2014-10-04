@@ -48,6 +48,24 @@
 		"query": "lang=grc"
 	},
 	{
+		"ref": "s149#a",
+		"require": false,
+		"title": "Rules of Accents - Acute",
+		"query": "lang=grc"
+	},
+	{
+		"ref": "s149#b",
+		"require": false,
+		"title": "Rules of Accents - Circumflex",
+		"query": "lang=grc"
+	},
+	{
+		"ref": "s149#c",
+		"require": false,
+		"title": "Rules of Accents - Grave",
+		"query": "lang=grc"
+	},
+	{
 		"ref": "s188",
 		"require": false,
 		"title": "Marks of Punctuation",
