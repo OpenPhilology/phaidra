@@ -27,7 +27,7 @@ define(['jquery', 'underscore', 'text!/static/json/smyth.json', 'text!/static/js
 	})();
 	Utils.getSmyth = function(smyth) {
 		return Utils.Smyth.filter(function(s) {
-			return smyth === s.ref;
+			return smyth.split('#')[0] === s.ref.split('#')[0];
 		})[0];
 	};
 	Utils.getRelatedSmyth = function(smyth) {

@@ -1,11 +1,10 @@
-define(['jquery', 'underscore', 'backbone', 'views/login', 'views/index', 'views/profile'], function($, _, Backbone, LoginView, IndexView, ProfileView) { 
+define(['jquery', 'underscore', 'backbone', 'views/login', 'views/index', 'views/profile/profile'], function($, _, Backbone, LoginView, IndexView, ProfileView) { 
 
 	return Backbone.Router.extend({
 		routes: {
 			"": "index",
 			"login/": "login",
-			"profile/": "profile",
-			"grammar/:smyth": "showGrammar",
+			"profile/": "profile"
 		},
 		initialize: function() {
 			// javascript function for api logout and redirect
@@ -39,21 +38,11 @@ define(['jquery', 'underscore', 'backbone', 'views/login', 'views/index', 'views
 					.render();
 			}
 		},
-		// Profile 
+		// TODO: Move profile out
 		profile: function() {
 			if (!this.profile_view) {
 				this.profile_view = new ProfileView({ el: '#main'})
 					.render();
-			}
-		},
-
-		// Traditional Grammar View
-		showGrammar: function(smyth) {
-			if (!this.grammar_view) {
-				this.grammar_view = new GrammarView({ el: '#main', smyth: smyth})
-					.render()
-					.$el
-					.appendTo($('#main'));
 			}
 		}
 	});

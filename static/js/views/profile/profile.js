@@ -1,18 +1,17 @@
-define(['jquery', 'underscore', 'backbone', 'collections', 'models', 'views/viz-progress-pie', 'text!/templates/js/profile.html'], function($, _, Backbone, Collections, Models, PieView, Template) { 
+define(['jquery', 'underscore', 'backbone', 'models/user', 'views/viz-progress-pie', 'text!/templates/js/profile/profile.html'], function($, _, Backbone, UserModel, PieView, Template) { 
 
 		/**
 		 * Try not to cry when you see this code. It is a disaster, will be fixed!
 		 */
 		var View = Backbone.View.extend({
-			events: {
-			},
+			events: { },
 			template: _.template(Template),
 			initialize: function() {
 				
 				var that = this;
 
 				// Get this user
-				new Models.User().fetch({ success: function(model, response, options) {
+				new UserModel().fetch({ success: function(model, response, options) {
 						that.model = model;
 
 						// TODO: Move this into model

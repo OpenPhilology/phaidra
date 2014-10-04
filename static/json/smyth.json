@@ -125,6 +125,16 @@
 		]
 	},
 	{
+		"ref": "s268",
+		"title": "Third declension nouns with stems in -ι and -υ",
+		"query": "pos=noun&lemma__endswith=&posAdd__contains=is_ews"
+	},
+	{
+		"ref": "s275",
+		"title": "Third declension nouns with stems in -ευ, -αυ, -ου",
+		"query": "pos=noun&lemma__endswith=&posAdd__contains=eus_ews"
+	},
+	{
 		"ref": "s286",
 		"title": "Three-termination Adjectives",
 		"query": "pos=adj&posAdd__contains=os_h_on"
@@ -135,9 +145,49 @@
 		"query": "pos=adj&posAdd__contains=os_on"
 	},
 	{
+		"ref": "s299",
+		"title": "Three termination adjectives third declension",
+		"query": "pos=adj&posAdd__contains=as_asa_an"
+	},
+	{
 		"ref": "s332",
 		"title": "Articles Declension",
 		"query": "pos=article"
+	},
+	{
+		"ref": "s343",
+		"title": "Adverbs",
+		"query": "pos=adverb"
+	},
+	{
+		"ref": "s355",
+		"title": "Introduction to Verbs",
+		"query": "pos=verb"
+	},
+	{
+		"ref": "s364",
+		"title": "Introduction to Verbs - Person",
+		"query": "pos=verb"
+	},
+	{
+		"ref": "s363",
+		"title": "Introduction to Verbs - Number",
+		"query": "pos=verb"
+	},
+	{
+		"ref": "s359",
+		"title": "Introduction to Verbs - Tense",
+		"query": "pos=verb"
+	},
+	{
+		"ref": "s357",
+		"title": "Introduction to Verbs - Mood",
+		"query": "pos=verb"
+	},
+	{
+		"ref": "s356",
+		"title": "Introduction to Verbs - Voice",
+		"query": "pos=verb"
 	},
 	{
 		"ref": "s499",
