@@ -71,7 +71,7 @@ blockquote {
   position: fixed;
   width: 100%;
   height: 43px;
-  z-index: 1; }
+  z-index: 50; }
   .banner #search-form {
     margin: 7px 0px; }
     .banner #search-form .form-group {
@@ -234,7 +234,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Garamond'; }
 
 .btn {
-  border: 1px solid #EEE;
   text-decoration: none;
   border-radius: 2px; }
   .btn.btn-link {
@@ -476,76 +475,6 @@ label {
 /**
  * Styles used on the lessons.
  */
-/* Lesson-related styles */
-.achievements .box {
-  height: 125px;
-  width: 125px;
-  display: inline-block;
-  background-color: #9aa3b7;
-  color: #333;
-  margin: 5px;
-  border-radius: 2px;
-  text-align: center;
-  padding: 30px;
-  text-decoration: none;
-  -webkit-transition: background-color 0.2s ease-out;
-  -moz-transition: background-color 0.2s ease-out;
-  -o-transition: background-color 0.2s ease-out;
-  -ms-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out; }
-  .achievements .box:hover {
-    background-color: #b1b8c8;
-    -webkit-transition: background-color 0.2s ease-out;
-    -moz-transition: background-color 0.2s ease-out;
-    -o-transition: background-color 0.2s ease-out;
-    -ms-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out; }
-  .achievements .box strong {
-    font-size: 24px;
-    font-weight: normal; }
-
-.feedback-container {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 2px; }
-  .feedback-container h3 {
-    color: #6e517a;
-    letter-spacing: 0.1em; }
-  .feedback-container h4 {
-    color: #523d5b;
-    letter-spacing: 0.1em;
-    font-weight: normal; }
-  .feedback-container .badge {
-    margin-right: 5px; }
-    .feedback-container .badge.vocab {
-      background-color: #1fadad; }
-    .feedback-container .badge.lesson {
-      background-color: #d15241; }
-    .feedback-container .badge.treebank {
-      background-color: #49a556; }
-  .feedback-container #records .sparkline {
-    display: inline-block; }
-    .feedback-container #records .sparkline path {
-      stroke: #888;
-      stroke-width: 2px;
-      fill: none; }
-
-/*
-*	Progress bar displayed above every lesson-in-progress
-*/
-.lesson-progress {
-  margin-bottom: 10px;
-  text-align: center; }
-  .lesson-progress .bar {
-    display: inline-block;
-    height: 10px;
-    background: linear-gradient(to left, white 50%, #1fadad 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all 0.5s ease-out; }
-    .lesson-progress .bar.complete {
-      background-position: left bottom; }
-
 /*
 *	The lesson boxes visible on the lessons screen
 */
@@ -680,21 +609,6 @@ div.module {
     .module .circle.complete {
       background-color: white; }
 
-/*
-*	Slide Styles	
-*/
-.lesson-header h1 {
-  display: inline-block;
-  margin-top: 0;
-  color: #222630;
-  text-transform: uppercase;
-  font-size: 24px; }
-.lesson-header h2 {
-  margin-top: 0;
-  font-size: 20px;
-  color: #666;
-  letter-spacing: 1px; }
-
 .alphabet {
   list-style-type: none;
   border: 1px solid #EEE;
@@ -737,176 +651,6 @@ div.module {
     padding: 6px 9px 3px 6px;
     border-radius: 2px;
     margin: 6px; }
-
-.slide {
-  padding: 20px;
-  border-radius: 3px;
-  min-height: 300px;
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.7); }
-  .slide .slide-unit {
-    display: none; }
-  .slide .exercise .badge {
-    background-color: #BBB;
-    border-radius: 3px;
-    margin-right: 10px; }
-  .slide .direct-select {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px; }
-    .slide .direct-select.vertical a {
-      margin-right: auto;
-      margin-left: auto;
-      text-align: left;
-      display: block;
-      max-width: 400px; }
-    .slide .direct-select.vertical .badge {
-      border: 1px solid #FFF;
-      vertical-align: middle; }
-    .slide .direct-select.vertical small {
-      margin-left: 35px; }
-    .slide .direct-select.horizontal a {
-      position: relative;
-      margin-bottom: 25px;
-      white-space: nowrap;
-      display: inline-block; }
-    .slide .direct-select.horizontal .badge {
-      position: absolute;
-      top: 20px;
-      margin-right: 0;
-      left: 40%;
-      top: 110%;
-      border: 1px solid #FFF;
-      -webkit-transition: background-color 0.2s ease-in;
-      -moz-transition: background-color 0.2s ease-in;
-      -o-transition: background-color 0.2s ease-in;
-      -ms-transition: background-color 0.2s ease-in;
-      transition: background-color 0.2s ease-in; }
-    .slide .direct-select a small {
-      font-size: .5em;
-      font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-      letter-spacing: normal; }
-    .slide .direct-select a.selected, .slide .direct-select a.selected:hover {
-      background-color: #373e4e;
-      color: #FFF;
-      border: 1px solid transparent;
-      box-shadow: 2px 2px 3px #CCC; }
-      .slide .direct-select a.selected .badge, .slide .direct-select a.selected:hover .badge {
-        background-color: #1fadad; }
-    .slide .direct-select a.success, .slide .direct-select a.success:hover {
-      background-color: #49a556;
-      color: #FFF;
-      border: 1px solid transparent;
-      box-shadow: 2px 2px 3px #CCC;
-      -webkit-animation: wiggle 0.2s ease 0 3;
-      -moz-animation: wiggle 0.2s ease 0 3;
-      -o-animation: wiggle 0.2s ease 0 3;
-      animation: wiggle 0.2s ease 0 3; }
-      .slide .direct-select a.success .badge, .slide .direct-select a.success:hover .badge {
-        background-color: #1fadad; }
-    .slide .direct-select a.failure, .slide .direct-select a.failure:hover {
-      background-color: #d15241;
-      color: #FFF;
-      border: 1px solid transparent;
-      box-shadow: 2px 2px 3px #CCC; }
-      .slide .direct-select a.failure .badge, .slide .direct-select a.failure:hover .badge {
-        background-color: #f4bc78; }
-    .slide .direct-select a {
-      text-decoration: none;
-      border: 1px solid #DDD;
-      border-radius: 3px;
-      padding: 10px;
-      margin: 5px;
-      -webkit-transition: background-color 0.2s ease-in;
-      -moz-transition: background-color 0.2s ease-in;
-      -o-transition: background-color 0.2s ease-in;
-      -ms-transition: background-color 0.2s ease-in;
-      transition: background-color 0.2s ease-in; }
-      .slide .direct-select a:hover {
-        background-color: #1fadad;
-        border: 1px solid transparent;
-        color: #FFF;
-        -webkit-transition: background-color 0.2s ease-out;
-        -moz-transition: background-color 0.2s ease-out;
-        -o-transition: background-color 0.2s ease-out;
-        -ms-transition: background-color 0.2s ease-out;
-        transition: background-color 0.2s ease-out;
-        box-shadow: 2px 2px 3px #CCC; }
-        .slide .direct-select a:hover .badge {
-          background-color: #d15241;
-          color: #FFF;
-          -webkit-transition: background-color 0.2s ease-out;
-          -moz-transition: background-color 0.2s ease-out;
-          -o-transition: background-color 0.2s ease-out;
-          -ms-transition: background-color 0.2s ease-out;
-          transition: background-color 0.2s ease-out; }
-  .slide ul {
-    display: block;
-    margin-bottom: 0;
-    /* Corresponds to Multi Composition Slide options */ }
-    .slide ul.short-multi li {
-      list-style: none;
-      display: inline-block;
-      font-size: 16px;
-      line-height: 36px;
-      margin: 2px; }
-    .slide ul.short-multi a {
-      padding: 5px 20px;
-      color: #666;
-      text-decoration: none;
-      border-radius: 3px; }
-    .slide ul.short-multi.options a {
-      border: 1px solid #e1e1e1;
-      -webkit-transition: background-color 0.2s ease-out;
-      -moz-transition: background-color 0.2s ease-out;
-      -o-transition: background-color 0.2s ease-out;
-      -ms-transition: background-color 0.2s ease-out;
-      transition: background-color 0.2s ease-out;
-      background-image: linear-gradient(bottom, #eeeeee 20, white 100);
-      background-image: -o-linear-gradient(bottom, #eeeeee 20, white 100);
-      background-image: -moz-linear-gradient(bottom, #eeeeee 20, white 100);
-      background-image: -webkit-linear-gradient(bottom, #eeeeee 20, white 100);
-      background-image: -ms-linear-gradient(bottom, #eeeeee 20, white 100);
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #eeeeee), color-stop(1, white));
-      background-color: #eeeeee; }
-      .slide ul.short-multi.options a:hover {
-        background-image: linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-        background-image: -o-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-        background-image: -moz-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-        background-image: -webkit-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-        background-image: -ms-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #1fadad), color-stop(1, #24cbcb));
-        background-color: #1fadad;
-        border-color: #1b9797;
-        color: #FFF; }
-    .slide ul.short-multi.answers a {
-      border: 1px solid #1b9797;
-      -webkit-transition: background-color 0.2s ease-out;
-      -moz-transition: background-color 0.2s ease-out;
-      -o-transition: background-color 0.2s ease-out;
-      -ms-transition: background-color 0.2s ease-out;
-      transition: background-color 0.2s ease-out;
-      background-image: linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-      background-image: -o-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-      background-image: -moz-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-      background-image: -webkit-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-      background-image: -ms-linear-gradient(bottom, #1fadad 20, #24cbcb 100);
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #1fadad), color-stop(1, #24cbcb));
-      background-color: #1fadad;
-      color: #FFF; }
-      .slide ul.short-multi.answers a:hover {
-        background-image: linear-gradient(bottom, #d15241 20, #d86c5e 100);
-        background-image: -o-linear-gradient(bottom, #d15241 20, #d86c5e 100);
-        background-image: -moz-linear-gradient(bottom, #d15241 20, #d86c5e 100);
-        background-image: -webkit-linear-gradient(bottom, #d15241 20, #d86c5e 100);
-        background-image: -ms-linear-gradient(bottom, #d15241 20, #d86c5e 100);
-        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #d15241), color-stop(1, #d86c5e));
-        background-color: #d15241;
-        border-color: #c84230; }
-    .slide ul.inline {
-      display: inline-block;
-      margin-right: 20px;
-      margin-bottom: 20px; }
 
 /*
 *	Used in lessons to show the parts of the word
@@ -979,28 +723,69 @@ table.inflection-table {
   .new-knowledge span.glyphicon.glyphicon-bookmark {
     color: #d15241; }
 
-.vocabulary {
-  max-width: 600px;
+.task {
   margin-left: auto;
   margin-right: auto; }
-  .vocabulary .card {
-    border: 1px solid #EEE;
-    margin: 5px;
-    padding: 20px;
-    box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, 0.1); }
-    .vocabulary .card h1, .vocabulary .card h2, .vocabulary .card h3 {
-      text-align: center; }
-    .vocabulary .card h1 {
-      font-size: 3em; }
-  .vocabulary .alt-definitions {
+  .task h1, .task h2, .task h3 {
+    text-align: center; }
+  .task h1 {
+    font-size: 3em; }
+  .task.active {
+    display: block; }
+  .task p {
+    text-align: center; }
+  .task .alt-definitions {
     color: #999;
     text-align: center;
     font-style: italic; }
-  .vocabulary .btn {
+  .task .btn {
     margin-left: auto;
     margin-right: auto; }
-  .vocabulary .parse-tree {
+  .task .parse-tree {
     display: none;
     text-align: center; }
-    .vocabulary .parse-tree.open {
+    .task .parse-tree.open {
       display: block; }
+  .task .vocab-notes-container p {
+    text-align: left; }
+  .task .glyphicon {
+    margin-right: 10px; }
+  .task ul.nav a {
+    font-size: 12px; }
+  .task .greek-sentence .correct {
+    color: #49a556;
+    font-weight: bold; }
+  .task .greek-sentence .incorrect {
+    color: #d15241;
+    font-weight: bold; }
+
+.microlesson ul.study-notes-nav {
+  margin-top: 20px;
+  list-style-type: none;
+  font-size: 12px;
+  position: fixed;
+  left: 33%;
+  line-height: 20px; }
+  .microlesson ul.study-notes-nav a {
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 2px; }
+.microlesson .study-notes {
+  border: 1px solid #222630;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, 0.1);
+  background-color: #373e4e; }
+.microlesson .left-nav {
+  width: 33%;
+  padding: 0; }
+.microlesson .task {
+  position: fixed;
+  left: 33%; }
+
+.answer-box {
+  background-color: #f4f9f5;
+  padding: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }

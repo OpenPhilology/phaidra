@@ -1,0 +1,32 @@
+{
+  "name": "Phaidra",
+  "version": "0.0.1",
+  "description": "eLearning for Historical Languages",
+  "main": "static/js/main.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenPhilology/phaidra.git"
+  },
+  "keywords": [
+    "elearning",
+    "ancient geek",
+    "ancient",
+    "greek",
+    "historical",
+    "languages"
+  ],
+  "author": "Open Philology eLearning Team",
+  "license": "CC BY-SA 2.5",
+  "bugs": {
+    "url": "https://github.com/OpenPhilology/phaidra/issues"
+  },
+  "homepage": "https://github.com/OpenPhilology/phaidra",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
