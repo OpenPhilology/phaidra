@@ -21,8 +21,8 @@ class AppUser(AbstractUser):
 	
 	objects = UserManager()
 	
-	lang_learning = models.ForeignKey(Language, related_name='learning')
-	lang_speaking = models.ForeignKey(Language, related_name='speaking') 
+	lang_learning = models.ForeignKey(Language, related_name='learning', null=True)
+	lang_speaking = models.ForeignKey(Language, related_name='speaking', null=True) 
 	
 	def __unicode__(self):
 		return unicode(self.username) or u''
