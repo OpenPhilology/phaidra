@@ -118,23 +118,12 @@ Make sure the virtual env is activated.
 		$ cd /opt/phaidra
 		$ source env/bin/activate
 
-First, comment out the apps 'app' and 'tastypie' from INSTALLED_APPS as well as 'AUTH_USER_MODEL' in phaidra/settings.py. We have to do some finangling to get South to play nicely with our custom user model.
+Now, with Django 1.7, migration process does not conflict with Tastypie or our custom user model.
 
-Then run:
+		$ ./manage.py migrate
 
-		$ ./manage.py syncdb
-
-Uncomment 'apps', 'tastypie', and 'AUTH_USER_MODEL' in phaidra/settings.py. Then run:
-
-		$ ./manage.py schemamigration app --initial
-		$ ./manage.py schemamigration tastypie --initial
-		$ ./manage.py migrate app
-		$ ./manage.py migrate tastypie
-
-If you get errors about tables already existing, you can run these commands to fix the South history and keep the tables from trying to re-create themselves:
-
-		$ ./manage.py migrate app --no-initial-data
-		$ ./manage.py migrate tastypie --fake 0001
+Create your superuser:
+		$ ./manage.py createsuperuser
 
 
 Install and configure the Neo4j database
