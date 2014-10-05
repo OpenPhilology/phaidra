@@ -2,53 +2,51 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.utils.text import slugify
 
-class AppUser(AbstractUser):
-	
-	objects = UserManager()
-	
-	lang = models.CharField(max_length=200)
-	unit = models.IntegerField(default=0)
-	lesson = models.IntegerField(default=0)
-	progress = models.IntegerField(default=0)
-	#readingCTS = models.CharField(max_length=200, blank=True)
-	
-	def __unicode__(self):
-		return unicode(self.username) or u''
+class Language(models.Model):
+	name = models.CharField("language name (english)", max_length=200)
+	local_name = models.CharField("language name (in language)", max_length=200)
+	short_code = models.CharField("shortcode (e.g. 'en')", max_length=5)
+	locale = models.CharField("locale (e.g. 'en-us')", max_length=5)
 
-class Textbook(models.Model):
+	def __unicode__(self):
+		return unicode(self.title) or u''
+
+class Category(models.Model):
 	name = models.CharField(max_length=200)
-	source_lang = models.CharField(max_length=2)
-	target_lang = models.CharField(max_length=2)
 
 	def __unicode__(self):
 		return unicode(self.name) or u''
 
-class Unit(models.Model):
-	textbook = models.ForeignKey('TextBook')
-	name = models.CharField(max_length=200)
-	color = models.CharField(max_length=7)
-	graphic = models.FileField(upload_to='units', blank=True)
-	order = models.IntegerField()
+class AppUser(AbstractUser):
+	
+	objects = UserManager()
+	
+	lang_learning = models.ForeignKey(Language, related_name='learning')
+	lang_speaking = models.ForeignKey(Language, related_name='speaking') 
+	
+	def __unicode__(self):
+		return unicode(self.username) or u''
+
+class Grammar(models.Model):
+	ref = models.CharField("reference to the grammar book section", max_length=10, unique=True)
+	external_link = models.CharField("external url for reference lookup", max_length=200)
+	query = models.CharField("query string", max_length=200)
+	title = models.CharField("title of grammar section", max_length=200)
+	category = models.ForeignKey(Category)
+
+	class Meta:
+		ordering = ['ref']
 
 	def __unicode__(self):
-		return self.name
+		return unicode(self.title) or u''
 
-class Lesson(models.Model):
-	unit = models.ForeignKey('Unit')
-	name = models.CharField(max_length=200)
-	order = models.IntegerField()
-
-	def __unicode__(self):
-		return self.name
-
-class Slide(models.Model):
-	lesson = models.ForeignKey('Lesson')
-	name = models.CharField(max_length=200)
-	content = models.TextField()
-	smyth = models.CharField(max_length=10, blank=True)
-	task = models.CharField(max_length=200, blank=True)
-	order = models.IntegerField()
+class Content(models.Model):
+	title = models.CharField("title of contents", max_length=200)
+	grammar_ref = models.ForeignKey(Grammar, verbose_name="corresponding grammar reference")
+	source_lang = models.ForeignKey(Language, related_name='content_written_in')
+	target_lang = models.ForeignKey(Language, related_name='content_written_about')
+	content = models.TextField("content written in markdown")
 
 	def __unicode__(self):
-		return self.name
+		return unicode(self.title) or u''
 
