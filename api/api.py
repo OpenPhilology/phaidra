@@ -13,7 +13,7 @@ from django.contrib.auth import authenticate, login, logout
 
 from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
 
-from app.models import Textbook, Unit, Lesson, Slide, AppUser
+from app.models import AppUser
 from neo4jrestclient.client import GraphDatabase, Node, Relationship
 
 from tastypie import fields
@@ -133,30 +133,6 @@ class SubmissionAuthorization(Authorization):
 	### not in use yet. User submissions are related to the user in the sent data, which makes sure the the user was already verified
 	def create_detail(self, object_list, bundle):
 		return bundle.obj.user == bundle.request.user
-
-class TextbookResource(ModelResource):
-	class Meta:
-		queryset = Textbook.objects.all()
-		resource_name = 'textbook'
-		allowed_methods = ['get']
-
-class UnitResource(ModelResource):
-	class Meta:
-		queryset = Unit.objects.all()
-		resource_name = 'unit'
-		allowed_methods = ['get']
-
-class LessonResource(ModelResource):
-	class Meta:
-		queryset = Lesson.objects.all()
-		resource_name = 'lesson'
-		allowed_methods = ['get']
-
-class SlideResource(ModelResource):
-	class Meta:
-		queryset = Slide.objects.all()
-		resource_name = 'slide'
-		allowed_methods = ['get']
 
 class CreateUserResource(ModelResource):
 	

@@ -141,7 +141,6 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'south',
     'tastypie',
     #'django.contrib.sites',
     'django.contrib.messages',
