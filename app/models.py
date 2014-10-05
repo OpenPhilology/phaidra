@@ -9,7 +9,7 @@ class Language(models.Model):
 	locale = models.CharField("locale (e.g. 'en-us')", max_length=5)
 
 	def __unicode__(self):
-		return unicode(self.title) or u''
+		return unicode(self.name) or u''
 
 class Category(models.Model):
 	name = models.CharField(max_length=200)
