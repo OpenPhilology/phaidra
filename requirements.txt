@@ -1,5 +1,4 @@
 Django==1.7
-JPype==0.5.4.2
 Markdown==2.5.1
 South==0.8.4
 argparse==1.2.1
@@ -7,6 +6,7 @@ decorator==3.4.0
 distribute==0.6.49
 django-filter==0.7
 django-tastypie==0.12.0
+html2text==2014.9.25
 httplib2==0.8
 lucene-querybuilder==0.2
 meld3==0.6.10
