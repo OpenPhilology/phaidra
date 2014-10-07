@@ -6,12 +6,17 @@ from django.contrib import admin
 admin.autodiscover()
 
 from tastypie.api import Api
-from api.api import UserResource, CreateUserResource, SubmissionResource
-from api.api import WordResource, SentenceResource, DocumentResource, LemmaResource
-from api.user import UserSentenceResource, UserDocumentResource
-from api.api import VisualizationResource
+
+from api.user import UserResource, CreateUserResource
+from api.contribute import UserSentenceResource, UserDocumentResource
 from api.grammar import GrammarResource
 from api.content import ContentResource
+from api.submission import SubmissionResource
+from api.visualization import VisualizationResource
+from api.document import DocumentResource
+from api.sentence import SentenceResource
+from api.word import WordResource
+from api.lemma import LemmaResource
 
 v1_api = Api(api_name='v1')
 v1_api.register(UserResource())
