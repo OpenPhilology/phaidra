@@ -8,4 +8,4 @@ class ContentResource(ModelResource):
 		allowed_methods = ['get']
 	
 	def dehydrate_content(self, bundle):
-		return markdown.markdown(bundle.data['content'], ['common.utils.mdx_tips'])
+		return markdown.markdown(bundle.data['content'], ['markdown.extensions.tables'])
