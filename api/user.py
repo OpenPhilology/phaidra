@@ -63,7 +63,7 @@ class UserResource(ModelResource):
 		fields = ['username', 'first_name', 'last_name', 'last_login', 'lang', 'readingCTS']
 		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
-		authentication = BasicAuthentication()
+		authentication = SessionAuthentication()
 		authorization = Authorization()
 		validation =  ResourceValidation()
 
