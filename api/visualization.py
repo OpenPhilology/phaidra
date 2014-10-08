@@ -11,7 +11,9 @@ from tastypie.resources import Resource
 from neo4jrestclient.client import GraphDatabase
 
 from datetime import datetime
-from dateutil import parser
+import dateutil.parser
+
+from app.models import Grammar
 
 import json
 import operator
@@ -43,13 +45,11 @@ class VisualizationResource(Resource):
         
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)    
         submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + user + """' RETURN s""")    
-        
-        # get the file entry:
-        filename = os.path.join(os.path.dirname(__file__), '../static/json/smyth.json')
-        fileContent = {}
-        with open(filename, 'r') as json_data:
-            fileContent = json.load(json_data)
-            json_data.close()            
+                    
+        #filename = os.path.join(os.path.dirname(__file__), '../static/json/smyth.json')
+        #fileContent = {}
+        #with open(filename, 'r') as json_data:
+            #fileContent = json.load(json_data); json_data.close()                                  
                         
         vocab = {}
         smyth = {}        
@@ -75,14 +75,15 @@ class VisualizationResource(Resource):
                             continue
                     if sub[0]['data']['smyth'] not in smyth:
                         # get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
-                        params = {}
+                        #smyth[sub[0]['data']['smyth']] = grammar[sub[0]['data']['smyth']]
                         try:
-                            grammarParams = fileContent[0][sub[0]['data']['smyth']]['query'].split('&')
-                            for pair in grammarParams:
-                                params[pair.split('=')[0]] = pair.split('=')[1]
+                            params = {}
+                            grammar = Grammar.objects.filter(ref=sub[0]['data']['smyth'])[0].query.split('&')
+                            for pair in params:
+                                params[pair.split('=')[0]] = pair.split('=')[1] 
                             smyth[sub[0]['data']['smyth']] = params
-                        except KeyError as k:
-                            continue
+                        except IndexError as k:
+                            continue                        
             except KeyError as k:
                 continue
         
@@ -387,35 +388,18 @@ class VisualizationResource(Resource):
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
         
         accuracy = {}
-        title = {}
-        query = {}
-
-        # get the file smyth entry:
-        filename = os.path.join(os.path.dirname(__file__), '../static/json/smyth.json')
-        fileContent = {}
-        with open(filename, 'r') as json_data:
-            fileContent = json.load(json_data)
-            json_data.close()            
-
-        for entry in fileContent[0].keys():
-            try:
-                query[entry] = fileContent[0][entry]['query']
-                title[entry] = fileContent[0][entry]['title']
-            except TypeError as t:
-                return self.error_response(request, {'error': 'Under construction. Smyth data structure changed...'}, response_class=HttpBadRequest)
 
         # process accuracy of grammar of submissions of a user
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)    
         submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")            
                                     
         # get the accuray per smyth key
-        for sub in submissions.elements:
-            if sub[0]['data']['accuracy'] < 50:                                
-                try:
-                    accuracy[sub[0]['data']['smyth']].append(sub[0]['data']['accuracy'])  
-                except KeyError as k:
-                    accuracy[sub[0]['data']['smyth']] = []
-                    accuracy[sub[0]['data']['smyth']].append(sub[0]['data']['accuracy'])
+        for sub in submissions.elements:                               
+            try:
+                accuracy[sub[0]['data']['smyth']].append(sub[0]['data']['accuracy'])  
+            except KeyError as k:
+                accuracy[sub[0]['data']['smyth']] = []
+                accuracy[sub[0]['data']['smyth']].append(sub[0]['data']['accuracy'])
         
         # calculate the averages and sort by it
         average = {}
@@ -426,10 +410,12 @@ class VisualizationResource(Resource):
             average[smyth] = average[smyth]/len(accuracy[smyth]) 
         
         sorted_dict = sorted(average.iteritems(), key=operator.itemgetter(1))
-        #sorted_reverse = sorted.reverse()
+        #sorted_reverse = sorted.reverse()                         
                 
         for entry in sorted_dict:
-            data['accuracy_ranking'].append({'smyth': entry[0], 'average': average[entry[0]], 'title': title[entry[0]], 'query': query[entry[0]]})
+            data['accuracy_ranking'].append({'smyth': entry[0], 'average': average[entry[0]],
+                                             'title': Grammar.objects.filter(ref=entry[0])[0].title,
+                                             'query': Grammar.objects.filter(ref=entry[0])[0].query})
     
         #return the json
         return self.create_response(request, data)
@@ -445,22 +431,6 @@ class VisualizationResource(Resource):
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
         
         time = {}
-        title = {}
-        query = {}
-
-        # get the file smyth entry:
-        filename = os.path.join(os.path.dirname(__file__), '../static/json/smyth.json')
-        fileContent = {}
-        with open(filename, 'r') as json_data:
-            fileContent = json.load(json_data)
-            json_data.close()            
-
-        for entry in fileContent[0].keys():
-            try:
-                query[entry] = fileContent[0][entry]['query']
-                title[entry] = fileContent[0][entry]['title']
-            except TypeError as t:
-                return self.error_response(request, {'error': 'Under construction. Smyth data structure changed...'}, response_class=HttpBadRequest)
 
         # process time of grammar of submissions of a user
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)    
@@ -475,9 +445,7 @@ class VisualizationResource(Resource):
             if len(sub[0]['data']['smyth']) == 0:
                 return self.error_response(request, {'error': 'Smyth keys are necessary for calculating averaged lesson progress.'}, response_class=HttpBadRequest)
             
-            t=sub[0]['data']['timestamp']
-            t=t[:len(t)-5]
-            t=parser.parse(t.replace('T', ' '))
+            t = dateutil.parser.parse(sub[0]['data']['timestamp'])
             diff = (t-unix).total_seconds()                                                                            
             try:                    
                 time[sub[0]['data']['smyth']].append(diff)  
@@ -501,7 +469,11 @@ class VisualizationResource(Resource):
         #sorted_reverse = sorted_dict.reverse()
                 
         for entry in sorted_dict:
-            data['time_ranking'].append({'smyth': entry[0], 'average': average[entry[0]], 'title': title[entry[0]], 'query': query[entry[0]]})
+            data['time_ranking'].append({'smyth': entry[0],
+                                         'average': average[entry[0]],
+                                         'title': Grammar.objects.filter(ref=entry[0])[0].title,
+                                         'query': Grammar.objects.filter(ref=entry[0])[0].query})
     
         #return the json
         return self.create_response(request, data)
+    

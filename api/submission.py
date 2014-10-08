@@ -14,6 +14,8 @@ from tastypie.cache import SimpleCache
 
 from neo4jrestclient.client import GraphDatabase
 
+from app.models import Grammar
+
 import json
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
@@ -116,7 +118,7 @@ class SubmissionResource(Resource):
         object_class = DataObject
         resource_name = 'submission'
         allowed_methods = ['post', 'get', 'patch']
-        authentication = SessionAuthentication() 
+        authentication = BasicAuthentication() 
         authorization = SubmissionAuthorization()
         cache = SimpleCache(timeout=None)
         validation =  ResourceValidation()
@@ -222,18 +224,10 @@ class SubmissionResource(Resource):
             userNode.submits(subms)
             
             # set links between the smyth key filtered words and the user
-            # get the file entry:
-            filename = os.path.join(os.path.dirname(__file__), '../static/json/smyth.json')
-            fileContent = {}
-            query_params = {}
-            with open(filename, 'r') as json_data:
-                fileContent = json.load(json_data)
-                json_data.close()
-            
             # create the query    
             q = """MATCH (w:`Word`) WHERE """
             try:
-                grammarParams = fileContent[0][data.get("smyth")]['query'].split('&')
+                grammarParams = Grammar.objects.filter(ref=data.get("smyth"))[0].query.split('&')
                 for pair in grammarParams:
                     if len(pair.split('=')[0].split('__')) == 1:
                         attribute = pair.split('=')[0]

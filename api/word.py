@@ -8,6 +8,8 @@ from tastypie.cache import SimpleCache
 
 from neo4jrestclient.client import GraphDatabase
 
+from app.models import Grammar
+
 import json
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
@@ -78,16 +80,10 @@ class WordResource(Resource):
         query_params = {}
         
         if request.GET.get('smyth'):
-            
-            # get the file entry:
-            filename = os.path.join(os.path.dirname(__file__), '../static/json/smyth.json')
-            fileContent = {}
-            with open(filename, 'r') as json_data:
-                fileContent = json.load(json_data)
-                json_data.close()
                 
             try:
-                grammarParams = fileContent[0][request.GET.get('smyth')]['query'].split('&')        
+                #grammarParams = fileContent[0][request.GET.get('smyth')]['query'].split('&')
+                grammarParams = Grammar.objects.filter(ref=request.GET.get('smyth'))[0].query.split('&')        
                 for pair in grammarParams:
                     query_params[pair.split('=')[0]] = pair.split('=')[1]
             except KeyError as k:
