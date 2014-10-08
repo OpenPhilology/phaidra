@@ -29,20 +29,20 @@ class AppUser(AbstractUser):
 
 class Grammar(models.Model):
 	ref = models.CharField("reference to the grammar book section", max_length=10, unique=True)
-	external_link = models.CharField("external url for reference lookup", max_length=200)
-	query = models.CharField("query string", max_length=200)
+	external_link = models.CharField("external url for reference lookup", max_length=200, null=True, blank=True)
+	query = models.CharField("query string", max_length=200, null=True, blank=True)
 	title = models.CharField("title of grammar section", max_length=200)
 	category = models.ForeignKey(Category)
 
 	class Meta:
-		ordering = ['ref']
+		ordering = ['title']
 
 	def __unicode__(self):
 		return unicode(self.title) or u''
 
 class Content(models.Model):
 	title = models.CharField("title of contents", max_length=200)
-	grammar_ref = models.ForeignKey(Grammar, verbose_name="corresponding grammar reference")
+	grammar_ref = models.ForeignKey(Grammar, verbose_name="corresponding grammar reference", null=True, blank=True)
 	source_lang = models.ForeignKey(Language, related_name='content_written_in')
 	target_lang = models.ForeignKey(Language, related_name='content_written_about')
 	content = models.TextField("content written in markdown")

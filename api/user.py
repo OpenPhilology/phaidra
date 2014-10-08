@@ -183,9 +183,3 @@ class UserResource(ModelResource):
 				data[property_name] = getattr(user, property_name)
 	
 			return self.create_response(request, data)
-     
-       
-
-
-
- 	

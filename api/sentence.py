@@ -324,5 +324,3 @@ class SentenceResource(Resource):
                     return sorted(aim_words, key=lambda x: x['tbwid'])
                                     
         return None
-
- 
