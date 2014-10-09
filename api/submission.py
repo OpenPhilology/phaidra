@@ -223,8 +223,7 @@ class SubmissionResource(Resource):
             # Form the connections from the new Submission node to the existing slide and user nodes
             userNode.submits(subms)
             
-            # set links between the smyth key filtered words and the user
-            # create the query    
+            # set links between the smyth key filtered words and the user... 
             q = """MATCH (w:`Word`) WHERE """
             try:
                 grammarParams = Grammar.objects.filter(ref=data.get("smyth"))[0].query.split('&')
@@ -250,41 +249,30 @@ class SubmissionResource(Resource):
             except:
                 return self.error_response(request, {'error': 'Smyth data could not be processed.' }, response_class=HttpBadRequest)
             
-            # set the user word links
+            # ... if not already known
             table = gdb.query(q)
             for t in table:
                 word = gdb.nodes.get(t[0]['self'])
-                userNode.knows_grammar(word)
+                knows_grammar = gdb.query("""MATCH (u:`User`)-[kg:knows_grammar]->(w:`Word`) WHERE HAS (w.CTS) AND w.CTS='""" + t[0]['data']['CTS'] + """' RETURN kg""")
+                if len(knows_grammar) < 1:
+                    userNode.knows_grammar(word)              
+                
             
-            # set links between the lemmas of the encountered words (as vocab knowledge) and the encountered words themselves to check times_seen of the user
-            lemma_candidates = []
-            word_candidates = []
-            for cts in data.get("encounteredWords"):
-                table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN l,w""")
-                word_unknown = True
-                lemma_unknown = True
-                lemma = gdb.nodes.get(table[0][0]['self'])
-                word = gdb.nodes.get(table[0][1]['self'])
-                # check the ends of a user's relationships
-                for rel in userNode.relationships.outgoing(["knows_vocab"])[:]:
-                    if word == rel.end:
-                        counter = rel.properties['times_seen']+1
-                        rel.properties = {'times_seen':counter}                                            
-                        word_unknown = False
-                        lemma_unknown = False    
-                    if lemma == rel.end:
-                        lemma_unknown = False
-                # save candidates
-                if word_unknown:
-                    word_candidates.append(word)
-                if lemma_unknown:
-                    lemma_candidates.append(lemma)
-            
-            # create the actual relations after processing the words
-            for lemma in lemma_candidates:
-                userNode.knows_vocab(lemma)
-            for word in word_candidates:
-                userNode.knows_vocab(word, times_seen=1)
+            # set links between the lemmas of the encountered words (as vocab knowledge) and the words themselves, if the encountered words were not already known, otherwise increase times_seen
+            for cts in data.get("encounteredWords"):    
+                relation = gdb.query("""MATCH (u:`User`)-[kv:knows_vocab]->(w:`Word`)<-[:values]-(l:`Lemma`) 
+                                    WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' and u.username='""" + request.user.username + """' RETURN kv, w, l""")
+                try:
+                   times = relation[0][0]['data']['times_seen']+1
+                   id = relation[0][0]['self'].split('/')[len(relation[0][0]['self'].split('/'))-1]  
+                   rel = gdb.relationships.get(id)
+                   rel.properties = {'times_seen':times}      
+                except Error as e:   
+                    table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN w, l""")           
+                    word = gdb.nodes.get(table[0][0]['self'])
+                    lemma = gdb.nodes.get(table[0][1]['self'])
+                    userNode.knows_vocab(word, times_seen=1)
+                    userNode.knows_vocab(lemma)
                     
             # create the body
             body = json.loads(request.body) if type(request.body) is str else request.body
@@ -292,3 +280,8 @@ class SubmissionResource(Resource):
             return self.create_response(request, body)
         else:
             return self.error_response(request, {'error': 'User is required.' }, response_class=HttpBadRequest)
+        
+        
+        
+        
+        
