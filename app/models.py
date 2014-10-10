@@ -28,10 +28,10 @@ class AppUser(AbstractUser):
 		return unicode(self.username) or u''
 
 class Grammar(models.Model):
-	ref = models.CharField("reference to the grammar book section", max_length=10, unique=True)
-	external_link = models.CharField("external url for reference lookup", max_length=200, null=True, blank=True)
-	query = models.CharField("query string", max_length=200, null=True, blank=True)
-	title = models.CharField("title of grammar section", max_length=200)
+	ref = models.CharField("Reference", max_length=10, unique=True, help_text="Refers to the section of the grammar book you're using.")
+	external_link = models.CharField("external url", max_length=200, null=True, blank=True, help_text='Link to section in the grammar book itself')
+	query = models.CharField("query string", max_length=200, null=True, blank=True, help_text='Describe the morphology of words that fit this grammar topic')
+	title = models.CharField("title of grammar section", max_length=200, help_text='Short, descriptive title of the grammar concept.')
 	category = models.ForeignKey(Category)
 
 	class Meta:
@@ -41,12 +41,12 @@ class Grammar(models.Model):
 		return unicode(self.title) or u''
 
 class Content(models.Model):
-	title = models.CharField("title of contents", max_length=200)
-	grammar_ref = models.OneToOneField(Grammar, verbose_name="corresponding grammar reference", null=True, blank=True)
-	related_topics = models.ManyToManyField(Grammar, verbose_name='related grammar topics', null=True, blank=True, related_name='relates_to')
-	source_lang = models.ForeignKey(Language, related_name='content_written_in')
-	target_lang = models.ForeignKey(Language, related_name='content_written_about')
-	content = models.TextField("content written in markdown")
+	title = models.CharField("title", max_length=200, help_text='Short, descriptive title of what content is in this section')
+	grammar_ref = models.OneToOneField(Grammar, verbose_name="corresponding grammar reference", null=True, blank=True, help_text='The morphology directly described by this content.')
+	related_topics = models.ManyToManyField(Grammar, verbose_name='related grammar topics', null=True, blank=True, related_name='Topics that would help someone answer questions about this topic (e.g. "Intro to Verbs" is related to "The Aorist Tense").')
+	source_lang = models.ForeignKey(Language, related_name='content_written_in', help_text='Language the content is written in')
+	target_lang = models.ForeignKey(Language, related_name='content_written_about', help_text='Language the content is teaching')
+	content = models.TextField("Learning Content", help_text='Write this in <a href="https://github.com/OpenPhilology/phaidra/wiki/Phaidra-flavored-Markdown" target="_blank">Phaidra-flavored Markdown</a>.')
 
 	def __unicode__(self):
 		return unicode(self.title) or u''
