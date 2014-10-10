@@ -13,13 +13,14 @@ class Language(models.Model):
 class Category(models.Model):
 	name = models.CharField(max_length=200)
 
+	class Meta:
+		verbose_name_plural = 'categories'
+
 	def __unicode__(self):
 		return unicode(self.name) or u''
 
 class AppUser(AbstractUser):
-	
 	objects = UserManager()
-	
 	lang_learning = models.ForeignKey(Language, related_name='learning', null=True)
 	lang_speaking = models.ForeignKey(Language, related_name='speaking', null=True) 
 	
@@ -41,7 +42,7 @@ class Grammar(models.Model):
 
 class Content(models.Model):
 	title = models.CharField("title of contents", max_length=200)
-	grammar_ref = models.ForeignKey(Grammar, verbose_name="corresponding grammar reference", null=True, blank=True)
+	grammar_ref = models.OneToOneField(Grammar, verbose_name="corresponding grammar reference", null=True, blank=True)
 	related_topics = models.ManyToManyField(Grammar, verbose_name='related grammar topics', null=True, blank=True, related_name='relates_to')
 	source_lang = models.ForeignKey(Language, related_name='content_written_in')
 	target_lang = models.ForeignKey(Language, related_name='content_written_about')
