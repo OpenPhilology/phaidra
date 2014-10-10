@@ -7,3 +7,4 @@ logs/*
 .sass-cache/
 node_modules/*
 *.*~
+static/collected
