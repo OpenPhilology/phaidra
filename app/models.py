@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, UserManager
-from django.utils.text import slugify
 
 class Language(models.Model):
 	name = models.CharField("language name (english)", max_length=200)
@@ -43,6 +42,7 @@ class Grammar(models.Model):
 class Content(models.Model):
 	title = models.CharField("title of contents", max_length=200)
 	grammar_ref = models.ForeignKey(Grammar, verbose_name="corresponding grammar reference", null=True, blank=True)
+	related_topics = models.ManyToManyField(Grammar, verbose_name='related grammar topics', null=True, blank=True, related_name='relates_to')
 	source_lang = models.ForeignKey(Language, related_name='content_written_in')
 	target_lang = models.ForeignKey(Language, related_name='content_written_about')
 	content = models.TextField("content written in markdown")
