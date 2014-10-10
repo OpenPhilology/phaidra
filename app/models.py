@@ -13,13 +13,14 @@ class Language(models.Model):
 class Category(models.Model):
 	name = models.CharField(max_length=200)
 
+	class Meta:
+		verbose_name_plural = 'categories'
+
 	def __unicode__(self):
 		return unicode(self.name) or u''
 
 class AppUser(AbstractUser):
-	
 	objects = UserManager()
-	
 	lang_learning = models.ForeignKey(Language, related_name='learning', null=True)
 	lang_speaking = models.ForeignKey(Language, related_name='speaking', null=True) 
 	
