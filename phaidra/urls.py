@@ -9,8 +9,6 @@ from tastypie.api import Api
 
 from api.user import UserResource, CreateUserResource
 from api.contribute import UserSentenceResource, UserDocumentResource
-from api.grammar import GrammarResource
-from api.content import ContentResource
 from api.submission import SubmissionResource
 from api.visualization import VisualizationResource
 from api.document import DocumentResource
@@ -18,11 +16,16 @@ from api.sentence import SentenceResource
 from api.word import WordResource
 from api.lemma import LemmaResource
 
+from api.grammar import GrammarResource
+from api.content import ContentResource
+from api.language import LanguageResource
+
 v1_api = Api(api_name='v1')
 v1_api.register(UserResource())
 v1_api.register(CreateUserResource())
 v1_api.register(GrammarResource())
 v1_api.register(ContentResource())
+v1_api.register(LanguageResource())
 
 v1_api.register(WordResource())
 v1_api.register(SentenceResource())

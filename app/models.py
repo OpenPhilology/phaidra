@@ -4,10 +4,16 @@ from django.utils.safestring import SafeString
 from django.template.defaultfilters import truncatechars
 
 class Language(models.Model):
+	DIRECTION_CHOICES = (
+		('ltr', 'Left-to-right'),
+		('rtl', 'Right-to-left')
+	)
 	name = models.CharField("language name (english)", max_length=200, help_text='(e.g. German)')
 	local_name = models.CharField("language name", max_length=200, help_text='(e.g. Deutsch)')
 	locale = models.CharField("language code", max_length=5, help_text='(e.g. de-at)')
 	short_code = models.CharField("shortcode", max_length=5, help_text='(e.g. \'de\')')
+	direction = models.CharField('text direction', choices=DIRECTION_CHOICES, max_length=3)
+	modern = models.BooleanField('modern', help_text='Check this box if this is a modern language.', default=True)
 
 	def __unicode__(self):
 		return unicode(self.name) or u''
@@ -24,8 +30,8 @@ class Category(models.Model):
 
 class AppUser(AbstractUser):
 	objects = UserManager()
-	lang_learning = models.ForeignKey(Language, related_name='learning', null=True, help_text='Language the user is learning.')
-	lang_speaking = models.ForeignKey(Language, related_name='speaking', null=True, help_text='Language teh user speaks.') 
+	lang_learning = models.ForeignKey(Language, verbose_name='Learning Language', related_name='learning', null=True, help_text='Language the user is learning.')
+	lang_speaking = models.ForeignKey(Language, verbose_name='Speaks Language', related_name='speaking', null=True, help_text='Language the user speaks.') 
 	
 	def __unicode__(self):
 		return unicode(self.username) or u''
