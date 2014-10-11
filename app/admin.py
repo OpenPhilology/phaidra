@@ -65,9 +65,34 @@ class TaskContextAdmin(admin.ModelAdmin):
 		models.TextField: { 'widget': LargeTextarea },
 	}
 
-admin.site.register(AppUser)
-admin.site.register(Language)
-admin.site.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+	list_display = ('name', 'graphic')
+
+	formfield_overrides = {
+		models.CharField: { 'widget': LargeTextInput },
+		models.TextField: { 'widget': LargeTextarea },
+	}
+
+class LanguageAdmin(admin.ModelAdmin):
+	list_display = ('name', 'local_name', 'locale', 'short_code', 'direction')
+
+	formfield_overrides = {
+		models.CharField: { 'widget': LargeTextInput },
+		models.TextField: { 'widget': LargeTextarea },
+	}
+
+class AppUserAdmin(admin.ModelAdmin):
+	list_display = ('username', 'first_name', 'last_name', 'last_login', 'lang_learning', 'lang_speaking')
+
+	formfield_overrides = {
+		models.CharField: { 'widget': LargeTextInput },
+		models.TextField: { 'widget': LargeTextarea },
+	}
+
+
+admin.site.register(AppUser, AppUserAdmin)
+admin.site.register(Language, LanguageAdmin)
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(Grammar, GrammarAdmin)
 admin.site.register(Content, ContentAdmin)
 admin.site.register(Aspect)

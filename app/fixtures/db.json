@@ -3,6 +3,7 @@
     "fields": {
         "locale": "en-us",
         "short_code": "en",
+        "direction": "ltr",
         "name": "English",
         "local_name": "English"
     },
@@ -13,11 +14,34 @@
     "fields": {
         "locale": "gr-el",
         "short_code": "grc",
+        "direction": "ltr",
         "name": "Ancient Greek",
         "local_name": "Ancient Greek"
     },
     "model": "app.language",
     "pk": 5
+},
+{
+    "fields": {
+        "locale": "fa-IR",
+        "short_code": "fa",
+        "direction": "rtl",
+        "name": "Farsi",
+        "local_name": "\u0641\u0627\u0631\u0633\u06cc\u200e"
+    },
+    "model": "app.language",
+    "pk": 6
+},
+{
+    "fields": {
+        "locale": "de-de",
+        "short_code": "de",
+        "direction": "ltr",
+        "name": "German",
+        "local_name": "Deutsch"
+    },
+    "model": "app.language",
+    "pk": 7
 },
 {
     "fields": {
@@ -37,7 +61,7 @@
 },
 {
     "fields": {
-        "graphic": null,
+        "graphic": "icon_grk_parthenon.png",
         "name": "Adjectives"
     },
     "model": "app.category",
@@ -45,7 +69,7 @@
 },
 {
     "fields": {
-        "graphic": null,
+        "graphic": "icon_grk_amphora.png",
         "name": "Foundational"
     },
     "model": "app.category",
@@ -53,7 +77,7 @@
 },
 {
     "fields": {
-        "graphic": null,
+        "graphic": "icon_grk_monster.png",
         "name": "Adverbs"
     },
     "model": "app.category",
@@ -108,7 +132,7 @@
 },
 {
     "fields": {
-        "endpoint": "sentence",
+        "endpoint": "word",
         "success_msg": "Bravo!",
         "name": "build_tree",
         "aspect": [
@@ -4350,19 +4374,19 @@
 {
     "fields": {
         "username": "monica",
-        "first_name": "",
-        "last_name": "",
-        "lang_speaking": null,
+        "first_name": "Monica",
+        "last_name": "Lent",
+        "lang_speaking": 4,
         "is_active": true,
-        "lang_learning": null,
+        "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-10-10T06:20:19.528Z",
+        "last_login": "2014-10-10T06:20:19Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$OQeapR8t70Mz$t/UHAUZyIUG0Zxl7LFYDup2wSpLox0Qo9t6XoUzZGBc=",
         "email": "lent.monica@gmail.com",
-        "date_joined": "2014-10-05T12:13:12.790Z"
+        "date_joined": "2014-10-05T12:13:12Z"
     },
     "model": "app.appuser",
     "pk": 1
@@ -4370,19 +4394,19 @@
 {
     "fields": {
         "username": "john",
-        "first_name": "",
-        "last_name": "",
-        "lang_speaking": null,
+        "first_name": "Maria",
+        "last_name": "Moritz ;)",
+        "lang_speaking": 7,
         "is_active": true,
-        "lang_learning": null,
+        "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-10-07T14:02:27.394Z",
+        "last_login": "2014-10-07T14:02:27Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$6Gs8pgo4CvVb$DEZ2DKa9WLJHhuhAbt/7XMzcEIAKL3Fd8sggOya+7Ds=",
         "email": "john@thebeatles.com",
-        "date_joined": "2014-10-07T14:02:27.394Z"
+        "date_joined": "2014-10-07T14:02:27Z"
     },
     "model": "app.appuser",
     "pk": 2
@@ -10028,5 +10052,109 @@
     },
     "model": "admin.logentry",
     "pk": 436
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:07:00.758Z",
+        "object_repr": "Adverbs",
+        "object_id": "5",
+        "change_message": "Changed graphic.",
+        "user": 1,
+        "content_type": 2
+    },
+    "model": "admin.logentry",
+    "pk": 437
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:09:21.513Z",
+        "object_repr": "Foundational",
+        "object_id": "4",
+        "change_message": "Changed graphic.",
+        "user": 1,
+        "content_type": 2
+    },
+    "model": "admin.logentry",
+    "pk": 438
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:09:52.149Z",
+        "object_repr": "Adjectives",
+        "object_id": "3",
+        "change_message": "Changed graphic.",
+        "user": 1,
+        "content_type": 2
+    },
+    "model": "admin.logentry",
+    "pk": 439
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T14:33:11.242Z",
+        "object_repr": "Farsi",
+        "object_id": "6",
+        "change_message": "",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 440
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:35:16.628Z",
+        "object_repr": "build_tree",
+        "object_id": "3",
+        "change_message": "Changed endpoint.",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 441
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:39:38.921Z",
+        "object_repr": "monica",
+        "object_id": "1",
+        "change_message": "Changed first_name, last_name, lang_learning and lang_speaking.",
+        "user": 1,
+        "content_type": 3
+    },
+    "model": "admin.logentry",
+    "pk": 442
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T14:40:18.740Z",
+        "object_repr": "German",
+        "object_id": "7",
+        "change_message": "",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 443
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:41:03.382Z",
+        "object_repr": "john",
+        "object_id": "2",
+        "change_message": "Changed first_name, last_name, lang_learning and lang_speaking.",
+        "user": 1,
+        "content_type": 3
+    },
+    "model": "admin.logentry",
+    "pk": 444
 }
 ]
