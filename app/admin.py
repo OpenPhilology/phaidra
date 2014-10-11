@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import Language, Category, AppUser, Grammar, Content  
+from app.models import Language, Category, AppUser, Grammar, Content, Aspect, Task, TaskSequence, TaskContext
 from django import forms
 from django.db import models
 
@@ -27,19 +27,42 @@ class GrammarAdmin(admin.ModelAdmin):
 	formfield_overrides = {
 		models.CharField: { 'widget': LargeTextInput },
 		models.TextField: { 'widget': LargeTextarea },
-		# models.MultipleChoiceField: { 'widget': LargeSelectMultiple }
 	}
 
 class ContentAdmin(admin.ModelAdmin):
 	list_filter = ('title', 'grammar_ref')
-	list_display = ['title', 'grammar_ref', 'source_lang', 'target_lang', 'related_topics']
+	list_display = ('title', 'content_preview', 'grammar_ref', 'all_related_topics')
 	filter_vertical = ('related_topics',)
 	list_display_links = ('title',)
 
 	formfield_overrides = {
 		models.CharField: { 'widget': LargeTextInput },
 		models.TextField: { 'widget': LargeTextarea },
-		# models.MultipleChoiceField: { 'widget': LargeSelectMultiple }
+	}
+
+class TaskAdmin(admin.ModelAdmin):
+	list_display = ('name', 'endpoint', 'success_msg', 'hint_msg')	
+	list_display_links = ('name',)
+
+	formfield_overrides = {
+		models.CharField: { 'widget': LargeTextInput },
+		models.TextField: { 'widget': LargeTextarea },
+	}
+
+class TaskSequenceAdmin(admin.ModelAdmin):
+	list_display = ('name', 'all_tasks')
+
+	formfield_overrides = {
+		models.CharField: { 'widget': LargeTextInput },
+		models.TextField: { 'widget': LargeTextarea },
+	}
+
+class TaskContextAdmin(admin.ModelAdmin):
+	list_display = ('task', 'task_sequence', 'order', 'target_accuracy', 'max_attempts')
+
+	formfield_overrides = {
+		models.CharField: { 'widget': LargeTextInput },
+		models.TextField: { 'widget': LargeTextarea },
 	}
 
 admin.site.register(AppUser)
@@ -47,4 +70,7 @@ admin.site.register(Language)
 admin.site.register(Category)
 admin.site.register(Grammar, GrammarAdmin)
 admin.site.register(Content, ContentAdmin)
-
+admin.site.register(Aspect)
+admin.site.register(Task, TaskAdmin)
+admin.site.register(TaskSequence, TaskSequenceAdmin)
+admin.site.register(TaskContext, TaskContextAdmin)

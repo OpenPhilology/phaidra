@@ -1,8 +1,8 @@
 [
 {
     "fields": {
-        "short_code": "en",
         "locale": "en-us",
+        "short_code": "en",
         "name": "English",
         "local_name": "English"
     },
@@ -11,8 +11,8 @@
 },
 {
     "fields": {
-        "short_code": "grc",
         "locale": "gr-el",
+        "short_code": "grc",
         "name": "Ancient Greek",
         "local_name": "Ancient Greek"
     },
@@ -21,6 +21,7 @@
 },
 {
     "fields": {
+        "graphic": null,
         "name": "Nouns"
     },
     "model": "app.category",
@@ -28,6 +29,7 @@
 },
 {
     "fields": {
+        "graphic": null,
         "name": "Verbs"
     },
     "model": "app.category",
@@ -35,6 +37,7 @@
 },
 {
     "fields": {
+        "graphic": null,
         "name": "Adjectives"
     },
     "model": "app.category",
@@ -42,6 +45,7 @@
 },
 {
     "fields": {
+        "graphic": null,
         "name": "Foundational"
     },
     "model": "app.category",
@@ -49,6 +53,7 @@
 },
 {
     "fields": {
+        "graphic": null,
         "name": "Adverbs"
     },
     "model": "app.category",
@@ -56,11 +61,217 @@
 },
 {
     "fields": {
+        "name": "V"
+    },
+    "model": "app.aspect",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "S"
+    },
+    "model": "app.aspect",
+    "pk": 2
+},
+{
+    "fields": {
+        "name": "M"
+    },
+    "model": "app.aspect",
+    "pk": 3
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Good job!",
+        "name": "translate_word",
+        "aspect": [
+            1
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 1
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Good job!",
+        "name": "align_phrase",
+        "aspect": [
+            1
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 2
+},
+{
+    "fields": {
+        "endpoint": "sentence",
+        "success_msg": "Bravo!",
+        "name": "build_tree",
+        "aspect": [
+            2,
+            3
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 3
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Good job!",
+        "name": "identify_morph:person",
+        "aspect": [
+            3
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 4
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Good job!",
+        "name": "identify_morph:number",
+        "aspect": [
+            3
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 5
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Super!",
+        "name": "identify_morph:gender",
+        "aspect": [
+            3
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 6
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Bravo!",
+        "name": "identify_morph:tense",
+        "aspect": [
+            3
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 7
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Bravo!",
+        "name": "identify_morph:voice",
+        "aspect": [
+            3
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 8
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Bravo!",
+        "name": "identify_morph:mood",
+        "aspect": [
+            3
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 9
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Bravo!",
+        "name": "identify_morph:case",
+        "aspect": [
+            1
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 10
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "Bravo!",
+        "name": "provide_article",
+        "aspect": [
+            3
+        ],
+        "hint_msg": "Try again."
+    },
+    "model": "app.task",
+    "pk": 11
+},
+{
+    "fields": {
+        "name": "Nouns for Beginners"
+    },
+    "model": "app.tasksequence",
+    "pk": 1
+},
+{
+    "fields": {
+        "task_sequence": 1,
+        "target_accuracy": 0.5,
+        "task": 1,
+        "order": 0,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 1
+},
+{
+    "fields": {
+        "task_sequence": 1,
+        "target_accuracy": 0.8,
+        "task": 11,
+        "order": 1,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 2
+},
+{
+    "fields": {
+        "task_sequence": 1,
+        "target_accuracy": 0.8,
+        "task": 5,
+        "order": 2,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 3
+},
+{
+    "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s1",
+        "tasks": null,
+        "title": "Reading Greek - Ancient Greek Alphabet",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1",
-        "title": "Reading Greek - Ancient Greek Alphabet"
+        "query": "lang=grc",
+        "ref": "s1"
     },
     "model": "app.grammar",
     "pk": 1
@@ -68,10 +279,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s4",
+        "tasks": null,
+        "title": "Reading Greek - Long and Short Vowels",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s4",
-        "title": "Reading Greek - Long and Short Vowels"
+        "query": "lang=grc",
+        "ref": "s4"
     },
     "model": "app.grammar",
     "pk": 2
@@ -79,10 +291,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s5#a",
+        "tasks": null,
+        "title": "Reading Greek - Dipthongs",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s5",
-        "title": "Reading Greek - Dipthongs"
+        "query": "lang=grc",
+        "ref": "s5#a"
     },
     "model": "app.grammar",
     "pk": 3
@@ -90,10 +303,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s5#b",
+        "tasks": null,
+        "title": "Reading Greek - Iota Subscript",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s5",
-        "title": "Reading Greek - Iota Subscript"
+        "query": "lang=grc",
+        "ref": "s5#b"
     },
     "model": "app.grammar",
     "pk": 4
@@ -101,10 +315,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s9#a",
+        "tasks": null,
+        "title": "Reading Greek - Rough Breathing",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s9#a",
-        "title": "Reading Greek - Rough Breathing"
+        "query": "lang=grc",
+        "ref": "s9#a"
     },
     "model": "app.grammar",
     "pk": 5
@@ -112,10 +327,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s9#b",
+        "tasks": null,
+        "title": "Reading Greek - Smooth Breathing",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s9",
-        "title": "Reading Greek - Smooth Breathing"
+        "query": "lang=grc",
+        "ref": "s9#b"
     },
     "model": "app.grammar",
     "pk": 6
@@ -123,10 +339,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "pos=noun&lemma__contains=\u03b3\u03b3",
-        "ref": "s19#a",
+        "tasks": null,
+        "title": "Reading Greek - Gamma Nasal",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=ss19",
-        "title": "Reading Greek - Gamma Nasal"
+        "query": "pos=noun&lemma__contains=\u03b3\u03b3",
+        "ref": "s19#a"
     },
     "model": "app.grammar",
     "pk": 7
@@ -134,10 +351,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s149",
+        "tasks": null,
+        "title": "Reading Greek - Introduction to Accents",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
-        "title": "Reading Greek - Introduction to Accents"
+        "query": "lang=grc",
+        "ref": "s149"
     },
     "model": "app.grammar",
     "pk": 8
@@ -145,10 +363,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s149#a",
+        "tasks": null,
+        "title": "Reading Greek - Acute Accents",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
-        "title": "Reading Greek - Acute Accents"
+        "query": "lang=grc",
+        "ref": "s149#a"
     },
     "model": "app.grammar",
     "pk": 9
@@ -156,10 +375,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s149#b",
+        "tasks": null,
+        "title": "Reading Greek - Circumflex Accents",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
-        "title": "Reading Greek - Circumflex Accents"
+        "query": "lang=grc",
+        "ref": "s149#b"
     },
     "model": "app.grammar",
     "pk": 10
@@ -167,10 +387,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "lang=grc",
-        "ref": "s149#c",
+        "tasks": null,
+        "title": "Reading Greek - Grave Accents",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
-        "title": "Reading Greek - Grave Accents"
+        "query": "lang=grc",
+        "ref": "s149#c"
     },
     "model": "app.grammar",
     "pk": 11
@@ -178,10 +399,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "pos=punct",
-        "ref": "s188",
+        "tasks": null,
+        "title": "Reading Greek - Marks of Punctuation",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s188",
-        "title": "Reading Greek - Marks of Punctuation"
+        "query": "pos=punct",
+        "ref": "s188"
     },
     "model": "app.grammar",
     "pk": 12
@@ -189,10 +411,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun",
-        "ref": "s194",
+        "tasks": null,
+        "title": "Nouns in Ancient Greek - Introduction",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s194",
-        "title": "Nouns in Ancient Greek - Introduction"
+        "query": "pos=noun",
+        "ref": "s194"
     },
     "model": "app.grammar",
     "pk": 13
@@ -200,10 +423,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun",
-        "ref": "s195",
+        "tasks": null,
+        "title": "Nouns in Ancient Greek - Number",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s195",
-        "title": "Nouns in Ancient Greek - Number"
+        "query": "pos=noun",
+        "ref": "s195"
     },
     "model": "app.grammar",
     "pk": 14
@@ -211,10 +435,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun",
-        "ref": "s196",
+        "tasks": null,
+        "title": "Nouns in Ancient Greek - Gender",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s196",
-        "title": "Nouns in Ancient Greek - Gender"
+        "query": "pos=noun",
+        "ref": "s196"
     },
     "model": "app.grammar",
     "pk": 15
@@ -222,10 +447,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun",
-        "ref": "s201",
+        "tasks": null,
+        "title": "Nouns in Ancient Greek - Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s201",
-        "title": "Nouns in Ancient Greek - Case"
+        "query": "pos=noun",
+        "ref": "s201"
     },
     "model": "app.grammar",
     "pk": 16
@@ -233,10 +459,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&posAdd=h_hs",
-        "ref": "s216",
+        "tasks": null,
+        "title": "The Alpha or First Declension",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s216",
-        "title": "The Alpha or First Declension"
+        "query": "pos=noun&posAdd=h_hs",
+        "ref": "s216"
     },
     "model": "app.grammar",
     "pk": 17
@@ -244,10 +471,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&gender=fem&lemma__endswith=\u03b1&posAdd__contains=h_hs",
-        "ref": "s217#a",
+        "tasks": null,
+        "title": "First Declension Nouns - Feminine (\u03b1-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s217#a",
-        "title": "First Declension Nouns - Feminine (\u03b1-stem)"
+        "query": "pos=noun&gender=fem&lemma__endswith=\u03b1&posAdd__contains=h_hs",
+        "ref": "s217#a"
     },
     "model": "app.grammar",
     "pk": 18
@@ -255,10 +483,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&gender=fem&lemma__endswith=\u03b7&posAdd__contains=h_hs",
-        "ref": "s217#c",
+        "tasks": null,
+        "title": "First Declension Nouns - Feminine (\u03b7-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s217",
-        "title": "First Declension Nouns - Feminine (\u03b7-stem)"
+        "query": "pos=noun&gender=fem&lemma__endswith=\u03b7&posAdd__contains=h_hs",
+        "ref": "s217#c"
     },
     "model": "app.grammar",
     "pk": 19
@@ -266,10 +495,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&gender=masc&posAdd__contains=hs_ou",
-        "ref": "s222",
+        "tasks": null,
+        "title": "First Declension Nouns - Masculine (\u03b7\u03c2-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s222",
-        "title": "First Declension Nouns - Masculine (\u03b7\u03c2-stem)"
+        "query": "pos=noun&gender=masc&posAdd__contains=hs_ou",
+        "ref": "s222"
     },
     "model": "app.grammar",
     "pk": 20
@@ -277,10 +507,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&gender=masc&posAdd__contains=os_ou",
-        "ref": "s228#a",
+        "tasks": null,
+        "title": "Second Declension Nouns - Masculine (\u03bf\u03c2-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s228",
-        "title": "Second Declension Nouns - Masculine (\u03bf\u03c2-stem)"
+        "query": "pos=noun&gender=masc&posAdd__contains=os_ou",
+        "ref": "s228#a"
     },
     "model": "app.grammar",
     "pk": 21
@@ -288,10 +519,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&gender=neut&posAdd__contains=os_ou",
-        "ref": "s228#b",
+        "tasks": null,
+        "title": "Second Declension Nouns - Neuter (\u03bf\u03bd-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s228",
-        "title": "Second Declension Nouns - Neuter (\u03bf\u03bd-stem)"
+        "query": "pos=noun&gender=neut&posAdd__contains=os_ou",
+        "ref": "s228#b"
     },
     "model": "app.grammar",
     "pk": 22
@@ -299,10 +531,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&gender=fem&posAdd__contains=os_ou",
-        "ref": "s232",
+        "tasks": null,
+        "title": "Second Declension Nouns - Feminine",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s232",
-        "title": "Second Declension Nouns - Feminine"
+        "query": "pos=noun&gender=fem&posAdd__contains=os_ou",
+        "ref": "s232"
     },
     "model": "app.grammar",
     "pk": 23
@@ -310,10 +543,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&posAdd__contains=is_idos",
-        "ref": "s255#2",
+        "tasks": null,
+        "title": "Third Declension Nouns - Masculine and Feminine",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s255",
-        "title": "Third Declension Nouns - Masculine and Feminine"
+        "query": "pos=noun&posAdd__contains=is_idos",
+        "ref": "s255#2"
     },
     "model": "app.grammar",
     "pk": 24
@@ -321,10 +555,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&gender=neut&posAdd__contains=ma_matos",
-        "ref": "s255#3",
+        "tasks": null,
+        "title": "Third Declension Nouns - Neuter",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s255",
-        "title": "Third Declension Nouns - Neuter"
+        "query": "pos=noun&gender=neut&posAdd__contains=ma_matos",
+        "ref": "s255#3"
     },
     "model": "app.grammar",
     "pk": 25
@@ -332,10 +567,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&lemma__endswith=&posAdd__contains=is_ews",
-        "ref": "s268",
+        "tasks": null,
+        "title": "Third Declension Nouns - Stems in -\u03b9 and -\u03c5",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s268",
-        "title": "Third Declension Nouns - Stems in -\u03b9 and -\u03c5"
+        "query": "pos=noun&lemma__endswith=&posAdd__contains=is_ews",
+        "ref": "s268"
     },
     "model": "app.grammar",
     "pk": 26
@@ -343,10 +579,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&lemma__endswith=&posAdd__contains=eus_ews",
-        "ref": "s275",
+        "tasks": null,
+        "title": "Third Declension Nouns - Stems in -\u03b5\u03c5, -\u03b1\u03c5, -\u03bf\u03c5",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s275",
-        "title": "Third Declension Nouns - Stems in -\u03b5\u03c5, -\u03b1\u03c5, -\u03bf\u03c5"
+        "query": "pos=noun&lemma__endswith=&posAdd__contains=eus_ews",
+        "ref": "s275"
     },
     "model": "app.grammar",
     "pk": 27
@@ -354,10 +591,11 @@
 {
     "fields": {
         "category": 3,
-        "query": "pos=adj&posAdd__contains=os_h_on",
-        "ref": "s286",
+        "tasks": null,
+        "title": "Adjectives - Three-termination",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s286",
-        "title": "Adjectives - Three-termination"
+        "query": "pos=adj&posAdd__contains=os_h_on",
+        "ref": "s286"
     },
     "model": "app.grammar",
     "pk": 28
@@ -365,10 +603,11 @@
 {
     "fields": {
         "category": 3,
-        "query": "pos=adj&posAdd__contains=os_on",
-        "ref": "s288",
+        "tasks": null,
+        "title": "Adjectives - Two-termination",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s288",
-        "title": "Adjectives - Two-termination"
+        "query": "pos=adj&posAdd__contains=os_on",
+        "ref": "s288"
     },
     "model": "app.grammar",
     "pk": 29
@@ -376,10 +615,11 @@
 {
     "fields": {
         "category": 3,
-        "query": "pos=adj&posAdd__contains=as_asa_an",
-        "ref": "s299",
+        "tasks": null,
+        "title": "Adjectives - Three-termination in the Third Declension",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s299",
-        "title": "Adjectives - Three-termination in the Third Declension"
+        "query": "pos=adj&posAdd__contains=as_asa_an",
+        "ref": "s299"
     },
     "model": "app.grammar",
     "pk": 30
@@ -387,10 +627,11 @@
 {
     "fields": {
         "category": 4,
-        "query": "pos=article",
-        "ref": "s332",
+        "tasks": null,
+        "title": "Articles Declension",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s332",
-        "title": "Articles Declension"
+        "query": "pos=article",
+        "ref": "s332"
     },
     "model": "app.grammar",
     "pk": 31
@@ -398,10 +639,11 @@
 {
     "fields": {
         "category": 5,
-        "query": "pos=adverb",
-        "ref": "s343",
+        "tasks": null,
+        "title": "Adverbs",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s343",
-        "title": "Adverbs"
+        "query": "pos=adverb",
+        "ref": "s343"
     },
     "model": "app.grammar",
     "pk": 32
@@ -409,10 +651,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb",
-        "ref": "s355",
+        "tasks": null,
+        "title": "Verbs in Ancient Greek",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s343",
-        "title": "Verbs in Ancient Greek"
+        "query": "pos=verb",
+        "ref": "s355"
     },
     "model": "app.grammar",
     "pk": 33
@@ -420,10 +663,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb",
-        "ref": "s364",
+        "tasks": null,
+        "title": "Verbs in Ancient Greek - Person",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s364",
-        "title": "Verbs in Ancient Greek - Person"
+        "query": "pos=verb",
+        "ref": "s364"
     },
     "model": "app.grammar",
     "pk": 34
@@ -431,10 +675,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb",
-        "ref": "s363",
+        "tasks": null,
+        "title": "Verbs in Ancient Greek - Number",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s363",
-        "title": "Verbs in Ancient Greek - Number"
+        "query": "pos=verb",
+        "ref": "s363"
     },
     "model": "app.grammar",
     "pk": 35
@@ -442,10 +687,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb",
-        "ref": "s359",
+        "tasks": null,
+        "title": "Verbs in Ancient Greek - Tense",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s359",
-        "title": "Verbs in Ancient Greek - Tense"
+        "query": "pos=verb",
+        "ref": "s359"
     },
     "model": "app.grammar",
     "pk": 36
@@ -453,10 +699,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb",
-        "ref": "s357",
+        "tasks": null,
+        "title": "Verbs in Ancient Greek - Mood",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s357",
-        "title": "Verbs in Ancient Greek - Mood"
+        "query": "pos=verb",
+        "ref": "s357"
     },
     "model": "app.grammar",
     "pk": 37
@@ -464,10 +711,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb",
-        "ref": "s356",
+        "tasks": null,
+        "title": "Verbs in Ancient Greek - Voice",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id= s356",
-        "title": "Verbs in Ancient Greek - Voice"
+        "query": "pos=verb",
+        "ref": "s356"
     },
     "model": "app.grammar",
     "pk": 38
@@ -475,10 +723,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd__contains=w_stem",
-        "ref": "s499",
+        "tasks": null,
+        "title": "The Present Tense - Active, Indicative (\u03c9-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s499",
-        "title": "The Present Tense - Active, Indicative (\u03c9-stem)"
+        "query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd__contains=w_stem",
+        "ref": "s499"
     },
     "model": "app.grammar",
     "pk": 39
@@ -486,10 +735,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=fut",
-        "ref": "s532#a",
+        "tasks": null,
+        "title": "The Future Tense",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s532",
-        "title": "The Future Tense"
+        "query": "pos=verb&tense=fut",
+        "ref": "s532#a"
     },
     "model": "app.grammar",
     "pk": 40
@@ -497,10 +747,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=fut&mood=ind&voice=act",
-        "ref": "s532#b",
+        "tasks": null,
+        "title": "The Future Tense - Introduction to Future, Active, Indicative",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s532",
-        "title": "The Future Tense - Introduction to Future, Active, Indicative"
+        "query": "pos=verb&tense=fut&mood=ind&voice=act",
+        "ref": "s532#b"
     },
     "model": "app.grammar",
     "pk": 41
@@ -508,10 +759,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=fut&mood=ind&voice=act&lemma__endswith=\u03c0\u03c9",
-        "ref": "s537",
+        "tasks": null,
+        "title": "The Future Tense - Active, Indicative for Stop Verbs",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s537",
-        "title": "The Future Tense - Active, Indicative for Stop Verbs"
+        "query": "pos=verb&tense=fut&mood=ind&voice=act&lemma__endswith=\u03c0\u03c9",
+        "ref": "s537"
     },
     "model": "app.grammar",
     "pk": 42
@@ -519,10 +771,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=aor&posAdd__contains=aor1",
-        "ref": "s542",
+        "tasks": null,
+        "title": "The Aorist Tense - First Aorist",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s542",
-        "title": "The Aorist Tense - First Aorist"
+        "query": "pos=verb&tense=aor&posAdd__contains=aor1",
+        "ref": "s542"
     },
     "model": "app.grammar",
     "pk": 43
@@ -530,10 +783,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=aor&posAdd__contains=aor2",
-        "ref": "s546",
+        "tasks": null,
+        "title": "The Aorist Tense - Second Aorist",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s546",
-        "title": "The Aorist Tense - Second Aorist"
+        "query": "pos=verb&tense=aor&posAdd__contains=aor2",
+        "ref": "s546"
     },
     "model": "app.grammar",
     "pk": 44
@@ -541,10 +795,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&lemma=\u03b5\u1f30\u03bc\u03af&tense=pres&mood=ind",
-        "ref": "s768#a",
+        "tasks": null,
+        "title": "The Present Tense - \u03b5\u1f30\u03bc\u03af",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s768",
-        "title": "The Present Tense - \u03b5\u1f30\u03bc\u03af"
+        "query": "pos=verb&lemma=\u03b5\u1f30\u03bc\u03af&tense=pres&mood=ind",
+        "ref": "s768#a"
     },
     "model": "app.grammar",
     "pk": 45
@@ -552,10 +807,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&lemma=\u03b5\u1f30\u03bc\u03af&tense=fut",
-        "ref": "s768#b",
+        "tasks": null,
+        "title": "The Future Tense - \u03b5\u1f30\u03bc\u03af",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s768",
-        "title": "The Future Tense - \u03b5\u1f30\u03bc\u03af"
+        "query": "pos=verb&lemma=\u03b5\u1f30\u03bc\u03af&tense=fut",
+        "ref": "s768#b"
     },
     "model": "app.grammar",
     "pk": 46
@@ -563,10 +819,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&lemma=\u03b5\u1f30\u03bc\u03af&tense=imperf",
-        "ref": "s768#c",
+        "tasks": null,
+        "title": "The Imperfect Tense - \u03b5\u1f30\u03bc\u03af",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s768",
-        "title": "The Imperfect Tense - \u03b5\u1f30\u03bc\u03af"
+        "query": "pos=verb&lemma=\u03b5\u1f30\u03bc\u03af&tense=imperf",
+        "ref": "s768#c"
     },
     "model": "app.grammar",
     "pk": 47
@@ -574,10 +831,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&case=nom",
-        "ref": "s910",
+        "tasks": null,
+        "title": "The Nominative Case - Predicate",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s910",
-        "title": "The Nominative Case - Predicate"
+        "query": "pos=noun&case=nom",
+        "ref": "s910"
     },
     "model": "app.grammar",
     "pk": 48
@@ -585,10 +843,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&case=nom",
-        "ref": "s938",
+        "tasks": null,
+        "title": "The Nominative Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s938",
-        "title": "The Nominative Case"
+        "query": "pos=noun&case=nom",
+        "ref": "s938"
     },
     "model": "app.grammar",
     "pk": 49
@@ -596,10 +855,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&case=voc",
-        "ref": "s1283",
+        "tasks": null,
+        "title": "The Vocative Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1283",
-        "title": "The Vocative Case"
+        "query": "pos=noun&case=voc",
+        "ref": "s1283"
     },
     "model": "app.grammar",
     "pk": 50
@@ -607,10 +867,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&case=gen",
-        "ref": "s1297",
+        "tasks": null,
+        "title": "The Genitive Case - Possessive",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1297",
-        "title": "The Genitive Case - Possessive"
+        "query": "pos=noun&case=gen",
+        "ref": "s1297"
     },
     "model": "app.grammar",
     "pk": 51
@@ -618,10 +879,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&case=gen",
-        "ref": "s1306",
+        "tasks": null,
+        "title": "The Genitive Case - Partitive",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1306",
-        "title": "The Genitive Case - Partitive"
+        "query": "pos=noun&case=gen",
+        "ref": "s1306"
     },
     "model": "app.grammar",
     "pk": 52
@@ -629,10 +891,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&case=gen",
-        "ref": "s1315",
+        "tasks": null,
+        "title": "The Genitive Case - Comparative",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1315",
-        "title": "The Genitive Case - Comparative"
+        "query": "pos=noun&case=gen",
+        "ref": "s1315"
     },
     "model": "app.grammar",
     "pk": 53
@@ -640,10 +903,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&case=dat",
-        "ref": "s1450",
+        "tasks": null,
+        "title": "The Dative Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1450",
-        "title": "The Dative Case"
+        "query": "pos=noun&case=dat",
+        "ref": "s1450"
     },
     "model": "app.grammar",
     "pk": 54
@@ -651,10 +915,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&case=dat",
-        "ref": "s1506",
+        "tasks": null,
+        "title": "The Dative Case - Instrumental",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1506",
-        "title": "The Dative Case - Instrumental"
+        "query": "pos=noun&case=dat",
+        "ref": "s1506"
     },
     "model": "app.grammar",
     "pk": 55
@@ -662,10 +927,11 @@
 {
     "fields": {
         "category": 1,
-        "query": "pos=noun&case=acc",
-        "ref": "s1590",
+        "tasks": null,
+        "title": "The Accusative Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1590",
-        "title": "The Accusative Case"
+        "query": "pos=noun&case=acc",
+        "ref": "s1590"
     },
     "model": "app.grammar",
     "pk": 56
@@ -673,10 +939,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=imperf&mood=ind&voice=act&posAdd__contains=w_stem",
-        "ref": "s1889",
+        "tasks": null,
+        "title": "The Imperfect Tense - Active, Indicative",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1889",
-        "title": "The Imperfect Tense - Active, Indicative"
+        "query": "pos=verb&tense=imperf&mood=ind&voice=act&posAdd__contains=w_stem",
+        "ref": "s1889"
     },
     "model": "app.grammar",
     "pk": 57
@@ -684,10 +951,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=perf&mood=ind&voice=act",
-        "ref": "s555",
+        "tasks": null,
+        "title": "The Perfect Tense - Indicative Active",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s 555",
-        "title": "The Perfect Tense - Indicative Active"
+        "query": "pos=verb&tense=perf&mood=ind&voice=act",
+        "ref": "s555"
     },
     "model": "app.grammar",
     "pk": 58
@@ -695,10 +963,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=aor",
-        "ref": "s542,s546",
+        "tasks": null,
+        "title": "The Aorist Tense",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s542",
-        "title": "The Aorist Tense"
+        "query": "pos=verb&tense=aor",
+        "ref": "s542,s546"
     },
     "model": "app.grammar",
     "pk": 60
@@ -706,10 +975,11 @@
 {
     "fields": {
         "category": 2,
-        "query": "pos=verb&tense=aor&lemma__endswith=\u03c8\u03b1",
-        "ref": "s545",
+        "tasks": null,
+        "title": "The Aorist Tense - Active Indicative for Stop Verbs",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s545",
-        "title": "The Aorist Tense - Active Indicative for Stop Verbs"
+        "query": "pos=verb&tense=aor&lemma__endswith=\u03c8\u03b1",
+        "ref": "s545"
     },
     "model": "app.grammar",
     "pk": 61
@@ -3611,6 +3881,42 @@
 },
 {
     "fields": {
+        "model": "aspect",
+        "name": "aspect",
+        "app_label": "app"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 13
+},
+{
+    "fields": {
+        "model": "task",
+        "name": "task",
+        "app_label": "app"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 14
+},
+{
+    "fields": {
+        "model": "tasksequence",
+        "name": "task sequence",
+        "app_label": "app"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 16
+},
+{
+    "fields": {
+        "model": "taskcontext",
+        "name": "task context",
+        "app_label": "app"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 17
+},
+{
+    "fields": {
         "codename": "add_language",
         "name": "Can add language",
         "content_type": 1
@@ -3932,6 +4238,114 @@
     },
     "model": "auth.permission",
     "pk": 36
+},
+{
+    "fields": {
+        "codename": "add_aspect",
+        "name": "Can add aspect",
+        "content_type": 13
+    },
+    "model": "auth.permission",
+    "pk": 37
+},
+{
+    "fields": {
+        "codename": "change_aspect",
+        "name": "Can change aspect",
+        "content_type": 13
+    },
+    "model": "auth.permission",
+    "pk": 38
+},
+{
+    "fields": {
+        "codename": "delete_aspect",
+        "name": "Can delete aspect",
+        "content_type": 13
+    },
+    "model": "auth.permission",
+    "pk": 39
+},
+{
+    "fields": {
+        "codename": "add_task",
+        "name": "Can add task",
+        "content_type": 14
+    },
+    "model": "auth.permission",
+    "pk": 40
+},
+{
+    "fields": {
+        "codename": "change_task",
+        "name": "Can change task",
+        "content_type": 14
+    },
+    "model": "auth.permission",
+    "pk": 41
+},
+{
+    "fields": {
+        "codename": "delete_task",
+        "name": "Can delete task",
+        "content_type": 14
+    },
+    "model": "auth.permission",
+    "pk": 42
+},
+{
+    "fields": {
+        "codename": "add_tasksequence",
+        "name": "Can add task sequence",
+        "content_type": 16
+    },
+    "model": "auth.permission",
+    "pk": 46
+},
+{
+    "fields": {
+        "codename": "change_tasksequence",
+        "name": "Can change task sequence",
+        "content_type": 16
+    },
+    "model": "auth.permission",
+    "pk": 47
+},
+{
+    "fields": {
+        "codename": "delete_tasksequence",
+        "name": "Can delete task sequence",
+        "content_type": 16
+    },
+    "model": "auth.permission",
+    "pk": 48
+},
+{
+    "fields": {
+        "codename": "add_taskcontext",
+        "name": "Can add task context",
+        "content_type": 17
+    },
+    "model": "auth.permission",
+    "pk": 49
+},
+{
+    "fields": {
+        "codename": "change_taskcontext",
+        "name": "Can change task context",
+        "content_type": 17
+    },
+    "model": "auth.permission",
+    "pk": 50
+},
+{
+    "fields": {
+        "codename": "delete_taskcontext",
+        "name": "Can delete task context",
+        "content_type": 17
+    },
+    "model": "auth.permission",
+    "pk": 51
 },
 {
     "fields": {
@@ -9380,5 +9794,239 @@
     },
     "model": "admin.logentry",
     "pk": 416
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T11:41:14.645Z",
+        "object_repr": "Aspect object",
+        "object_id": "1",
+        "change_message": "",
+        "user": 1,
+        "content_type": 13
+    },
+    "model": "admin.logentry",
+    "pk": 417
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T11:45:27.598Z",
+        "object_repr": "Syntax",
+        "object_id": "2",
+        "change_message": "",
+        "user": 1,
+        "content_type": 13
+    },
+    "model": "admin.logentry",
+    "pk": 418
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T11:45:31.921Z",
+        "object_repr": "Morphology",
+        "object_id": "3",
+        "change_message": "",
+        "user": 1,
+        "content_type": 13
+    },
+    "model": "admin.logentry",
+    "pk": 419
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T11:46:27.166Z",
+        "object_repr": "translate_word",
+        "object_id": "1",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 420
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:15:23.862Z",
+        "object_repr": "TaskSequence object",
+        "object_id": "1",
+        "change_message": "",
+        "user": 1,
+        "content_type": 16
+    },
+    "model": "admin.logentry",
+    "pk": 423
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:16:55.034Z",
+        "object_repr": "TaskContext object",
+        "object_id": "1",
+        "change_message": "",
+        "user": 1,
+        "content_type": 17
+    },
+    "model": "admin.logentry",
+    "pk": 424
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:32:17.124Z",
+        "object_repr": "align_phrase",
+        "object_id": "2",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 425
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:33:05.179Z",
+        "object_repr": "build_tree",
+        "object_id": "3",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 426
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:33:46.430Z",
+        "object_repr": "identify_morph:person",
+        "object_id": "4",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 427
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:34:01.979Z",
+        "object_repr": "identify_morph:number",
+        "object_id": "5",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 428
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:34:28.781Z",
+        "object_repr": "identify_morph:gender",
+        "object_id": "6",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 429
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:35:01.668Z",
+        "object_repr": "identify_morph:tense",
+        "object_id": "7",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 430
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:35:18.466Z",
+        "object_repr": "identify_morph:voice",
+        "object_id": "8",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 431
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:35:31.186Z",
+        "object_repr": "identify_morph:mood",
+        "object_id": "9",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 432
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:35:51.166Z",
+        "object_repr": "identify_morph:case",
+        "object_id": "10",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 433
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:37:11.187Z",
+        "object_repr": "provide_article",
+        "object_id": "11",
+        "change_message": "",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 434
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:37:49.317Z",
+        "object_repr": "TaskContext object",
+        "object_id": "2",
+        "change_message": "",
+        "user": 1,
+        "content_type": 17
+    },
+    "model": "admin.logentry",
+    "pk": 435
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T13:38:27.493Z",
+        "object_repr": "TaskContext object",
+        "object_id": "3",
+        "change_message": "",
+        "user": 1,
+        "content_type": 17
+    },
+    "model": "admin.logentry",
+    "pk": 436
 }
 ]
