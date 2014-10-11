@@ -22,8 +22,8 @@ class LargeSelectMultiple(forms.SelectMultiple):
 		super(LargeSelectMultiple, self).__init__(*args, **kwargs)
 
 class GrammarAdmin(admin.ModelAdmin):
-	list_filter = ('title', 'ref', 'query', 'category')
-	list_display = ['title', 'ref', 'query', 'category']
+	list_filter = ('title', 'query', 'category', 'tasks')
+	list_display = ['title', 'ref', 'query', 'category', 'tasks']
 	formfield_overrides = {
 		models.CharField: { 'widget': LargeTextInput },
 		models.TextField: { 'widget': LargeTextarea },
