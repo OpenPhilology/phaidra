@@ -8,16 +8,12 @@ class Language(models.Model):
 		('ltr', 'Left-to-right'),
 		('rtl', 'Right-to-left')
 	)
-	TYPE_CHOICES = (
-		('ancient', 'Ancient'),
-		('modern', 'Modern')
-	)
 	name = models.CharField("language name (english)", max_length=200, help_text='(e.g. German)')
 	local_name = models.CharField("language name", max_length=200, help_text='(e.g. Deutsch)')
 	locale = models.CharField("language code", max_length=5, help_text='(e.g. de-at)')
 	short_code = models.CharField("shortcode", max_length=5, help_text='(e.g. \'de\')')
 	direction = models.CharField('text direction', choices=DIRECTION_CHOICES, max_length=3)
-	lang_type = models.CharField('language type', choices=TYPE_CHOICES, max_length=10)
+	modern = models.BooleanField('modern', help_text='Check this box if this is a modern language.', default=True)
 
 	def __unicode__(self):
 		return unicode(self.name) or u''

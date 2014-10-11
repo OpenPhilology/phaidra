@@ -4,8 +4,8 @@
         "direction": "ltr",
         "name": "English",
         "locale": "en-US",
+        "modern": true,
         "short_code": "en",
-        "lang_type": "modern",
         "local_name": "English"
     },
     "model": "app.language",
@@ -16,8 +16,8 @@
         "direction": "ltr",
         "name": "Ancient Greek",
         "locale": "greek",
+        "modern": false,
         "short_code": "grc",
-        "lang_type": "ancient",
         "local_name": "\u1f19\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ae"
     },
     "model": "app.language",
@@ -28,8 +28,8 @@
         "direction": "rtl",
         "name": "Farsi",
         "locale": "fa-IR",
+        "modern": true,
         "short_code": "fa",
-        "lang_type": "modern",
         "local_name": "\u0641\u0627\u0631\u0633\u06cc\u200e"
     },
     "model": "app.language",
@@ -40,8 +40,8 @@
         "direction": "ltr",
         "name": "German",
         "locale": "de-DE",
+        "modern": true,
         "short_code": "de",
-        "lang_type": "modern",
         "local_name": "Deutsch"
     },
     "model": "app.language",
@@ -52,9 +52,9 @@
         "direction": "ltr",
         "name": "Latin",
         "locale": "latin",
+        "modern": false,
         "short_code": "lat",
-        "lang_type": "ancient",
-        "local_name": "Latina"
+        "local_name": "Lingua Latina"
     },
     "model": "app.language",
     "pk": 8
@@ -10329,5 +10329,44 @@
     },
     "model": "admin.logentry",
     "pk": 453
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T15:15:48.899Z",
+        "object_repr": "Ancient Greek",
+        "object_id": "5",
+        "change_message": "Changed modern.",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 454
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T15:15:55.088Z",
+        "object_repr": "Latin",
+        "object_id": "8",
+        "change_message": "Changed modern.",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 455
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T15:17:35.528Z",
+        "object_repr": "Latin",
+        "object_id": "8",
+        "change_message": "Changed local_name.",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 456
 }
 ]
