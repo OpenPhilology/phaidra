@@ -74,7 +74,7 @@ class CategoryAdmin(admin.ModelAdmin):
 	}
 
 class LanguageAdmin(admin.ModelAdmin):
-	list_display = ('name', 'local_name', 'locale', 'short_code', 'direction')
+	list_display = ('name', 'local_name', 'locale', 'short_code', 'direction', 'lang_type')
 
 	formfield_overrides = {
 		models.CharField: { 'widget': LargeTextInput },

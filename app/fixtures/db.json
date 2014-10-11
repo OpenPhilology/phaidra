@@ -1,10 +1,11 @@
 [
 {
     "fields": {
-        "locale": "en-us",
-        "short_code": "en",
         "direction": "ltr",
         "name": "English",
+        "locale": "en-US",
+        "short_code": "en",
+        "lang_type": "modern",
         "local_name": "English"
     },
     "model": "app.language",
@@ -12,21 +13,23 @@
 },
 {
     "fields": {
-        "locale": "gr-el",
-        "short_code": "grc",
         "direction": "ltr",
         "name": "Ancient Greek",
-        "local_name": "Ancient Greek"
+        "locale": "greek",
+        "short_code": "grc",
+        "lang_type": "ancient",
+        "local_name": "\u1f19\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ae"
     },
     "model": "app.language",
     "pk": 5
 },
 {
     "fields": {
-        "locale": "fa-IR",
-        "short_code": "fa",
         "direction": "rtl",
         "name": "Farsi",
+        "locale": "fa-IR",
+        "short_code": "fa",
+        "lang_type": "modern",
         "local_name": "\u0641\u0627\u0631\u0633\u06cc\u200e"
     },
     "model": "app.language",
@@ -34,14 +37,27 @@
 },
 {
     "fields": {
-        "locale": "de-de",
-        "short_code": "de",
         "direction": "ltr",
         "name": "German",
+        "locale": "de-DE",
+        "short_code": "de",
+        "lang_type": "modern",
         "local_name": "Deutsch"
     },
     "model": "app.language",
     "pk": 7
+},
+{
+    "fields": {
+        "direction": "ltr",
+        "name": "Latin",
+        "locale": "latin",
+        "short_code": "lat",
+        "lang_type": "ancient",
+        "local_name": "Latina"
+    },
+    "model": "app.language",
+    "pk": 8
 },
 {
     "fields": {
@@ -4410,6 +4426,46 @@
     },
     "model": "app.appuser",
     "pk": 2
+},
+{
+    "fields": {
+        "username": "emily",
+        "first_name": "Emily",
+        "last_name": "Franzini",
+        "lang_speaking": 4,
+        "is_active": true,
+        "lang_learning": 5,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2014-10-11T14:47:22Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$mjylIxJjSuP8$hXlaTs4LJGg8TDaOgueySvUCzigoGyiWFEMPIG/0dso=",
+        "email": "emilyfranzini@gmail.com",
+        "date_joined": "2014-10-11T14:47:22Z"
+    },
+    "model": "app.appuser",
+    "pk": 3
+},
+{
+    "fields": {
+        "username": "maryam",
+        "first_name": "Maryam",
+        "last_name": "Foradi",
+        "lang_speaking": 6,
+        "is_active": true,
+        "lang_learning": 5,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2014-10-11T14:47:44Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$vkP1SHTyIGSj$KVqlbr4Ql/H5EvIrKPZXlLF+Rey2ePxilxJR7dKQ1n0=",
+        "email": "maryam.foradi@gmail.com",
+        "date_joined": "2014-10-11T14:47:44Z"
+    },
+    "model": "app.appuser",
+    "pk": 4
 },
 {
     "fields": {
@@ -10156,5 +10212,122 @@
     },
     "model": "admin.logentry",
     "pk": 444
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:48:10.092Z",
+        "object_repr": "emily",
+        "object_id": "3",
+        "change_message": "Changed first_name, last_name, lang_learning and lang_speaking.",
+        "user": 1,
+        "content_type": 3
+    },
+    "model": "admin.logentry",
+    "pk": 445
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:48:29.278Z",
+        "object_repr": "maryam",
+        "object_id": "4",
+        "change_message": "Changed first_name, last_name, lang_learning and lang_speaking.",
+        "user": 1,
+        "content_type": 3
+    },
+    "model": "admin.logentry",
+    "pk": 446
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:48:39.248Z",
+        "object_repr": "maryam",
+        "object_id": "4",
+        "change_message": "Changed lang_learning.",
+        "user": 1,
+        "content_type": 3
+    },
+    "model": "admin.logentry",
+    "pk": 447
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T14:53:21.162Z",
+        "object_repr": "Latin",
+        "object_id": "8",
+        "change_message": "",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 448
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:54:14.684Z",
+        "object_repr": "Ancient Greek",
+        "object_id": "5",
+        "change_message": "Changed local_name and locale.",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 449
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:54:45.596Z",
+        "object_repr": "English",
+        "object_id": "4",
+        "change_message": "Changed locale.",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 450
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:54:54.127Z",
+        "object_repr": "German",
+        "object_id": "7",
+        "change_message": "Changed locale.",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 451
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:58:07.167Z",
+        "object_repr": "Ancient Greek",
+        "object_id": "5",
+        "change_message": "Changed lang_type.",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 452
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T14:58:13.883Z",
+        "object_repr": "Latin",
+        "object_id": "8",
+        "change_message": "Changed lang_type.",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 453
 }
 ]
