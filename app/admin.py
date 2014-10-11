@@ -27,19 +27,17 @@ class GrammarAdmin(admin.ModelAdmin):
 	formfield_overrides = {
 		models.CharField: { 'widget': LargeTextInput },
 		models.TextField: { 'widget': LargeTextarea },
-		# models.MultipleChoiceField: { 'widget': LargeSelectMultiple }
 	}
 
 class ContentAdmin(admin.ModelAdmin):
 	list_filter = ('title', 'grammar_ref')
-	list_display = ['title', 'grammar_ref', 'source_lang', 'target_lang', 'related_topics']
+	list_display = ('title', 'content_preview', 'grammar_ref', 'all_related_topics')
 	filter_vertical = ('related_topics',)
 	list_display_links = ('title',)
 
 	formfield_overrides = {
 		models.CharField: { 'widget': LargeTextInput },
 		models.TextField: { 'widget': LargeTextarea },
-		# models.MultipleChoiceField: { 'widget': LargeSelectMultiple }
 	}
 
 admin.site.register(AppUser)
