@@ -97,7 +97,7 @@ class Grammar(models.Model):
 class Content(models.Model):
 	title = models.CharField("title", max_length=200, help_text='Short, descriptive title of what content is in this section.')
 	grammar_ref = models.OneToOneField(Grammar, verbose_name="grammar topic", null=True, blank=True, help_text='The morphology directly described by this content.')
-	related_topics = models.ManyToManyField(Grammar, verbose_name='related grammar topics', null=True, blank=True, related_name='Topics that would help someone answer questions about this topic (e.g. "Intro to Verbs" is related to "The Aorist Tense").')
+	related_content = models.ManyToManyField('self', related_name='relates_to', symmetrical=False, null=True, blank=True, help_text='Content that would help someone answer questions about this topic.')
 	source_lang = models.ForeignKey(Language, related_name='content_written_in', help_text='Language the content is written in.')
 	target_lang = models.ForeignKey(Language, related_name='content_written_about', help_text='Language the content teaches.')
 	content = models.TextField("Learning Content", help_text='Write this in <a href="https://github.com/OpenPhilology/phaidra/wiki/Phaidra-flavored-Markdown" target="_blank">Phaidra-flavored Markdown</a>.')
@@ -106,8 +106,8 @@ class Content(models.Model):
 	def content_preview(self):
 		return truncatechars(self.content, 90);
 
-	def all_related_topics(self):
-		return SafeString('<br>'.join([t.title for t in self.related_topics.all()])) 
+	def all_related_content(self):
+		return SafeString('<br>'.join([t.title for t in self.related_content.all()])) 
 
 	def __unicode__(self):
 		return unicode(self.title) or u''
