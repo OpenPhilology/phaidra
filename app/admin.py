@@ -31,8 +31,8 @@ class GrammarAdmin(admin.ModelAdmin):
 
 class ContentAdmin(admin.ModelAdmin):
 	list_filter = ('title', 'grammar_ref')
-	list_display = ('title', 'content_preview', 'grammar_ref', 'all_related_topics')
-	filter_vertical = ('related_topics',)
+	list_display = ('title', 'content_preview', 'grammar_ref', 'all_related_content')
+	filter_vertical = ('related_content',)
 	list_display_links = ('title',)
 
 	formfield_overrides = {
