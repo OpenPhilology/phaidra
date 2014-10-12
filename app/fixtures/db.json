@@ -61,6 +61,18 @@
 },
 {
     "fields": {
+        "direction": "ltr",
+        "name": "Italian",
+        "locale": "it-it",
+        "modern": true,
+        "short_code": "it",
+        "local_name": "Italiano"
+    },
+    "model": "app.language",
+    "pk": 9
+},
+{
+    "fields": {
         "graphic": null,
         "name": "Nouns"
     },
@@ -101,6 +113,14 @@
 },
 {
     "fields": {
+        "graphic": "alphabet/pi.svg",
+        "name": "Participles"
+    },
+    "model": "app.category",
+    "pk": 6
+},
+{
+    "fields": {
         "name": "V"
     },
     "model": "app.aspect",
@@ -126,7 +146,8 @@
         "success_msg": "Good job!",
         "name": "translate_word",
         "aspect": [
-            1
+            1,
+            3
         ],
         "hint_msg": "Try again."
     },
@@ -280,6 +301,13 @@
 },
 {
     "fields": {
+        "name": "Learn Participles"
+    },
+    "model": "app.tasksequence",
+    "pk": 3
+},
+{
+    "fields": {
         "task_sequence": 1,
         "target_accuracy": 0.5,
         "task": 1,
@@ -332,6 +360,28 @@
     },
     "model": "app.taskcontext",
     "pk": 5
+},
+{
+    "fields": {
+        "task_sequence": 3,
+        "target_accuracy": 0.5,
+        "task": 10,
+        "order": 0,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 6
+},
+{
+    "fields": {
+        "task_sequence": 3,
+        "target_accuracy": 0.5,
+        "task": 5,
+        "order": 1,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 7
 },
 {
     "fields": {
@@ -600,7 +650,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 1,
         "title": "Second Declension Nouns - Feminine",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s232",
         "query": "pos=noun&gender=fem&posAdd__contains=os_ou",
@@ -1052,6 +1102,18 @@
     },
     "model": "app.grammar",
     "pk": 61
+},
+{
+    "fields": {
+        "category": 6,
+        "tasks": null,
+        "title": "Participles",
+        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s300",
+        "query": "pos=participle",
+        "ref": "s300"
+    },
+    "model": "app.grammar",
+    "pk": 62
 },
 {
     "fields": {
@@ -3839,6 +3901,30 @@
 },
 {
     "fields": {
+        "target_lang": 5,
+        "title": "Introduction to Participles",
+        "content": "**This is how participles work!!!**",
+        "grammar_ref": 62,
+        "related_content": [],
+        "source_lang": 4
+    },
+    "model": "app.content",
+    "pk": 464
+},
+{
+    "fields": {
+        "target_lang": 5,
+        "title": "Sostantivi femminili",
+        "content": "Io parlo Italiano!",
+        "grammar_ref": 18,
+        "related_content": [],
+        "source_lang": 9
+    },
+    "model": "app.content",
+    "pk": 465
+},
+{
+    "fields": {
         "model": "language",
         "name": "language",
         "app_label": "app"
@@ -4423,7 +4509,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-10-12T10:34:46.882Z",
+        "last_login": "2014-10-12T14:52:05.444Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$OQeapR8t70Mz$t/UHAUZyIUG0Zxl7LFYDup2wSpLox0Qo9t6XoUzZGBc=",
@@ -10771,5 +10857,135 @@
     },
     "model": "admin.logentry",
     "pk": 485
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-12T15:46:18.666Z",
+        "object_repr": "translate_word",
+        "object_id": "1",
+        "change_message": "Changed aspect.",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 486
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-12T15:47:58.579Z",
+        "object_repr": "Second Declension Nouns - Feminine",
+        "object_id": "23",
+        "change_message": "Changed tasks.",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 487
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T15:55:44.436Z",
+        "object_repr": "Participles",
+        "object_id": "6",
+        "change_message": "",
+        "user": 1,
+        "content_type": 2
+    },
+    "model": "admin.logentry",
+    "pk": 488
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T15:55:58.553Z",
+        "object_repr": "Participles",
+        "object_id": "62",
+        "change_message": "",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 489
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T15:59:08.398Z",
+        "object_repr": "Introduction to Participles",
+        "object_id": "464",
+        "change_message": "",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 490
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:07:03.254Z",
+        "object_repr": "Learn Participles",
+        "object_id": "3",
+        "change_message": "",
+        "user": 1,
+        "content_type": 16
+    },
+    "model": "admin.logentry",
+    "pk": 491
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:08:24.823Z",
+        "object_repr": "TaskContext object",
+        "object_id": "6",
+        "change_message": "",
+        "user": 1,
+        "content_type": 17
+    },
+    "model": "admin.logentry",
+    "pk": 492
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:08:55.529Z",
+        "object_repr": "TaskContext object",
+        "object_id": "7",
+        "change_message": "",
+        "user": 1,
+        "content_type": 17
+    },
+    "model": "admin.logentry",
+    "pk": 493
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:20:45.417Z",
+        "object_repr": "Italian",
+        "object_id": "9",
+        "change_message": "",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 494
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:22:40.078Z",
+        "object_repr": "Sostantivi femminili",
+        "object_id": "465",
+        "change_message": "",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 495
 }
 ]

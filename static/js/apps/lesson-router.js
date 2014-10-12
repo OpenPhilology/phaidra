@@ -12,10 +12,13 @@ define(['jquery', 'underscore', 'backbone', 'views/lessons/lessons', 'views/less
 		showLessons: function() {
 			this.hideMicrolesson();
 
-			if (!this.lessonListView)
-				this.lessonListView = new LessonListView({ el: '#main' }).render();
-			else
+			if (!this.lessonListView) {
+				this.lessonListView = new LessonListView().render();
+				$('#main .module-container').append(this.lessonListView.el);
+			}
+			else {
 				this.lessonListView.$el.show();
+			}
 		},
 		hideLessons: function() {
 			if (this.lessonListView) 

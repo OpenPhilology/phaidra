@@ -1,50 +1,39 @@
-define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, Utils) { 
+define(['jquery', 'underscore', 'backbone', 'utils', 'collections/topics', 'text!/templates/js/lessons/lesson_list.html'], function($, _, Backbone, Utils, TopicsCollection, LessonListTemplate) { 
 
-		var View = Backbone.View.extend({
-			events: {
-				'submit form': 'signup',
-				'click #start-link': 'showForm'
-			},
-			initialize: function() {
-				// If user is already logged in, redirect
-			},
-			render: function() {
-				var container = this.$el.find('.module-container .row');
-				container.html('');
-				
-				// TODO: Move this into template
-				Utils.Microlessons.forEach(function(lesson) {
-					var data = Utils.getLesson(lesson);
-					var smyth = Utils.getSmyth(lesson);
+	return Backbone.View.extend({
+		tagName: 'div',
+		className: 'row',
+		events: { },
+		initialize: function() {
+			_.bindAll(this, 'checkScroll');
+			$(window).scroll(this.checkScroll);
 
-					// Means we have a smyth query but no learning content for it yet
-					if (!data) return;
+			this.isLoading = false;
+			this.topicsCollection = new TopicsCollection();
+		},
+		render: function() {
+			this.loadTopics();	
+			return this;	
+		},
+		loadTopics: function() {
+			var that = this;
 
-					var div = $('<div>', {
-						class: 'col-md-3 col-sm-4',
-						style: 'display: none',
-						html: function() {
-							var str = '<a href="/lessons/' + lesson + '" class="module ' + data.category +'">';
-							str += data.thumbnail ? '<img src="' + data.thumbnail + '">' : '';
-							str += '<div>';
-							str += '<h3>' + smyth.title + '</h3>';
-							str += '</div></a>';
-							return str;
-						}
-					});
-					div.appendTo(container);
-				});
+			this.isLoading = true;
+			this.topicsCollection.fetch({
+				success: function(topics) {
+					var template = _.template(LessonListTemplate);
+					that.$el.append(template({ topics: topics.models })); 
+					that.isLoading = false;
+				}
+			});
+		},
+		checkScroll: function() {
+			var triggerPoint = 100;
+			if (!this.isLoading && (this.el.scrollTop + this.el.clientHeight + triggerPoint > this.el.scrollHeight)) {
+				this.topicsCollection.incrementUrl();
+				this.loadTopics();
+			}
+		}
+	});
 
-				var elements = this.$el.find('.module-container .row .col-md-3'); 
-				$.each(elements, function(i, el) {
-					setTimeout(function() {
-						$(el).fadeIn();
-					}, (i * 0.75) * 50);
-				});
-
-				return this;	
-			},
-		});
-
-	return View;
 });
