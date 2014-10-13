@@ -383,3 +383,15 @@ class Content(models.Model):
 
     def __unicode__(self):
         return unicode(self.title) or u''
+
+
+# SIGNALS
+def signals_import():
+    """
+    Make sure signals are imported early.
+    """
+    from tastypie.models import create_api_key
+
+    models.signals.post_save.connect(create_api_key, sender=AppUser)
+
+signals_import()

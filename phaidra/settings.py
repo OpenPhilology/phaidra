@@ -40,9 +40,10 @@ TIME_ZONE = 'Europe/Berlin'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = (
+    ('en', 'English'),
     ('fa', 'Farsi'),
     ('de', 'German')
 )
