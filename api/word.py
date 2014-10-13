@@ -103,14 +103,12 @@ class WordResource(Resource):
             q = """MATCH (s:`Sentence`)-[:words]->(w:`Word`) WHERE """
             
             # filter word on parameters
-            for key in query_params:  
-                # this indicates fuzzy match              
+            for key in query_params:                
                 if len(key.split('__')) > 1:
-                    # containd can include e.g. a variation of lemma extracts
                     if key.split('__')[1] == 'contains':
-                        if type(query_params[key]) is list:
+                        if "OR" in query_params[key]:
                             q = q + """("""
-                            chunks = query_params[key]
+                            chunks = query_params[key].split('OR')
                             for chunk in chunks:
                                 q = q + """ w."""+key.split('__')[0]+ """=~'.*""" +chunk+ """.*' OR """
                             q = q[:len(q)-3]
@@ -130,7 +128,6 @@ class WordResource(Resource):
                             q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>""" +query_params[key]+ """ AND """
                         else:
                             q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
-                # exact match
                 else:
                     if key in ['tbwid', 'head', 'length', 'cid']:
                         q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """=""" +query_params[key]+ """ AND """
