@@ -57,10 +57,13 @@ class CreateUserResource(ModelResource):
 		
 						
 class UserResource(ModelResource):
+	lang_learning = fields.ForeignKey('api.language.LanguageResource', 'lang_learning', full=True, blank=True, null=True)
+	lang_speaking = fields.ForeignKey('api.language.LanguageResource', 'lang_speaking', full=True, blank=True, null=True)
+
 	class Meta:
 		queryset = AppUser.objects.all()
 		resource_name = 'user'
-		fields = ['username', 'first_name', 'last_name', 'last_login', 'lang', 'readingCTS']
+		fields = ['username', 'first_name', 'last_name', 'last_login']
 		allowed_methods = ['get', 'post', 'patch']
 		always_return_data = True
 		authentication = SessionAuthentication()
