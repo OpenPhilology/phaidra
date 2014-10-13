@@ -108,9 +108,9 @@ class WordResource(Resource):
                 if len(key.split('__')) > 1:
                     # containd can include e.g. a variation of lemma extracts
                     if key.split('__')[1] == 'contains':
-                        if "OR" in query_params[key]:
+                        if type(query_params[key]) is list:
                             q = q + """("""
-                            chunks = query_params[key].split('OR')
+                            chunks = query_params[key]
                             for chunk in chunks:
                                 q = q + """ w."""+key.split('__')[0]+ """=~'.*""" +chunk+ """.*' OR """
                             q = q[:len(q)-3]
