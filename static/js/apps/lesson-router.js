@@ -5,11 +5,11 @@
 define(['jquery', 'underscore', 'backbone', 'views/lessons/lessons', 'views/lessons/microlesson'], function($, _, Backbone, LessonListView, MicrolessonView) { 
 
 	return Backbone.Router.extend({
-		routes: {
-			"lessons/":"showLessons",
-			"lessons/:s": "showMicrolesson"
+		initialize: function(options) {
+			this.route(/^(.*?)\/lessons$/, 'showLessons');
+			this.route(/^(.*?)\/lessons\/(.*?)$/, 'showLessons');
 		},
-		showLessons: function() {
+		showLessons: function(lang) {
 			this.hideMicrolesson();
 
 			if (!this.lessonListView) {
@@ -24,7 +24,7 @@ define(['jquery', 'underscore', 'backbone', 'views/lessons/lessons', 'views/less
 			if (this.lessonListView) 
 				this.lessonListView.$el.hide();
 		},
-		showMicrolesson: function(s) {
+		showMicrolesson: function(lang, s) {
 			this.hideLessons();
 
 			if (!this.microlessonView)

@@ -1,6 +1,7 @@
 {% load i18n %}
 {% load set_var %}
 {% get_current_language_bidi as LANGUAGE_BIDI %}
+{% get_available_languages as LANGUAGES %}
 {% if LANGUAGE_BIDI %}
 	{% set dir = "rtl" %}
 {% else %}
@@ -36,7 +37,7 @@
 			require(['/static/js/main.js']);
 		});
 	</script>
-	<script>var csrf_token = "{{ csrf_token }}"; var locale = "{{ LANGUAGE_CODE }}"; var dir = "{{ dir }}"; var U = "{{ user.username }}"; </script>
+	<script>var csrf_token = "{{ csrf_token }}"; var locale = "{{ LANGUAGE_CODE }}"; var dir = "{{ dir }}"; var U = "{{ user.username }}"; console.log(locale)</script>
 
 </head>
 <body>
@@ -62,7 +63,8 @@
 			{% endblock %}
 		</div>
 
-		<div class="col-md-5 hidden-sm hidden-xs">
+		<div class="col-md-5">
+			{% comment %}
 			<div class="user-info pull-right">
 				{% if user.is_authenticated %}
 					<span class="logged-in">
@@ -81,24 +83,27 @@
 					</span>
 				{% endif %}
 			</div>
-
-			{% comment %}
-				<div class="btn-group pull-right" style="margin: 24px;">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">English <span class="caret" style="margin-left: 10px"></span></button> 
-					<ul class="dropdown-menu" role="menu">
-						<li> <a href="#">Bulgarian - български език</a></li>
-						<li> <a href="#">Deutsch</a></li>
-						<li> <a href="#">English <span class="glyphicon glyphicon-ok"></span></a></li>
-						<li> <a href="#">Italiano</a></li>
-						<li> <a href="#">Farsi - فارسی</a></li>
-					</ul>
-				</div>
 			{% endcomment %}
+			<div class="pull-right">
+				<form action="{% url 'set_language' %}" method="post">
+				  {% csrf_token %}
+				  <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+				  <select name="language">
+					{% get_language_info_list for LANGUAGES as languages %}
+					  {% for language in languages %}
+						<option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+						  {{ language.name_local }} ({{ language.code }})
+						</option>
+					  {% endfor %}
+				  </select>
+				  <input type="submit" value="Change" />
+				</form>
+			</div>
 		</div>
 	</header>
 
 	<div class="row" id="main">
-		{% block content %} {% endblock %} 	
+		{% block content %} {% endblock %}
 	</div>
 </div>
 <div class="report">

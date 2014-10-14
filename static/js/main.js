@@ -1,7 +1,8 @@
 require(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap'], function($, _, Backbone, d3) {
 	$(document).ready(function() {
 		
-		var app = window.location.pathname.split('/')[1];
+		// 2 because of language codes being prepended
+		var app = window.location.pathname.split('/')[2];
 		
 		function activateBootstrap() {
 			// Activate Bootstrap JS Components
