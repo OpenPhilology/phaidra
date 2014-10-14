@@ -24,23 +24,23 @@ msgstr ""
 
 #: templates/base.html:51
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: templates/base.html:54
 msgid "Learn"
-msgstr ""
+msgstr "Impara"
 
 #: templates/base.html:57
 msgid "Read"
-msgstr ""
+msgstr "Leggi"
 
 #: templates/base.html:60
 msgid "Create"
-msgstr ""
+msgstr "Crea"
 
 #: templates/base.html:95
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: templates/create.html:27
 msgid "Help Create Digital Editions"
