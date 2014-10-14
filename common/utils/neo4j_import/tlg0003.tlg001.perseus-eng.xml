@@ -1,0 +1,959 @@
+<aligned-text xmlns="http://alpheios.net/namespaces/aligned-text">
+  <language lnum="L1" xml:lang="grc"/>
+  <language lnum="L2" xml:lang="fas"/>
+  <sentence id="1.89.1" document_id="lg003.tlg001.perseus-eng.xml">
+    <wds lnum="L1">
+      <w n="1.89.1:1">
+        <text>οἱ</text>
+        <refs nrefs="1.89.1:4 "/>
+      </w>
+      <w n="1.89.1:2">
+        <text>γὰρ</text>
+      </w>
+      <w n="1.89.1:3">
+        <text>Ἀθηναῖοι</text>
+        <refs nrefs="1.89.1:5 "/>
+      </w>
+      <w n="1.89.1:4">
+        <text>τρόπῳ</text>
+        <refs nrefs="1.89.1:1 1.89.1:3 "/>
+      </w>
+      <w n="1.89.1:5">
+        <text>τοιῷδε</text>
+        <refs nrefs="1.89.1:2 "/>
+      </w>
+      <w n="1.89.1:6">
+        <text>ἦλθον</text>
+        <refs nrefs="1.89.1:6 "/>
+      </w>
+      <w n="1.89.1:7">
+        <text>ἐπὶ</text>
+        <refs nrefs="1.89.1:7 "/>
+      </w>
+      <w n="1.89.1:8">
+        <text>τὰ</text>
+        <refs nrefs="1.89.1:8 "/>
+      </w>
+      <w n="1.89.1:9">
+        <text>πράγματα</text>
+        <refs nrefs="1.89.1:9 "/>
+      </w>
+      <w n="1.89.1:10">
+        <text>ἐν</text>
+        <refs nrefs="1.89.1:10 "/>
+      </w>
+      <w n="1.89.1:11">
+        <text>οἷς</text>
+        <refs nrefs="1.89.1:11 "/>
+      </w>
+      <w n="1.89.1:12">
+        <text>ηὐξήθησαν</text>
+        <refs nrefs="1.89.1:13 1.89.1:14 1.89.1:15 "/>
+      </w>
+      <w n="1.89.1:13">
+        <text>.</text>
+        <refs nrefs="1.89.1:16 "/>
+      </w>
+    </wds>
+    <wds lnum="L2">
+      <w n="1.89.1:1">
+        <text>In</text>
+        <refs nrefs="1.89.1:4 "/>
+      </w>
+      <w n="1.89.1:2">
+        <text>this</text>
+        <refs nrefs="1.89.1:5 "/>
+      </w>
+      <w n="1.89.1:3">
+        <text>way</text>
+        <refs nrefs="1.89.1:4 "/>
+      </w>
+      <w n="1.89.1:4">
+        <text>the</text>
+        <refs nrefs="1.89.1:1 "/>
+      </w>
+      <w n="1.89.1:5">
+        <text>Athenians</text>
+        <refs nrefs="1.89.1:3 "/>
+      </w>
+      <w n="1.89.1:6">
+        <text>came</text>
+        <refs nrefs="1.89.1:6 "/>
+      </w>
+      <w n="1.89.1:7">
+        <text>to</text>
+        <refs nrefs="1.89.1:7 "/>
+      </w>
+      <w n="1.89.1:8">
+        <text>the</text>
+        <refs nrefs="1.89.1:8 "/>
+      </w>
+      <w n="1.89.1:9">
+        <text>circumstances</text>
+        <refs nrefs="1.89.1:9 "/>
+      </w>
+      <w n="1.89.1:10">
+        <text>under</text>
+        <refs nrefs="1.89.1:10 "/>
+      </w>
+      <w n="1.89.1:11">
+        <text>which</text>
+        <refs nrefs="1.89.1:11 "/>
+      </w>
+      <w n="1.89.1:12">
+        <text>they</text>
+      </w>
+      <w n="1.89.1:13">
+        <text>grew</text>
+        <refs nrefs="1.89.1:12 "/>
+      </w>
+      <w n="1.89.1:14">
+        <text>in</text>
+        <refs nrefs="1.89.1:12 "/>
+      </w>
+      <w n="1.89.1:15">
+        <text>power</text>
+        <refs nrefs="1.89.1:12 "/>
+      </w>
+      <w n="1.89.1:16">
+        <text>.</text>
+        <refs nrefs="1.89.1:13 "/>
+      </w>
+    </wds>
+  </sentence>
+  <sentence id="1.89.2" document_id="lg003.tlg001.perseus-eng.xml">
+    <wds lnum="L1">
+      <w n="1.89.2:1">
+        <text>ἐπειδὴ</text>
+        <refs nrefs="1.89.2:1 "/>
+      </w>
+      <w n="1.89.2:2">
+        <text>Μῆδοι</text>
+        <refs nrefs="1.89.2:2 1.89.2:3 "/>
+      </w>
+      <w n="1.89.2:3">
+        <text>ἀνεχώρησαν</text>
+        <refs nrefs="1.89.2:4 1.89.2:5 "/>
+      </w>
+      <w n="1.89.2:4">
+        <text>ἐκ</text>
+        <refs nrefs="1.89.2:6 "/>
+      </w>
+      <w n="1.89.2:5">
+        <text>τῆς</text>
+        <refs nrefs="1.89.2:7 "/>
+      </w>
+      <w n="1.89.2:6">
+        <text>Εὐρώπης</text>
+        <refs nrefs="1.89.2:7 "/>
+      </w>
+      <w n="1.89.2:7">
+        <text>νικηθέντες</text>
+        <refs nrefs="1.89.2:9 "/>
+      </w>
+      <w n="1.89.2:8">
+        <text>καὶ</text>
+      </w>
+      <w n="1.89.2:9">
+        <text>ναυσὶ</text>
+        <refs nrefs="1.89.2:13 1.89.2:14 1.89.2:15 "/>
+      </w>
+      <w n="1.89.2:10">
+        <text>καὶ</text>
+        <refs nrefs="1.89.2:16 "/>
+      </w>
+      <w n="1.89.2:11">
+        <text>πεζῷ</text>
+        <refs nrefs="1.89.2:17 1.89.2:18 1.89.2:19 "/>
+      </w>
+      <w n="1.89.2:12">
+        <text>ὑπὸ</text>
+        <refs nrefs="1.89.2:10 "/>
+      </w>
+      <w n="1.89.2:13">
+        <text>Ἑλλήνων</text>
+        <refs nrefs="1.89.2:11 1.89.2:12 "/>
+      </w>
+      <w n="1.89.2:14">
+        <text>καὶ</text>
+        <refs nrefs="1.89.2:21 "/>
+      </w>
+      <w n="1.89.2:15">
+        <text>οἱ</text>
+        <refs nrefs="1.89.2:23 "/>
+      </w>
+      <w n="1.89.2:16">
+        <text>καταφυγόντες</text>
+        <refs nrefs="1.89.2:22 1.89.2:26 1.89.2:27 1.89.2:28 "/>
+      </w>
+      <w n="1.89.2:17">
+        <text>αὐτῶν</text>
+        <refs nrefs="1.89.2:24 1.89.2:25 "/>
+      </w>
+      <w n="1.89.2:18">
+        <text>ταῖς</text>
+        <refs nrefs="1.89.2:30 "/>
+      </w>
+      <w n="1.89.2:19">
+        <text>ναυσὶν</text>
+        <refs nrefs="1.89.2:29 1.89.2:31 "/>
+      </w>
+      <w n="1.89.2:20">
+        <text>ἐς</text>
+        <refs nrefs="1.89.2:32 "/>
+      </w>
+      <w n="1.89.2:21">
+        <text>Μυκάλην</text>
+        <refs nrefs="1.89.2:33 "/>
+      </w>
+      <w n="1.89.2:22">
+        <text>διεφθάρησαν</text>
+        <refs nrefs="1.89.2:34 1.89.2:35 1.89.2:36 "/>
+      </w>
+      <w n="1.89.2:23">
+        <text>,</text>
+        <refs nrefs="1.89.2:37 "/>
+      </w>
+      <w n="1.89.2:24">
+        <text>Λεωτυχίδης</text>
+        <refs nrefs="1.89.2:38 "/>
+      </w>
+      <w n="1.89.2:25">
+        <text>μὲν</text>
+      </w>
+      <w n="1.89.2:26">
+        <text>ὁ</text>
+        <refs nrefs="1.89.2:40 "/>
+      </w>
+      <w n="1.89.2:27">
+        <text>βασιλεὺς</text>
+        <refs nrefs="1.89.2:40 "/>
+      </w>
+      <w n="1.89.2:28">
+        <text>τῶν</text>
+        <refs nrefs="1.89.2:42 "/>
+      </w>
+      <w n="1.89.2:29">
+        <text>Λακεδαιμονίων</text>
+        <refs nrefs="1.89.2:41 1.89.2:43 "/>
+      </w>
+      <w n="1.89.2:30">
+        <text>,</text>
+        <refs nrefs="1.89.2:44 "/>
+      </w>
+      <w n="1.89.2:31">
+        <text>ὅσπερ</text>
+        <refs nrefs="1.89.2:45 "/>
+      </w>
+      <w n="1.89.2:32">
+        <text>ἡγεῖτο</text>
+        <refs nrefs="1.89.2:46 "/>
+      </w>
+      <w n="1.89.2:33">
+        <text>τῶν</text>
+        <refs nrefs="1.89.2:47 "/>
+      </w>
+      <w n="1.89.2:34">
+        <text>ἐν</text>
+        <refs nrefs="1.89.2:49 "/>
+      </w>
+      <w n="1.89.2:35">
+        <text>Μυκάλῃ</text>
+        <refs nrefs="1.89.2:50 "/>
+      </w>
+      <w n="1.89.2:36">
+        <text>Ἑλλήνων</text>
+        <refs nrefs="1.89.2:48 "/>
+      </w>
+      <w n="1.89.2:37">
+        <text>,</text>
+        <refs nrefs="1.89.2:51 "/>
+      </w>
+      <w n="1.89.2:38">
+        <text>ἀπεχώρησεν</text>
+        <refs nrefs="1.89.2:52 "/>
+      </w>
+      <w n="1.89.2:39">
+        <text>ἐπ'</text>
+        <refs nrefs="1.89.2:53 "/>
+      </w>
+      <w n="1.89.2:40">
+        <text>οἴκου</text>
+        <refs nrefs="1.89.2:53 "/>
+      </w>
+      <w n="1.89.2:41">
+        <text>ἔχων</text>
+        <refs nrefs="1.89.2:54 "/>
+      </w>
+      <w n="1.89.2:42">
+        <text>τοὺς</text>
+        <refs nrefs="1.89.2:55 "/>
+      </w>
+      <w n="1.89.2:43">
+        <text>ἀπὸ</text>
+        <refs nrefs="1.89.2:57 "/>
+      </w>
+      <w n="1.89.2:44">
+        <text>Πελοποννήσου</text>
+        <refs nrefs="1.89.2:58 1.89.2:59 "/>
+      </w>
+      <w n="1.89.2:45">
+        <text>ξυμμάχους</text>
+        <refs nrefs="1.89.2:56 "/>
+      </w>
+      <w n="1.89.2:46">
+        <text>,</text>
+        <refs nrefs="1.89.2:60 "/>
+      </w>
+      <w n="1.89.2:47">
+        <text>οἱ</text>
+        <refs nrefs="1.89.2:62 "/>
+      </w>
+      <w n="1.89.2:48">
+        <text>δὲ</text>
+        <refs nrefs="1.89.2:61 "/>
+      </w>
+      <w n="1.89.2:49">
+        <text>Ἀθηναῖοι</text>
+        <refs nrefs="1.89.2:63 "/>
+      </w>
+      <w n="1.89.2:50">
+        <text>καὶ</text>
+        <refs nrefs="1.89.2:64 "/>
+      </w>
+      <w n="1.89.2:51">
+        <text>οἱ</text>
+        <refs nrefs="1.89.2:65 "/>
+      </w>
+      <w n="1.89.2:52">
+        <text>ἀπὸ</text>
+        <refs nrefs="1.89.2:67 "/>
+      </w>
+      <w n="1.89.2:53">
+        <text>Ἰωνίας</text>
+        <refs nrefs="1.89.2:68 "/>
+      </w>
+      <w n="1.89.2:54">
+        <text>καὶ</text>
+        <refs nrefs="1.89.2:69 "/>
+      </w>
+      <w n="1.89.2:55">
+        <text>Ἑλλησπόντου</text>
+        <refs nrefs="1.89.2:70 "/>
+      </w>
+      <w n="1.89.2:56">
+        <text>ξύμμαχοι</text>
+        <refs nrefs="1.89.2:66 "/>
+      </w>
+      <w n="1.89.2:57">
+        <text>ἤδη</text>
+        <refs nrefs="1.89.2:74 "/>
+      </w>
+      <w n="1.89.2:58">
+        <text>ἀφεστηκότες</text>
+        <refs nrefs="1.89.2:73 1.89.2:75 "/>
+      </w>
+      <w n="1.89.2:59">
+        <text>ἀπὸ</text>
+        <refs nrefs="1.89.2:76 "/>
+      </w>
+      <w n="1.89.2:60">
+        <text>βασιλέως</text>
+        <refs nrefs="1.89.2:77 1.89.2:78 "/>
+      </w>
+      <w n="1.89.2:61">
+        <text>ὑπομείναντες</text>
+        <refs nrefs="1.89.2:79 1.89.2:80 "/>
+      </w>
+      <w n="1.89.2:62">
+        <text>Σηστὸν</text>
+        <refs nrefs="1.89.2:84 "/>
+      </w>
+      <w n="1.89.2:63">
+        <text>ἐπολιόρκουν</text>
+        <refs nrefs="1.89.2:81 1.89.2:82 1.89.2:83 "/>
+      </w>
+      <w n="1.89.2:64">
+        <text>Μήδων</text>
+        <refs nrefs="1.89.2:89 1.89.2:90 1.89.2:91 "/>
+      </w>
+      <w n="1.89.2:65">
+        <text>ἐχόντων</text>
+        <refs nrefs="1.89.2:86 1.89.2:87 1.89.2:88 "/>
+      </w>
+      <w n="1.89.2:66">
+        <text>,</text>
+        <refs nrefs="1.89.2:92 "/>
+      </w>
+      <w n="1.89.2:67">
+        <text>καὶ</text>
+        <refs nrefs="1.89.2:93 "/>
+      </w>
+      <w n="1.89.2:68">
+        <text>ἐπιχειμάσαντες</text>
+        <refs nrefs="1.89.2:94 1.89.2:95 1.89.2:96 1.89.2:97 "/>
+      </w>
+      <w n="1.89.2:69">
+        <text>εἷλον</text>
+        <refs nrefs="1.89.2:99 1.89.2:100 1.89.2:101 "/>
+      </w>
+      <w n="1.89.2:70">
+        <text>αὐτὴν</text>
+        <refs nrefs="1.89.2:102 1.89.2:103 "/>
+      </w>
+      <w n="1.89.2:71">
+        <text>ἐκλιπόντων</text>
+        <refs nrefs="1.89.2:104 1.89.2:107 1.89.2:108 "/>
+      </w>
+      <w n="1.89.2:72">
+        <text>τῶν</text>
+        <refs nrefs="1.89.2:105 1.89.2:106 "/>
+      </w>
+      <w n="1.89.2:73">
+        <text>βαρβάρων</text>
+        <refs nrefs="1.89.2:105 1.89.2:106 "/>
+      </w>
+      <w n="1.89.2:74">
+        <text>,</text>
+        <refs nrefs="1.89.2:109 "/>
+      </w>
+      <w n="1.89.2:75">
+        <text>καὶ</text>
+        <refs nrefs="1.89.2:110 "/>
+      </w>
+      <w n="1.89.2:76">
+        <text>μετὰ</text>
+        <refs nrefs="1.89.2:111 "/>
+      </w>
+      <w n="1.89.2:77">
+        <text>τοῦτο</text>
+        <refs nrefs="1.89.2:112 "/>
+      </w>
+      <w n="1.89.2:78">
+        <text>ἀπέπλευσαν</text>
+        <refs nrefs="1.89.2:113 1.89.2:114 1.89.2:115 "/>
+      </w>
+      <w n="1.89.2:79">
+        <text>ἐξ</text>
+        <refs nrefs="1.89.2:116 "/>
+      </w>
+      <w n="1.89.2:80">
+        <text>Ἑλλησπόντου</text>
+        <refs nrefs="1.89.2:117 1.89.2:118 "/>
+      </w>
+      <w n="1.89.2:81">
+        <text>ὡς</text>
+        <refs nrefs="1.89.2:120 1.89.2:121 "/>
+      </w>
+      <w n="1.89.2:82">
+        <text>ἕκαστοι</text>
+        <refs nrefs="1.89.2:120 1.89.2:121 "/>
+      </w>
+      <w n="1.89.2:83">
+        <text>κατὰ</text>
+        <refs nrefs="1.89.2:122 "/>
+      </w>
+      <w n="1.89.2:84">
+        <text>πόλεις</text>
+        <refs nrefs="1.89.2:124 "/>
+      </w>
+      <w n="1.89.2:85">
+        <text>.</text>
+        <refs nrefs="1.89.2:125 "/>
+      </w>
+    </wds>
+    <wds lnum="L2">
+      <w n="1.89.2:1">
+        <text>After</text>
+        <refs nrefs="1.89.2:1 "/>
+      </w>
+      <w n="1.89.2:2">
+        <text>the</text>
+        <refs nrefs="1.89.2:2 "/>
+      </w>
+      <w n="1.89.2:3">
+        <text>Medes</text>
+        <refs nrefs="1.89.2:2 "/>
+      </w>
+      <w n="1.89.2:4">
+        <text>had</text>
+        <refs nrefs="1.89.2:3 "/>
+      </w>
+      <w n="1.89.2:5">
+        <text>retreated</text>
+        <refs nrefs="1.89.2:3 "/>
+      </w>
+      <w n="1.89.2:6">
+        <text>from</text>
+        <refs nrefs="1.89.2:4 "/>
+      </w>
+      <w n="1.89.2:7">
+        <text>Europe</text>
+        <refs nrefs="1.89.2:5 1.89.2:6 "/>
+      </w>
+      <w n="1.89.2:8">
+        <text>,</text>
+      </w>
+      <w n="1.89.2:9">
+        <text>defeated</text>
+        <refs nrefs="1.89.2:7 "/>
+      </w>
+      <w n="1.89.2:10">
+        <text>by</text>
+        <refs nrefs="1.89.2:12 "/>
+      </w>
+      <w n="1.89.2:11">
+        <text>the</text>
+        <refs nrefs="1.89.2:13 "/>
+      </w>
+      <w n="1.89.2:12">
+        <text>Hellenes</text>
+        <refs nrefs="1.89.2:13 "/>
+      </w>
+      <w n="1.89.2:13">
+        <text>by</text>
+        <refs nrefs="1.89.2:9 "/>
+      </w>
+      <w n="1.89.2:14">
+        <text>the</text>
+        <refs nrefs="1.89.2:9 "/>
+      </w>
+      <w n="1.89.2:15">
+        <text>navy</text>
+        <refs nrefs="1.89.2:9 "/>
+      </w>
+      <w n="1.89.2:16">
+        <text>and</text>
+        <refs nrefs="1.89.2:10 "/>
+      </w>
+      <w n="1.89.2:17">
+        <text>by</text>
+        <refs nrefs="1.89.2:11 "/>
+      </w>
+      <w n="1.89.2:18">
+        <text>the</text>
+        <refs nrefs="1.89.2:11 "/>
+      </w>
+      <w n="1.89.2:19">
+        <text>infantry</text>
+        <refs nrefs="1.89.2:11 "/>
+      </w>
+      <w n="1.89.2:20">
+        <text>,</text>
+      </w>
+      <w n="1.89.2:21">
+        <text>and</text>
+        <refs nrefs="1.89.2:14 "/>
+      </w>
+      <w n="1.89.2:22">
+        <text>after</text>
+        <refs nrefs="1.89.2:16 "/>
+      </w>
+      <w n="1.89.2:23">
+        <text>those</text>
+        <refs nrefs="1.89.2:15 "/>
+      </w>
+      <w n="1.89.2:24">
+        <text>of</text>
+        <refs nrefs="1.89.2:17 "/>
+      </w>
+      <w n="1.89.2:25">
+        <text>them</text>
+        <refs nrefs="1.89.2:17 "/>
+      </w>
+      <w n="1.89.2:26">
+        <text>who</text>
+        <refs nrefs="1.89.2:16 "/>
+      </w>
+      <w n="1.89.2:27">
+        <text>had</text>
+        <refs nrefs="1.89.2:16 "/>
+      </w>
+      <w n="1.89.2:28">
+        <text>fled</text>
+        <refs nrefs="1.89.2:16 "/>
+      </w>
+      <w n="1.89.2:29">
+        <text>with</text>
+        <refs nrefs="1.89.2:19 "/>
+      </w>
+      <w n="1.89.2:30">
+        <text>their</text>
+        <refs nrefs="1.89.2:18 "/>
+      </w>
+      <w n="1.89.2:31">
+        <text>ships</text>
+        <refs nrefs="1.89.2:19 "/>
+      </w>
+      <w n="1.89.2:32">
+        <text>to</text>
+        <refs nrefs="1.89.2:20 "/>
+      </w>
+      <w n="1.89.2:33">
+        <text>Mycale</text>
+        <refs nrefs="1.89.2:21 "/>
+      </w>
+      <w n="1.89.2:34">
+        <text>had</text>
+        <refs nrefs="1.89.2:22 "/>
+      </w>
+      <w n="1.89.2:35">
+        <text>been</text>
+        <refs nrefs="1.89.2:22 "/>
+      </w>
+      <w n="1.89.2:36">
+        <text>destroyed</text>
+        <refs nrefs="1.89.2:22 "/>
+      </w>
+      <w n="1.89.2:37">
+        <text>,</text>
+        <refs nrefs="1.89.2:23 "/>
+      </w>
+      <w n="1.89.2:38">
+        <text>Leotychides</text>
+        <refs nrefs="1.89.2:24 "/>
+      </w>
+      <w n="1.89.2:39">
+        <text>,</text>
+      </w>
+      <w n="1.89.2:40">
+        <text>king</text>
+        <refs nrefs="1.89.2:26 1.89.2:27 "/>
+      </w>
+      <w n="1.89.2:41">
+        <text>of</text>
+        <refs nrefs="1.89.2:29 "/>
+      </w>
+      <w n="1.89.2:42">
+        <text>the</text>
+        <refs nrefs="1.89.2:28 "/>
+      </w>
+      <w n="1.89.2:43">
+        <text>Lacedaemonians</text>
+        <refs nrefs="1.89.2:29 "/>
+      </w>
+      <w n="1.89.2:44">
+        <text>,</text>
+        <refs nrefs="1.89.2:30 "/>
+      </w>
+      <w n="1.89.2:45">
+        <text>who</text>
+        <refs nrefs="1.89.2:31 "/>
+      </w>
+      <w n="1.89.2:46">
+        <text>commanded</text>
+        <refs nrefs="1.89.2:32 "/>
+      </w>
+      <w n="1.89.2:47">
+        <text>the</text>
+        <refs nrefs="1.89.2:33 "/>
+      </w>
+      <w n="1.89.2:48">
+        <text>Hellenes</text>
+        <refs nrefs="1.89.2:36 "/>
+      </w>
+      <w n="1.89.2:49">
+        <text>at</text>
+        <refs nrefs="1.89.2:34 "/>
+      </w>
+      <w n="1.89.2:50">
+        <text>Mycale</text>
+        <refs nrefs="1.89.2:35 "/>
+      </w>
+      <w n="1.89.2:51">
+        <text>,</text>
+        <refs nrefs="1.89.2:37 "/>
+      </w>
+      <w n="1.89.2:52">
+        <text>departed</text>
+        <refs nrefs="1.89.2:38 "/>
+      </w>
+      <w n="1.89.2:53">
+        <text>home</text>
+        <refs nrefs="1.89.2:39 1.89.2:40 "/>
+      </w>
+      <w n="1.89.2:54">
+        <text>with</text>
+        <refs nrefs="1.89.2:41 "/>
+      </w>
+      <w n="1.89.2:55">
+        <text>the</text>
+        <refs nrefs="1.89.2:42 "/>
+      </w>
+      <w n="1.89.2:56">
+        <text>allies</text>
+        <refs nrefs="1.89.2:45 "/>
+      </w>
+      <w n="1.89.2:57">
+        <text>from</text>
+        <refs nrefs="1.89.2:43 "/>
+      </w>
+      <w n="1.89.2:58">
+        <text>the</text>
+        <refs nrefs="1.89.2:44 "/>
+      </w>
+      <w n="1.89.2:59">
+        <text>Peloponnesus</text>
+        <refs nrefs="1.89.2:44 "/>
+      </w>
+      <w n="1.89.2:60">
+        <text>,</text>
+        <refs nrefs="1.89.2:46 "/>
+      </w>
+      <w n="1.89.2:61">
+        <text>but</text>
+        <refs nrefs="1.89.2:48 "/>
+      </w>
+      <w n="1.89.2:62">
+        <text>the</text>
+        <refs nrefs="1.89.2:47 "/>
+      </w>
+      <w n="1.89.2:63">
+        <text>Athenians</text>
+        <refs nrefs="1.89.2:49 "/>
+      </w>
+      <w n="1.89.2:64">
+        <text>and</text>
+        <refs nrefs="1.89.2:50 "/>
+      </w>
+      <w n="1.89.2:65">
+        <text>the</text>
+        <refs nrefs="1.89.2:51 "/>
+      </w>
+      <w n="1.89.2:66">
+        <text>allies</text>
+        <refs nrefs="1.89.2:56 "/>
+      </w>
+      <w n="1.89.2:67">
+        <text>from</text>
+        <refs nrefs="1.89.2:52 "/>
+      </w>
+      <w n="1.89.2:68">
+        <text>Ionia</text>
+        <refs nrefs="1.89.2:53 "/>
+      </w>
+      <w n="1.89.2:69">
+        <text>and</text>
+        <refs nrefs="1.89.2:54 "/>
+      </w>
+      <w n="1.89.2:70">
+        <text>Hellespont</text>
+        <refs nrefs="1.89.2:55 "/>
+      </w>
+      <w n="1.89.2:71">
+        <text>,</text>
+      </w>
+      <w n="1.89.2:72">
+        <text>who</text>
+      </w>
+      <w n="1.89.2:73">
+        <text>had</text>
+        <refs nrefs="1.89.2:58 "/>
+      </w>
+      <w n="1.89.2:74">
+        <text>already</text>
+        <refs nrefs="1.89.2:57 "/>
+      </w>
+      <w n="1.89.2:75">
+        <text>revolted</text>
+        <refs nrefs="1.89.2:58 "/>
+      </w>
+      <w n="1.89.2:76">
+        <text>from</text>
+        <refs nrefs="1.89.2:59 "/>
+      </w>
+      <w n="1.89.2:77">
+        <text>the</text>
+        <refs nrefs="1.89.2:60 "/>
+      </w>
+      <w n="1.89.2:78">
+        <text>king,</text>
+        <refs nrefs="1.89.2:60 "/>
+      </w>
+      <w n="1.89.2:79">
+        <text>remained</text>
+        <refs nrefs="1.89.2:61 "/>
+      </w>
+      <w n="1.89.2:80">
+        <text>and</text>
+        <refs nrefs="1.89.2:61 "/>
+      </w>
+      <w n="1.89.2:81">
+        <text>laid</text>
+        <refs nrefs="1.89.2:63 "/>
+      </w>
+      <w n="1.89.2:82">
+        <text>siege</text>
+        <refs nrefs="1.89.2:63 "/>
+      </w>
+      <w n="1.89.2:83">
+        <text>to</text>
+        <refs nrefs="1.89.2:63 "/>
+      </w>
+      <w n="1.89.2:84">
+        <text>Sestos</text>
+        <refs nrefs="1.89.2:62 "/>
+      </w>
+      <w n="1.89.2:85">
+        <text>,</text>
+      </w>
+      <w n="1.89.2:86">
+        <text>which</text>
+        <refs nrefs="1.89.2:65 "/>
+      </w>
+      <w n="1.89.2:87">
+        <text>was</text>
+        <refs nrefs="1.89.2:65 "/>
+      </w>
+      <w n="1.89.2:88">
+        <text>held</text>
+        <refs nrefs="1.89.2:65 "/>
+      </w>
+      <w n="1.89.2:89">
+        <text>by</text>
+        <refs nrefs="1.89.2:64 "/>
+      </w>
+      <w n="1.89.2:90">
+        <text>the</text>
+        <refs nrefs="1.89.2:64 "/>
+      </w>
+      <w n="1.89.2:91">
+        <text>Medes</text>
+        <refs nrefs="1.89.2:64 "/>
+      </w>
+      <w n="1.89.2:92">
+        <text>,</text>
+        <refs nrefs="1.89.2:66 "/>
+      </w>
+      <w n="1.89.2:93">
+        <text>and</text>
+        <refs nrefs="1.89.2:67 "/>
+      </w>
+      <w n="1.89.2:94">
+        <text>after</text>
+        <refs nrefs="1.89.2:68 "/>
+      </w>
+      <w n="1.89.2:95">
+        <text>wintering</text>
+        <refs nrefs="1.89.2:68 "/>
+      </w>
+      <w n="1.89.2:96">
+        <text>before</text>
+        <refs nrefs="1.89.2:68 "/>
+      </w>
+      <w n="1.89.2:97">
+        <text>it</text>
+        <refs nrefs="1.89.2:68 "/>
+      </w>
+      <w n="1.89.2:98">
+        <text>,</text>
+      </w>
+      <w n="1.89.2:99">
+        <text>they</text>
+        <refs nrefs="1.89.2:69 "/>
+      </w>
+      <w n="1.89.2:100">
+        <text>took</text>
+        <refs nrefs="1.89.2:69 "/>
+      </w>
+      <w n="1.89.2:101">
+        <text>over</text>
+        <refs nrefs="1.89.2:69 "/>
+      </w>
+      <w n="1.89.2:102">
+        <text>the</text>
+        <refs nrefs="1.89.2:70 "/>
+      </w>
+      <w n="1.89.2:103">
+        <text>place</text>
+        <refs nrefs="1.89.2:70 "/>
+      </w>
+      <w n="1.89.2:104">
+        <text>after</text>
+        <refs nrefs="1.89.2:71 "/>
+      </w>
+      <w n="1.89.2:105">
+        <text>the</text>
+        <refs nrefs="1.89.2:72 1.89.2:73 "/>
+      </w>
+      <w n="1.89.2:106">
+        <text>barbarians</text>
+        <refs nrefs="1.89.2:72 1.89.2:73 "/>
+      </w>
+      <w n="1.89.2:107">
+        <text>had</text>
+        <refs nrefs="1.89.2:71 "/>
+      </w>
+      <w n="1.89.2:108">
+        <text>left</text>
+        <refs nrefs="1.89.2:71 "/>
+      </w>
+      <w n="1.89.2:109">
+        <text>,</text>
+        <refs nrefs="1.89.2:74 "/>
+      </w>
+      <w n="1.89.2:110">
+        <text>and</text>
+        <refs nrefs="1.89.2:75 "/>
+      </w>
+      <w n="1.89.2:111">
+        <text>after</text>
+        <refs nrefs="1.89.2:76 "/>
+      </w>
+      <w n="1.89.2:112">
+        <text>this</text>
+        <refs nrefs="1.89.2:77 "/>
+      </w>
+      <w n="1.89.2:113">
+        <text>they</text>
+        <refs nrefs="1.89.2:78 "/>
+      </w>
+      <w n="1.89.2:114">
+        <text>sailed</text>
+        <refs nrefs="1.89.2:78 "/>
+      </w>
+      <w n="1.89.2:115">
+        <text>away</text>
+        <refs nrefs="1.89.2:78 "/>
+      </w>
+      <w n="1.89.2:116">
+        <text>from</text>
+        <refs nrefs="1.89.2:79 "/>
+      </w>
+      <w n="1.89.2:117">
+        <text>the</text>
+        <refs nrefs="1.89.2:80 "/>
+      </w>
+      <w n="1.89.2:118">
+        <text>Hellespont</text>
+        <refs nrefs="1.89.2:80 "/>
+      </w>
+      <w n="1.89.2:119">
+        <text>,</text>
+      </w>
+      <w n="1.89.2:120">
+        <text>each</text>
+        <refs nrefs="1.89.2:81 1.89.2:82 "/>
+      </w>
+      <w n="1.89.2:121">
+        <text>one</text>
+        <refs nrefs="1.89.2:81 1.89.2:82 "/>
+      </w>
+      <w n="1.89.2:122">
+        <text>towards</text>
+        <refs nrefs="1.89.2:83 "/>
+      </w>
+      <w n="1.89.2:123">
+        <text>their</text>
+      </w>
+      <w n="1.89.2:124">
+        <text>cities</text>
+        <refs nrefs="1.89.2:84 "/>
+      </w>
+      <w n="1.89.2:125">
+        <text>.</text>
+        <refs nrefs="1.89.2:85 "/>
+      </w>
+    </wds>
+  </sentence>
+</aligned-text>
