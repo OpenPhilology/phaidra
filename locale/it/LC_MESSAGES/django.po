@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-14 18:38+0200\n"
+"POT-Creation-Date: 2014-10-14 18:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,51 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: phaidra/settings.py:46
-msgid "English"
-msgstr "Englisch"
-
-#: phaidra/settings.py:47
-msgid "Farsi"
-msgstr "Farsi"
-
-#: phaidra/settings.py:48
-msgid "German"
-msgstr "Deutsch"
-
-#: phaidra/settings.py:49
-msgid "Italian"
-msgstr "Italienisch"
-
-#: phaidra/settings.py:50
-msgid "Croatian"
-msgstr "Kroatisch"
-
 #: templates/base.html:17 templates/index.html:16
-#, fuzzy
-#| msgid "Historical Languages eLearning - by Open Philology Project"
 msgid "Ancient Geek - by the Open Philology Project"
-msgstr "Lernen Historischer Sprachen - mit dem Open Philology Project"
+msgstr ""
 
 #: templates/base.html:51
 msgid "Home"
-msgstr "Start"
+msgstr "Home"
 
 #: templates/base.html:54
 msgid "Learn"
-msgstr "Lernen"
+msgstr "Impara"
 
 #: templates/base.html:57
 msgid "Read"
-msgstr "Lesen"
+msgstr "Leggi"
 
 #: templates/base.html:60
 msgid "Create"
-msgstr "Erstellen"
+msgstr "Crea"
 
 #: templates/base.html:95
 msgid "Login"
-msgstr "Einloggen"
+msgstr "Login"
 
 #: templates/create.html:27
 msgid "Help Create Digital Editions"
@@ -96,7 +74,7 @@ msgstr ""
 
 #: templates/home.html:51
 msgid "Create Translations"
-msgstr "Übersetzungen erstellen"
+msgstr ""
 
 #: templates/home.html:53
 msgid "Contribute to brand new, digital editions of Classical works."
@@ -114,7 +92,7 @@ msgstr ""
 
 #: templates/index.html:53
 msgid "Log out"
-msgstr "Ausloggen"
+msgstr ""
 
 #: templates/index.html:57
 msgid "Login to Ancient Geek!"
@@ -139,35 +117,35 @@ msgstr ""
 
 #: templates/index.html:79 templates/index.html.py:210
 msgid "Start Learning!"
-msgstr "Starten!"
+msgstr ""
 
 #: templates/index.html:83
 msgid "Sign up"
-msgstr "Anmelden"
+msgstr ""
 
 #: templates/index.html:87
 msgid "Full Name"
-msgstr "Vollständiger Name"
+msgstr ""
 
 #: templates/index.html:91
 msgid "Email Address"
-msgstr "E-Mail-Adresse"
+msgstr ""
 
 #: templates/index.html:95 templates/login.html:34
 msgid "Username"
-msgstr "Benutzername"
+msgstr ""
 
 #: templates/index.html:99 templates/login.html:38
 msgid "Password"
-msgstr "Passwort"
+msgstr ""
 
 #: templates/index.html:102
 msgid "Create Account"
-msgstr "Konto erstellen"
+msgstr ""
 
 #: templates/index.html:111
 msgid "Game your way through Greek."
-msgstr "Spiele deinen Weg zu Griechisch"
+msgstr ""
 
 #: templates/index.html:113
 msgid ""
@@ -294,18 +272,16 @@ msgid "translated or treebanked"
 msgstr ""
 
 #: templates/js/reader/notes/about-sentence.html:4
-#, fuzzy
-#| msgid "Create Translations"
 msgid "See Aligned Translations"
-msgstr "Übersetzungen erstellen"
+msgstr ""
 
 #: templates/js/reader/notes/about-sentence.html:12
 msgid "View Sentence as Tree"
-msgstr "Satz als Baum anzeigen"
+msgstr ""
 
 #: templates/js/reader/notes/about-word.html:4
 msgid "from"
-msgstr "von"
+msgstr ""
 
 #: templates/js/reader/notes/about-word.html:9
 msgid "See Morphology"
@@ -313,11 +289,11 @@ msgstr ""
 
 #: templates/js/reader/notes/about-word.html:23
 msgid "Related Grammar Topics"
-msgstr "Verwandte Grammatikthemen"
+msgstr ""
 
 #: templates/js/reader/notes/about-word.html:32
 msgid "None found"
-msgstr "Keine gefunden"
+msgstr ""
 
 #: templates/js/reader/notes/notes.html:3
 msgid ""
@@ -331,17 +307,15 @@ msgstr ""
 
 #: templates/js/reader/page.html:14
 msgid "by"
-msgstr "von"
+msgstr ""
 
 #: templates/js/reader/page.html:15
 msgid "Jump to another section"
 msgstr ""
 
 #: templates/js/reader/page.html:22
-#, fuzzy
-#| msgid "Add Annotation"
 msgid "Annotate"
-msgstr "Anotation hinzufügen"
+msgstr ""
 
 #: templates/login.html:42
 msgid "Log in"
@@ -354,31 +328,3 @@ msgstr ""
 #: templates/module.html:36
 msgid "Loading Lesson"
 msgstr ""
-
-#~ msgid "Table of Contents"
-#~ msgstr "Inhaltsverzeichnis"
-
-#~ msgid "Preferences"
-#~ msgstr "Präferenzen"
-
-#~ msgid "Show Resources"
-#~ msgstr "Ressourcen anzeigen"
-
-#~ msgid ""
-#~ "Hover over a sentence in the text to see available annotations, or to add "
-#~ "your own!"
-#~ msgstr ""
-#~ "Bewege die Maus über ein Wort im Text, um die verfügbaren Annotationen zu "
-#~ "sehen oder füge deine Eigine hinzu."
-
-#~ msgid "Parse"
-#~ msgstr "Parsen"
-
-#~ msgid "Translations"
-#~ msgstr "Übersetzungen"
-
-#~ msgid "Other Resources"
-#~ msgstr "Weitere Ressourcen"
-
-#~ msgid "Contribute Annotation"
-#~ msgstr "Annotation beitragen"

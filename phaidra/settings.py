@@ -40,18 +40,23 @@ TIME_ZONE = 'Europe/Berlin'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = (
+    ('en', 'English'),
     ('fa', 'Farsi'),
-    ('de', 'German')
+    ('de', 'German'),
+    ('it', 'Italian'),
+    ('hr', 'Croatian')
 )
 
 CTS_LANG = (
-	'grc',
-	'en',
-	'fa',
-	'hr',
+    'grc',
+    'en',
+    'fa',
+    'hr',
+    'it',
+    'de'
 )
 
 SITE_ID = 1
@@ -91,7 +96,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	'/opt/phaidra/static/',
+        '/opt/phaidra/static/',
 )
 
 # Ignore files and folders that match these
@@ -116,14 +121,14 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-	"django.contrib.auth.context_processors.auth",
-	"django.core.context_processors.debug",
-	"django.core.context_processors.i18n",
-	"django.core.context_processors.media",
-	"django.core.context_processors.static",
-	"django.core.context_processors.tz",
-	"django.contrib.messages.context_processors.messages",
-	"django.core.context_processors.request",
+        "django.contrib.auth.context_processors.auth",
+        "django.core.context_processors.debug",
+        "django.core.context_processors.i18n",
+        "django.core.context_processors.media",
+        "django.core.context_processors.static",
+        "django.core.context_processors.tz",
+        "django.contrib.messages.context_processors.messages",
+        "django.core.context_processors.request",
 )
 
 MIDDLEWARE_CLASSES = (
@@ -146,8 +151,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	'/opt/phaidra/templates/',
-	'/opt/phaidra/templates/js'
+        '/opt/phaidra/templates/',
+        '/opt/phaidra/templates/js'
 )
 
 INSTALLED_APPS = (
@@ -160,7 +165,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-	'suit',
+        'suit',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
@@ -209,3 +214,7 @@ GRAPH_DATABASE_REST_URL = 'http://localhost:7474/db/data/'
 # The current api path
 API_PATH = '/api/v1/'
 
+# Django Suit configuration
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Ancient Geek Admin' 
+}
