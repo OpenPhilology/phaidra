@@ -261,8 +261,8 @@ msgstr ""
 
 #: static/js/views/reader/notes/notes.js:110
 msgid "Information about"
-msgstr "Informationen zu"
+msgstr ""
 
 #: static/js/views/reader/notes/notes.js:117
 msgid "Show Resources"
-msgstr "Ressourcen anzeigen"
+msgstr ""

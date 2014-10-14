@@ -45,14 +45,18 @@ LANGUAGE_CODE = 'en'
 LANGUAGES = (
     ('en', 'English'),
     ('fa', 'Farsi'),
-    ('de', 'German')
+    ('de', 'German'),
+    ('it', 'Italian'),
+    ('hr', 'Croatian')
 )
 
 CTS_LANG = (
-        'grc',
-        'en',
-        'fa',
-        'hr',
+    'grc',
+    'en',
+    'fa',
+    'hr',
+    'it',
+    'de'
 )
 
 SITE_ID = 1

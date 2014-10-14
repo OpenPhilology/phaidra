@@ -1,7 +1,6 @@
 {% load i18n %}
 {% load set_var %}
 {% get_current_language_bidi as LANGUAGE_BIDI %}
-{% get_available_languages as LANGUAGES %}
 {% if LANGUAGE_BIDI %}
 	{% set dir = "rtl" %}
 {% else %}
