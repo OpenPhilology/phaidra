@@ -1,13 +1,11 @@
 define(['jquery', 'underscore', 'backbone', 'views/reader/reader', 'views/create/library'], function($, _, Backbone, ReaderView, LibraryView) { 
 
 	return Backbone.Router.extend({
-		routes: {
-			"reader/:cts": "updateReader",
-			"reader/": "showLibrary",
-		},
 		initialize: function() {
+			this.route(/^(.*?)\/reader\/(.*?)$/, 'showLibrary');
+			this.route(/^(.*?)\/reader\/(.+)$/, 'updateReader');
 		},
-		showLibrary: function() {
+		showLibrary: function(lang) {
 			if (!this.library_view)
 				this.library_view = new LibraryView({ el: '#library' }).render();
 
@@ -17,7 +15,7 @@ define(['jquery', 'underscore', 'backbone', 'views/reader/reader', 'views/create
 				this.reader_view.$el.hide();
 
 		},
-		updateReader: function(CTS) {
+		updateReader: function(lang, CTS) {
 			if (!this.reader_view) 
 				this.reader_view = new ReaderView({ el: '#reader', CTS: CTS }).render();
 			else

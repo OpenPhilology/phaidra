@@ -61,6 +61,18 @@
 },
 {
     "fields": {
+        "direction": "ltr",
+        "name": "Italian",
+        "locale": "it-it",
+        "modern": true,
+        "short_code": "it",
+        "local_name": "Italiano"
+    },
+    "model": "app.language",
+    "pk": 9
+},
+{
+    "fields": {
         "graphic": null,
         "name": "Nouns"
     },
@@ -101,6 +113,14 @@
 },
 {
     "fields": {
+        "graphic": "alphabet/pi.svg",
+        "name": "Participles"
+    },
+    "model": "app.category",
+    "pk": 6
+},
+{
+    "fields": {
         "name": "V"
     },
     "model": "app.aspect",
@@ -126,7 +146,8 @@
         "success_msg": "Good job!",
         "name": "translate_word",
         "aspect": [
-            1
+            1,
+            3
         ],
         "hint_msg": "Try again."
     },
@@ -244,7 +265,7 @@
         "success_msg": "Bravo!",
         "name": "identify_morph:case",
         "aspect": [
-            1
+            3
         ],
         "hint_msg": "Try again."
     },
@@ -270,6 +291,20 @@
     },
     "model": "app.tasksequence",
     "pk": 1
+},
+{
+    "fields": {
+        "name": "Verbs for Beginners"
+    },
+    "model": "app.tasksequence",
+    "pk": 2
+},
+{
+    "fields": {
+        "name": "Learn Participles"
+    },
+    "model": "app.tasksequence",
+    "pk": 3
 },
 {
     "fields": {
@@ -303,6 +338,50 @@
     },
     "model": "app.taskcontext",
     "pk": 3
+},
+{
+    "fields": {
+        "task_sequence": 2,
+        "target_accuracy": 0.5,
+        "task": 4,
+        "order": 0,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 4
+},
+{
+    "fields": {
+        "task_sequence": 2,
+        "target_accuracy": 0.8,
+        "task": 5,
+        "order": 1,
+        "max_attempts": 5
+    },
+    "model": "app.taskcontext",
+    "pk": 5
+},
+{
+    "fields": {
+        "task_sequence": 3,
+        "target_accuracy": 0.5,
+        "task": 10,
+        "order": 0,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 6
+},
+{
+    "fields": {
+        "task_sequence": 3,
+        "target_accuracy": 0.5,
+        "task": 5,
+        "order": 1,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 7
 },
 {
     "fields": {
@@ -571,7 +650,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 1,
         "title": "Second Declension Nouns - Feminine",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s232",
         "query": "pos=noun&gender=fem&posAdd__contains=os_ou",
@@ -811,7 +890,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 2,
         "title": "The Aorist Tense - First Aorist",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s542",
         "query": "pos=verb&tense=aor&posAdd__contains=aor1",
@@ -823,7 +902,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 2,
         "title": "The Aorist Tense - Second Aorist",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s546",
         "query": "pos=verb&tense=aor&posAdd__contains=aor2",
@@ -1003,7 +1082,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 2,
         "title": "The Aorist Tense",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s542",
         "query": "pos=verb&tense=aor",
@@ -1015,7 +1094,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 2,
         "title": "The Aorist Tense - Active Indicative for Stop Verbs",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s545",
         "query": "pos=verb&tense=aor&lemma__endswith=\u03c8\u03b1",
@@ -1023,6 +1102,18 @@
     },
     "model": "app.grammar",
     "pk": 61
+},
+{
+    "fields": {
+        "category": 6,
+        "tasks": null,
+        "title": "Participles",
+        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s300",
+        "query": "pos=participle",
+        "ref": "s300"
+    },
+    "model": "app.grammar",
+    "pk": 62
 },
 {
     "fields": {
@@ -3670,7 +3761,11 @@
         "title": "Aorist Indicative Active for Stop Verbs",
         "content": "### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nAorist Active Indicative -- \u1f14\u03c0\u03b5\u03bc\u03c8\u03b1, _I sent_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1\u03c2** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b5(\u03bd)** | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n#### Aorist Indicative Active for Stop Verbs\r\n\r\nThe aorist stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n  \r\n\r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u1f14\u03bb\u03b5**\u03be**\u03b1, _I said_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u1f14\u03c0\u03b5\u03bc**\u03c8**\u03b1, _I sent_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u1f14\u03c0\u03b5\u03b9**\u03c3**\u03b1, _I persuaded_\r\n\r\n####\r\n\r\n",
         "grammar_ref": 61,
-        "related_content": [],
+        "related_content": [
+            458,
+            456,
+            454
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3683,7 +3778,7 @@
         "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _When in doubt, aorist._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Aorist Indicative Active\r\n\r\n* * *\r\n\r\nNow that you are familiar with third declension nouns with consonant stems,\r\nthis is a good time to carry on learning the verbs. Here you will learn about\r\nthe **aorist indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab New Athenian battles and victories\r\n\r\n  1. Identify aorist indicative active verbs.\r\n  2. Conjugate aorist indicative active verbs.\r\n\r\n",
         "grammar_ref": 60,
         "related_content": [
-            455
+            458
         ],
         "source_lang": 4
     },
@@ -3711,7 +3806,10 @@
         "title": "The First (Sigmatic) Aorist",
         "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03c5\u03c3\u03b1, _I untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03c5\u03c3**\u03b1** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03c2** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03c5\u03c3**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03bd**  \r\n  \r\n#### Aorist Indicative Active\r\n\r\nThe aorist can have many different endings. The general rule, however, is that\r\nthe aorist can be either **sigmatic** (meaning with an added \u03c3) or\r\n**asigmatic** (without \u03c3).\r\n\r\nTo form the sigmatic aorist indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n**Add the augment \u1f10** (just like you did for the imperfect). \r\n  3. **Add a \u03c3** to get the sigmatic aorist stem.   \r\ne.g. \u1f14\u03bb\u03c5\u03c3-\r\n\r\n  4. **Add the endings** from the table to indicate the person and number.   \r\ne.g. \u1f10\u03bb\u03cd\u03c3\u03b1\u03bc\u03b5\u03bd, _We untied_\r\n\r\nThe aorist then becomes the **third principle part** of a verb.\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03c5\r\n\r\n* * *\r\n\r\n|  \u03c3\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  ****\u03c3****  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
         "grammar_ref": 43,
-        "related_content": [],
+        "related_content": [
+            458,
+            454
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3744,7 +3842,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Examples of Asignmatic Aorists",
+        "title": "Examples of Asigmatic Aorists",
         "content": "#### Aorist Indicative Active\r\n\r\nThe following is a list of verbs with their corresponding aorists that can be\r\noften found in Ancient Greek texts. Notice how all of these have **asigmatic**\r\naorists.\r\n\r\nPresent | Aorist | Note  \r\n---|---|---  \r\n\u1f00\u03b3\u03b3\u03ad\u03bb\u03bb\u03c9 (I announce) | **\u1f24\u03b3\u03b3\u03b5\u03b9\u03bb\u03b1 | The augment has changed from \u03b5 to \u03b7\r\nfollowing a merge of \u03b1 \\+ \u03b5  \r\n\u03ba\u03c1\u03af\u03bd\u03c9 (I judge) | **\u1f14\u03ba\u03c1\u03b9\u03bd\u03b1 |  \r\n\u03c0\u03b5\u03c1\u03b1\u03af\u03bd\u03c9 (I finish) | **\u1f10\u03c0\u03ad\u03c1\u03b1\u03bd\u03b1 |\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -3800,6 +3898,30 @@
     },
     "model": "app.content",
     "pk": 463
+},
+{
+    "fields": {
+        "target_lang": 5,
+        "title": "Introduction to Participles",
+        "content": "**This is how participles work!!!**",
+        "grammar_ref": 62,
+        "related_content": [],
+        "source_lang": 4
+    },
+    "model": "app.content",
+    "pk": 464
+},
+{
+    "fields": {
+        "target_lang": 5,
+        "title": "Sostantivi femminili",
+        "content": "Io parlo Italiano!",
+        "grammar_ref": 18,
+        "related_content": [],
+        "source_lang": 9
+    },
+    "model": "app.content",
+    "pk": 465
 },
 {
     "fields": {
@@ -4387,7 +4509,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-10-10T06:20:19Z",
+        "last_login": "2014-10-12T14:52:05.444Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$OQeapR8t70Mz$t/UHAUZyIUG0Zxl7LFYDup2wSpLox0Qo9t6XoUzZGBc=",
@@ -10579,5 +10701,291 @@
     },
     "model": "admin.logentry",
     "pk": 473
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T16:34:37.963Z",
+        "object_repr": "The First (Sigmatic) Aorist",
+        "object_id": "456",
+        "change_message": "Changed related_content.",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 474
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T16:34:52.240Z",
+        "object_repr": "Examples of Asigmatic Aorists",
+        "object_id": "459",
+        "change_message": "Changed title.",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 475
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T16:35:15.515Z",
+        "object_repr": "Introduction to the Aorist",
+        "object_id": "454",
+        "change_message": "Changed related_content.",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 476
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T16:35:35.848Z",
+        "object_repr": "Aorist Indicative Active for Stop Verbs",
+        "object_id": "453",
+        "change_message": "Changed related_content.",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 477
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T16:36:56.494Z",
+        "object_repr": "Verbs for Beginners",
+        "object_id": "2",
+        "change_message": "",
+        "user": 1,
+        "content_type": 16
+    },
+    "model": "admin.logentry",
+    "pk": 478
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T16:37:28.071Z",
+        "object_repr": "TaskContext object",
+        "object_id": "4",
+        "change_message": "",
+        "user": 1,
+        "content_type": 17
+    },
+    "model": "admin.logentry",
+    "pk": 479
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-11T16:37:47.203Z",
+        "object_repr": "TaskContext object",
+        "object_id": "5",
+        "change_message": "",
+        "user": 1,
+        "content_type": 17
+    },
+    "model": "admin.logentry",
+    "pk": 480
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T16:38:24.500Z",
+        "object_repr": "The Aorist Tense",
+        "object_id": "60",
+        "change_message": "Changed tasks.",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 481
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T16:40:31.625Z",
+        "object_repr": "The Aorist Tense - Active Indicative for Stop Verbs",
+        "object_id": "61",
+        "change_message": "Changed tasks.",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 482
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T16:40:37.102Z",
+        "object_repr": "The Aorist Tense - First Aorist",
+        "object_id": "43",
+        "change_message": "Changed tasks.",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 483
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T16:40:42.706Z",
+        "object_repr": "The Aorist Tense - Second Aorist",
+        "object_id": "44",
+        "change_message": "Changed tasks.",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 484
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-11T17:44:31.755Z",
+        "object_repr": "identify_morph:case",
+        "object_id": "10",
+        "change_message": "Changed aspect.",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 485
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-12T15:46:18.666Z",
+        "object_repr": "translate_word",
+        "object_id": "1",
+        "change_message": "Changed aspect.",
+        "user": 1,
+        "content_type": 14
+    },
+    "model": "admin.logentry",
+    "pk": 486
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-12T15:47:58.579Z",
+        "object_repr": "Second Declension Nouns - Feminine",
+        "object_id": "23",
+        "change_message": "Changed tasks.",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 487
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T15:55:44.436Z",
+        "object_repr": "Participles",
+        "object_id": "6",
+        "change_message": "",
+        "user": 1,
+        "content_type": 2
+    },
+    "model": "admin.logentry",
+    "pk": 488
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T15:55:58.553Z",
+        "object_repr": "Participles",
+        "object_id": "62",
+        "change_message": "",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 489
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T15:59:08.398Z",
+        "object_repr": "Introduction to Participles",
+        "object_id": "464",
+        "change_message": "",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 490
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:07:03.254Z",
+        "object_repr": "Learn Participles",
+        "object_id": "3",
+        "change_message": "",
+        "user": 1,
+        "content_type": 16
+    },
+    "model": "admin.logentry",
+    "pk": 491
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:08:24.823Z",
+        "object_repr": "TaskContext object",
+        "object_id": "6",
+        "change_message": "",
+        "user": 1,
+        "content_type": 17
+    },
+    "model": "admin.logentry",
+    "pk": 492
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:08:55.529Z",
+        "object_repr": "TaskContext object",
+        "object_id": "7",
+        "change_message": "",
+        "user": 1,
+        "content_type": 17
+    },
+    "model": "admin.logentry",
+    "pk": 493
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:20:45.417Z",
+        "object_repr": "Italian",
+        "object_id": "9",
+        "change_message": "",
+        "user": 1,
+        "content_type": 1
+    },
+    "model": "admin.logentry",
+    "pk": 494
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-12T16:22:40.078Z",
+        "object_repr": "Sostantivi femminili",
+        "object_id": "465",
+        "change_message": "",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 495
 }
 ]
