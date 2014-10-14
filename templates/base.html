@@ -47,16 +47,16 @@
 		<div class="col-md-7">
 			{% block nav %}
 				<nav class="row navigation">
-					<a class="col-xs-1 col-sm-2 progress-lessons {{ home_active }}" href="/home">
+					<a class="col-xs-1 col-sm-2 progress-lessons {{ home_active }}" href="/{{ LANGUAGE_CODE }}/home">
 						<span class="glyphicon glyphicon-home"></span> <span class="hidden-sm hidden-xs">{% trans "Home" %}</span>
 					</a>
-					<a class="col-xs-1 col-sm-2 progress-lessons {{ lessons_active }}" href="/lessons">
+					<a class="col-xs-1 col-sm-2 progress-lessons {{ lessons_active }}" href="/{{ LANGUAGE_CODE }}/lessons">
 						<span class="glyphicon glyphicon-flash"></span> <span class="hidden-sm hidden-xs">{% trans "Learn" %}</span>
 					</a>
-					<a class="col-xs-1 col-sm-2 progress-voc {{ reader_active }}" href="/reader">
+					<a class="col-xs-1 col-sm-2 progress-voc {{ reader_active }}" href="/{{ LANGUAGE_CODE }}/reader">
 						<span class="glyphicon glyphicon-bookmark"></span> <span class="hidden-sm hidden-xs">{% trans "Read" %}</span>
 					</a>
-					<a class="col-xs-1 col-sm-2 progress-book {{ create_active }}" href="/create">
+					<a class="col-xs-1 col-sm-2 progress-book {{ create_active }}" href="/{{ LANGUAGE_CODE }}/create">
 						<span class="glyphicon glyphicon-comment"></span> <span class="hidden-sm hidden-xs">{% trans "Create" %}</span>
 					</a>
 				</nav>
@@ -64,18 +64,31 @@
 		</div>
 
 		<div class="col-md-5">
-			{% comment %}
 			<div class="user-info pull-right">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						{% get_language_info for LANGUAGE_CODE as lang %}
+						{{ lang.name_local }} <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						{% get_language_info_list for LANGUAGES as languages %}
+						
+						{% for language in languages %}
+							<form action="{% url 'set_language' %}" method="post">
+								{% csrf_token %}
+								<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+								<input name="language" type="hidden" value="{{ language.code }}">
+								<input type="submit" class="btn btn-link" value="{{ language.name_local }}">
+							</form>
+						{% endfor %}
+					</ul>
+				</div>
 				{% if user.is_authenticated %}
 					<span class="logged-in">
-						<span lang="grc">χαῖρε</span>, 
 						<a href="/profile/" class="username">
 							<img src="http://www.gravatar.com/avatar/{{ email_hash }}?s=25&d=mm" class="img-circle img-thumbnail"> 
 							{{ user.username }} 
-							<span style="color: #6378A5; font-size: 1.2em">!</span>
 						</a>
-						
-						<a href="/logout" id="logout-link">{% trans "Log out" %}</a>
 					</span>
 				{% else %}
 					<span class="logged-out">
@@ -83,22 +96,7 @@
 					</span>
 				{% endif %}
 			</div>
-			{% endcomment %}
-			<div class="pull-right">
-				<form action="{% url 'set_language' %}" method="post">
-				  {% csrf_token %}
-				  <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
-				  <select name="language">
-					{% get_language_info_list for LANGUAGES as languages %}
-					  {% for language in languages %}
-						<option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-						  {{ language.name_local }} ({{ language.code }})
-						</option>
-					  {% endfor %}
-				  </select>
-				  <input type="submit" value="Change" />
-				</form>
-			</div>
+			{# Language Selection! #}
 		</div>
 	</header>
 

@@ -6,8 +6,8 @@ define(['jquery', 'underscore', 'backbone', 'views/lessons/lessons', 'views/less
 
 	return Backbone.Router.extend({
 		initialize: function(options) {
-			this.route(/^(.*?)\/lessons$/, 'showLessons');
 			this.route(/^(.*?)\/lessons\/(.*?)$/, 'showLessons');
+			this.route(/^(.*?)\/lessons\/(.+)$/, 'showMicrolesson');
 		},
 		showLessons: function(lang) {
 			this.hideMicrolesson();

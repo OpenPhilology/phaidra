@@ -2,8 +2,8 @@ define(['jquery', 'underscore', 'backbone', 'views/reader/reader', 'views/create
 
 	return Backbone.Router.extend({
 		initialize: function() {
-			this.route(/^(.*?)\/reader$/, 'showLibrary');
-			this.route(/^(.*?)\/reader\/(.*?)$/, 'updateReader');
+			this.route(/^(.*?)\/reader\/(.*?)$/, 'showLibrary');
+			this.route(/^(.*?)\/reader\/(.+)$/, 'updateReader');
 		},
 		showLibrary: function(lang) {
 			if (!this.library_view)
