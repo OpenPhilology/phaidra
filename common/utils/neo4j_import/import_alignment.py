@@ -1,15 +1,15 @@
 # coding: utf8
-from django.conf import settings
+#from django.conf import settings
 from neo4jrestclient.client import GraphDatabase
 from xml.dom import minidom
 
 ################ set your alignment's meta data ################
 # The script assumes Alpheios alignment output with the references being unique in the document
-# It also assumes the Greek to alignment to be the first section in the xml.
+# It also assumes the Greek-to-alignment-language to be the first language in the enumeration in the xml.
 # To adapt this, use alignNode.childNodes[1] and alignNode.childNodes[3] and 
 # ANY_NODE.attributes['ANY_ATTRIBUTE_NAME'].value
 
-xml_file = "align.xml"
+xml_file = "tlg0003.tlg001.perseus-eng.xml"
 document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-en"
 document_CTS_greek = "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
 target_lang = "en"

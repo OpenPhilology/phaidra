@@ -106,7 +106,7 @@ class WordResource(Resource):
             for key in query_params:                
                 if len(key.split('__')) > 1:
                     if key.split('__')[1] == 'contains':
-                        if "OR" in query_params[key]:
+                        if "__" in query_params[key]:
                             q = q + """("""
                             chunks = query_params[key].split('__')
                             for chunk in chunks:
