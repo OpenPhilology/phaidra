@@ -108,7 +108,7 @@ class WordResource(Resource):
                     if key.split('__')[1] == 'contains':
                         if "OR" in query_params[key]:
                             q = q + """("""
-                            chunks = query_params[key].split('OR')
+                            chunks = query_params[key].split('__')
                             for chunk in chunks:
                                 q = q + """ w."""+key.split('__')[0]+ """=~'.*""" +chunk+ """.*' OR """
                             q = q[:len(q)-3]
