@@ -63,6 +63,7 @@ with open(filename, 'r') as json_data:
                                                 if lemma_attr == 'value':
                                                     w['lemma'] = word[word_attr][lemma_attr]
                                                 l[lemma_attr] = word[word_attr][lemma_attr]
+                                            l.values(w)
                                         w.lemma(l)
                                 else:
                                     w[word_attr] = ''
