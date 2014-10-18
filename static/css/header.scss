@@ -77,6 +77,7 @@ $banner-height: 43px;
 		text-decoration: none;
 		font-size: 16px;
 		letter-spacing: 0.1em;
+		height: $banner-height;
 		@include transition(background-color, .2s, ease-out);
 
 		&:hover {
@@ -85,6 +86,7 @@ $banner-height: 43px;
 		}
 		&.active {
 			background-color: lighten($color-sec-two, 10%);	
+			border-bottom: 4px solid #000;
 			@include transition(background-color, .2s, ease-in);
 		}
 
@@ -102,12 +104,31 @@ $banner-height: 43px;
 		}
 		&.progress-book {
 			color: $text-light-color;
+
+			&.active {
+				border-color: $color-pri-two;
+			}
 		}
 		&.progress-voc {
 			color: $text-light-color;
+
+			&.active {
+				border-color: lighten($color-pri-one, 5%);
+			}
 		}
 		&.progress-lessons {
 			color: $text-light-color;
+
+			&.active {
+				border-color: $color-sec-four;
+			}
+		}
+		&.progress-home {
+			color: $text-light-color;
+
+			&.active {
+				border-color: #EEE;
+			}
 		}
 	}
 
