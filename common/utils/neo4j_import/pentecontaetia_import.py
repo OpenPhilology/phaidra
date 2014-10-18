@@ -52,18 +52,17 @@ with open(filename, 'r') as json_data:
                                 elif word_attr == 'lemma' and  len(word[word_attr]) > 0:
                                     if word[word_attr]['CITE'] != '':                             
                                         CITE = word[word_attr]['CITE']
-                                        table = gdb.query("""MATCH (l:`Lemma`) WHERE l.CITE='""" + "bla" + """' RETURN l""")
+                                        table = gdb.query("""MATCH (l:`Lemma`) WHERE l.CITE='""" + CITE + """' RETURN l""")
                                         try:
-                                            lemma = gdb.nodes.get(table[0][0]['self'])
+                                            l = gdb.nodes.get(table[0][0]['self'])
                                         except:
                                             # create the lemma node
                                             l = gdb.nodes.create()
                                             l.labels.add("Lemma")
                                             for lemma_attr in word[word_attr]:
-                                                if lemma_attr == 'value':
-                                                    w['lemma'] = word[word_attr][lemma_attr]
                                                 l[lemma_attr] = word[word_attr][lemma_attr]
-                                            l.values(w)
+                                        l.values(w)
+                                        w['lemma'] = l['value']
                                         w.lemma(l)
                                 else:
                                     w[word_attr] = ''
