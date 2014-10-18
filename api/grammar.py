@@ -14,6 +14,12 @@ class GrammarResource(ModelResource):
                                 use_in='detail', 
                                 full=True)
 
+    shallow_content = fields.ForeignKey('api.content.ContentResource', 
+                                'content', 
+                                blank=True, 
+                                null=True, 
+                                use_in='list') 
+
     category = fields.ForeignKey('api.category.CategoryResource', 
                                 'category', 
                                 blank=True, 

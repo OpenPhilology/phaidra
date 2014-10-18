@@ -36,7 +36,7 @@
 			require(['/static/js/main.js']);
 		});
 	</script>
-	<script>var csrf_token = "{{ csrf_token }}"; var locale = "{{ LANGUAGE_CODE }}"; var dir = "{{ dir }}"; var U = "{{ user.username }}"; console.log(locale)</script>
+	<script>var CSRF_TOKEN = "{{ csrf_token }}"; var LOCALE = "{{ LANGUAGE_CODE }}"; var DIR = "{{ dir }}"; var USER = "{{ user.username }}";</script>
 
 </head>
 <body>
@@ -46,7 +46,7 @@
 		<div class="col-md-7">
 			{% block nav %}
 				<nav class="row navigation">
-					<a class="col-xs-1 col-sm-2 progress-lessons {{ home_active }}" href="/{{ LANGUAGE_CODE }}/home">
+					<a class="col-xs-1 col-sm-2 progress-home {{ home_active }}" href="/{{ LANGUAGE_CODE }}/home">
 						<span class="glyphicon glyphicon-home"></span> <span class="hidden-sm hidden-xs">{% trans "Home" %}</span>
 					</a>
 					<a class="col-xs-1 col-sm-2 progress-lessons {{ lessons_active }}" href="/{{ LANGUAGE_CODE }}/lessons">

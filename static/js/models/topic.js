@@ -1,3 +1,6 @@
+/**
+ * Corresponds to the /grammar/ endpoint in the API.
+ */
 define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, Utils) {
 
 	return Backbone.Model.extend({
@@ -8,7 +11,6 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 			return this.get('resource_uri');
 		},
 		parse: function(response) {
-			console.log("parsing");
 			if (response && response.meta) {
 				this.meta = response.meta;
 			}
