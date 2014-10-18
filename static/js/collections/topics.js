@@ -11,6 +11,9 @@ define(['jquery', 'underscore', 'backbone', 'models/topic', 'utils'], function($
 		},
 		incrementUrl: function() {
 			this.url = this.meta.next;
+		},
+		setEndpointLimit: function(limit) {
+			this.url = '/api/v1/grammar/?limit=' + limit;
 		}
 	});
 

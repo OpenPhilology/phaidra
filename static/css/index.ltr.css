@@ -115,6 +115,7 @@ blockquote {
     text-decoration: none;
     font-size: 16px;
     letter-spacing: 0.1em;
+    height: 43px;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
@@ -129,6 +130,7 @@ blockquote {
       transition: background-color 0.2s ease-in; }
     .navigation a.active {
       background-color: #4c566c;
+      border-bottom: 4px solid #000;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
@@ -144,10 +146,20 @@ blockquote {
       font-size: 11px; }
     .navigation a.progress-book {
       color: #eeeeee; }
+      .navigation a.progress-book.active {
+        border-color: #1fadad; }
     .navigation a.progress-voc {
       color: #eeeeee; }
+      .navigation a.progress-voc.active {
+        border-color: #d66556; }
     .navigation a.progress-lessons {
       color: #eeeeee; }
+      .navigation a.progress-lessons.active {
+        border-color: #f4bc78; }
+    .navigation a.progress-home {
+      color: #eeeeee; }
+      .navigation a.progress-home.active {
+        border-color: #EEE; }
 
 .user-info {
   margin: 4px; }
