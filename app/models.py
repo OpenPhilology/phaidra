@@ -262,7 +262,6 @@ class Grammar(models.Model):
     """
     ref = models.CharField("Reference", 
                             max_length=10, 
-                            unique=True, 
                             help_text=textwrap.dedent("""
                                 Refers to the section of the grammar 
                                 book you're using.
@@ -329,7 +328,7 @@ class Content(models.Model):
                                 content is in this section.
                             """))
 
-    grammar_ref = models.OneToOneField(Grammar, 
+    grammar_ref = models.ForeignKey(Grammar, 
                             verbose_name="grammar topic", 
                             null=True, 
                             blank=True, 
