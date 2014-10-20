@@ -121,6 +121,146 @@
 },
 {
     "fields": {
+        "username": "monica",
+        "first_name": "Monica",
+        "last_name": "Lent",
+        "lang_speaking": 4,
+        "is_active": true,
+        "lang_learning": 5,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2014-10-20T13:38:14.126Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$OQeapR8t70Mz$t/UHAUZyIUG0Zxl7LFYDup2wSpLox0Qo9t6XoUzZGBc=",
+        "email": "lent.monica@gmail.com",
+        "date_joined": "2014-10-05T12:13:12Z"
+    },
+    "model": "app.appuser",
+    "pk": 1
+},
+{
+    "fields": {
+        "username": "john",
+        "first_name": "Maria",
+        "last_name": "Moritz ;)",
+        "lang_speaking": 7,
+        "is_active": true,
+        "lang_learning": 5,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2014-10-07T14:02:27Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$6Gs8pgo4CvVb$DEZ2DKa9WLJHhuhAbt/7XMzcEIAKL3Fd8sggOya+7Ds=",
+        "email": "john@thebeatles.com",
+        "date_joined": "2014-10-07T14:02:27Z"
+    },
+    "model": "app.appuser",
+    "pk": 2
+},
+{
+    "fields": {
+        "username": "emily",
+        "first_name": "Emily",
+        "last_name": "Franzini",
+        "lang_speaking": 4,
+        "is_active": true,
+        "lang_learning": 5,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2014-10-11T14:47:22Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$mjylIxJjSuP8$hXlaTs4LJGg8TDaOgueySvUCzigoGyiWFEMPIG/0dso=",
+        "email": "emilyfranzini@gmail.com",
+        "date_joined": "2014-10-11T14:47:22Z"
+    },
+    "model": "app.appuser",
+    "pk": 3
+},
+{
+    "fields": {
+        "username": "maryam",
+        "first_name": "Maryam",
+        "last_name": "Foradi",
+        "lang_speaking": 6,
+        "is_active": true,
+        "lang_learning": 5,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2014-10-11T14:47:44Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$vkP1SHTyIGSj$KVqlbr4Ql/H5EvIrKPZXlLF+Rey2ePxilxJR7dKQ1n0=",
+        "email": "maryam.foradi@gmail.com",
+        "date_joined": "2014-10-11T14:47:44Z"
+    },
+    "model": "app.appuser",
+    "pk": 4
+},
+{
+    "fields": {
+        "username": "test124",
+        "first_name": "test123",
+        "last_name": "test123",
+        "lang_speaking": null,
+        "is_active": true,
+        "lang_learning": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2014-10-13T12:31:19.207Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "",
+        "email": "",
+        "date_joined": "2014-10-13T12:31:19.207Z"
+    },
+    "model": "app.appuser",
+    "pk": 5
+},
+{
+    "fields": {
+        "username": "tester",
+        "first_name": "test123",
+        "last_name": "test123",
+        "lang_speaking": null,
+        "is_active": true,
+        "lang_learning": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2014-10-13T12:38:25.588Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "",
+        "email": "",
+        "date_joined": "2014-10-13T12:38:25.588Z"
+    },
+    "model": "app.appuser",
+    "pk": 6
+},
+{
+    "fields": {
+        "username": "testee",
+        "first_name": "test123",
+        "last_name": "test123",
+        "lang_speaking": null,
+        "is_active": true,
+        "lang_learning": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2014-10-13T12:52:48.746Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$k6tkx8LVG8gD$1DkeySChSFUTE3MYnQtfWPqKN+ILnCUSAgJ1HKrlLrs=",
+        "email": "",
+        "date_joined": "2014-10-13T12:52:48.746Z"
+    },
+    "model": "app.appuser",
+    "pk": 7
+},
+{
+    "fields": {
         "name": "V"
     },
     "model": "app.aspect",
@@ -3922,722 +4062,6 @@
     },
     "model": "app.content",
     "pk": 465
-},
-{
-    "fields": {
-        "codename": "add_language",
-        "name": "Can add language",
-        "content_type": [
-            "app",
-            "language"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 1
-},
-{
-    "fields": {
-        "codename": "change_language",
-        "name": "Can change language",
-        "content_type": [
-            "app",
-            "language"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 2
-},
-{
-    "fields": {
-        "codename": "delete_language",
-        "name": "Can delete language",
-        "content_type": [
-            "app",
-            "language"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 3
-},
-{
-    "fields": {
-        "codename": "add_category",
-        "name": "Can add category",
-        "content_type": [
-            "app",
-            "category"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 4
-},
-{
-    "fields": {
-        "codename": "change_category",
-        "name": "Can change category",
-        "content_type": [
-            "app",
-            "category"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 5
-},
-{
-    "fields": {
-        "codename": "delete_category",
-        "name": "Can delete category",
-        "content_type": [
-            "app",
-            "category"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 6
-},
-{
-    "fields": {
-        "codename": "add_appuser",
-        "name": "Can add user",
-        "content_type": [
-            "app",
-            "appuser"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 7
-},
-{
-    "fields": {
-        "codename": "change_appuser",
-        "name": "Can change user",
-        "content_type": [
-            "app",
-            "appuser"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 8
-},
-{
-    "fields": {
-        "codename": "delete_appuser",
-        "name": "Can delete user",
-        "content_type": [
-            "app",
-            "appuser"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 9
-},
-{
-    "fields": {
-        "codename": "add_grammar",
-        "name": "Can add grammar",
-        "content_type": [
-            "app",
-            "grammar"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 10
-},
-{
-    "fields": {
-        "codename": "change_grammar",
-        "name": "Can change grammar",
-        "content_type": [
-            "app",
-            "grammar"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 11
-},
-{
-    "fields": {
-        "codename": "delete_grammar",
-        "name": "Can delete grammar",
-        "content_type": [
-            "app",
-            "grammar"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 12
-},
-{
-    "fields": {
-        "codename": "add_content",
-        "name": "Can add content",
-        "content_type": [
-            "app",
-            "content"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 13
-},
-{
-    "fields": {
-        "codename": "change_content",
-        "name": "Can change content",
-        "content_type": [
-            "app",
-            "content"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 14
-},
-{
-    "fields": {
-        "codename": "delete_content",
-        "name": "Can delete content",
-        "content_type": [
-            "app",
-            "content"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 15
-},
-{
-    "fields": {
-        "codename": "add_permission",
-        "name": "Can add permission",
-        "content_type": [
-            "auth",
-            "permission"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 16
-},
-{
-    "fields": {
-        "codename": "change_permission",
-        "name": "Can change permission",
-        "content_type": [
-            "auth",
-            "permission"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 17
-},
-{
-    "fields": {
-        "codename": "delete_permission",
-        "name": "Can delete permission",
-        "content_type": [
-            "auth",
-            "permission"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 18
-},
-{
-    "fields": {
-        "codename": "add_group",
-        "name": "Can add group",
-        "content_type": [
-            "auth",
-            "group"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 19
-},
-{
-    "fields": {
-        "codename": "change_group",
-        "name": "Can change group",
-        "content_type": [
-            "auth",
-            "group"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 20
-},
-{
-    "fields": {
-        "codename": "delete_group",
-        "name": "Can delete group",
-        "content_type": [
-            "auth",
-            "group"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 21
-},
-{
-    "fields": {
-        "codename": "add_contenttype",
-        "name": "Can add content type",
-        "content_type": [
-            "contenttypes",
-            "contenttype"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 22
-},
-{
-    "fields": {
-        "codename": "change_contenttype",
-        "name": "Can change content type",
-        "content_type": [
-            "contenttypes",
-            "contenttype"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 23
-},
-{
-    "fields": {
-        "codename": "delete_contenttype",
-        "name": "Can delete content type",
-        "content_type": [
-            "contenttypes",
-            "contenttype"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 24
-},
-{
-    "fields": {
-        "codename": "add_session",
-        "name": "Can add session",
-        "content_type": [
-            "sessions",
-            "session"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 25
-},
-{
-    "fields": {
-        "codename": "change_session",
-        "name": "Can change session",
-        "content_type": [
-            "sessions",
-            "session"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 26
-},
-{
-    "fields": {
-        "codename": "delete_session",
-        "name": "Can delete session",
-        "content_type": [
-            "sessions",
-            "session"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 27
-},
-{
-    "fields": {
-        "codename": "add_apiaccess",
-        "name": "Can add api access",
-        "content_type": [
-            "tastypie",
-            "apiaccess"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 28
-},
-{
-    "fields": {
-        "codename": "change_apiaccess",
-        "name": "Can change api access",
-        "content_type": [
-            "tastypie",
-            "apiaccess"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 29
-},
-{
-    "fields": {
-        "codename": "delete_apiaccess",
-        "name": "Can delete api access",
-        "content_type": [
-            "tastypie",
-            "apiaccess"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 30
-},
-{
-    "fields": {
-        "codename": "add_apikey",
-        "name": "Can add api key",
-        "content_type": [
-            "tastypie",
-            "apikey"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 31
-},
-{
-    "fields": {
-        "codename": "change_apikey",
-        "name": "Can change api key",
-        "content_type": [
-            "tastypie",
-            "apikey"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 32
-},
-{
-    "fields": {
-        "codename": "delete_apikey",
-        "name": "Can delete api key",
-        "content_type": [
-            "tastypie",
-            "apikey"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 33
-},
-{
-    "fields": {
-        "codename": "add_logentry",
-        "name": "Can add log entry",
-        "content_type": [
-            "admin",
-            "logentry"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 34
-},
-{
-    "fields": {
-        "codename": "change_logentry",
-        "name": "Can change log entry",
-        "content_type": [
-            "admin",
-            "logentry"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 35
-},
-{
-    "fields": {
-        "codename": "delete_logentry",
-        "name": "Can delete log entry",
-        "content_type": [
-            "admin",
-            "logentry"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 36
-},
-{
-    "fields": {
-        "codename": "add_aspect",
-        "name": "Can add aspect",
-        "content_type": [
-            "app",
-            "aspect"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 37
-},
-{
-    "fields": {
-        "codename": "change_aspect",
-        "name": "Can change aspect",
-        "content_type": [
-            "app",
-            "aspect"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 38
-},
-{
-    "fields": {
-        "codename": "delete_aspect",
-        "name": "Can delete aspect",
-        "content_type": [
-            "app",
-            "aspect"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 39
-},
-{
-    "fields": {
-        "codename": "add_task",
-        "name": "Can add task",
-        "content_type": [
-            "app",
-            "task"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 40
-},
-{
-    "fields": {
-        "codename": "change_task",
-        "name": "Can change task",
-        "content_type": [
-            "app",
-            "task"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 41
-},
-{
-    "fields": {
-        "codename": "delete_task",
-        "name": "Can delete task",
-        "content_type": [
-            "app",
-            "task"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 42
-},
-{
-    "fields": {
-        "codename": "add_tasksequence",
-        "name": "Can add task sequence",
-        "content_type": [
-            "app",
-            "tasksequence"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 46
-},
-{
-    "fields": {
-        "codename": "change_tasksequence",
-        "name": "Can change task sequence",
-        "content_type": [
-            "app",
-            "tasksequence"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 47
-},
-{
-    "fields": {
-        "codename": "delete_tasksequence",
-        "name": "Can delete task sequence",
-        "content_type": [
-            "app",
-            "tasksequence"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 48
-},
-{
-    "fields": {
-        "codename": "add_taskcontext",
-        "name": "Can add task context",
-        "content_type": [
-            "app",
-            "taskcontext"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 49
-},
-{
-    "fields": {
-        "codename": "change_taskcontext",
-        "name": "Can change task context",
-        "content_type": [
-            "app",
-            "taskcontext"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 50
-},
-{
-    "fields": {
-        "codename": "delete_taskcontext",
-        "name": "Can delete task context",
-        "content_type": [
-            "app",
-            "taskcontext"
-        ]
-    },
-    "model": "auth.permission",
-    "pk": 51
-},
-{
-    "fields": {
-        "username": "monica",
-        "first_name": "Monica",
-        "last_name": "Lent",
-        "lang_speaking": 4,
-        "is_active": true,
-        "lang_learning": 5,
-        "is_superuser": true,
-        "is_staff": true,
-        "last_login": "2014-10-20T13:38:14.126Z",
-        "groups": [],
-        "user_permissions": [],
-        "password": "pbkdf2_sha256$12000$OQeapR8t70Mz$t/UHAUZyIUG0Zxl7LFYDup2wSpLox0Qo9t6XoUzZGBc=",
-        "email": "lent.monica@gmail.com",
-        "date_joined": "2014-10-05T12:13:12Z"
-    },
-    "model": "app.appuser",
-    "pk": 1
-},
-{
-    "fields": {
-        "username": "john",
-        "first_name": "Maria",
-        "last_name": "Moritz ;)",
-        "lang_speaking": 7,
-        "is_active": true,
-        "lang_learning": 5,
-        "is_superuser": true,
-        "is_staff": true,
-        "last_login": "2014-10-07T14:02:27Z",
-        "groups": [],
-        "user_permissions": [],
-        "password": "pbkdf2_sha256$12000$6Gs8pgo4CvVb$DEZ2DKa9WLJHhuhAbt/7XMzcEIAKL3Fd8sggOya+7Ds=",
-        "email": "john@thebeatles.com",
-        "date_joined": "2014-10-07T14:02:27Z"
-    },
-    "model": "app.appuser",
-    "pk": 2
-},
-{
-    "fields": {
-        "username": "emily",
-        "first_name": "Emily",
-        "last_name": "Franzini",
-        "lang_speaking": 4,
-        "is_active": true,
-        "lang_learning": 5,
-        "is_superuser": true,
-        "is_staff": true,
-        "last_login": "2014-10-11T14:47:22Z",
-        "groups": [],
-        "user_permissions": [],
-        "password": "pbkdf2_sha256$12000$mjylIxJjSuP8$hXlaTs4LJGg8TDaOgueySvUCzigoGyiWFEMPIG/0dso=",
-        "email": "emilyfranzini@gmail.com",
-        "date_joined": "2014-10-11T14:47:22Z"
-    },
-    "model": "app.appuser",
-    "pk": 3
-},
-{
-    "fields": {
-        "username": "maryam",
-        "first_name": "Maryam",
-        "last_name": "Foradi",
-        "lang_speaking": 6,
-        "is_active": true,
-        "lang_learning": 5,
-        "is_superuser": true,
-        "is_staff": true,
-        "last_login": "2014-10-11T14:47:44Z",
-        "groups": [],
-        "user_permissions": [],
-        "password": "pbkdf2_sha256$12000$vkP1SHTyIGSj$KVqlbr4Ql/H5EvIrKPZXlLF+Rey2ePxilxJR7dKQ1n0=",
-        "email": "maryam.foradi@gmail.com",
-        "date_joined": "2014-10-11T14:47:44Z"
-    },
-    "model": "app.appuser",
-    "pk": 4
-},
-{
-    "fields": {
-        "username": "test124",
-        "first_name": "test123",
-        "last_name": "test123",
-        "lang_speaking": null,
-        "is_active": true,
-        "lang_learning": null,
-        "is_superuser": false,
-        "is_staff": false,
-        "last_login": "2014-10-13T12:31:19.207Z",
-        "groups": [],
-        "user_permissions": [],
-        "password": "",
-        "email": "",
-        "date_joined": "2014-10-13T12:31:19.207Z"
-    },
-    "model": "app.appuser",
-    "pk": 5
-},
-{
-    "fields": {
-        "username": "tester",
-        "first_name": "test123",
-        "last_name": "test123",
-        "lang_speaking": null,
-        "is_active": true,
-        "lang_learning": null,
-        "is_superuser": false,
-        "is_staff": false,
-        "last_login": "2014-10-13T12:38:25.588Z",
-        "groups": [],
-        "user_permissions": [],
-        "password": "",
-        "email": "",
-        "date_joined": "2014-10-13T12:38:25.588Z"
-    },
-    "model": "app.appuser",
-    "pk": 6
-},
-{
-    "fields": {
-        "username": "testee",
-        "first_name": "test123",
-        "last_name": "test123",
-        "lang_speaking": null,
-        "is_active": true,
-        "lang_learning": null,
-        "is_superuser": false,
-        "is_staff": false,
-        "last_login": "2014-10-13T12:52:48.746Z",
-        "groups": [],
-        "user_permissions": [],
-        "password": "pbkdf2_sha256$12000$k6tkx8LVG8gD$1DkeySChSFUTE3MYnQtfWPqKN+ILnCUSAgJ1HKrlLrs=",
-        "email": "",
-        "date_joined": "2014-10-13T12:52:48.746Z"
-    },
-    "model": "app.appuser",
-    "pk": 7
 },
 {
     "fields": {
