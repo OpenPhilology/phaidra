@@ -4065,50 +4065,6 @@
 },
 {
     "fields": {
-        "user": [
-            "monica"
-        ],
-        "key": "abc",
-        "created": "2014-10-13T12:19:59Z"
-    },
-    "model": "tastypie.apikey",
-    "pk": 1
-},
-{
-    "fields": {
-        "user": [
-            "test124"
-        ],
-        "key": "c2b729a52a4bdc584e3d9a7855663c8c91864eaa",
-        "created": "2014-10-13T12:31:19.212Z"
-    },
-    "model": "tastypie.apikey",
-    "pk": 2
-},
-{
-    "fields": {
-        "user": [
-            "tester"
-        ],
-        "key": "7c63a32f2e51ee4d5530e01d48c95cac22bded06",
-        "created": "2014-10-13T12:38:25.593Z"
-    },
-    "model": "tastypie.apikey",
-    "pk": 3
-},
-{
-    "fields": {
-        "user": [
-            "testee"
-        ],
-        "key": "c37026589ab1846da1003a742cc35fcc3e4e4d13",
-        "created": "2014-10-13T12:52:48.751Z"
-    },
-    "model": "tastypie.apikey",
-    "pk": 4
-},
-{
-    "fields": {
         "action_flag": 1,
         "action_time": "2014-10-05T12:25:02.517Z",
         "object_repr": "English",
