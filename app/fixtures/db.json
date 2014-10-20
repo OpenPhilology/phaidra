@@ -3775,7 +3775,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Introduction to the Aorist",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _When in doubt, aorist._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Aorist Indicative Active\r\n\r\n* * *\r\n\r\nNow that you are familiar with third declension nouns with consonant stems,\r\nthis is a good time to carry on learning the verbs. Here you will learn about\r\nthe **aorist indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab New Athenian battles and victories\r\n\r\n  1. Identify aorist indicative active verbs.\r\n  2. Conjugate aorist indicative active verbs.\r\n\r\n",
+        "content": "> _When in doubt, aorist._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Aorist Indicative Active\r\n\r\n* * *\r\n\r\nNow that you are familiar with third declension nouns with consonant stems,\r\nthis is a good time to carry on learning the verbs. Here you will learn about\r\nthe **aorist indicative active**!",
         "grammar_ref": 60,
         "related_content": [
             458
@@ -3831,7 +3831,7 @@
     "fields": {
         "target_lang": 5,
         "title": "The Aorist Indicative Active in English",
-        "content": "##### Aorist Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | had  \r\n2nd | You | had  \r\n3rd | He/She/It | had | **Plural**  \r\n1st | We | had  \r\n2nd | You | had  \r\n3rd | They | had  \r\n  \r\n#### Aorist Indicative Active\r\n\r\nAs you remember from \"Introduction to Verbs\":\r\n\r\n  * The**aorist tense**describes an action in the past time with simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _I **heard** a noise.\r\nSuddenly darkness **fell**._\r\n\r\n* * *\r\n\r\n##### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\n",
+        "content": "### Aorist Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | had  \r\n2nd | You | had  \r\n3rd | He/She/It | had\r\n **Plural**  \r\n1st | We | had  \r\n2nd | You | had  \r\n3rd | They | had\r\n\r\n* * *\r\n  \r\n### Aorist Indicative Active\r\n\r\nAs you remember from \"Introduction to Verbs\":\r\n\r\n  * The**aorist tense**describes an action in the past time with simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _I **heard** a noise.\r\nSuddenly darkness **fell**._\r\n\r\n* * *\r\n\r\n### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -4509,7 +4509,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-10-12T14:52:05.444Z",
+        "last_login": "2014-10-13T12:32:54.761Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$OQeapR8t70Mz$t/UHAUZyIUG0Zxl7LFYDup2wSpLox0Qo9t6XoUzZGBc=",
@@ -4577,6 +4577,102 @@
         "date_joined": "2014-10-11T14:47:44Z"
     },
     "model": "app.appuser",
+    "pk": 4
+},
+{
+    "fields": {
+        "username": "test124",
+        "first_name": "test123",
+        "last_name": "test123",
+        "lang_speaking": null,
+        "is_active": true,
+        "lang_learning": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2014-10-13T12:31:19.207Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "",
+        "email": "",
+        "date_joined": "2014-10-13T12:31:19.207Z"
+    },
+    "model": "app.appuser",
+    "pk": 5
+},
+{
+    "fields": {
+        "username": "tester",
+        "first_name": "test123",
+        "last_name": "test123",
+        "lang_speaking": null,
+        "is_active": true,
+        "lang_learning": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2014-10-13T12:38:25.588Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "",
+        "email": "",
+        "date_joined": "2014-10-13T12:38:25.588Z"
+    },
+    "model": "app.appuser",
+    "pk": 6
+},
+{
+    "fields": {
+        "username": "testee",
+        "first_name": "test123",
+        "last_name": "test123",
+        "lang_speaking": null,
+        "is_active": true,
+        "lang_learning": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2014-10-13T12:52:48.746Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$k6tkx8LVG8gD$1DkeySChSFUTE3MYnQtfWPqKN+ILnCUSAgJ1HKrlLrs=",
+        "email": "",
+        "date_joined": "2014-10-13T12:52:48.746Z"
+    },
+    "model": "app.appuser",
+    "pk": 7
+},
+{
+    "fields": {
+        "user": 1,
+        "key": "abc",
+        "created": "2014-10-13T12:19:59Z"
+    },
+    "model": "tastypie.apikey",
+    "pk": 1
+},
+{
+    "fields": {
+        "user": 5,
+        "key": "c2b729a52a4bdc584e3d9a7855663c8c91864eaa",
+        "created": "2014-10-13T12:31:19.212Z"
+    },
+    "model": "tastypie.apikey",
+    "pk": 2
+},
+{
+    "fields": {
+        "user": 6,
+        "key": "7c63a32f2e51ee4d5530e01d48c95cac22bded06",
+        "created": "2014-10-13T12:38:25.593Z"
+    },
+    "model": "tastypie.apikey",
+    "pk": 3
+},
+{
+    "fields": {
+        "user": 7,
+        "key": "c37026589ab1846da1003a742cc35fcc3e4e4d13",
+        "created": "2014-10-13T12:52:48.751Z"
+    },
+    "model": "tastypie.apikey",
     "pk": 4
 },
 {
@@ -10987,5 +11083,83 @@
     },
     "model": "admin.logentry",
     "pk": 495
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-13T12:20:07.900Z",
+        "object_repr": "abc for monica",
+        "object_id": "1",
+        "change_message": "",
+        "user": 1,
+        "content_type": 11
+    },
+    "model": "admin.logentry",
+    "pk": 496
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-18T15:12:26.317Z",
+        "object_repr": "Introduction to the Aorist",
+        "object_id": "454",
+        "change_message": "Changed content.",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 497
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-18T15:32:02.982Z",
+        "object_repr": "The Aorist Indicative Active in English",
+        "object_id": "458",
+        "change_message": "Changed content.",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 498
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-18T15:32:55.391Z",
+        "object_repr": "The Aorist Indicative Active in English",
+        "object_id": "458",
+        "change_message": "Changed content.",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 499
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-18T15:33:20.676Z",
+        "object_repr": "The Aorist Indicative Active in English",
+        "object_id": "458",
+        "change_message": "Changed content.",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 500
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-18T15:34:05.109Z",
+        "object_repr": "Introduction to the Aorist",
+        "object_id": "454",
+        "change_message": "Changed content.",
+        "user": 1,
+        "content_type": 5
+    },
+    "model": "admin.logentry",
+    "pk": 501
 }
 ]
