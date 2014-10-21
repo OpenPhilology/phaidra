@@ -313,8 +313,8 @@
         "success_msg": "Bravo!",
         "name": "build_tree",
         "aspect": [
-            2,
-            3
+            3,
+            2
         ],
         "hint_msg": "Try again."
     },
@@ -3094,8 +3094,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## How First and Second Declension Adjectives work\n\nJust like articles and nouns have gender, number and case, so do all the\nadjectives. Like the article, **an adjective must agree in gender, number and\ncase with the noun it describes**.\n\nHowever, this does not mean that the ending of the article and that of the\nnoun are always identical; there are exceptions where, though the adjective\nand noun agree, the endings might look different (e.g. \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2 \u03c8\u03c5\u03c7\u03ae, meaning\n_an unjust soul_).\n\nAdjectives agreeing with first and second declension nouns fall into two\ngroups:\n\n  * **Three-ending Adjectives**  \nThere are separate sets of endings for each of the three genders.  \n  \n\n  * **Two-ending Adjectives**  \nMasculine and Feminine nouns share one set of endings, while neuter has a\ndifferent set.  \n  \n\n* * *\n\n",
+        "title": "Adjectives: First and Second Declension_intro",
+        "content": "## How First and Second Declension Adjectives work\r\n\r\nJust like articles and nouns have gender, number and case, so do all the\r\nadjectives. Like the article, **an adjective must agree in gender, number and\r\ncase with the noun it describes**.\r\n\r\nHowever, this does not mean that the ending of the article and that of the\r\nnoun are always identical; there are exceptions where, though the adjective\r\nand noun agree, the endings might look different (e.g. \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2 \u03c8\u03c5\u03c7\u03ae, meaning\r\n_an unjust soul_).\r\n\r\nAdjectives agreeing with first and second declension nouns fall into two\r\ngroups:\r\n\r\n  * **Three-ending Adjectives**  \r\nThere are separate sets of endings for each of the three genders.  \r\n  \r\n\r\n  * **Two-ending Adjectives**  \r\nMasculine and Feminine nouns share one set of endings, while neuter has a\r\ndifferent set.  \r\n  \r\n\r\n* * *\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3106,8 +3106,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _If an adjective comes up to you in a bar, you've got to decline that, too!_\nThucydides _(ca 460 - 395 BC)_\n\n# Adjectives: First and Second Declension\n\n* * *\n\nNow is a good time to learn everything about **First and Second Declension\nAdjectives**!\n\n* * *\n\n## In this Section\n\nNew Skills New Vocab Athenians still be gainin' that power.\n\n  1. Identify and decline three-ending adjectives.\n  2. Identify and decline two-ending adjectives.\n\n",
+        "title": "Adjectives: First and Second Declension_intro",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _If an adjective comes up to you in a bar, you've got to decline that, too!_\r\nThucydides _(ca 460 - 395 BC)_\r\n\r\n# Adjectives: First and Second Declension\r\n\r\n* * *\r\n\r\nNow is a good time to learn everything about **First and Second Declension\r\nAdjectives**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab Athenians still be gainin' that power.\r\n\r\n  1. Identify and decline three-ending adjectives.\r\n  2. Identify and decline two-ending adjectives.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3118,9 +3118,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd -- _unjust_\n\nTwo-ending Adjective\n\n| Masc./Fem. | Neut.  \n---|---|---  \n**Singular**  \nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd**  \nGen. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5** | \u1f04\u03b4\u03af\u03ba**\u03bf\u03c5**  \nDat. | \u1f00\u03b4\u03af\u03ba**\u1ff3** | \u1f00\u03b4\u03af\u03ba**\u1ff3** | Acc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | Voc. |\n\u1f04\u03b4\u03b9\u03ba**\u03b5** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | **Plural**  \nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \nGen. | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd** | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd**  \nDat. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2** | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2**  \nAcc. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \nVoc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \n  \n## Two-ending Adjectives of the Second Declension\n\nAs you can see from the table, the adjective \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd has the same\nendings as second declension nouns.\n\nExample: \u03c4\u03bf\u1fe6 \u1f00\u03b4\u03af\u03ba\u03bf\u03c5 \u1f00\u03bd\u03b8\u03c1\u03ce\u03c0\u03bf\u03c5, meaning _of the unjust man._\n\n##### Meet the Alpha Privative\n\nThe adjective **\u1f04**\u03b4\u03b9\u03ba\u03bf\u03c2, meaning _unjust_ is the exact opposite in meaning of\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 meaning _just_. The clue is in the prefix **\u03b1**, also called _alpha\nprivative_, expressesing negation or absence.\n\n",
-        "grammar_ref": null,
+        "title": "Adjectives: Second Declension_Two-ending",
+        "content": "### \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd -- _unjust_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd**  \r\nGen. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5** | \u1f04\u03b4\u03af\u03ba**\u03bf\u03c5**  \r\nDat. | \u1f00\u03b4\u03af\u03ba**\u1ff3** | \u1f00\u03b4\u03af\u03ba**\u1ff3** | Acc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | Voc. |\r\n\u1f04\u03b4\u03b9\u03ba**\u03b5** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | **Plural**  \r\nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\nGen. | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd** | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd**  \r\nDat. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2** | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2**  \r\nAcc. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\nVoc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\n  \r\n## Two-ending Adjectives of the Second Declension\r\n\r\nAs you can see from the table, the adjective \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd has the same\r\nendings as second declension nouns.\r\n\r\nExample: \u03c4\u03bf\u1fe6 \u1f00\u03b4\u03af\u03ba\u03bf\u03c5 \u1f00\u03bd\u03b8\u03c1\u03ce\u03c0\u03bf\u03c5, meaning _of the unjust man._\r\n\r\n##### Meet the Alpha Privative\r\n\r\nThe adjective **\u1f04**\u03b4\u03b9\u03ba\u03bf\u03c2, meaning _unjust_ is the exact opposite in meaning of\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 meaning _just_. The clue is in the prefix **\u03b1**, also called _alpha\r\nprivative_, expressesing negation or absence.\r\n\r\n",
+        "grammar_ref": 29,
         "related_content": [],
         "source_lang": 4
     },
@@ -3130,8 +3130,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### Cimon, Athenian military leader\n\n![](/static/images/cimon.gif)\n\nI am an Athenian statesman and general. I am also the son of Miltiades, the\nhero of Marathon who died in disgrace.\n\n## ...previously in the Pentecontaetia\n\nThe Athenians grew less popular by demanding monetary and military\ncontributions from the alliance.\n\n## Now in the Pentecontaetia...\n\nUnder the Athenian military leader, \u039a\u03af\u03bc\u03c9\u03bd, Cimon, the Athenians and the allies\ntogether defeat the Persians once again on the river Eurymedon. The Athenians\nalso manage to suppress the revolt of the Thracians by defeating them at sea\nand landing on their island. However, they are defeated in Amphipolis while\nthey attempt to advance further into Thrace.\n\nThe defeated Thracians appeal to the Spartans, who, in turn, secretely promise\nto assist them by invading Attica, the region encompassing Athens. But Spartan\naid is prevented by a terrible earthquake and by the revolt of the Helots.\nWithout the help of the Spartans, the Thacians are, therefore, forced to\nsurrender to \u03bf\u1f31 \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9, the Athenians.\n\n(Summary of Thuc. 1.100-101)\n\nNow that you've got some context, let's look at the adjectives of the first\nand second declensions!  \n  \n**Click the arrow to start learning!**\n\n",
+        "title": "History: Penteconteatia  1.100-101",
+        "content": "### Cimon, Athenian military leader\r\n\r\n![](/static/images/cimon.gif)\r\n\r\nI am an Athenian statesman and general. I am also the son of Miltiades, the\r\nhero of Marathon who died in disgrace.\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThe Athenians grew less popular by demanding monetary and military\r\ncontributions from the alliance.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nUnder the Athenian military leader, \u039a\u03af\u03bc\u03c9\u03bd, Cimon, the Athenians and the allies\r\ntogether defeat the Persians once again on the river Eurymedon. The Athenians\r\nalso manage to suppress the revolt of the Thracians by defeating them at sea\r\nand landing on their island. However, they are defeated in Amphipolis while\r\nthey attempt to advance further into Thrace.\r\n\r\nThe defeated Thracians appeal to the Spartans, who, in turn, secretely promise\r\nto assist them by invading Attica, the region encompassing Athens. But Spartan\r\naid is prevented by a terrible earthquake and by the revolt of the Helots.\r\nWithout the help of the Spartans, the Thacians are, therefore, forced to\r\nsurrender to \u03bf\u1f31 \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9, the Athenians.\r\n\r\n(Summary of Thuc. 1.100-101)\r\n\r\nNow that you've got some context, let's look at the adjectives of the first\r\nand second declensions!  \r\n  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3142,9 +3142,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd -- _just_\n\nThree-ending Adjective\n\n| Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd**  \nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5**  \nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1fb3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | Acc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03bd**\n| \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | Voc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | **Plural**  \nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd**  \nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2**  \nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \n  \n## Three-ending Adjectives of the First and Second Declension\n\nAs you can see from the table, the adjective \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd has the\nsame endings as first declension nouns in the feminine, and as second\ndeclension nouns in the masculine and neuter.\n\nExample: \u1f41 \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2, meaning _the just man._\n\n##### Word Order and Adjectives\n\nThe meaning given to the article, noun, and its agreeing adjective can vary\nslightly according to **word order**. So, you might not always find these\nthree components (article, noun, adjective) in the same sequence.\n\n* * *\n\nFor example: \u1f41 \u1f00\u03b3\u03b1\u03b8\u1f78\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 means _the good man_, but \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u1f41 \u1f00\u03b3\u03b1\u03b8\u03bf\u03c2\nmeans _a man, the good one_\n\n",
-        "grammar_ref": null,
+        "title": "Adjectives: Second Declension_Three-ending",
+        "content": "### \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd -- _just_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1fb3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | Acc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03bd**\r\n| \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | Voc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | **Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\n  \r\n## Three-ending Adjectives of the First and Second Declension\r\n\r\nAs you can see from the table, the adjective \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd has the\r\nsame endings as first declension nouns in the feminine, and as second\r\ndeclension nouns in the masculine and neuter.\r\n\r\nExample: \u1f41 \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2, meaning _the just man._\r\n\r\n##### Word Order and Adjectives\r\n\r\nThe meaning given to the article, noun, and its agreeing adjective can vary\r\nslightly according to **word order**. So, you might not always find these\r\nthree components (article, noun, adjective) in the same sequence.\r\n\r\n* * *\r\n\r\nFor example: \u1f41 \u1f00\u03b3\u03b1\u03b8\u1f78\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 means _the good man_, but \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u1f41 \u1f00\u03b3\u03b1\u03b8\u03bf\u03c2\r\nmeans _a man, the good one_\r\n\r\n",
+        "grammar_ref": 28,
         "related_content": [],
         "source_lang": 4
     },
@@ -3454,9 +3454,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "#### Future Indicative Active, _To have_\n\nPerson | Subject | Verb  \n---|---|---  \n**Singular**  \n1st | I | will have  \n2nd | You | will have  \n3rd | He/She/It | will have | **Plural**  \n1st | We | will have  \n2nd | You | will have  \n3rd | They | will have  \n  \nIn English, we form the future by using the helping verb \"will\". In Ancient\nGreek, however, the verb itself changes to reflect that it is in the future\ntense.\n\n## Future Indicative Active\n\nAs you now know:\n\n  * The**future tense**describes an action in the future time with either simple aspect (i.e. fixed moment in time).\n  * The**indicative mood**is used for factual statements and questions.\n  * The**active voice**means the subject of the verb is performing the action.\n\n* * *\n\n#### Keep an eye out!\n\nRemember that unlike English verbs, the subject of the Greek verb is implied\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\nby the personal pronouns _I, You, He/She/It, We, You, They_.\n\n",
-        "grammar_ref": null,
+        "title": "Verbs: Future Indicative Active_translation",
+        "content": "#### Future Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | will have  \r\n2nd | You | will have  \r\n3rd | He/She/It | will have | **Plural**  \r\n1st | We | will have  \r\n2nd | You | will have  \r\n3rd | They | will have  \r\n  \r\nIn English, we form the future by using the helping verb \"will\". In Ancient\r\nGreek, however, the verb itself changes to reflect that it is in the future\r\ntense.\r\n\r\n## Future Indicative Active\r\n\r\nAs you now know:\r\n\r\n  * The**future tense**describes an action in the future time with either simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\n* * *\r\n\r\n#### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\n",
+        "grammar_ref": 40,
         "related_content": [],
         "source_lang": 4
     },
@@ -3478,9 +3478,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u03b5\u1f30\u03bc\u03af, _I am_\n\nFuture Active Indicative -- \u1f14\u03c3\u03bf\u03bc\u03b1\u03b9, _I will be_\n\nPerson | Singular | Plural  \n---|---|---  \n1st | \u1f14\u03c3**\u03bf\u03bc\u03b1\u03b9** | \u1f10\u03c3**\u03cc\u03bc\u03b5\u03b8\u03b1**  \n2nd | \u1f14\u03c3**\u1fc3** | \u1f14\u03c3**\u03b5\u03c3\u03b8\u03b5**  \n3rd | \u1f14\u03c3**\u03c4\u03b1\u03b9** | \u1f14\u03c3**\u03bf\u03bd\u03c4\u03b1\u03b9**  \n  \n## Future Indicative Active of _To Be_\n\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\nconventions.\n\n",
-        "grammar_ref": null,
+        "title": "Verbs: Future Indicative Active_ToBe_conjugation",
+        "content": "### \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nFuture Active Indicative -- \u1f14\u03c3\u03bf\u03bc\u03b1\u03b9, _I will be_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u1f14\u03c3**\u03bf\u03bc\u03b1\u03b9** | \u1f10\u03c3**\u03cc\u03bc\u03b5\u03b8\u03b1**  \r\n2nd | \u1f14\u03c3**\u1fc3** | \u1f14\u03c3**\u03b5\u03c3\u03b8\u03b5**  \r\n3rd | \u1f14\u03c3**\u03c4\u03b1\u03b9** | \u1f14\u03c3**\u03bf\u03bd\u03c4\u03b1\u03b9**  \r\n  \r\n## Future Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n",
+        "grammar_ref": 46,
         "related_content": [],
         "source_lang": 4
     },
@@ -3490,9 +3490,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u03bb\u03cd\u03c9, _I untie_\n\nFuture Indicative Active -- \u03bb\u03cd\u03c3\u03c9, _I will untie_\n\nPerson | Singular | Plural  \n---|---|---  \n1st | \u03bb\u03cd\u03c3**\u03c9** | \u03bb\u03cd\u03c3**\u03bf\u03bc\u03b5\u03bd**  \n2nd | \u03bb\u03cd\u03c3**\u03b5\u03b9\u03c2** | \u03bb\u03cd\u03c3**\u03b5\u03c4\u03b5**  \n3rd | \u03bb\u03cd\u03c3**\u03b5\u03b9** | \u03bb\u03cd\u03c3**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \n  \n## Future Indicative Active\n\nTo form the future indicative active:\n\n  1. **Take the present tense form**, also known as the first \"principle part\".   \ne.g. \u03bb\u03cd\u03c9\n\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \ne.g. \u03bb\u03cd-\n\n  3. **Add a \u03c3** to get the future stem.   \ne.g. \u03bb\u03cd\u03c3-\n\n  4. **Add the endings** from the table to indicate the person and number.   \ne.g. \u03bb\u03cd\u03c3\u03bf\u03bc\u03b5\u03bd, _We will untie_ -- or -- \u03bb\u03cd\u03c3\u03b5\u03b9\u03c2, _You will untie_\n\nThe future then becomes the **second principle part** of a verb (while the\npresent is the first principle part).\n\n* * *\n\nThe Parts of a Future Tense Verb\n\n\u03bb\u03cd\u03c3\n\n* * *\n\n|  \u03c9\n\n* * *  \n  \n---|---  \n**Future Stem**  \n\n* * *\n\nThe future stem is formed by taking the present tense stem \u03bb\u03cd- and adding\n**\u03c3**.  |  **Ending**  \n\n* * *\n\nThe endings of the future indicative active are **the same as those of the\npresent indicative active**.\n\n",
-        "grammar_ref": null,
+        "title": "Verbs: Future Indicative Active_conjugation",
+        "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nFuture Indicative Active -- \u03bb\u03cd\u03c3\u03c9, _I will untie_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u03bb\u03cd\u03c3**\u03c9** | \u03bb\u03cd\u03c3**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u03bb\u03cd\u03c3**\u03b5\u03b9\u03c2** | \u03bb\u03cd\u03c3**\u03b5\u03c4\u03b5**  \r\n3rd | \u03bb\u03cd\u03c3**\u03b5\u03b9** | \u03bb\u03cd\u03c3**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n## Future Indicative Active\r\n\r\nTo form the future indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n  3. **Add a \u03c3** to get the future stem.   \r\ne.g. \u03bb\u03cd\u03c3-\r\n\r\n  4. **Add the endings** from the table to indicate the person and number.   \r\ne.g. \u03bb\u03cd\u03c3\u03bf\u03bc\u03b5\u03bd, _We will untie_ -- or -- \u03bb\u03cd\u03c3\u03b5\u03b9\u03c2, _You will untie_\r\n\r\nThe future then becomes the **second principle part** of a verb (while the\r\npresent is the first principle part).\r\n\r\n* * *\r\n\r\nThe Parts of a Future Tense Verb\r\n\r\n\u03bb\u03cd\u03c3\r\n\r\n* * *\r\n\r\n|  \u03c9\r\n\r\n* * *  \r\n  \r\n---|---  \r\n**Future Stem**  \r\n\r\n* * *\r\n\r\nThe future stem is formed by taking the present tense stem \u03bb\u03cd- and adding\r\n**\u03c3**.  |  **Ending**  \r\n\r\n* * *\r\n\r\nThe endings of the future indicative active are **the same as those of the\r\npresent indicative active**.\r\n\r\n",
+        "grammar_ref": 40,
         "related_content": [],
         "source_lang": 4
     },
@@ -3502,9 +3502,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## The Future Indicative Active in the Pentecontaetia\n\nThe following is an example of how Thucydides himself makes use of a future\nindicative active verb in the Pentecontaetia.\n\n\u03bf\u1f31 \u1fbf\u0391\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 [...] |  **\u03c0\u03ad\u03bc\u03c8\u03bf\u03c5\u03c3\u03b9\u03bd** |  \u03c0\u03c1\u03ad\u03c3\u03b2\u03b5\u03b9\u03c2 [...]  \n---|---|---  \nThe Athenians [...]  |  **will send** |  ambassadors [...]  \n(Nominative)  |  **(Verb)**   |  (Object)  \n-- _The History of the Peloponnesian War_,\n[1.90.3](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3)\n\n[Keep Reading \u00bb](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3)\n\n### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\n\nFuture Active Indicative -- \u03c0\u03ad\u03bc\u03c8\u03c9, _I will send_\n\nPerson | Singular | Plural  \n---|---|---  \n1st | \u03c0\u03ad\u03bc\u03c8**\u03c9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03bc\u03b5\u03bd**  \n2nd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9\u03c2** | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03c4\u03b5**  \n3rd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**\n\n",
-        "grammar_ref": null,
+        "title": "Verbs: Future Indicative Active_originalexample",
+        "content": "## The Future Indicative Active in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of a future\r\nindicative active verb in the Pentecontaetia.\r\n\r\n\u03bf\u1f31 \u1fbf\u0391\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 [...] |  **\u03c0\u03ad\u03bc\u03c8\u03bf\u03c5\u03c3\u03b9\u03bd** |  \u03c0\u03c1\u03ad\u03c3\u03b2\u03b5\u03b9\u03c2 [...]  \r\n---|---|---  \r\nThe Athenians [...]  |  **will send** |  ambassadors [...]  \r\n(Nominative)  |  **(Verb)**   |  (Object)  \r\n-- _The History of the Peloponnesian War_,\r\n[1.90.3](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3)\r\n\r\n[Keep Reading \u00bb](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3)\r\n\r\n### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nFuture Active Indicative -- \u03c0\u03ad\u03bc\u03c8\u03c9, _I will send_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u03c0\u03ad\u03bc\u03c8**\u03c9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9\u03c2** | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03c4\u03b5**  \r\n3rd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**\r\n\r\n",
+        "grammar_ref": 40,
         "related_content": [],
         "source_lang": 4
     },
@@ -3514,9 +3514,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _My future without you would be less vivid._ Thucydides _(ca 460 - 395 BC)_\n\n# Future Indicative Active\n\n* * *\n\nNow that you are familiar with the present indicative active, you're ready to\nlean the **future indicative active**!\n\n* * *\n\n## In this Section\n\nNew Skills New Vocab Rising Power of the Athenians!\n\n  1. Identify future indicative active verbs.\n  2. Conjugate future indicative active verbs.\n\n",
-        "grammar_ref": null,
+        "title": "Verbs: Future Indicative Active_intro",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _My future without you would be less vivid._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Future Indicative Active\r\n\r\nYou're ready to lean the **future indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab Rising Power of the Athenians!\r\n\r\n  1. Identify future indicative active verbs.\r\n  2. Conjugate future indicative active verbs.\r\n\r\n",
+        "grammar_ref": 40,
         "related_content": [],
         "source_lang": 4
     },
@@ -3526,8 +3526,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### Thucydides\n\n![](/static/images/thuc.png)\n\nI am the only historian who has described the growth of Athenian power\naccurately!\n\n## ...previously in the Pentecontaetia\n\nThe Athenians formed an anti-Persian alliance.\n\n## Now in the Pentecontaetia...\n\nThe power of the Athenians grows exponentially through their military and\npolitical actions against the barbarians, against their own allies in revolt\nand against the Peloponnesians. Athens' new alliance attacks locations, such\nas Eion, Scyros, Carystus and Naxos, whose citizens initiate a revolt against\nthe confederacy.\n\n\u03bf\u1f31 \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9, the Athenians, grow more and more unpopular as they demand\nmonetary and military contributions from the allies. For this, \u03bf\u1f31 \u03be\u03cd\u03bc\u03bc\u03b1\u03c7\u03bf\u03b9,\nthe allies, have themselves to blame; wishing to get off service, they had\ndecided to pay their share in money instead of in ships. Thus the Athenian\nnavy is growing richer than ever before.\n\n(Summary of Thuc. 1.97-98-99)\n\nNow that you've got some context, let's look at the Future Indicative Active\nverbs!  \n  \n**Click the arrow to start learning!**\n\n",
+        "title": "History: Thucydides",
+        "content": "### Thucydides\r\n\r\n![](/static/images/thuc.png)\r\n\r\nI am the only historian who has described the growth of Athenian power\r\naccurately!\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThe Athenians formed an anti-Persian alliance.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nThe power of the Athenians grows exponentially through their military and\r\npolitical actions against the barbarians, against their own allies in revolt\r\nand against the Peloponnesians. Athens' new alliance attacks locations, such\r\nas Eion, Scyros, Carystus and Naxos, whose citizens initiate a revolt against\r\nthe confederacy.\r\n\r\n\u03bf\u1f31 \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9, the Athenians, grow more and more unpopular as they demand\r\nmonetary and military contributions from the allies. For this, \u03bf\u1f31 \u03be\u03cd\u03bc\u03bc\u03b1\u03c7\u03bf\u03b9,\r\nthe allies, have themselves to blame; wishing to get off service, they had\r\ndecided to pay their share in money instead of in ships. Thus the Athenian\r\nnavy is growing richer than ever before.\r\n\r\n(Summary of Thuc. 1.97-98-99)\r\n\r\nNow that you've got some context, let's look at the Future Indicative Active\r\nverbs!  \r\n  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3538,9 +3538,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\n\nFuture Active Indicative -- \u03c0\u03ad\u03bc\u03c8\u03c9, _I will send_\n\nPerson | Singular | Plural  \n---|---|---  \n1st | \u03c0\u03ad\u03bc\u03c8**\u03c9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03bc\u03b5\u03bd**  \n2nd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9\u03c2** | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03c4\u03b5**  \n3rd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \n  \n## Future Indicative Active for Stop Verbs\n\nThe future stem of many verbs simply ends in \u03c3, as you just learned.\n\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\nletter of the present stem to form another letter**. Take a look at the three\ncategories below:\n\n  \n\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\n\n* * *\n\nFor example:  \n\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\n\n#### \u03bb\u03ad**\u03be**\u03c9, _I will say_\n\n####\n\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\n\n* * *\n\nFor example:  \n\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\n\n#### \u03c0\u03ad\u03bc**\u03c8**\u03c9, _I will send_\n\n####\n\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\n\n* * *\n\nFor example:  \n\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\n\n#### \u03c0\u03b5\u03af**\u03c3**\u03c9, _I will persuade_\n\n####\n\n",
-        "grammar_ref": null,
+        "title": "Verbs: Future Indicative Active_conjugation",
+        "content": "### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nFuture Indicative Active -- \u03c0\u03ad\u03bc\u03c8\u03c9, _I will send_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u03c0\u03ad\u03bc\u03c8**\u03c9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9\u03c2** | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03c4\u03b5**  \r\n3rd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n## Future Indicative Active for Stop Verbs\r\n\r\nThe future stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n  \r\n\r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u03bb\u03ad**\u03be**\u03c9, _I will say_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u03c0\u03ad\u03bc**\u03c8**\u03c9, _I will send_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u03c0\u03b5\u03af**\u03c3**\u03c9, _I will persuade_\r\n\r\n####\r\n\r\n",
+        "grammar_ref": 40,
         "related_content": [],
         "source_lang": 4
     },
@@ -3562,9 +3562,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Nominative Case\n\n##### Nominatives in the Pentecontaetia\n\nEssentially every sentence in Greek contains a word in the nominative case.\nTake a look at the very beginning of Thucydides' _Pentacontaetia_!\n\n**\u03bf\u1f31** \u03b3\u1f70\u03c1 **\u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9** |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f26\u03bb\u03b8\u03bf\u03bd...  \n---|---|---  \nSo **the Athenians**,  |  in this way,  |  came...  \n**(Subject)** |    |  (Verb)   \n-- _The History of the Peloponnesian War_, 1.89.1\n\nKeep Reading \u00bb\n\n![](/static/images/thuc.png)\n\nNow that's an ominous start to any story, if I do say so myself...which I did.\n\nNow that you have learned the **nominative**, test yourself!  \n  \nClick the arrow to try recognizing the dative in English and Greek sentences!\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Nominative Case_originalexample",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Nominative Case\r\n\r\n##### Nominatives in the Pentecontaetia\r\n\r\nEssentially every sentence in Greek contains a word in the nominative case.\r\nTake a look at the very beginning of Thucydides' _Pentacontaetia_!\r\n\r\n**\u03bf\u1f31** \u03b3\u1f70\u03c1 **\u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9** |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f26\u03bb\u03b8\u03bf\u03bd...  \r\n---|---|---  \r\nSo **the Athenians**,  |  in this way,  |  came...  \r\n**(Subject)** |    |  (Verb)   \r\n-- _The History of the Peloponnesian War_, 1.89.1\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nNow that's an ominous start to any story, if I do say so myself...which I did.\r\n\r\nNow that you have learned the **nominative**, test yourself!  \r\n  \r\nClick the arrow to try recognizing the dative in English and Greek sentences!\r\n\r\n",
+        "grammar_ref": 49,
         "related_content": [],
         "source_lang": 4
     },
@@ -3598,9 +3598,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Genitive Case\n\n##### Genitive of Comparison\n\nIn these sentences, the genitive expresses **comparison**. When \u1f24 (than) is\nabsent, the **object of comparison** (i.e. anything after 'than' in English)\nis in the genitive.\n\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c3\u03ce\u03c6\u03c1\u03c9\u03bd |  **\u03c4\u03bf\u1fe6 \u03c0\u03b1\u03b9\u03b4\u03cc\u03c2**.  \n---|---|---|---  \nThucydides  |  is  |  wiser  |  **than the boy**.  \n(Nominative)  |  (Verb)  |  |  **(Genitive)**  \n  \n##### Genitive following Prepositions\n\nIn these sentences, the genitive follows **prepositions** for a variety of\npurposes. Here is the example of the preposition **\u1f10\u03ba** meaning **out\nof/from**.\n\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u1f10\u03ba\u03b2\u03b1\u03af\u03bd\u03b5\u03b9 |  **\u1f10\u03ba \u03c4\u1fc6\u03c2 \u03bf\u1f30\u03ba\u03af\u03b1\u03c2.**  \n---|---|---  \nThe girl  |  walks out  |  **of the house**  \n(Nominative)  |  (Verb)  |  **(Genitive)**\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Genitive Case_Comparative",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Genitive Case\r\n\r\n##### Genitive of Comparison\r\n\r\nIn these sentences, the genitive expresses **comparison**. When \u1f24 (than) is\r\nabsent, the **object of comparison** (i.e. anything after 'than' in English)\r\nis in the genitive.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c3\u03ce\u03c6\u03c1\u03c9\u03bd |  **\u03c4\u03bf\u1fe6 \u03c0\u03b1\u03b9\u03b4\u03cc\u03c2**.  \r\n---|---|---|---  \r\nThucydides  |  is  |  wiser  |  **than the boy**.  \r\n(Nominative)  |  (Verb)  |  |  **(Genitive)**  \r\n  \r\n##### Genitive following Prepositions\r\n\r\nIn these sentences, the genitive follows **prepositions** for a variety of\r\npurposes. Here is the example of the preposition **\u1f10\u03ba** meaning **out\r\nof/from**.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u1f10\u03ba\u03b2\u03b1\u03af\u03bd\u03b5\u03b9 |  **\u1f10\u03ba \u03c4\u1fc6\u03c2 \u03bf\u1f30\u03ba\u03af\u03b1\u03c2.**  \r\n---|---|---  \r\nThe girl  |  walks out  |  **of the house**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**\r\n\r\n",
+        "grammar_ref": 53,
         "related_content": [],
         "source_lang": 4
     },
@@ -3610,9 +3610,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Genitive Case\n\n##### Partitive Genitive\n\nIn these sentences, the genitive indicates the **part of something**.\n\n\u1f21 \u03c3\u03c5\u03bd\u03c4\u03c5\u03c7\u03af\u03b1  |  **\u03c4\u1fc6\u03c2 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  \u03b2\u03c1\u03b1\u03c7\u03b5\u1fd6\u03b1.  \n---|---|---|---  \nThe event  |  **of (out of) the narrative** |  is  |  short.  \n(Nominative)  |  **(Genitive)** |  (Verb)  |  \n  \n##### Genitive of Separation\n\nIn these sentences, the genitive indicates the **separation or lack of\nsomething**.\n\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u1f00\u03c6\u03af\u03c3\u03c4\u03b1\u03c4\u03b1\u03b9 |  **\u03c4\u1ff6\u03bd \u03ba\u03b9\u03bd\u03b4\u03cd\u03bd\u03c9\u03bd.**  \n---|---|---  \nThe girl  |  stays away  |  **from the dangers**  \n(Nominative)  |  (Verb)  |  **(Genitive)**  \n  \n##### Genitive with verbs of Desire\n\nIn these sentences, the genitive follows **verbs of desire**.\n\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c0\u03b9\u03b8\u03c5\u03bc\u03ad\u03b9 |  **\u03c4\u1fc6\u03c2 \u1f21\u03c3\u03c5\u03c7\u03af\u03b1\u03c2.**  \n---|---|---  \nThucydides  |  desires  |  **rest.**  \n(Nominative)  |  (Verb)  |  **(Genitive)**\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Genitive Case_Partitive",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Genitive Case\r\n\r\n##### Partitive Genitive\r\n\r\nIn these sentences, the genitive indicates the **part of something**.\r\n\r\n\u1f21 \u03c3\u03c5\u03bd\u03c4\u03c5\u03c7\u03af\u03b1  |  **\u03c4\u1fc6\u03c2 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  \u03b2\u03c1\u03b1\u03c7\u03b5\u1fd6\u03b1.  \r\n---|---|---|---  \r\nThe event  |  **of (out of) the narrative** |  is  |  short.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n  \r\n##### Genitive of Separation\r\n\r\nIn these sentences, the genitive indicates the **separation or lack of\r\nsomething**.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u1f00\u03c6\u03af\u03c3\u03c4\u03b1\u03c4\u03b1\u03b9 |  **\u03c4\u1ff6\u03bd \u03ba\u03b9\u03bd\u03b4\u03cd\u03bd\u03c9\u03bd.**  \r\n---|---|---  \r\nThe girl  |  stays away  |  **from the dangers**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**  \r\n  \r\n##### Genitive with verbs of Desire\r\n\r\nIn these sentences, the genitive follows **verbs of desire**.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c0\u03b9\u03b8\u03c5\u03bc\u03ad\u03b9 |  **\u03c4\u1fc6\u03c2 \u1f21\u03c3\u03c5\u03c7\u03af\u03b1\u03c2.**  \r\n---|---|---  \r\nThucydides  |  desires  |  **rest.**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**\r\n\r\n",
+        "grammar_ref": 52,
         "related_content": [],
         "source_lang": 4
     },
@@ -3622,9 +3622,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Nominative Case\n\n##### What's in a name?\n\nThe word \"nominative\" originally comes from the Greek word \u1f44\u03bd\u03bf\u03bc\u03b1, meaning\n\"name\". Thus, the nominative case is used to indicate the **subject of a\nsentence** or the **complement of the verb**.\n\n* * *\n\n##### Keep an eye out!\n\nTake a look at the table to your left. We'll be focusing mostly on words that\nfit into this pattern, or **declension**.\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Nominative Case_intro",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Nominative Case\r\n\r\n##### What's in a name?\r\n\r\nThe word \"nominative\" originally comes from the Greek word \u1f44\u03bd\u03bf\u03bc\u03b1, meaning\r\n\"name\". Thus, the nominative case is used to indicate the **subject of a\r\nsentence** or the **complement of the verb**.\r\n\r\n* * *\r\n\r\n##### Keep an eye out!\r\n\r\nTake a look at the table to your left. We'll be focusing mostly on words that\r\nfit into this pattern, or **declension**.\r\n\r\n",
+        "grammar_ref": 49,
         "related_content": [],
         "source_lang": 4
     },
@@ -3634,9 +3634,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Dative Case\n\n##### Dative meaning **in**\n\nIn these sentences, the dative expresses **metaphorical or physical\nlocation**. Thucydides often uses the dative in this way. When indicating a\nphysical location, the dative is often preceeded by the preposition **\u1f10\u03bd**.\n\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u1f10\u03c3\u03c4\u1f76 |  \u03bd\u03ad\u03bf\u03c2 |  **\u1f21\u03bb\u03b9\u03ba\u03af\u1fb3**.  \n---|---|---|---  \nThe man  |  is  |  young  |  **in age**.  \n(Nominative)  |  (Verb)  |  (Complement)  |  **(Dative)**  \n  \n##### Dative meaning **with** or **by**\n\nIn these sentences, the dative expresses **means or instrument**. Thucydides\noften uses the dative in this way.\n\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u03b2\u03ac\u03bb\u03bb\u03b5\u03b9 |  \u03c4\u03cc\u03bd \u1f04\u03bd\u03b4\u03c1\u03b1 |  **\u03bb\u03af\u03b8\u03bf\u03b9\u03c2**  \n---|---|---|---  \nThe girl  |  hits  |  the man  |  **with stones**.  \n(Nominative)  |  (Verb)  |  **(Accusative)** |  **(Dative)**\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Dative Case_In",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Dative Case\r\n\r\n##### Dative meaning **in**\r\n\r\nIn these sentences, the dative expresses **metaphorical or physical\r\nlocation**. Thucydides often uses the dative in this way. When indicating a\r\nphysical location, the dative is often preceeded by the preposition **\u1f10\u03bd**.\r\n\r\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u1f10\u03c3\u03c4\u1f76 |  \u03bd\u03ad\u03bf\u03c2 |  **\u1f21\u03bb\u03b9\u03ba\u03af\u1fb3**.  \r\n---|---|---|---  \r\nThe man  |  is  |  young  |  **in age**.  \r\n(Nominative)  |  (Verb)  |  (Complement)  |  **(Dative)**  \r\n  \r\n##### Dative meaning **with** or **by**\r\n\r\nIn these sentences, the dative expresses **means or instrument**. Thucydides\r\noften uses the dative in this way.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u03b2\u03ac\u03bb\u03bb\u03b5\u03b9 |  \u03c4\u03cc\u03bd \u1f04\u03bd\u03b4\u03c1\u03b1 |  **\u03bb\u03af\u03b8\u03bf\u03b9\u03c2**  \r\n---|---|---|---  \r\nThe girl  |  hits  |  the man  |  **with stones**.  \r\n(Nominative)  |  (Verb)  |  **(Accusative)** |  **(Dative)**\r\n\r\n",
+        "grammar_ref": 54,
         "related_content": [],
         "source_lang": 4
     },
@@ -3646,9 +3646,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Dative Case\n\n##### Datives in the Pentecontaetia\n\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\nthe final blow.\n\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \n---|---|---|---  \nLeotychides  |  led  |  the Greeks  |  at Mycale...  \n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\n(Genitive)  |  **(Dative)**  \n-- _The History of the Peloponnesian War_, 1.89.2\n\nKeep Reading \u00bb\n\n![](/static/images/thuc.png)\n\nKing \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 is badass!\n\n##### Almost there!\n\nNow that you have learned the **dative**, test yourself!  \n  \nClick the arrow to try recognizing the dative in English and Greek sentences!\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Dative Case_originalexample",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Dative Case\r\n\r\n##### Datives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\r\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\r\nthe final blow.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \r\n---|---|---|---  \r\nLeotychides  |  led  |  the Greeks  |  at Mycale...  \r\n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\r\n(Genitive)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nKing \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 is badass!\r\n\r\n##### Almost there!\r\n\r\nNow that you have learned the **dative**, test yourself!  \r\n  \r\nClick the arrow to try recognizing the dative in English and Greek sentences!\r\n\r\n",
+        "grammar_ref": 54,
         "related_content": [],
         "source_lang": 4
     },
@@ -3670,8 +3670,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _Conjugate a noun? I decline._ Thucydides _(ca 460 - 395 BC)_\n\n### How Cases Work\n\n* * *\n\nIn \"Introduction to Nouns\" you learned that in Greek there are **5 main\ncases**: nominative, accusative, genitive, dative and vocative. Understanding\ncases is vital to help you translate a text.\n\n* * *\n\n#### In this Section\n\nNew Skills New Vocab Protagonists of the Peloponnesian War.\n\n  1. Identify the cases.\n  2. Know what the function of each word is in a sentence. \n\n",
+        "title": "Nouns: Intro to Cases_intro",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _Conjugate a noun? I decline._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n### How Cases Work\r\n\r\n* * *\r\n\r\nIn \"Introduction to Nouns\" you learned that in Greek there are **5 main\r\ncases**: nominative, accusative, genitive, dative and vocative. Understanding\r\ncases is vital to help you translate a text.\r\n\r\n* * *\r\n\r\n#### In this Section\r\n\r\nNew Skills New Vocab Protagonists of the Peloponnesian War.\r\n\r\n  1. Identify the cases.\r\n  2. Know what the function of each word is in a sentence. \r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3682,9 +3682,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Genitive Case\n\n##### Genitives in the Pentecontaetia\n\nIn this section right at the beginning of the Pentecontaetia, the Persians\nhave just suffered the final defeat by the Greeks, or _Hellenes_, led by the\nSpartan king Leotychides.\n\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 \u03bc\u1f72\u03bd \u1f41 \u03b2\u03b1\u03c3\u03b9\u03bb\u03b5\u1f7a\u03c2 |  **\u03c4\u1ff6\u03bd \u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd\u03af\u03c9\u03bd** |  \u1f00\u03c0\u03b5\u03c7\u03ce\u03c1\u03b7\u03c3\u03b5\u03bd |  \u1f10\u03c0\u1fbd \u03bf\u1f34\u03ba\u03bf\u03c5  \n---|---|---|---  \nLeotychides, king  |  of the Spartans  |  set out  |  towards home...  \n(Nominative)  |  **(Genitive)** |  (Verb)  |  \n-- _The History of the Peloponnesian War_, 1.89.2\n\nKeep Reading \u00bb\n\n![](/static/images/thuc.png)\n\nFinally \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 \u1f41 \u03b2\u03b1\u03c3\u03b9\u03bb\u03b5\u1f7a\u03c2 has defeated the Persians! Can there be peace\nnow?\n\n##### Almost there!\n\nNow that you have learned the **genitive**, test yourself!  \n  \nClick on the arrow to try recognizing the genitive in English and Greek\nsentences!\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Genitive Case_originalexample",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Genitive Case\r\n\r\n##### Genitives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, the Persians\r\nhave just suffered the final defeat by the Greeks, or _Hellenes_, led by the\r\nSpartan king Leotychides.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 \u03bc\u1f72\u03bd \u1f41 \u03b2\u03b1\u03c3\u03b9\u03bb\u03b5\u1f7a\u03c2 |  **\u03c4\u1ff6\u03bd \u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd\u03af\u03c9\u03bd** |  \u1f00\u03c0\u03b5\u03c7\u03ce\u03c1\u03b7\u03c3\u03b5\u03bd |  \u1f10\u03c0\u1fbd \u03bf\u1f34\u03ba\u03bf\u03c5  \r\n---|---|---|---  \r\nLeotychides, king  |  of the Spartans  |  set out  |  towards home...  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nFinally \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 \u1f41 \u03b2\u03b1\u03c3\u03b9\u03bb\u03b5\u1f7a\u03c2 has defeated the Persians! Can there be peace\r\nnow?\r\n\r\n##### Almost there!\r\n\r\nNow that you have learned the **genitive**, test yourself!  \r\n  \r\nClick on the arrow to try recognizing the genitive in English and Greek\r\nsentences!\r\n\r\n",
+        "grammar_ref": 51,
         "related_content": [],
         "source_lang": 4
     },
@@ -3694,9 +3694,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Genitive Case\n\nIn most cases the meaning of the genitive can be associated with the English\nword **_of_**, so if you take the sentence _Thucydides wrote a narration of\nevents_, you will find \"of events\" in the genitive.\n\n* * *\n\n##### Useful tip!\n\nThe genitive is a very useful case. Very often the ending of the genitive will\nhelp you determine the gender and number of irregular nouns that in the\nnominative may confuse you. For example, we know the name \"Thucydides\" is\nmasculine, though the ending \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4**\u03b7\u03c2** may look feminine. The genitive\nhere, however, shows you that this noun is undoubtedly masculine:\n\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4**\u03bf\u03c5**.\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Genitive Case_intro",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Genitive Case\r\n\r\nIn most cases the meaning of the genitive can be associated with the English\r\nword **_of_**, so if you take the sentence _Thucydides wrote a narration of\r\nevents_, you will find \"of events\" in the genitive.\r\n\r\n* * *\r\n\r\n##### Useful tip!\r\n\r\nThe genitive is a very useful case. Very often the ending of the genitive will\r\nhelp you determine the gender and number of irregular nouns that in the\r\nnominative may confuse you. For example, we know the name \"Thucydides\" is\r\nmasculine, though the ending \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4**\u03b7\u03c2** may look feminine. The genitive\r\nhere, however, shows you that this noun is undoubtedly masculine:\r\n\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4**\u03bf\u03c5**.\r\n\r\n",
+        "grammar_ref": 51,
         "related_content": [],
         "source_lang": 4
     },
@@ -3706,9 +3706,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Nominative Case\n\n##### Nominative as the Complement\n\nThe complement, which is also a noun or adjective in the nominative case,\n**always follows the verb _to be_**. Spotting the verb first can help you\nunderstand the function of the other words in the sentence!\n\n**\u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03bc\u03b1\u03ba\u03c1\u03ac**.  \n---|---|---  \n**The day** |  is  |  **long**.   \n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \n  \n* * *\n\n**\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03cd\u03c2**  \n---|---|---  \n**Thucydides** |  is  |  **a historian**.   \n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \n  \n* * *\n\n**\u03a3\u03b9\u03ba\u03b5\u03bb\u03af\u03b1** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03bd\u1fc6\u03c3\u03bf\u03c2**  \n---|---|---  \n**Sicily** |  is  |  **an island**.   \n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \n  \n#####  Useful tip!\n\nThe Greek word order might surprise you. You will find that the word order\ndoesn't follow particular conventions and the verb may often be at the end of\na sentence!\n\n  \n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Nominative Case_Complement",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Nominative Case\r\n\r\n##### Nominative as the Complement\r\n\r\nThe complement, which is also a noun or adjective in the nominative case,\r\n**always follows the verb _to be_**. Spotting the verb first can help you\r\nunderstand the function of the other words in the sentence!\r\n\r\n**\u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03bc\u03b1\u03ba\u03c1\u03ac**.  \r\n---|---|---  \r\n**The day** |  is  |  **long**.   \r\n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \r\n  \r\n* * *\r\n\r\n**\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03cd\u03c2**  \r\n---|---|---  \r\n**Thucydides** |  is  |  **a historian**.   \r\n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \r\n  \r\n* * *\r\n\r\n**\u03a3\u03b9\u03ba\u03b5\u03bb\u03af\u03b1** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03bd\u1fc6\u03c3\u03bf\u03c2**  \r\n---|---|---  \r\n**Sicily** |  is  |  **an island**.   \r\n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \r\n  \r\n#####  Useful tip!\r\n\r\nThe Greek word order might surprise you. You will find that the word order\r\ndoesn't follow particular conventions and the verb may often be at the end of\r\na sentence!\r\n\r\n  \r\n\r\n",
+        "grammar_ref": 48,
         "related_content": [],
         "source_lang": 4
     },
@@ -3718,8 +3718,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/map_war_small.png)\n\n#### Quick Recap!\n\n* * *\n\nSo, you've learned that Thucydides is the author of the _History of the\nPeloponnesian War_, the story of the great \u1f41 \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03c2, the war, fought between\nthe Peloponnesian League, led by \u03bf\u1f31 \u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd\u03b9\u03bf\u03b9, the Spartans, and the\nDelian League, led by \u03bf\u1f31 \u1fbf\u0391\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9, the Athenians. As you go through the\nlessons you will become particularly familiar with one part of Thucydides'\ngreat historical account -- a section of the first book called \u1f21\n\u03c0\u03b5\u03bd\u03c4\u03b7\u03ba\u03bf\u03bd\u03c4\u03b1\u03b5\u03c4\u03af\u03b1, **The Pentecontaetia**.\n\n  \n  \n\n#### Can you guess what Pentecontaetia means?\n\n* * *\n\nThe word is a combination of \u03c0\u03b5\u03bd\u03c4\u03ae\u03ba\u03bf\u03bd\u03c4\u03b1 meaning fifty and \u03b5\u03c4\u03af\u03b1 meaning age.\nThe fifty year age marks the period between the defeat of the second Persian\ninvasion of Greece in 479 BC and the beginning of the Peloponnesian war in 433\nBC, when **Athens was gradually becoming the most powerful state in the Greek\nworld**. Athens was in fact building its empire and exercised control over the\nallies with its fierce \u1f21 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u03ac, its army, named the Delian League.\n\n![](/static/images/thuc.png)\n\nNow that you've got some context, let's start out with the basics of cases in\nGreek. **Click the arrow to start learning!**\n\n",
+        "title": "History: Penteconteatia_intro",
+        "content": "![](/static/images/map_war_small.png)\r\n\r\n#### Quick Recap!\r\n\r\n* * *\r\n\r\nSo, you've learned that Thucydides is the author of the _History of the\r\nPeloponnesian War_, the story of the great \u1f41 \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03c2, the war, fought between\r\nthe Peloponnesian League, led by \u03bf\u1f31 \u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd\u03b9\u03bf\u03b9, the Spartans, and the\r\nDelian League, led by \u03bf\u1f31 \u1fbf\u0391\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9, the Athenians. As you go through the\r\nlessons you will become particularly familiar with one part of Thucydides'\r\ngreat historical account -- a section of the first book called \u1f21\r\n\u03c0\u03b5\u03bd\u03c4\u03b7\u03ba\u03bf\u03bd\u03c4\u03b1\u03b5\u03c4\u03af\u03b1, **The Pentecontaetia**.\r\n\r\n  \r\n  \r\n\r\n#### Can you guess what Pentecontaetia means?\r\n\r\n* * *\r\n\r\nThe word is a combination of \u03c0\u03b5\u03bd\u03c4\u03ae\u03ba\u03bf\u03bd\u03c4\u03b1 meaning fifty and \u03b5\u03c4\u03af\u03b1 meaning age.\r\nThe fifty year age marks the period between the defeat of the second Persian\r\ninvasion of Greece in 479 BC and the beginning of the Peloponnesian war in 433\r\nBC, when **Athens was gradually becoming the most powerful state in the Greek\r\nworld**. Athens was in fact building its empire and exercised control over the\r\nallies with its fierce \u1f21 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u03ac, its army, named the Delian League.\r\n\r\n![](/static/images/thuc.png)\r\n\r\nNow that you've got some context, let's start out with the basics of cases in\r\nGreek. **Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3730,9 +3730,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## The Accusative Case\n\n### Accusative for Direct Objects\n\nThe accusative case is used to indicate the **direct object of a verb**. A\ndirect object is the thing being acted upon by the subject.\n\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03be\u03b7\u03b3\u03ad\u03c4\u03b1\u03b9 |  **\u03c4\u03cc\u03bd \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03bd**.  \n---|---|---  \nThucydides  |  describes  |  **the war**.  \n(Subject)  |  (Verb)  |  **(Direct Object)**  \n\u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2 |  \u1f14\u03c7\u03b5\u03b9 |  **\u03c3\u03c4\u03c1\u03b1\u03c4\u03af\u03b1\u03bd**.  \n---|---|---  \nThe city  |  has  |  **an army**.  \n(Subject)  |  (Verb)  |  **(Direct Object)**  \n  \n##### Don't forget!\n\nWhile there is a Greek transaltion for the definite article \"the\", there is no\ntranslation for the indefinite article \"a\" or \"an\". In this case, you can just\nskip the Greek article and translate the noun directly.\n\n##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Accusative Case_Directobject",
+        "content": "## The Accusative Case\r\n\r\n### Accusative for Direct Objects\r\n\r\nThe accusative case is used to indicate the **direct object of a verb**. A\r\ndirect object is the thing being acted upon by the subject.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03be\u03b7\u03b3\u03ad\u03c4\u03b1\u03b9 |  **\u03c4\u03cc\u03bd \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03bd**.  \r\n---|---|---  \r\nThucydides  |  describes  |  **the war**.  \r\n(Subject)  |  (Verb)  |  **(Direct Object)**  \r\n\u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2 |  \u1f14\u03c7\u03b5\u03b9 |  **\u03c3\u03c4\u03c1\u03b1\u03c4\u03af\u03b1\u03bd**.  \r\n---|---|---  \r\nThe city  |  has  |  **an army**.  \r\n(Subject)  |  (Verb)  |  **(Direct Object)**  \r\n  \r\n##### Don't forget!\r\n\r\nWhile there is a Greek transaltion for the definite article \"the\", there is no\r\ntranslation for the indefinite article \"a\" or \"an\". In this case, you can just\r\nskip the Greek article and translate the noun directly.\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -\r\n\r\n",
+        "grammar_ref": 56,
         "related_content": [],
         "source_lang": 4
     },
@@ -3754,9 +3754,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n##### Genitive of Possession\n\nIn these sentences, the genitive indicates the **possession of something**.\n\n\u1f21 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1 |  **\u03c4\u03bf\u1fe6 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03bf\u03c5** |  \u1f10\u03c3\u03c4\u1f76 |  \u03bc\u03b5\u03b3\u03ac\u03bb\u03b7.  \n---|---|---|---  \nThe narration  |  **of Thucydides** |  is  |  long.  \n(Nominative)  |  **(Genitive)** |  (Verb)  |  \n  \n* * *\n\n\u1f41 \u03ba\u1fc6\u03c0\u03bf\u03c2 |  **\u03c4\u1fc6\u03c2 \u03bf\u03b9\u03ba\u03af\u03b1\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  \u03bc\u03b5\u03b3\u03ac\u03bb\u03b7.  \n---|---|---|---  \nThe garden  |  **of the house** |  is  |  big.  \n(Nominative)  |  **(Genitive)** |  (Verb)  |\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Genitive Case_Possession",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n##### Genitive of Possession\r\n\r\nIn these sentences, the genitive indicates the **possession of something**.\r\n\r\n\u1f21 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1 |  **\u03c4\u03bf\u1fe6 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03bf\u03c5** |  \u1f10\u03c3\u03c4\u1f76 |  \u03bc\u03b5\u03b3\u03ac\u03bb\u03b7.  \r\n---|---|---|---  \r\nThe narration  |  **of Thucydides** |  is  |  long.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n  \r\n* * *\r\n\r\n\u1f41 \u03ba\u1fc6\u03c0\u03bf\u03c2 |  **\u03c4\u1fc6\u03c2 \u03bf\u03b9\u03ba\u03af\u03b1\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  \u03bc\u03b5\u03b3\u03ac\u03bb\u03b7.  \r\n---|---|---|---  \r\nThe garden  |  **of the house** |  is  |  big.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |\r\n\r\n",
+        "grammar_ref": 51,
         "related_content": [],
         "source_lang": 4
     },
@@ -3766,9 +3766,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \n  \n#### The Dative Case\n\n##### Datives in the Pentecontaetia\n\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\nthe final blow.\n\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \n---|---|---|---  \nLeotychides  |  led  |  the Greeks  |  at Mycale...  \n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\n(Genitive)  |  **(Dative)**  \n-- _The History of the Peloponnesian War_, 1.89.2\n\nKeep Reading \u00bb\n\n![](/static/images/thuc.png)\n\nKing \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 is badass!\n\n##### Almost there!\n\nNow that you have learned the **dative**, test yourself!  \n  \nClick on the arrow to try recognizing the dative in English and Greek\nsentences!\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Dative Case_originalexample",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\n  \r\n#### The Dative Case\r\n\r\n##### Datives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\r\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\r\nthe final blow.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \r\n---|---|---|---  \r\nLeotychides  |  led  |  the Greeks  |  at Mycale...  \r\n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\r\n(Genitive)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nKing \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 is badass!\r\n\r\n##### Almost there!\r\n\r\nNow that you have learned the **dative**, test yourself!  \r\n  \r\nClick on the arrow to try recognizing the dative in English and Greek\r\nsentences!\r\n\r\n",
+        "grammar_ref": 54,
         "related_content": [],
         "source_lang": 4
     },
@@ -3778,9 +3778,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "#### The Dative Case\n\nThe word \"dative\" derives from the Latin word _dare_, meaning to \"give\". In\nmost cases its meaning can be associated with the English words **to** and\n**for**. It goes naturally with verbs of giving, so if you take the sentence\n_Thucydides gave a story to the audience_, you will find \"to the audience\" in\nthe dative.\n\nThese verbs are generally followed by a direct object in the accusative and an\n_indirect object in the dative_. Take a look at the example below!\n\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u03b4\u03af\u03b4\u03c9\u03c3\u03b9 |  \u03b4\u1ff6\u03c1\u03bf\u03bd |  **\u03c4\u1fc7 \u03ba\u03cc\u03c1\u1fc3**.  \n---|---|---|---  \nThe man  |  gives  |  a rose  |  **to the girl**.  \n(Nominative)  |  (Verb)  |  (Accusative)  |  **(Dative)**  \n  \n##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Dative Case_intro",
+        "content": "#### The Dative Case\r\n\r\nThe word \"dative\" derives from the Latin word _dare_, meaning to \"give\". In\r\nmost cases its meaning can be associated with the English words **to** and\r\n**for**. It goes naturally with verbs of giving, so if you take the sentence\r\n_Thucydides gave a story to the audience_, you will find \"to the audience\" in\r\nthe dative.\r\n\r\nThese verbs are generally followed by a direct object in the accusative and an\r\n_indirect object in the dative_. Take a look at the example below!\r\n\r\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u03b4\u03af\u03b4\u03c9\u03c3\u03b9 |  \u03b4\u1ff6\u03c1\u03bf\u03bd |  **\u03c4\u1fc7 \u03ba\u03cc\u03c1\u1fc3**.  \r\n---|---|---|---  \r\nThe man  |  gives  |  a rose  |  **to the girl**.  \r\n(Nominative)  |  (Verb)  |  (Accusative)  |  **(Dative)**  \r\n  \r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -\r\n\r\n",
+        "grammar_ref": 54,
         "related_content": [],
         "source_lang": 4
     },
@@ -3790,9 +3790,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Vocative Case\n\nThe vocative is the case by which one addresses or calls out to someone. It is\ngenerally very similar in form to the nominative. Notice there is no definite\narticle for it in the table. That is because **there is no definite article\nfor the vocative**, though often it is preceeded by the interjection \u1f66.\n\n**\u1f66 \u0396\u03b5\u1fe6,** |  \u1f41 \u03b2\u03af\u03bf\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c7\u03b1\u03bb\u03b5\u03c0\u1f78\u03c2.  \n---|---|---|---  \n**O Zeus,** |  life  |  is  |  difficult.   \n**(Vocative)** |  (Nominative)  |  (Verb)  |  (Complement)   \n  \n**\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b5\u03c2,** |  \u1f00\u03ba\u03bf\u03cd\u03b5\u03b9\u03c2;  \n---|---  \n**Thucydides,** |  do you hear?   \n(Vocative)  |  (Verb)\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Vocative Case_intro",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Vocative Case\r\n\r\nThe vocative is the case by which one addresses or calls out to someone. It is\r\ngenerally very similar in form to the nominative. Notice there is no definite\r\narticle for it in the table. That is because **there is no definite article\r\nfor the vocative**, though often it is preceeded by the interjection \u1f66.\r\n\r\n**\u1f66 \u0396\u03b5\u1fe6,** |  \u1f41 \u03b2\u03af\u03bf\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c7\u03b1\u03bb\u03b5\u03c0\u1f78\u03c2.  \r\n---|---|---|---  \r\n**O Zeus,** |  life  |  is  |  difficult.   \r\n**(Vocative)** |  (Nominative)  |  (Verb)  |  (Complement)   \r\n  \r\n**\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b5\u03c2,** |  \u1f00\u03ba\u03bf\u03cd\u03b5\u03b9\u03c2;  \r\n---|---  \r\n**Thucydides,** |  do you hear?   \r\n(Vocative)  |  (Verb)\r\n\r\n",
+        "grammar_ref": 50,
         "related_content": [],
         "source_lang": 4
     },
@@ -3802,9 +3802,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## The Nominative Case\n\n### Nominative as the Subject\n\nIn these sentences, the subject of the sentence is marked by the nominative\ncase.\n\n**\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2** |  \u1f10\u03be\u03b7\u03b3\u03ad\u03c4\u03b1\u03b9 |  \u03c4\u03cc\u03bd \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03bd.  \n---|---|---  \n**Thucydides** |  describes  |  the war.   \n**(Subject)** |  (Verb)  |  (Object)   \n  \n* * *\n\n**\u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1** |  \u03c6\u03ad\u03c1\u03b5\u03b9 |  \u03c4\u03ae\u03bd \u1f21\u03c3\u03c5\u03c7\u03af\u03b1\u03bd  \n---|---|---  \n**The day** |  brings  |  rest.   \n**(Subject)** |  (Verb)  |  (Object)   \n  \n#####  Useful tip!\n\nYou can always rely on the definite article, such as \u1f41 or \u1f21 in these examples,\nto indicate the nominative case.\n\n##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Nominative Case_Subject",
+        "content": "## The Nominative Case\r\n\r\n### Nominative as the Subject\r\n\r\nIn these sentences, the subject of the sentence is marked by the nominative\r\ncase.\r\n\r\n**\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2** |  \u1f10\u03be\u03b7\u03b3\u03ad\u03c4\u03b1\u03b9 |  \u03c4\u03cc\u03bd \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03bd.  \r\n---|---|---  \r\n**Thucydides** |  describes  |  the war.   \r\n**(Subject)** |  (Verb)  |  (Object)   \r\n  \r\n* * *\r\n\r\n**\u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1** |  \u03c6\u03ad\u03c1\u03b5\u03b9 |  \u03c4\u03ae\u03bd \u1f21\u03c3\u03c5\u03c7\u03af\u03b1\u03bd  \r\n---|---|---  \r\n**The day** |  brings  |  rest.   \r\n**(Subject)** |  (Verb)  |  (Object)   \r\n  \r\n#####  Useful tip!\r\n\r\nYou can always rely on the definite article, such as \u1f41 or \u1f21 in these examples,\r\nto indicate the nominative case.\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -\r\n\r\n",
+        "grammar_ref": 49,
         "related_content": [],
         "source_lang": 4
     },
@@ -3814,9 +3814,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\n\nCase | Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \nVoc. | - | - | -  \n**Plural**  \nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \nVoc. | - | - | -  \n  \n#### The Accusative Case\n\n##### Accusative in the Pentecontaetia!\n\nIn this section, Thucydides is describing the Athenians taking over the city\nof Sestus. When they were sure that the barbarians were gone for good, the\nsoldiers went back for their families.\n\n\u1f08\u03b8\u03b7\u03bd\u03b1\u03af\u03c9\u03bd \u03b4\u1f72 \u03c4\u1f78 \u03ba\u03bf\u03b9\u03bd\u03cc\u03bd [...] |  \u1f45\u03b8\u03b5\u03bd \u1f51\u03c0\u03b5\u03be\u03ad\u03b8\u03b5\u03bd\u03c4\u03bf |  **\u03c0\u03b1\u1fd6\u03b4\u03b1\u03c2** \u03ba\u03b1\u1f76 **\u03b3\u03c5\u03bd\u03b1\u1fd6\u03ba\u03b1\u03c2**.  \n---|---|---  \nThe people of Athens  |  brought over  |  **children** and **women**.  \n(Subject)  |  (Verb)  |  **(Direct Objects)**  \n-- _The History of the Peloponnesian War_, 1.89.3\n\nKeep Reading \u00bb\n\nNow that you have learnt the **accusative**, test yourself by clicking on the\narrow and completing the exercises!\n\n",
-        "grammar_ref": null,
+        "title": "Verbs: Nouns: Accusative Case_originalexample",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Accusative Case\r\n\r\n##### Accusative in the Pentecontaetia!\r\n\r\nIn this section, Thucydides is describing the Athenians taking over the city\r\nof Sestus. When they were sure that the barbarians were gone for good, the\r\nsoldiers went back for their families.\r\n\r\n\u1f08\u03b8\u03b7\u03bd\u03b1\u03af\u03c9\u03bd \u03b4\u1f72 \u03c4\u1f78 \u03ba\u03bf\u03b9\u03bd\u03cc\u03bd [...] |  \u1f45\u03b8\u03b5\u03bd \u1f51\u03c0\u03b5\u03be\u03ad\u03b8\u03b5\u03bd\u03c4\u03bf |  **\u03c0\u03b1\u1fd6\u03b4\u03b1\u03c2** \u03ba\u03b1\u1f76 **\u03b3\u03c5\u03bd\u03b1\u1fd6\u03ba\u03b1\u03c2**.  \r\n---|---|---  \r\nThe people of Athens  |  brought over  |  **children** and **women**.  \r\n(Subject)  |  (Verb)  |  **(Direct Objects)**  \r\n-- _The History of the Peloponnesian War_, 1.89.3\r\n\r\nKeep Reading \u00bb\r\n\r\nNow that you have learnt the **accusative**, test yourself by clicking on the\r\narrow and completing the exercises!\r\n\r\n",
+        "grammar_ref": 56,
         "related_content": [],
         "source_lang": 4
     },
@@ -3826,8 +3826,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### Pluperfect Indicative Active, _To have_\n\nPerson | Subject | Verb  \n---|---|---  \n**Singular**  \n1st | I | had had  \n2nd | You | had had  \n3rd | He/She/It | had had | **Plural**  \n1st | We | had had  \n2nd | You | had had  \n3rd | They | had had  \n  \n#### Pluperfect Indicative Active\n\nAs you remember from \"Introduction to Verbs\":\n\n  * The**pluperfect tense**Describes an action in the past time with completed aspect (i.e. fixed moment in time that has come to an end).\n  * The**indicative mood**is used for factual statements and questions.\n  * The**active voice**means the subject of the verb is performing the action.\n\nHere are some examples of the aorist in English: _**I had seen** it in the\npast._\n\n* * *\n\n##### Keep an eye out!\n\nRemember that unlike English verbs, the subject of the Greek verb is implied\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\nby the personal pronouns _I, You, He/She/It, We, You, They_.\n\n",
+        "title": " Verbs: Pluperfect Indicative Active_translation",
+        "content": "##### Pluperfect Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | had had  \r\n2nd | You | had had  \r\n3rd | He/She/It | had had | **Plural**  \r\n1st | We | had had  \r\n2nd | You | had had  \r\n3rd | They | had had  \r\n  \r\n#### Pluperfect Indicative Active\r\n\r\nAs you remember from \"Introduction to Verbs\":\r\n\r\n  * The**pluperfect tense**Describes an action in the past time with completed aspect (i.e. fixed moment in time that has come to an end).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _**I had seen** it in the\r\npast._\r\n\r\n* * *\r\n\r\n##### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3838,8 +3838,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _Don't be tense... You'll be pluperfect!_ Thucydides _(ca 460 - 395 BC)_\n\n# Pluperfect Indicative Active\n\n* * *\n\nNow that you are familiar with the perfect, it's a good tim to learn about the\n**pluperfect indicative active**!\n\n* * *\n\n## In this Section\n\nNew Skills New Vocab \\--.\n\n  1. Identify pluperfect indicative active verbs.\n  2. Conjugate pluperfect indicative active verbs.\n\n",
+        "title": "Verbs: Pluperfect Indicative Active_intro",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _Don't be tense... You'll be pluperfect!_ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Pluperfect Indicative Active\r\n\r\n* * *\r\n\r\nThis is a good time to learn about the\r\n**pluperfect indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab \\--.\r\n\r\n  1. Identify pluperfect indicative active verbs.\r\n  2. Conjugate pluperfect indicative active verbs.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3850,8 +3850,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "###\n\n![](/static/images/map_war_small.png)\n\n## ...previously in the Pentecontaetia\n\nGeneral Cimon died in Cyprus after the Athenians conquer Citium.\n\n## Now in the Pentecontaetia...\n\nThe Boeotians regain independence from Athens after a battle at Coronea, in\nwhich many Athenians are killed and taken captive.\n\nSoon after Euboea and Megara also revolt against the Athenians. Though\nmanaging to squash the Euboeian revolt, Pericles struggles to calm Megara.\n\nThe Peloponnesian army also invades Attica, but soon turns back!\n\n(Summary of Thuc. 1.113-114)\n\nNow that you've got some context, let's look at the pluperfect!  \n  \n**Click the arrow to start learning!**\n\n",
+        "title": "History: Penteconteatia  1.113-114",
+        "content": "###\r\n\r\n![](/static/images/map_war_small.png)\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nGeneral Cimon died in Cyprus after the Athenians conquer Citium.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nThe Boeotians regain independence from Athens after a battle at Coronea, in\r\nwhich many Athenians are killed and taken captive.\r\n\r\nSoon after Euboea and Megara also revolt against the Athenians. Though\r\nmanaging to squash the Euboeian revolt, Pericles struggles to calm Megara.\r\n\r\nThe Peloponnesian army also invades Attica, but soon turns back!\r\n\r\n(Summary of Thuc. 1.113-114)\r\n\r\nNow that you've got some context, let's look at the pluperfect!  \r\n  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3862,8 +3862,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u03bb\u03cd\u03c9, _I untie_\n\nPluperfect Indicative Active -- \u1f10\u03bb\u03b5\u03bb\u03cd\u03ba\u03b5\u03b9\u03bd, _I had untied_\n\nPerson | Singular | Plural  \n---|---|---  \n1st | **\u1f10**\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03bd** | **\u1f10**\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03bc\u03b5\u03bd**  \n2nd | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c2** | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c4\u03b5**  \n3rd | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9** | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c3\u03b1(\u03bd)**  \n  \n#### Pluperfect Indicative Active\n\nTo form the pluperfect indicative active:\n\n  1. **Take the fourth principle part** (the one for the perfect tense).   \ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1\n\n  2. **Remove the ending** (-\u03b1) to get the the perfect stem.   \ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba-\n\n**Add the augment \u1f10**.   \ne.g. \u1f10\u03bb\u03ad\u03bb\u03c5\u03ba-\n\n  3. **Add the the endings you see in the table.**   \ne.g. \u1f10\u03bb\u03b5\u03bb\u03cd\u03ba\u03b5\u03b9\u03bd, meaning _I had untied_.\n\n* * *\n\nThe Parts of an Pluperfect Tense Verb\n\n\u1f10\n\n* * *\n\n|  \u03bb\u03b5\n\n* * *\n\n|  \u03bb\u03cd\n\n* * *\n\n|  \u03ba\n\n* * *\n\n|  \u03b5\u03b9\u03bd\n\n* * *  \n  \n---|---|---|---|---  \n**Augment**  \n**\n\n* * *\n\n|  **Reduplication**  \n**\n\n* * *\n\n|  **Stem**  \n**\n\n* * *\n\n|  **Suffix**  \n\n* * *\n\n|  **Ending**  \n\n* * *\n\n",
+        "title": "Verbs: Pluperfect Indicative Active_conjugation",
+        "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPluperfect Indicative Active -- \u1f10\u03bb\u03b5\u03bb\u03cd\u03ba\u03b5\u03b9\u03bd, _I had untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f10**\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03bd** | **\u1f10**\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c2** | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c4\u03b5**  \r\n3rd | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9** | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c3\u03b1(\u03bd)**  \r\n  \r\n#### Pluperfect Indicative Active\r\n\r\nTo form the pluperfect indicative active:\r\n\r\n  1. **Take the fourth principle part** (the one for the perfect tense).   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1\r\n\r\n  2. **Remove the ending** (-\u03b1) to get the the perfect stem.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba-\r\n\r\n**Add the augment \u1f10**.   \r\ne.g. \u1f10\u03bb\u03ad\u03bb\u03c5\u03ba-\r\n\r\n  3. **Add the the endings you see in the table.**   \r\ne.g. \u1f10\u03bb\u03b5\u03bb\u03cd\u03ba\u03b5\u03b9\u03bd, meaning _I had untied_.\r\n\r\n* * *\r\n\r\nThe Parts of an Pluperfect Tense Verb\r\n\r\n\u1f10\r\n\r\n* * *\r\n\r\n|  \u03bb\u03b5\r\n\r\n* * *\r\n\r\n|  \u03bb\u03cd\r\n\r\n* * *\r\n\r\n|  \u03ba\r\n\r\n* * *\r\n\r\n|  \u03b5\u03b9\u03bd\r\n\r\n* * *  \r\n  \r\n---|---|---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Reduplication**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Suffix**  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3874,9 +3874,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "#### Aorist Indicative Active\n\nThe following is a list of verbs with their corresponding aorists that can be\noften found in Ancient Greek texts. Notice how all of these have **second**\naorists. Try learning them!\n\n1st: Present | 2nd: Future | 3rd: Aorist  \n---|---|---  \n\u1f04\u03b3\u03c9 (I lead) | \u1f04\u03be\u03c9 (I will lead) | **\u1f24\u03b3\u03b1\u03b3\u03bf\u03bd** (I led)  \n\u03b2\u03ac\u03bb\u03bb\u03c9 (I throw) | \u03b2\u03b1\u03bb\u1ff6 (I will throw) | **\u1f14\u03b2\u03b1\u03bb\u03bf\u03bd** (I threw)  \n\u03c0\u03b5\u03af\u03b8\u03c9 (I persuade) | \u03c0\u03b5\u03af\u03c3\u03c9 (I will persuade) | **\u1f14\u03c0\u03b5\u03b9\u03c3\u03b1** (I persuaded)  \n\u03c4\u03ad\u03bc\u03bd\u03c9 (I cut) | \u03c4\u03b5\u03bc\u1ff6 (I will cut) | **\u1f14\u03c4\u03b5\u03bc\u03bf\u03bd** (I cut)\n\n",
-        "grammar_ref": null,
+        "title": "Verbs: Aorist Indicative Active_Asigmatic_examples",
+        "content": "#### Aorist Indicative Active\r\n\r\nThe following is a list of verbs with their corresponding aorists that can be\r\noften found in Ancient Greek texts. Notice how all of these have **second**\r\naorists. Try learning them!\r\n\r\n1st: Present | 2nd: Future | 3rd: Aorist  \r\n---|---|---  \r\n\u1f04\u03b3\u03c9 (I lead) | \u1f04\u03be\u03c9 (I will lead) | **\u1f24\u03b3\u03b1\u03b3\u03bf\u03bd** (I led)  \r\n\u03b2\u03ac\u03bb\u03bb\u03c9 (I throw) | \u03b2\u03b1\u03bb\u1ff6 (I will throw) | **\u1f14\u03b2\u03b1\u03bb\u03bf\u03bd** (I threw)  \r\n\u03c0\u03b5\u03af\u03b8\u03c9 (I persuade) | \u03c0\u03b5\u03af\u03c3\u03c9 (I will persuade) | **\u1f14\u03c0\u03b5\u03b9\u03c3\u03b1** (I persuaded)  \r\n\u03c4\u03ad\u03bc\u03bd\u03c9 (I cut) | \u03c4\u03b5\u03bc\u1ff6 (I will cut) | **\u1f14\u03c4\u03b5\u03bc\u03bf\u03bd** (I cut)\r\n\r\n",
+        "grammar_ref": 44,
         "related_content": [],
         "source_lang": 4
     },
@@ -3886,9 +3886,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u03c6\u03b1\u03af\u03bd\u03c9, _I show_\n\nAorist Indicative Active -- \u1f14\u03c6\u03b7\u03bd\u03b1, _I showed_\n\nPerson | Singular | Plural  \n---|---|---  \n1st | **\u1f14**\u03c6\u03b7\u03bd**\u03b1** | **\u1f10**\u03c6\u03ae\u03bd**\u03b1\u03bc\u03b5\u03bd**  \n2nd | **\u1f14**\u03c6\u03ae\u03bd**\u03b1\u03c2** | **\u1f10**\u03c6\u03ae\u03bd**\u03b1\u03c4\u03b5**  \n3rd | **\u1f14**\u03c6\u03b7\u03bd**\u03b5(\u03bd)** | **\u1f14**\u03c6\u03b7\u03bd**\u03b1\u03bd**  \n  \n#### Aorist Indicative Active\n\nThe **asigmatic** aorist behaves in a similar way to the sigmatic aorist.\nYou'll notice, however, that in this case it is not as easy to separate the\nstem. Often with the aorist, it is just a case of memorizing the **third\nprinciple part** of some common words.\n\nFor example, in the case of \u03c6\u03b1\u03af\u03bd\u03c9, _to show_, the aorist indicative active is\n\u1f14\u03c6\u03b7\u03bd\u03b1. You'll see how here there is **no sigma**, but the endings remain **the\nsame as the sigmatic aorist**.\n\n* * *\n\nThe Parts of an Aorist Tense Verb\n\n\u1f14\n\n* * *\n\n|  \u03c6\u03b7\u03bd\n\n* * *\n\n|  \u03b1\n\n* * *  \n  \n---|---|---  \n**Augment**  \n**\n\n* * *\n\n|  **Asigmatic Stem**  \n**\n\n* * *\n\n|  **Ending**  \n\n* * *\n\n",
-        "grammar_ref": null,
+        "title": "Verbs: Aorist Indicative Active_Asigmatic_conjugation",
+        "content": "### \u03c6\u03b1\u03af\u03bd\u03c9, _I show_\r\n\r\nAorist Indicative Active -- \u1f14\u03c6\u03b7\u03bd\u03b1, _I showed_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c6\u03b7\u03bd**\u03b1** | **\u1f10**\u03c6\u03ae\u03bd**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c6\u03ae\u03bd**\u03b1\u03c2** | **\u1f10**\u03c6\u03ae\u03bd**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c6\u03b7\u03bd**\u03b5(\u03bd)** | **\u1f14**\u03c6\u03b7\u03bd**\u03b1\u03bd**  \r\n  \r\n#### Aorist Indicative Active\r\n\r\nThe **asigmatic** aorist behaves in a similar way to the sigmatic aorist.\r\nYou'll notice, however, that in this case it is not as easy to separate the\r\nstem. Often with the aorist, it is just a case of memorizing the **third\r\nprinciple part** of some common words.\r\n\r\nFor example, in the case of \u03c6\u03b1\u03af\u03bd\u03c9, _to show_, the aorist indicative active is\r\n\u1f14\u03c6\u03b7\u03bd\u03b1. You'll see how here there is **no sigma**, but the endings remain **the\r\nsame as the sigmatic aorist**.\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03c6\u03b7\u03bd\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Asigmatic Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
+        "grammar_ref": 44,
         "related_content": [],
         "source_lang": 4
     },
@@ -3898,13 +3898,13 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Aorist Indicative Active for Stop Verbs",
+        "title": "Verbs: Aorist Indicative Active for Stop Verbs",
         "content": "### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nAorist Active Indicative -- \u1f14\u03c0\u03b5\u03bc\u03c8\u03b1, _I sent_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1\u03c2** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b5(\u03bd)** | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n#### Aorist Indicative Active for Stop Verbs\r\n\r\nThe aorist stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n  \r\n\r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u1f14\u03bb\u03b5**\u03be**\u03b1, _I said_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u1f14\u03c0\u03b5\u03bc**\u03c8**\u03b1, _I sent_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u1f14\u03c0\u03b5\u03b9**\u03c3**\u03b1, _I persuaded_\r\n\r\n####\r\n\r\n",
         "grammar_ref": 61,
         "related_content": [
-            454,
             456,
-            458
+            458,
+            454
         ],
         "source_lang": 4
     },
@@ -3914,8 +3914,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Introduction to the Aorist",
-        "content": "> _When in doubt, aorist._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Aorist Indicative Active\r\n\r\n* * *\r\n\r\nNow that you are familiar with third declension nouns with consonant stems,\r\nthis is a good time to carry on learning the verbs. Here you will learn about\r\nthe **aorist indicative active**!",
+        "title": "Verbs: Aorist Indicative Active_intro",
+        "content": "> _When in doubt, aorist._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Aorist Indicative Active\r\n\r\n* * *\r\n\r\nThis is a good time to carry on learning the verbs. Here you will learn about\r\nthe **aorist indicative active**!",
         "grammar_ref": 60,
         "related_content": [
             458
@@ -3928,12 +3928,12 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "The Second (Asigmatic) Aorist",
+        "title": "Verbs: Aorist Indicative Active_Asigmatic_conjugation",
         "content": "### \u03bb\u03b5\u03af\u03c0\u03c9, _I leave_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03b9\u03c0\u03bf\u03bd, _I left_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03b9\u03c0**\u03bf\u03bd** | **\u1f10**\u03bb\u03af\u03c0**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03b9\u03c0**\u03b5\u03c2** | **\u1f10**\u03bb\u03af\u03c0**\u03b5\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03b9\u03c0**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03b9\u03c0**\u03bf\u03bd**  \r\n  \r\n#### Aorist Indicative Active: Second Aorist\r\n\r\nIn the **third principle part** of the verbs you have seen so far, the ending\r\nfor the first person singular has always been -\u03b1. This is becasue the verbs\r\nyou have seen so far have **first aorists**. There are, however, some verbs\r\nwith **second aorists**. For these **the endings change**, despite the meaning\r\nremaining the same as first aorists.\r\n\r\nFor example, in the case of \u03bb\u03b5\u03af\u03c0\u03c9, _to leave_, the aorist indicative active is\r\n\u1f14\u03bb\u03b9\u03c0\u03bf\u03bd. **The endings of the second aorist active resemble those of the\r\nimperfect.**\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03b9\u03c0\r\n\r\n* * *\r\n\r\n|  \u03bf\u03bd\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
         "grammar_ref": 44,
         "related_content": [
-            454,
-            458
+            458,
+            454
         ],
         "source_lang": 4
     },
@@ -3943,12 +3943,12 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "The First (Sigmatic) Aorist",
+        "title": "Verbs: Aorist Indicative Active_Sigmatic_conjugation",
         "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03c5\u03c3\u03b1, _I untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03c5\u03c3**\u03b1** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03c2** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03c5\u03c3**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03bd**  \r\n  \r\n#### Aorist Indicative Active\r\n\r\nThe aorist can have many different endings. The general rule, however, is that\r\nthe aorist can be either **sigmatic** (meaning with an added \u03c3) or\r\n**asigmatic** (without \u03c3).\r\n\r\nTo form the sigmatic aorist indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n**Add the augment \u1f10** (just like you did for the imperfect). \r\n  3. **Add a \u03c3** to get the sigmatic aorist stem.   \r\ne.g. \u1f14\u03bb\u03c5\u03c3-\r\n\r\n  4. **Add the endings** from the table to indicate the person and number.   \r\ne.g. \u1f10\u03bb\u03cd\u03c3\u03b1\u03bc\u03b5\u03bd, _We untied_\r\n\r\nThe aorist then becomes the **third principle part** of a verb.\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03c5\r\n\r\n* * *\r\n\r\n|  \u03c3\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  ****\u03c3****  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
         "grammar_ref": 43,
         "related_content": [
-            454,
-            458
+            458,
+            454
         ],
         "source_lang": 4
     },
@@ -3958,7 +3958,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
+        "title": "History: Penteconteatia  1.105-106",
         "content": "###\r\n\r\n![](/static/images/map_war_small.png)\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThe Athenians established themselves as masters of the river Nile.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nWar breaks out between Athens and the island opposite, Aegina. The Athenians\r\nwin a great sea battle against the island and take seventy of Aegina's ships.\r\nDesirous to help the Aeginetans, the Peloponnesians send 300 hoplites to their\r\naid.\r\n\r\nMeanwhile, \u03bf\u1f31 \u039a\u03bf\u03c1\u03af\u03bd\u03b8\u03b9\u03bf\u03b9, the Corithians march down to attack Athens, believing\r\nmost of their army employed in Aegina. However, after a drawn battle, the\r\nAthenians defeat the Corinthians, who retreat home.\r\n\r\n(Summary of Thuc. 1.105-106)\r\n\r\nNow that you've got some context, let's look at the aorist!  \r\n  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -3970,9 +3970,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "The Aorist Indicative Active in English",
-        "content": "### Aorist Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | had  \r\n2nd | You | had  \r\n3rd | He/She/It | had\r\n **Plural**  \r\n1st | We | had  \r\n2nd | You | had  \r\n3rd | They | had\r\n\r\n* * *\r\n  \r\n### Aorist Indicative Active\r\n\r\nAs you remember from \"Introduction to Verbs\":\r\n\r\n  * The**aorist tense**describes an action in the past time with simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _I **heard** a noise.\r\nSuddenly darkness **fell**._\r\n\r\n* * *\r\n\r\n### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.",
-        "grammar_ref": null,
+        "title": "Verbs: Aorist Indicative Active_translation",
+        "content": "### Aorist Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | had  \r\n2nd | You | had  \r\n3rd | He/She/It | had\r\n **Plural**  \r\n1st | We | had  \r\n2nd | You | had  \r\n3rd | They | had\r\n\r\n* * *\r\n  \r\n### Aorist Indicative Active\r\n\r\n  * The**aorist tense**describes an action in the past time with simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _I **heard** a noise.\r\nSuddenly darkness **fell**._\r\n\r\n* * *\r\n\r\n### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.",
+        "grammar_ref": 60,
         "related_content": [],
         "source_lang": 4
     },
@@ -3982,9 +3982,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Examples of Asigmatic Aorists",
+        "title": "Verbs: Aorist Indicative Active_Asigmatic_examples",
         "content": "#### Aorist Indicative Active\r\n\r\nThe following is a list of verbs with their corresponding aorists that can be\r\noften found in Ancient Greek texts. Notice how all of these have **asigmatic**\r\naorists.\r\n\r\nPresent | Aorist | Note  \r\n---|---|---  \r\n\u1f00\u03b3\u03b3\u03ad\u03bb\u03bb\u03c9 (I announce) | **\u1f24\u03b3\u03b3\u03b5\u03b9\u03bb\u03b1 | The augment has changed from \u03b5 to \u03b7\r\nfollowing a merge of \u03b1 \\+ \u03b5  \r\n\u03ba\u03c1\u03af\u03bd\u03c9 (I judge) | **\u1f14\u03ba\u03c1\u03b9\u03bd\u03b1 |  \r\n\u03c0\u03b5\u03c1\u03b1\u03af\u03bd\u03c9 (I finish) | **\u1f10\u03c0\u03ad\u03c1\u03b1\u03bd\u03b1 |\r\n",
-        "grammar_ref": null,
+        "grammar_ref": 44,
         "related_content": [],
         "source_lang": 4
     },
@@ -3994,9 +3994,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
+        "title": "Verbs: Perfect Indicative Active_conjugation",
         "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPerfect Indicative Active -- \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1, _I have untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u03bb\u03ad**\u03bb\u03c5**\u03ba\u03b1** | **\u03bb\u03b5**\u03bb\u03cd**\u03ba\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u03bb\u03ad**\u03bb\u03c5**\u03ba\u03b1\u03c2** | **\u03bb\u03b5**\u03bb\u03cd**\u03ba\u03b1\u03c4\u03b5**  \r\n3rd | **\u03bb\u03ad**\u03bb\u03c5**\u03ba\u03b5** | **\u03bb\u03b5**\u03bb\u03cd**\u03ba\u03b1\u03c3\u03b9(\u03bd)**  \r\n  \r\n#### Perfect Indicative Active\r\n\r\nTo form the perfect indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n**Add the augment \u03b5** (just like you did for the imperfect and aorist). \r\n  3. **Add the first letter of the stem** in front of the augment.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5-\r\n\r\n  4. **Add the suffix -\u03ba**.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba-.\r\n\r\n  5. **Add the the endings of the present indicative active**, except for the third person singular, where the ending can be either -\u03b5 or -\u03bf, depending on the verb.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1, meaning _I have untied_.\r\n\r\nThe perfect then becomes the **fourth principle part** of a verb.\r\n\r\n* * *\r\n\r\nThe Parts of an Perfect Tense Verb\r\n\r\n\u03bb\u03ad\r\n\r\n* * *\r\n\r\n|  \u03bb\u03c5\r\n\r\n* * *\r\n\r\n|  \u03ba\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---|---  \r\n**Reduplication**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Suffix**  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
-        "grammar_ref": null,
+        "grammar_ref": 58,
         "related_content": [],
         "source_lang": 4
     },
@@ -4006,9 +4006,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
+        "title": "Verbs: Perfect Indicative Active_translation",
         "content": "##### Perfect Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | have had  \r\n2nd | You | have had  \r\n3rd | He/She/It | has had | **Plural**  \r\n1st | We | have had  \r\n2nd | You | have had  \r\n3rd | They | have had  \r\n  \r\n#### Perfect Indicative Active\r\n\r\nAs you remember from \"Introduction to Verbs\":\r\n\r\n  * The**perfect tense**Describes an action in the present time with completed aspect (i.e. fixed moment in time that has come to an end).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _I **have had** a long life.\r\nI **have lived**._\r\n\r\n* * *\r\n\r\n##### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\n",
-        "grammar_ref": null,
+        "grammar_ref": 58,
         "related_content": [],
         "source_lang": 4
     },
@@ -4018,9 +4018,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "# Perfect Indicative Active\r\n\r\n* * *\r\n\r\nThis is a perrrfect time to carry on learning the verbs. Here you will learn\r\nabout the **perfect indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab The Athenians go to Cyprus.\r\n\r\n  1. Identify perfect indicative active verbs.\r\n  2. Conjugate perfect indicative active verbs.\r\n\r\n",
-        "grammar_ref": null,
+        "title": "Verbs: Perfect Indicative Active_intro",
+        "content": "# Perfect Indicative Active\r\n\r\n* * *\r\n\r\nHere you will learn about the **perfect indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab The Athenians go to Cyprus.\r\n\r\n  1. Identify perfect indicative active verbs.\r\n  2. Conjugate perfect indicative active verbs.\r\n\r\n",
+        "grammar_ref": 58,
         "related_content": [],
         "source_lang": 4
     },
@@ -4030,7 +4030,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
+        "title": "History: Penteconteatia  1.112",
         "content": "###\r\n\r\n![](/static/images/map.jpg)\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThe Athenians failed to conquer Thessaly and Acarnia, but were successful in\r\nSicyon.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nAfter three years of battling, the Athenians and the Peloponnesians make a\r\ntruce. The Athenians, now free from the Hellenic war, decide to send 200\r\nvessels towars Cyprus, 60 of which headed to Egypt. The ships are lead by\r\n\u039a\u03af\u03bc\u03c9\u03bd, Cimon, who lays siege at Citium. Cimon dies shortly after, due to lack\r\nof provisions and the whole army leaves Citium and reunites with the vessels\r\nwho had gone to Egypt. During their return they are attacked by Phoenicians,\r\nCyprians and Cilicians, but they manage to defeat them!\r\n\r\nIn the meantime, the Spartans become masters of Delphi, but are soon sent away\r\nby the Athenians!\r\n\r\n(Summary of Thuc. 1.112)\r\n\r\nNow that you've got some context, let's look at the perfect!",
         "grammar_ref": null,
         "related_content": [],
@@ -4042,7 +4042,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Introduction to Participles",
+        "title": "Participles_intro",
         "content": "**This is how participles work!!!**",
         "grammar_ref": 62,
         "related_content": [],
@@ -13080,5 +13080,1661 @@
     },
     "model": "admin.logentry",
     "pk": 503
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T12:20:19.637Z",
+        "object_repr": "Perfect Indicative Active_intro",
+        "object_id": "462",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 504
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T12:21:38.646Z",
+        "object_repr": "Perfect Indicative Active_translation",
+        "object_id": "461",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 505
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T12:23:00.355Z",
+        "object_repr": "Perfect Indicative Active_\u03bb\u03ad\u03bb\u03c5\u03ba\u03b1",
+        "object_id": "460",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 506
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T12:24:46.504Z",
+        "object_repr": "Aorist Indicative Active_sigmatic_\u1f14\u03bb\u03c5\u03c3\u03b1",
+        "object_id": "456",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 507
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T12:24:52.028Z",
+        "object_repr": "Aorist Indicative Active_sigmatic_\u1f14\u03bb\u03c5\u03c3\u03b1",
+        "object_id": "456",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 508
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T12:25:06.548Z",
+        "object_repr": "Aorist Indicative Active_sigmatic_\u1f14\u03bb\u03c5\u03c3\u03b1",
+        "object_id": "456",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 509
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:01:46.769Z",
+        "object_repr": "Perfect Indicative Active_intro",
+        "object_id": "462",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 510
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:01:57.178Z",
+        "object_repr": "Perfect Indicative Active_intro",
+        "object_id": "462",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 511
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:03:23.536Z",
+        "object_repr": "Perfect Indicative Active_conjugation",
+        "object_id": "460",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 512
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:03:51.680Z",
+        "object_repr": "Perfect Indicative Active_translation",
+        "object_id": "461",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 513
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:04:45.815Z",
+        "object_repr": "Aorist Indicative Active_translation",
+        "object_id": "458",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 514
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:05:00.165Z",
+        "object_repr": "Aorist Indicative Active_translation",
+        "object_id": "458",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 515
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:05:53.757Z",
+        "object_repr": "History_Penteconteatia  1.105-106",
+        "object_id": "457",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 516
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:06:22.503Z",
+        "object_repr": "History_Penteconteatia  1.112",
+        "object_id": "463",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 517
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:11:22.933Z",
+        "object_repr": "Participles_intro",
+        "object_id": "464",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 518
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:12:17.279Z",
+        "object_repr": "Aorist Indicative Active_Sigmatic_conjugation",
+        "object_id": "456",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 519
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:12:25.538Z",
+        "object_repr": "The Second (Asigmatic) Aorist",
+        "object_id": "455",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 520
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:12:30.276Z",
+        "object_repr": "Aorist Indicative Active_Sigmatic_conjugation",
+        "object_id": "456",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 521
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:13:30.204Z",
+        "object_repr": "Aorist Indicative Active_Asigmatic_conjugation",
+        "object_id": "455",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 522
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:14:04.461Z",
+        "object_repr": "Aorist Indicative Active_intro",
+        "object_id": "454",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 523
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:14:38.059Z",
+        "object_repr": "Aorist Indicative Active_Asigmatic_examples",
+        "object_id": "459",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 524
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:15:47.323Z",
+        "object_repr": "Aorist Indicative Active_Asigmatic_conjugation",
+        "object_id": "452",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 525
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:16:35.630Z",
+        "object_repr": "Aorist Indicative Active_Asigmatic_examples",
+        "object_id": "451",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 526
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:17:29.809Z",
+        "object_repr": "Pluperfect Indicative Active_conjugation",
+        "object_id": "450",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 527
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:17:44.956Z",
+        "object_repr": "Aorist Indicative Active_Asigmatic_examples",
+        "object_id": "459",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 528
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:18:16.051Z",
+        "object_repr": "History_Penteconteatia  1.113-114",
+        "object_id": "449",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 529
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:19:18.781Z",
+        "object_repr": "Pluperfect Indicative Active_intro",
+        "object_id": "448",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 530
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:25:07.232Z",
+        "object_repr": " Pluperfect Indicative Active_translation",
+        "object_id": "447",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 531
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:26:25.071Z",
+        "object_repr": "Accusative Case_originalexample",
+        "object_id": "446",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 532
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:50:35.377Z",
+        "object_repr": "Nominative Case_Subject",
+        "object_id": "445",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 533
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:52:36.489Z",
+        "object_repr": "Nouns: Vocative Case_intro",
+        "object_id": "444",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 534
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:52:48.926Z",
+        "object_repr": "Nouns: Nominative Case_Subject",
+        "object_id": "445",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 535
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:52:59.743Z",
+        "object_repr": "Nouns: Accusative Case_originalexample",
+        "object_id": "446",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 536
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:53:23.163Z",
+        "object_repr": "Verbs: Aorist Indicative Active_Asigmatic_conjugation",
+        "object_id": "455",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 537
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:53:31.392Z",
+        "object_repr": "Verbs: Aorist Indicative Active_Asigmatic_conjugation",
+        "object_id": "452",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 538
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:53:46.586Z",
+        "object_repr": "Verbs: Perfect Indicative Active_intro",
+        "object_id": "462",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 539
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:53:53.379Z",
+        "object_repr": "Verbs: Perfect Indicative Active_translation",
+        "object_id": "461",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 540
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:53:56.969Z",
+        "object_repr": "Perfect Indicative Active_conjugation",
+        "object_id": "460",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 541
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:54:09.154Z",
+        "object_repr": "Verbs: Perfect Indicative Active_conjugation",
+        "object_id": "460",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 542
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:54:17.567Z",
+        "object_repr": "Verbs: Aorist Indicative Active_Asigmatic_examples",
+        "object_id": "459",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 543
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:54:24.450Z",
+        "object_repr": "Verbs: Aorist Indicative Active_translation",
+        "object_id": "458",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 544
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:56:16.062Z",
+        "object_repr": "History_Penteconteatia  1.105-106",
+        "object_id": "457",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 545
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T13:57:36.824Z",
+        "object_repr": "Verb: Aorist Indicative Active_Sigmatic_conjugation",
+        "object_id": "456",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 546
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:10:51.770Z",
+        "object_repr": "Verbs: Aorist Indicative Active_intro",
+        "object_id": "454",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 547
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:10:57.000Z",
+        "object_repr": "Verbs: Aorist Indicative Active for Stop Verbs",
+        "object_id": "453",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 548
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:11:02.904Z",
+        "object_repr": "Verbs: Aorist Indicative Active_Asigmatic_examples",
+        "object_id": "451",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 549
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:11:08.756Z",
+        "object_repr": "Verbs: Pluperfect Indicative Active_conjugation",
+        "object_id": "450",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 550
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:11:15.674Z",
+        "object_repr": "Verbs: Pluperfect Indicative Active_intro",
+        "object_id": "448",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 551
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:11:21.618Z",
+        "object_repr": " Verbs: Pluperfect Indicative Active_translation",
+        "object_id": "447",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 552
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:11:29.579Z",
+        "object_repr": "Verbs: Nouns: Accusative Case_originalexample",
+        "object_id": "446",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 553
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:11:43.274Z",
+        "object_repr": "Verbs: Aorist Indicative Active_Sigmatic_conjugation",
+        "object_id": "456",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 554
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:14:03.059Z",
+        "object_repr": "Nouns: Dative Case_intro",
+        "object_id": "443",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 555
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:14:29.351Z",
+        "object_repr": "Nouns: Dative Case_originalexample",
+        "object_id": "442",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 556
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:15:40.424Z",
+        "object_repr": "Nouns: Genitive Case_Possession",
+        "object_id": "441",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 557
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:17:07.337Z",
+        "object_repr": "Nouns: Accusative Case_Directobjects",
+        "object_id": "439",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 558
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:17:50.422Z",
+        "object_repr": "Nouns: Accusative Case_Directobject",
+        "object_id": "439",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 559
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:18:19.301Z",
+        "object_repr": "History: Penteconteatia_intro",
+        "object_id": "438",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 560
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:19:18.973Z",
+        "object_repr": "Nouns: Nominative Case_Complement",
+        "object_id": "437",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 561
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:20:17.123Z",
+        "object_repr": "Nouns: Genitive Case_intro",
+        "object_id": "436",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 562
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:20:57.745Z",
+        "object_repr": "Nouns: Genitive Case_originalexample",
+        "object_id": "435",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 563
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:21:29.684Z",
+        "object_repr": "Nouns: Intro to Cases_intro",
+        "object_id": "434",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 564
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:22:13.455Z",
+        "object_repr": "Nouns: Intro to Cases_intro",
+        "object_id": "434",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 565
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:26:34.777Z",
+        "object_repr": "Nouns: Dative Case_originalexample",
+        "object_id": "432",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 566
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:27:22.411Z",
+        "object_repr": "Nouns: Dative Case_In",
+        "object_id": "431",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 567
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:28:16.012Z",
+        "object_repr": "Nouns: Nominative Case_intro",
+        "object_id": "430",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 568
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:28:56.512Z",
+        "object_repr": "Nouns: Genitive Case_Partitive",
+        "object_id": "429",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 569
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:29:08.129Z",
+        "object_repr": "Nouns: Genitive Case_Partitive",
+        "object_id": "429",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 570
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:30:14.197Z",
+        "object_repr": "Nouns: Genitive Case_Comparative",
+        "object_id": "428",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 571
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:32:47.951Z",
+        "object_repr": "Nouns: Nominative Case_originalexample",
+        "object_id": "425",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 572
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:35:33.130Z",
+        "object_repr": "Verbs: FutureIndicative Active_conjugation",
+        "object_id": "423",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 573
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:36:20.300Z",
+        "object_repr": "History: Thucydides",
+        "object_id": "422",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 574
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:41:21.120Z",
+        "object_repr": "Verbs: Future Indicative Active_intro",
+        "object_id": "421",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 575
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:41:35.842Z",
+        "object_repr": "Verbs: Future Indicative Active_conjugation",
+        "object_id": "423",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 576
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:42:29.851Z",
+        "object_repr": "Verbs: Future Indicative Active_originalexample",
+        "object_id": "420",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 577
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:43:21.886Z",
+        "object_repr": "Verbs: Future Indicative Active_conjugation",
+        "object_id": "419",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 578
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:43:54.716Z",
+        "object_repr": "Verbs: Future Indicative Active_conjugation",
+        "object_id": "419",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 579
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:44:58.648Z",
+        "object_repr": "Verbs: Future Indicative Active_ToBe_conjugation",
+        "object_id": "418",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 580
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:48:54.921Z",
+        "object_repr": "Verbs",
+        "object_id": "416",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 581
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:50:10.637Z",
+        "object_repr": "Verbs: Future Indicative Active_translation",
+        "object_id": "416",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 582
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:51:21.727Z",
+        "object_repr": "Adjectives: First Declension_Threeending",
+        "object_id": "390",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 583
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:51:41.204Z",
+        "object_repr": "Adjectives: First Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 584
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:52:55.629Z",
+        "object_repr": "H",
+        "object_id": "389",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 585
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:53:22.446Z",
+        "object_repr": "History_Penteconteatia  1.100-101",
+        "object_id": "389",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 586
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:53:32.431Z",
+        "object_repr": "History: Penteconteatia_intro",
+        "object_id": "438",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 587
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:53:41.407Z",
+        "object_repr": "History: Penteconteatia  1.100-101",
+        "object_id": "389",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 588
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:53:46.107Z",
+        "object_repr": "History: Penteconteatia  1.112",
+        "object_id": "463",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 589
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:53:50.875Z",
+        "object_repr": "History: Penteconteatia  1.113-114",
+        "object_id": "449",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 590
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:53:55.531Z",
+        "object_repr": "History: Penteconteatia  1.105-106",
+        "object_id": "457",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 591
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:55:34.159Z",
+        "object_repr": "Adjectives: Second Declension_Two-ending",
+        "object_id": "388",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 592
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:55:45.838Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 593
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:56:34.520Z",
+        "object_repr": "Adjectives: First and Second Declension_intro",
+        "object_id": "387",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 594
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-21T14:57:10.339Z",
+        "object_repr": "Adjectives: First and Second Declension_intro",
+        "object_id": "386",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 595
 }
 ]
