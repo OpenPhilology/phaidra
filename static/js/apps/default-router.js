@@ -7,30 +7,11 @@ define(['jquery', 'underscore', 'backbone', 'views/login', 'views/index', 'views
 			"profile/": "profile"
 		},
 		initialize: function() {
-			// javascript function for api logout and redirect
-			$("#logout-link").click(function(e) {
-				e.preventDefault();
-				var data = {
-					"format" : "json"
-				};
-				$.ajax({
-					url: '/api/v1/user/logout/',
-					type: 'GET',
-					data: data,
-					contentType: 'application/json; charset=utf-8', 
-					success: function(response_text) {
-						alert("You are logging out.");
-						window.location.assign("/home/");	
-					},
-					error: function(response_text) {
-						alert(response_text);
-					}
-				});
-			});
+			this.route(/^(.*?)\/login\/(.*?)$/, 'login');
+			this.route(/^(.*?)\/profile\/(.*?)$/, 'profile');
 		},
 		index: function() {
 		},
-
 		// Form handles login page 
 		login: function() {
 			if (!this.login_view) {
