@@ -9,12 +9,13 @@ from django.middleware.csrf import _get_new_csrf_key as get_new_csrf_key
 from django.contrib.auth.hashers import make_password
 
 from tastypie.authentication import (
-    Authentication, ApiKeyAuthentication, BasicAuthentication, 
+    Authentication, BasicAuthentication, SessionAuthentication, 
     MultiAuthentication)
 from tastypie.authorization import Authorization
 from tastypie.resources import ModelResource
 from tastypie import fields
 from tastypie.utils import trailing_slash
+from tastypie.http import HttpUnauthorized
 
 class UserResource(ModelResource):
     raw_password = fields.CharField(attribute=None, readonly=True,
@@ -30,12 +31,12 @@ class UserResource(ModelResource):
 
     class Meta:
         authentication = MultiAuthentication(
-            BasicAuthentication(), ApiKeyAuthentication())
+            BasicAuthentication(), SessionAuthentication())
         serializer = urlencodeSerializer()
         authorization = CustomAuthorization()
         detail_allowed_methods = ['get', 'patch', 'put',]
         always_return_data = True
-        queryset = AppUser.objects.all().select_related('api_key')
+        queryset = AppUser.objects.all()
         excludes = ['is_active', 'is_staff', 'is_superuser', 'date_joined',
                     'last_login', 'password']
 
@@ -94,21 +95,17 @@ class UserResource(ModelResource):
         """
         self.method_check(request, allowed=['post'])
 
-        data = self.deserialize(request, 
-            request.body, 
+        data = self.deserialize(
+            request, 
+            request.body,
             format=request.META.get('CONTENT_TYPE', 'application/json'))
 
         username = data.get('username', '')
         password = data.get('password', '')
 
-        if username == '' or password == '':
-            raise CustomBadRequest(
-                code='missing_key',
-                message=("Username or password missing."))
-
         user = authenticate(username=username, password=password)
 
-        if user:
+        if user is not None:
             if user.is_active:
                 login(request, user)
                 response = self.create_response(request, {
