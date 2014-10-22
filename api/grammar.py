@@ -7,18 +7,12 @@ from app.models import Grammar
 from api.task_context import TaskContextResource
 
 class GrammarResource(ModelResource):
-    content = fields.ForeignKey('api.content.ContentResource', 
-                                'content', 
+    content = fields.ToManyField('api.content.ContentResource', 
+                                'content_set', 
                                 blank=True, 
                                 null=True, 
                                 use_in='detail', 
                                 full=True)
-
-    shallow_content = fields.ForeignKey('api.content.ContentResource', 
-                                'content', 
-                                blank=True, 
-                                null=True, 
-                                use_in='list') 
 
     category = fields.ForeignKey('api.category.CategoryResource', 
                                 'category', 

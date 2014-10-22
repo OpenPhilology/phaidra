@@ -24,7 +24,6 @@ class ContentResource(ModelResource):
 
     grammar_ref = fields.ToOneField(GrammarResource, 
                                     'grammar_ref', 
-                                    related_name='content', 
                                     null=True, 
                                     blank=True)
 

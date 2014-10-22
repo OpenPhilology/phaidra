@@ -1,68 +1,8 @@
 // Here is where we will localize the textbook content (i.e. loading de_content.json)
 
-define(['jquery', 'underscore', 'text!/static/json/smyth.json', 'text!/static/json/en_content.json', 'text!/static/json/en_question_bank.json', 'text!/static/json/en_tasks.json'], function($, _, Smyth, Content, Questions, Tasks) {
+define([], function() {
+
 	var Utils = {};
-
-	/**
-	  * Our static content, used to programmatically generate exercises:
-	  */ 
-	Utils.Smyth = JSON.parse(Smyth);						// Smyth ref to query mapper
-	Utils.Content = JSON.parse(Content);					// Gives us the HTML which corresponds to Smyth, and meta material
-	Utils.Questions = JSON.parse(Questions);				// Statically written questions for non-text questions
-	Utils.Tasks = JSON.parse(Tasks);						// Templates for programmatically generated text-based questions
-
-	/**
-	  * SMYTH HELPER FUNCTIONS
-	  * These functions help with referencing all of our components (lesson content, tasks, and questions) back to
-	  * the source text data. See static/js/json/smyth.json for a clearer idea.
-	  */
-	Utils.Slides = (function() {
-		return _.flatten(_.pluck(_.flatten(_.pluck(Utils.Content, 'modules')), 'slides'));
-	})();
-	Utils.Microlessons = (function() {
-		var smyths = _.compact(_.pluck(Utils.Slides, 'smyth'));
-		return _.uniq(smyths.map(function(s) {
-			return s.split('#')[0];
-		}));
-	})();
-	Utils.getSmyth = function(smyth) {
-		return Utils.Smyth.filter(function(s) {
-			return smyth.split('#')[0] === s.ref.split('#')[0];
-		})[0];
-	};
-	Utils.getRelatedSmyth = function(smyth) {
-		var generalSmyth = smyth.split('#')[0]; 
-
-		return Utils.Smyth.filter(function(s) {
-			return generalSmyth === s.ref.split('#')[0];
-		});
-	};
-	// Get the lesson that contains the microlesson
-	Utils.getLesson = function(smyth) {
-		return Utils.Content.filter(function(lesson) {
-			var smyths = _.pluck(_.flatten(lesson.modules.map(function(m) {
-				return m.slides;
-			})), 'smyth');
-			return smyths.indexOf(smyth.split('#')[0]) !== -1;
-		})[0];
-	};
-	Utils.getThumbnail = function(smyth) {
-		smyth = smyth.split('#')[0];
-
-	};
-
-	Utils.getHTMLbySmyth = function(smyth) {
-		// Get the HTML links that match a Smyth unit
-		if (!smyth) return [];
-		if (typeof(smyth) === "string") smyth = [smyth];
-		smyth = _.pluck(smyth, 'ref');
-		
-		var matches = _.flatten(Utils.Content.map(function(unit) {
-			return _.pluck(unit.modules, 'slides');
-		})).filter(function(slide) { return smyth.indexOf(slide.smyth) !== -1; });
-
-		return matches;
-	};
 
 	Utils.removeQueryParam = function(query, toRemove) {
 		var parts = query.split('&'), adjusted = '';
@@ -192,7 +132,6 @@ define(['jquery', 'underscore', 'text!/static/json/smyth.json', 'text!/static/js
 			el.dispatchEvent(e);
 		}
 	};
-
 
 	return Utils;
 });

@@ -520,34 +520,15 @@ div.module {
     height: 65px; }
   .module:hover {
     text-decoration: none; }
-  .module.nouns {
+  .module.verbs {
     background-color: #1fadad;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
-    .module.nouns:hover {
-      background-color: #23c3c3;
-      -webkit-transition: background-color 0.2s ease-in;
-      -moz-transition: background-color 0.2s ease-in;
-      -o-transition: background-color 0.2s ease-in;
-      -ms-transition: background-color 0.2s ease-in;
-      transition: background-color 0.2s ease-in;
-      box-shadow: 2px 2px 3px #CCC;
-      position: relative;
-      top: -3px; }
-    .module.nouns h3 {
-      color: #FFF; }
-  .module.verbs {
-    background-color: #373e4e;
-    -webkit-transition: background-color 0.2s ease-out;
-    -moz-transition: background-color 0.2s ease-out;
-    -o-transition: background-color 0.2s ease-out;
-    -ms-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out; }
     .module.verbs:hover {
-      background-color: #424a5d;
+      background-color: #23c3c3;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
@@ -558,14 +539,33 @@ div.module {
       top: -3px; }
     .module.verbs h3 {
       color: #FFF; }
-  .module.basics {
+  .module.adjectives {
+    background-color: #373e4e;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module.adjectives:hover {
+      background-color: #424a5d;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+    .module.adjectives h3 {
+      color: #FFF; }
+  .module.foundational {
     background-color: #d15241;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
-    .module.basics:hover {
+    .module.foundational:hover {
       background-color: #d66556;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
@@ -575,16 +575,16 @@ div.module {
       box-shadow: 2px 2px 3px #CCC;
       position: relative;
       top: -3px; }
-    .module.basics h3 {
+    .module.foundational h3 {
       color: #FFF; }
-  .module.foundational {
+  .module.nouns {
     background-color: #f4bc78;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
-    .module.foundational:hover {
+    .module.nouns:hover {
       background-color: #f6c890;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
@@ -594,7 +594,7 @@ div.module {
       box-shadow: 2px 2px 3px #CCC;
       position: relative;
       top: -3px; }
-    .module.foundational h3 {
+    .module.nouns h3 {
       color: #FFF; }
   .module h3 {
     font-size: 12px;

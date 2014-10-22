@@ -31,7 +31,7 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/reader/page.html
 			this.$el.addClass('loading');
 
 			var side;
-			if (dir === 'rtl')
+			if (DIR === 'rtl')
 				side = (side === 'right') ? 'left': 'right';
 
 			this.$el.html(this.template({ 
@@ -65,7 +65,7 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/reader/page.html
 			var ref = this.options.CTS.split(':');
 			var title = this.$el.find('.section');
 
-			if (locale === 'fa')
+			if (LOCALE === 'fa')
 				title.html(Utils.convertToPersian(ref[ref.length - 1]));
 			else
 				title.html(ref[ref.length-1]);
