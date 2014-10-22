@@ -331,6 +331,8 @@ table.inflection-table {
 	}
 }
 .microlesson {
+	height: 100%;
+
 	ul.study-notes-nav {
 		margin-top: 20px;
 		list-style-type: none;
@@ -348,17 +350,27 @@ table.inflection-table {
 	.study-notes {
 		border: 1px solid darken($color-sec-two, 10%);
 		padding: 20px;
-		border-radius: 3px;
 		box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, .1);
 		background-color: $color-sec-two;
+		height: 100%;
+		overflow: scroll;
 	}
 	.left-nav {
+		height: 100%;
 		width: 33%;
 		padding: 0;
 	}
 	.task {
 		position: fixed;
 		left: 33%;
+	}
+
+	table {
+		width: 100%;
+	}
+	tr, td {
+		border-bottom: 1px solid #DDD;
+		padding: 8px;
 	}
 }
 .answer-box {

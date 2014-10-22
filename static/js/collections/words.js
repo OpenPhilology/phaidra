@@ -2,6 +2,7 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'utils'], function($,
 
 	return Backbone.Collection.extend({
 		model: WordModel,
+		url: '/api/v1/word/',
 		initialize: function(models, options) {
 			// Keep track of metadata about the collection
 			if (!this._meta)
@@ -13,9 +14,17 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'utils'], function($,
 				else
 					this._meta[prop] = value;
 			};
+			
+			this.meta('grammar', options.grammar);
+			this.meta('topic', options.topic);
 
-			if (options && options.grammar) 
-				this.meta('grammar', options.grammar);
+			// In lessons, word collection has limited range
+			if (options.topic) {
+				this.url = '/api/v1/word/?' + options.topic.get('query');
+			}
+		},
+		parse: function(response) {
+			return response.objects;
 		},
 		add: function(newWord) {
 			newWord = _.isArray(newWord) ? newWord : [newWord];	
@@ -38,38 +47,6 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'utils'], function($,
 			}.bind(this));
 
 			Backbone.Collection.prototype.add.call(this, newWord);
-		},
-		populateVocab: function(collection) {
-
-			var that = this;
-			var calls = [];
-
-			// First, see if there are queries associated with these smyth units
-			var queries = _.uniq(_.compact(_.pluck(Utils.Smyth.filter(function(s) {
-				return s.ref.split('#')[0] === that.meta('grammar');
-			}), 'query')));
-			queries = queries.length === 0 ? [""] : queries;
-			
-			// If there's no explicit query, then returning any word is fine
-			queries.forEach(function(query, i, arr) {
-				calls.push($.ajax({
-					url: '/api/v1/word?' + query,
-					data: { "limit": 300 },
-					success: function(response) {
-						that.add(response.objects);			
-					},
-					error: function(x, y, z) {
-						console.log(x, y, z);
-					}
-				}));
-			});
-
-			$.when.apply(this, calls).done(triggerPopulated);
-
-			function triggerPopulated() {
-				that.meta('populated', true);
-				that.trigger('populated');
-			}
 		},
 		filterVocabulary: function() {
 			if (this.models.length === 0) return [];
@@ -102,18 +79,8 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'utils'], function($,
 			return candidates;
 		},
 		getNextRandom: function(ref, model) {
-			var candidates = this.models.filter(function(m) {
-				var found = _.pluck(m.getGrammar(), 'ref').indexOf(ref) !== -1;
-				if (model !== undefined) {
-					found = found && model.get('lemma') !== m.get('lemma');
-				}
-				return found;
-			}.bind(this));
-
-			var index = Math.floor((Math.random() * candidates.length) + 1);
-			var next = this.findWhere({ lemma: candidates[index].get('lemma') });
-
-			return next;
+			var index = Math.floor((Math.random() * this.models.length) + 1);
+			return this.at(index);
 		}
 	});
 

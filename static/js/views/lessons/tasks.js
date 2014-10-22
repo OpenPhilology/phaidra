@@ -18,33 +18,53 @@ define(['jquery',
 
 				var that = this;
 				this.options = options;
+				this.topic = options.topic;
 
-				console.log(this.collection);
-
-				/* Instantiate our collection, tell it how to populate vocabulary
-				this.collection = new WordCollection([], { grammar: options.ref });
+				// Instantiate our collection, tell it how to populate vocabulary
+				this.collection = new WordCollection([], { 
+					grammar: options.index,
+					topic: this.topic 
+				});
 				this.collection.on('populated', this.selectNext, this);
 				this.collection.on('change:selected', this.render, this);
-				this.collection.populateVocab();*/ 
+				this.collection.fetch({
+					success: that.selectNext.bind(that),
+					error: function(x, y, z) {
+						console.log("error");
+					}
+				});
 			},
 			render: function() {
-				var tasks = Utils.getLesson(this.options.ref); 
-
 				// TODO: get this in a smart way, not random
-				var tasks = ['translate_word', 'align_phrase', 'build_tree', 'identify_morph', 'provide_article'];
+				var tasks = ['translate_word', 
+					'align_phrase', 
+					'build_tree', 
+					'identify_morph', 
+					'provide_article'];
+
 				var i = Math.floor(Math.random() * (tasks.length - 1));
 				var View = require('views/lessons/tasks/' + tasks[0]);
 
 				// Remove an existing view if needed
 				if (this.task_view) this.task_view.remove();
 
-				this.task_view = new View({ model: this.model, el: '.subtask' , index: this.options.index }).render();
+				this.task_view = new View({ 
+					model: this.model, 
+					index: this.options.index 
+				}).render();
 
-				// Meaning, we couldn't render this type of task with the selected word
+				/* Meaning, we couldn't render this type of task with 
+				 * the selected word -- try the next one.
+				 */
 				if (!this.task_view) this.selectNext();
+				else this.$el.append(this.task_view.el);
+			},
+			initialTrigger: function(collection) {
+				collection.meta('populated', true);
+				collection.trigger('populated');
 			},
 			selectNext: function(e) { 
-				if (e) e.preventDefault();
+				if (e && e.preventDefault) e.preventDefault();
 
 				var next = this.collection.getNextRandom(this.options.ref, this.model);
 				if (this.model) this.model.set({'selected': false}, {silent: true});

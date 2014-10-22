@@ -771,29 +771,38 @@ table.inflection-table {
     color: #d15241;
     font-weight: bold; }
 
-.microlesson ul.study-notes-nav {
-  margin-top: 20px;
-  list-style-type: none;
-  font-size: 12px;
-  position: fixed;
-  left: 33%;
-  line-height: 20px; }
-  .microlesson ul.study-notes-nav a {
+.microlesson {
+  height: 100%; }
+  .microlesson ul.study-notes-nav {
+    margin-top: 20px;
+    list-style-type: none;
+    font-size: 12px;
+    position: fixed;
+    left: 33%;
+    line-height: 20px; }
+    .microlesson ul.study-notes-nav a {
+      padding: 20px;
+      border-radius: 3px;
+      margin-bottom: 2px; }
+  .microlesson .study-notes {
+    border: 1px solid #222630;
     padding: 20px;
-    border-radius: 3px;
-    margin-bottom: 2px; }
-.microlesson .study-notes {
-  border: 1px solid #222630;
-  padding: 20px;
-  border-radius: 3px;
-  box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, 0.1);
-  background-color: #373e4e; }
-.microlesson .left-nav {
-  width: 33%;
-  padding: 0; }
-.microlesson .task {
-  position: fixed;
-  left: 33%; }
+    box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, 0.1);
+    background-color: #373e4e;
+    height: 100%;
+    overflow: scroll; }
+  .microlesson .left-nav {
+    height: 100%;
+    width: 33%;
+    padding: 0; }
+  .microlesson .task {
+    position: fixed;
+    left: 33%; }
+  .microlesson table {
+    width: 100%; }
+  .microlesson tr, .microlesson td {
+    border-bottom: 1px solid #DDD;
+    padding: 8px; }
 
 .answer-box {
   background-color: #f4f9f5;

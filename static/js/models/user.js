@@ -3,7 +3,7 @@ define(['jquery', 'underscore', 'backbone', 'utils'], function($, _, Backbone, U
 		defaults: {
 			'modelName': 'user',
 		},
-		url: '/api/v1/user/',
+		urlRoot: '/api/v1/user/',
 		parse: function(response) {
 			this.set(response);
 		}

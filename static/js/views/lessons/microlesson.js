@@ -80,12 +80,14 @@ define(['jquery',
 				if (!this.tasks) {
 					this.tasks_view = new TasksView({ 
 						el: this.$el.find('.task'), 
-						index: this.options.index 
+						index: this.options.index,
+						topic: this.model
 					}); 
 				}
 				else if (this.tasks_view && this.tasks_view.options.index !== this.options.index) {
 					this.tasks_view.initialize({ 
-						index: this.options.index 
+						index: this.options.index,
+						topic: this.model
 					});
 				}
 			},
