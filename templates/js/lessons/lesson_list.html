@@ -1,7 +1,7 @@
 <% _.each(topics, function(topic) { %>
 	<div class="col-md-3 col-sm4">
-		<a href="/<%= LOCALE %>/lessons/<%= topic.get('id') %>" class="module <%= topic.get('category').name %>">
-			<img src="">
+		<a href="/<%= LOCALE %>/lessons/<%= topic.get('id') %>" class="module <%= topic.get('category').name.toLowerCase() %>">
+			<img src="/static/images/<%= topic.get('category').graphic %>">
 			<div>
 				<h3><%= topic.get('title') %></h3>
 			</div>
