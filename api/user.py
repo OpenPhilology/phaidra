@@ -37,7 +37,7 @@ class UserResource(ModelResource):
         detail_allowed_methods = ['get', 'patch', 'put',]
         always_return_data = True
         queryset = AppUser.objects.all()
-        excludes = ['is_active', 'is_staff', 'is_superuser', 'date_joined',
+        excludes = ['is_active', 'is_staff', 'date_joined',
                     'last_login', 'password']
 
     def prepend_urls(self):
