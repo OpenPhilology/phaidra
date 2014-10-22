@@ -59,15 +59,16 @@ class UserResource(ModelResource):
         return super(UserResource, self).get_detail(request, **kwargs)
 
     def obj_update(self, bundle, request=None, **kwargs):
+        bundle = super(UserResource, self).obj_update(bundle, **kwargs)
         field_to_update=[]
         for field_name in self.fields:
             field = self.fields[field_name]
-            if field.null and (field_name in request.POST):
-                if request.POST[field_name] is u'':
+            if field.null and (field_name in request.PATCH):
+                if request.PATCH[field_name] is u'':
                     setattr(bundle.obj, field_name, None)
                     field_to_update.append(field_name)
         bundle.obj.save(update_fields=field_to_update)
-        return super(UserResource, self).obj_update(bundle, **kwargs)
+        return bundle
 
     def hydrate(self, bundle):
         try:
