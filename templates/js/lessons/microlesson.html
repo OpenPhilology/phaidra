@@ -28,6 +28,7 @@
 			<div data-source="grammar" class="row note" style="display: block">
 				<div class="panel-group" id="topic-panel">
 					<!-- The primary content -->
+					<% content = content[0] %>
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
@@ -36,7 +37,7 @@
 								</a>
 							</h4>
 						</div>
-						<div id="collapse-<%= content.id %>" class="panel-collapse collapse">
+						<div id="collapse-<%= content.id %>" class="panel-collapse">
 							<%= content.content %>
 						</div>
 					</div>

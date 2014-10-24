@@ -58,16 +58,16 @@ div.module {
 		}
 	}
 
-	&.nouns {
+	&.verbs {
 		@include tile($color-pri-two);
 	}
-	&.verbs {
+	&.adjectives {
 		@include tile($color-sec-two);
 	}
-	&.basics {
+	&.foundational {
 		@include tile($color-pri-one);
 	}
-	&.foundational {
+	&.nouns {
 		@include tile($color-sec-four);
 	}
 
