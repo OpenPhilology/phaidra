@@ -9,12 +9,30 @@ from xml.dom import minidom
 # To adapt this, use alignNode.childNodes[1] and alignNode.childNodes[3] and 
 # ANY_NODE.attributes['ANY_ATTRIBUTE_NAME'].value
 
-xml_file = "tlg0003.tlg001.perseus-eng.xml"
-document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-en"
+xml_file = "tlg0003.tlg001.perseus-fas.xml"
+#xml_file = "tlg0003.tlg001.perseus-eng.xml"
+
+# please use the two-character encoding for the target language's document CTS
+document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-fa"
+#document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-hr"
+#document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-en"
+
+# please use the three-character encoding for the source language's document CTS
 document_CTS_greek = "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
-target_lang = "en"
-author_in_target_lang = "Thucydides"
-work_in_taget_lang = "The Pentekontaetia"
+
+# please use the two-character encoding for your target language
+target_lang = "fa"
+#target_lang = "hr"
+#target_lang = "en"
+
+author_in_target_lang = "توسیدید"
+#author_in_target_lang = "Tukidid"
+#author_in_target_lang = "Thucydides"
+
+work_in_target_lang = "تاریخ پنجاه سال گذشته"
+#work_in_target_lang = "Povijest Peloponeskograta"
+#work_in_target_lang = "The Pentekontaetia"
+
 host = "http://localhost:7474/db/data/"
 
 ################################################################
@@ -23,7 +41,7 @@ host = "http://localhost:7474/db/data/"
 gdb = GraphDatabase(host)
 
 # create the document node at the very beginning
-d = gdb.nodes.create(CTS=document_CTS, author=author_in_target_lang, name=work_in_taget_lang, lang=target_lang)
+d = gdb.nodes.create(CTS=document_CTS, author=author_in_target_lang, name=work_in_target_lang, lang=target_lang)
 d.labels.add("Document") 
 
 # xml parser instance
@@ -73,8 +91,8 @@ for sent in alignNode.childNodes:
 							 	table = gdb.query("""MATCH (w) WHERE w.CTS='""" + document_CTS_greek + ":" + ref + """' RETURN w""")
 							 	greek_word = gdb.nodes.get(table[0][0]['self'])
 							 	greek_word.translation(w)
-							 	print "1) engl: " + str(w.id)
-							 	print "2) greek: " + str(greek_word.id)
+							 	print "1) Target lang.: " + str(w.id)
+							 	print "2) Greek: " + str(greek_word.id) + " Ref.: " + ref
 							 	
 		
 		# finish the translated sentence
@@ -109,7 +127,7 @@ for sent in alignNode.childNodes:
 							 	w = gdb.nodes.get(table[0][0]['self'])
 							 	w.translation(greek_word)
 							 	print "1) greek: " + str(greek_word.id)
-							 	print "2) engl: " + str(w.id)
+							 	print "2) target lang.: " + str(w.id) + " Ref.: " + ref
 				
 					
 	counter = counter +1

@@ -1,8 +1,13 @@
+# coding: utf8
 from neo4jrestclient.client import GraphDatabase
 import json
 
 ################ set your dump's meta data #####################
 
+#document_CTS_greek = "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
+#author_in_source_lang = "Θουκυδίδης"
+#work_in_source_lang = "Πεντηκονταετία"
+#target_lang = "grc"
 dump_file = "pentecontaetia_dump.json"
 host = "http://localhost:7474/db/data/"
 
