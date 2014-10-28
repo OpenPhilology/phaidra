@@ -158,7 +158,7 @@ class SentenceResource(Resource):
             sent = rs[0]
             url = sent['self'].split('/')
             for lang in CTS_LANG:
-                if sent['data']['CTS'].find(lang) != -1:
+                if sent['data']['CTS'].find("-"+lang+":") != -1:
                     new_obj.__dict__['_data']['translations'][lang] = API_PATH + 'sentence/' + url[len(url)-1] +'/'        
         
         # get the words    and related information    
