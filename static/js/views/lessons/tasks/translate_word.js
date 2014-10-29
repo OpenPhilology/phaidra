@@ -2,6 +2,8 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'collections/words', 
 
 	var View = Backbone.View.extend({
 		template: _.template(Template),
+		tagName: 'div',
+		className: 'subtask',
 		initialize: function(options) {
 			this.options = options;
 		},

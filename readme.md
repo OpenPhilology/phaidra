@@ -77,6 +77,9 @@ Install Frontend Requirements
 Make sure you have [Node](http://nodejs.org/) installed. 
 
 ```
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install make nodejs
 npm install
 ln -s node_modules static/js/node_modules
 bower install

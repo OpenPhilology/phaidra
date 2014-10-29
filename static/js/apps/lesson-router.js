@@ -5,10 +5,11 @@
 define(['jquery', 
 	'underscore', 
 	'backbone', 
+	'models/user',
 	'collections/topics', 
 	'views/lessons/lessons', 
 	'views/lessons/microlesson'], 
-	function($, _, Backbone, TopicsCollection, LessonListView, MicrolessonView) { 
+	function($, _, Backbone, UserModel, TopicsCollection, LessonListView, MicrolessonView) { 
 
 		return Backbone.Router.extend({
 			initialize: function(options) {
@@ -17,12 +18,17 @@ define(['jquery',
 
 				// Topics Collection used by both Lesson and Microlesson Views
 				this.topicsCollection = new TopicsCollection();
+				this.user = new UserModel();
 			},
 			showLessons: function(lang) {
 				this.hideMicrolesson();
 
 				if (!this.lessonListView) {
-					this.lessonListView = new LessonListView({ collection: this.topicsCollection, router: this }).render();
+					this.lessonListView = new LessonListView({ 
+						collection: this.topicsCollection, 
+						user: this.user,
+						router: this
+					}).render();
 					$('#main .module-container').append(this.lessonListView.el);
 				}
 				else {
@@ -38,7 +44,12 @@ define(['jquery',
 				var id = parseInt(index);
 
 				if (!this.microlessonView)
-					this.microlessonView = new MicrolessonView({ el: '#main', index: id, collection: this.topicsCollection });
+					this.microlessonView = new MicrolessonView({ 
+						el: '#main', 
+						collection: this.topicsCollection, 
+						index: id, 
+						user: this.user
+					});
 				if (this.microlessonView.options.index !== id) {
 					this.microlessonView.initialize({ index: id });
 				}

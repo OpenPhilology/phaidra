@@ -1,0 +1,38 @@
+{
+  "name": "phaidra",
+  "version": "0.0.1",
+  "homepage": "https://github.com/OpenPhilology/phaidra",
+  "authors": [
+    "Monica Lent <lent.monica@gmail.com>"
+  ],
+  "description": "Historical Languages eLearning Project",
+  "main": "static/js/main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "ancient",
+    "greek",
+    "elearning"
+  ],
+  "license": "BSD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "d3": "~3.4.13",
+    "jquery": "~2.1.1",
+    "requirejs": "~2.1.15",
+    "underscore": "~1.7.0",
+    "bootstrap": "~3.2.0",
+    "jquery-ui": "~1.11.2",
+    "json2": "*",
+    "requirejs-text": "~2.0.12"
+  }
+}

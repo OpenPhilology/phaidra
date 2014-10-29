@@ -1,17 +1,18 @@
 requirejs.config({
 	'baseUrl': '/static/js',
 	'paths': {
-		// Lib paths
-		'jquery': 'lib/jquery-2.1.1',
-		'bootstrap': '../bootstrap/js/bootstrap.min',
-		'json2': 'lib/json2',
-		'underscore': 'lib/underscore',
-		'backbone': 'lib/backbone',
-		'd3': 'lib/d3.v3.min',
-		'jquery-ui': 'lib/jquery-ui-draggable',
-		'jquery-ui-core': 'lib/jquery-ui-core',
-		'jquery-ui-slide': 'lib/jquery-ui-effects-slide',
-		'text': 'lib/text',
+		// Packages installed by Bower
+		'backbone': 'components/backbone/backbone',
+		'bootstrap': 'components/bootstrap/dist/js/bootstrap',
+		'd3': 'components/d3/d3',
+		'jquery': 'components/jquery/dist/jquery',
+		'jquery-ui-core': 'components/jquery-ui/ui/core',
+		'underscore': 'components/underscore/underscore',
+		'jquery-ui-slide': 'components/jquery-ui/ui/effect-slide',
+		'json2': 'components/json2/json2',
+		'text': 'components/requirejs-text/text',
+
+		// Included as git submodules
 		'daphne': 'lib/daphnejs/src/daphne',
 		'morea': 'lib/moreajs/src/morea'
 	},
@@ -37,9 +38,6 @@ requirejs.config({
 			'deps': ['d3']
 		},
 		'jquery-ui-core': {
-			'deps': ['jquery']
-		},
-		'jquery-ui': {
 			'deps': ['jquery']
 		},
 		'jquery-ui-slide': {
