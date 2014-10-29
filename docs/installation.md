@@ -25,6 +25,7 @@ sudo apt-get update
 sudo apt-get install python-software-properties python python-virtualenv
 cd /opt/phaidra
 virtualenv --no-site-packages env
+source env/bin/activate
 pip install -r requirements.txt
 fab install
 ```
