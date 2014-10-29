@@ -14,13 +14,12 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'phaidra',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'phaidra',                      
         'USER': 'postgres',
         'PASSWORD': 'phaidra',
-        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'HOST': '127.0.0.1',                      
+        'PORT': '',                      
     }
 }
 
@@ -96,11 +95,14 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-        '/opt/phaidra/static/',
+    # '/opt/phaidra/static/',
 )
 
 # Ignore files and folders that match these
-COLLECT_STATIC_IGNORE = ['admin', 'js', 'json', 'css', 'content', 'images', 'data', 'bootstrap', 'audio']
+COLLECT_STATIC_IGNORE = [
+    'admin', 
+    'collected'
+]
 
 # List of finder classes that know how to find static files in
 # various locations.

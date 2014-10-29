@@ -8,3 +8,4 @@ node_modules/*
 *.*~
 static/collected
 static/js/components
+*.bak
