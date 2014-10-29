@@ -177,7 +177,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-10-22T09:00:48.983Z",
+        "last_login": "2014-10-29T11:10:58.048Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$mjylIxJjSuP8$hXlaTs4LJGg8TDaOgueySvUCzigoGyiWFEMPIG/0dso=",
@@ -1434,8 +1434,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _It's the advent of the adverb!_ Thucydides _(ca 460 - 395 BC)_\n\n# Adjectives: Third Declension\n\n* * *\n\nNow is a good time to learn everything about **Greek Adverbs**!\n\n* * *\n\n## In this Section\n\nNew Skills New Vocab The Athenians conquer Sicyon, but lose in Thessaly and\nAcarnia.\n\n  1. Identify adverbs.\n\n",
+        "title": "Startpage: Adjectives: Third Declension",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _It's the advent of the adverb!_ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Adjectives: Third Declension\r\n\r\n* * *\r\n\r\nNow is a good time to learn everything about **Greek Adverbs**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab The Athenians conquer Sicyon, but lose in Thessaly and\r\nAcarnia.\r\n\r\n  1. Identify adverbs.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1446,8 +1446,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "###\n\n![](/static/images/map.jpg)\n\nThe Athenians win Sicyon and lose Acarnia.\n\n## ...previously in the Pentecontaetia\n\nThe Athenians were forced to leave Egypt after six years of war.\n\n## Now in the Pentecontaetia...\n\nOrestes, son of the Thessalian king, wants to be restored as master of\nThessaly. To this end, he persuades the Athenians to march on Thessaly and\nbend the inhabitants to their will. However, the Athenians fail and Orestes is\nnot restored!\n\nUnder the command of Pericles, the Athenians now land on Sicyon and conquer\nit. They fail, however, to win over Acarnia.\n\n(Summary of Thuc. 1.111)\n\nNow that you've got some context, let's look at adverbs!  \n  \n**Click the arrow to start learning!**\n\n",
+        "title": "History: Penteconteatia  1.111",
+        "content": "###\r\n\r\n![](/static/images/map.jpg)\r\n\r\nThe Athenians win Sicyon and lose Acarnia.\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThe Athenians were forced to leave Egypt after six years of war.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nOrestes, son of the Thessalian king, wants to be restored as master of\r\nThessaly. To this end, he persuades the Athenians to march on Thessaly and\r\nbend the inhabitants to their will. However, the Athenians fail and Orestes is\r\nnot restored!\r\n\r\nUnder the command of Pericles, the Athenians now land on Sicyon and conquer\r\nit. They fail, however, to win over Acarnia.\r\n\r\n(Summary of Thuc. 1.111)\r\n\r\nNow that you've got some context, let's look at adverbs!  \r\n  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1458,8 +1458,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "#### Adverbs\n\nThere is another kind of adverb formed by the **accusative neuter (singular or\nplural) of adjectives**. Take a look at some examples below.\n\nAdjective | Adverb  \n---|---  \n\u1f40\u03be\u03cd\u03c2 (acute) | **\u1f40\u03be\u03cd** (acutely)  \n\u03c0\u03bf\u03bb\u03cd\u03c2 (much) | **\u03c0\u03bf\u03bb\u03cd/\u03c0\u03bf\u03bb\u03bb\u03ac** (much)  \n\u03bc\u03ad\u03b3\u03b1\u03c2 (big) | **\u03bc\u03ad\u03b3\u03b1/\u03bc\u03b5\u03b3\u03ac\u03bb\u03b1** (largely)  \n  \nDon't leave yet! There is one last type of adverb formed with the **accusative\nand dative of feminine adjectives or nouns**. Take a look at some examples\nbelow.\n\nNoun/Adjective | Adverb  \n---|---  \n\u1f21 \u03c7\u03ac\u03c1\u03b9\u03c2 (the grace) | **\u03c7\u03ac\u03c1\u03b9\u03bd** (thanks to)  \n\u03c4\u1f78 \u03c4\u03ad\u03bb\u03bf\u03c2 (the end) | **\u03c4\u03ad\u03bb\u03bf\u03c2** (finally)  \n\u1f21 \u1f00\u03c1\u03c7\u03ae (the beginning) | **\u1f00\u03c1\u03c7\u03ae\u03bd** (initially)  \n\u1f34\u03b4\u03b9\u03bf\u03c2 (private) | **\u1f30\u03b4\u03af\u1fb3** (privately)  \n\u03b4\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf\u03c2 (public) | **\u03b4\u03b5\u03bc\u03bf\u03c3\u03af\u1fb3** (publicly)  \n\u03c0\u03b5\u03b6\u03cc\u03c2 (walking) | **\u03c0\u03b5\u03b6\u1fc7** (on foot)\n\n",
+        "title": "Adverbs: Adverbs in accusative",
+        "content": "#### Adverbs\r\n\r\nThere is another kind of adverb formed by the **accusative neuter (singular or\r\nplural) of adjectives**. Take a look at some examples below.\r\n\r\nAdjective | Adverb  \r\n---|---  \r\n\u1f40\u03be\u03cd\u03c2 (acute) | **\u1f40\u03be\u03cd** (acutely)  \r\n\u03c0\u03bf\u03bb\u03cd\u03c2 (much) | **\u03c0\u03bf\u03bb\u03cd/\u03c0\u03bf\u03bb\u03bb\u03ac** (much)  \r\n\u03bc\u03ad\u03b3\u03b1\u03c2 (big) | **\u03bc\u03ad\u03b3\u03b1/\u03bc\u03b5\u03b3\u03ac\u03bb\u03b1** (largely)  \r\n  \r\nDon't leave yet! There is one last type of adverb formed with the **accusative\r\nand dative of feminine adjectives or nouns**. Take a look at some examples\r\nbelow.\r\n\r\nNoun/Adjective | Adverb  \r\n---|---  \r\n\u1f21 \u03c7\u03ac\u03c1\u03b9\u03c2 (the grace) | **\u03c7\u03ac\u03c1\u03b9\u03bd** (thanks to)  \r\n\u03c4\u1f78 \u03c4\u03ad\u03bb\u03bf\u03c2 (the end) | **\u03c4\u03ad\u03bb\u03bf\u03c2** (finally)  \r\n\u1f21 \u1f00\u03c1\u03c7\u03ae (the beginning) | **\u1f00\u03c1\u03c7\u03ae\u03bd** (initially)  \r\n\u1f34\u03b4\u03b9\u03bf\u03c2 (private) | **\u1f30\u03b4\u03af\u1fb3** (privately)  \r\n\u03b4\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf\u03c2 (public) | **\u03b4\u03b5\u03bc\u03bf\u03c3\u03af\u1fb3** (publicly)  \r\n\u03c0\u03b5\u03b6\u03cc\u03c2 (walking) | **\u03c0\u03b5\u03b6\u1fc7** (on foot)\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1470,8 +1470,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "#### Adverbs\n\nAnother kind of adverb ends in -**\u03c9**. These derive from prepositions. Take a\nlook at some examples below.\n\nPreposition | Adverb  \n---|---  \n\u1f00\u03bd\u03ac (up) | **\u1f04\u03bd\u03c9** (on top)  \n\u03ba\u03b1\u03c4\u03ac (down) | **\u03ba\u03ac\u03c4\u03c9** (underneath)  \n\u03b5\u1f30\u03c2 (towards) | **\u03b5\u1f34\u03c3\u03c9** (inside)  \n\u1f10\u03ba/\u1f10\u03be (from) | **\u1f14\u03be\u03c9** (outside)\n\n",
+        "title": "Adverbs: Adverbs in O",
+        "content": "#### Adverbs\r\n\r\nAnother kind of adverb ends in -**\u03c9**. These derive from prepositions. Take a\r\nlook at some examples below.\r\n\r\nPreposition | Adverb  \r\n---|---  \r\n\u1f00\u03bd\u03ac (up) | **\u1f04\u03bd\u03c9** (on top)  \r\n\u03ba\u03b1\u03c4\u03ac (down) | **\u03ba\u03ac\u03c4\u03c9** (underneath)  \r\n\u03b5\u1f30\u03c2 (towards) | **\u03b5\u1f34\u03c3\u03c9** (inside)  \r\n\u1f10\u03ba/\u1f10\u03be (from) | **\u1f14\u03be\u03c9** (outside)\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1482,8 +1482,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Mu\n\n![](/static/images/alphabet/mu.svg)\n\n## \u039c \u03bc\n\n**Say it like** the \"m\" in _m_inotaur.   **IPA** /m/ \n\nYour browser does not support the audio element.\n\n* * *\n\nMu makes the same sound in \u03bc\u1fe6\u03b8\u03bf\u03c2 (m\u00fbthos), meaning \"report\", \"tale\", or\n\"story\".  \nThink of _myth_, _mythology_.\n\n",
+        "title": "Alphabet: Mu",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Mu\r\n\r\n![](/static/images/alphabet/mu.svg)\r\n\r\n## \u039c \u03bc\r\n\r\n**Say it like** the \"m\" in _m_inotaur.   **IPA** /m/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nMu makes the same sound in \u03bc\u1fe6\u03b8\u03bf\u03c2 (m\u00fbthos), meaning \"report\", \"tale\", or\r\n\"story\".  \r\nThink of _myth_, _mythology_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1494,8 +1494,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Alpha\n\n![](/static/images/alphabet/alpha.svg)\n\n## \u0391 \u03b1\n\n**Say it like** the \"a\" in _a_rachnid.   **IPA** /a/ \n\nYour browser does not support the audio element.\n\n* * *\n\nAlpha makes the same sound in \u1f00\u03c1\u03ac\u03c7\u03bd\u03b7 (arakhn\u0113), meaning \"spider.\"  \nThink of _arachnid_, _arachnophobia_.\n\n",
+        "title": "Alphabet: Alpha",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Alpha\r\n\r\n![](/static/images/alphabet/alpha.svg)\r\n\r\n## \u0391 \u03b1\r\n\r\n**Say it like** the \"a\" in _a_rachnid.   **IPA** /a/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nAlpha makes the same sound in \u1f00\u03c1\u03ac\u03c7\u03bd\u03b7 (arakhn\u0113), meaning \"spider.\"  \r\nThink of _arachnid_, _arachnophobia_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1506,8 +1506,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Sigma\n\n![](/static/images/alphabet/sigma.svg)\n\n## \u03a3 \u03c3/\u03c2\n\n**Say it like** the \"s\" in _s_alamander.   **IPA** /s/ \n\nYour browser does not support the audio element.\n\n* * *\n\nSigma makes the same sound in \u03c3\u03b1\u1fe6\u03c1\u03bf\u03c2 (sauros), meaning \"lizard.\"  \nThink of _dinosaur_, _stegosaurus_, _tyrannosaurus_.\n\n",
+        "title": "Alphabet: Sigma",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Sigma\r\n\r\n![](/static/images/alphabet/sigma.svg)\r\n\r\n## \u03a3 \u03c3/\u03c2\r\n\r\n**Say it like** the \"s\" in _s_alamander.   **IPA** /s/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nSigma makes the same sound in \u03c3\u03b1\u1fe6\u03c1\u03bf\u03c2 (sauros), meaning \"lizard.\"  \r\nThink of _dinosaur_, _stegosaurus_, _tyrannosaurus_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1518,8 +1518,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Eta\n\n![](/static/images/alphabet/eta.svg)\n\n## \u0397 \u03b7\n\n**Say it like** the \"e\" in _e_cho   **IPA** /\u025b\u02d0/ \n\nYour browser does not support the audio element.\n\n* * *\n\nEta is pronounced the same in \u1f26\u03c7\u03bf\u03c2 (\u00e9chos), meaning \"sound\".  \nThink of _echo_, _echolocation_, and _Echo_ (the forest nymph punished by Hera\nto repeat only what other people said).\n\n",
+        "title": "Alphabet: Eta",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Eta\r\n\r\n![](/static/images/alphabet/eta.svg)\r\n\r\n## \u0397 \u03b7\r\n\r\n**Say it like** the \"e\" in _e_cho   **IPA** /\u025b\u02d0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nEta is pronounced the same in \u1f26\u03c7\u03bf\u03c2 (\u00e9chos), meaning \"sound\".  \r\nThink of _echo_, _echolocation_, and _Echo_ (the forest nymph punished by Hera\r\nto repeat only what other people said).\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1530,8 +1530,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Iota\n\n![](/static/images/alphabet/iota.svg)\n\n## \u0399 \u03b9\n\n**Say it like** the \"ea\" in _ea_r  \n**IPA** /i/ \n\nYour browser does not support the audio element.\n\n* * *\n\nIota makes the same sound in \u1f30\u03c7\u03b8\u03cd\u03c2 (ikhth\u00fas), meaning \"fish.\"  \nThink of _ichthyology_, the study of fish.\n\n",
+        "title": "Alphabet: Iota",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Iota\r\n\r\n![](/static/images/alphabet/iota.svg)\r\n\r\n## \u0399 \u03b9\r\n\r\n**Say it like** the \"ea\" in _ea_r  \r\n**IPA** /i/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nIota makes the same sound in \u1f30\u03c7\u03b8\u03cd\u03c2 (ikhth\u00fas), meaning \"fish.\"  \r\nThink of _ichthyology_, the study of fish.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1542,8 +1542,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Chi\n\n![](/static/images/alphabet/chi.svg)\n\n## \u03a7 \u03c7\n\n**Say it like** the \"ch\" in _ch_oreography.   **IPA** /kh/ \n\nYour browser does not support the audio element.\n\n* * *\n\nChi makes the same sound in \u03c7\u03bf\u03c1\u03b5\u03af\u03b1 (khoreia) and \u03c7\u03bf\u03c1\u03cc\u03c2 (khoros), both meaning\n\"dance\"  \nThink of _choir_, _chorus_, _choreography_.\n\n",
+        "title": "Alphabet: Chi",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Chi\r\n\r\n![](/static/images/alphabet/chi.svg)\r\n\r\n## \u03a7 \u03c7\r\n\r\n**Say it like** the \"ch\" in _ch_oreography.   **IPA** /kh/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nChi makes the same sound in \u03c7\u03bf\u03c1\u03b5\u03af\u03b1 (khoreia) and \u03c7\u03bf\u03c1\u03cc\u03c2 (khoros), both meaning\r\n\"dance\"  \r\nThink of _choir_, _chorus_, _choreography_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1554,8 +1554,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Delta\n\n![](/static/images/alphabet/delta.svg)\n\n## \u0394 \u03b4\n\n**Say it like** the \"d\" in _d_ata.   **IPA** /d/ \n\nYour browser does not support the audio element.\n\n* * *\n\nDelta makes the same sound in \u03b4\u03ad\u03bd\u03b4\u03c1\u03bf\u03bd (d\u00e9ndron), meaning \"tree\".  \nThink of _dendrochronoloy_ (study of tree rings) or _Rhododendron_ (flower\nwhose name means 'rose tree').\n\n",
+        "title": "Alphabet: Delta",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Delta\r\n\r\n![](/static/images/alphabet/delta.svg)\r\n\r\n## \u0394 \u03b4\r\n\r\n**Say it like** the \"d\" in _d_ata.   **IPA** /d/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nDelta makes the same sound in \u03b4\u03ad\u03bd\u03b4\u03c1\u03bf\u03bd (d\u00e9ndron), meaning \"tree\".  \r\nThink of _dendrochronoloy_ (study of tree rings) or _Rhododendron_ (flower\r\nwhose name means 'rose tree').\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1566,8 +1566,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Kappa\n\n![](/static/images/alphabet/kappa.svg)\n\n## \u039a \u03ba\n\n**Say it like** the \"k\" in bi_k_e.   **IPA** /k/ \n\nYour browser does not support the audio element.\n\n* * *\n\nKappa makes the same sound in \u03ba\u03cd\u03ba\u03bb\u03bf\u03c2 (k\u00faklos), meaning \"circle, ring.\"  \nThink of _cyclone_, _bicycle_, _encyclopedia_ (literally, circle + education).\n\n",
+        "title": "Alphabet: Kappa",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Kappa\r\n\r\n![](/static/images/alphabet/kappa.svg)\r\n\r\n## \u039a \u03ba\r\n\r\n**Say it like** the \"k\" in bi_k_e.   **IPA** /k/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nKappa makes the same sound in \u03ba\u03cd\u03ba\u03bb\u03bf\u03c2 (k\u00faklos), meaning \"circle, ring.\"  \r\nThink of _cyclone_, _bicycle_, _encyclopedia_ (literally, circle + education).\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1578,8 +1578,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Nu\n\n![](/static/images/alphabet/nu.svg)\n\n## \u039d \u03bd\n\n**Say it like** the \"n\" in _n_autical.   **IPA** /n/ \n\nYour browser does not support the audio element.\n\n* * *\n\nNu makes the same sound in \u03bd\u03b1\u1fe6\u03c2 (na\u00fbs), meaning \"ship\" and \u03bd\u03b1\u03c5\u03c4\u03b9\u03ba\u03cc\u03c2\n(nautik\u00f3s), meaning \"sailor\" or \"seafaring\".  \nThink of _naval_, _astronaut_.\n\n",
+        "title": "Alphabet: Nu",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Nu\r\n\r\n![](/static/images/alphabet/nu.svg)\r\n\r\n## \u039d \u03bd\r\n\r\n**Say it like** the \"n\" in _n_autical.   **IPA** /n/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nNu makes the same sound in \u03bd\u03b1\u1fe6\u03c2 (na\u00fbs), meaning \"ship\" and \u03bd\u03b1\u03c5\u03c4\u03b9\u03ba\u03cc\u03c2\r\n(nautik\u00f3s), meaning \"sailor\" or \"seafaring\".  \r\nThink of _naval_, _astronaut_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1590,8 +1590,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Zeta\n\n![](/static/images/alphabet/zeta.svg)\n\n## \u0396 \u03b6\n\n**Say it like** the \"s\" in wi_s_e &nsbp; **IPA** /z/ \n\nYour browser does not support the audio element.\n\n* * *\n\nFor example, \u03b6\u1ff7\u03bf\u03bd (z\u014don), meaning \"animal\".  \nThink of _zoo_, _zoology_, _protozoa_ (literally, first + animal).\n\n",
+        "title": "Alphabet: Zeta",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Zeta\r\n\r\n![](/static/images/alphabet/zeta.svg)\r\n\r\n## \u0396 \u03b6\r\n\r\n**Say it like** the \"s\" in wi_s_e &nsbp; **IPA** /z/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nFor example, \u03b6\u1ff7\u03bf\u03bd (z\u014don), meaning \"animal\".  \r\nThink of _zoo_, _zoology_, _protozoa_ (literally, first + animal).\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1602,8 +1602,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Beta\n\n![](/static/images/alphabet/beta.svg)\n\n## \u0392 \u03b2\n\n**Say it like** the \"b\" in _b_ook.   **IPA** /b/ \n\nYour browser does not support the audio element.\n\n* * *\n\nBeta makes the same sound in \u03b2\u03af\u03b2\u03bb\u03bf\u03c2 (b\u00edblos), meaning \"book.\"  \nThink of _bibliography_, _Bible_.\n\n",
+        "title": "Alphabet: Beta",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Beta\r\n\r\n![](/static/images/alphabet/beta.svg)\r\n\r\n## \u0392 \u03b2\r\n\r\n**Say it like** the \"b\" in _b_ook.   **IPA** /b/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nBeta makes the same sound in \u03b2\u03af\u03b2\u03bb\u03bf\u03c2 (b\u00edblos), meaning \"book.\"  \r\nThink of _bibliography_, _Bible_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1614,8 +1614,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Xi\n\n![](/static/images/alphabet/xi.svg)\n\n## \u039e \u03be\n\n**Say it like** the \"ks\" in ca_kes_.   **IPA** /ks/ \n\nYour browser does not support the audio element.\n\n* * *\n\nXi makes the same sound in \u03be\u03ad\u03bd\u03bf\u03c2 (ks\u00e9nos), meaning \"guest\" or \"stranger\".  \nThink of _xenophobia_ (literally, fear of strangers or foreigners), _xenon_\n(chemical element).\n\n",
+        "title": "Alphabet: Xi",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Xi\r\n\r\n![](/static/images/alphabet/xi.svg)\r\n\r\n## \u039e \u03be\r\n\r\n**Say it like** the \"ks\" in ca_kes_.   **IPA** /ks/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nXi makes the same sound in \u03be\u03ad\u03bd\u03bf\u03c2 (ks\u00e9nos), meaning \"guest\" or \"stranger\".  \r\nThink of _xenophobia_ (literally, fear of strangers or foreigners), _xenon_\r\n(chemical element).\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1626,8 +1626,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Omega\n\n![](/static/images/alphabet/omega.svg)\n\n## \u03a9 \u03c9\n\n**Say it like** the \"o\" in h_o_roscope.   **IPA** /\u0254\u02d0/ \n\nYour browser does not support the audio element.\n\n* * *\n\nOmega makes the same sound in \u1f65\u03c1\u03b1 (h\u1e53ra), meaning \"season, hour.\"  \nThink of _horology_ (the art or science of measuring time), _horoscope_.\n\n",
+        "title": "Alphabet: Omega",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Omega\r\n\r\n![](/static/images/alphabet/omega.svg)\r\n\r\n## \u03a9 \u03c9\r\n\r\n**Say it like** the \"o\" in h_o_roscope.   **IPA** /\u0254\u02d0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nOmega makes the same sound in \u1f65\u03c1\u03b1 (h\u1e53ra), meaning \"season, hour.\"  \r\nThink of _horology_ (the art or science of measuring time), _horoscope_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1638,8 +1638,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Lambda\n\n![](/static/images/alphabet/lambda.svg)\n\n## \u039b \u03bb\n\n**Say it like** the \"l\" in _l_ithography.   **IPA** /l/ \n\nYour browser does not support the audio element.\n\n* * *\n\nLambda makes the same sound in \u03bb\u03af\u03b8\u03bf\u03c2 (l\u00edthos), meaning \"stone\".  \nThink of _neolithic_ (literally, new + stones), _lithology_ (study of rock\nformation).\n\n",
+        "title": "Alphabet: Lambda",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Lambda\r\n\r\n![](/static/images/alphabet/lambda.svg)\r\n\r\n## \u039b \u03bb\r\n\r\n**Say it like** the \"l\" in _l_ithography.   **IPA** /l/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nLambda makes the same sound in \u03bb\u03af\u03b8\u03bf\u03c2 (l\u00edthos), meaning \"stone\".  \r\nThink of _neolithic_ (literally, new + stones), _lithology_ (study of rock\r\nformation).\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1650,8 +1650,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Psi\n\n![](/static/images/alphabet/psi.svg)\n\n## \u03a8 \u03c8\n\n**Say it like** the \"ps\" in _ps_yche.   **IPA** /ps/ \n\nYour browser does not support the audio element.\n\n* * *\n\nPsi makes the same sound in \u03c8\u03c5\u03c7\u03ae (psukh\u1e17), meaning \"sprit, mind, soul.\"  \nThink of _psychology_, _psychedelic_, _psychosis_, _psychosomatic_.\n\n",
+        "title": "Alphabet: Psi",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Psi\r\n\r\n![](/static/images/alphabet/psi.svg)\r\n\r\n## \u03a8 \u03c8\r\n\r\n**Say it like** the \"ps\" in _ps_yche.   **IPA** /ps/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPsi makes the same sound in \u03c8\u03c5\u03c7\u03ae (psukh\u1e17), meaning \"sprit, mind, soul.\"  \r\nThink of _psychology_, _psychedelic_, _psychosis_, _psychosomatic_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1662,8 +1662,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Rho\n\n![](/static/images/alphabet/rho.svg)\n\n## \u03a1 \u03c1\n\n**Say it like** the \"r\" in _r_ose.   **IPA** /r/ \n\nYour browser does not support the audio element.\n\n* * *\n\nRho makes the same sound in \u1fe5\u03cc\u03b4\u03bf\u03bd (rhodon), meaning \"rose, red\"  \nThink of _rhododendron_, a genus of plant which often bears red flowers.\n\n",
+        "title": "Alphabet: Rho",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Rho\r\n\r\n![](/static/images/alphabet/rho.svg)\r\n\r\n## \u03a1 \u03c1\r\n\r\n**Say it like** the \"r\" in _r_ose.   **IPA** /r/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nRho makes the same sound in \u1fe5\u03cc\u03b4\u03bf\u03bd (rhodon), meaning \"rose, red\"  \r\nThink of _rhododendron_, a genus of plant which often bears red flowers.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1674,8 +1674,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _I'll also answer to Mr. T. Just sayin'._ Thucydides _(ca 460 - 395 BC)_\n\n# Let's get started, shall we?\n\n**Welcome aboard, aspiring Geek!**\n\n  \n\nThe name is Thucydides. I'll be your guide through the Ancient Greek language\nand beyond. You'll learn more about me in a few lessons, but for now let's\ndive into the alphabet. Let me tell you something:\n\n  \n\n**I pity the fool, who doesn't know the Greek alphabet**.\n\nSo click the page corner to get your Greek on!  \n\n* * *\n\n### You're going to learn\n\nNew Skills New Vocab History\n\n  1. Identify and pronounce upper and lowercase Greek letters.\n  2. Understand Greek punctuation\n\n",
+        "title": "Startpage: Alphabet",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _I'll also answer to Mr. T. Just sayin'._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Let's get started, shall we?\r\n\r\n**Welcome aboard, aspiring Geek!**\r\n\r\n  \r\n\r\nThe name is Thucydides. I'll be your guide through the Ancient Greek language\r\nand beyond. You'll learn more about me in a few lessons, but for now let's\r\ndive into the alphabet. Let me tell you something:\r\n\r\n  \r\n\r\n**I pity the fool, who doesn't know the Greek alphabet**.\r\n\r\nSo click the page corner to get your Greek on!  \r\n\r\n* * *\r\n\r\n### You're going to learn\r\n\r\nNew Skills New Vocab History\r\n\r\n  1. Identify and pronounce upper and lowercase Greek letters.\r\n  2. Understand Greek punctuation\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1686,8 +1686,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## Greek Punctuation\n\nIn Greek printed texts, the comma (**,**) and the period (**.**) have the same\nuse as in English.\n\nThe semicolon (**;**) is used in Greek as a question mark (?).\n\nThe raised period (**\u00b7**) is equivalent to both the English semicolon (;) and\ncolon (:).\n\n, . ; \u00b7\n\nIn Greek\n\n, . ? ;/:\n\nIn English\n\n",
+        "title": "Punctuation: Intro",
+        "content": "## Greek Punctuation\r\n\r\nIn Greek printed texts, the comma (**,**) and the period (**.**) have the same\r\nuse as in English.\r\n\r\nThe semicolon (**;**) is used in Greek as a question mark (?).\r\n\r\nThe raised period (**\u00b7**) is equivalent to both the English semicolon (;) and\r\ncolon (:).\r\n\r\n, . ; \u00b7\r\n\r\nIn Greek\r\n\r\n, . ? ;/:\r\n\r\nIn English\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1698,8 +1698,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Gamma\n\n![](/static/images/alphabet/gamma.svg)\n\n## \u0393 \u03b3\n\n**Say it like** the \"g\" in _g_rammar.   **IPA** /g/ \n\nYour browser does not support the audio element.\n\n* * *\n\nGamma makes the same sound in \u03b3\u03c1\u03ac\u03c6\u03c9 (gr\u00e1ph\u014d), meaning \"I write.\"  \nThink of _graphic_, _graphite_.\n\n",
+        "title": "Alphabet: Gamma",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Gamma\r\n\r\n![](/static/images/alphabet/gamma.svg)\r\n\r\n## \u0393 \u03b3\r\n\r\n**Say it like** the \"g\" in _g_rammar.   **IPA** /g/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nGamma makes the same sound in \u03b3\u03c1\u03ac\u03c6\u03c9 (gr\u00e1ph\u014d), meaning \"I write.\"  \r\nThink of _graphic_, _graphite_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1710,8 +1710,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## A few things to remember!\n\nThe following **letter combinations** might at first appear hard to pronounce.\n\nTake a look at the following table to find out how to tackle them easily:\n\n## Digraphs in Greek\n\nThese so-called \"\u03b3 nasals\" are example of _digraphs_ in Ancient Greek. _Di_,\nmeaning 'two', and _graph_ meaning 'something written'.\n\nLetter combination | Pronunciation | Example | Pronunciation  \n---|---|---|---  \n\u03b3\u03b3 | ng | \u1f04\u03b3\u03b3\u03b5\u03bb\u03bf\u03c2 | angelos  \n\u03b3\u03ba | nk | \u1f04\u03b3\u03ba\u03c5\u03c1\u03b1 | ank\u00fcra  \n\u03b3\u03c7 | nkh | \u03bb\u03cc\u03b3\u03c7\u03b7 | lonkhe  \n\u03b3\u03be | nx | \u03c3\u03ac\u03bb\u03c0\u03b9\u03b3\u03be | salpinx  \n  \nYou don't need to know what they're called, just remember that if a \u03b3 is\nfollowed by another \u03b3, or a \u03ba, \u03c7, \u03be, you should pronounce the first \u03b3 as\nthough it were actually a \u03bd.\n\n",
+        "title": "Alphabet: Digraphs",
+        "content": "## A few things to remember!\r\n\r\nThe following **letter combinations** might at first appear hard to pronounce.\r\n\r\nTake a look at the following table to find out how to tackle them easily:\r\n\r\n## Digraphs in Greek\r\n\r\nThese so-called \"\u03b3 nasals\" are example of _digraphs_ in Ancient Greek. _Di_,\r\nmeaning 'two', and _graph_ meaning 'something written'.\r\n\r\nLetter combination | Pronunciation | Example | Pronunciation  \r\n---|---|---|---  \r\n\u03b3\u03b3 | ng | \u1f04\u03b3\u03b3\u03b5\u03bb\u03bf\u03c2 | angelos  \r\n\u03b3\u03ba | nk | \u1f04\u03b3\u03ba\u03c5\u03c1\u03b1 | ank\u00fcra  \r\n\u03b3\u03c7 | nkh | \u03bb\u03cc\u03b3\u03c7\u03b7 | lonkhe  \r\n\u03b3\u03be | nx | \u03c3\u03ac\u03bb\u03c0\u03b9\u03b3\u03be | salpinx  \r\n  \r\nYou don't need to know what they're called, just remember that if a \u03b3 is\r\nfollowed by another \u03b3, or a \u03ba, \u03c7, \u03be, you should pronounce the first \u03b3 as\r\nthough it were actually a \u03bd.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1722,8 +1722,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Epsilon\n\n![](/static/images/alphabet/epsilon.svg)\n\n## \u0395 \u03b5\n\n**Say it like** the \"e\" in _e_nergy   **IPA** /e/ \n\nYour browser does not support the audio element.\n\n* * *\n\nEpsilon makes the same sound in \u1f14\u03c1\u03b3\u03bf\u03bd (\u00e9rgon), meaning \"work\".  \nThink of _energy_.\n\n",
+        "title": "Alphabet: Epsilon",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Epsilon\r\n\r\n![](/static/images/alphabet/epsilon.svg)\r\n\r\n## \u0395 \u03b5\r\n\r\n**Say it like** the \"e\" in _e_nergy   **IPA** /e/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nEpsilon makes the same sound in \u1f14\u03c1\u03b3\u03bf\u03bd (\u00e9rgon), meaning \"work\".  \r\nThink of _energy_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1734,8 +1734,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## The Greek Alphabet\n\nThe Greek alphabet comprises **24 letters** (7 vowels and 17 consonants). The\nalphabet you will learn is the Ionic alphabet first adopted in Athens at the\nend of the 5th century BC.\n\n### The Greek Alphabet\n\nUppercase | Lowercase | Name | Pronunciation  \n---|---|---|---  \n\u0391 | \u03b1 | alpha | a  \n\u0392 | \u03b2 | beta | b  \n\u0393 | \u03b3 | gamma | g (like \"glue\")  \n\u0394 | \u03b4 | delta | d  \n\u0395 | \u03b5 | epsilon | e (like \"get\")  \nZ | \u03b6 | zdeta | zd  \n\u0397 | \u03b7 | eta | e (like \"hair\")  \n\u0398 | \u03b8 | theta | th  \n\u0399 | \u03b9 | iota | i (like \"east\")  \n\u039a | \u03ba | kappa | k  \n\u039b | \u03bb | lambda | l  \n\u039c | \u03bc | m\u00fc | m  \n\u039d | \u03bd | n\u00fc | n  \n\u039e | \u03be | ksi | x  \n\u039f | \u03bf | omicron | o  \n\u03a0 | \u03c0 | pi | p  \n\u03a1 | \u03c1 | rho | r  \n\u03a3 | \u03c3 or \u03c2* | sigma | s  \n\u03a4 | \u03c4 | tau | t  \n\u03a5 | \u03c5 | \u00fcpsilon | \u00fc  \n\u03a6 | \u03c6 | fi | f  \n\u03a7 | \u03c7 | khi | kh  \n\u03a8 | \u03c8 | psi | ps  \n\u03a9 | \u03c9 | omega | o  \n  \n* \u03c3 is used when the letter is in the middle of the word. \u03c2 is used when the letter is at the end of the word. \n\n",
+        "title": "Alphabet: Table",
+        "content": "## The Greek Alphabet\r\n\r\nThe Greek alphabet comprises **24 letters** (7 vowels and 17 consonants). The\r\nalphabet you will learn is the Ionic alphabet first adopted in Athens at the\r\nend of the 5th century BC.\r\n\r\n### The Greek Alphabet\r\n\r\nUppercase | Lowercase | Name | Pronunciation  \r\n---|---|---|---  \r\n\u0391 | \u03b1 | alpha | a  \r\n\u0392 | \u03b2 | beta | b  \r\n\u0393 | \u03b3 | gamma | g (like \"glue\")  \r\n\u0394 | \u03b4 | delta | d  \r\n\u0395 | \u03b5 | epsilon | e (like \"get\")  \r\nZ | \u03b6 | zdeta | zd  \r\n\u0397 | \u03b7 | eta | e (like \"hair\")  \r\n\u0398 | \u03b8 | theta | th  \r\n\u0399 | \u03b9 | iota | i (like \"east\")  \r\n\u039a | \u03ba | kappa | k  \r\n\u039b | \u03bb | lambda | l  \r\n\u039c | \u03bc | m\u00fc | m  \r\n\u039d | \u03bd | n\u00fc | n  \r\n\u039e | \u03be | ksi | x  \r\n\u039f | \u03bf | omicron | o  \r\n\u03a0 | \u03c0 | pi | p  \r\n\u03a1 | \u03c1 | rho | r  \r\n\u03a3 | \u03c3 or \u03c2* | sigma | s  \r\n\u03a4 | \u03c4 | tau | t  \r\n\u03a5 | \u03c5 | \u00fcpsilon | \u00fc  \r\n\u03a6 | \u03c6 | fi | f  \r\n\u03a7 | \u03c7 | khi | kh  \r\n\u03a8 | \u03c8 | psi | ps  \r\n\u03a9 | \u03c9 | omega | o  \r\n  \r\n* \u03c3 is used when the letter is in the middle of the word. \u03c2 is used when the letter is at the end of the word. \r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1746,8 +1746,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Pi\n\n![](/static/images/alphabet/pi.svg)\n\n## \u03a0 \u03c0\n\n**Say it like** the \"p\" in helico_p_ter.   **IPA** /p/ \n\nYour browser does not support the audio element.\n\n* * *\n\nPi makes the same sound in \u03c0\u03c4\u03b5\u03c1\u03cc\u03bd (pteron), meaning \"wing.\"  \nThink of _pterodactyl_, _helicopter_, _ornithopter_.\n\n",
+        "title": "Alphabet: Pi",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Pi\r\n\r\n![](/static/images/alphabet/pi.svg)\r\n\r\n## \u03a0 \u03c0\r\n\r\n**Say it like** the \"p\" in helico_p_ter.   **IPA** /p/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPi makes the same sound in \u03c0\u03c4\u03b5\u03c1\u03cc\u03bd (pteron), meaning \"wing.\"  \r\nThink of _pterodactyl_, _helicopter_, _ornithopter_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1758,8 +1758,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Upsilon\n\n![](/static/images/alphabet/upsilon.svg)\n\n## \u03a5 \u03c5\n\n**Say it like** the \"\u00fc\" in _\u00fc_ber.   **IPA** /y/ \n\nYour browser does not support the audio element.\n\n* * *\n\nAn upsilon at the beginning of a word is often pronounced \"h\u00fc\". For example,\n\u1f55\u03b4\u03c9\u03c1 (h\u00fad\u014dr), meaning \"water\"  \nThink of _hydrology_, _hydrolysis_ (literally, loosening water).\n\n",
+        "title": "Alphabet: Upsilon",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Upsilon\r\n\r\n![](/static/images/alphabet/upsilon.svg)\r\n\r\n## \u03a5 \u03c5\r\n\r\n**Say it like** the \"\u00fc\" in _\u00fc_ber.   **IPA** /y/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nAn upsilon at the beginning of a word is often pronounced \"h\u00fc\". For example,\r\n\u1f55\u03b4\u03c9\u03c1 (h\u00fad\u014dr), meaning \"water\"  \r\nThink of _hydrology_, _hydrolysis_ (literally, loosening water).\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1770,8 +1770,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Tau\n\n  \n  \n![](/static/images/alphabet/tau.svg)\n\n## \u03a4 \u03c4\n\n**Say it like** the \"t\" in _t_oxic.   **IPA** /t/ \n\nYour browser does not support the audio element.\n\n* * *\n\nTau makes the same sound in \u03c4\u03cc\u03be\u03bf\u03bd (t\u00f3kson), meaning \"archer's bow, rainbow,\narc\", and \u03c4\u03bf\u03be\u03b9\u03ba\u03cc\u03bd (toxikon) meaning \"poison\".  \nThink of _toxicology_, _detox_, _intoxication_.\n\n",
+        "title": "Alphabet: Tau",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Tau\r\n\r\n  \r\n  \r\n![](/static/images/alphabet/tau.svg)\r\n\r\n## \u03a4 \u03c4\r\n\r\n**Say it like** the \"t\" in _t_oxic.   **IPA** /t/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nTau makes the same sound in \u03c4\u03cc\u03be\u03bf\u03bd (t\u00f3kson), meaning \"archer's bow, rainbow,\r\narc\", and \u03c4\u03bf\u03be\u03b9\u03ba\u03cc\u03bd (toxikon) meaning \"poison\".  \r\nThink of _toxicology_, _detox_, _intoxication_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1782,8 +1782,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Theta\n\n![](/static/images/alphabet/theta.svg)\n\n## \u0398 \u03b8\n\n**Say it like** the \"th\" in _th_eology.   **IPA** /t\u02b0/ \n\nYour browser does not support the audio element.\n\n* * *\n\nTheta makes the same sound in \u03b8\u03b5\u03cc\u03c2 (the\u00f3s), meaning \"a god.\"  \nThink of _theism_, _atheism_.\n\n",
+        "title": "Alphabet: Theta",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Theta\r\n\r\n![](/static/images/alphabet/theta.svg)\r\n\r\n## \u0398 \u03b8\r\n\r\n**Say it like** the \"th\" in _th_eology.   **IPA** /t\u02b0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nTheta makes the same sound in \u03b8\u03b5\u03cc\u03c2 (the\u00f3s), meaning \"a god.\"  \r\nThink of _theism_, _atheism_.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1794,8 +1794,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Omicron\n\n![](/static/images/alphabet/omicron.svg)\n\n## \u039f \u03bf\n\n**Say it like** the \"o\" in _o_ptical.   **IPA** /o/ \n\nYour browser does not support the audio element.\n\n* * *\n\nOmicron makes the same sound in \u1f40\u03c0\u03c4\u03b9\u03ba\u03cc\u03c2 (optik\u00f3s), meaning \"relating to sight\nor vision\" and in \u1f40\u03c6\u03b8\u03b1\u03bb\u03bc\u03cc\u03c2, meaning \"eye\".  \nThink of _fiberoptics_, _optometry_, _ophthalmology_ (medicine dealing with\nanatomy, physiology, and diseases of the eye).\n\n",
+        "title": "Alphabet: Omicron",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Omicron\r\n\r\n![](/static/images/alphabet/omicron.svg)\r\n\r\n## \u039f \u03bf\r\n\r\n**Say it like** the \"o\" in _o_ptical.   **IPA** /o/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nOmicron makes the same sound in \u1f40\u03c0\u03c4\u03b9\u03ba\u03cc\u03c2 (optik\u00f3s), meaning \"relating to sight\r\nor vision\" and in \u1f40\u03c6\u03b8\u03b1\u03bb\u03bc\u03cc\u03c2, meaning \"eye\".  \r\nThink of _fiberoptics_, _optometry_, _ophthalmology_ (medicine dealing with\r\nanatomy, physiology, and diseases of the eye).\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1806,8 +1806,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "  * \u03b1\n  * \u03b2\n  * \u03b3\n  * \u03b4\n  * \u03b5\n  * \u03b6\n  * \u03b7\n  * \u03b8\n  * \u03b9\n  * \u03ba\n  * \u03bb\n  * \u03bc\n  * \u03bd\n  * \u03be\n  * \u03bf\n  * \u03c0\n  * \u03c1\n  * \u03c3/\u03c2\n  * \u03c4\n  * \u03c5\n  * \u03c6\n  * \u03c7\n  * \u03c8\n  * \u03c9\n\n# Phi\n\n![](/static/images/alphabet/phi.svg)\n\n## \u03a6 \u03c6\n\n**Say it like** the \"ph\" in _ph_ilosophy.   **IPA** /p\u02b0/ \n\nYour browser does not support the audio element.\n\n* * *\n\nPhi sounds the same in \u03c6\u03af\u03bb\u03bf\u03c2 (ph\u00edlos), meaning \"dear, beloved.\"  \nThink of _philanthropy_ (literally, love for men), _Philadelphia_ (the city of\nbrotherly love).\n\n",
+        "title": "Alphabet: Phi",
+        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Phi\r\n\r\n![](/static/images/alphabet/phi.svg)\r\n\r\n## \u03a6 \u03c6\r\n\r\n**Say it like** the \"ph\" in _ph_ilosophy.   **IPA** /p\u02b0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPhi sounds the same in \u03c6\u03af\u03bb\u03bf\u03c2 (ph\u00edlos), meaning \"dear, beloved.\"  \r\nThink of _philanthropy_ (literally, love for men), _Philadelphia_ (the city of\r\nbrotherly love).\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1818,9 +1818,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "#### First Declension: 3 groups\n\nCase | I. | II. | III.  \n---|---|---|---  \n**Singular**  \nNom. | -\u03b1 | -\u03b7 | -\u03b7\u03c2  \nGen. | -\u03b1\u03c2 | -\u03b7\u03c2 | -\u03bf\u03c5  \nDat. | -\u1fb3 | -\u1fc3 | -\u1fc3  \nAcc. | -\u03b1\u03bd | -\u03b7\u03bd | -\u03b7\u03bd  \nVoc. | -\u03b1 | -\u03b7 | -\u03b1  \n**Plural**  \nNom. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \nGen. | -\u1ff6\u03bd | -\u1ff6\u03bd | -\u1ff6\u03bd  \nDat. | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2  \nAcc. | -\u03b1\u03c2 | -\u03b1\u03c2 | -\u03b1\u03c2  \nVoc. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \n  \nNotice again that all the plural forms are identical.\n\n## The First Declension in the Pentecontaetia\n\nTake a look at another two examples showing first declension nouns in the\nPentecontaetia.\n\n[...] **\u03bf\u1f30\u03ba\u03af\u03b1\u03b9 \u03b1\u1f31** \u03bc\u1f72\u03bd \u03c0\u03bf\u03bb\u03bb\u03b1\u1f76 |  \u1f10\u03c0\u03b5\u03c0\u03c4\u03ce\u03ba\u03b5\u03c3\u03b1\u03bd  \n---|---  \n[...] many **houses** |  had fallen  \n**(Nominative)** |  (Verb)   \n-- _The History of the Peloponnesian War_, 1.89.3\n\nKeep Reading \u00bb\n\n\u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd\u03b9\u03bf\u03b9 \u03b4\u1f72 \u03b1\u1f30\u03c3\u03b8\u03cc\u03bc\u03b5\u03bd\u03bf\u03b9 |  [...] \u1f26\u03bb\u03b8\u03bf\u03bd |  **\u03c0\u03c1\u03b5\u03c3\u03b2\u03b5\u03af\u1fb3**  \n---|---|---  \nPerceiving this, the Spartans  |  went  |  with **an embassy** [...]  \n(Nominative)  |  (Verb)  |  **(Dative)**  \n-- _The History of the Peloponnesian War_, 1.91.1\n\nKeep Reading \u00bb\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: First Declension_originalexample1",
+        "content": "#### First Declension: 3 groups\r\n\r\nCase | I. | II. | III.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | -\u03b1 | -\u03b7 | -\u03b7\u03c2  \r\nGen. | -\u03b1\u03c2 | -\u03b7\u03c2 | -\u03bf\u03c5  \r\nDat. | -\u1fb3 | -\u1fc3 | -\u1fc3  \r\nAcc. | -\u03b1\u03bd | -\u03b7\u03bd | -\u03b7\u03bd  \r\nVoc. | -\u03b1 | -\u03b7 | -\u03b1  \r\n**Plural**  \r\nNom. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\nGen. | -\u1ff6\u03bd | -\u1ff6\u03bd | -\u1ff6\u03bd  \r\nDat. | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2  \r\nAcc. | -\u03b1\u03c2 | -\u03b1\u03c2 | -\u03b1\u03c2  \r\nVoc. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\n  \r\nNotice again that all the plural forms are identical.\r\n\r\n## The First Declension in the Pentecontaetia\r\n\r\nTake a look at another two examples showing first declension nouns in the\r\nPentecontaetia.\r\n\r\n[...] **\u03bf\u1f30\u03ba\u03af\u03b1\u03b9 \u03b1\u1f31** \u03bc\u1f72\u03bd \u03c0\u03bf\u03bb\u03bb\u03b1\u1f76 |  \u1f10\u03c0\u03b5\u03c0\u03c4\u03ce\u03ba\u03b5\u03c3\u03b1\u03bd  \r\n---|---  \r\n[...] many **houses** |  had fallen  \r\n**(Nominative)** |  (Verb)   \r\n-- _The History of the Peloponnesian War_, 1.89.3\r\n\r\nKeep Reading \u00bb\r\n\r\n\u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd\u03b9\u03bf\u03b9 \u03b4\u1f72 \u03b1\u1f30\u03c3\u03b8\u03cc\u03bc\u03b5\u03bd\u03bf\u03b9 |  [...] \u1f26\u03bb\u03b8\u03bf\u03bd |  **\u03c0\u03c1\u03b5\u03c3\u03b2\u03b5\u03af\u1fb3**  \r\n---|---|---  \r\nPerceiving this, the Spartans  |  went  |  with **an embassy** [...]  \r\n(Nominative)  |  (Verb)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.91.1\r\n\r\nKeep Reading \u00bb\r\n\r\n",
+        "grammar_ref": 18,
         "related_content": [],
         "source_lang": 4
     },
@@ -1830,8 +1830,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/thuc.png)\n\n### A Top Performance!\n\nYou've finished \"First Declension nouns\". Check out the skills you've earned\nwith this lesson:\n\n* * *\n\n##### Skill Summary\n\n\\+ 3\n\nIdentify first declension nouns ending in -\u03b1\n\nIdentify first declension nouns ending in -\u03b7\n\nIdentify first declension nouns ending in -\u03b7\u03c2\n\n* * *\n\n#### Next Steps\n\n* * *\n\n  Strengthen Vocab  \n  \n\n  Reinforce Skills  \n  \nContinue to hone your new skills with examples out of Thucydides' work.\n\n  Read a Passage  \n  \nRead a passage in _The Peloponnesian War_ that uses the skills and vocabulary\nyou've learned in this lesson.\n\n[\n\n#### Onwards to the next lesson!\n\n](/module/6/section/0/slide/0)  \n  \nKeep learning Greek! Click to continue your journey through the ancient Greek\nlanguage principles.\n\n",
+        "title": "Endpage: First Declension Nouns",
+        "content": "![](/static/images/thuc.png)\r\n\r\n### A Top Performance!\r\n\r\nYou've finished \"First Declension nouns\". Check out the skills you've earned\r\nwith this lesson:\r\n\r\n* * *\r\n\r\n##### Skill Summary\r\n\r\n\\+ 3\r\n\r\nIdentify first declension nouns ending in -\u03b1\r\n\r\nIdentify first declension nouns ending in -\u03b7\r\n\r\nIdentify first declension nouns ending in -\u03b7\u03c2\r\n\r\n* * *\r\n\r\n#### Next Steps\r\n\r\n* * *\r\n\r\n  Strengthen Vocab  \r\n  \r\n\r\n  Reinforce Skills  \r\n  \r\nContinue to hone your new skills with examples out of Thucydides' work.\r\n\r\n  Read a Passage  \r\n  \r\nRead a passage in _The Peloponnesian War_ that uses the skills and vocabulary\r\nyou've learned in this lesson.\r\n\r\n[\r\n\r\n#### Onwards to the next lesson!\r\n\r\n](/module/6/section/0/slide/0)  \r\n  \r\nKeep learning Greek! Click to continue your journey through the ancient Greek\r\nlanguage principles.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1842,9 +1842,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## First declension continued...\n\nThe second group of nouns end in -\u03b7 in the singular and in -\u03b1 in the plural.\n\nTake a look at the declension of \u1f21 \u03b3\u03bd\u03ce\u03bc\u03b7 meaning _the thought_.\n\n##### \u1f21 \u03b3\u03bd\u03ce\u03bc\u03b7,\u03b7\u03c2: The thought, of the thought\n\n**Singular** | **Plural**  \n---|---  \nNom. | \u1f21 \u03b3\u03bd\u03ce\u03bc**\u03b7** | \u03b1\u1f31 \u03b3\u03bd\u1ff6\u03bc**\u03b1\u03b9**  \nGen. | \u03c4\u1fc6\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b7\u03c2** | \u03c4\u1ff6\u03bd \u03b3\u03bd\u03c9\u03bc**\u1ff6\u03bd**  \nDat. | \u03c4\u1fc7 \u03b3\u03bd\u03ce\u03bc**\u1fc3** | \u03c4\u03b1\u1fd6\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b1\u03b9\u03c2**  \nAcc. | \u03c4\u1f74\u03bd \u03b3\u03bd\u03ce\u03bc**\u03b7\u03bd** | \u03c4\u1f70\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b1\u03c2**  \nVoc. | \u1f66 \u03b3\u03bd\u03ce\u03bc**\u03b7** | \u1f66 \u03b3\u03bd\u1ff6\u03bc**\u03b1\u03b9**\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: First Declension_Secondgroup",
+        "content": "## First declension continued...\r\n\r\nThe second group of nouns end in -\u03b7 in the singular and in -\u03b1 in the plural.\r\n\r\nTake a look at the declension of \u1f21 \u03b3\u03bd\u03ce\u03bc\u03b7 meaning _the thought_.\r\n\r\n##### \u1f21 \u03b3\u03bd\u03ce\u03bc\u03b7,\u03b7\u03c2: The thought, of the thought\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u03b3\u03bd\u03ce\u03bc**\u03b7** | \u03b1\u1f31 \u03b3\u03bd\u1ff6\u03bc**\u03b1\u03b9**  \r\nGen. | \u03c4\u1fc6\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b7\u03c2** | \u03c4\u1ff6\u03bd \u03b3\u03bd\u03c9\u03bc**\u1ff6\u03bd**  \r\nDat. | \u03c4\u1fc7 \u03b3\u03bd\u03ce\u03bc**\u1fc3** | \u03c4\u03b1\u1fd6\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b1\u03b9\u03c2**  \r\nAcc. | \u03c4\u1f74\u03bd \u03b3\u03bd\u03ce\u03bc**\u03b7\u03bd** | \u03c4\u1f70\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u03b3\u03bd\u03ce\u03bc**\u03b7** | \u1f66 \u03b3\u03bd\u1ff6\u03bc**\u03b1\u03b9**\r\n\r\n",
+        "grammar_ref": 19,
         "related_content": [],
         "source_lang": 4
     },
@@ -1854,8 +1854,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _Decline first, ask questions later._ Thucydides _(ca 460 - 395 BC)_\n\n# First Declension\n\n* * *\n\nNow that you have learned how to identify the 3 main characteristics of Greek\nnouns, how to distinguish the 5 Greek cases and understand the role that cases\nindividually play in a sentence, **you are ready for your first declension**!\n\n* * *\n\n## In this Section\n\nNew Skills New Vocab History\n\n  1. Identify first declension nouns ending in -\u03b1.\n  2. Identify first declension nouns ending in -\u03b7.\n  3. Identify first declension nouns ending in -\u03b7\u03c2.\n\n",
+        "title": "Startpage: First Declension",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _Decline first, ask questions later._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# First Declension\r\n\r\n* * *\r\n\r\nNow that you have learned how to identify the 3 main characteristics of Greek\r\nnouns, how to distinguish the 5 Greek cases and understand the role that cases\r\nindividually play in a sentence, **you are ready for your first declension**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab History\r\n\r\n  1. Identify first declension nouns ending in -\u03b1.\r\n  2. Identify first declension nouns ending in -\u03b7.\r\n  3. Identify first declension nouns ending in -\u03b7\u03c2.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1866,8 +1866,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### Themistocles\n\n  \n(524\u2013459 BC) was a powerful Athenian politician and general.\n\n![](/static/images/them.png)\n\nI am most famous for participating in the Battle of Marathon and the Battle of\nSalamis.\n\n## The very beginning of the Pentecontaetia.\n\nThe Pentecontaetia starts when \u03bf\u1f31 \u1f1d\u03bb\u03bb\u03b7\u03bd\u03b5\u03c2, the Hellenes, finally defeat the\nPersians at Mycale.\n\nAs the conflict ends, both the Persians and the Hellenes gradually make their\nway home. Upon their return, \u03bf\u1f31 \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9, the Athenians, decide to rebuild\ntheir \u03b1\u1f31 \u03bf\u1f30\u03ba\u03af\u03b1\u03b9, their homes, and especially their \u03c4\u03cc \u03c4\u03b5\u1fd6\u03c7\u03bf\u03c2, their wall.\n\nHowever, when \u03bf\u1f31 \u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd\u03b9\u03bf\u03b9, the Spartans, hear of this, they attempt to\ndissuade the Athenians from building a wall, for they fear the strength of\nAthens and the power of its newly acquired navy. Themistocles, an influential\nAthenian politician and general, refuses to stop the works on the wall and\norders that all \u03bf\u1f31 \u03c0\u03bf\u03bb\u1fd6\u03c4\u03b1\u03b9, all citizens, including women and children, help\nrebuild it. He himself leaves immediately for Sparta in an attempt to cover up\nthe rebuilding of the wall, knowing the Spartans would not be pleased if they\nfound out the truth!\n\n(Summary of [Thuc. 1.89-90](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-\ngrc1:1.89.0))\n\nNow that you've got some context, let's look at first declension nouns.  \n**Click the arrow to start learning!**\n\n",
+        "title": "History: Penteconteatia  1.89-90",
+        "content": "### Themistocles\r\n\r\n  \r\n(524\u2013459 BC) was a powerful Athenian politician and general.\r\n\r\n![](/static/images/them.png)\r\n\r\nI am most famous for participating in the Battle of Marathon and the Battle of\r\nSalamis.\r\n\r\n## The very beginning of the Pentecontaetia.\r\n\r\nThe Pentecontaetia starts when \u03bf\u1f31 \u1f1d\u03bb\u03bb\u03b7\u03bd\u03b5\u03c2, the Hellenes, finally defeat the\r\nPersians at Mycale.\r\n\r\nAs the conflict ends, both the Persians and the Hellenes gradually make their\r\nway home. Upon their return, \u03bf\u1f31 \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9, the Athenians, decide to rebuild\r\ntheir \u03b1\u1f31 \u03bf\u1f30\u03ba\u03af\u03b1\u03b9, their homes, and especially their \u03c4\u03cc \u03c4\u03b5\u1fd6\u03c7\u03bf\u03c2, their wall.\r\n\r\nHowever, when \u03bf\u1f31 \u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd\u03b9\u03bf\u03b9, the Spartans, hear of this, they attempt to\r\ndissuade the Athenians from building a wall, for they fear the strength of\r\nAthens and the power of its newly acquired navy. Themistocles, an influential\r\nAthenian politician and general, refuses to stop the works on the wall and\r\norders that all \u03bf\u1f31 \u03c0\u03bf\u03bb\u1fd6\u03c4\u03b1\u03b9, all citizens, including women and children, help\r\nrebuild it. He himself leaves immediately for Sparta in an attempt to cover up\r\nthe rebuilding of the wall, knowing the Spartans would not be pleased if they\r\nfound out the truth!\r\n\r\n(Summary of [Thuc. 1.89-90](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-\r\ngrc1:1.89.0))\r\n\r\nNow that you've got some context, let's look at first declension nouns.  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1878,9 +1878,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f21 \u03c7\u03ce\u03c1\u03b1,\u03b1\u03c2: The land, of the land\n\nCase | Article, Noun  \n---|---  \n**Singular** | **Plural**  \nNom. | \u1f21 \u03c7\u03ce\u03c1**\u03b1** | \u03b1\u1f31 \u03c7\u1ff6\u03c1**\u03b1\u03b9**  \nGen. | \u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1**\u03b1\u03c2** | \u03c4\u1ff6\u03bd \u03c7\u03c9\u03c1**\u1ff6\u03bd**  \nDat. | \u03c4\u1fc7 \u03c7\u03c9\u03c1**\u1fb3** | \u03c4\u03b1\u1fd6\u03c2 \u03c7\u1ff6\u03c1**\u03b1\u03b9\u03c2**  \nAcc. | \u03c4\u1f74\u03bd \u03c7\u03ce\u03c1**\u03b1\u03bd** | \u03c4\u1f70\u03c2 \u03c7\u03ce\u03c1**\u03b1\u03c2**  \nVoc. | \u1f66 \u03c7\u03ce\u03c1**\u03b1** | \u1f66 \u03c7\u1ff6\u03c1**\u03b1\u03b9**  \n  \n## First declension\n\nThe first Greek declension consists of **nearly exclusively feminine nouns**.\nOnly few masculine nouns belong to the first declension and no neuter nouns.\n\nThe first and most common group of nouns ends in -\u03b1 in the whole singular and\nplural. Take a look at the declension of \u1f21 \u03c7\u03ce\u03c1\u03b1 meaning _the land_.\n\n* * *\n\n####  Look out for Accents!\n\nWhen a first declension noun has an acute accent on the last syllable in the\nnominative, the accent is changed to a circumflex in the genitive and dative,\nin both the singular and plural.\n\nFor example: \u1f21 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u03ac (meaning _the army_) will become \u03c4\u1fc6\u03c2 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u1fb6\u03c2 in the\ngenitive singular.\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: First Declension_Firstgroup",
+        "content": "##### \u1f21 \u03c7\u03ce\u03c1\u03b1,\u03b1\u03c2: The land, of the land\r\n\r\nCase | Article, Noun  \r\n---|---  \r\n**Singular** | **Plural**  \r\nNom. | \u1f21 \u03c7\u03ce\u03c1**\u03b1** | \u03b1\u1f31 \u03c7\u1ff6\u03c1**\u03b1\u03b9**  \r\nGen. | \u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1**\u03b1\u03c2** | \u03c4\u1ff6\u03bd \u03c7\u03c9\u03c1**\u1ff6\u03bd**  \r\nDat. | \u03c4\u1fc7 \u03c7\u03c9\u03c1**\u1fb3** | \u03c4\u03b1\u1fd6\u03c2 \u03c7\u1ff6\u03c1**\u03b1\u03b9\u03c2**  \r\nAcc. | \u03c4\u1f74\u03bd \u03c7\u03ce\u03c1**\u03b1\u03bd** | \u03c4\u1f70\u03c2 \u03c7\u03ce\u03c1**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u03c7\u03ce\u03c1**\u03b1** | \u1f66 \u03c7\u1ff6\u03c1**\u03b1\u03b9**  \r\n  \r\n## First declension\r\n\r\nThe first Greek declension consists of **nearly exclusively feminine nouns**.\r\nOnly few masculine nouns belong to the first declension and no neuter nouns.\r\n\r\nThe first and most common group of nouns ends in -\u03b1 in the whole singular and\r\nplural. Take a look at the declension of \u1f21 \u03c7\u03ce\u03c1\u03b1 meaning _the land_.\r\n\r\n* * *\r\n\r\n####  Look out for Accents!\r\n\r\nWhen a first declension noun has an acute accent on the last syllable in the\r\nnominative, the accent is changed to a circumflex in the genitive and dative,\r\nin both the singular and plural.\r\n\r\nFor example: \u1f21 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u03ac (meaning _the army_) will become \u03c4\u1fc6\u03c2 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u1fb6\u03c2 in the\r\ngenitive singular.\r\n\r\n",
+        "grammar_ref": 18,
         "related_content": [],
         "source_lang": 4
     },
@@ -1890,9 +1890,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## What is a declension?\n\nA declension is a group of nouns, pronouns, adjectives, and articles that\nfollow a particular **pattern of inflection**. There are 3 declensions in\nGreek. Each noun belongs to only one declension and can only have the endings\nthat belong to that particular declension. Those nouns whose endings are (for\nthe most part) the vowels -\u03b1 or -\u03b7, belong to the **first declension**. Those\nnouns ending in -\u03bf belong to the **second declension**. All the other nouns\nbelong to the **third declension**.\n\n####  Reading a Dictionary Entry\n\nThe vocabulary entry for each noun shows the nominative and the genitive\nforms, the definite article and the English meaning. For example:\n\n\u03c7\u03ce\u03c1\u03b1, \u03b1\u03c2 \u1f21...land, country\n\nTo decline any noun, take the **genitive singular**, remove the ending to get\nthe stem, and then add the right set of endings to the stem.\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Declensions_intro",
+        "content": "## What is a declension?\r\n\r\nA declension is a group of nouns, pronouns, adjectives, and articles that\r\nfollow a particular **pattern of inflection**. There are 3 declensions in\r\nGreek. Each noun belongs to only one declension and can only have the endings\r\nthat belong to that particular declension. Those nouns whose endings are (for\r\nthe most part) the vowels -\u03b1 or -\u03b7, belong to the **first declension**. Those\r\nnouns ending in -\u03bf belong to the **second declension**. All the other nouns\r\nbelong to the **third declension**.\r\n\r\n####  Reading a Dictionary Entry\r\n\r\nThe vocabulary entry for each noun shows the nominative and the genitive\r\nforms, the definite article and the English meaning. For example:\r\n\r\n\u03c7\u03ce\u03c1\u03b1, \u03b1\u03c2 \u1f21...land, country\r\n\r\nTo decline any noun, take the **genitive singular**, remove the ending to get\r\nthe stem, and then add the right set of endings to the stem.\r\n\r\n",
+        "grammar_ref": 13,
         "related_content": [],
         "source_lang": 4
     },
@@ -1902,9 +1902,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## First declension continued...\n\nThe third group of nouns end in -\u03b7\u03c2 in the singular and in -\u03b1 in the plural.\nThese strictly masculine nouns take, of course, masculine definite articles,\ntheir genitive singular ends in -\u03bf\u03c5 and their vocative singular in -\u03b1.\n\nTake a look at the declension of \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4\u03b7\u03c2 meaning _the citizen_.\n\n##### \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4\u03b7\u03c2,\u03bf\u03c5: the citizen\n\n**Singular** | **Plural**  \n---|---  \nNom. | \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b7\u03c2** | \u03bf\u1f31 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1\u03b9**  \nGen. | \u03c4\u03bf\u1fe6 \u03c0\u03bf\u03bb\u03af\u03c4**\u03bf\u03c5** | \u03c4\u1ff6\u03bd \u03c0\u03bf\u03bb\u03b9\u03c4**\u1ff6\u03bd**  \nDat. | \u03c4\u1ff6 \u03c0\u03bf\u03bb\u03af\u03c4**\u1fc3** | \u03c4\u03bf\u1fd6\u03c2 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b1\u03b9\u03c2**  \nAcc. | \u03c4\u1f78\u03bd \u03c0\u03bf\u03bb\u03af\u03c4**\u03b7\u03bd** | \u03c4\u03bf\u1f7a\u03c2 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b1\u03c2**  \nVoc. | \u1f66 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1** | \u1f66 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1\u03b9**\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: First Declension_Thirdgroup",
+        "content": "## First declension continued...\r\n\r\nThe third group of nouns end in -\u03b7\u03c2 in the singular and in -\u03b1 in the plural.\r\nThese strictly masculine nouns take, of course, masculine definite articles,\r\ntheir genitive singular ends in -\u03bf\u03c5 and their vocative singular in -\u03b1.\r\n\r\nTake a look at the declension of \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4\u03b7\u03c2 meaning _the citizen_.\r\n\r\n##### \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4\u03b7\u03c2,\u03bf\u03c5: the citizen\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b7\u03c2** | \u03bf\u1f31 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1\u03b9**  \r\nGen. | \u03c4\u03bf\u1fe6 \u03c0\u03bf\u03bb\u03af\u03c4**\u03bf\u03c5** | \u03c4\u1ff6\u03bd \u03c0\u03bf\u03bb\u03b9\u03c4**\u1ff6\u03bd**  \r\nDat. | \u03c4\u1ff6 \u03c0\u03bf\u03bb\u03af\u03c4**\u1fc3** | \u03c4\u03bf\u1fd6\u03c2 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b1\u03b9\u03c2**  \r\nAcc. | \u03c4\u1f78\u03bd \u03c0\u03bf\u03bb\u03af\u03c4**\u03b7\u03bd** | \u03c4\u03bf\u1f7a\u03c2 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1** | \u1f66 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1\u03b9**\r\n\r\n",
+        "grammar_ref": 20,
         "related_content": [],
         "source_lang": 4
     },
@@ -1914,9 +1914,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### First Declension: 3 groups\n\nCase | I. | II. | III.  \n---|---|---|---  \n**Singular**  \nNom. | -\u03b1 | -\u03b7 | -\u03b7\u03c2  \nGen. | -\u03b1\u03c2 | -\u03b7\u03c2 | -\u03bf\u03c5  \nDat. | -\u1fb3 | -\u1fc3 | -\u1fc3  \nAcc. | -\u03b1\u03bd | -\u03b7\u03bd | -\u03b7\u03bd  \nVoc. | -\u03b1 | -\u03b7 | -\u03b1  \n**Plural**  \nNom. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \nGen. | -\u1ff6\u03bd | -\u1ff6\u03bd | -\u1ff6\u03bd  \nDat. | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2  \nAcc. | -\u03b1\u03c2 | -\u03b1\u03c2 | -\u03b1\u03c2  \nVoc. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \n  \nNotice again that all the plural forms are identical.\n\n## The First Declension in the Pentecontaetia\n\nThe following is an example of how Thucydides himself makes use of first\ndeclension nouns in the Pentecontaetia.\n\n[...] \u03bf\u1f31 \u03b2\u03ac\u03c1\u03b2\u03b1\u03c1\u03bf\u03b9 |  \u1f10\u03ba**\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2** |  \u1f00\u03c0\u1fc6\u03bb\u03b8\u03bf\u03bd  \n---|---|---  \n[...] the barbarians  |  from the country  |  departed  \n(Nominative)  |  (Genitive)  |  (Verb)  \n-- _The History of the Peloponnesian War_, 1.89.3\n\nKeep Reading \u00bb\n\n![](/static/images/thuc.png)\n\n\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2 belongs to the first group of first declension nouns. It is\nfeminine, singular and in the genitive case!\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: First Declension_originalexample",
+        "content": "### First Declension: 3 groups\r\n\r\nCase | I. | II. | III.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | -\u03b1 | -\u03b7 | -\u03b7\u03c2  \r\nGen. | -\u03b1\u03c2 | -\u03b7\u03c2 | -\u03bf\u03c5  \r\nDat. | -\u1fb3 | -\u1fc3 | -\u1fc3  \r\nAcc. | -\u03b1\u03bd | -\u03b7\u03bd | -\u03b7\u03bd  \r\nVoc. | -\u03b1 | -\u03b7 | -\u03b1  \r\n**Plural**  \r\nNom. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\nGen. | -\u1ff6\u03bd | -\u1ff6\u03bd | -\u1ff6\u03bd  \r\nDat. | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2  \r\nAcc. | -\u03b1\u03c2 | -\u03b1\u03c2 | -\u03b1\u03c2  \r\nVoc. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\n  \r\nNotice again that all the plural forms are identical.\r\n\r\n## The First Declension in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of first\r\ndeclension nouns in the Pentecontaetia.\r\n\r\n[...] \u03bf\u1f31 \u03b2\u03ac\u03c1\u03b2\u03b1\u03c1\u03bf\u03b9 |  \u1f10\u03ba**\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2** |  \u1f00\u03c0\u1fc6\u03bb\u03b8\u03bf\u03bd  \r\n---|---|---  \r\n[...] the barbarians  |  from the country  |  departed  \r\n(Nominative)  |  (Genitive)  |  (Verb)  \r\n-- _The History of the Peloponnesian War_, 1.89.3\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\n\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2 belongs to the first group of first declension nouns. It is\r\nfeminine, singular and in the genitive case!\r\n\r\n",
+        "grammar_ref": 18,
         "related_content": [],
         "source_lang": 4
     },
@@ -1926,9 +1926,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### Three-ending Adjectives of the First and Second Declension,\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2,\u03b4\u03b9\u03ba\u03b1\u03af\u03b1,\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd _righteous_\n\n| Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1 | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd  \nGen. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5  \nDat. | \u03b4\u03b9\u03ba\u03b1\u03af\u1ff3 | \u03b4\u03b9\u03ba\u03b1\u03af\u1fb3 | \u03b4\u03b9\u03ba\u03b1\u03af\u1ff3 | Acc. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03bd | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | Voc. |\n\u03b4\u03af\u03ba\u03b1\u03b9\u03b5 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1 | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | **Plural**  \nNom. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \nGen. | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd  \nDat. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03b9\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03b9\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03b9\u03c2  \nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03c2 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \n  \n#### How Greek Verbs work\n\nJust like nouns, Greek verbs are inflected and just like nouns they add an\nending to their stem to produce their various forms. While the patterns for\nnouns are called declensions (and the noun is declined), the verb forms fall\ninto **conjugations** (so the verb is **conjugated**).  \nMost Greek verbs will have these 5 important characteristics:\n\n  1. **Person**\n  2. **Number**\n  3. **Tense**\n  4. **Mood**\n  5. **Voice**\n\n* * *\n\n##### Useful tip!\n\nUnlike English verbs, the subject of the Greek verb is implied by the verb's\nending. Therefore, it is not necessary for it to be accompanied by the\npersonal pronouns _I, You, He/She/It, We, You, They_.  \nFor example: The English _I have_ can be translated either \u1f10\u03b3\u03ce \u1f14\u03c7\u03c9 or, more\ncommonly, simply  \u1f14\u03c7\u03c9.\n\nSoon you will be able to identify the **5 characteristics of Greek verbs**\nyourself! Click onthe arrow to find out how.\n\n",
-        "grammar_ref": null,
+        "title": "Adjectives: First and Second Declension_Three-declension_intro1",
+        "content": "##### Three-ending Adjectives of the First and Second Declension,\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2,\u03b4\u03b9\u03ba\u03b1\u03af\u03b1,\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd _righteous_\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1 | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af\u1ff3 | \u03b4\u03b9\u03ba\u03b1\u03af\u1fb3 | \u03b4\u03b9\u03ba\u03b1\u03af\u1ff3 | Acc. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03bd | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | Voc. |\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03b5 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1 | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | **Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03b9\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03b9\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03b9\u03c2  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03c2 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \r\n  \r\n#### How Greek Verbs work\r\n\r\nJust like nouns, Greek verbs are inflected and just like nouns they add an\r\nending to their stem to produce their various forms. While the patterns for\r\nnouns are called declensions (and the noun is declined), the verb forms fall\r\ninto **conjugations** (so the verb is **conjugated**).  \r\nMost Greek verbs will have these 5 important characteristics:\r\n\r\n  1. **Person**\r\n  2. **Number**\r\n  3. **Tense**\r\n  4. **Mood**\r\n  5. **Voice**\r\n\r\n* * *\r\n\r\n##### Useful tip!\r\n\r\nUnlike English verbs, the subject of the Greek verb is implied by the verb's\r\nending. Therefore, it is not necessary for it to be accompanied by the\r\npersonal pronouns _I, You, He/She/It, We, You, They_.  \r\nFor example: The English _I have_ can be translated either \u1f10\u03b3\u03ce \u1f14\u03c7\u03c9 or, more\r\ncommonly, simply  \u1f14\u03c7\u03c9.\r\n\r\nSoon you will be able to identify the **5 characteristics of Greek verbs**\r\nyourself! Click onthe arrow to find out how.\r\n\r\n",
+        "grammar_ref": 28,
         "related_content": [],
         "source_lang": 4
     },
@@ -1938,8 +1938,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/thuc.png)\n\n### That's a wrap!\n\nYou've finished \"Adjectives: First and Second Declensions\". Check out the\nskills you've earned with this lesson:\n\n* * *\n\n##### Skill Summary\n\n\\+ 2\n\nIdentify and decline three-ending adjectives\n\nIdentify and decline two-ending adjectives\n\n* * *\n\n#### Next Steps\n\n* * *\n\n  Strengthen Vocab  \n  \n\n  Reinforce Skills  \n  \nContinue to hone your new skills with examples out of Thucydides' work.\n\n  Read a Passage  \n  \nRead a passage in _The Peloponnesian War_ that uses the skills and vocabulary\nyou've learned in this lesson.\n\n[\n\n#### Onwards to the next lesson!\n\n](/module/11/section/0/slide/0)  \n  \nKeep learning Greek! Click to continue your journey through the ancient Greek\nlanguage principles.\n\n",
+        "title": "Endpage: Adjectives: First and Second Declensions",
+        "content": "![](/static/images/thuc.png)\r\n\r\n### That's a wrap!\r\n\r\nYou've finished \"Adjectives: First and Second Declensions\". Check out the\r\nskills you've earned with this lesson:\r\n\r\n* * *\r\n\r\n##### Skill Summary\r\n\r\n\\+ 2\r\n\r\nIdentify and decline three-ending adjectives\r\n\r\nIdentify and decline two-ending adjectives\r\n\r\n* * *\r\n\r\n#### Next Steps\r\n\r\n* * *\r\n\r\n  Strengthen Vocab  \r\n  \r\n\r\n  Reinforce Skills  \r\n  \r\nContinue to hone your new skills with examples out of Thucydides' work.\r\n\r\n  Read a Passage  \r\n  \r\nRead a passage in _The Peloponnesian War_ that uses the skills and vocabulary\r\nyou've learned in this lesson.\r\n\r\n[\r\n\r\n#### Onwards to the next lesson!\r\n\r\n](/module/11/section/0/slide/0)  \r\n  \r\nKeep learning Greek! Click to continue your journey through the ancient Greek\r\nlanguage principles.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1950,9 +1950,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## How First and Second Declension Adjectives work\n\nJust like articles and nouns have gender, number and case, so do all the\nadjectives. Like the article, **an adjective must agree in gender, number and\ncase with the noun it describes**.\n\nHowever, this does not mean that the ending of the article and that of the\nnoun are always identical; there are exceptions where, though the adjective\nand noun agree, the endings might look different.\n\nAdjectives agreeing with third declension nouns fall into two groups:\n\n  * **Three-ending Adjectives**  \nThese can have three types of endings:\n\n    * -**\u03b1\u03c2** -**\u03b1\u03c3\u03b1**\n-**\u03b1\u03bd**\n    * -**\u03b1\u03c2** -**\u03b1\u03b9\u03bd\u03b1**\n-**\u03b1\u03bd**\n    * -**\u03cd\u03c2** -**\u03b5\u1fd6\u03b1**\n-**\u03cd**\n  \n  \n  \n  \n\n  * **Two-ending Adjectives**  \nThese can have two types of endings:\n\n    * -**\u03c9\u03bd** for masculine and feminine; -**\u03bf\u03bd**\nfor neuter\n\n    * -**\u03b7\u03c2** for masculine and feminine; -**\u03b5\u03c2**\nfor neuter  \n  \n\n* * *\n\n",
-        "grammar_ref": null,
+        "title": "Adjectives: First and Second Declension_Three-declension_intro",
+        "content": "## How First and Second Declension Adjectives work\r\n\r\nJust like articles and nouns have gender, number and case, so do all the\r\nadjectives. Like the article, **an adjective must agree in gender, number and\r\ncase with the noun it describes**.\r\n\r\nHowever, this does not mean that the ending of the article and that of the\r\nnoun are always identical; there are exceptions where, though the adjective\r\nand noun agree, the endings might look different.\r\n\r\nAdjectives agreeing with third declension nouns fall into two groups:\r\n\r\n  * **Three-ending Adjectives**  \r\nThese can have three types of endings:\r\n\r\n    * -**\u03b1\u03c2** -**\u03b1\u03c3\u03b1**\r\n-**\u03b1\u03bd**\r\n    * -**\u03b1\u03c2** -**\u03b1\u03b9\u03bd\u03b1**\r\n-**\u03b1\u03bd**\r\n    * -**\u03cd\u03c2** -**\u03b5\u1fd6\u03b1**\r\n-**\u03cd**\r\n  \r\n  \r\n  \r\n  \r\n\r\n  * **Two-ending Adjectives**  \r\nThese can have two types of endings:\r\n\r\n    * -**\u03c9\u03bd** for masculine and feminine; -**\u03bf\u03bd**\r\nfor neuter\r\n\r\n    * -**\u03b7\u03c2** for masculine and feminine; -**\u03b5\u03c2**\r\nfor neuter  \r\n  \r\n\r\n* * *\r\n\r\n",
+        "grammar_ref": 28,
         "related_content": [],
         "source_lang": 4
     },
@@ -1962,8 +1962,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _The OBjective is to learn the ADjective!_ Thucydides _(ca 460 - 395 BC)_\n\n# Adjectives: Third Declension\n\n* * *\n\nNow is a good time to learn everything about **Third Declension Adjectives**!\n\n* * *\n\n## In this Section\n\nNew Skills New Vocab The Athenian defeat in Egypt.\n\n  1. Identify and decline three-ending adjectives.\n  2. Identify and decline two-ending adjectives.\n\n",
+        "title": "Startpage: Adjectives: Third Declension",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _The OBjective is to learn the ADjective!_ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Adjectives: Third Declension\r\n\r\n* * *\r\n\r\nNow is a good time to learn everything about **Third Declension Adjectives**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab The Athenian defeat in Egypt.\r\n\r\n  1. Identify and decline three-ending adjectives.\r\n  2. Identify and decline two-ending adjectives.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1974,9 +1974,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd -- _happy_\n\nTwo-ending Adjective\n\n| Masc./Fem. | Neut.  \n---|---|---  \n**Singular**  \nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd  \nGen. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2**  \nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | Acc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1** | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | Voc.\n| \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | **Plural**  \nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \nGen. | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd** | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd**  \nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)**  \nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \nVoc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \n  \n## Two-ending Adjectives of the Third Declension\n\nThe adjectives of the third declension with two endings are declined just like\nthe third declension nouns with consonant stems. These adjectives have one\ntype of ending for masculine and feminine, and one type for neuter.\n\nLook at the following example of \u03b5\u1f50\u03b4\u03b1\u03af\u03bc**\u03c9\u03bd**, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc**\u03bf\u03bd**, meaning _happy_.\n\n",
-        "grammar_ref": null,
+        "title": "Adjectives: Third Declension_Two-ending_1",
+        "content": "### \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd -- _happy_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | Acc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1** | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | Voc.\r\n| \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | **Plural**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd** | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nVoc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\n  \r\n## Two-ending Adjectives of the Third Declension\r\n\r\nThe adjectives of the third declension with two endings are declined just like\r\nthe third declension nouns with consonant stems. These adjectives have one\r\ntype of ending for masculine and feminine, and one type for neuter.\r\n\r\nLook at the following example of \u03b5\u1f50\u03b4\u03b1\u03af\u03bc**\u03c9\u03bd**, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc**\u03bf\u03bd**, meaning _happy_.\r\n\r\n",
+        "grammar_ref": 29,
         "related_content": [],
         "source_lang": 4
     },
@@ -1986,8 +1986,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### Egypt\n\n![](/static/images/egypt.jpg)\n\nThe Athenians leave Egypt after six years of war.\n\n## ...previously in the Pentecontaetia\n\nThe Athenians defeat the Boeotians and become their masters.\n\n## Now in the Pentecontaetia...\n\nThe Persians defeat the Egyptians and their allies from Athens. So, after six\nyears of war, the Athenians are defeated.\n\nEgypt returns to the subjection of its king. Later, Inaros, king of the\nLibyans on the Egyption border, is betrayed and crucified.\n\n(Summary of Thuc. 1.109-110)\n\nNow that you've got some context, let's look at the adjectives of the third\ndeclension!  \n  \n**Click the arrow to start learning!**\n\n",
+        "title": "History: Penteconteatia  1.109-110",
+        "content": "### Egypt\r\n\r\n![](/static/images/egypt.jpg)\r\n\r\nThe Athenians leave Egypt after six years of war.\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThe Athenians defeat the Boeotians and become their masters.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nThe Persians defeat the Egyptians and their allies from Athens. So, after six\r\nyears of war, the Athenians are defeated.\r\n\r\nEgypt returns to the subjection of its king. Later, Inaros, king of the\r\nLibyans on the Egyption border, is betrayed and crucified.\r\n\r\n(Summary of Thuc. 1.109-110)\r\n\r\nNow that you've got some context, let's look at the adjectives of the third\r\ndeclension!  \r\n  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1998,9 +1998,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2, \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 -- _noble_\n\nTwo-ending Adjective\n\n| Masc./Fem. | Neut.  \n---|---|---  \n**Singular**  \nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2  \nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2**  \nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | Acc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | Voc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2\n| \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | **Plural**  \nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd**  \nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)**  \nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \n  \n## Two-ending Adjectives of the Third Declension\n\nAnd now another example with different endings: \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ae\u03c2**, \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ad\u03c2**,\nmeaning _noble_.\n\n",
-        "grammar_ref": null,
+        "title": "Adjectives: Third Declension_Two-ending",
+        "content": "### \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2, \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 -- _noble_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | Acc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | Voc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2\r\n| \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | **Plural**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\n  \r\n## Two-ending Adjectives of the Third Declension\r\n\r\nAnd now another example with different endings: \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ae\u03c2**, \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ad\u03c2**,\r\nmeaning _noble_.\r\n\r\n",
+        "grammar_ref": 29,
         "related_content": [],
         "source_lang": 4
     },
@@ -2010,9 +2010,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd -- _every_\n\nThree-ending Adjective\n\n| Masc. | Fem. | Neut.  \n---|---|---|---  \n**Singular**  \nNom. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd  \nGen. | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2** | \u03c0\u03ac\u03c3**\u03b7\u03c2** | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2**  \nDat. | \u03c0\u03b1\u03bd\u03c4**\u03af** | \u03c0\u03ac\u03c3**\u1fc3** | \u03c0\u03b1\u03bd\u03c4**\u03af** | Acc. | \u03c0\u03ac\u03bd\u03c4**\u03b1** | \u03c0\u1fb6\u03c3**\u03b1\u03bd** | \u03c0\u1fb6\u03bd |\nVoc. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd | **Plural**  \nNom. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \nGen. | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd** | \u03c0\u03b1\u03c3**\u1ff6\u03bd** | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd**  \nDat. | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)** | \u03c0\u03ac\u03c3**\u03b1\u03b9\u03c2** | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)**  \nAcc. | \u03c0\u03ac\u03bd\u03c4**\u03b1\u03c2** | \u03c0\u03ac\u03c3**\u03b1\u03c2** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \nVoc. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \n  \n## Three-ending Adjectives of the First and Second Declension\n\nAs you can see from the table, the adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd has forms of the\nfirst and third declensions.\n\n##### Useful tip\n\nThe adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd often also means _all_ or _whole_.\n\n* * *\n\nAnother adjective that follows this pattern is \u03bc\u03ad\u03bb**\u03b1\u03c2**, \u03bc\u03ad\u03bb**\u03b1\u03b9\u03bd\u03b1**,\n\u03bc\u03ad\u03bb**\u03b1\u03bd**, meaning _black_. If you look closely the endings for this\nparticular adjective, though similar, are somewhat different from those in\n\u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd.\n\n* * *\n\nThe very last type of adjectives following this pattern is \u1f21\u03b4**\u03cd\u03c2**,\n\u1f21\u03b4**\u03b5\u1fd6\u03b1**, \u1f21\u03b4**\u03cd**, meaning _sweet_.\n\n",
-        "grammar_ref": null,
+        "title": "Adjectives: Third Declension_Three-ending",
+        "content": "### \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd -- _every_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd  \r\nGen. | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2** | \u03c0\u03ac\u03c3**\u03b7\u03c2** | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2**  \r\nDat. | \u03c0\u03b1\u03bd\u03c4**\u03af** | \u03c0\u03ac\u03c3**\u1fc3** | \u03c0\u03b1\u03bd\u03c4**\u03af** | Acc. | \u03c0\u03ac\u03bd\u03c4**\u03b1** | \u03c0\u1fb6\u03c3**\u03b1\u03bd** | \u03c0\u1fb6\u03bd |\r\nVoc. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd | **Plural**  \r\nNom. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nGen. | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd** | \u03c0\u03b1\u03c3**\u1ff6\u03bd** | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd**  \r\nDat. | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)** | \u03c0\u03ac\u03c3**\u03b1\u03b9\u03c2** | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03c0\u03ac\u03bd\u03c4**\u03b1\u03c2** | \u03c0\u03ac\u03c3**\u03b1\u03c2** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nVoc. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\n  \r\n## Three-ending Adjectives of the First and Second Declension\r\n\r\nAs you can see from the table, the adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd has forms of the\r\nfirst and third declensions.\r\n\r\n##### Useful tip\r\n\r\nThe adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd often also means _all_ or _whole_.\r\n\r\n* * *\r\n\r\nAnother adjective that follows this pattern is \u03bc\u03ad\u03bb**\u03b1\u03c2**, \u03bc\u03ad\u03bb**\u03b1\u03b9\u03bd\u03b1**,\r\n\u03bc\u03ad\u03bb**\u03b1\u03bd**, meaning _black_. If you look closely the endings for this\r\nparticular adjective, though similar, are somewhat different from those in\r\n\u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd.\r\n\r\n* * *\r\n\r\nThe very last type of adjectives following this pattern is \u1f21\u03b4**\u03cd\u03c2**,\r\n\u1f21\u03b4**\u03b5\u1fd6\u03b1**, \u1f21\u03b4**\u03cd**, meaning _sweet_.\r\n\r\n",
+        "grammar_ref": 28,
         "related_content": [],
         "source_lang": 4
     },
@@ -2022,9 +2022,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "#### \u03c4\u03cc \u1f14\u03c1\u03b3\u03bf\u03bd,\u03bf\u03c5: The body, of the body\n\n**Singular** | **Plural**  \n---|---  \nNom. | \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 | \u03c4\u03ac \u03c3\u03ce\u03bc\u03b1\u03c4**\u03b1**  \nGen. | \u03c4\u03bf\u1fe6 \u03c3\u1ff6\u03bc\u03b1\u03c4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u03c3\u03c9\u03bc\u03ac\u03c4**\u03c9\u03bd**  \nDat. | \u03c4\u1ff7 \u03c3\u03ce\u03bc\u03b1\u03c4**\u03b9** | \u03c4\u03bf\u1fd6\u03c2 \u03c3\u03ce\u03bc\u03b1**\u03c3\u03b9(\u03bd)**  \nAcc. | \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 | \u03c4\u03ac \u03c3\u1ff6\u03bc\u03b1**\u03c4\u03b1**  \nVoc. | \u1ff7 \u03c3\u1ff6\u03bc\u03b1 | \u1ff7 \u03c3\u1ff6\u03bc\u03b1**\u03c4\u03b1**  \n  \n## Third declension continued...\n\nAnd now here is an example of a neuter third declension noun: \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 meaning\n_the body_.\n\n* * *\n\n### Neuter Nouns are a Special Case\n\nIn all neuter nouns, **the accusative and the vocative are the same as the\nnominative**. This works for both singular and plural.\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Third Declension_Conson_Neuter",
+        "content": "#### \u03c4\u03cc \u1f14\u03c1\u03b3\u03bf\u03bd,\u03bf\u03c5: The body, of the body\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 | \u03c4\u03ac \u03c3\u03ce\u03bc\u03b1\u03c4**\u03b1**  \r\nGen. | \u03c4\u03bf\u1fe6 \u03c3\u1ff6\u03bc\u03b1\u03c4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u03c3\u03c9\u03bc\u03ac\u03c4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1ff7 \u03c3\u03ce\u03bc\u03b1\u03c4**\u03b9** | \u03c4\u03bf\u1fd6\u03c2 \u03c3\u03ce\u03bc\u03b1**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 | \u03c4\u03ac \u03c3\u1ff6\u03bc\u03b1**\u03c4\u03b1**  \r\nVoc. | \u1ff7 \u03c3\u1ff6\u03bc\u03b1 | \u1ff7 \u03c3\u1ff6\u03bc\u03b1**\u03c4\u03b1**  \r\n  \r\n## Third declension continued...\r\n\r\nAnd now here is an example of a neuter third declension noun: \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 meaning\r\n_the body_.\r\n\r\n* * *\r\n\r\n### Neuter Nouns are a Special Case\r\n\r\nIn all neuter nouns, **the accusative and the vocative are the same as the\r\nnominative**. This works for both singular and plural.\r\n\r\n",
+        "grammar_ref": 25,
         "related_content": [],
         "source_lang": 4
     },
@@ -2034,8 +2034,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/thuc.png)\n\n### A Top Performance!\n\nYou've finished \"Third declension nouns: consonant stems\". Check out the\nskills you've earned with this lesson:\n\n* * *\n\n##### Skill Summary\n\n\\+ 2\n\nIdentify third declension nouns with consonant stems\n\nIdentify dative plural ending exceptions\n\n* * *\n\n#### Next Steps\n\n* * *\n\n  Strengthen Vocab  \n  \n\n  Reinforce Skills  \n  \nContinue to hone your new skills with examples out of Thucydides' work.\n\n  Read a Passage  \n  \nRead a passage in _The Peloponnesian War_ that uses the skills and vocabulary\nyou've learned in this lesson.\n\n[\n\n#### Onwards to the next lesson!\n\n](/module/12/section/0/slide/0)  \n  \nKeep learning Greek! Click to continue your journey through the ancient Greek\nlanguage principles.\n\n",
+        "title": "Endpage: Third Declension_ConsonantStem",
+        "content": "![](/static/images/thuc.png)\r\n\r\n### A Top Performance!\r\n\r\nYou've finished \"Third declension nouns: consonant stems\". Check out the\r\nskills you've earned with this lesson:\r\n\r\n* * *\r\n\r\n##### Skill Summary\r\n\r\n\\+ 2\r\n\r\nIdentify third declension nouns with consonant stems\r\n\r\nIdentify dative plural ending exceptions\r\n\r\n* * *\r\n\r\n#### Next Steps\r\n\r\n* * *\r\n\r\n  Strengthen Vocab  \r\n  \r\n\r\n  Reinforce Skills  \r\n  \r\nContinue to hone your new skills with examples out of Thucydides' work.\r\n\r\n  Read a Passage  \r\n  \r\nRead a passage in _The Peloponnesian War_ that uses the skills and vocabulary\r\nyou've learned in this lesson.\r\n\r\n[\r\n\r\n#### Onwards to the next lesson!\r\n\r\n](/module/12/section/0/slide/0)  \r\n  \r\nKeep learning Greek! Click to continue your journey through the ancient Greek\r\nlanguage principles.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -2046,8 +2046,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _Real talk: I decline everything that crosses my path._ Thucydides _(ca 460\n- 395 BC)_\n\n# Third Declension Nouns: Consonant Stem\n\n* * *\n\nNow is a good time to introduce you to **third declension nouns**!\n\n* * *\n\n## In this Section\n\nNew Skills New Vocab News from the Oracle of Delphi\n\n  1. Identify third declension nouns with consonant stems.\n  2. Identify dative plural ending exceptions.\n\n",
+        "title": "Startpage: Third Declension_ConsonantStems",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _Real talk: I decline everything that crosses my path._ Thucydides _(ca 460\r\n- 395 BC)_\r\n\r\n# Third Declension Nouns: Consonant Stem\r\n\r\n* * *\r\n\r\nNow is a good time to introduce you to **third declension nouns**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab News from the Oracle of Delphi\r\n\r\n  1. Identify third declension nouns with consonant stems.\r\n  2. Identify dative plural ending exceptions.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -2058,9 +2058,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## A few things to remember!\n\nWhen the final consonant of a stem meets the **dative plural** ending -\u03c3\u03b9 , it\ncauses the following spelling and phonetic changes:\n\nThe consonants are grouped according to sound.\n\nType of consonant | Consonants |  | Dative Ending |  | Results in | Example  \n---|---|---|---|---|---|---  \nLabial | \u03c0, \u03b2, \u03c6 | + | -\u03c3\u03b9 | = | **-\u03c8\u03b9** | \u03c6\u03bb\u03b5\u03b2+\u03c3\u03af = \u03c6\u03bb\u03b5\u03c8\u03af  \nVelar | \u03ba, \u03b3, \u03c7 | + | -\u03c3\u03b9 | = | **-\u03be\u03b9** | \u03c6\u03cd\u03bb\u03b1\u03ba+\u03c3\u03b9 = \u03c6\u03cd\u03bb\u03b1\u03be\u03b9  \nDental | \u03c4, \u03b4, \u03b8 | + | -\u03c3\u03b9 | = | **-\u03c3\u03b9** | \u1f10\u03bb\u03c0\u03af\u03b4+\u03c3\u03b9 = \u1f10\u03bb\u03c0\u03af\u03c3\u03b9  \nStem in -\u03bd\u03c4 | -\u03b1\u03bd\u03c4 | + | -\u03c3\u03b9 | = | **-\u03b1\u03c3\u03b9** | \u03b3\u03af\u03b3\u03b1\u03bd\u03c4+\u03c3\u03b9 = \u03b3\u03af\u03b3\u03b1\u03c3\u03b9  \nStem in -\u03bd\u03c4 | -\u03bf\u03bd\u03c4 | + | -\u03c3\u03b9 | = | **-\u03bf\u03c5\u03c3\u03b9** | \u03b3\u03ad\u03c1\u03bf\u03bd\u03c4+\u03c3\u03b9 = \u03b3\u03ad\u03c1\u03bf\u03c5\u03c3\u03b9\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Third Declension_ConsonantStem_Dativeendings",
+        "content": "## A few things to remember!\r\n\r\nWhen the final consonant of a stem meets the **dative plural** ending -\u03c3\u03b9 , it\r\ncauses the following spelling and phonetic changes:\r\n\r\nThe consonants are grouped according to sound.\r\n\r\nType of consonant | Consonants |  | Dative Ending |  | Results in | Example  \r\n---|---|---|---|---|---|---  \r\nLabial | \u03c0, \u03b2, \u03c6 | + | -\u03c3\u03b9 | = | **-\u03c8\u03b9** | \u03c6\u03bb\u03b5\u03b2+\u03c3\u03af = \u03c6\u03bb\u03b5\u03c8\u03af  \r\nVelar | \u03ba, \u03b3, \u03c7 | + | -\u03c3\u03b9 | = | **-\u03be\u03b9** | \u03c6\u03cd\u03bb\u03b1\u03ba+\u03c3\u03b9 = \u03c6\u03cd\u03bb\u03b1\u03be\u03b9  \r\nDental | \u03c4, \u03b4, \u03b8 | + | -\u03c3\u03b9 | = | **-\u03c3\u03b9** | \u1f10\u03bb\u03c0\u03af\u03b4+\u03c3\u03b9 = \u1f10\u03bb\u03c0\u03af\u03c3\u03b9  \r\nStem in -\u03bd\u03c4 | -\u03b1\u03bd\u03c4 | + | -\u03c3\u03b9 | = | **-\u03b1\u03c3\u03b9** | \u03b3\u03af\u03b3\u03b1\u03bd\u03c4+\u03c3\u03b9 = \u03b3\u03af\u03b3\u03b1\u03c3\u03b9  \r\nStem in -\u03bd\u03c4 | -\u03bf\u03bd\u03c4 | + | -\u03c3\u03b9 | = | **-\u03bf\u03c5\u03c3\u03b9** | \u03b3\u03ad\u03c1\u03bf\u03bd\u03c4+\u03c3\u03b9 = \u03b3\u03ad\u03c1\u03bf\u03c5\u03c3\u03b9\r\n\r\n",
+        "grammar_ref": 24,
         "related_content": [],
         "source_lang": 4
     },
@@ -2070,8 +2070,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "### The Oracle of Delphi\n\n![](/static/images/oracle.jpg)\n\nThe Oracle, situated in the sanctuary of Delphi, was home to a frenzied\npriestess, believed to utter the words of the gods and predict future events.\n\n## ...previously in the Pentecontaetia\n\nThe Athenians renounced the alliance with Sparta.\n\n## Now in the Pentecontaetia...\n\nThe Helots finally surrender to Sparta on condition that they leave \u1f21\n\u03a0\u03b5\u03bb\u03bf\u03c0\u03cc\u03bd\u03bd\u03b7\u03c3\u03bf\u03c2, the Peloponnesus, and never return. The Spartans have, in fact,\nreceived an oracle from Delphi instructing exactly this. The Helots are\nreceived by the Athenians, who place them at Naupactus. A dispute with Corinth\nleads \u1f21 \u039c\u03b5\u03b3\u03ac\u03c1\u03b7, Megara, to ally herself with Athens.\n\nMeanwhile, \u1f41 \u03b2\u03b1\u03c3\u03b9\u03bb\u03b5\u1f7a\u03c2, the king of the Libyans on the Egyptian border, Inaros,\ncauses a revolt of almost the whole of Egypt against the Persians. He invites\nthe Athenians to assist him. The Athenians immediately sail to Egypt and enter\nthrough the Nile. They quickly establish themselves themselves as masters of\nthe river.\n\n(Summary of Thuc. 1.103-104)\n\nNow that you've got some context, let's look at third declension nouns!  \n  \n**Click the arrow to start learning!**\n\n",
+        "title": "History: Penteconteatia 1.103-104",
+        "content": "### The Oracle of Delphi\r\n\r\n![](/static/images/oracle.jpg)\r\n\r\nThe Oracle, situated in the sanctuary of Delphi, was home to a frenzied\r\npriestess, believed to utter the words of the gods and predict future events.\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThe Athenians renounced the alliance with Sparta.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nThe Helots finally surrender to Sparta on condition that they leave \u1f21\r\n\u03a0\u03b5\u03bb\u03bf\u03c0\u03cc\u03bd\u03bd\u03b7\u03c3\u03bf\u03c2, the Peloponnesus, and never return. The Spartans have, in fact,\r\nreceived an oracle from Delphi instructing exactly this. The Helots are\r\nreceived by the Athenians, who place them at Naupactus. A dispute with Corinth\r\nleads \u1f21 \u039c\u03b5\u03b3\u03ac\u03c1\u03b7, Megara, to ally herself with Athens.\r\n\r\nMeanwhile, \u1f41 \u03b2\u03b1\u03c3\u03b9\u03bb\u03b5\u1f7a\u03c2, the king of the Libyans on the Egyptian border, Inaros,\r\ncauses a revolt of almost the whole of Egypt against the Persians. He invites\r\nthe Athenians to assist him. The Athenians immediately sail to Egypt and enter\r\nthrough the Nile. They quickly establish themselves themselves as masters of\r\nthe river.\r\n\r\n(Summary of Thuc. 1.103-104)\r\n\r\nNow that you've got some context, let's look at third declension nouns!  \r\n  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -2082,9 +2082,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### Third Declension: Consonant Stem\n\nCase | Singular | Plural  \n---|---|---  \n**Feminine/Masculine**  \nNom. | - | -\u03b5\u03c2  \nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \nAcc. | -\u03b1, -\u03bd | -\u03b1\u03c2  \nVoc. | - | -\u03bf\u03b9  \n**Neuter**  \nNom. | - | -\u03b1  \nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \nAcc. | - | -\u03b1  \nVoc. | - | -\u03b1  \n  \n#### The Third Declension in the Pentecontaetia\n\nThe following is an example of how Thucydides himself makes use of third\ndeclension nouns in the Pentecontaetia.\n\n\u03bf\u1f30 [...] \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f27\u03bb\u03b8\u03bf\u03bd |  \u1f10\u03c0\u1f76 \u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1**  \n---|---|---|---  \nThe [...] Athenians  |  in this way  |  came  |  **to the circumstances...**  \n(Nominative)  |  **   |  (Verb)  |  \n-- _The History of the Peloponnesian War_, 1.89.1\n\nKeep Reading \u00bb\n\n![](/static/images/thuc.png)\n\n\u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1 is a neuter, accusative plural of the noun \u03c4\u03cc \u03c0\u03c1\u1fb6\u03b3\u03bc\u03b1.\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Third Declension_ConsonantStem_originalexample",
+        "content": "##### Third Declension: Consonant Stem\r\n\r\nCase | Singular | Plural  \r\n---|---|---  \r\n**Feminine/Masculine**  \r\nNom. | - | -\u03b5\u03c2  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | -\u03b1, -\u03bd | -\u03b1\u03c2  \r\nVoc. | - | -\u03bf\u03b9  \r\n**Neuter**  \r\nNom. | - | -\u03b1  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | - | -\u03b1  \r\nVoc. | - | -\u03b1  \r\n  \r\n#### The Third Declension in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of third\r\ndeclension nouns in the Pentecontaetia.\r\n\r\n\u03bf\u1f30 [...] \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f27\u03bb\u03b8\u03bf\u03bd |  \u1f10\u03c0\u1f76 \u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1**  \r\n---|---|---|---  \r\nThe [...] Athenians  |  in this way  |  came  |  **to the circumstances...**  \r\n(Nominative)  |  **   |  (Verb)  |  \r\n-- _The History of the Peloponnesian War_, 1.89.1\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\n\u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1 is a neuter, accusative plural of the noun \u03c4\u03cc \u03c0\u03c1\u1fb6\u03b3\u03bc\u03b1.\r\n\r\n",
+        "grammar_ref": 25,
         "related_content": [],
         "source_lang": 4
     },
@@ -2094,9 +2094,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "##### \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2,\u1f10\u03bb\u03c0\u03af\u03b4\u03bf\u03c2: The hope, of the hope\n\n**Singular** | **Plural**  \n---|---  \nNom. | \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 | \u03b1\u1f31 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \nGen. | \u03c4\u1fc6\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03c9\u03bd**  \nDat. | \u03c4\u1fc7 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b9** | \u03c4\u03b1\u1fd6\u03c2 \u1f10\u03bb\u03c0\u03af**\u03c3\u1f31(\u03bd)**  \nAcc. | \u03c4\u1f74\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1** | \u03c4\u1f70\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1\u03c2**  \nVoc. | \u1f66 \u1f10\u03bb\u03c0\u03af | \u1f66 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \n  \n## Third declension: consonant stem\n\nThird declension nouns can be masculine, feminine, or neuter. They are called\n\"nouns with consonant stems\" because their stems end with a consonant and so\nthat they distinguish themselves from third declension nouns with vowel stems.\n\n* * *\n\nUnlike nouns from the first and second declensions, **the nominative singular\nforms of third declension nouns don't have a specific ending** \\- rather, the\nending of every noun is different. However, some features of the third\ndeclension remain stable for every noun. These are:\n\n  * the endings of the genitive\n  * the endings of the dative\n  * the endings of the accusative plural\n  * the endings of the vocative plural\nHere is the declension of the Greek word \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 meaning _the hope_.\n\n* * *\n\n#####  Useful tip!\n\nIn the third declension, masculine and feminine nouns have the same endings.\n\n#####  Keep and eye out!\n\nIn masculine and feminine nouns, the **vocative** singular is identical in\nform to the nominative singular:\n\n  * when the nominative singular ends in -\u03be or -\u03c8\n  * when the nominative singular ends in -\u03bd or -\u03c1 and accents the ultima\nOtherwise the nominative singular stays as the stem alone, with any final\nletter dropped (e.g.\u1f10\u03bb\u03c0\u03b9)\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Third Declension_ConsonantStem",
+        "content": "##### \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2,\u1f10\u03bb\u03c0\u03af\u03b4\u03bf\u03c2: The hope, of the hope\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 | \u03b1\u1f31 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\nGen. | \u03c4\u1fc6\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1fc7 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b9** | \u03c4\u03b1\u1fd6\u03c2 \u1f10\u03bb\u03c0\u03af**\u03c3\u1f31(\u03bd)**  \r\nAcc. | \u03c4\u1f74\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1** | \u03c4\u1f70\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u1f10\u03bb\u03c0\u03af | \u1f66 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\n  \r\n## Third declension: consonant stem\r\n\r\nThird declension nouns can be masculine, feminine, or neuter. They are called\r\n\"nouns with consonant stems\" because their stems end with a consonant and so\r\nthat they distinguish themselves from third declension nouns with vowel stems.\r\n\r\n* * *\r\n\r\nUnlike nouns from the first and second declensions, **the nominative singular\r\nforms of third declension nouns don't have a specific ending** \\- rather, the\r\nending of every noun is different. However, some features of the third\r\ndeclension remain stable for every noun. These are:\r\n\r\n  * the endings of the genitive\r\n  * the endings of the dative\r\n  * the endings of the accusative plural\r\n  * the endings of the vocative plural\r\nHere is the declension of the Greek word \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 meaning _the hope_.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nIn the third declension, masculine and feminine nouns have the same endings.\r\n\r\n#####  Keep and eye out!\r\n\r\nIn masculine and feminine nouns, the **vocative** singular is identical in\r\nform to the nominative singular:\r\n\r\n  * when the nominative singular ends in -\u03be or -\u03c8\r\n  * when the nominative singular ends in -\u03bd or -\u03c1 and accents the ultima\r\nOtherwise the nominative singular stays as the stem alone, with any final\r\nletter dropped (e.g.\u1f10\u03bb\u03c0\u03b9)\r\n\r\n",
+        "grammar_ref": 24,
         "related_content": [],
         "source_lang": 4
     },
@@ -2106,9 +2106,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "## Third declension: vowel stem\n\nThere are third declension nouns with vowel stems acting differently from\nthose with consonant stems. These include, for example:\n\n  * \u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2, _the city_, with a stem in -**\u03b9**\n  * \u03c4\u03cc \u1f04\u03c3\u03c4\u03c5, _the city_, with a stem in -**\u03c5**\n\n* * *\n\n##### \u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2: The city    \u03c4\u03cc \u1f04\u03c3\u03c4\u03c5: The city\n\n**Singular** | **Singular**  \n---|---  \nNom. | \u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2 | \u03c4\u03cc \u1f04\u03c3\u03c4\u03c5  \nGen. | \u03c4\u1fc6\u03c2 \u03c0\u03cc\u03bb**\u03b5\u03c9\u03c2** | \u03c4\u03bf\u1fe6 \u1f04\u03c3\u03c4**\u03b5\u03c9\u03c2**  \nDat. | \u03c4\u1fc7 \u03c0\u03cc\u03bb**\u03b5\u03b9** | \u03c4\u1ff7 \u1f04\u03c3\u03c4**\u03b5\u03b9**  \nAcc. | \u03c4\u1f74\u03bd \u03c0\u03cc\u03bb\u03b9\u03bd | \u03c4\u03cc \u1f04\u03c3\u03c4\u03c5  \nVoc. | \u1f66 \u03c0\u03cc\u03bb\u03b9 | \u1f66 \u1f04\u03c3\u03c4\u03c5  \n**Plural** | **Plural**  \nNom. | \u03b1\u1f31 \u03c0\u03cc\u03bb\u03b5\u03b9\u03c2 | \u03c4\u03ac \u1f04\u03c3\u03c4\u03b7  \nGen. | \u03c4\u1ff6\u03bd \u03c0\u03cc\u03bb**\u03b5\u03c9\u03bd** | \u03c4\u1ff6\u03bd \u1f04\u03c3\u03c4**\u03b5\u03c9\u03bd**  \nDat. | \u03c4\u03b1\u1fd6\u03c2 \u03c0\u03cc\u03bb**\u03b5\u03c3\u03b9(\u03bd)** | \u03c4\u03bf\u1fd6\u03c2 \u1f04\u03c3\u03c4**\u03b5\u03c3\u1f31(\u03bd)**  \nAcc. | \u03c4\u1f70\u03c2 \u03c0\u03cc\u03bb\u03b5\u03b9\u03c2 | \u03c4\u03ac \u1f04\u03c3\u03c4\u03b7  \nVoc. | \u1f66 \u03c0\u03cc\u03bb\u03b5\u03b9\u03c2 | \u1f66 \u1f04\u03c3\u03c4\u03b7\n\n",
-        "grammar_ref": null,
+        "title": "Nouns: Third Declension_VowelStem",
+        "content": "## Third declension: vowel stem\r\n\r\nThere are third declension nouns with vowel stems acting differently from\r\nthose with consonant stems. These include, for example:\r\n\r\n  * \u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2, _the city_, with a stem in -**\u03b9**\r\n  * \u03c4\u03cc \u1f04\u03c3\u03c4\u03c5, _the city_, with a stem in -**\u03c5**\r\n\r\n* * *\r\n\r\n##### \u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2: The city    \u03c4\u03cc \u1f04\u03c3\u03c4\u03c5: The city\r\n\r\n**Singular** | **Singular**  \r\n---|---  \r\nNom. | \u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2 | \u03c4\u03cc \u1f04\u03c3\u03c4\u03c5  \r\nGen. | \u03c4\u1fc6\u03c2 \u03c0\u03cc\u03bb**\u03b5\u03c9\u03c2** | \u03c4\u03bf\u1fe6 \u1f04\u03c3\u03c4**\u03b5\u03c9\u03c2**  \r\nDat. | \u03c4\u1fc7 \u03c0\u03cc\u03bb**\u03b5\u03b9** | \u03c4\u1ff7 \u1f04\u03c3\u03c4**\u03b5\u03b9**  \r\nAcc. | \u03c4\u1f74\u03bd \u03c0\u03cc\u03bb\u03b9\u03bd | \u03c4\u03cc \u1f04\u03c3\u03c4\u03c5  \r\nVoc. | \u1f66 \u03c0\u03cc\u03bb\u03b9 | \u1f66 \u1f04\u03c3\u03c4\u03c5  \r\n**Plural** | **Plural**  \r\nNom. | \u03b1\u1f31 \u03c0\u03cc\u03bb\u03b5\u03b9\u03c2 | \u03c4\u03ac \u1f04\u03c3\u03c4\u03b7  \r\nGen. | \u03c4\u1ff6\u03bd \u03c0\u03cc\u03bb**\u03b5\u03c9\u03bd** | \u03c4\u1ff6\u03bd \u1f04\u03c3\u03c4**\u03b5\u03c9\u03bd**  \r\nDat. | \u03c4\u03b1\u1fd6\u03c2 \u03c0\u03cc\u03bb**\u03b5\u03c3\u03b9(\u03bd)** | \u03c4\u03bf\u1fd6\u03c2 \u1f04\u03c3\u03c4**\u03b5\u03c3\u1f31(\u03bd)**  \r\nAcc. | \u03c4\u1f70\u03c2 \u03c0\u03cc\u03bb\u03b5\u03b9\u03c2 | \u03c4\u03ac \u1f04\u03c3\u03c4\u03b7  \r\nVoc. | \u1f66 \u03c0\u03cc\u03bb\u03b5\u03b9\u03c2 | \u1f66 \u1f04\u03c3\u03c4\u03b7\r\n\r\n",
+        "grammar_ref": 26,
         "related_content": [],
         "source_lang": 4
     },
@@ -2118,8 +2118,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "UPDATE ME!",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\n\n> _Don't leave now. Let's renew our vowels!_ Thucydides _(ca 460 - 395 BC)_\n\n# Third Declension: Vowel Stem\n\n* * *\n\nNow is a good time to learn what remains of third declension nouns. Here you\nwill learn about the **third declension nouns with vowel stems**!\n\n* * *\n\n## In this Section\n\nNew Skills New Vocab New Athenian and Spartan battles.\n\n  1. Identify third declension nouns with vowel stems.\n\n",
+        "title": "Startpage: Third Declension_Vowel Stems",
+        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _Don't leave now. Let's renew our vowels!_ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Third Declension: Vowel Stem\r\n\r\n* * *\r\n\r\nNow is a good time to learn what remains of third declension nouns. Here you\r\nwill learn about the **third declension nouns with vowel stems**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab New Athenian and Spartan battles.\r\n\r\n  1. Identify third declension nouns with vowel stems.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -2130,7 +2130,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "History_Penteconteatia  1.107-108",
+        "title": "History: Penteconteatia  1.107-108",
         "content": "### Boeotia\r\n\r\n![](/static/images/map_war_small.png)\r\n\r\nThe Athenians defeat the Boeotians and become their masters.\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThe Athenians defeat the Corinthians, who return home.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nThe Athenians begin work on a long \u03c4\u03cc \u03c4\u03b5\u1fd6\u03c7\u03bf\u03c2, a wall reaching the sea. They\r\nalso advance to engage the Peloponnesians in Boeotia. After heavy loss on both\r\nsides, the Spartans win and return home. Later the Athenians return to Boeotia\r\nand, once they have defeated their army, they become masters of the land.\r\nAegina also surrenders to the power of the Athenians.\r\n\r\n(Summary of Thuc. 1.107-108)\r\n\r\nNow that you've got some context, let's look at third declension nouns with\r\nvowel stems!  \r\n  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -2190,7 +2190,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "History_Penteconteatia  1.102",
+        "title": "History: Penteconteatia  1.102",
         "content": "### Thucydides\r\n\r\n![](/static/images/thuc.png)\r\n\r\nThe Spartans and the Athenians are no longer friends...but were they ever?\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThe Athenians grew less popular by demanding monetary and military\r\ncontributions from the alliance.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nThe Spantans, finding it difficult to supress the revolt of the Helots on\r\ntheir own, call for Athenian help. Cimon and his troups are sent to help\r\nSparta, but, upon their arrival, they are rudely dismissed by \u039a\u03af\u03bc\u03c9\u03bd\u03bf\u1f31\r\n\u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd\u03b9\u03bf\u03b9, the Spartans. This is because the Spartans are suddenly afraid\r\nthat the Athenians, after having helped, might demand political changes. The\r\nAthenians take offense at this act and decide to renounce their alliance with\r\nSparta in favor for one with Argos, Sparta's enemy!\r\n\r\n(Summary of Thuc. 1.102)\r\n\r\nNow that you've got some context, let's look at third declension nouns!  \r\n  \r\n**Click the arrow to start learning!**\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -2454,7 +2454,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "History_Penteconteatia  1.93-94",
+        "title": "History: Penteconteatia  1.93-94",
         "content": "### Pausanias, the military leader of Sparta\r\n\r\n  \r\n\r\n![](/static/images/pausanias.JPG)\r\n\r\nI am most famous for leading the Hellenes during the decisive battle of\r\nPlataea against the Persians.\r\n\r\n## ...previously in the Pentecontaetia\r\n\r\nThemistocles revealed to the Spartans the truth about the wall.\r\n\r\n## Now in the Pentecontaetia...\r\n\r\nThe wall is completed in a very short period of time, for the foundations are\r\nlaid with stones of all kinds, pieces of columns, tombs, and sculptures. \u1f41\r\n\u0398\u03b5\u03bc\u03b9\u03c3\u03c4\u03bf\u03ba\u03bb\u1fc6\u03c2, Themistocles, insists that the Piraeus, the port of Athens, is\r\nalso fortified. He, in fact, can foresee the great power that Athens will gain\r\nby being a city of naval people.\r\n\r\nMeanwhile, while the Spartans are still supreme among \u03bf\u1f31 \u1f1d\u03bb\u03bb\u03b7\u03bd\u03b5\u03c2, the\r\nHellenes, the Spartan military leader Pausanias leads \u03c4\u03cc \u03bd\u03b1\u03c5\u03c4\u03b9\u03ba\u03cc\u03bd, a fleet of\r\nfifty Greek ships and conquers Cyprus and Byzantium.\r\n\r\n(Summary of Thuc. 1.93-94)\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -3619,7 +3619,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Nouns: Genitive Case_Partitive",
-        "content": "### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\n<table class=\"table inflection-table\">\r\n                    <thead>\r\n                        <tr>\r\n                            <td>Case</td>\r\n                            <td>Masc.</td>\r\n                            <td>Fem.</td>\r\n                            <td>Neut.</td>\r\n                        </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                        <tr>\r\n                            <td colspan=\"4\"><strong>Singular</strong></td>\r\n                        </tr>\r\n                        <tr class=\"past\">\r\n                            <td>Nom.</td>\r\n                            <td><span lang=\"grc\">\u1f41</span></td>\r\n                            <td><span lang=\"grc\">\u1f21</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u03cc</span>\r\n                                <span class=\"glyphicon glyphicon-ok\" style=\"color: #49A556; float: right\"></span>\r\n                            </td>\r\n                        </tr>\r\n                        <tr class=\"current\">\r\n                            <td>Gen.</td>\r\n                            <td><span lang=\"grc\">\u03c4\u03bf\u1fe6</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u1fc6\u03c2</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u03bf\u1fe6</span></td>\r\n                        </tr>\r\n                        <tr class=\"future\">\r\n                            <td>Dat.</td>\r\n                            <td><span lang=\"grc\">\u03c4\u1ff7</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u1fc7</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u1ff7</span></td>\r\n                        </tr>\r\n                        <tr class=\"past\">\r\n                            <td>Acc.</td>\r\n                            <td><span lang=\"grc\">\u03c4\u03cc\u03bd</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u03ae\u03bd</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u03cc</span> \r\n                                <span class=\"glyphicon glyphicon-ok\" style=\"color: #49A556; float: right\"></span>\r\n                            </td>\r\n                        </tr>\r\n                       <tr class=\"future\">\r\n                            <td>Voc.</td>\r\n                            <td><span lang=\"grc\">-</span></td>\r\n                            <td><span lang=\"grc\">-</span></td>\r\n                            <td><span lang=\"grc\">-</span> </td>\r\n                        </tr>\r\n                        <tr>\r\n                            <td colspan=\"4\"><strong>Plural</strong></td>\r\n                        </tr>\r\n                        <tr class=\"past\">\r\n                            <td>Nom.</td>\r\n                            <td><span lang=\"grc\">\u03bf\u1f31</span></td>\r\n                            <td><span lang=\"grc\">\u03b1\u1f31</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u03ac</span>\r\n                                <span class=\"glyphicon glyphicon-ok\" style=\"color: #49A556; float: right\"></span>\r\n                            </td>\r\n                        </tr>\r\n                        <tr class=\"current\">\r\n                            <td>Gen.</td>\r\n                            <td><span lang=\"grc\">\u03c4\u1ff6\u03bd</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u1ff6\u03bd</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u1ff6\u03bd</span></td>\r\n                        </tr>\r\n                        <tr class=\"future\">\r\n                            <td>Dat.</td>\r\n                            <td><span lang=\"grc\">\u03c4\u03bf\u1fd6\u03c2</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u03b1\u1fd6\u03c2</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u03bf\u1fd6\u03c2</span></td>\r\n                        </tr>\r\n                        <tr class=\"past\">\r\n                            <td>Acc.</td>\r\n                            <td><span lang=\"grc\">\u03c4\u03bf\u03cd\u03c2</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u03ac\u03c2</span></td>\r\n                            <td><span lang=\"grc\">\u03c4\u03ac</span>\r\n                                <span class=\"glyphicon glyphicon-ok\" style=\"color: #49A556; float: right\"></span>\r\n                            </td>\r\n                        </tr>\r\n                       <tr class=\"future\">\r\n                            <td>Voc.</td>\r\n                            <td><span lang=\"grc\">-</span></td>\r\n                            <td><span lang=\"grc\">-</span></td>\r\n                            <td><span lang=\"grc\">-</span> </td>\r\n                        </tr>\r\n                    </tbody>\r\n                </table>\r\n\r\n***\r\n\r\n# The Genitive Case\r\n\r\n## Partitive Genitive\r\n\r\nIn these sentences, the genitive indicates the **part of something**.\r\n\r\n<span lang=\"grc\">\u1f21 \u03c3\u03c5\u03bd\u03c4\u03c5\u03c7\u03af\u03b1</span>  |  <span lang=\"grc\">**\u03c4\u1fc6\u03c2 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1\u03c2**</span> |  <span lang=\"grc\">\u1f10\u03c3\u03c4\u1f76</span> |  <span lang=\"grc\">\u03b2\u03c1\u03b1\u03c7\u03b5\u1fd6\u03b1</span>.  \r\n---|---|---|---  \r\nThe event  |  **of (out of) the narrative** |  is  |  short.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n\r\n***\r\n\r\n## Genitive of Separation\r\n\r\nIn these sentences, the genitive indicates the **separation or lack of\r\nsomething**.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 {: lang=grc } |  \u1f00\u03c6\u03af\u03c3\u03c4\u03b1\u03c4\u03b1\u03b9 |  **\u03c4\u1ff6\u03bd \u03ba\u03b9\u03bd\u03b4\u03cd\u03bd\u03c9\u03bd.**  \r\n---|---|---  \r\nThe girl  |  stays away  |  **from the dangers**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**  \r\n\r\n***\r\n\r\n## Genitive with verbs of Desire\r\n\r\nIn these sentences, the genitive follows **verbs of desire**.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c0\u03b9\u03b8\u03c5\u03bc\u03ad\u03b9 |  **\u03c4\u1fc6\u03c2 \u1f21\u03c3\u03c5\u03c7\u03af\u03b1\u03c2.**  \r\n---|---|---  \r\nThucydides  |  desires  |  **rest.**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**\r\n\r\n",
+        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Genitive Case\r\n\r\n##### Partitive Genitive\r\n\r\nIn these sentences, the genitive indicates the **part of something**.\r\n\r\n\u1f21 \u03c3\u03c5\u03bd\u03c4\u03c5\u03c7\u03af\u03b1  |  **\u03c4\u1fc6\u03c2 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  \u03b2\u03c1\u03b1\u03c7\u03b5\u1fd6\u03b1.  \r\n---|---|---|---  \r\nThe event  |  **of (out of) the narrative** |  is  |  short.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n  \r\n##### Genitive of Separation\r\n\r\nIn these sentences, the genitive indicates the **separation or lack of\r\nsomething**.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u1f00\u03c6\u03af\u03c3\u03c4\u03b1\u03c4\u03b1\u03b9 |  **\u03c4\u1ff6\u03bd \u03ba\u03b9\u03bd\u03b4\u03cd\u03bd\u03c9\u03bd.**  \r\n---|---|---  \r\nThe girl  |  stays away  |  **from the dangers**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**  \r\n  \r\n##### Genitive with verbs of Desire\r\n\r\nIn these sentences, the genitive follows **verbs of desire**.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c0\u03b9\u03b8\u03c5\u03bc\u03ad\u03b9 |  **\u03c4\u1fc6\u03c2 \u1f21\u03c3\u03c5\u03c7\u03af\u03b1\u03c2.**  \r\n---|---|---  \r\nThucydides  |  desires  |  **rest.**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**\r\n\r\n",
         "grammar_ref": 52,
         "related_content": [],
         "source_lang": 4
@@ -3910,8 +3910,9 @@
         "content": "### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nAorist Active Indicative -- \u1f14\u03c0\u03b5\u03bc\u03c8\u03b1, _I sent_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1\u03c2** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b5(\u03bd)** | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n#### Aorist Indicative Active for Stop Verbs\r\n\r\nThe aorist stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n  \r\n\r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u1f14\u03bb\u03b5**\u03be**\u03b1, _I said_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u1f14\u03c0\u03b5\u03bc**\u03c8**\u03b1, _I sent_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u1f14\u03c0\u03b5\u03b9**\u03c3**\u03b1, _I persuaded_\r\n\r\n####\r\n\r\n",
         "grammar_ref": 61,
         "related_content": [
+            456,
             458,
-            456
+            454
         ],
         "source_lang": 4
     },
@@ -3921,11 +3922,26 @@
 {
     "fields": {
         "target_lang": 5,
+        "title": "Verbs: Aorist Indicative Active_intro",
+        "content": "> _When in doubt, aorist._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Aorist Indicative Active\r\n\r\n* * *\r\n\r\nThis is a good time to carry on learning the verbs. Here you will learn about\r\nthe **aorist indicative active**!",
+        "grammar_ref": 60,
+        "related_content": [
+            458
+        ],
+        "source_lang": 4
+    },
+    "model": "app.content",
+    "pk": 454
+},
+{
+    "fields": {
+        "target_lang": 5,
         "title": "Verbs: Aorist Indicative Active_Asigmatic_conjugation",
         "content": "### \u03bb\u03b5\u03af\u03c0\u03c9, _I leave_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03b9\u03c0\u03bf\u03bd, _I left_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03b9\u03c0**\u03bf\u03bd** | **\u1f10**\u03bb\u03af\u03c0**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03b9\u03c0**\u03b5\u03c2** | **\u1f10**\u03bb\u03af\u03c0**\u03b5\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03b9\u03c0**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03b9\u03c0**\u03bf\u03bd**  \r\n  \r\n#### Aorist Indicative Active: Second Aorist\r\n\r\nIn the **third principle part** of the verbs you have seen so far, the ending\r\nfor the first person singular has always been -\u03b1. This is becasue the verbs\r\nyou have seen so far have **first aorists**. There are, however, some verbs\r\nwith **second aorists**. For these **the endings change**, despite the meaning\r\nremaining the same as first aorists.\r\n\r\nFor example, in the case of \u03bb\u03b5\u03af\u03c0\u03c9, _to leave_, the aorist indicative active is\r\n\u1f14\u03bb\u03b9\u03c0\u03bf\u03bd. **The endings of the second aorist active resemble those of the\r\nimperfect.**\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03b9\u03c0\r\n\r\n* * *\r\n\r\n|  \u03bf\u03bd\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
         "grammar_ref": 44,
         "related_content": [
-            458
+            458,
+            454
         ],
         "source_lang": 4
     },
@@ -3936,10 +3952,11 @@
     "fields": {
         "target_lang": 5,
         "title": "Verbs: Aorist Indicative Active_Sigmatic_conjugation",
-        "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03c5\u03c3\u03b1, _I untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03c5\u03c3**\u03b1** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03c2** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03c5\u03c3**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03bd**  \r\n  \r\n#### Aorist Indicative Active\r\n\r\nThe aorist can have many different endings. The general rule, however, is that\r\nthe aorist can be either **sigmatic** (meaning with an added \u03c3) or\r\n**asigmatic** (without \u03c3).\r\n\r\nTo form the sigmatic aorist indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n  3. **Add the augment \u1f10** (just like you did for the imperfect). \r\n  4. **Add a \u03c3** to get the sigmatic aorist stem.   \r\ne.g. \u1f14\u03bb\u03c5\u03c3-\r\n  5. **Add the endings** from the table to indicate the person and number.   \r\ne.g. \u1f10\u03bb\u03cd\u03c3\u03b1\u03bc\u03b5\u03bd, _We untied_\r\n\r\nThe aorist then becomes the **third principle part** of a verb.\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14 |  \u03bb\u03c5 |  \u03c3 |  \u03b1\r\n---|---|---|---\r\nAugment |  Stem |  \u03c3 | Ending\r\n\r\n",
+        "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03c5\u03c3\u03b1, _I untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03c5\u03c3**\u03b1** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03c2** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03c5\u03c3**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03bd**  \r\n  \r\n#### Aorist Indicative Active\r\n\r\nThe aorist can have many different endings. The general rule, however, is that\r\nthe aorist can be either **sigmatic** (meaning with an added \u03c3) or\r\n**asigmatic** (without \u03c3).\r\n\r\nTo form the sigmatic aorist indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n**Add the augment \u1f10** (just like you did for the imperfect). \r\n  3. **Add a \u03c3** to get the sigmatic aorist stem.   \r\ne.g. \u1f14\u03bb\u03c5\u03c3-\r\n\r\n  4. **Add the endings** from the table to indicate the person and number.   \r\ne.g. \u1f10\u03bb\u03cd\u03c3\u03b1\u03bc\u03b5\u03bd, _We untied_\r\n\r\nThe aorist then becomes the **third principle part** of a verb.\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03c5\r\n\r\n* * *\r\n\r\n|  \u03c3\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  ****\u03c3****  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
         "grammar_ref": 43,
         "related_content": [
-            458
+            458,
+            454
         ],
         "source_lang": 4
     },
@@ -4033,7 +4050,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Participles_intro",
+        "title": "Verbs: Participles_intro",
         "content": "**This is how participles work!!!**",
         "grammar_ref": 62,
         "related_content": [],
@@ -13867,7 +13884,7 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-21T14:10:57Z",
+        "action_time": "2014-10-21T14:10:57.000Z",
         "object_repr": "Verbs: Aorist Indicative Active for Stop Verbs",
         "object_id": "453",
         "change_message": "Changed title.",
@@ -17611,12 +17628,12 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-22T16:11:05.350Z",
-        "object_repr": "Verbs: Aorist Indicative Active_Sigmatic_conjugation",
-        "object_id": "456",
-        "change_message": "Changed content.",
+        "action_time": "2014-10-28T15:41:36.475Z",
+        "object_repr": "History: Penteconteatia  1.93-94",
+        "object_id": "332",
+        "change_message": "Changed title.",
         "user": [
-            "monica"
+            "emily"
         ],
         "content_type": [
             "app",
@@ -17629,12 +17646,12 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-22T16:12:19.508Z",
-        "object_repr": "Verbs: Aorist Indicative Active_Sigmatic_conjugation",
-        "object_id": "456",
-        "change_message": "Changed content.",
+        "action_time": "2014-10-28T15:41:42.919Z",
+        "object_repr": "History: Penteconteatia  1.107-108",
+        "object_id": "305",
+        "change_message": "Changed title.",
         "user": [
-            "monica"
+            "emily"
         ],
         "content_type": [
             "app",
@@ -17646,13 +17663,13 @@
 },
 {
     "fields": {
-        "action_flag": 3,
-        "action_time": "2014-10-22T16:12:48.571Z",
-        "object_repr": "Verbs: Aorist Indicative Active_intro",
-        "object_id": "454",
-        "change_message": "",
+        "action_flag": 2,
+        "action_time": "2014-10-28T15:41:50.432Z",
+        "object_repr": "History: Penteconteatia  1.102",
+        "object_id": "310",
+        "change_message": "Changed title.",
         "user": [
-            "monica"
+            "emily"
         ],
         "content_type": [
             "app",
@@ -17665,12 +17682,12 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-22T16:16:55.523Z",
-        "object_repr": "Nouns: Genitive Case_Partitive",
-        "object_id": "429",
-        "change_message": "Changed content.",
+        "action_time": "2014-10-28T15:42:22.066Z",
+        "object_repr": "Verbs: Participles_intro",
+        "object_id": "464",
+        "change_message": "Changed title.",
         "user": [
-            "monica"
+            "emily"
         ],
         "content_type": [
             "app",
@@ -17683,12 +17700,12 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-22T16:28:54.144Z",
-        "object_repr": "Nouns: Genitive Case_Partitive",
-        "object_id": "429",
-        "change_message": "Changed content.",
+        "action_time": "2014-10-28T15:47:45.716Z",
+        "object_repr": "Start Page: Third Declension_Vowel Stems",
+        "object_id": "304",
+        "change_message": "Changed title and content.",
         "user": [
-            "monica"
+            "emily"
         ],
         "content_type": [
             "app",
@@ -17701,12 +17718,12 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-22T16:30:34.923Z",
-        "object_repr": "Nouns: Genitive Case_Partitive",
-        "object_id": "429",
-        "change_message": "Changed content.",
+        "action_time": "2014-10-28T15:48:10.797Z",
+        "object_repr": "Nouns: Third Declension_VowelStem",
+        "object_id": "303",
+        "change_message": "Changed title and content.",
         "user": [
-            "monica"
+            "emily"
         ],
         "content_type": [
             "app",
@@ -17719,12 +17736,12 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-22T16:31:49.850Z",
-        "object_repr": "Nouns: Genitive Case_Partitive",
-        "object_id": "429",
-        "change_message": "Changed content.",
+        "action_time": "2014-10-28T15:48:46.190Z",
+        "object_repr": "Nouns: Third Declension_VowelStem",
+        "object_id": "303",
+        "change_message": "Changed grammar_ref.",
         "user": [
-            "monica"
+            "emily"
         ],
         "content_type": [
             "app",
@@ -17737,12 +17754,12 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-22T16:59:44.448Z",
-        "object_repr": "Nouns: Genitive Case_Partitive",
-        "object_id": "429",
-        "change_message": "Changed content.",
+        "action_time": "2014-10-28T15:49:52.704Z",
+        "object_repr": "Nouns: Third Declension_ConsonantStem",
+        "object_id": "302",
+        "change_message": "Changed title, grammar_ref and content.",
         "user": [
-            "monica"
+            "emily"
         ],
         "content_type": [
             "app",
@@ -17755,12 +17772,12 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-22T17:11:09.458Z",
-        "object_repr": "Nouns: Genitive Case_Partitive",
-        "object_id": "429",
-        "change_message": "Changed content.",
+        "action_time": "2014-10-28T15:51:41.506Z",
+        "object_repr": "Nouns: Third Declension_ConsonantStem_originalexample",
+        "object_id": "301",
+        "change_message": "Changed title, grammar_ref and content.",
         "user": [
-            "monica"
+            "emily"
         ],
         "content_type": [
             "app",
@@ -17769,5 +17786,1085 @@
     },
     "model": "admin.logentry",
     "pk": 764
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-28T15:52:13.160Z",
+        "object_repr": "History_Penteconteatia 1.103-104",
+        "object_id": "300",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 765
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-28T15:52:28.065Z",
+        "object_repr": "History: Penteconteatia 1.103-104",
+        "object_id": "300",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 766
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-28T15:58:14.992Z",
+        "object_repr": "Nouns: Third Declension_ConsonantStem_Dativeendings",
+        "object_id": "299",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 767
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-28T15:58:30.376Z",
+        "object_repr": "Startpage: Third Declension_Vowel Stems",
+        "object_id": "304",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 768
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-28T16:01:42.519Z",
+        "object_repr": "Startpage: Third Declension_ConsonantStems",
+        "object_id": "298",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 769
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-28T16:05:54.851Z",
+        "object_repr": "Endpage: Third Declension_ConsonantStem",
+        "object_id": "297",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 770
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-28T16:10:40.633Z",
+        "object_repr": "Nouns: Third Declension_Conson_Neuter",
+        "object_id": "296",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 771
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:13:07.668Z",
+        "object_repr": "Adjectives: Third Declension_Three-ending",
+        "object_id": "295",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 772
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:21:52.359Z",
+        "object_repr": "Adjectives: Third Declension_Two-ending",
+        "object_id": "294",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 773
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:23:06.834Z",
+        "object_repr": "History_Penteconteatia  1.109-110",
+        "object_id": "293",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 774
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:23:53.863Z",
+        "object_repr": "Adjectives: Third Declension_Two-ending_1",
+        "object_id": "292",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 775
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:25:06.496Z",
+        "object_repr": "StartPage: Adjectives: Third Declension",
+        "object_id": "291",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 776
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:26:30.594Z",
+        "object_repr": "Adjectives: First and Second Declension_Three-declension_intro",
+        "object_id": "290",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 777
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:27:57.809Z",
+        "object_repr": "Adjectives: First and Second Declension_Three-declension_intro",
+        "object_id": "290",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 778
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:29:32.745Z",
+        "object_repr": "Endpage: Adjectives: First and Second Declensions",
+        "object_id": "289",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 779
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:30:44.788Z",
+        "object_repr": "Adjectives: First and Second Declension_Three-declension_intro1",
+        "object_id": "288",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 780
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:30:56.822Z",
+        "object_repr": "Adjectives: First and Second Declension_Three-declension_intro1",
+        "object_id": "288",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 781
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:33:47.370Z",
+        "object_repr": "Nouns: First Declension_originalexample",
+        "object_id": "287",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 782
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:35:17.283Z",
+        "object_repr": "Nouns: First Declension_Thirdgroup",
+        "object_id": "286",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 783
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:35:48.806Z",
+        "object_repr": "Nouns: Declensions_intro",
+        "object_id": "285",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 784
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:37:26.191Z",
+        "object_repr": "Nouns: First Declension_Firstgroup",
+        "object_id": "284",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 785
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:37:58.323Z",
+        "object_repr": "History: Penteconteatia  1.89-90",
+        "object_id": "283",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 786
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:38:39.269Z",
+        "object_repr": "Startpage: First Declension",
+        "object_id": "282",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 787
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:39:17.792Z",
+        "object_repr": "Nouns: First Declension_Secondgroup",
+        "object_id": "281",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 788
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:39:49.014Z",
+        "object_repr": "Endpage: First Declension Nouns",
+        "object_id": "280",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 789
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:40:56.303Z",
+        "object_repr": "Nouns: First Declension_originalexample1",
+        "object_id": "279",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 790
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:41:22.990Z",
+        "object_repr": "Alphabet: Phi",
+        "object_id": "278",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 791
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:41:39.558Z",
+        "object_repr": "Alphabet: Omicron",
+        "object_id": "277",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 792
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:41:50.660Z",
+        "object_repr": "Alphabet: Theta",
+        "object_id": "276",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 793
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:42:00.875Z",
+        "object_repr": "Alphabet: Tau",
+        "object_id": "275",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 794
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:42:13.029Z",
+        "object_repr": "Alphabet: Upsilon",
+        "object_id": "274",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 795
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:43:20.142Z",
+        "object_repr": "Alphabet: Pi",
+        "object_id": "273",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 796
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:43:37.323Z",
+        "object_repr": "Alphabet: Table",
+        "object_id": "272",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 797
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:43:57.583Z",
+        "object_repr": "Alphabet: Epsilon",
+        "object_id": "271",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 798
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:44:35.663Z",
+        "object_repr": "Alphabet: Digraphs",
+        "object_id": "270",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 799
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:44:44.789Z",
+        "object_repr": "Alphabet: Gamma",
+        "object_id": "269",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 800
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:48:59.845Z",
+        "object_repr": "Punctuation: Intro",
+        "object_id": "268",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 801
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:49:41.547Z",
+        "object_repr": "Startpage: Alphabet",
+        "object_id": "267",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 802
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:49:52.754Z",
+        "object_repr": "Alphabet: Rho",
+        "object_id": "266",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 803
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:50:02.254Z",
+        "object_repr": "Alphabet: Psi",
+        "object_id": "265",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 804
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:50:48.093Z",
+        "object_repr": "Alphabet: Lambda",
+        "object_id": "264",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 805
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:51:00.547Z",
+        "object_repr": "Alphabet: Omega",
+        "object_id": "263",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 806
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:51:12.636Z",
+        "object_repr": "Alphabet: Xi",
+        "object_id": "262",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 807
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:51:25.224Z",
+        "object_repr": "Alphabet: Beta",
+        "object_id": "261",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 808
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:51:34.163Z",
+        "object_repr": "Alphabet: Zeta",
+        "object_id": "260",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 809
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:51:42.615Z",
+        "object_repr": "Alphabet: Nu",
+        "object_id": "259",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 810
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:51:51.278Z",
+        "object_repr": "Alphabet: Kappa",
+        "object_id": "258",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 811
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:52:00.893Z",
+        "object_repr": "Alphabet: Delta",
+        "object_id": "257",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 812
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:52:10.259Z",
+        "object_repr": "Alphabet: Chi",
+        "object_id": "256",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 813
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:52:18.819Z",
+        "object_repr": "Alphabet: Iota",
+        "object_id": "255",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 814
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:52:26.422Z",
+        "object_repr": "Alphabet: Eta",
+        "object_id": "254",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 815
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:52:35.310Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 816
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:52:43.394Z",
+        "object_repr": "Alphabet: Alpha",
+        "object_id": "252",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 817
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:52:52.697Z",
+        "object_repr": "Alphabet: Mu",
+        "object_id": "251",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 818
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:53:29.642Z",
+        "object_repr": "Adverbs: Adverbs in O",
+        "object_id": "250",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 819
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:53:52.620Z",
+        "object_repr": "Adverbs: Adverbs in accusative",
+        "object_id": "249",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 820
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:54:16.810Z",
+        "object_repr": "History: Penteconteatia  1.111",
+        "object_id": "248",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 821
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:54:53.063Z",
+        "object_repr": "Startpage: Adjectives: Third Declension",
+        "object_id": "247",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 822
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:58:10.323Z",
+        "object_repr": "History: Penteconteatia  1.109-110",
+        "object_id": "293",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 823
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-29T11:58:25.297Z",
+        "object_repr": "Startpage: Adjectives: Third Declension",
+        "object_id": "291",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 824
 }
 ]
