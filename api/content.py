@@ -40,4 +40,4 @@ class ContentResource(ModelResource):
     
     def dehydrate_content(self, bundle):
         return markdown.markdown(bundle.data['content'], 
-                                    ['markdown.extensions.tables'])
+                                    ['markdown.extensions.tables', 'markdown.extensions.attr_list'])

@@ -17,7 +17,7 @@ define(['jquery',
 			initialize: function(attributes) {
 				this.set('wordCTS', attributes.sentenceCTS + ':' + (attributes.index + 1));
 			},
-			urlRoot: function() {
+			url: function() {
 				return this.get('resource_uri');
 			},
 			parse: function(response) {

@@ -2,9 +2,9 @@ define(['jquery',
 	'underscore', 
 	'backbone', 
 	'utils', 
-	'views/lessons/task_switcher',
+	'views/lessons/tasks',
 	'text!/templates/js/lessons/microlesson.html'], 
-	function($, _, Backbone, Utils, TaskSwitcherView, Template) { 
+	function($, _, Backbone, Utils, TasksView, Template) { 
 
 		return Backbone.View.extend({
 			events: {
@@ -15,9 +15,12 @@ define(['jquery',
 
 				var that = this;
 				this.options = options;
+
 				this.model = this.collection.findWhere({ index: options.index });
 
-				// Collection has length zero if they navigate directly, rather than through Lessons List
+				/* Collection has length zero if they navigate directly, 
+				 * rather than through Lessons List
+				 */ 
 				if (this.collection.length === 0 || !this.model) { 
 					this.collection.setEndpointLimit(0);
 					this.collection.fetch({ success: function() {
@@ -27,6 +30,9 @@ define(['jquery',
 				else {
 					this.fetchTopicDetails();
 				}
+
+				// Get our user (needed for showing admin buttons)
+				this.user = options.user;
 			},
 			fetchTopicDetails: function() {
 				var match = this.collection.models.filter(function(model) {
@@ -51,21 +57,39 @@ define(['jquery',
 				this.$el.find('[data-toggle="tooltip"]').tooltip();
 				this.renderTask();
 
+				// Now that the template is filled out, append admin options
+				var that = this;
+				this.user.fetch({
+					success: that.renderAdminOptions.bind(that)
+				});
+
 				return this;
 			},
-			renderTask: function() {
-				if (!this.task_switcher)
-					this.task_switcher = new TaskSwitcherView({ el: this.$el.find('.task'), index: this.options.index }); 
-				else if (this.task_switcher && this.task_switcher.options.index !== this.options.index)
-					this.task_switcher.initialize({ index: this.options.index });
-			},
-			getTableOfContents: function() {
-				var topics = Utils.getHTMLbySmyth(this.model.getGrammar() || this.options.ref);
-				return topics.map(function(topic) {
-					var title = Utils.Smyth.filter(function(s) { return s.ref === topic.smyth })[0].title;
-					topic.title = title;
-					return topic;
+			renderAdminOptions: function() {
+				if (!this.user.get('is_superuser')) return;
+
+				// TODO: Find a better way of doing this
+				var panels = this.$el.find('.panel-heading');
+				panels.each(function(i, el) {
+					var id = $(el).find('a').data('id');
+					$(el).prepend('<a target="_blank" href="/admin/app/content/' + 
+						id + '" style="float: right">Edit</a>');
 				});
+			},
+			renderTask: function() {
+				if (!this.tasks) {
+					this.tasks_view = new TasksView({ 
+						el: this.$el.find('.task'), 
+						index: this.options.index,
+						topic: this.model
+					}); 
+				}
+				else if (this.tasks_view && this.tasks_view.options.index !== this.options.index) {
+					this.tasks_view.initialize({ 
+						index: this.options.index,
+						topic: this.model
+					});
+				}
 			},
 			toggleNotes: function(e) {
 				e.preventDefault();

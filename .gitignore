@@ -1,5 +1,4 @@
 node_modules/*
-data.py
 env/*
 logs/*
 *.pyc
@@ -8,3 +7,4 @@ logs/*
 node_modules/*
 *.*~
 static/collected
+static/js/components
