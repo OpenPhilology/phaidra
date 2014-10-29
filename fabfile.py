@@ -29,22 +29,30 @@ def load_db():
         local("./manage.py loaddata app/fixtures/db.json")
 
 def restart():
-    sudo('service neo4j-service stop && service neo4j-service start')
-    sudo('service nginx stop && service nginx start')
-    sudo('killall uwsgi && uwsgi %s/extras/phaidra.ini' % env.directory)
+    local('service neo4j-service stop && service neo4j-service start')
+    local('service nginx stop && service nginx start')
+    local('killall uwsgi && uwsgi %s/extras/phaidra.ini' % env.directory)
 
 def setup_postgres():
-    sudo("apt-get build-deb python-psycopg2")
-    sudo("apt-get install postgresql postgresql-contrib")
+    local("sudo apt-get build-dep python-psycopg2")
+    local("sudo apt-get install postgresql-9.1 postgresql-contrib")
+    local('sudo service postgres start')
+
+    # TODO: If user sets alternate password, update their settings.py
     password = prompt('Set the password for postgres (default: "phaidra"): ')
-    sudo("psql postgres -U postgres -c %s" % password, user="postgres")
-    sudo("createdb phaidra", user="postgres")
+
+    with settings(user='postgres'):
+        # Look in the right place for postgres and related tools
+        # local('export PATH=$PATH:/usr/lib/postgresql/9.1/bin/')
+        # local('pg_ctl -w start ')
+        local('psql -U postgres -c "ALTER USER postgres WITH ENCRYPTED PASSWORD \'%s\'"' % password)
+        local('sudo -u postgres createdb phaidra')
 
 def setup_frontend():
-    sudo("add-apt-repository ppa:chris-lea/node.js")
-    sudo("apt-get update")
-    sudo("apt-get install nodejs")
-    sudo("npm install")
+    local("add-apt-repository ppa:chris-lea/node.js")
+    local("apt-get update")
+    local("apt-get install nodejs")
+    local("npm install")
     local("bower install")
 
 def setup_django():
@@ -52,33 +60,33 @@ def setup_django():
         local("./manage.py collectstatic") 
 
 def setup_server():
-    sudo("apt-get install nginx uwsgi uwsgi-plugin-python python2.7-dev")
+    local("apt-get install nginx uwsgi uwsgi-plugin-python python2.7-dev")
     version = local("uwsgi --version")
 
     if Decimal(version) < 1.9:
-        sudo("pip install -U uwsgi")
-        with cd('/user/bin'):
-            sudo('mv uwsgi uwsgi-old')
-            sudo('ln -s /usr/local/bin/uwsgi uwsgi')
+        local("pip install -U uwsgi")
+        with cd('/usr/bin'):
+            local('mv uwsgi uwsgi-old')
+            local('ln -s /usr/local/bin/uwsgi uwsgi')
 
-    sudo("ln -s %s/extras/nginx/phaidra.conf /etc/nginx/sites-enabled/phaidra.conf" % env.directory)
-    sudo("ln -s %s/extras/uwsgi/phaidra.ini /etc/uwsgi/apps-enabled/phaidra.ini" % env.directory)
-    sudo("mkdir /var/uwsgi")
-    sudo("chown www-data:www-data /var/uwsgi")
-    sudo("mkdir %s/logs && touch %s/logs/master.pid && mkdir /var/log/uwsgi && touch /var/log/uwsgi/phaidra_daemon.log" % env.directory)
+    local("ln -s %s/extras/nginx/phaidra.conf /etc/nginx/sites-enabled/phaidra.conf" % env.directory)
+    local("ln -s %s/extras/uwsgi/phaidra.ini /etc/uwsgi/apps-enabled/phaidra.ini" % env.directory)
+    local("mkdir /var/uwsgi")
+    local("chown www-data:www-data /var/uwsgi")
+    local("mkdir %s/logs && touch %s/logs/master.pid && mkdir /var/log/uwsgi && touch /var/log/uwsgi/phaidra_daemon.log" % env.directory)
 
 def setup_neo4j():
     version = local('java -version')
 
     if Decimal(version) < 1.7:
-        sudo('add-apt-repository ppa:webupd8team/java')
-        sudo('apt-get update')
-        sudo('apt-get install oracle-java7-installer')
-        sudo('update-java-alternatives -s java-7-oracle')
+        local('add-apt-repository ppa:webupd8team/java')
+        local('apt-get update')
+        local('apt-get install oracle-java7-installer')
+        local('update-java-alternatives -s java-7-oracle')
 
-    sudo('wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add -')
-    sudo("echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list")
-    sudo('apt-get update && apt-get install neo4j && service neo4j start')
+    local('wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add -')
+    local("echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list")
+    local('apt-get update && apt-get install neo4j && service neo4j start')
 
 def install():
     code_dir = '/opt/phaidra'
