@@ -2,6 +2,7 @@
 #from django.conf import settings
 from neo4jrestclient.client import GraphDatabase
 from xml.dom import minidom
+import os
 
 ################ set your alignment's meta data ################
 # The script assumes Alpheios alignment output with the references being unique in the document
@@ -9,29 +10,31 @@ from xml.dom import minidom
 # To adapt this, use alignNode.childNodes[1] and alignNode.childNodes[3] and 
 # ANY_NODE.attributes['ANY_ATTRIBUTE_NAME'].value
 
-xml_file = "tlg0003.tlg001.perseus-fas.xml"
-#xml_file = "tlg0003.tlg001.perseus-eng.xml"
+path = os.path.dirname(os.path.abspath(__file__))
+xml = "tlg0003.tlg001.perseus-fas.xml"
+#xml = "tlg0003.tlg001.perseus-eng.xml"
+xml_file = os.path.join(xml, path)
 
 # please use the two-character encoding for the target language's document CTS
-document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-fa"
+#document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-fa"
 #document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-hr"
-#document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-en"
+document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-en"
 
 # please use the three-character encoding for the source language's document CTS
 document_CTS_greek = "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
 
 # please use the two-character encoding for your target language
-target_lang = "fa"
+#target_lang = "fa"
 #target_lang = "hr"
-#target_lang = "en"
+target_lang = "en"
 
-author_in_target_lang = "توسیدید"
+#author_in_target_lang = "توسیدید"
 #author_in_target_lang = "Tukidid"
-#author_in_target_lang = "Thucydides"
+author_in_target_lang = "Thucydides"
 
-work_in_target_lang = "تاریخ پنجاه سال گذشته"
+#work_in_target_lang = "تاریخ پنجاه سال گذشته"
 #work_in_target_lang = "Povijest Peloponeskograta"
-#work_in_target_lang = "The Pentekontaetia"
+work_in_target_lang = "The Pentekontaetia"
 
 host = "http://localhost:7474/db/data/"
 

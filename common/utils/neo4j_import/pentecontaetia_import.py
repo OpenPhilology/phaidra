@@ -1,6 +1,7 @@
 # coding: utf8
 from neo4jrestclient.client import GraphDatabase
 import json
+import os
 
 ################ set your dump's meta data #####################
 
@@ -8,7 +9,8 @@ import json
 #author_in_source_lang = "Θουκυδίδης"
 #work_in_source_lang = "Πεντηκονταετία"
 #target_lang = "grc"
-dump_file = "pentecontaetia_dump.json"
+path = os.path.dirname(os.path.abspath(__file__))
+dump_file = os.path.join(path, "pentecontaetia_dump.json")
 host = "http://localhost:7474/db/data/"
 
 ################################################################

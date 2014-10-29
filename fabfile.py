@@ -52,6 +52,22 @@ def load_db():
         local('./manage.py migrate')
         local("./manage.py loaddata app/fixtures/db.json")
 
+@task
+def load_greek():
+    """
+    Load greek
+    """
+    with virtualenv():
+        local('python %s/common/utils/neo4j_import/pentecontaetia_import.py' % env.directory)
+
+@task
+def load_alignments():
+    """
+    Load alignment data.
+    """
+    with virtualenv():
+        local('python %s/common/utils/neo4j_import/pentecontaetia_import.py' % env.directory)
+
 ###############################
 # Backend Utility tasks       #
 ###############################
@@ -59,10 +75,9 @@ def restart_uwsgi():
     """
     Restarts uwsgi.
     """
-    with virtualenv():
-        with settings(warn_only=True):
-            local('killall uwsgi') 
-            local('uwsgi %s/extras/uwsgi/phaidra.ini' % env.directory)
+    with virtualenv(), settings(warn_only=True):
+        local('killall uwsgi') 
+        local('uwsgi %s/extras/uwsgi/phaidra.ini' % env.directory)
 
 @task
 def debug_uwsgi():
