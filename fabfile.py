@@ -53,20 +53,20 @@ def load_db():
         local("./manage.py loaddata app/fixtures/db.json")
 
 @task
-def load_greek():
+def import_neo4j():
     """
-    Load greek
+    Load Neo4j database dump.
     """
     with virtualenv():
         local('python %s/common/utils/neo4j_import/pentecontaetia_import.py' % env.directory)
 
 @task
-def load_alignments():
+def import_alignment():
     """
     Load alignment data.
     """
     with virtualenv():
-        local('python %s/common/utils/neo4j_import/pentecontaetia_import.py' % env.directory)
+        local('python %s/common/utils/neo4j_import/import_alignment.py' % env.directory)
 
 ###############################
 # Backend Utility tasks       #
@@ -108,6 +108,20 @@ def restart(full=False):
         )
         restart_uwsgi()
 
+@task
+def destroy_neo4j():
+    """
+    Removes the entire neo4j database and restarts the service
+    """
+    if confirm('WARNING: Are you sure you want to permanently destroy all data in Neo4j?'):
+        neo4j_dir = '/var/lib/neo4j'
+        local('sudo service neo4j-service stop')
+        local('sudo rm -rf %s/data' % neo4j_dir)
+        local('sudo mkdir %s/data' % neo4j_dir)
+        local('sudo mkdir %s/data/log' % neo4j_dir)
+        local("sudo chown -R neo4j:root %s/data" % neo4j_dir)
+        local('sudo service neo4j-service start')
+
 ###############################
 # Installation tasks          #
 ###############################
@@ -116,10 +130,12 @@ def init():
     """
     Most fundamental steps to initialize Phaidra install.
     """
-
     local('apt-get install python-software-properties python python-virtualenv python-dev libpq-dev')
+
     with lcd(env.directory):
-        local('virtualenv --no-site-packages env')
+        # Prevent attempts to create second env when running install more than once
+        if not os.path.isfile(env.activate):
+	    local('virtualenv --no-site-packages env')
 
     with virtualenv():
         local('pip install -r requirements.txt')
@@ -129,18 +145,19 @@ def setup_postgres():
     """
     Installs postgres and creates database for Django.
     """
+    # IMPORTANT: Postgres comes pre-installed on Ubuntu 12.04, but in some borked fashion
+    # It must be purged, then re-installed fresh (or else /etc/postgresql/ folder won't exist,
+    # and socket issues crop up.)
+    local('sudo apt-get remove --purge postgresql')
     local("sudo apt-get build-dep python-psycopg2")
     local("sudo apt-get install postgresql-9.1 postgresql-contrib")
 
     with settings(warn_only=True):
         result = local('sudo -u postgres createdb phaidra', capture=True)
     if result.failed:
-        if result.return_code == 1:
-            if confirm("WARNING: Database 'phaidra' already exists. Delete database contents?"):
-               local('sudo -u postgres dropdb phaidra') 
-               local('sudo -u postgres createdb phaidra')
-            else:
-                abort("You must delete the existing database named 'phaidra'.")
+        if confirm("WARNING: Database 'phaidra' already exists. Delete database contents?"):
+            local('sudo -u postgres dropdb phaidra') 
+            local('sudo -u postgres createdb phaidra')
         else:
             abort("Failed for unknown reason. Investigate postgres.")
 
@@ -152,9 +169,22 @@ def setup_frontend():
     """
     Installs frontend requirements.
     """
+    with lcd(env.directory):
+        # Github distributes submodules as blank folders. Remove, clear cache, then pull
+        submodules = ['daphnejs', 'moreajs']
+        
+        for module in submodules:
+            if os.path.exists('static/js/lib/%s' % module):
+                local('rmdir static/js/lib/%s' % module)            
+                local('git rm --cached static/js/lib/' % module)
+            local('git submodule add https://github.com/mlent/%(s)s.git static/js/lib/%(s)s' % { "s": module })
+
+    # Install Node
     local("add-apt-repository ppa:chris-lea/node.js")
     local("apt-get update")
     local("apt-get install nodejs")
+
+    # Install Frontend Depdencies
     local("npm install")
     local("npm install bower -g")
     local("bower install --allow-root")
@@ -185,9 +215,9 @@ def setup_server():
     nginx_conf = "%s/extras/nginx/phaidra.conf" % env.directory
     uwsgi_conf = "%s/extras/uwsgi/phaidra.ini" % env.directory
 
-    if not os.path.isfile(nginx_conf):
+    if not os.path.isfile('/etc/nginx/sites-enabled/phaidra.conf'):
         local('ln -s %s /etc/nginx/sites-enabled/phaidra.conf' % nginx_conf)
-    if not os.path.isfile(uwsgi_conf):
+    if not os.path.isfile('/etc/uwsgi/apps-enabled/phaidra.ini'):
         local('ln -s %s /etc/uwsgi/apps-enabled/phaidra.ini' % uwsgi_conf)
 
     # Create a safe place for the uwsgi socket to exist

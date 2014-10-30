@@ -10,31 +10,36 @@ import os
 # To adapt this, use alignNode.childNodes[1] and alignNode.childNodes[3] and 
 # ANY_NODE.attributes['ANY_ATTRIBUTE_NAME'].value
 
-path = os.path.dirname(os.path.abspath(__file__))
-xml = "tlg0003.tlg001.perseus-fas.xml"
-#xml = "tlg0003.tlg001.perseus-eng.xml"
-xml_file = os.path.join(xml, path)
+TARGET_LANGUAGE = 'en'
 
-# please use the two-character encoding for the target language's document CTS
-#document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-fa"
-#document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-hr"
-document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-en"
+class Document:
+    path = os.path.dirname(os.path.abspath(__file__))
 
-# please use the three-character encoding for the source language's document CTS
-document_CTS_greek = "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
+    def __init__(self, author, title, lang, locale, primary_source_urn):
+        self.author = author
+        self.title = title
+        self.lang = lang
+        self.locale = locale
+        self.primary_source_urn = primary_source_urn
+    
+    def cts(self):
+        return 'urn:cts:greekLit:tlg0003.tlg001.perseus-%s' % self.locale
 
-# please use the two-character encoding for your target language
-#target_lang = "fa"
-#target_lang = "hr"
-target_lang = "en"
+    def xml(self):
+        xml_file = 'tlg0003.tlg001.perseus-%s.xml' % self.lang
+        return os.path.join(self.path, xml_file)
 
-#author_in_target_lang = "توسیدید"
-#author_in_target_lang = "Tukidid"
-author_in_target_lang = "Thucydides"
+languages = {
+    'en': Document('Thucydides', 'The Pentecontaetia', 'eng', 'en', 
+        'urn:cts:greekLit:tlg0003.tlg001.perseus-grc'),
+    'fa': Document('ﺕﻮﺳیﺩیﺩ', 'ﺕﺍﺭیﺥ پﻦﺟﺎﻫ ﺱﺎﻟ گﺬﺸﺘﻫ', 'fas', 'fa', 
+        'urn:cts:greekLit:tlg0003.tlg001.perseus-grc'),
+    'hr': Document('Tukidid', 'Povijest Peloponeskograta', 'hrv', 'hr',
+        'urn:cts:greekLit:tlg0003.tlg001.perseus-grc')
+}
 
-#work_in_target_lang = "تاریخ پنجاه سال گذشته"
-#work_in_target_lang = "Povijest Peloponeskograta"
-work_in_target_lang = "The Pentekontaetia"
+document = languages[TARGET_LANGUAGE]
+document_CTS = document.primary_source_urn
 
 host = "http://localhost:7474/db/data/"
 
@@ -44,11 +49,15 @@ host = "http://localhost:7474/db/data/"
 gdb = GraphDatabase(host)
 
 # create the document node at the very beginning
-d = gdb.nodes.create(CTS=document_CTS, author=author_in_target_lang, name=work_in_target_lang, lang=target_lang)
+d = gdb.nodes.create(CTS=document.cts(), 
+        author=document.author, 
+        name=document.title, 
+        lang=document.locale)
+
 d.labels.add("Document") 
 
 # xml parser instance
-doc = minidom.parse(xml_file)
+doc = minidom.parse(document.xml())
 
 alignNode = doc.firstChild
 
@@ -78,7 +87,7 @@ for sent in alignNode.childNodes:
 				word = textNode.childNodes[0].toxml()				
 				
 				# create the translated word node here
-				w = gdb.nodes.create(CTS=document_CTS + ":" + word_id, value=word, length=len(word), lang=target_lang)
+				w = gdb.nodes.create(CTS=document_CTS + ":" + word_id, value=word, length=len(word), lang=document.lang)
 				w.labels.add("Word")
 				# set the relationship to the sentence
 				s.words(w)
@@ -91,7 +100,7 @@ for sent in alignNode.childNodes:
 						for ref in ref_string_array:
 							 if not ref == "":
 							 	# save the relationship, get the word node first
-							 	table = gdb.query("""MATCH (w) WHERE w.CTS='""" + document_CTS_greek + ":" + ref + """' RETURN w""")
+							 	table = gdb.query("""MATCH (w) WHERE w.CTS='""" + document.primary_source_urn + ":" + ref + """' RETURN w""")
 							 	greek_word = gdb.nodes.get(table[0][0]['self'])
 							 	greek_word.translation(w)
 							 	print "1) Target lang.: " + str(w.id)
@@ -116,7 +125,7 @@ for sent in alignNode.childNodes:
 				#word = textNode.childNodes[0].toxml()
 				
 				# get the word from the database
-				qry = gdb.query("""MATCH (w) WHERE w.CTS='""" + document_CTS_greek + ":" + word_id + """' RETURN w""")
+				qry = gdb.query("""MATCH (w) WHERE w.CTS='""" + document.primary_source_urn + ":" + word_id + """' RETURN w""")
 				greek_word = gdb.nodes.get(qry[0][0]['self'])
 				
 				# get the ref node
