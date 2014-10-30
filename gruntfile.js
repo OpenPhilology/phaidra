@@ -3,6 +3,9 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
 			ltr: {
+				options: {
+					style: 'compressed'
+				},
 				files: {
 					'static/css/ltr/create.css': 'static/css/create.scss',
 					'static/css/ltr/index.css': 'static/css/index.scss',
@@ -12,6 +15,9 @@ module.exports = function(grunt) {
 				}
 			},
 			rtl: {
+				options: {
+					style: 'compressed'
+				},
 				files: {
 					'static/css/rtl/create.css': 'static/css/create.scss',
 					'static/css/rtl/index.css': 'static/css/index.scss',
