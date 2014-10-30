@@ -11,4 +11,4 @@ class LanguageResource(ModelResource):
     class Meta:
         queryset = Language.objects.all()
         allowed_methods = ['get']
-
+        filtering = { 'short_code': ['exact'] } 

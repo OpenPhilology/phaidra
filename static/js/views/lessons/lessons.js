@@ -9,7 +9,7 @@ define(['jquery',
 			tagName: 'div',
 			className: 'row',
 			events: { 
-				'click .module': 'navigate'
+				'click a.module': 'navigate'
 			},
 			initialize: function(options) {
 				_.bindAll(this, 'checkScroll');
@@ -45,7 +45,7 @@ define(['jquery',
 				e.preventDefault();
 
 				// If they clicked outside the anchor, adjust target
-				if (e.target.tagName === 'DIV') 
+				if (e.target.tagName === 'IMG' || e.target.tagName === 'P') 
 					e.target = e.target.parentElement;
 
 				this.router.navigate(e.target.getAttribute('href'), { trigger: true });

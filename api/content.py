@@ -2,7 +2,7 @@
 Content resource for API endpoint
 """
 from tastypie import fields
-from tastypie.resources import ModelResource
+from tastypie.resources import ModelResource, ALL_WITH_RELATIONS
 from app.models import Content
 from api.grammar import GrammarResource
 from api.language import LanguageResource
@@ -37,7 +37,8 @@ class ContentResource(ModelResource):
     class Meta:
         queryset = Content.objects.all()
         allowed_methods = ['get']
+        filtering = { 'source_lang': ALL_WITH_RELATIONS }
     
     def dehydrate_content(self, bundle):
         return markdown.markdown(bundle.data['content'], 
-                                    ['markdown.extensions.tables', 'markdown.extensions.attr_list'])
+            ['markdown.extensions.tables', 'markdown.extensions.attr_list'])
