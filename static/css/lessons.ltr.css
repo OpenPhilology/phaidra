@@ -404,21 +404,6 @@ label {
   .pie-container #syn h3 {
     color: #523d5b; }
 
-.skill-summary {
-  text-align: center;
-  margin-top: 50px; }
-  .skill-summary .glyphicon {
-    display: block;
-    font-size: 7em; }
-    .skill-summary .glyphicon.glyphicon-flash {
-      color: #f4bc78; }
-    .skill-summary .glyphicon.glyphicon-fire {
-      color: #d15241; }
-    .skill-summary .glyphicon.glyphicon-eye-open {
-      color: #523d5b; }
-  .skill-summary p {
-    line-height: 2em; }
-
 .report {
   position: fixed;
   bottom: 0;
@@ -491,43 +476,38 @@ label {
 *	The lesson boxes visible on the lessons screen
 */
 .module-container {
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 2px;
-  padding: 20px;
-  text-align: center; }
-  .module-container .col-xs-1, .module-container .col-xs-2, .module-container .col-xs-3, .module-container .col-xs-4, .module-container .col-xs-5, .module-container .col-xs-6, .module-container .col-xs-7, .module-container .col-xs-8, .module-container .col-xs-9, .module-container .col-xs-10, .module-container .col-xs-11, .module-container .col-xs-12, .module-container .col-sm-1, .module-container .col-sm-2, .module-container .col-sm-3, .module-container .col-sm-4, .module-container .col-sm-5, .module-container .col-sm-6, .module-container .col-sm-7, .module-container .col-sm-8, .module-container .col-sm-9, .module-container .col-sm-10, .module-container .col-sm-11, .module-container .col-sm-12, .module-container .col-md-1, .module-container .col-md-2, .module-container .col-md-3, .module-container .col-md-4, .module-container .col-md-5, .module-container .col-md-6, .module-container .col-md-7, .module-container .col-md-8, .module-container .col-md-9, .module-container .col-md-10, .module-container .col-md-11, .module-container .col-md-12, .module-container .col-lg-1, .module-container .col-lg-2, .module-container .col-lg-3, .module-container .col-lg-4, .module-container .col-lg-5, .module-container .col-lg-6, .module-container .col-lg-7, .module-container .col-lg-8, .module-container .col-lg-9, .module-container .col-lg-10, .module-container .col-lg-11, .module-container .col-lg-12 {
-    padding-left: 5px;
-    padding-right: 5px; }
-
-div.module {
-  background-color: #DDD; }
+  padding-top: 20px;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
 
 .module {
-  border-radius: 3px;
   background-color: #b7becd;
   text-align: center;
   display: inline-block;
   padding: 20px;
-  margin-bottom: 10px;
   text-decoration: none;
   width: 100%;
-  min-height: 150px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 10px;
   vertical-align: top;
   position: relative;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
-  color: #333 !important; }
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1); }
   .module img {
     height: 65px; }
   .module:hover {
     text-decoration: none; }
-  .module.verbs {
+  .module[class*="verbs"] {
     background-color: #1fadad;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
-    .module.verbs:hover {
+    .module[class*="verbs"]:hover {
       background-color: #23c3c3;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
@@ -537,16 +517,14 @@ div.module {
       box-shadow: 2px 2px 3px #CCC;
       position: relative;
       top: -3px; }
-    .module.verbs h3 {
-      color: #FFF; }
-  .module.adjectives {
+  .module[class*="adjectives"] {
     background-color: #373e4e;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
-    .module.adjectives:hover {
+    .module[class*="adjectives"]:hover {
       background-color: #424a5d;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
@@ -556,16 +534,14 @@ div.module {
       box-shadow: 2px 2px 3px #CCC;
       position: relative;
       top: -3px; }
-    .module.adjectives h3 {
-      color: #FFF; }
-  .module.foundational {
+  .module[class*="foundational"] {
     background-color: #d15241;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
-    .module.foundational:hover {
+    .module[class*="foundational"]:hover {
       background-color: #d66556;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
@@ -575,16 +551,31 @@ div.module {
       box-shadow: 2px 2px 3px #CCC;
       position: relative;
       top: -3px; }
-    .module.foundational h3 {
-      color: #FFF; }
-  .module.nouns {
+  .module[class*="nouns"] {
+    background-color: #931926;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module[class*="nouns"]:hover {
+      background-color: #a91d2c;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+  .module[class*="participles"] {
     background-color: #f4bc78;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     -ms-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
-    .module.nouns:hover {
+    .module[class*="participles"]:hover {
       background-color: #f6c890;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
@@ -594,32 +585,30 @@ div.module {
       box-shadow: 2px 2px 3px #CCC;
       position: relative;
       top: -3px; }
-    .module.nouns h3 {
-      color: #FFF; }
-  .module h3 {
-    font-size: 12px;
-    font-weight: normal;
-    letter-spacing: 0.1em;
-    color: #999;
-    font-family: 'Helvetica';
-    margin-left: 10px;
-    margin-right: 10px; }
-  .module div {
+  .module[class*="adverbs"] {
+    background-color: #0ebba1;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module[class*="adverbs"]:hover {
+      background-color: #10d3b5;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+  .module p {
+    color: #eeeeee;
     position: absolute;
-    bottom: 10px;
-    text-align: center;
-    width: 100%;
-    margin-left: -20px;
-    margin-right: -20px; }
-  .module .circle {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: 2px; }
-    .module .circle.complete {
-      background-color: white; }
+    width: 80%;
+    top: 50%;
+    font-size: 14px;
+    line-height: 18px; }
 
 .alphabet {
   list-style-type: none;

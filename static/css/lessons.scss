@@ -6,32 +6,26 @@
 *	The lesson boxes visible on the lessons screen
 */
 .module-container {
-	background: rgba(255, 255, 255, 0.7);
-	border-radius: 2px;
-	padding: 20px;
+	padding-top: 20px;
 	text-align: center;
-	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-}
-div.module {
-	background-color: #DDD;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .module {
-	border-radius: 3px;
 	background-color: lighten($color-sec-two, 50%);
 	text-align: center;
 	display: inline-block;
 	padding: 20px;
-	margin-bottom: 10px;
 	text-decoration: none;
 	width: 100%;
-	min-height: 150px;
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	margin: 10px;
 	vertical-align: top;
 	position: relative;
 	box-shadow:	0px 0px 4px 0px rgba(0, 0, 0, .1);
-	color: #333 !important;
 
 	img {
 		height: 65px;
@@ -52,58 +46,34 @@ div.module {
 			position: relative;
 			top: -3px;
 		}
-
-		h3 {
-			color: #FFF;
-		}
 	}
 
-	&.verbs {
+	&[class*="verbs"] {
 		@include tile($color-pri-two);
 	}
-	&.adjectives {
+	&[class*="adjectives"] {
 		@include tile($color-sec-two);
 	}
-	&.foundational {
+	&[class*="foundational"] {
 		@include tile($color-pri-one);
 	}
-	&.nouns {
+	&[class*="nouns"] {
+		@include tile($color-sec-one);
+	}
+	&[class*="participles"] {
 		@include tile($color-sec-four);
 	}
-
-	h3 {
-		font-size: 12px;
-		font-weight: normal;
-		letter-spacing: 0.1em;
-		color: #999;
-		font-family: 'Helvetica';
-		margin-left: 10px;
-		margin-right: 10px;
+	&[class*="adverbs"] {
+		@include tile($color-sec-three);
 	}
 
-	div {
+	p {
+		color: $text-light-color;
 		position: absolute;
-		bottom: 10px;
-		text-align: center;
-		width: 100%;
-		margin-left: -20px;
-		margin-right: -20px;
-	}
-
-	.circle {
-
-		$circle-color: #FFF;
-
-		display: inline-block;
-		width: 13px;
-		height: 13px;
-		border: 2px solid $circle-color;
-		border-radius: 10px;
-		margin: 2px;
-
-		&.complete {
-			background-color: $circle-color;
-		}
+		width: 80%;
+		top: 50%;
+		font-size: 14px;
+		line-height: 18px;
 	}
 }
 
