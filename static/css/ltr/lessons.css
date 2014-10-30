@@ -71,7 +71,7 @@ blockquote {
   position: fixed;
   width: 100%;
   height: 43px;
-  z-index: 1; }
+  z-index: 50; }
   .banner #search-form {
     margin: 7px 0px; }
     .banner #search-form .form-group {
@@ -115,6 +115,7 @@ blockquote {
     text-decoration: none;
     font-size: 16px;
     letter-spacing: 0.1em;
+    height: 43px;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
@@ -129,6 +130,7 @@ blockquote {
       transition: background-color 0.2s ease-in; }
     .navigation a.active {
       background-color: #4c566c;
+      border-bottom: 4px solid #000;
       -webkit-transition: background-color 0.2s ease-in;
       -moz-transition: background-color 0.2s ease-in;
       -o-transition: background-color 0.2s ease-in;
@@ -144,10 +146,20 @@ blockquote {
       font-size: 11px; }
     .navigation a.progress-book {
       color: #eeeeee; }
+      .navigation a.progress-book.active {
+        border-color: #1fadad; }
     .navigation a.progress-voc {
       color: #eeeeee; }
+      .navigation a.progress-voc.active {
+        border-color: #d66556; }
     .navigation a.progress-lessons {
       color: #eeeeee; }
+      .navigation a.progress-lessons.active {
+        border-color: #f4bc78; }
+    .navigation a.progress-home {
+      color: #eeeeee; }
+      .navigation a.progress-home.active {
+        border-color: #EEE; }
 
 .user-info {
   margin: 4px; }
@@ -234,7 +246,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Garamond'; }
 
 .btn {
-  border: 1px solid #EEE;
   text-decoration: none;
   border-radius: 2px; }
   .btn.btn-link {
@@ -242,8 +253,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #1fadad;
     text-decoration: none; }
 
-.nav-pills > li.active {
-  background-color: #373e4e; }
+.nav-pills > li.active > a {
+  background-color: #d15241; }
+  .nav-pills > li.active > a:hover {
+    background-color: #c84230; }
 
 .nav > li > a {
   padding: 8px 10px; }
@@ -391,21 +404,6 @@ label {
   .pie-container #syn h3 {
     color: #523d5b; }
 
-.skill-summary {
-  text-align: center;
-  margin-top: 50px; }
-  .skill-summary .glyphicon {
-    display: block;
-    font-size: 7em; }
-    .skill-summary .glyphicon.glyphicon-flash {
-      color: #f4bc78; }
-    .skill-summary .glyphicon.glyphicon-fire {
-      color: #d15241; }
-    .skill-summary .glyphicon.glyphicon-eye-open {
-      color: #523d5b; }
-  .skill-summary p {
-    line-height: 2em; }
-
 .report {
   position: fixed;
   bottom: 0;
@@ -470,3 +468,328 @@ label {
       content: attr(data-title);
       height: 25px;
       line-height: 22px; }
+
+.module-container {
+  padding-top: 20px;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.module {
+  background-color: #b7becd;
+  text-align: center;
+  display: inline-block;
+  padding: 20px;
+  text-decoration: none;
+  width: 100%;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 10px;
+  vertical-align: top;
+  position: relative;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1); }
+  .module img {
+    height: 65px; }
+  .module:hover {
+    text-decoration: none; }
+  .module[class*="verbs"] {
+    background-color: #1fadad;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module[class*="verbs"]:hover {
+      background-color: #23c3c3;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+  .module[class*="adjectives"] {
+    background-color: #373e4e;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module[class*="adjectives"]:hover {
+      background-color: #424a5d;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+  .module[class*="foundational"] {
+    background-color: #d15241;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module[class*="foundational"]:hover {
+      background-color: #d66556;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+  .module[class*="nouns"] {
+    background-color: #931926;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module[class*="nouns"]:hover {
+      background-color: #a91d2c;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+  .module[class*="participles"] {
+    background-color: #f4bc78;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module[class*="participles"]:hover {
+      background-color: #f6c890;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+  .module[class*="adverbs"] {
+    background-color: #0ebba1;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .module[class*="adverbs"]:hover {
+      background-color: #10d3b5;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      -ms-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+      box-shadow: 2px 2px 3px #CCC;
+      position: relative;
+      top: -3px; }
+  .module p {
+    color: #eeeeee;
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    font-size: 14px;
+    line-height: 18px; }
+
+.alphabet {
+  list-style-type: none;
+  border: 1px solid #EEE;
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 20px !important; }
+  .alphabet li {
+    font-family: 'Cambria', 'Times New Romans' !important;
+    display: inline;
+    font-size: 24px;
+    padding: 5px 10px;
+    color: #AAA;
+    margin-left: -3px;
+    margin-right: -3px; }
+    .alphabet li.learned {
+      color: #333;
+      background-color: #efc2bc; }
+    .alphabet li.current {
+      color: #FFF;
+      background-color: #d15241; }
+
+.letter {
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box; }
+  .letter img {
+    height: 200px;
+    max-width: 200px;
+    max-width: 100%; }
+  .letter.bg-light {
+    background-color: #F4CDA2; }
+  .letter.bg-med {
+    background-color: #b8e0e0; }
+  .letter.bg-dark {
+    background-color: #9097a8; }
+  .letter hr {
+    border: 1px solid #FFF; }
+  .letter a {
+    background-color: #FFF;
+    padding: 6px 9px 3px 6px;
+    border-radius: 2px;
+    margin: 6px; }
+
+/*
+*	Used in lessons to show the parts of the word
+*	e.g. past indicative augment, stem, ending.
+*/
+.word-breakdown {
+  text-align: center; }
+  .word-breakdown table {
+    margin-left: auto;
+    margin-right: auto; }
+  .word-breakdown td {
+    padding: 10px; }
+  .word-breakdown td.part span[lang="grc"] {
+    font-size: 3em; }
+  .word-breakdown td.part hr {
+    margin-bottom: 0;
+    border-top: 1px solid #888; }
+  .word-breakdown td.part .caret {
+    color: #AAA;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+/*
+*	Styles inflection tables
+*/
+table.inflection-table {
+  font-size: 0.9em; }
+  table.inflection-table span[lang="grc"] strong {
+    color: #1fadad;
+    background-color: #f5f5f5;
+    padding: 3px; }
+  table.inflection-table tr.current {
+    background-color: #d15241;
+    color: #FFF; }
+    table.inflection-table tr.current span[lang="grc"] {
+      color: #FFF; }
+      table.inflection-table tr.current span[lang="grc"] em {
+        color: #1fadad;
+        background-color: #FFF; }
+  table.inflection-table tr.future span[lang="grc"] {
+    color: #CCC; }
+  table.inflection-table tr.past {
+    color: #333; }
+    table.inflection-table tr.past span[lang="grc"] {
+      color: #333; }
+
+.alert.as-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0;
+  height: 43px;
+  font-size: 14px;
+  padding: 10px;
+  overflow: hidden;
+  line-height: 26px; }
+  .alert.as-header a.btn {
+    margin: -5px 5px -5px -5px; }
+
+.new-knowledge span.glyphicon {
+  margin-left: 10px;
+  margin-right: 10px; }
+  .new-knowledge span.glyphicon.glyphicon-flash {
+    color: #f4bc78; }
+  .new-knowledge span.glyphicon.glyphicon-inbox {
+    color: #1fadad; }
+  .new-knowledge span.glyphicon.glyphicon-bookmark {
+    color: #d15241; }
+
+.task {
+  margin-left: auto;
+  margin-right: auto; }
+  .task h1, .task h2, .task h3 {
+    text-align: center; }
+  .task h1 {
+    font-size: 3em; }
+  .task.active {
+    display: block; }
+  .task p {
+    text-align: center; }
+  .task .alt-definitions {
+    color: #999;
+    text-align: center;
+    font-style: italic; }
+  .task .btn {
+    margin-left: auto;
+    margin-right: auto; }
+  .task .parse-tree {
+    display: none;
+    text-align: center; }
+    .task .parse-tree.open {
+      display: block; }
+  .task .vocab-notes-container p {
+    text-align: left; }
+  .task .glyphicon {
+    margin-right: 10px; }
+  .task ul.nav a {
+    font-size: 12px; }
+  .task .greek-sentence .correct {
+    color: #49a556;
+    font-weight: bold; }
+  .task .greek-sentence .incorrect {
+    color: #d15241;
+    font-weight: bold; }
+
+.microlesson {
+  height: 100%; }
+  .microlesson ul.study-notes-nav {
+    margin-top: 20px;
+    list-style-type: none;
+    font-size: 12px;
+    position: fixed;
+    left: 33%;
+    line-height: 20px; }
+    .microlesson ul.study-notes-nav a {
+      padding: 20px;
+      border-radius: 3px;
+      margin-bottom: 2px; }
+  .microlesson .study-notes {
+    border: 1px solid #222630;
+    padding: 20px;
+    box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, 0.1);
+    background-color: #373e4e;
+    height: 100%;
+    overflow: scroll; }
+  .microlesson .left-nav {
+    height: 100%;
+    width: 33%;
+    padding: 0; }
+  .microlesson .task {
+    position: fixed;
+    left: 33%; }
+  .microlesson table {
+    width: 100%; }
+  .microlesson tr, .microlesson td {
+    border-bottom: 1px solid #DDD;
+    padding: 8px; }
+
+.answer-box {
+  background-color: #f4f9f5;
+  padding: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
