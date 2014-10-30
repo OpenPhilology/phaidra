@@ -5,8 +5,8 @@ from contextlib import contextmanager
 import os
 
 git_repo = 'git@github.com:OpenPhilology/phaidra.git'
-env.directory = '/opt/phaidra'
-env.activate = '. /opt/phaidra/env/bin/activate'
+env.directory = os.path.dirname(os.path.abspath(__file__))
+env.activate = '. %s/env/bin/activate' % env.directory
 env.hosts = ['localhost']
 
 @contextmanager
@@ -41,7 +41,7 @@ def propagate_db():
     Creates a dump of the postgres database
     """
     with virtualenv():
-        local("./manage.py dumpdata --natural --indent=4 --exclude=contenttypes --exclude=auth --exclude=tastypie > %s/app/fixtures/db.json" % env.directory)
+        local("./manage.py dumpdata --natural --indent=4 --exclude=contenttypes --exclude=auth --exclude=tastypie > app/fixtures/db.json")
 
 @task
 def load_db():
