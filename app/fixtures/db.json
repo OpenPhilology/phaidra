@@ -73,16 +73,16 @@
 },
 {
     "fields": {
-        "graphic": null,
-        "name": "Nouns"
+        "graphic": "icon_grk_amphora.png",
+        "name": "Nouns First Declension"
     },
     "model": "app.category",
     "pk": 1
 },
 {
     "fields": {
-        "graphic": null,
-        "name": "Verbs"
+        "graphic": "icon_grk_monster.png",
+        "name": "Verbs Present Tense"
     },
     "model": "app.category",
     "pk": 2
@@ -90,7 +90,7 @@
 {
     "fields": {
         "graphic": "icon_grk_parthenon.png",
-        "name": "Adjectives"
+        "name": "Adjectives Two Termination"
     },
     "model": "app.category",
     "pk": 3
@@ -126,6 +126,78 @@
     },
     "model": "app.category",
     "pk": 7
+},
+{
+    "fields": {
+        "graphic": "icon_grk_amphora.png",
+        "name": "Nouns Second Declension"
+    },
+    "model": "app.category",
+    "pk": 8
+},
+{
+    "fields": {
+        "graphic": "icon_grk_amphora.png",
+        "name": "Nouns Third Declension"
+    },
+    "model": "app.category",
+    "pk": 9
+},
+{
+    "fields": {
+        "graphic": "icon_grk_amphora.png",
+        "name": "Verbs Future Tense"
+    },
+    "model": "app.category",
+    "pk": 10
+},
+{
+    "fields": {
+        "graphic": "icon_grk_amphora.png",
+        "name": "Verbs Aorist Tense"
+    },
+    "model": "app.category",
+    "pk": 11
+},
+{
+    "fields": {
+        "graphic": "icon_grk_monster.png",
+        "name": "Verbs Perfect Tense"
+    },
+    "model": "app.category",
+    "pk": 12
+},
+{
+    "fields": {
+        "graphic": "alphabet/pi.svg",
+        "name": "Verbs Imperfect Tense"
+    },
+    "model": "app.category",
+    "pk": 13
+},
+{
+    "fields": {
+        "graphic": "icon_grk_amphora.png",
+        "name": "Verbs Future Perfect Tense"
+    },
+    "model": "app.category",
+    "pk": 14
+},
+{
+    "fields": {
+        "graphic": "icon_grk_parthenon.png",
+        "name": "Verbs Pluperfect Tense"
+    },
+    "model": "app.category",
+    "pk": 15
+},
+{
+    "fields": {
+        "graphic": "icon_grk_monster.png",
+        "name": "Adjectives Three Termination"
+    },
+    "model": "app.category",
+    "pk": 16
 },
 {
     "fields": {
@@ -2923,7 +2995,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Verbs: Present Indicative Active_ToBe_conjugation",
-        "content": "### \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03b5\u1f30\u03bc\u03af | I am  \r\n2nd | \u03b5\u1f36 | You are  \r\n3rd | \u1f10\u03c3\u03c4\u03af(\u03bd) | He/She/It is | **Plural**  \r\n1st | \u1f10\u03c3\u03bc\u03ad\u03bd | We are  \r\n2nd | \u1f10\u03c3\u03c4\u03ad | You are  \r\n3rd | \u03b5\u1f30\u03c3\u03af(\u03bd) | They are  \r\n  \r\n## Present Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n* * *\r\n\r\n",
+        "content": "# \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03b5\u1f30\u03bc\u03af | I am  \r\n2nd | \u03b5\u1f36 | You are  \r\n3rd | \u1f10\u03c3\u03c4\u03af(\u03bd) | He/She/It is | **Plural**  \r\n1st | \u1f10\u03c3\u03bc\u03ad\u03bd | We are  \r\n2nd | \u1f10\u03c3\u03c4\u03ad | You are  \r\n3rd | \u03b5\u1f30\u03c3\u03af(\u03bd) | They are  \r\n\r\n* * *\r\n\r\n### Present Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n\r\n",
         "grammar_ref": 45,
         "related_content": [],
         "source_lang": 4
@@ -3910,9 +3982,9 @@
         "content": "### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nAorist Active Indicative -- \u1f14\u03c0\u03b5\u03bc\u03c8\u03b1, _I sent_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1\u03c2** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b5(\u03bd)** | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n#### Aorist Indicative Active for Stop Verbs\r\n\r\nThe aorist stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n  \r\n\r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u1f14\u03bb\u03b5**\u03be**\u03b1, _I said_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u1f14\u03c0\u03b5\u03bc**\u03c8**\u03b1, _I sent_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u1f14\u03c0\u03b5\u03b9**\u03c3**\u03b1, _I persuaded_\r\n\r\n####\r\n\r\n",
         "grammar_ref": 61,
         "related_content": [
-            456,
             458,
-            454
+            454,
+            456
         ],
         "source_lang": 4
     },
@@ -13884,7 +13956,7 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-10-21T14:10:57.000Z",
+        "action_time": "2014-10-21T14:10:57Z",
         "object_repr": "Verbs: Aorist Indicative Active for Stop Verbs",
         "object_id": "453",
         "change_message": "Changed title.",
@@ -18866,5 +18938,293 @@
     },
     "model": "admin.logentry",
     "pk": 824
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-30T18:14:33.116Z",
+        "object_repr": "Verbs: Present Indicative Active_ToBe_conjugation",
+        "object_id": "371",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 825
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-30T18:44:10.386Z",
+        "object_repr": "Nouns-first-declension",
+        "object_id": "1",
+        "change_message": "Changed name and graphic.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 826
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-30T18:44:27.117Z",
+        "object_repr": "Nouns-second-declension",
+        "object_id": "8",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 827
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-30T18:45:05.480Z",
+        "object_repr": "Nouns Third Declension",
+        "object_id": "9",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 828
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-30T18:45:13.069Z",
+        "object_repr": "Nouns First Declension",
+        "object_id": "1",
+        "change_message": "Changed name.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 829
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-30T18:45:20.252Z",
+        "object_repr": "Nouns Second Declension",
+        "object_id": "8",
+        "change_message": "Changed name.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 830
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-30T18:45:36.388Z",
+        "object_repr": "Verbs Present Tense",
+        "object_id": "2",
+        "change_message": "Changed name and graphic.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 831
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-30T18:45:48.030Z",
+        "object_repr": "Verbs Future Tense",
+        "object_id": "10",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 832
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-30T18:45:58.027Z",
+        "object_repr": "Verbs Aorist Tense",
+        "object_id": "11",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 833
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-30T18:46:08.126Z",
+        "object_repr": "Verbs Perfect Tense",
+        "object_id": "12",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 834
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-30T18:46:17.252Z",
+        "object_repr": "Verbs Imperfect Tense",
+        "object_id": "13",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 835
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-30T18:46:32.358Z",
+        "object_repr": "Verbs Future Perfect Tense",
+        "object_id": "14",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 836
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-30T18:46:44.882Z",
+        "object_repr": "Verbs Pluperfect Tense",
+        "object_id": "15",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 837
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-30T18:47:00.101Z",
+        "object_repr": "Adjectives Two Termination",
+        "object_id": "3",
+        "change_message": "Changed name.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 838
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-10-30T18:47:10.395Z",
+        "object_repr": "Adjectives Three Termination",
+        "object_id": "16",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 839
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-10-30T19:25:58.379Z",
+        "object_repr": "Verbs Present Tense",
+        "object_id": "2",
+        "change_message": "Changed graphic.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 840
 }
 ]
