@@ -15,12 +15,13 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'utils'], function($,
 					this._meta[prop] = value;
 			};
 			
-			this.meta('grammar', options.grammar);
-			this.meta('topic', options.topic);
+			if (options) {
+				this.meta('grammar', options.grammar);
 
-			// In lessons, word collection has limited range
-			if (options.topic) {
-				this.url = '/api/v1/word/?' + options.topic.get('query');
+				if (options.topic) {
+					this.meta('topic', options.topic);
+					this.url = '/api/v1/word/?' + options.topic.get('query');
+				}
 			}
 		},
 		parse: function(response) {

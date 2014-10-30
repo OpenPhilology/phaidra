@@ -19,7 +19,6 @@
 
 	<!-- Greek goes here! -->
 	<span class="page-content">
-		<a href="#" class="comment" data-toggle="tooltip" title="{% trans 'Annotate' %}">+</a>
 		<% _.each(words, function(word) { %>
 			<% if (word.get('sentenceCTS') == cts) { %>
 				<span lang="<%= word.get('lang') %>" data-cts="<%= word.get('wordCTS') %>" class="<% if (word.get('value').match(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/)) print('punct'); %>"><%= word.get('value') %></span> 
