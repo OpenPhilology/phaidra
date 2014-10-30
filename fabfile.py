@@ -2,6 +2,7 @@ from fabric.api import *
 from fabric.contrib.console import confirm
 from fabric.contrib.files import comment, uncomment
 from contextlib import contextmanager
+import getpass
 import os
 
 git_repo = 'git@github.com:OpenPhilology/phaidra.git'
@@ -148,7 +149,7 @@ def setup_postgres():
     # IMPORTANT: Postgres comes pre-installed on Ubuntu 12.04, but in some borked fashion
     # It must be purged, then re-installed fresh (or else /etc/postgresql/ folder won't exist,
     # and socket issues crop up.)
-    local('sudo apt-get remove --purge postgresql')
+    local('sudo apt-get remove --purge postgresql postgresql-9.1')
     local("sudo apt-get build-dep python-psycopg2")
     local("sudo apt-get install postgresql-9.1 postgresql-contrib")
 
@@ -175,8 +176,8 @@ def setup_frontend():
         
         for module in submodules:
             if os.path.exists('static/js/lib/%s' % module):
-                local('rmdir static/js/lib/%s' % module)            
-                local('git rm --cached static/js/lib/' % module)
+                local('rm -rf static/js/lib/%s' % module)         
+            local('git rm --cached static/js/lib/%s' % module)
             local('git submodule add https://github.com/mlent/%(s)s.git static/js/lib/%(s)s' % { "s": module })
 
     # Install Node
@@ -195,7 +196,7 @@ def setup_django():
     Sets up django, prompts to create super user. 
     """
     with virtualenv():
-        local("./manage.py collectstatic") 
+        local("./manage.py collectstatic --noinput") 
         local('./manage.py migrate')
         load_db()
         local('./manage.py createsuperuser')
@@ -268,6 +269,7 @@ def install():
     """
     code_dir = '/opt/phaidra'
     with cd(code_dir):
+        env.password = getpass.getpass()
         init()
         setup_postgres()
         setup_frontend()
@@ -275,3 +277,5 @@ def install():
         setup_server()
         setup_neo4j()
         restart()
+        import_neo4j()
+        import_alignment()
