@@ -4,7 +4,7 @@ Content resource for API endpoint
 from tastypie import fields
 from tastypie.resources import ModelResource, ALL_WITH_RELATIONS
 from app.models import Content
-from api.grammar import GrammarResource
+#from api.grammar import GrammarResource
 from api.language import LanguageResource
 from api.shallow_content import ShallowContentResource
 import markdown
@@ -22,7 +22,7 @@ class ContentResource(ModelResource):
                                     blank=True, 
                                     full=True)
 
-    grammar_ref = fields.ToOneField(GrammarResource, 
+    grammar_ref = fields.ToOneField('api.grammar.GrammarResource', 
                                     'grammar_ref', 
                                     null=True, 
                                     blank=True)
