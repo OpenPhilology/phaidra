@@ -1,5 +1,7 @@
+$dir: rtl !default;
+
 // directional-scss | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT
-$dir: ltr !default;
+@import "dirs/ltr";
 
 // Default $dir if not valid
 @if $dir != ltr and $dir != rtl {

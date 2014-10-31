@@ -1,4 +1,4 @@
-@import "directional";
+@import "_directional";
 
 /*
 *	Global CSS
@@ -29,7 +29,7 @@ $color-pri-three: #523D5B;		// Purple
 $color-sec-one: #931926;		// Deep red
 $color-sec-two: #373E4E; //#4E6087;		// Indigo
 $color-sec-two-lighter: #62749C; 
-$color-sec-three: #F05629;	 	// Orange
+$color-sec-three: #0EBBA1;	 	// Seafoam
 $color-sec-four: #F4BC78;		// Yellow
 
 $color-light-green: #A3D55F;
@@ -440,28 +440,6 @@ label {
 	}
 	#syn h3 {
 		color: $color-pri-three;
-	}
-}
-.skill-summary {
-	text-align: center;
-	margin-top: 50px;
-
-	.glyphicon {
-		display: block;
-		font-size: 7em;
-
-		&.glyphicon-flash {
-			color: $color-sec-four;
-		}
-		&.glyphicon-fire {
-			color: $color-pri-one;
-		}
-		&.glyphicon-eye-open {
-			color: $color-pri-three;
-		}
-	}
-	p {
-		line-height: 2em;
 	}
 }
 .report {

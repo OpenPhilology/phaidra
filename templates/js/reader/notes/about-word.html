@@ -22,7 +22,7 @@
 <div class="col-md-6">
 	<h4>{% trans "Related Grammar Topics" %}</h4>
 	<ul>
-	<% if (grammar.length > 0) { %>
+	<% if (grammar && grammar.length > 0) { %>
 		<% _.each(grammar, function(entry, index) { %>
 			<% if (index < 5) { %>
 				<li><a href="/grammar/<%= entry.key %>"><%= entry.title %></a></li>
