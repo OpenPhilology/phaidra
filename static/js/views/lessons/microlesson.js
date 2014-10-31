@@ -50,9 +50,15 @@ define(['jquery',
 			},
 			render: function(model) {
 				this.model = model;
+
+				// Localize the content
+				content = this.model.get('content').filter(function(text) {
+					return text.source_lang.short_code === LOCALE;
+				});
+
 				this.$el.html(this.template({
 					model: this.model,
-					content: this.model.get('content')
+					content: content
 				}));	
 				this.$el.find('[data-toggle="tooltip"]').tooltip();
 				this.renderTask();

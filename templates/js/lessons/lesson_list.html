@@ -1,6 +1,8 @@
 <% _.each(topics, function(topic) { %>
-	<a href="/<%= LOCALE %>/lessons/<%= topic.get('id') %>" class="module <%= topic.get('category').name.toLowerCase().split(' ').join('-') %>">
-		<img src="/static/images/<%= topic.get('category').graphic %>">
-		<p><%= topic.get('title') %></p>
-	</a>
+	<% if (topic.get('titles')[LOCALE] !== undefined) { %>
+		<a href="/<%= LOCALE %>/lessons/<%= topic.get('id') %>" class="module <%= topic.get('category').name.toLowerCase().split(' ').join('-') %>">
+			<img src="/static/images/<%= topic.get('category').graphic %>">
+			<p><% print(topic.get('titles')[LOCALE]) %></p>
+		</a>
+	<% } %>
 <% }); %>

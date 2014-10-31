@@ -35,7 +35,7 @@ class GrammarResource(ModelResource):
         queryset = Grammar.objects.all()
         allowed_methods = ['get']
 
-    def build_title(func, memo, content):
+    def build_title(self, memo, content):
         lang = content.source_lang.short_code
         memo[lang] = content 
 
