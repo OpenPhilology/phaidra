@@ -15,6 +15,7 @@ define(['jquery',
 
 				var that = this;
 				this.options = options;
+				this.user = options.user;
 
 				this.model = this.collection.findWhere({ index: options.index });
 
@@ -58,16 +59,11 @@ define(['jquery',
 
 				this.$el.html(this.template({
 					model: this.model,
-					content: content
+					content: content,
+					user: this.user
 				}));	
 				this.$el.find('[data-toggle="tooltip"]').tooltip();
 				this.renderTask();
-
-				// Now that the template is filled out, append admin options
-				var that = this;
-				this.user.fetch({
-					success: that.renderAdminOptions.bind(that)
-				});
 
 				return this;
 			},

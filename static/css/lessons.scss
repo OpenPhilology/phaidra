@@ -355,3 +355,12 @@ table.inflection-table {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+// Grammar panels
+.panel .admin-link {
+	float: right;
+}
+.panel-heading .admin-link {
+	margin-top: -8px;
+	margin-right: -5px;
+}
