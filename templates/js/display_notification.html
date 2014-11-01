@@ -1,0 +1,18 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title"><%= title %></h4>
+		</div>
+		<div class="modal-body">
+			<p><%= message %></p>
+		</div>
+		<div class="modal-footer">
+			<% console.log(state); %>
+			<% if (state == 'error') { %>
+				<a href="<%= options.url %>" class="btn btn-danger"><%= options.btnName %></a>
+			<% } else { %>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<% } %>
+		</div>
+	</div>
+</div>

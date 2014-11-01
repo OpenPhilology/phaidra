@@ -57,6 +57,11 @@ define(['jquery',
 					return text.source_lang.short_code === LOCALE;
 				});
 
+				if (content.length === 0) {
+					this.displayError('This lesson has not been translated into your selected language');
+					return this;
+				}
+
 				this.$el.html(this.template({
 					model: this.model,
 					content: content,
@@ -67,16 +72,15 @@ define(['jquery',
 
 				return this;
 			},
-			renderAdminOptions: function() {
-				if (!this.user.get('is_superuser')) return;
+			displayError: function(msg) {
+				var title = 'An Error Occured';
+				msg = msg || 'Apologies for the inconvenience.';
 
-				// TODO: Find a better way of doing this
-				var panels = this.$el.find('.panel-heading');
-				panels.each(function(i, el) {
-					var id = $(el).find('a').data('id');
-					$(el).prepend('<a target="_blank" href="/admin/app/content/' + 
-						id + '" style="float: right">Edit</a>');
-				});
+				Utils.displayNotification(title, msg, {
+					state: 'error', 
+					url: '/lessons', 
+					btnName: 'Back to Lessons'
+				});		
 			},
 			renderTask: function() {
 				if (!this.tasks) {
@@ -140,9 +144,6 @@ define(['jquery',
 					});
 				});
 				this.$el.find('.vocab-notes div[data-source="parse-tree"]').show();
-			},
-			displayError: function(msg) {
-				console.log(msg);
 			}
 		});
 	}

@@ -1,8 +1,23 @@
 // Here is where we will localize the textbook content (i.e. loading de_content.json)
 
-define([], function() {
+define(['text!/templates/js/display_notification.html'], function(NotificationTemplate) {
 
 	var Utils = {};
+
+	Utils.displayNotification = function(title, message, options) {
+		options = options || {};
+		var state = options.state || 'ok';
+		var el = $('#notification-modal');
+		var template = _.template(NotificationTemplate);
+		el.html(template({
+			title: title,
+			message: message,
+			state: options.state,
+			options: options
+		}));
+
+		el.modal().show();
+	};
 
 	Utils.removeQueryParam = function(query, toRemove) {
 		var parts = query.split('&'), adjusted = '';
