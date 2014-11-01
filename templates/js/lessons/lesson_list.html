@@ -4,5 +4,12 @@
 			<img src="/static/images/<%= topic.get('category').graphic %>">
 			<p><% print(topic.get('titles')[LOCALE]) %></p>
 		</a>
+	<% } else { %>
+		<% if (user.get('is_superuser')) { %>
+			<a href="/admin/app/content/add/?grammar_ref=<%= topic.get('id') %>" class="module admin" target="_blank">
+				<span class="glyphicon glyphicon glyphicon-plus-sign"></span>
+				<p><strong>ADD UNIT</strong><br><%= topic.get('title') %></p>
+			</a>
+		<% } %>
 	<% } %>
 <% }); %>

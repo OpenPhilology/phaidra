@@ -14,11 +14,9 @@ require(['jquery', 'underscore', 'backbone', 'd3', 'bootstrap'], function($, _, 
 		// TODO: Investigate more flexible ways of doing this 
 		switch(app) {
 			case "lessons":
-			case "module":
 				require(['apps/lesson-router'], function(Router) {
+					// Backbone.history.start() is called within the router itself
 					new Router();
-					Backbone.history.start({ pushState: true });
-					activateBootstrap();
 				});
 				break;
 			case "reader":

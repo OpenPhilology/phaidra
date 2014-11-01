@@ -15,6 +15,7 @@ define(['jquery',
 				_.bindAll(this, 'checkScroll');
 				$(window).scroll(this.checkScroll);
 
+				this.user = options.user;
 				this.isLoading = false;
 				this.router = options.router;
 			},
@@ -29,7 +30,11 @@ define(['jquery',
 				this.collection.fetch({
 					success: function(topics) {
 						var template = _.template(LessonListTemplate);
-						that.$el.append(template({ topics: topics.models, LOCALE: LOCALE })); 
+						that.$el.append(template({
+							topics: topics.models, 
+							LOCALE: LOCALE, 
+							user: that.user 
+						})); 
 						that.isLoading = false;
 					}
 				});
@@ -42,13 +47,16 @@ define(['jquery',
 				}
 			},
 			navigate: function(e) {
-				e.preventDefault();
 
 				// If they clicked outside the anchor, adjust target
 				if (e.target.tagName === 'IMG' || e.target.tagName === 'P') 
 					e.target = e.target.parentElement;
 
-				this.router.navigate(e.target.getAttribute('href'), { trigger: true });
+				// Make the link follow-through 
+				if (e.target.classList.indexOf('admin') !== -1) {
+					e.preventDefault();
+					this.router.navigate(e.target.getAttribute('href'), { trigger: true });
+				}
 			}
 		});
 	}

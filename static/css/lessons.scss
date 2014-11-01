@@ -59,7 +59,17 @@
 		@include tile($color-sec-four);
 	}
 	&[class*="adverbs"] {
-		@include tile($color-sec-three);
+		@include tile($color-pri-three);
+	}
+	&[class*="admin"] {
+		@include tile(#DDE3EC);
+		span.glyphicon {
+			color: $color-pri-one;
+			font-size: 56px;
+		}
+		p {
+			color: #333;
+		}
 	}
 
 	p {

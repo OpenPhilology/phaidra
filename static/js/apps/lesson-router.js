@@ -13,12 +13,24 @@ define(['jquery',
 
 		return Backbone.Router.extend({
 			initialize: function(options) {
-				this.route(/^(.*?)\/lessons\/(.*?)$/, 'showLessons');
-				this.route(/^(.*?)\/lessons\/(.+)$/, 'showMicrolesson');
+				
+				var that = this;
 
 				// Topics Collection used by both Lesson and Microlesson Views
 				this.topicsCollection = new TopicsCollection();
 				this.user = new UserModel();
+
+				// Defer routing until our collections are fetched
+				var complete = _.invoke([that.topicsCollection, that.user], 'fetch');
+
+				// Then assign routes and trigger routing
+				$.when.apply($, complete).done(function() {
+
+					that.route(/^(.*?)\/lessons\/(.*?)$/, 'showLessons');
+					that.route(/^(.*?)\/lessons\/(.+)$/, 'showMicrolesson');
+					Backbone.history.start({ pushState: true });
+
+				}.bind(this));
 			},
 			showLessons: function(lang) {
 				this.hideMicrolesson();
