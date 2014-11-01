@@ -209,7 +209,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-10-20T13:38:14.126Z",
+        "last_login": "2014-11-01T14:40:22.175Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$OQeapR8t70Mz$t/UHAUZyIUG0Zxl7LFYDup2wSpLox0Qo9t6XoUzZGBc=",
@@ -1987,7 +1987,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Nouns: First Declension_originalexample",
-        "content": "### First Declension: 3 groups\r\n\r\nCase | I. | II. | III.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | -\u03b1 | -\u03b7 | -\u03b7\u03c2  \r\nGen. | -\u03b1\u03c2 | -\u03b7\u03c2 | -\u03bf\u03c5  \r\nDat. | -\u1fb3 | -\u1fc3 | -\u1fc3  \r\nAcc. | -\u03b1\u03bd | -\u03b7\u03bd | -\u03b7\u03bd  \r\nVoc. | -\u03b1 | -\u03b7 | -\u03b1  \r\n**Plural**  \r\nNom. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\nGen. | -\u1ff6\u03bd | -\u1ff6\u03bd | -\u1ff6\u03bd  \r\nDat. | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2  \r\nAcc. | -\u03b1\u03c2 | -\u03b1\u03c2 | -\u03b1\u03c2  \r\nVoc. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\n  \r\nNotice again that all the plural forms are identical.\r\n\r\n## The First Declension in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of first\r\ndeclension nouns in the Pentecontaetia.\r\n\r\n[...] \u03bf\u1f31 \u03b2\u03ac\u03c1\u03b2\u03b1\u03c1\u03bf\u03b9 |  \u1f10\u03ba**\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2** |  \u1f00\u03c0\u1fc6\u03bb\u03b8\u03bf\u03bd  \r\n---|---|---  \r\n[...] the barbarians  |  from the country  |  departed  \r\n(Nominative)  |  (Genitive)  |  (Verb)  \r\n-- _The History of the Peloponnesian War_, 1.89.3\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\n\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2 belongs to the first group of first declension nouns. It is\r\nfeminine, singular and in the genitive case!\r\n\r\n",
+        "content": "### First Declension: 3 groups\r\n\r\nCase | I. | II. | III.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | -\u03b1 | -\u03b7 | -\u03b7\u03c2  \r\nGen. | -\u03b1\u03c2 | -\u03b7\u03c2 | -\u03bf\u03c5  \r\nDat. | -\u1fb3 | -\u1fc3 | -\u1fc3  \r\nAcc. | -\u03b1\u03bd | -\u03b7\u03bd | -\u03b7\u03bd  \r\nVoc. | -\u03b1 | -\u03b7 | -\u03b1  \r\n**Plural**  \r\nNom. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\nGen. | -\u1ff6\u03bd | -\u1ff6\u03bd | -\u1ff6\u03bd  \r\nDat. | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2  \r\nAcc. | -\u03b1\u03c2 | -\u03b1\u03c2 | -\u03b1\u03c2  \r\nVoc. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\n  \r\nNotice again that all the plural forms are identical.\r\n\r\n## The First Declension in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of first\r\ndeclension nouns in the Pentecontaetia.\r\n\r\n[...] \u03bf\u1f31 \u03b2\u03ac\u03c1\u03b2\u03b1\u03c1\u03bf\u03b9 |  \u1f10\u03ba**\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2** |  \u1f00\u03c0\u1fc6\u03bb\u03b8\u03bf\u03bd  \r\n---|---|---  \r\n[...] the barbarians  |  from the country  |  departed  \r\n(Nominative)  |  (Genitive)  |  (Verb)  \r\n-- _The History of the Peloponnesian War_, 1.89.3\r\n\r\n\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2 belongs to the first group of first declension nouns. It is\r\nfeminine, singular and in the genitive case!\r\n\r\n",
         "grammar_ref": 18,
         "related_content": [],
         "source_lang": 4
@@ -2024,7 +2024,7 @@
         "target_lang": 5,
         "title": "Adjectives: First and Second Declension_Three-declension_intro",
         "content": "## How First and Second Declension Adjectives work\r\n\r\nJust like articles and nouns have gender, number and case, so do all the\r\nadjectives. Like the article, **an adjective must agree in gender, number and\r\ncase with the noun it describes**.\r\n\r\nHowever, this does not mean that the ending of the article and that of the\r\nnoun are always identical; there are exceptions where, though the adjective\r\nand noun agree, the endings might look different.\r\n\r\nAdjectives agreeing with third declension nouns fall into two groups:\r\n\r\n  * **Three-ending Adjectives**  \r\nThese can have three types of endings:\r\n\r\n    * -**\u03b1\u03c2** -**\u03b1\u03c3\u03b1**\r\n-**\u03b1\u03bd**\r\n    * -**\u03b1\u03c2** -**\u03b1\u03b9\u03bd\u03b1**\r\n-**\u03b1\u03bd**\r\n    * -**\u03cd\u03c2** -**\u03b5\u1fd6\u03b1**\r\n-**\u03cd**\r\n  \r\n  \r\n  \r\n  \r\n\r\n  * **Two-ending Adjectives**  \r\nThese can have two types of endings:\r\n\r\n    * -**\u03c9\u03bd** for masculine and feminine; -**\u03bf\u03bd**\r\nfor neuter\r\n\r\n    * -**\u03b7\u03c2** for masculine and feminine; -**\u03b5\u03c2**\r\nfor neuter  \r\n  \r\n\r\n* * *\r\n\r\n",
-        "grammar_ref": 28,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2084,7 +2084,7 @@
         "target_lang": 5,
         "title": "Adjectives: Third Declension_Three-ending",
         "content": "### \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd -- _every_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd  \r\nGen. | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2** | \u03c0\u03ac\u03c3**\u03b7\u03c2** | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2**  \r\nDat. | \u03c0\u03b1\u03bd\u03c4**\u03af** | \u03c0\u03ac\u03c3**\u1fc3** | \u03c0\u03b1\u03bd\u03c4**\u03af** | Acc. | \u03c0\u03ac\u03bd\u03c4**\u03b1** | \u03c0\u1fb6\u03c3**\u03b1\u03bd** | \u03c0\u1fb6\u03bd |\r\nVoc. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd | **Plural**  \r\nNom. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nGen. | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd** | \u03c0\u03b1\u03c3**\u1ff6\u03bd** | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd**  \r\nDat. | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)** | \u03c0\u03ac\u03c3**\u03b1\u03b9\u03c2** | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03c0\u03ac\u03bd\u03c4**\u03b1\u03c2** | \u03c0\u03ac\u03c3**\u03b1\u03c2** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nVoc. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\n  \r\n## Three-ending Adjectives of the First and Second Declension\r\n\r\nAs you can see from the table, the adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd has forms of the\r\nfirst and third declensions.\r\n\r\n##### Useful tip\r\n\r\nThe adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd often also means _all_ or _whole_.\r\n\r\n* * *\r\n\r\nAnother adjective that follows this pattern is \u03bc\u03ad\u03bb**\u03b1\u03c2**, \u03bc\u03ad\u03bb**\u03b1\u03b9\u03bd\u03b1**,\r\n\u03bc\u03ad\u03bb**\u03b1\u03bd**, meaning _black_. If you look closely the endings for this\r\nparticular adjective, though similar, are somewhat different from those in\r\n\u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd.\r\n\r\n* * *\r\n\r\nThe very last type of adjectives following this pattern is \u1f21\u03b4**\u03cd\u03c2**,\r\n\u1f21\u03b4**\u03b5\u1fd6\u03b1**, \u1f21\u03b4**\u03cd**, meaning _sweet_.\r\n\r\n",
-        "grammar_ref": 28,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3225,7 +3225,12 @@
         "title": "Adjectives: Second Declension_Three-ending",
         "content": "### \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd -- _just_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1fb3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | Acc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03bd**\r\n| \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | Voc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | **Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\n  \r\n## Three-ending Adjectives of the First and Second Declension\r\n\r\nAs you can see from the table, the adjective \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd has the\r\nsame endings as first declension nouns in the feminine, and as second\r\ndeclension nouns in the masculine and neuter.\r\n\r\nExample: \u1f41 \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2, meaning _the just man._\r\n\r\n##### Word Order and Adjectives\r\n\r\nThe meaning given to the article, noun, and its agreeing adjective can vary\r\nslightly according to **word order**. So, you might not always find these\r\nthree components (article, noun, adjective) in the same sequence.\r\n\r\n* * *\r\n\r\nFor example: \u1f41 \u1f00\u03b3\u03b1\u03b8\u1f78\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 means _the good man_, but \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u1f41 \u1f00\u03b3\u03b1\u03b8\u03bf\u03c2\r\nmeans _a man, the good one_\r\n\r\n",
         "grammar_ref": 28,
-        "related_content": [],
+        "related_content": [
+            288,
+            290,
+            386,
+            295
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -4142,6 +4147,18 @@
     },
     "model": "app.content",
     "pk": 465
+},
+{
+    "fields": {
+        "target_lang": 5,
+        "title": "\u0641\u0627\u0631\u0633\u06cc",
+        "content": "\u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc ",
+        "grammar_ref": 28,
+        "related_content": [],
+        "source_lang": 6
+    },
+    "model": "app.content",
+    "pk": 466
 },
 {
     "fields": {
@@ -19226,5 +19243,131 @@
     },
     "model": "admin.logentry",
     "pk": 840
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-01T14:16:24.289Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed related_content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 841
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-01T14:16:43.227Z",
+        "object_repr": "Adjectives: Third Declension_Three-ending",
+        "object_id": "295",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 842
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-01T14:26:27.204Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed related_content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 843
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-01T14:30:15.485Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed related_content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 844
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-01T14:36:16.394Z",
+        "object_repr": "Adjectives: First and Second Declension_Three-declension_intro",
+        "object_id": "290",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 845
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-01T14:50:13.225Z",
+        "object_repr": "Nouns: First Declension_originalexample",
+        "object_id": "287",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 846
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-01T15:35:50.250Z",
+        "object_repr": "\u0641\u0627\u0631\u0633\u06cc",
+        "object_id": "466",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 847
 }
 ]

@@ -59,7 +59,17 @@
 		@include tile($color-sec-four);
 	}
 	&[class*="adverbs"] {
-		@include tile($color-sec-three);
+		@include tile($color-pri-three);
+	}
+	&[class*="admin"] {
+		@include tile(#DDE3EC);
+		span.glyphicon {
+			color: $color-pri-one;
+			font-size: 56px;
+		}
+		p {
+			color: #333;
+		}
 	}
 
 	p {
@@ -77,7 +87,7 @@
 	list-style-type: none;
 	border: 1px solid #EEE;
 	width: 100%;
-	padding-left: 0;
+	padding-#{$left}: 0;
 	margin-bottom: 20px !important;
 	
 	li {
@@ -279,7 +289,7 @@ table.inflection-table {
 		}
 	}
 	.glyphicon {
-		margin-right: 10px;
+		margin-#{$right}: 10px;
 	}
 	ul.nav a {
 		font-size: 12px;
@@ -303,7 +313,7 @@ table.inflection-table {
 		list-style-type: none;
 		font-size: 12px;
 		position: fixed;
-		left: 33%;
+		#{$left}: 33%;
 		line-height: 20px;
 		
 		a {
@@ -327,7 +337,7 @@ table.inflection-table {
 	}
 	.task {
 		position: fixed;
-		left: 33%;
+		#{$left}: 33%;
 	}
 
 	table {
@@ -344,4 +354,23 @@ table.inflection-table {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+// Grammar panels
+.panel .admin-link {
+	float: #{$right};
+}
+.panel-heading .admin-link {
+	padding: 5px 7px 0 5px;
+	border-radius: 50%;
+	margin-top: -6px;
+	margin-#{$right}: -8px;
+}
+.panel.primary-topic {
+	border-color: darken($color-pri-one, 10%);
+
+	.panel-heading {
+		background-color: $color-pri-one;
+		color: #EEE;
+	}
 }

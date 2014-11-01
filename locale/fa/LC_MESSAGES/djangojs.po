@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-08 11:53+0200\n"
+"POT-Creation-Date: 2014-11-01 17:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,161 +18,134 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: static/admin/js/SelectFilter2.js:45
-#, c-format
-msgid "Available %s"
+#: static/js/utils.js:88
+msgid "Ancient Greek"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:46
-#, c-format
-msgid ""
-"This is the list of available %s. You may choose some by selecting them in "
-"the box below and then clicking the \"Choose\" arrow between the two boxes."
+#: static/js/utils.js:89
+msgid "Farsi"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:53
-#, c-format
-msgid "Type into this box to filter down the list of available %s."
+#: static/js/utils.js:90
+msgid "English"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:57
-msgid "Filter"
+#: static/js/utils.js:91
+msgid "Croatian"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:61
-msgid "Choose all"
+#: static/js/utils.js:92
+msgid "Portuguese"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:61
-#, c-format
-msgid "Click to choose all %s at once."
+#: static/js/utils.js:93
+msgid "French"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:67
-msgid "Choose"
+#: static/js/utils.js:120
+msgid "Feminine"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:69
-msgid "Remove"
+#: static/js/utils.js:121
+msgid "Neuter"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:75
-#, c-format
-msgid "Chosen %s"
+#: static/js/utils.js:122
+msgid "Masculine"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:76
-#, c-format
-msgid ""
-"This is the list of chosen %s. You may remove some by selecting them in the "
-"box below and then clicking the \"Remove\" arrow between the two boxes."
+#: static/js/utils.js:125
+msgid "Singular"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:80
-msgid "Remove all"
+#: static/js/utils.js:126
+msgid "Plural"
 msgstr ""
 
-#: static/admin/js/SelectFilter2.js:80
-#, c-format
-msgid "Click to remove all chosen %s at once."
+#: static/js/utils.js:129
+msgid "Nominative"
 msgstr ""
 
-#: static/admin/js/actions.js:18 static/admin/js/actions.min.js:1
-msgid "%(sel)s of %(cnt)s selected"
-msgid_plural "%(sel)s of %(cnt)s selected"
-msgstr[0] ""
-msgstr[1] ""
-
-#: static/admin/js/actions.js:109 static/admin/js/actions.min.js:5
-msgid ""
-"You have unsaved changes on individual editable fields. If you run an "
-"action, your unsaved changes will be lost."
+#: static/js/utils.js:130
+msgid "Genitive"
 msgstr ""
 
-#: static/admin/js/actions.js:121 static/admin/js/actions.min.js:5
-msgid ""
-"You have selected an action, but you haven't saved your changes to "
-"individual fields yet. Please click OK to save. You'll need to re-run the "
-"action."
+#: static/js/utils.js:131
+msgid "Dative"
 msgstr ""
 
-#: static/admin/js/actions.js:123 static/admin/js/actions.min.js:6
-msgid ""
-"You have selected an action, and you haven't made any changes on individual "
-"fields. You're probably looking for the Go button rather than the Save "
-"button."
+#: static/js/utils.js:132
+msgid "Accusative"
 msgstr ""
 
-#: static/admin/js/calendar.js:8
-msgid ""
-"January February March April May June July August September October November "
-"December"
+#: static/js/utils.js:135
+msgid "3rd Person"
 msgstr ""
 
-#: static/admin/js/calendar.js:9
-msgid "S M T W T F S"
+#: static/js/utils.js:136
+msgid "2nd Person"
 msgstr ""
 
-#: static/admin/js/collapse.js:8 static/admin/js/collapse.js.c:19
-#: static/admin/js/collapse.min.js:1
-msgid "Show"
+#: static/js/utils.js:137
+msgid "1st Person"
 msgstr ""
 
-#: static/admin/js/collapse.js:16 static/admin/js/collapse.min.js:1
-msgid "Hide"
+#: static/js/utils.js:140
+msgid "Indicative"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:52
-#: static/admin/js/admin/DateTimeShortcuts.js:88
-msgid "Now"
+#: static/js/utils.js:141
+msgid "Subjunctive"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:56
-msgid "Clock"
+#: static/js/utils.js:142
+msgid "Optative"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:84
-msgid "Choose a time"
+#: static/js/utils.js:145
+msgid "Aorist"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:89
-msgid "Midnight"
+#: static/js/utils.js:146
+msgid "Imperfect"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:90
-msgid "6 a.m."
+#: static/js/utils.js:147
+msgid "Future"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:91
-msgid "Noon"
+#: static/js/utils.js:148
+msgid "Present"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:95
-#: static/admin/js/admin/DateTimeShortcuts.js:208
-msgid "Cancel"
+#: static/js/utils.js:149
+msgid "Future Perfect"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:148
-#: static/admin/js/admin/DateTimeShortcuts.js:201
-msgid "Today"
+#: static/js/utils.js:152
+msgid "Active"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:152
-msgid "Calendar"
+#: static/js/utils.js:153
+msgid "Middle"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:199
-msgid "Yesterday"
+#: static/js/utils.js:154
+msgid "Middle/Passive"
 msgstr ""
 
-#: static/admin/js/admin/DateTimeShortcuts.js:203
-msgid "Tomorrow"
+#: static/js/utils.js:155
+msgid "Passive"
 msgstr ""
 
-#: static/js/views/notes.js:58
+#: static/js/views/reader/notes/about-word.js:27
+msgid "Morphology"
+msgstr ""
+
+#: static/js/views/reader/notes/notes.js:125
 msgid "Information about"
 msgstr "اطلاعات مربوط به"
 
-#: static/js/views/notes.js:67
+#: static/js/views/reader/notes/notes.js:132
 msgid "Show Resources"
 msgstr "نشان دادن منابع"

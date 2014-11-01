@@ -1,8 +1,16 @@
+{% load i18n %}
 <% _.each(topics, function(topic) { %>
 	<% if (topic.get('titles')[LOCALE] !== undefined) { %>
 		<a href="/<%= LOCALE %>/lessons/<%= topic.get('id') %>" class="module <%= topic.get('category').name.toLowerCase().split(' ').join('-') %>">
 			<img src="/static/images/<%= topic.get('category').graphic %>">
 			<p><% print(topic.get('titles')[LOCALE]) %></p>
 		</a>
+	<% } else { %>
+		<% if (user.get('is_superuser')) { %>
+			<a href="/admin/app/content/add/?grammar_ref=<%= topic.get('id') %>" class="module admin" target="_blank">
+				<span class="glyphicon glyphicon glyphicon-plus-sign"></span>
+				<p><strong>{% trans "ADD UNIT" %}</strong><br><%= topic.get('title') %></p>
+			</a>
+		<% } %>
 	<% } %>
 <% }); %>

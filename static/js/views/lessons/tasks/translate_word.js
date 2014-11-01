@@ -35,11 +35,15 @@ define(['jquery', 'underscore', 'backbone', 'models/word', 'collections/words', 
 			sentences.push(phrase.reduce(function(memo, word) {
 				if (word.translations) {	
 					memo = memo.concat(word.translations.filter(function(w) { 
-						return w.lang === 'en'; 
+						return w.lang === LOCALE; 
 					}));
 				}
 				return memo;
 			}, []));
+
+			if (sentences[1].length === 0) {
+				alert('We don\'t have alignment data for: ' + LOCALE);
+			}
 
 			var alignments = sentences.map(function(s, i) {
 				var alignment = {};

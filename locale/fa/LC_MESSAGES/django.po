@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-08 14:35+0200\n"
+"POT-Creation-Date: 2014-11-01 17:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,35 +23,31 @@ msgstr ""
 msgid "Ancient Geek - by the Open Philology Project"
 msgstr "آموزش الکترونیکی زبان‌های باستانی – کاری از پروژه “Open Philology”"
 
-#: templates/base.html:43
+#: templates/base.html:50
 msgid "Home"
 msgstr "صفحه اصلی"
 
-#: templates/base.html:46
+#: templates/base.html:53
 msgid "Learn"
 msgstr "یاد بگیر"
 
-#: templates/base.html:49
+#: templates/base.html:56
 msgid "Read"
 msgstr "بخوان"
 
-#: templates/base.html:52
+#: templates/base.html:59
 msgid "Create"
 msgstr "بساز"
 
-#: templates/base.html:69 templates/index.html:55
-msgid "Log out"
-msgstr "خروج از سیستم"
-
-#: templates/base.html:73
+#: templates/base.html:94 templates/index.html:71
 msgid "Login"
 msgstr "ورود به سیستم"
 
-#: templates/create.html:22
+#: templates/create.html:27
 msgid "Help Create Digital Editions"
 msgstr "به خلق آثار دیجیتال کمک کن"
 
-#: templates/create.html:24
+#: templates/create.html:29
 msgid ""
 "You can help create a digital edition of a Classical work, no matter what "
 "skill level you're at. You'll be improving your Ancient Greek and "
@@ -61,19 +57,11 @@ msgstr ""
 "کلاسیک کمک کنی. با این کاردانش خود را در یونانی باستان ارتقا می دهی و هم "
 "زمان به ایجاد داده های باز برای همه کمک می کنی."
 
-#: templates/create.html:27
-msgid "Digital Editions in Progress"
-msgstr "نسخه های دیجیتال در دست ویرایش"
-
-#: templates/create.html:55
-msgid "Your Contributions"
-msgstr "آنچه که تو انجام داده ای"
-
-#: templates/home.html:31
+#: templates/home.html:36
 msgid "Ready to put your Greek skills to use?"
 msgstr "آماده هستی از مهارت های خود در زبان یونانی استفاده کنی؟"
 
-#: templates/home.html:32
+#: templates/home.html:37
 msgid ""
 "When you feel like you've learned enough, dive right in to more advanced "
 "(and more fun) Greek learning tools."
@@ -81,28 +69,28 @@ msgstr ""
 "هر وقت فکر کردی به اندازه کافی یاد گرفتی، وارد مراحل پیشرفته تر استفاده از "
 "ابزارهای یادگیری یونانی بشو(و لذت بیشتری ببر)"
 
-#: templates/home.html:39
+#: templates/home.html:44
 msgid "Start Reading"
 msgstr "شروع به خواندن کن"
 
-#: templates/home.html:41
+#: templates/home.html:46
 msgid ""
 "Start reading Thucydides' war story of the Spartans versus the Athenians."
 msgstr "شروع به خواندن داستان توسیدید از جنگ بین اسپارت ها و آتنی ها کن"
 
-#: templates/home.html:46
+#: templates/home.html:51
 msgid "Create Translations"
 msgstr "ترجمه کن"
 
-#: templates/home.html:48
+#: templates/home.html:53
 msgid "Contribute to brand new, digital editions of Classical works."
 msgstr "به ایجاد نسخه های دیجیتال آثار باستان که کاملاً جدید هستند، کمک کن"
 
-#: templates/home.html:53
+#: templates/home.html:58
 msgid "Build Parse Trees"
 msgstr "برای تجزیه جمله ها نمودار درختی بساز"
 
-#: templates/home.html:55
+#: templates/home.html:60
 msgid ""
 "Show off your syntactic chops by building parse trees of previously "
 "unanalysed sentences."
@@ -110,60 +98,56 @@ msgstr ""
 "با ساختن نمودار درختی جملاتی که قبلاً تجزیه تحلیل نشده اند، توانایی صرف و نحو "
 "خودت را نشان بده"
 
-#: templates/index.html:59
-msgid "Login to Ancient Geek!"
-msgstr "ورود به سیستم Ancient Geek!"
-
-#: templates/index.html:74
+#: templates/index.html:86
 msgid "Get your Greek on."
 msgstr "زبان یونانی خود را ارتقا بده"
 
-#: templates/index.html:77
+#: templates/index.html:89
 msgid ""
 "Learn Ancient Greek as you read Thucydides' harrowing tale of the war between"
 msgstr "همانطور که داستان‌های دلخراش توسیدید را درباره جنگ بین "
 
-#: templates/index.html:78
+#: templates/index.html:90
 msgid "(the Spartans) and"
 msgstr "، (اسپارت‌ها) و "
 
-#: templates/index.html:78
+#: templates/index.html:90
 msgid "(the Athenians)."
 msgstr "، (آتنی‌ها)"
 
-#: templates/index.html:82 templates/index.html.py:213
+#: templates/index.html:94 templates/index.html.py:225
 msgid "Start Learning!"
 msgstr "شروع کن به یاد گرفتن!"
 
-#: templates/index.html:86
+#: templates/index.html:98
 msgid "Sign up"
 msgstr "ثبت نام"
 
-#: templates/index.html:90
+#: templates/index.html:102
 msgid "Full Name"
 msgstr "نام و نام خانوادگی"
 
-#: templates/index.html:94
+#: templates/index.html:106
 msgid "Email Address"
 msgstr "آدرس ایمیل"
 
-#: templates/index.html:98 templates/login.html:26
+#: templates/index.html:110 templates/login.html:34
 msgid "Username"
 msgstr "نام کاربری"
 
-#: templates/index.html:102 templates/login.html:30
+#: templates/index.html:114 templates/login.html:38
 msgid "Password"
 msgstr "کلمه عبور"
 
-#: templates/index.html:105
+#: templates/index.html:117
 msgid "Create Account"
 msgstr "ایجاد حساب کاربری"
 
-#: templates/index.html:114
+#: templates/index.html:126
 msgid "Game your way through Greek."
 msgstr "با بازی راه خود را در دنیای یونان پیدا کن."
 
-#: templates/index.html:116
+#: templates/index.html:128
 msgid ""
 "Develop your mad Greek skillz through games and choose the path to Greek "
 "glory that suits your personal learning style."
@@ -171,11 +155,11 @@ msgstr ""
 "مهارت‌های یونانی خاص خودت را از طریق بازی توسعه بده و راه خودت را به سمت شکوه "
 "یونان که متناسب با سبک یادگیری خودت است، انتخاب کن"
 
-#: templates/index.html:121
+#: templates/index.html:133
 msgid "Keep it original."
 msgstr "فقط از اصل استفاده کن."
 
-#: templates/index.html:123
+#: templates/index.html:135
 msgid ""
 "Explore Classical texts in their original languages, the way they were meant "
 "to be read, enhanced by data contributed by people like you."
@@ -184,11 +168,11 @@ msgstr ""
 "اول نوشته شده‌ بودند، متن‌هایی که به‌واسطه داده‌هایی که افرادی مثل تو در ایجاد "
 "آن همکاری کرده‌اند، بهبود یافته‌اند."
 
-#: templates/index.html:128
+#: templates/index.html:140
 msgid "Be a scholar!"
 msgstr "پژوهشگر باش!"
 
-#: templates/index.html:130
+#: templates/index.html:142
 msgid ""
 "Contribute micropublications like translations and annotations to help "
 "create brand new, digital editions of Classical works!"
@@ -196,11 +180,11 @@ msgstr ""
 "برای کمک به ایجاد نسخه‌های جدید و دیجیتال آثار کلاسیک، با کارهایی چون ترجمه و "
 "حاشیه‌نویسی به نشر میکرو یاری رسان!"
 
-#: templates/index.html:137
+#: templates/index.html:149
 msgid "Here's how it works."
 msgstr "اینجا می بینی که چطور می توانی این کار را بکنی"
 
-#: templates/index.html:142
+#: templates/index.html:154
 msgid ""
 "\n"
 "\t\t\t\t\t\t<strong>You choose the way you want to learn Greek</strong> "
@@ -211,8 +195,8 @@ msgid ""
 "\t\t\t\t\t"
 msgstr ""
 "\n"
-"\t\t\t\t\t\t<strong>راه خاص خودت برای یادگیری زبان یونانی را انتخاب می کنی</strong>"
-"&mdash; چه بخواهی کاملاً غرق در این دنیا شوی یا بخواهی که درس های "
+"\t\t\t\t\t\t<strong>راه خاص خودت برای یادگیری زبان یونانی را انتخاب می کنی</"
+"strong>&mdash; چه بخواهی کاملاً غرق در این دنیا شوی یا بخواهی که درس های "
 "دارای ساختار را بخوانی Ancient Geek در هر دو مسیر به تو کمک خواهد کرد."
 "<Br><br>\n"
 "\t\t\t\t\t\tهمه ابزارهایی که با آنها سر و کار داری را از روز اول در اختیار "
@@ -220,7 +204,7 @@ msgstr ""
 "شود \n"
 "\t\t\t\t\t"
 
-#: templates/index.html:151
+#: templates/index.html:163
 msgid ""
 "\n"
 "\t\t\t\t\tIf you want to get straight to reading, you can use the<br>\n"
@@ -236,11 +220,11 @@ msgstr ""
 "\t\t\t\t\tهرچقدر که لازم باشد.\n"
 "\t\t\t\t"
 
-#: templates/index.html:161
+#: templates/index.html:173
 msgid "Your mission."
 msgstr "مأموریت تو"
 
-#: templates/index.html:166
+#: templates/index.html:178
 msgid ""
 "You'll practice each lesson through enjoyable <strong>interactive exercises</"
 "strong> that will help you develop the skills you need."
@@ -248,7 +232,7 @@ msgstr ""
 "با <strong>تمرین هایی تعاملی و لذت بخش روی هر درس تمرکز خواهی کرد</strong> "
 "که به تو کمک می کند مهارت های لازم را گسترش بدهی."
 
-#: templates/index.html:168
+#: templates/index.html:180
 msgid ""
 "For example, you'll learn how to take Greek sentences and <strong>represent "
 "them as parse trees</strong>. Not only does this prove that you get the "
@@ -259,7 +243,7 @@ msgstr ""
 "درختی نمایش دهی</strong>. این کار نه تنها ثابت می کند که تو یونانی را فهمیده "
 "ای بلکه قادر خواهی بود برداشت خودت را از جمله با برداشت دیگران مقایسه کنی. "
 
-#: templates/index.html:170
+#: templates/index.html:182
 msgid ""
 "When you're ready, you can create trees for new, unanalyzed sentences and "
 "contribute your interpretation to the Digital Humanities community as a "
@@ -268,13 +252,13 @@ msgstr ""
 "هر وقت آماده بودی می توانی برای جملات و تجزیه نشده نمودار درختی رسم کنی و "
 "تحلیل خودت را به عنوان نشر میکرو در اختیار جامعه علوم انسانی دیجیتال بگذاری. "
 
-#: templates/index.html:176
+#: templates/index.html:188
 msgid ""
 "\n"
 "\t\t\t\t\tYou'll learn how to build parse trees on sentences others have "
 "done,<br>\n"
-"\t\t\t\t\tthen <strong>contribute trees for brand new, digital texts"
-"</strong>.\n"
+"\t\t\t\t\tthen <strong>contribute trees for brand new, digital texts</"
+"strong>.\n"
 "\t\t\t\t"
 msgstr ""
 "\n"
@@ -284,11 +268,11 @@ msgstr ""
 "بساز</strong>.\n"
 "\t\t\t\t"
 
-#: templates/index.html:185
+#: templates/index.html:197
 msgid "What then?"
 msgstr "بعد چی؟"
 
-#: templates/index.html:190
+#: templates/index.html:202
 msgid ""
 "\n"
 "\t\t\t\t\t\tDid you know there are still unexplored Classical texts? Many "
@@ -307,7 +291,7 @@ msgstr ""
 "الفبا را یاد دادند در انجام این کار کمک کنی.\n"
 "\t\t\t\t\t"
 
-#: templates/index.html:196
+#: templates/index.html:208
 msgid ""
 "\n"
 "\t\t\t\t\t\tThe best part is that you're not alone &mdash; Ancient Geeks all "
@@ -324,7 +308,7 @@ msgstr ""
 "مدرن کمک می گیرند.\n"
 "\t\t\t\t\t"
 
-#: templates/index.html:204
+#: templates/index.html:216
 msgid ""
 "\n"
 "\t\t\t\t\tAny contribution big or small is helpful!<br>\n"
@@ -338,102 +322,184 @@ msgstr ""
 "\t\t\t\t\tبه در اختیار گذاشتن داده به صورت رایگان برای همگان همکاری می کنی.\n"
 "\t\t\t\t"
 
-#: templates/login.html:34
-msgid "Log in"
-msgstr "ورود به سیستم"
-
-#: templates/module.html:22
-msgid "Lessons"
-msgstr "درس ها"
-
-#: templates/module.html:27
-msgid "Turn Page"
-msgstr "ورق زدن صفحه"
-
-#: templates/module.html:30
-msgid "Loading Lesson"
-msgstr "در حال بارگذاری درس"
-
-#: templates/profile.html:25
-msgid "You're not logged in!"
-msgstr "وارد سیستم نشده ای"
-
-#: templates/profile.html:26
-msgid "Would you care to log in?"
-msgstr "لطفاً وارد سیستم شو"
-
-#: templates/js/grammar-display.html:3
-msgid "Table of Contents"
-msgstr "فهرست"
-
-#: templates/js/notes.html:4
-msgid "Preferences"
-msgstr "ترجیحات"
-
-#: templates/js/notes.html:5
-msgid "Add Annotation"
-msgstr "اضافه کردن حاشیه‌نویسی"
-
-#: templates/js/notes.html:6
-msgid "Show Resources"
-msgstr "نشان دادن منابع"
-
-#: templates/js/notes.html:8
-msgid ""
-"Hover over a sentence in the text to see available annotations, or to add "
-"your own!"
+#: templates/js/create/create-edition.html:14
+msgid "translated or treebanked"
 msgstr ""
-"برای دیدن حاشیه‌نویسی‌های موجود یا اضافه کردن حاشیه‌نویسی جدید خودت با ماوس روی "
-"یکی از لغات متن برو."
 
-#: templates/js/notes.html:16
+#: templates/js/lessons/lesson_list.html:12
+msgid "ADD UNIT"
+msgstr ""
+
+#: templates/js/lessons/microlesson.html:6
+#: templates/js/reader/notes/notes.html:9
+msgid "Grammar"
+msgstr ""
+
+#: templates/js/lessons/microlesson.html:11
+#, fuzzy
+#| msgid "Translations"
+msgid "Translation"
+msgstr "ترجمه‌های موجود"
+
+#: templates/js/lessons/microlesson.html:16
+#, fuzzy
+#| msgid "Build Parse Trees"
+msgid "Parse Tree"
+msgstr "برای تجزیه جمله ها نمودار درختی بساز"
+
+#: templates/js/lessons/microlesson.html:33
+msgid "Admin Panel"
+msgstr ""
+
+#: templates/js/lessons/microlesson.html:34
+#, fuzzy
+#| msgid "Related Grammar Topics"
+msgid "Edit Grammar Topic"
+msgstr "قواعد دستوری مرتبط"
+
+#: templates/js/lessons/tasks/translate_word.html:18
+msgid "Answer!"
+msgstr ""
+
+#: templates/js/lessons/tasks/translate_word.html:27
+#: templates/js/reader/notes/about-word.html:4
 msgid "from"
 msgstr "از"
 
-#: templates/js/notes.html:20
-msgid "Parse"
-msgstr "تجزیه جمله"
+#: templates/js/lessons/tasks/translate_word.html:29
+msgid "Also:"
+msgstr ""
 
-#: templates/js/notes.html:34
-msgid "Translations"
-msgstr "ترجمه‌های موجود"
+#: templates/js/reader/notes/about-sentence.html:4
+#, fuzzy
+#| msgid "Create Translations"
+msgid "See Aligned Translations"
+msgstr "ترجمه کن"
 
-#: templates/js/notes.html:36
-msgid "English"
-msgstr "انگلیسی"
-
-#: templates/js/notes.html:37
-msgid "Farsi"
-msgstr "فارسی"
-
-#: templates/js/notes.html:55
-msgid "Other Resources"
-msgstr "سایر منابع"
-
-#: templates/js/notes.html:57
+#: templates/js/reader/notes/about-sentence.html:12
 msgid "View Sentence as Tree"
 msgstr "مشاهده نمودار درختی جمله"
 
-#: templates/js/notes.html:58
-msgid "Contribute Annotation"
-msgstr "مشارکت در حاشیه‌نویسی"
+#: templates/js/reader/notes/about-word.html:9
+msgid "See Morphology"
+msgstr ""
 
-#: templates/js/notes.html:60
+#: templates/js/reader/notes/about-word.html:23
 msgid "Related Grammar Topics"
 msgstr "قواعد دستوری مرتبط"
 
-#: templates/js/notes.html:69
+#: templates/js/reader/notes/about-word.html:32
 msgid "None found"
 msgstr "چیزی پیدا نشد"
 
-#: templates/js/page.html:11
+#: templates/js/reader/notes/notes.html:3
+msgid ""
+"Click a word to see resources for it, or click the comment icon to add your "
+"own annotation."
+msgstr ""
+
+#: templates/js/reader/notes/notes.html:10
+msgid "Translations"
+msgstr "ترجمه‌های موجود"
+
+#: templates/js/reader/notes/notes.html:11
+msgid "Sentence"
+msgstr ""
+
+#: templates/js/reader/notes/notes.html:12
+#, fuzzy
+#| msgid "Add Annotation"
+msgid "User Annotations"
+msgstr "اضافه کردن حاشیه‌نویسی"
+
+#: templates/js/reader/notes/notes.html:13
+msgid "Translate this Sentence!"
+msgstr ""
+
+#: templates/js/reader/notes/notes.html:14
+#, fuzzy
+#| msgid "Build Parse Trees"
+msgid "Build this Parse Tree!"
+msgstr "برای تجزیه جمله ها نمودار درختی بساز"
+
+#: templates/js/reader/notes/translations.html:17
+msgid "No Alignment in"
+msgstr ""
+
+#: templates/js/reader/page.html:14
 msgid "by"
 msgstr "اثر"
 
-#: templates/js/page.html:11
-msgid ","
-msgstr "،"
-
-#: templates/js/page.html:11
+#: templates/js/reader/page.html:15
 msgid "Jump to another section"
 msgstr "برو به یک قسمت دیگر"
+
+#: templates/login.html:42
+msgid "Log in"
+msgstr "ورود به سیستم"
+
+#: templates/module.html:33
+msgid "Continue"
+msgstr ""
+
+#: templates/module.html:36
+msgid "Loading Lesson"
+msgstr "در حال بارگذاری درس"
+
+#~ msgid "Log out"
+#~ msgstr "خروج از سیستم"
+
+#~ msgid "Digital Editions in Progress"
+#~ msgstr "نسخه های دیجیتال در دست ویرایش"
+
+#~ msgid "Your Contributions"
+#~ msgstr "آنچه که تو انجام داده ای"
+
+#~ msgid "Login to Ancient Geek!"
+#~ msgstr "ورود به سیستم Ancient Geek!"
+
+#~ msgid "Lessons"
+#~ msgstr "درس ها"
+
+#~ msgid "Turn Page"
+#~ msgstr "ورق زدن صفحه"
+
+#~ msgid "You're not logged in!"
+#~ msgstr "وارد سیستم نشده ای"
+
+#~ msgid "Would you care to log in?"
+#~ msgstr "لطفاً وارد سیستم شو"
+
+#~ msgid "Table of Contents"
+#~ msgstr "فهرست"
+
+#~ msgid "Preferences"
+#~ msgstr "ترجیحات"
+
+#~ msgid "Show Resources"
+#~ msgstr "نشان دادن منابع"
+
+#~ msgid ""
+#~ "Hover over a sentence in the text to see available annotations, or to add "
+#~ "your own!"
+#~ msgstr ""
+#~ "برای دیدن حاشیه‌نویسی‌های موجود یا اضافه کردن حاشیه‌نویسی جدید خودت با ماوس "
+#~ "روی یکی از لغات متن برو."
+
+#~ msgid "Parse"
+#~ msgstr "تجزیه جمله"
+
+#~ msgid "English"
+#~ msgstr "انگلیسی"
+
+#~ msgid "Farsi"
+#~ msgstr "فارسی"
+
+#~ msgid "Other Resources"
+#~ msgstr "سایر منابع"
+
+#~ msgid "Contribute Annotation"
+#~ msgstr "مشارکت در حاشیه‌نویسی"
+
+#~ msgid ","
+#~ msgstr "،"
