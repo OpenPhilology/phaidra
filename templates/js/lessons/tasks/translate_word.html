@@ -1,3 +1,4 @@
+{% load i18n %}
 <h1><%= model.get('value') %></h1>
 
 <div class="definitions">
@@ -9,21 +10,21 @@
 	<% } %>
 
 </div>
-<div class="answer-box">
+<div class="answer-box" dir="<%= DIR %>">
 	<form>
 		<div class="input-group">
 			<input lang="grc" class="form-control input-lg" class="answer-input" title="<%= model.getHumanReadableMorph() %>" placeholder='<%= model.getHumanReadableMorph() %>'>
 			<span class="input-group-btn">
-				<button type="submit" style="height: 46px" class="btn btn-success">Answer!</button>
+				<button type="submit" style="height: 46px" class="btn btn-success">{% trans "Answer!" %}</button>
 			</span>
 		</div>
 	</form>
 	<hr>
-	<p><%= sentence %>
+	<p lang="grc"><%= sentence %></p>
 	<p class="alt-definitions"><%= model.getHumanReadableMorph() %></p>
 </div>
 
-<p lang="grc">from <strong><%= model.getDictForm() %></strong> (<%= model.get('pos') %>)</p>
+<p lang="grc">{% trans "from" %} &mdash; <strong><%= model.getDictForm() %></strong> &mdash; <%= model.get('pos') %></p>
 <% if (alignments.length > 1) { %>
-	<p class="alt-definitions" style="margin-top: -15px">Also: &nbsp; &nbsp; <em><% print(_.compact(alignments.slice(1,5)).join(', &nbsp; ')); %></em></p>
+	<p class="alt-definitions" style="margin-top: -15px">{% trans "Also:" %} &nbsp; &nbsp; <em><% print(_.compact(alignments.slice(1,5)).join(', &nbsp; ')); %></em></p>
 <% } %>

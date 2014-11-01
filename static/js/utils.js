@@ -116,20 +116,43 @@ define(['text!/templates/js/display_notification.html'], function(NotificationTe
 
 	Utils.getHumanReadableMorph = function(str) {
 		var map = {
+			// Genders
 			'fem': gettext('Feminine'),
+			'neut': gettext('Neuter'),
+			'masc': gettext('Masculine'),
+
+			// Number
 			'sg': gettext('Singular'),
-			'gen': gettext('Genitive'),
 			'pl': gettext('Plural'),
+
+			// Case
 			'nom': gettext('Nominative'),
-			'aor': gettext('Aorist'),
-			'act': gettext('Active'),
-			'ind': gettext('Indicative'),
+			'gen': gettext('Genitive'),
+			'dat': gettext('Dative'),
+			'acc': gettext('Accusative'),
+
+			// Person
 			'3rd': gettext('3rd Person'),
 			'2nd': gettext('2nd Person'),
 			'1st': gettext('1st Person'),
-			'masc': gettext('Masculine'),
+
+			// Mood
+			'ind': gettext('Indicative'),
+			'subj': gettext('Subjunctive'),
+			'opt': gettext('Optative'),
+
+			// Tense
+			'aor': gettext('Aorist'),
 			'imperf': gettext('Imperfect'),
-			'fut': gettext('Future')
+			'fut': gettext('Future'),
+			'pres': gettext('Present'),
+			'futperf': gettext('Future Perfect'),
+
+			// Voice
+			'act': gettext('Active'),
+			'mid': gettext('Middle'),
+			'mp': gettext('Middle/Passive'),
+			'pass': gettext('Passive')
 		};
 		return map[str] || str;
 	};

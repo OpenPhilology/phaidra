@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-14 18:32+0200\n"
+"POT-Creation-Date: 2014-11-01 17:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: templates/base.html:17 templates/index.html:16
+#: templates/base.html:16 templates/index.html:16
 msgid "Ancient Geek - by the Open Philology Project"
 msgstr ""
 
-#: templates/base.html:51
+#: templates/base.html:50
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:54
+#: templates/base.html:53
 msgid "Learn"
 msgstr ""
 
-#: templates/base.html:57
+#: templates/base.html:56
 msgid "Read"
 msgstr ""
 
-#: templates/base.html:60
+#: templates/base.html:59
 msgid "Create"
 msgstr ""
 
-#: templates/base.html:95
+#: templates/base.html:94 templates/index.html:71
 msgid "Login"
 msgstr ""
 
@@ -91,94 +91,86 @@ msgid ""
 "unanalysed sentences."
 msgstr ""
 
-#: templates/index.html:53
-msgid "Log out"
-msgstr ""
-
-#: templates/index.html:57
-msgid "Login to Ancient Geek!"
-msgstr ""
-
-#: templates/index.html:71
+#: templates/index.html:86
 msgid "Get your Greek on."
 msgstr ""
 
-#: templates/index.html:74
+#: templates/index.html:89
 msgid ""
 "Learn Ancient Greek as you read Thucydides' harrowing tale of the war between"
 msgstr ""
 
-#: templates/index.html:75
+#: templates/index.html:90
 msgid "(the Spartans) and"
 msgstr ""
 
-#: templates/index.html:75
+#: templates/index.html:90
 msgid "(the Athenians)."
 msgstr ""
 
-#: templates/index.html:79 templates/index.html.py:210
+#: templates/index.html:94 templates/index.html.py:225
 msgid "Start Learning!"
 msgstr ""
 
-#: templates/index.html:83
+#: templates/index.html:98
 msgid "Sign up"
 msgstr ""
 
-#: templates/index.html:87
+#: templates/index.html:102
 msgid "Full Name"
 msgstr ""
 
-#: templates/index.html:91
+#: templates/index.html:106
 msgid "Email Address"
 msgstr ""
 
-#: templates/index.html:95 templates/login.html:34
+#: templates/index.html:110 templates/login.html:34
 msgid "Username"
 msgstr ""
 
-#: templates/index.html:99 templates/login.html:38
+#: templates/index.html:114 templates/login.html:38
 msgid "Password"
 msgstr ""
 
-#: templates/index.html:102
+#: templates/index.html:117
 msgid "Create Account"
 msgstr ""
 
-#: templates/index.html:111
+#: templates/index.html:126
 msgid "Game your way through Greek."
 msgstr ""
 
-#: templates/index.html:113
+#: templates/index.html:128
 msgid ""
 "Develop your mad Greek skillz through games and choose the path to Greek "
 "glory that suits your personal learning style."
 msgstr ""
 
-#: templates/index.html:118
+#: templates/index.html:133
 msgid "Keep it original."
 msgstr ""
 
-#: templates/index.html:120
+#: templates/index.html:135
 msgid ""
 "Explore Classical texts in their original languages, the way they were meant "
 "to be read, enhanced by data contributed by people like you."
 msgstr ""
 
-#: templates/index.html:125
+#: templates/index.html:140
 msgid "Be a scholar!"
 msgstr ""
 
-#: templates/index.html:127
+#: templates/index.html:142
 msgid ""
 "Contribute micropublications like translations and annotations to help "
 "create brand new, digital editions of Classical works!"
 msgstr ""
 
-#: templates/index.html:134
+#: templates/index.html:149
 msgid "Here's how it works."
 msgstr ""
 
-#: templates/index.html:139
+#: templates/index.html:154
 msgid ""
 "\n"
 "\t\t\t\t\t\t<strong>You choose the way you want to learn Greek</strong> "
@@ -189,7 +181,7 @@ msgid ""
 "\t\t\t\t\t"
 msgstr ""
 
-#: templates/index.html:148
+#: templates/index.html:163
 msgid ""
 "\n"
 "\t\t\t\t\tIf you want to get straight to reading, you can use the<br>\n"
@@ -199,17 +191,17 @@ msgid ""
 "\t\t\t\t"
 msgstr ""
 
-#: templates/index.html:158
+#: templates/index.html:173
 msgid "Your mission."
 msgstr ""
 
-#: templates/index.html:163
+#: templates/index.html:178
 msgid ""
 "You'll practice each lesson through enjoyable <strong>interactive exercises</"
 "strong> that will help you develop the skills you need."
 msgstr ""
 
-#: templates/index.html:165
+#: templates/index.html:180
 msgid ""
 "For example, you'll learn how to take Greek sentences and <strong>represent "
 "them as parse trees</strong>. Not only does this prove that you get the "
@@ -217,14 +209,14 @@ msgid ""
 "others."
 msgstr ""
 
-#: templates/index.html:167
+#: templates/index.html:182
 msgid ""
 "When you're ready, you can create trees for new, unanalyzed sentences and "
 "contribute your interpretation to the Digital Humanities community as a "
 "micropublication."
 msgstr ""
 
-#: templates/index.html:173
+#: templates/index.html:188
 msgid ""
 "\n"
 "\t\t\t\t\tYou'll learn how to build parse trees on sentences others have "
@@ -234,11 +226,11 @@ msgid ""
 "\t\t\t\t"
 msgstr ""
 
-#: templates/index.html:182
+#: templates/index.html:197
 msgid "What then?"
 msgstr ""
 
-#: templates/index.html:187
+#: templates/index.html:202
 msgid ""
 "\n"
 "\t\t\t\t\t\tDid you know there are still unexplored Classical texts? Many "
@@ -249,7 +241,7 @@ msgid ""
 "\t\t\t\t\t"
 msgstr ""
 
-#: templates/index.html:193
+#: templates/index.html:208
 msgid ""
 "\n"
 "\t\t\t\t\t\tThe best part is that you're not alone &mdash; Ancient Geeks all "
@@ -259,7 +251,7 @@ msgid ""
 "\t\t\t\t\t"
 msgstr ""
 
-#: templates/index.html:201
+#: templates/index.html:216
 msgid ""
 "\n"
 "\t\t\t\t\tAny contribution big or small is helpful!<br>\n"
@@ -272,16 +264,50 @@ msgstr ""
 msgid "translated or treebanked"
 msgstr ""
 
+#: templates/js/lessons/lesson_list.html:12
+msgid "ADD UNIT"
+msgstr ""
+
+#: templates/js/lessons/microlesson.html:6
+#: templates/js/reader/notes/notes.html:9
+msgid "Grammar"
+msgstr ""
+
+#: templates/js/lessons/microlesson.html:11
+msgid "Translation"
+msgstr ""
+
+#: templates/js/lessons/microlesson.html:16
+msgid "Parse Tree"
+msgstr ""
+
+#: templates/js/lessons/microlesson.html:33
+msgid "Admin Panel"
+msgstr ""
+
+#: templates/js/lessons/microlesson.html:34
+msgid "Edit Grammar Topic"
+msgstr ""
+
+#: templates/js/lessons/tasks/translate_word.html:18
+msgid "Answer!"
+msgstr ""
+
+#: templates/js/lessons/tasks/translate_word.html:27
+#: templates/js/reader/notes/about-word.html:4
+msgid "from"
+msgstr ""
+
+#: templates/js/lessons/tasks/translate_word.html:29
+msgid "Also:"
+msgstr ""
+
 #: templates/js/reader/notes/about-sentence.html:4
 msgid "See Aligned Translations"
 msgstr ""
 
 #: templates/js/reader/notes/about-sentence.html:12
 msgid "View Sentence as Tree"
-msgstr ""
-
-#: templates/js/reader/notes/about-word.html:4
-msgid "from"
 msgstr ""
 
 #: templates/js/reader/notes/about-word.html:9
@@ -302,6 +328,26 @@ msgid ""
 "own annotation."
 msgstr ""
 
+#: templates/js/reader/notes/notes.html:10
+msgid "Translations"
+msgstr ""
+
+#: templates/js/reader/notes/notes.html:11
+msgid "Sentence"
+msgstr ""
+
+#: templates/js/reader/notes/notes.html:12
+msgid "User Annotations"
+msgstr ""
+
+#: templates/js/reader/notes/notes.html:13
+msgid "Translate this Sentence!"
+msgstr ""
+
+#: templates/js/reader/notes/notes.html:14
+msgid "Build this Parse Tree!"
+msgstr ""
+
 #: templates/js/reader/notes/translations.html:17
 msgid "No Alignment in"
 msgstr ""
@@ -312,10 +358,6 @@ msgstr ""
 
 #: templates/js/reader/page.html:15
 msgid "Jump to another section"
-msgstr ""
-
-#: templates/js/reader/page.html:22
-msgid "Annotate"
 msgstr ""
 
 #: templates/login.html:42

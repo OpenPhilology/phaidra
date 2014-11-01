@@ -31,7 +31,7 @@ define(['jquery',
 				if (!this.get('translations') || !this.get('translations').length) return false;
 				if (this.get('alignments') && !thisModelOnly) return this.get('alignments');
 
-				lang = lang || 'en';
+				lang = lang || LOCALE || 'en';
 
 				function extractTranslations(wordModel) {
 					if (!wordModel.get('translations') || wordModel.get('translations').length === 0) return []; 
@@ -87,11 +87,15 @@ define(['jquery',
 				sentences.push(phrase.reduce(function(memo, word) {
 					if (word.translations) {	
 						memo = memo.concat(word.translations.filter(function(w) { 
-							return w.lang === 'en'; 
+							return w.lang === LOCALE; 
 						}));
 					}
 					return memo;
 				}, []));
+
+				if (sentences[1].length === 0) {
+					Utils.displayNotification('Error', 'Translation does not exist in this language for this phrase.');
+				}
 
 				var alignments = sentences.map(function(s, i) {
 					var alignment = {};

@@ -50,7 +50,8 @@ define(['jquery',
 
 				this.task_view = new View({ 
 					model: this.model, 
-					index: this.options.index 
+					index: this.options.index,
+					DIR: DIR
 				}).render();
 
 				/* Meaning, we couldn't render this type of task with 
