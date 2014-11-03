@@ -121,7 +121,7 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_monster.png",
+        "graphic": "icon_grk_deer.png",
         "name": "Articles"
     },
     "model": "app.category",
@@ -193,11 +193,11 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_monster.png",
-        "name": "Adjectives Three Termination"
+        "graphic": "icon_grk_parthenon.png",
+        "name": "Adjectives Three-termination"
     },
     "model": "app.category",
-    "pk": 16
+    "pk": 17
 },
 {
     "fields": {
@@ -249,7 +249,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-10-29T11:10:58.048Z",
+        "last_login": "2014-11-03T14:57:39.910Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$mjylIxJjSuP8$hXlaTs4LJGg8TDaOgueySvUCzigoGyiWFEMPIG/0dso=",
@@ -953,7 +953,7 @@
 },
 {
     "fields": {
-        "category": 3,
+        "category": 17,
         "tasks": null,
         "title": "Adjectives - Three-termination in the Third Declension",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s299",
@@ -965,7 +965,7 @@
 },
 {
     "fields": {
-        "category": 4,
+        "category": 7,
         "tasks": null,
         "title": "Articles Declension",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s332",
@@ -1337,6 +1337,18 @@
 },
 {
     "fields": {
+        "category": 3,
+        "tasks": null,
+        "title": "Adjectives -Two-termination in the Third Declension",
+        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Smyth+grammar+291&fromdoc=Perseus%3Atext%3A1999.04.0007",
+        "query": "pos=adj&posAdd__contains=wn_on",
+        "ref": "s291"
+    },
+    "model": "app.grammar",
+    "pk": 63
+},
+{
+    "fields": {
         "target_lang": 5,
         "title": "Diacritics: Iota Subscript",
         "content": "#### For example:\r\n\r\n* * *\r\n\r\n### \u03c7\u03c9\u03c1\u1fb3, _land_\r\n\r\nListen\r\n\r\n## Iota Subscript\r\n\r\nWhen the long vowels \u03b1,\u03b7,\u03c9 meet a short \u03b9, the \u03b9 is written under (subscript!)\r\nthese letters instead of being written next to them. A **iota subscript** is\r\nnever pronounced.\r\n\r\nSo,\r\n\r\n  * \u03b1 \\+ \u03b9 = \u1fb3\r\n  * \u03b7 \\+ \u03b9 = \u1fc3\r\n  * \u03c9 \\+ \u03b9 = \u1ff3\r\n\r\n",
@@ -1494,8 +1506,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Adverbs: How to form and Adverb_intro",
-        "content": "#### Adverbs\r\n\r\nMost adverbs in Ancient Greek are formed by adding -**\u03c9\u03c2** to the stem of the corresponding adjective.\r\nRemember the stem is found by dropping the ending of the masculine genitive\r\nsingular! The following are a few examples of the process of deriving an\r\nadverb from an adjective.\r\n\r\nNominative Masculine Singular | Genitive Masculine Singular | Adverb  \r\n---|---|---  \r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 (just) | **\u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5 | **\u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03c2** (justly)  \r\n\u1f04\u03b4\u03b9\u03ba\u03bf\u03c2 (unjust) | **\u1f00\u03b4\u03af\u03ba**\u03bf\u03c5 | **\u1f00\u03b4\u03af\u03ba\u03c9\u03c2** (unjustly)  \r\n\u03c0\u1fb6\u03c2 (whole) | **\u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2 | **\u03c0\u03ac\u03bd\u03c4\u03c9\u03c2** (wholly)  \r\n\u1f21\u03b4\u03cd\u03c2 (sweet) | **\u1f21\u03b4\u03ad**\u03bf\u03c2 | **\u1f21\u03b4\u03ad\u03c9\u03c2** (sweetly)\r\n\r\n",
+        "title": "Adverbs",
+        "content": "#### Adverbs\r\n\r\nMost adverbs in Ancient Greek are formed by adding -**\u03c9\u03c2** to the stem of the corresponding adjective.\r\nRemember the stem is found by dropping the ending of the masculine genitive\r\nsingular! The following are a few examples of the process of deriving an\r\nadverb from an adjective.\r\n\r\nNominative Masculine Singular | Genitive Masculine Singular | Adverb  \r\n---|---|---  \r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 (just) | **\u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5 | **\u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03c2** (justly)  \r\n\u1f04\u03b4\u03b9\u03ba\u03bf\u03c2 (unjust) | **\u1f00\u03b4\u03af\u03ba**\u03bf\u03c5 | **\u1f00\u03b4\u03af\u03ba\u03c9\u03c2** (unjustly)  \r\n\u03c0\u1fb6\u03c2 (whole) | **\u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2 | **\u03c0\u03ac\u03bd\u03c4\u03c9\u03c2** (wholly)  \r\n\u1f21\u03b4\u03cd\u03c2 (sweet) | **\u1f21\u03b4\u03ad**\u03bf\u03c2 | **\u1f21\u03b4\u03ad\u03c9\u03c2** (sweetly)\r\n\r\n\r\nAnother kind of adverb ends in -**\u03c9**. These derive from prepositions. Take a\r\nlook at some examples below.\r\n\r\nPreposition | Adverb  \r\n---|---  \r\n\u1f00\u03bd\u03ac (up) | **\u1f04\u03bd\u03c9** (on top)  \r\n\u03ba\u03b1\u03c4\u03ac (down) | **\u03ba\u03ac\u03c4\u03c9** (underneath)  \r\n\u03b5\u1f30\u03c2 (towards) | **\u03b5\u1f34\u03c3\u03c9** (inside)  \r\n\u1f10\u03ba/\u1f10\u03be (from) | **\u1f14\u03be\u03c9** (outside)\r\n\r\n\r\nThere is another kind of adverb formed by the **accusative neuter (singular or\r\nplural) of adjectives**. Take a look at some examples below.\r\n\r\nAdjective | Adverb  \r\n---|---  \r\n\u1f40\u03be\u03cd\u03c2 (acute) | **\u1f40\u03be\u03cd** (acutely)  \r\n\u03c0\u03bf\u03bb\u03cd\u03c2 (much) | **\u03c0\u03bf\u03bb\u03cd/\u03c0\u03bf\u03bb\u03bb\u03ac** (much)  \r\n\u03bc\u03ad\u03b3\u03b1\u03c2 (big) | **\u03bc\u03ad\u03b3\u03b1/\u03bc\u03b5\u03b3\u03ac\u03bb\u03b1** (largely)  \r\n  \r\nDon't leave yet! There is one last type of adverb formed with the **accusative\r\nand dative of feminine adjectives or nouns**. Take a look at some examples\r\nbelow.\r\n\r\nNoun/Adjective | Adverb  \r\n---|---  \r\n\u1f21 \u03c7\u03ac\u03c1\u03b9\u03c2 (the grace) | **\u03c7\u03ac\u03c1\u03b9\u03bd** (thanks to)  \r\n\u03c4\u1f78 \u03c4\u03ad\u03bb\u03bf\u03c2 (the end) | **\u03c4\u03ad\u03bb\u03bf\u03c2** (finally)  \r\n\u1f21 \u1f00\u03c1\u03c7\u03ae (the beginning) | **\u1f00\u03c1\u03c7\u03ae\u03bd** (initially)  \r\n\u1f34\u03b4\u03b9\u03bf\u03c2 (private) | **\u1f30\u03b4\u03af\u1fb3** (privately)  \r\n\u03b4\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf\u03c2 (public) | **\u03b4\u03b5\u03bc\u03bf\u03c3\u03af\u1fb3** (publicly)  \r\n\u03c0\u03b5\u03b6\u03cc\u03c2 (walking) | **\u03c0\u03b5\u03b6\u1fc7** (on foot)",
         "grammar_ref": 32,
         "related_content": [],
         "source_lang": 4
@@ -1999,8 +2011,8 @@
     "fields": {
         "target_lang": 5,
         "title": "Adjectives: First and Second Declension_Three-declension_intro1",
-        "content": "##### Three-ending Adjectives of the First and Second Declension,\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2,\u03b4\u03b9\u03ba\u03b1\u03af\u03b1,\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd _righteous_\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1 | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af\u1ff3 | \u03b4\u03b9\u03ba\u03b1\u03af\u1fb3 | \u03b4\u03b9\u03ba\u03b1\u03af\u1ff3 | Acc. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03bd | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | Voc. |\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03b5 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1 | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | **Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03b9\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03b9\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03b9\u03c2  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03c2 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \r\n  \r\n#### How Greek Verbs work\r\n\r\nJust like nouns, Greek verbs are inflected and just like nouns they add an\r\nending to their stem to produce their various forms. While the patterns for\r\nnouns are called declensions (and the noun is declined), the verb forms fall\r\ninto **conjugations** (so the verb is **conjugated**).  \r\nMost Greek verbs will have these 5 important characteristics:\r\n\r\n  1. **Person**\r\n  2. **Number**\r\n  3. **Tense**\r\n  4. **Mood**\r\n  5. **Voice**\r\n\r\n* * *\r\n\r\n##### Useful tip!\r\n\r\nUnlike English verbs, the subject of the Greek verb is implied by the verb's\r\nending. Therefore, it is not necessary for it to be accompanied by the\r\npersonal pronouns _I, You, He/She/It, We, You, They_.  \r\nFor example: The English _I have_ can be translated either \u1f10\u03b3\u03ce \u1f14\u03c7\u03c9 or, more\r\ncommonly, simply  \u1f14\u03c7\u03c9.\r\n\r\nSoon you will be able to identify the **5 characteristics of Greek verbs**\r\nyourself! Click onthe arrow to find out how.\r\n\r\n",
-        "grammar_ref": 28,
+        "content": "##### Three-ending Adjectives of the First and Second Declension,\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2,\u03b4\u03b9\u03ba\u03b1\u03af\u03b1,\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd _righteous_\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1 | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af\u1ff3 | \u03b4\u03b9\u03ba\u03b1\u03af\u1fb3 | \u03b4\u03b9\u03ba\u03b1\u03af\u1ff3 | Acc. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03bd | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | Voc. |\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03b5 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1 | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd | **Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd | \u03b4\u03b9\u03ba\u03b1\u03af\u03c9\u03bd  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03b9\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03b9\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03b9\u03c2  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af\u03bf\u03c5\u03c2 | \u03b4\u03b9\u03ba\u03b1\u03af\u03b1\u03c2 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1\u03b9 | \u03b4\u03af\u03ba\u03b1\u03b9\u03b1  \r\n  \r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2022,7 +2034,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Adjectives: First and Second Declension_Three-declension_intro",
+        "title": "Adjectives:Third Declension_Three-declension_intro",
         "content": "## How First and Second Declension Adjectives work\r\n\r\nJust like articles and nouns have gender, number and case, so do all the\r\nadjectives. Like the article, **an adjective must agree in gender, number and\r\ncase with the noun it describes**.\r\n\r\nHowever, this does not mean that the ending of the article and that of the\r\nnoun are always identical; there are exceptions where, though the adjective\r\nand noun agree, the endings might look different.\r\n\r\nAdjectives agreeing with third declension nouns fall into two groups:\r\n\r\n  * **Three-ending Adjectives**  \r\nThese can have three types of endings:\r\n\r\n    * -**\u03b1\u03c2** -**\u03b1\u03c3\u03b1**\r\n-**\u03b1\u03bd**\r\n    * -**\u03b1\u03c2** -**\u03b1\u03b9\u03bd\u03b1**\r\n-**\u03b1\u03bd**\r\n    * -**\u03cd\u03c2** -**\u03b5\u1fd6\u03b1**\r\n-**\u03cd**\r\n  \r\n  \r\n  \r\n  \r\n\r\n  * **Two-ending Adjectives**  \r\nThese can have two types of endings:\r\n\r\n    * -**\u03c9\u03bd** for masculine and feminine; -**\u03bf\u03bd**\r\nfor neuter\r\n\r\n    * -**\u03b7\u03c2** for masculine and feminine; -**\u03b5\u03c2**\r\nfor neuter  \r\n  \r\n\r\n* * *\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -2046,9 +2058,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Adjectives: Third Declension_Two-ending_1",
-        "content": "### \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd -- _happy_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | Acc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1** | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | Voc.\r\n| \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | **Plural**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd** | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nVoc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\n  \r\n## Two-ending Adjectives of the Third Declension\r\n\r\nThe adjectives of the third declension with two endings are declined just like\r\nthe third declension nouns with consonant stems. These adjectives have one\r\ntype of ending for masculine and feminine, and one type for neuter.\r\n\r\nLook at the following example of \u03b5\u1f50\u03b4\u03b1\u03af\u03bc**\u03c9\u03bd**, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc**\u03bf\u03bd**, meaning _happy_.\r\n\r\n",
-        "grammar_ref": 29,
+        "title": "Adjectives: Third Declension (Two-ending)",
+        "content": "## Two-ending Adjectives of the Third Declension\r\n\r\nThe adjectives of the third declension with two endings are declined just like\r\nthe third declension nouns with consonant stems. These adjectives have one\r\ntype of ending for masculine and feminine, and one type for neuter.\r\n\r\nLook at the following example of \u03b5\u1f50\u03b4\u03b1\u03af\u03bc**\u03c9\u03bd**, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc**\u03bf\u03bd**, meaning _happy_.\r\n\r\n### \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd -- _happy_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1** | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \r\nVoc.| \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd |\r\n **Plural**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd** | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nVoc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\n\r\nAnd now another example with different endings: \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ae\u03c2**, \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ad\u03c2**,\r\nmeaning _noble_.\r\n\r\n### \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2, \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 -- _noble_\r\n\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2\r\n| \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | \r\n**Plural**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\n  \r\n\r\n\r\n",
+        "grammar_ref": 63,
         "related_content": [],
         "source_lang": 4
     },
@@ -2072,7 +2084,7 @@
         "target_lang": 5,
         "title": "Adjectives: Third Declension_Two-ending",
         "content": "### \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2, \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 -- _noble_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | Acc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | Voc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2\r\n| \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | **Plural**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\n  \r\n## Two-ending Adjectives of the Third Declension\r\n\r\nAnd now another example with different endings: \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ae\u03c2**, \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ad\u03c2**,\r\nmeaning _noble_.\r\n\r\n",
-        "grammar_ref": 29,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2082,9 +2094,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Adjectives: Third Declension_Three-ending",
-        "content": "### \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd -- _every_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd  \r\nGen. | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2** | \u03c0\u03ac\u03c3**\u03b7\u03c2** | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2**  \r\nDat. | \u03c0\u03b1\u03bd\u03c4**\u03af** | \u03c0\u03ac\u03c3**\u1fc3** | \u03c0\u03b1\u03bd\u03c4**\u03af** | Acc. | \u03c0\u03ac\u03bd\u03c4**\u03b1** | \u03c0\u1fb6\u03c3**\u03b1\u03bd** | \u03c0\u1fb6\u03bd |\r\nVoc. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd | **Plural**  \r\nNom. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nGen. | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd** | \u03c0\u03b1\u03c3**\u1ff6\u03bd** | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd**  \r\nDat. | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)** | \u03c0\u03ac\u03c3**\u03b1\u03b9\u03c2** | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03c0\u03ac\u03bd\u03c4**\u03b1\u03c2** | \u03c0\u03ac\u03c3**\u03b1\u03c2** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nVoc. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\n  \r\n## Three-ending Adjectives of the First and Second Declension\r\n\r\nAs you can see from the table, the adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd has forms of the\r\nfirst and third declensions.\r\n\r\n##### Useful tip\r\n\r\nThe adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd often also means _all_ or _whole_.\r\n\r\n* * *\r\n\r\nAnother adjective that follows this pattern is \u03bc\u03ad\u03bb**\u03b1\u03c2**, \u03bc\u03ad\u03bb**\u03b1\u03b9\u03bd\u03b1**,\r\n\u03bc\u03ad\u03bb**\u03b1\u03bd**, meaning _black_. If you look closely the endings for this\r\nparticular adjective, though similar, are somewhat different from those in\r\n\u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd.\r\n\r\n* * *\r\n\r\nThe very last type of adjectives following this pattern is \u1f21\u03b4**\u03cd\u03c2**,\r\n\u1f21\u03b4**\u03b5\u1fd6\u03b1**, \u1f21\u03b4**\u03cd**, meaning _sweet_.\r\n\r\n",
-        "grammar_ref": null,
+        "title": "Adjectives: Third Declension (Three-ending)",
+        "content": "## Three-ending Adjectives of the First and Second Declension\r\n\r\nAs you can see from the table, the adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd has forms of the\r\nfirst and third declensions.\r\n\r\n### \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd -- _every_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd  \r\nGen. | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2** | \u03c0\u03ac\u03c3**\u03b7\u03c2** | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2**  \r\nDat. | \u03c0\u03b1\u03bd\u03c4**\u03af** | \u03c0\u03ac\u03c3**\u1fc3** | \u03c0\u03b1\u03bd\u03c4**\u03af** | \r\nAcc. | \u03c0\u03ac\u03bd\u03c4**\u03b1** | \u03c0\u1fb6\u03c3**\u03b1\u03bd** | \u03c0\u1fb6\u03bd |\r\nVoc. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd | \r\n**Plural**  \r\nNom. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nGen. | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd** | \u03c0\u03b1\u03c3**\u1ff6\u03bd** | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd**  \r\nDat. | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)** | \u03c0\u03ac\u03c3**\u03b1\u03b9\u03c2** | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03c0\u03ac\u03bd\u03c4**\u03b1\u03c2** | \u03c0\u03ac\u03c3**\u03b1\u03c2** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nVoc. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\n  \r\n***\r\n\r\n##### Useful tip\r\n\r\nThe adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd often also means _all_ or _whole_.\r\n\r\n* * *\r\n\r\nAnother adjective that follows this pattern is \u03bc\u03ad\u03bb**\u03b1\u03c2**, \u03bc\u03ad\u03bb**\u03b1\u03b9\u03bd\u03b1**,\r\n\u03bc\u03ad\u03bb**\u03b1\u03bd**, meaning _black_. If you look closely the endings for this\r\nparticular adjective, though similar, are somewhat different from those in\r\n\u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd.\r\n\r\n* * *\r\n\r\nThe very last type of adjectives following this pattern is \u1f21\u03b4**\u03cd\u03c2**,\r\n\u1f21\u03b4**\u03b5\u1fd6\u03b1**, \u1f21\u03b4**\u03cd**, meaning _sweet_.\r\n\r\n",
+        "grammar_ref": 30,
         "related_content": [],
         "source_lang": 4
     },
@@ -2418,8 +2430,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Articles: Definite_declension",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n## Definite Articles\r\n\r\nGreek has articles that in meaning are roughly the equivalent of the English\r\n**\"the\"**. The Greek article takes on different form for the different\r\ngenders, numbers and cases. Articles always **agree** with the nouns they\r\nrefer to, meaning that they take the same gender, number, and case of the\r\nnoun.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nNote the change in accent from an acute to a circumflex in the genitive and\r\ndative, both singular and plural.\r\n\r\n",
+        "title": "Articles: Definite Articles",
+        "content": "## Definite Articles\r\n\r\nGreek has articles that in meaning are roughly the equivalent of the English\r\n**\"the\"**. The Greek article takes on different form for the different\r\ngenders, numbers and cases. Articles always **agree** with the nouns they\r\nrefer to, meaning that they take the same gender, number, and case of the\r\nnoun.\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n\r\n\r\n#####  Useful tip!\r\n\r\nNote the change in accent from an acute to a circumflex in the genitive and\r\ndative, both singular and plural.\r\n\r\n",
         "grammar_ref": 31,
         "related_content": [],
         "source_lang": 4
@@ -3198,8 +3210,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Adjectives: Second Declension_Two-ending",
-        "content": "### \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd -- _unjust_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd**  \r\nGen. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5** | \u1f04\u03b4\u03af\u03ba**\u03bf\u03c5**  \r\nDat. | \u1f00\u03b4\u03af\u03ba**\u1ff3** | \u1f00\u03b4\u03af\u03ba**\u1ff3** | Acc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | Voc. |\r\n\u1f04\u03b4\u03b9\u03ba**\u03b5** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | **Plural**  \r\nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\nGen. | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd** | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd**  \r\nDat. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2** | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2**  \r\nAcc. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\nVoc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\n  \r\n## Two-ending Adjectives of the Second Declension\r\n\r\nAs you can see from the table, the adjective \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd has the same\r\nendings as second declension nouns.\r\n\r\nExample: \u03c4\u03bf\u1fe6 \u1f00\u03b4\u03af\u03ba\u03bf\u03c5 \u1f00\u03bd\u03b8\u03c1\u03ce\u03c0\u03bf\u03c5, meaning _of the unjust man._\r\n\r\n##### Meet the Alpha Privative\r\n\r\nThe adjective **\u1f04**\u03b4\u03b9\u03ba\u03bf\u03c2, meaning _unjust_ is the exact opposite in meaning of\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 meaning _just_. The clue is in the prefix **\u03b1**, also called _alpha\r\nprivative_, expressesing negation or absence.\r\n\r\n",
+        "title": "Adjectives: Second Declension (Two-ending)",
+        "content": "## Two-ending Adjectives of the Second Declension\r\n\r\nAs you can see from the table, the adjective \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd has the same\r\nendings as second declension nouns.\r\n\r\nExample: \u03c4\u03bf\u1fe6 \u1f00\u03b4\u03af\u03ba\u03bf\u03c5 \u1f00\u03bd\u03b8\u03c1\u03ce\u03c0\u03bf\u03c5, meaning _of the unjust man._\r\n\r\n### \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd -- _unjust_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd**  \r\nGen. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5** | \u1f04\u03b4\u03af\u03ba**\u03bf\u03c5**  \r\nDat. | \u1f00\u03b4\u03af\u03ba**\u1ff3** | \u1f00\u03b4\u03af\u03ba**\u1ff3** | Acc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | Voc. |\r\n\u1f04\u03b4\u03b9\u03ba**\u03b5** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | **Plural**  \r\nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\nGen. | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd** | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd**  \r\nDat. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2** | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2**  \r\nAcc. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\nVoc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\n  \r\n## Two-ending Adjectives of the Second Declension\r\n\r\nAs you can see from the table, the adjective \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd has the same\r\nendings as second declension nouns.\r\n\r\nExample: \u03c4\u03bf\u1fe6 \u1f00\u03b4\u03af\u03ba\u03bf\u03c5 \u1f00\u03bd\u03b8\u03c1\u03ce\u03c0\u03bf\u03c5, meaning _of the unjust man._\r\n\r\n##### Meet the Alpha Privative\r\n\r\nThe adjective **\u1f04**\u03b4\u03b9\u03ba\u03bf\u03c2, meaning _unjust_ is the exact opposite in meaning of\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 meaning _just_. The clue is in the prefix **\u03b1**, also called _alpha\r\nprivative_, expressesing negation or absence.\r\n\r\n",
         "grammar_ref": 29,
         "related_content": [],
         "source_lang": 4
@@ -3222,14 +3234,11 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Adjectives: Second Declension_Three-ending",
-        "content": "### \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd -- _just_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1fb3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | Acc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03bd**\r\n| \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | Voc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | **Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\n  \r\n## Three-ending Adjectives of the First and Second Declension\r\n\r\nAs you can see from the table, the adjective \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd has the\r\nsame endings as first declension nouns in the feminine, and as second\r\ndeclension nouns in the masculine and neuter.\r\n\r\nExample: \u1f41 \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2, meaning _the just man._\r\n\r\n##### Word Order and Adjectives\r\n\r\nThe meaning given to the article, noun, and its agreeing adjective can vary\r\nslightly according to **word order**. So, you might not always find these\r\nthree components (article, noun, adjective) in the same sequence.\r\n\r\n* * *\r\n\r\nFor example: \u1f41 \u1f00\u03b3\u03b1\u03b8\u1f78\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 means _the good man_, but \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u1f41 \u1f00\u03b3\u03b1\u03b8\u03bf\u03c2\r\nmeans _a man, the good one_\r\n\r\n",
+        "title": "Adjectives: First and Second Declension (Three-ending)",
+        "content": "## How First and Second Declension Adjectives work\r\n\r\nJust like articles and nouns have gender, number and case, so do all the\r\nadjectives. Like the article, **an adjective must agree in gender, number and\r\ncase with the noun it describes**.\r\n\r\nHowever, this does not mean that the ending of the article and that of the\r\nnoun are always identical; there are exceptions where, though the adjective\r\nand noun agree, the endings might look different (e.g. \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2 \u03c8\u03c5\u03c7\u03ae, meaning\r\n_an unjust soul_).\r\n\r\nAdjectives agreeing with first and second declension nouns fall into two\r\ngroups:\r\n\r\n  * **Three-ending Adjectives**  \r\nThere are separate sets of endings for each of the three genders.  \r\n  \r\n\r\n  * **Two-ending Adjectives**  \r\nMasculine and Feminine nouns share one set of endings, while neuter has a\r\ndifferent set.  \r\n  \r\n\r\n* * *\r\n\r\nAs you can see from the table, the adjective \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd has the\r\nsame endings as first declension nouns in the feminine, and as second\r\ndeclension nouns in the masculine and neuter.\r\n\r\nExample: \u1f41 \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2, meaning _the just man._\r\n\r\n### \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd -- _just_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1fb3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | Acc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03bd**\r\n| \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | Voc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | **Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**\r\n\r\n***\r\n\r\n##### Word Order and Adjectives\r\n\r\nThe meaning given to the article, noun, and its agreeing adjective can vary\r\nslightly according to **word order**. So, you might not always find these\r\nthree components (article, noun, adjective) in the same sequence.\r\n\r\nFor example: \u1f41 \u1f00\u03b3\u03b1\u03b8\u1f78\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 means _the good man_, but \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u1f41 \u1f00\u03b3\u03b1\u03b8\u03bf\u03c2\r\nmeans _a man, the good one_\r\n\r\n",
         "grammar_ref": 28,
         "related_content": [
-            288,
-            290,
-            386,
-            295
+            284
         ],
         "source_lang": 4
     },
@@ -19369,5 +19378,797 @@
     },
     "model": "admin.logentry",
     "pk": 847
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T12:01:18.444Z",
+        "object_repr": "Adjectives:Third Declension_Three-declension_intro",
+        "object_id": "290",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 848
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T12:01:33.567Z",
+        "object_repr": "Adjectives: First and Second Declension_Three-declension_intro1",
+        "object_id": "288",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 849
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T12:02:25.274Z",
+        "object_repr": "Adjectives: First and Second Declension_Three-declension_intro1",
+        "object_id": "288",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 850
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T12:03:01.434Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 851
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T12:04:31.851Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 852
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T12:06:01.530Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 853
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T12:09:23.386Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 854
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T13:56:04.885Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 855
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T13:58:29.709Z",
+        "object_repr": "Adjectives: Third Declension_Three-ending",
+        "object_id": "295",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 856
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:01:09.555Z",
+        "object_repr": "Adjectives: Third Declension_Two-ending",
+        "object_id": "294",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 857
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:01:37.965Z",
+        "object_repr": "Adjectives: Third Declension_Two-ending",
+        "object_id": "292",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 858
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:02:16.902Z",
+        "object_repr": "Adjectives: Third Declension_Two-ending",
+        "object_id": "292",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 859
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:03:32.630Z",
+        "object_repr": "Adjectives: Third Declension_Two-ending",
+        "object_id": "292",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 860
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:04:45.066Z",
+        "object_repr": "Adjectives: Third Declension_Two-ending",
+        "object_id": "292",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 861
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:05:57.489Z",
+        "object_repr": "Adjectives: Third Declension_Two-ending",
+        "object_id": "292",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 862
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:08:11.170Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 863
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:09:18.231Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 864
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:10:09.827Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 865
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:10:43.782Z",
+        "object_repr": "Adjectives: Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 866
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:13:27.434Z",
+        "object_repr": "Adjectives: Third Declension_Three-ending",
+        "object_id": "295",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 867
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:25:56.678Z",
+        "object_repr": "Adjectives: Second Declension_Two-ending",
+        "object_id": "388",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 868
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-03T14:32:39.585Z",
+        "object_repr": "Adjectives Three-termination",
+        "object_id": "17",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 869
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-03T14:33:00.480Z",
+        "object_repr": "Adjectives Three Termination",
+        "object_id": "16",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 870
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-03T14:34:34.375Z",
+        "object_repr": "Adjectives: Two-termination in the Third Declension",
+        "object_id": "63",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 871
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:34:54.982Z",
+        "object_repr": "Adjectives: -Two-termination in the Third Declension",
+        "object_id": "63",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 872
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:35:05.699Z",
+        "object_repr": "Adjectives -Two-termination in the Third Declension",
+        "object_id": "63",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 873
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:35:26.951Z",
+        "object_repr": "Adjectives - Three-termination in the Third Declension",
+        "object_id": "30",
+        "change_message": "Changed category.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 874
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:36:25.815Z",
+        "object_repr": "Adjectives: Third Declension_Two-ending",
+        "object_id": "292",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 875
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:37:25.399Z",
+        "object_repr": "Adjectives: First and Second Declension_Three-ending",
+        "object_id": "390",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 876
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:44:41.351Z",
+        "object_repr": "Adverbs: How to form and Adverb_intro",
+        "object_id": "246",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 877
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:45:31.167Z",
+        "object_repr": "Adverbs: How to form and Adverb_intro",
+        "object_id": "246",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 878
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:46:26.437Z",
+        "object_repr": "Adverbs: How to form and Adverb_intro",
+        "object_id": "246",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 879
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:47:04.705Z",
+        "object_repr": "Adverbs: How to form and Adverb",
+        "object_id": "246",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 880
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:47:16.315Z",
+        "object_repr": "Adverbs: How to form an Adverb",
+        "object_id": "246",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 881
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:48:14.709Z",
+        "object_repr": "Adjectives: First and Second Declension (Three-ending)",
+        "object_id": "390",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 882
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:48:27.177Z",
+        "object_repr": "Adjectives: Second Declension (Two-ending)",
+        "object_id": "388",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 883
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:48:37.847Z",
+        "object_repr": "Adjectives: Third Declension (Three-ending)",
+        "object_id": "295",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 884
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:48:46.949Z",
+        "object_repr": "Adjectives: Third Declension (Two-ending)",
+        "object_id": "292",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 885
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:53:32.421Z",
+        "object_repr": "Articles: Definite_declension",
+        "object_id": "323",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 886
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:54:11.537Z",
+        "object_repr": "Articles: Definite_declension",
+        "object_id": "323",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 887
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:54:31.131Z",
+        "object_repr": "Articles: Definite Articles",
+        "object_id": "323",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 888
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:55:11.134Z",
+        "object_repr": "Adverbs",
+        "object_id": "246",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 889
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:56:36.511Z",
+        "object_repr": "Articles",
+        "object_id": "7",
+        "change_message": "Changed graphic.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 890
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T14:59:11.003Z",
+        "object_repr": "Articles Declension",
+        "object_id": "31",
+        "change_message": "Changed category.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 891
 }
 ]
