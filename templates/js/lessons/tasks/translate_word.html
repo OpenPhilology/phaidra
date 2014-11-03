@@ -2,13 +2,7 @@
 <h1><%= model.get('value') %></h1>
 
 <div class="definitions">
-	<% var alignments = model.getDefinition(); %>
-	<% if (alignments) { %>
-		<h1><% print(alignments[0]); %></h1>
-	<% } else { %>
-		<h2><em>No direct alignment found</em>');  %></h2>
-	<% } %>
-
+	<h1><%= definition[0].value %></h1>
 </div>
 <div class="answer-box" dir="<%= DIR %>">
 	<form>
@@ -20,11 +14,6 @@
 		</div>
 	</form>
 	<hr>
-	<p lang="grc"><%= sentence %></p>
+	<p lang="grc"><% //sentence %></p>
 	<p class="alt-definitions"><%= model.getHumanReadableMorph() %></p>
 </div>
-
-<p lang="grc">{% trans "from" %} &mdash; <strong><%= model.getDictForm() %></strong> &mdash; <%= model.get('pos') %></p>
-<% if (alignments.length > 1) { %>
-	<p class="alt-definitions" style="margin-top: -15px">{% trans "Also:" %} &nbsp; &nbsp; <em><% print(_.compact(alignments.slice(1,5)).join(', &nbsp; ')); %></em></p>
-<% } %>

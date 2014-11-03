@@ -12,7 +12,6 @@ define(['jquery',
 				'modelName': 'topic',
 			},
 			url: function() {
-				console.log("getting url", this.get('resource_uri'));
 				return this.get('resource_uri');
 			},
 			parse: function(response) {

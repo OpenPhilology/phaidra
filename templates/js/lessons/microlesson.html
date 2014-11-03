@@ -31,7 +31,7 @@
 				<% if (user.get('is_superuser')) { %>
 					<div class="btn-group btn-group-justified">
 						<a class="btn btn-default">{% trans "Admin Panel" %}</a>
-						<a href="/admin/app/grammar/<%= content.id %>" class="btn btn-warning">{% trans "Edit Grammar Topic" %}</a>
+						<a href="/admin/app/grammar/<%= content.id %>" target="_blank" class="btn btn-warning">{% trans "Edit Grammar Topic" %}</a>
 					</div>
 					<br>
 				<% } %>
