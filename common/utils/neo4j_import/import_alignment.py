@@ -111,7 +111,7 @@ for sentence in alignNode.childNodes:
     
     # avoid the language nodes at the very beginning 
     if sentence.attributes and sentence.tagName == 'sentence':	
-		# get the two node sets for the two languages after ensuring the order of the parsed alignments
+        # get the two node sets for the two languages after ensuring the order of the parsed alignments
         if sentence.childNodes[1].attributes['lnum'].value == 'L1':
             save_sentence(sentence.childNodes[3].childNodes, sentence.attributes['id'].value, 'translation')
             save_sentence(sentence.childNodes[1].childNodes, sentence.attributes['id'].value, 'grc')
