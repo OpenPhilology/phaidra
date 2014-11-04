@@ -209,6 +209,14 @@
 },
 {
     "fields": {
+        "graphic": "icon_grk_monster.png",
+        "name": "Present Tense Active"
+    },
+    "model": "app.category",
+    "pk": 19
+},
+{
+    "fields": {
         "username": "monica",
         "first_name": "Monica",
         "last_name": "Lent",
@@ -257,7 +265,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-11-04T14:50:11.455Z",
+        "last_login": "2014-11-04T18:23:18.045Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$mjylIxJjSuP8$hXlaTs4LJGg8TDaOgueySvUCzigoGyiWFEMPIG/0dso=",
@@ -2135,7 +2143,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Third Declension_Conson_Neuter",
+        "title": "Nouns: Third Declension (Consonant Stem - Neuter Nouns)",
         "content": "#### \u03c4\u03cc \u1f14\u03c1\u03b3\u03bf\u03bd,\u03bf\u03c5: The body, of the body\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 | \u03c4\u03ac \u03c3\u03ce\u03bc\u03b1\u03c4**\u03b1**  \r\nGen. | \u03c4\u03bf\u1fe6 \u03c3\u1ff6\u03bc\u03b1\u03c4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u03c3\u03c9\u03bc\u03ac\u03c4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1ff7 \u03c3\u03ce\u03bc\u03b1\u03c4**\u03b9** | \u03c4\u03bf\u1fd6\u03c2 \u03c3\u03ce\u03bc\u03b1**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 | \u03c4\u03ac \u03c3\u1ff6\u03bc\u03b1**\u03c4\u03b1**  \r\nVoc. | \u1ff7 \u03c3\u1ff6\u03bc\u03b1 | \u1ff7 \u03c3\u1ff6\u03bc\u03b1**\u03c4\u03b1**  \r\n  \r\n## Third declension continued...\r\n\r\nAnd now here is an example of a neuter third declension noun: \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 meaning\r\n_the body_.\r\n\r\n* * *\r\n\r\n### Neuter Nouns are a Special Case\r\n\r\nIn all neuter nouns, **the accusative and the vocative are the same as the\r\nnominative**. This works for both singular and plural.\r\n\r\n",
         "grammar_ref": 25,
         "related_content": [],
@@ -2171,9 +2179,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Third Declension_ConsonantStem_Dativeendings",
+        "title": "Nouns: Third Declension (Dative Ending)",
         "content": "## A few things to remember!\r\n\r\nWhen the final consonant of a stem meets the **dative plural** ending -\u03c3\u03b9 , it\r\ncauses the following spelling and phonetic changes:\r\n\r\nThe consonants are grouped according to sound.\r\n\r\nType of consonant | Consonants |  | Dative Ending |  | Results in | Example  \r\n---|---|---|---|---|---|---  \r\nLabial | \u03c0, \u03b2, \u03c6 | + | -\u03c3\u03b9 | = | **-\u03c8\u03b9** | \u03c6\u03bb\u03b5\u03b2+\u03c3\u03af = \u03c6\u03bb\u03b5\u03c8\u03af  \r\nVelar | \u03ba, \u03b3, \u03c7 | + | -\u03c3\u03b9 | = | **-\u03be\u03b9** | \u03c6\u03cd\u03bb\u03b1\u03ba+\u03c3\u03b9 = \u03c6\u03cd\u03bb\u03b1\u03be\u03b9  \r\nDental | \u03c4, \u03b4, \u03b8 | + | -\u03c3\u03b9 | = | **-\u03c3\u03b9** | \u1f10\u03bb\u03c0\u03af\u03b4+\u03c3\u03b9 = \u1f10\u03bb\u03c0\u03af\u03c3\u03b9  \r\nStem in -\u03bd\u03c4 | -\u03b1\u03bd\u03c4 | + | -\u03c3\u03b9 | = | **-\u03b1\u03c3\u03b9** | \u03b3\u03af\u03b3\u03b1\u03bd\u03c4+\u03c3\u03b9 = \u03b3\u03af\u03b3\u03b1\u03c3\u03b9  \r\nStem in -\u03bd\u03c4 | -\u03bf\u03bd\u03c4 | + | -\u03c3\u03b9 | = | **-\u03bf\u03c5\u03c3\u03b9** | \u03b3\u03ad\u03c1\u03bf\u03bd\u03c4+\u03c3\u03b9 = \u03b3\u03ad\u03c1\u03bf\u03c5\u03c3\u03b9\r\n\r\n",
-        "grammar_ref": 24,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2195,9 +2203,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Third Declension_ConsonantStem_originalexample",
-        "content": "##### Third Declension: Consonant Stem\r\n\r\nCase | Singular | Plural  \r\n---|---|---  \r\n**Feminine/Masculine**  \r\nNom. | - | -\u03b5\u03c2  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | -\u03b1, -\u03bd | -\u03b1\u03c2  \r\nVoc. | - | -\u03bf\u03b9  \r\n**Neuter**  \r\nNom. | - | -\u03b1  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | - | -\u03b1  \r\nVoc. | - | -\u03b1  \r\n  \r\n#### The Third Declension in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of third\r\ndeclension nouns in the Pentecontaetia.\r\n\r\n\u03bf\u1f30 [...] \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f27\u03bb\u03b8\u03bf\u03bd |  \u1f10\u03c0\u1f76 \u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1**  \r\n---|---|---|---  \r\nThe [...] Athenians  |  in this way  |  came  |  **to the circumstances...**  \r\n(Nominative)  |  **   |  (Verb)  |  \r\n-- _The History of the Peloponnesian War_, 1.89.1\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\n\u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1 is a neuter, accusative plural of the noun \u03c4\u03cc \u03c0\u03c1\u1fb6\u03b3\u03bc\u03b1.\r\n\r\n",
-        "grammar_ref": 25,
+        "title": "Nouns: Third Declension (Original Example)",
+        "content": "##### Third Declension: Consonant Stem\r\n\r\nCase | Singular | Plural  \r\n---|---|---  \r\n**Feminine/Masculine**  \r\nNom. | - | -\u03b5\u03c2  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | -\u03b1, -\u03bd | -\u03b1\u03c2  \r\nVoc. | - | -\u03bf\u03b9  \r\n**Neuter**  \r\nNom. | - | -\u03b1  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | - | -\u03b1  \r\nVoc. | - | -\u03b1  \r\n  \r\n#### The Third Declension in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of third\r\ndeclension nouns in the Pentecontaetia.\r\n\r\n\u03bf\u1f30 [...] \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f27\u03bb\u03b8\u03bf\u03bd |  \u1f10\u03c0\u1f76 \u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1**  \r\n---|---|---|---  \r\nThe [...] Athenians  |  in this way  |  came  |  **to the circumstances...**  \r\n(Nominative)  |  **   |  (Verb)  |  \r\n-- _The History of the Peloponnesian War_, 1.89.1\r\n\r\n\u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1 is a neuter, accusative plural of the noun \u03c4\u03cc \u03c0\u03c1\u1fb6\u03b3\u03bc\u03b1.\r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2210,7 +2218,11 @@
         "title": "Nouns: Third Declension (Consonant Stem)",
         "content": "## Third declension: consonant stem\r\n\r\nThird declension nouns can be masculine, feminine, or neuter. They are called\r\n\"nouns with consonant stems\" because their stems end with a consonant and so\r\nthat they distinguish themselves from third declension nouns with vowel stems.\r\n\r\n##### \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2,\u1f10\u03bb\u03c0\u03af\u03b4\u03bf\u03c2: The hope, of the hope\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 | \u03b1\u1f31 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\nGen. | \u03c4\u1fc6\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1fc7 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b9** | \u03c4\u03b1\u1fd6\u03c2 \u1f10\u03bb\u03c0\u03af**\u03c3\u1f31(\u03bd)**  \r\nAcc. | \u03c4\u1f74\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1** | \u03c4\u1f70\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u1f10\u03bb\u03c0\u03af | \u1f66 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\n  \r\n* * *\r\n\r\nUnlike nouns from the first and second declensions, **the nominative singular\r\nforms of third declension nouns don't have a specific ending** \\- rather, the\r\nending of every noun is different. However, some features of the third\r\ndeclension remain stable for every noun. These are:\r\n\r\n  * the endings of the genitive\r\n  * the endings of the dative\r\n  * the endings of the accusative plural\r\n  * the endings of the vocative plural\r\nHere is the declension of the Greek word \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 meaning _the hope_.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nIn the third declension, masculine and feminine nouns have the same endings.\r\n\r\n#####  Keep and eye out!\r\n\r\nIn masculine and feminine nouns, the **vocative** singular is identical in\r\nform to the nominative singular:\r\n\r\n  * when the nominative singular ends in -\u03be or -\u03c8\r\n  * when the nominative singular ends in -\u03bd or -\u03c1 and accents the ultima\r\nOtherwise the nominative singular stays as the stem alone, with any final\r\nletter dropped (e.g.\u1f10\u03bb\u03c0\u03b9)\r\n\r\n",
         "grammar_ref": 24,
-        "related_content": [],
+        "related_content": [
+            296,
+            299,
+            301
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3055,8 +3067,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_ToBe_conjugation",
-        "content": "# \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03b5\u1f30\u03bc\u03af | I am  \r\n2nd | \u03b5\u1f36 | You are  \r\n3rd | \u1f10\u03c3\u03c4\u03af(\u03bd) | He/She/It is | **Plural**  \r\n1st | \u1f10\u03c3\u03bc\u03ad\u03bd | We are  \r\n2nd | \u1f10\u03c3\u03c4\u03ad | You are  \r\n3rd | \u03b5\u1f30\u03c3\u03af(\u03bd) | They are  \r\n\r\n* * *\r\n\r\n### Present Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n\r\n",
+        "title": "Verbs: Present Indicative Active (To Be)",
+        "content": "### Present Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n# \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03b5\u1f30\u03bc\u03af | I am  \r\n2nd | \u03b5\u1f36 | You are  \r\n3rd | \u1f10\u03c3\u03c4\u03af(\u03bd) | He/She/It is | \r\n**Plural**  \r\n1st | \u1f10\u03c3\u03bc\u03ad\u03bd | We are  \r\n2nd | \u1f10\u03c3\u03c4\u03ad | You are  \r\n3rd | \u03b5\u1f30\u03c3\u03af(\u03bd) | They are  \r\n\r\n* * *\r\n\r\n\r\n",
         "grammar_ref": 45,
         "related_content": [],
         "source_lang": 4
@@ -3079,9 +3091,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_translation",
+        "title": "Verbs: Present Indicative Active (How to translate)",
         "content": "##### Present Indicative Active, _To have_\r\n\r\n| **Singular** | **Plural**  \r\n---|---|---  \r\n1st | I | have | We | have  \r\n2nd | You | have | You (all) | have  \r\n3rd | He/She/It | has | They | have  \r\n  \r\n## Present Indicative Active\r\n\r\nAs you now know:\r\n\r\n  * The**present tense**describes an action in the present time with progressive aspect (i.e. the action is still taking place). \r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\n* * *\r\n\r\n##### Remember: Greek implies the subject of the verb in the verb's\r\nconjugation!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\nFor example: The English _I have_ can be translated either \u1f10\u03b3\u03ce \u1f14\u03c7\u03c9 or, more\r\ncommonly, simply  \u1f14\u03c7\u03c9.\r\n\r\n",
-        "grammar_ref": 58,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3091,9 +3103,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_originalexample",
+        "title": "Verbs: Present Indicative Active (Original Example)",
         "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPresent Indicative Active\r\n\r\n**Singular**  \r\n---  \r\n1st | \u03bb\u03cd**\u03c9** | I untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03b9\u03c2** | You untie  \r\n3rd | \u03bb\u03cd**\u03b5\u03b9** | He/She/It unties | **Plural**  \r\n1st | \u03bb\u03cd**\u03bf\u03bc\u03b5\u03bd** | We untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03c4\u03b5** | You untie  \r\n3rd | \u03bb\u03cd**\u03bf\u03c5\u03c3\u03b9(\u03bd)** | They untie  \r\n  \r\n## The First Indicative Active in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of a present\r\nindicative active verb in the Pentecontaetia.\r\n\r\n-- _The History of the Peloponnesian War_,\r\n[1.90.4](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.90.4)\r\n\r\nKeep Reading \u00bb\r\n\r\n",
-        "grammar_ref": 39,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3103,7 +3115,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_intro",
+        "title": "Startpage: Present Indicative Active_intro",
         "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _\"Indicative\" comes from Latin, _indicare_, which means to declare\r\nsomething. I declare Latin to be useless compared to almighty Greek!_\r\nThucydides _(ca 460 - 395 BC)_\r\n\r\n# Present Indicative Active\r\n\r\n* * *\r\n\r\nNow that you are familiar with the 5 characteristics of verbs, start by\r\nlearning the **present indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab The fate of Pausanias\r\n\r\n  1. Identify present indicative active verbs.\r\n  2. Conjugate present indicative active verbs.\r\n\r\n",
         "grammar_ref": 39,
         "related_content": [],
@@ -3127,10 +3139,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_conjugation",
-        "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03bb\u03cd**\u03c9** | I untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03b9\u03c2** | You untie  \r\n3rd | \u03bb\u03cd**\u03b5\u03b9** | He/She/It unties | **Plural**  \r\n1st | \u03bb\u03cd**\u03bf\u03bc\u03b5\u03bd** | We untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03c4\u03b5** | You untie  \r\n3rd | \u03bb\u03cd**\u03bf\u03c5\u03c3\u03b9(\u03bd)** | They untie  \r\n  \r\n## Present Indicative Active\r\n\r\nTo form the present indicative active, **identify the present tense stem by\r\nremoving the variable ending \\- \u03c9**. Add the endings from the table to\r\nindicate person and number.\r\n\r\n* * *\r\n\r\nFor example:\r\n\r\n\u03bb\u03cd\r\n\r\n* * *\r\n\r\n|  \u03c9\r\n\r\n* * *  \r\n  \r\n---|---  \r\n**Stem**  \r\n|  **Ending**  \r\n  \r\n  \r\n##### Learn something Nu!\r\n\r\nThe letter \u03bd at the end of the third person plural is called **nu-movable**.\r\nIt may be added to certain endings when/if the following word begins with a\r\nvowel or at the end of a sentence.\r\n\r\nAnd...remember the accent rules? They also apply to verbs!\r\n\r\n",
-        "grammar_ref": 58,
-        "related_content": [],
+        "title": "Verbs: Present Indicative Active",
+        "content": "## Present Indicative Active\r\n\r\nTo form the present indicative active, **identify the present tense stem by\r\nremoving the variable ending \\- \u03c9**. Add the endings from the table to\r\nindicate person and number.\r\n\r\n* * *\r\n\r\nFor example:\r\n\r\n\u03bb\u03cd\r\n\r\n* * *\r\n\r\n|  \u03c9\r\n\r\n* * *  \r\n  \r\n---|---  \r\n**Stem**  \r\n|  **Ending** \r\n\r\n***\r\n\r\n ### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03bb\u03cd**\u03c9** | I untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03b9\u03c2** | You untie  \r\n3rd | \u03bb\u03cd**\u03b5\u03b9** | He/She/It unties | **Plural**  \r\n1st | \u03bb\u03cd**\u03bf\u03bc\u03b5\u03bd** | We untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03c4\u03b5** | You untie  \r\n3rd | \u03bb\u03cd**\u03bf\u03c5\u03c3\u03b9(\u03bd)** | They untie  \r\n  \r\n  \r\n##### Learn something Nu!\r\n\r\nThe letter \u03bd at the end of the third person plural is called **nu-movable**.\r\nIt may be added to certain endings when/if the following word begins with a\r\nvowel or at the end of a sentence.\r\n\r\nAnd...remember the accent rules? They also apply to verbs!\r\n\r\n",
+        "grammar_ref": 39,
+        "related_content": [
+            371,
+            373,
+            374
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3790,26 +3806,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Dative Case_In",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Dative Case\r\n\r\n##### Dative meaning **in**\r\n\r\nIn these sentences, the dative expresses **metaphorical or physical\r\nlocation**. Thucydides often uses the dative in this way. When indicating a\r\nphysical location, the dative is often preceeded by the preposition **\u1f10\u03bd**.\r\n\r\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u1f10\u03c3\u03c4\u1f76 |  \u03bd\u03ad\u03bf\u03c2 |  **\u1f21\u03bb\u03b9\u03ba\u03af\u1fb3**.  \r\n---|---|---|---  \r\nThe man  |  is  |  young  |  **in age**.  \r\n(Nominative)  |  (Verb)  |  (Complement)  |  **(Dative)**  \r\n  \r\n##### Dative meaning **with** or **by**\r\n\r\nIn these sentences, the dative expresses **means or instrument**. Thucydides\r\noften uses the dative in this way.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u03b2\u03ac\u03bb\u03bb\u03b5\u03b9 |  \u03c4\u03cc\u03bd \u1f04\u03bd\u03b4\u03c1\u03b1 |  **\u03bb\u03af\u03b8\u03bf\u03b9\u03c2**  \r\n---|---|---|---  \r\nThe girl  |  hits  |  the man  |  **with stones**.  \r\n(Nominative)  |  (Verb)  |  **(Accusative)** |  **(Dative)**\r\n\r\n",
+        "title": "Nouns: Dative Case (Meaning \"in\")",
+        "content": "#### The Dative Case\r\n\r\n##### Dative meaning **in**\r\n\r\nIn these sentences, the dative expresses **metaphorical or physical\r\nlocation**. Thucydides often uses the dative in this way. When indicating a\r\nphysical location, the dative is often preceeded by the preposition **\u1f10\u03bd**.\r\n\r\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u1f10\u03c3\u03c4\u1f76 |  \u03bd\u03ad\u03bf\u03c2 |  **\u1f21\u03bb\u03b9\u03ba\u03af\u1fb3**.  \r\n---|---|---|---  \r\nThe man  |  is  |  young  |  **in age**.  \r\n(Nominative)  |  (Verb)  |  (Complement)  |  **(Dative)**  \r\n  \r\n##### Dative meaning **with** or **by**\r\n\r\nIn these sentences, the dative expresses **means or instrument**. Thucydides\r\noften uses the dative in this way.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u03b2\u03ac\u03bb\u03bb\u03b5\u03b9 |  \u03c4\u03cc\u03bd \u1f04\u03bd\u03b4\u03c1\u03b1 |  **\u03bb\u03af\u03b8\u03bf\u03b9\u03c2**  \r\n---|---|---|---  \r\nThe girl  |  hits  |  the man  |  **with stones**.  \r\n(Nominative)  |  (Verb)  |  **(Accusative)** |  **(Dative)**\r\n\r\n***\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n\r\n",
         "grammar_ref": 54,
         "related_content": [],
         "source_lang": 4
     },
     "model": "app.content",
     "pk": 431
-},
-{
-    "fields": {
-        "target_lang": 5,
-        "title": "Nouns: Dative Case_originalexample1",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Dative Case\r\n\r\n##### Datives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\r\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\r\nthe final blow.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \r\n---|---|---|---  \r\nLeotychides  |  led  |  the Greeks  |  at Mycale...  \r\n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\r\n(Genitive)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nKing \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 is badass!\r\n\r\n##### Almost there!\r\n\r\nNow that you have learned the **dative**, test yourself!  \r\n  \r\nClick the arrow to try recognizing the dative in English and Greek sentences!\r\n\r\n",
-        "grammar_ref": 54,
-        "related_content": [],
-        "source_lang": 4
-    },
-    "model": "app.content",
-    "pk": 432
 },
 {
     "fields": {
@@ -3891,7 +3895,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Accusative Case_Directobject",
+        "title": "Nouns: Accusative Case (Direct Object)",
         "content": "## The Accusative Case\r\n\r\n### Accusative for Direct Objects\r\n\r\nThe accusative case is used to indicate the **direct object of a verb**. A\r\ndirect object is the thing being acted upon by the subject.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03be\u03b7\u03b3\u03ad\u03c4\u03b1\u03b9 |  **\u03c4\u03cc\u03bd \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03bd**.  \r\n---|---|---  \r\nThucydides  |  describes  |  **the war**.  \r\n(Subject)  |  (Verb)  |  **(Direct Object)**  \r\n\u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2 |  \u1f14\u03c7\u03b5\u03b9 |  **\u03c3\u03c4\u03c1\u03b1\u03c4\u03af\u03b1\u03bd**.  \r\n---|---|---  \r\nThe city  |  has  |  **an army**.  \r\n(Subject)  |  (Verb)  |  **(Direct Object)**  \r\n  \r\n##### Don't forget!\r\n\r\nWhile there is a Greek transaltion for the definite article \"the\", there is no\r\ntranslation for the indefinite article \"a\" or \"an\". In this case, you can just\r\nskip the Greek article and translate the noun directly.\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -\r\n\r\n",
         "grammar_ref": 56,
         "related_content": [],
@@ -3927,9 +3931,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Dative Case_originalexample",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\n  \r\n#### The Dative Case\r\n\r\n##### Datives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\r\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\r\nthe final blow.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \r\n---|---|---|---  \r\nLeotychides  |  led  |  the Greeks  |  at Mycale...  \r\n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\r\n(Genitive)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nKing \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 is badass!\r\n\r\n##### Almost there!\r\n\r\nNow that you have learned the **dative**, test yourself!  \r\n  \r\nClick on the arrow to try recognizing the dative in English and Greek\r\nsentences!\r\n\r\n",
-        "grammar_ref": 54,
+        "title": "Nouns: Dative Case (Original Example)",
+        "content": "#### The Dative Case\r\n\r\n##### Datives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\r\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\r\nthe final blow.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \r\n---|---|---|---  \r\nLeotychides  |  led  |  the Greeks  |  at Mycale...  \r\n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\r\n(Genitive)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\n****\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\n\r\n\r\n\r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3939,10 +3943,13 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Dative Case_intro",
+        "title": "Nouns: Dative Case",
         "content": "#### The Dative Case\r\n\r\nThe word \"dative\" derives from the Latin word _dare_, meaning to \"give\". In\r\nmost cases its meaning can be associated with the English words **to** and\r\n**for**. It goes naturally with verbs of giving, so if you take the sentence\r\n_Thucydides gave a story to the audience_, you will find \"to the audience\" in\r\nthe dative.\r\n\r\nThese verbs are generally followed by a direct object in the accusative and an\r\n_indirect object in the dative_. Take a look at the example below!\r\n\r\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u03b4\u03af\u03b4\u03c9\u03c3\u03b9 |  \u03b4\u1ff6\u03c1\u03bf\u03bd |  **\u03c4\u1fc7 \u03ba\u03cc\u03c1\u1fc3**.  \r\n---|---|---|---  \r\nThe man  |  gives  |  a rose  |  **to the girl**.  \r\n(Nominative)  |  (Verb)  |  (Accusative)  |  **(Dative)**  \r\n  \r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -\r\n\r\n",
         "grammar_ref": 54,
-        "related_content": [],
+        "related_content": [
+            442,
+            431
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3951,8 +3958,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Vocative Case_intro",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Vocative Case\r\n\r\nThe vocative is the case by which one addresses or calls out to someone. It is\r\ngenerally very similar in form to the nominative. Notice there is no definite\r\narticle for it in the table. That is because **there is no definite article\r\nfor the vocative**, though often it is preceeded by the interjection \u1f66.\r\n\r\n**\u1f66 \u0396\u03b5\u1fe6,** |  \u1f41 \u03b2\u03af\u03bf\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c7\u03b1\u03bb\u03b5\u03c0\u1f78\u03c2.  \r\n---|---|---|---  \r\n**O Zeus,** |  life  |  is  |  difficult.   \r\n**(Vocative)** |  (Nominative)  |  (Verb)  |  (Complement)   \r\n  \r\n**\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b5\u03c2,** |  \u1f00\u03ba\u03bf\u03cd\u03b5\u03b9\u03c2;  \r\n---|---  \r\n**Thucydides,** |  do you hear?   \r\n(Vocative)  |  (Verb)\r\n\r\n",
+        "title": "Nouns: Vocative Case",
+        "content": "#### The Vocative Case\r\n\r\nThe vocative is the case by which one addresses or calls out to someone. It is\r\ngenerally very similar in form to the nominative. Notice there is no definite\r\narticle for it in the table. That is because **there is no definite article\r\nfor the vocative**, though often it is preceeded by the interjection \u1f66.\r\n\r\n**\u1f66 \u0396\u03b5\u1fe6,** |  \u1f41 \u03b2\u03af\u03bf\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c7\u03b1\u03bb\u03b5\u03c0\u1f78\u03c2.  \r\n---|---|---|---  \r\n**O Zeus,** |  life  |  is  |  difficult.   \r\n**(Vocative)** |  (Nominative)  |  (Verb)  |  (Complement)   \r\n  \r\n**\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b5\u03c2,** |  \u1f00\u03ba\u03bf\u03cd\u03b5\u03b9\u03c2;  \r\n---|---  \r\n**Thucydides,** |  do you hear?   \r\n(Vocative)  |  (Verb)\r\n\r\n***\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n",
         "grammar_ref": 50,
         "related_content": [],
         "source_lang": 4
@@ -22235,5 +22242,563 @@
     },
     "model": "admin.logentry",
     "pk": 1002
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:54:27.102Z",
+        "object_repr": "Nouns: Dative Case_intro",
+        "object_id": "443",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1003
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:54:36.760Z",
+        "object_repr": "Nouns: Dative Case",
+        "object_id": "443",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1004
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:55:08.452Z",
+        "object_repr": "Nouns: Dative Case (Meaning \"in\")",
+        "object_id": "431",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1005
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:55:53.329Z",
+        "object_repr": "Nouns: Dative Case (Original Example)",
+        "object_id": "442",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1006
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:56:33.700Z",
+        "object_repr": "Nouns: Dative Case_originalexample1",
+        "object_id": "432",
+        "change_message": "Changed grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1007
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-04T17:56:55.354Z",
+        "object_repr": "Nouns: Dative Case_originalexample1",
+        "object_id": "432",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1008
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:57:20.460Z",
+        "object_repr": "Nouns: Dative Case",
+        "object_id": "443",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1009
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:58:22.139Z",
+        "object_repr": "Nouns: Dative Case (Original Example)",
+        "object_id": "442",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1010
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:59:56.106Z",
+        "object_repr": "Nouns: Vocative Case",
+        "object_id": "444",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1011
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:00:51.432Z",
+        "object_repr": "Nouns: Vocative Case",
+        "object_id": "444",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1012
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:01:48.223Z",
+        "object_repr": "Nouns: Vocative Case",
+        "object_id": "444",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1013
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:02:49.167Z",
+        "object_repr": "Nouns: Accusative Case (Direct Object)",
+        "object_id": "439",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1014
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:04:42.858Z",
+        "object_repr": "Nouns: Third Declension (Consonant Stem)",
+        "object_id": "302",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1015
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:05:54.678Z",
+        "object_repr": "Nouns: Third Declension (Consonant Stem - Neuter Nouns)",
+        "object_id": "296",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1016
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:08:53.611Z",
+        "object_repr": "Nouns: Third Declension (Dative Ending)",
+        "object_id": "299",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1017
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:09:45.463Z",
+        "object_repr": "Nouns: Third Declension (Original Example)",
+        "object_id": "301",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1018
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:12:40.968Z",
+        "object_repr": "Nouns: Third Declension (Dative Ending)",
+        "object_id": "299",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1019
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:14:51.120Z",
+        "object_repr": "Startpage: Present Indicative Active_intro",
+        "object_id": "375",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1020
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:17:29.992Z",
+        "object_repr": "Verbs: Present Indicative Active (How to translate)",
+        "object_id": "373",
+        "change_message": "Changed title and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1021
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:19:21.529Z",
+        "object_repr": "Verbs: Present Indicative Active_conjugation",
+        "object_id": "377",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1022
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:19:39.291Z",
+        "object_repr": "Verbs: Present Indicative Active (How to translate)",
+        "object_id": "373",
+        "change_message": "Changed grammar_ref and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1023
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:20:13.431Z",
+        "object_repr": "Verbs: Present Indicative Active",
+        "object_id": "377",
+        "change_message": "Changed title and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1024
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:20:50.225Z",
+        "object_repr": "Verbs: Present Indicative Active (To Be)",
+        "object_id": "371",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1025
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:21:11.688Z",
+        "object_repr": "Verbs: Present Indicative Active (Original Example)",
+        "object_id": "374",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1026
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:21:20.730Z",
+        "object_repr": "Verbs: Present Indicative Active",
+        "object_id": "377",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1027
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:22:16.042Z",
+        "object_repr": "Verbs: Present Indicative Active",
+        "object_id": "377",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1028
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:24:37.618Z",
+        "object_repr": "Verbs: Present Indicative Active (To Be)",
+        "object_id": "371",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1029
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:24:53.588Z",
+        "object_repr": "Verbs: Present Indicative Active (To Be)",
+        "object_id": "371",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1030
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:25:18.625Z",
+        "object_repr": "Verbs: Present Indicative Active",
+        "object_id": "377",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1031
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-04T18:27:10.091Z",
+        "object_repr": "Present Tense Active",
+        "object_id": "19",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1032
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:28:22.007Z",
+        "object_repr": "Verbs Present Tense",
+        "object_id": "2",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1033
 }
 ]
