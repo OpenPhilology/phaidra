@@ -6,11 +6,9 @@ import os
 
 ################ set your alignment's meta data ################
 # The script assumes Alpheios alignment output with the references being unique in the document
-# It also assumes the Greek-to-alignment-language to be the first language in the enumeration in the xml.
-# To adapt this, use alignNode.childNodes[1] and alignNode.childNodes[3] and 
-# ANY_NODE.attributes['ANY_ATTRIBUTE_NAME'].value
+# It assumes Greek to be the L1 language.
 
-TARGET_LANGUAGE = 'en'
+TARGET_LANGUAGE = 'fa'
 
 class Document:
     path = os.path.dirname(os.path.abspath(__file__))
@@ -38,12 +36,62 @@ languages = {
         'urn:cts:greekLit:tlg0003.tlg001.perseus-grc')
 }
 
-document = languages[TARGET_LANGUAGE]
-document_CTS = document.primary_source_urn
+################################################################
 
-host = "http://localhost:7474/db/data/"
+def save_sentence(nodes, sentence_ref, lang):
+    
+    wordcounter = 0
+    referring_CTS_root = ''
+    
+    if lang == 'grc':
+        referring_CTS_root = document.cts()
+    # create the sentence node of the translation
+    else:
+        referring_CTS_root = document.primary_source_urn
+        s = gdb.nodes.create(CTS=document.cts() + ":" + sentence_ref)
+        
+    for node in nodes:
+        # not interested in empty text nodes
+        if node.attributes and node.tagName == 'w':
+            wordcounter = wordcounter + 1
+            # get the actual word value from the text node of the <text> node of the <w> node.
+            word_value = node.childNodes[1].childNodes[0].toxml()                
+                
+            # get the (greek) word from the database or create the word as a node if it from an L2 language
+            if lang == 'grc': 
+                wordTable = gdb.query("""MATCH (w) WHERE w.CTS='""" + document.primary_source_urn + ":" + node.attributes['n'].value + """' RETURN w""")
+                w = gdb.nodes.get(wordTable[0][0]['self'])
+            else:
+                w = gdb.nodes.create(CTS=document.cts() + ":" + node.attributes['n'].value, value=word_value, length=len(word_value), lang=document.lang)
+                w.labels.add("Word")
+                s.words(w)
+                              
+            # get the referring translations
+            try:
+                array = node.childNodes[3].attributes['nrefs'].value.split(" ")
+                # loop over references
+                for ref in array:
+                    if not ref == "":
+                        table = gdb.query("""MATCH (w) WHERE w.CTS='""" + referring_CTS_root + ":" + ref + """' RETURN w""")
+                        translated_word = gdb.nodes.get(table[0][0]['self'])
+                        w.translation(translated_word)
+                        print "word: " + node.attributes['n'].value + "; word_id: " + str(w.id)
+                        print "ref: " + ref + "; ref_word_id: " + str(translated_word.id)
+            
+            except:
+                continue
+        
+    # finish the creation of the translated sentence and save it to the document  
+    if lang != 'grc':           
+        s.set('length', wordcounter)
+        s.labels.add("Sentence")
+        d.sentences(s)  
 
 ################################################################
+
+document = languages[TARGET_LANGUAGE]
+
+host = "http://localhost:7474/db/data/"
 
 # graph database instance
 gdb = GraphDatabase(host)
@@ -56,90 +104,32 @@ d = gdb.nodes.create(CTS=document.cts(),
 
 d.labels.add("Document") 
 
-# xml parser instance
-doc = minidom.parse(document.xml())
+# get first node from the xml parser instance
+alignNode = minidom.parse(document.xml()).firstChild
+ 
+for sentence in alignNode.childNodes:
+    
+    # avoid the language nodes at the very beginning 
+    if sentence.attributes and sentence.tagName == 'sentence':	
+		# get the two node sets for the two languages after ensuring the order of the parsed alignments
+        if sentence.childNodes[1].attributes['lnum'].value == 'L1':
+            save_sentence(sentence.childNodes[3].childNodes, sentence.attributes['id'].value, 'translation')
+            save_sentence(sentence.childNodes[1].childNodes, sentence.attributes['id'].value, 'grc')
+        else:
+            save_sentence(sentence.childNodes[1].childNodes, entence.attributes['id'].value, 'translation')
+            save_sentence(sentence.childNodes[3].childNodes, entence.attributes['id'].value, 'grc')
+        
+        
 
-alignNode = doc.firstChild
 
-counter = 0
-for sent in alignNode.childNodes:
 
-	# skip lang nodes
-	if counter > 3 and counter%2 == 1:	
-		# the two node sets for the two languages
-		greekNodes = sent.childNodes[1].childNodes
-		transNodes = sent.childNodes[3].childNodes
+
+
+ 
+
 		
-		# create the sentence node
-		s = gdb.nodes.create(CTS=document_CTS + ":" + sent.attributes['id'].value)
-		
-		# handle the translated sentence
-		wordcounter = 0
-		for node in transNodes:
-			# not interested in empty text nodes
-			if node.attributes:
-				wordcounter += 1
-				# get word id
-				word_id = node.attributes['n'].value
-				# get the actual word string from the node "text"...
-				textNode = node.childNodes[1]
-				# ... and its inner text node
-				word = textNode.childNodes[0].toxml()				
-				
-				# create the translated word node here
-				w = gdb.nodes.create(CTS=document_CTS + ":" + word_id, value=word, length=len(word), lang=document.lang)
-				w.labels.add("Word")
-				# set the relationship to the sentence
-				s.words(w)
-				
-				# get the ref node
-				for n in node.childNodes:
-					if n.attributes:
-						ref_string_array = n.attributes['nrefs'].value.split(" ")
-						# loop over references
-						for ref in ref_string_array:
-							 if not ref == "":
-							 	# save the relationship, get the word node first
-							 	table = gdb.query("""MATCH (w) WHERE w.CTS='""" + document.primary_source_urn + ":" + ref + """' RETURN w""")
-							 	greek_word = gdb.nodes.get(table[0][0]['self'])
-							 	greek_word.translation(w)
-							 	print "1) Target lang.: " + str(w.id)
-							 	print "2) Greek: " + str(greek_word.id) + " Ref.: " + ref
-							 	
-		
-		# finish the translated sentence
-		# assuming the basic Greek data is already there, no creation of Greek words happens here
-		s.set('length', wordcounter)
-		s.labels.add("Sentence")
-		d.sentences(s)	
-		
-		# handle the Greek sentence
-		for node in greekNodes:
-			if node.attributes:
-				# node is the word node
-				# get word id ref
-				word_id = node.attributes['n'].value
-				# get the actual word string from the node "text"...
-				#textNode = node.childNodes[1]
-				# ... and its inner text node
-				#word = textNode.childNodes[0].toxml()
-				
-				# get the word from the database
-				qry = gdb.query("""MATCH (w) WHERE w.CTS='""" + document.primary_source_urn + ":" + word_id + """' RETURN w""")
-				greek_word = gdb.nodes.get(qry[0][0]['self'])
-				
-				# get the ref node
-				for n in node.childNodes:
-					if n.attributes:
-						ref_string_array = n.attributes['nrefs'].value.split(" ")
-						for ref in ref_string_array:
-							 if not ref == "":
-							 	# save the relationship, get the word node first
-							 	table = gdb.query("""MATCH (w) WHERE w.CTS='""" + document_CTS + ":" + ref + """' RETURN w""")
-							 	w = gdb.nodes.get(table[0][0]['self'])
-							 	w.translation(greek_word)
-							 	print "1) greek: " + str(greek_word.id)
-							 	print "2) target lang.: " + str(w.id) + " Ref.: " + ref
+
 				
 					
-	counter = counter +1
+
+          
