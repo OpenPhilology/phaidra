@@ -4,3 +4,6 @@
 [submodule "static/js/lib/moreajs"]
 	path = static/js/lib/moreajs
 	url = https://github.com/mlent/moreajs.git
+[submodule "static/js/lib/typegeek"]
+	path = static/js/lib/typegeek
+	url = https://github.com/mlent/typegeek.git
