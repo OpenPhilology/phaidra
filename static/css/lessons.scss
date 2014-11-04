@@ -354,6 +354,18 @@ table.inflection-table {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+
+	.sentence {
+		font-size: 24px;
+		line-height: 50px;
+		text-align: center;
+		display: block;
+	}
+	.tooltip {
+		font-size: 16px;
+		width: auto;
+	}
+
 }
 
 // Grammar panels

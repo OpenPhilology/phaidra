@@ -32,9 +32,14 @@ define(['jquery',
 				if (!this.get('translations') || this.get('translations').length === 0)
 					return false;
 				
-				var definition = this.get('translations').filter(function(word) {
+				var words = this.get('translations').filter(function(word) {
 					return word.lang === target_lang;
 				});
+
+				var definition = words.reduce(function(memo, word) {
+					memo += word.value + ' ';
+					return memo;
+				}, '').trim();
 
 				return definition;
 			},
@@ -55,7 +60,7 @@ define(['jquery',
 						break;
 				}
 
-				return attrs.join(', ');
+				return _.compact(attrs).join(', ');
 			}
 		});
 	}

@@ -140,6 +140,7 @@ define(['text!/templates/js/display_notification.html'], function(NotificationTe
 			'ind': gettext('Indicative'),
 			'subj': gettext('Subjunctive'),
 			'opt': gettext('Optative'),
+			'inf': gettext('Infinitive'),
 
 			// Tense
 			'aor': gettext('Aorist'),

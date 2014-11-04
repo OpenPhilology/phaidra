@@ -295,7 +295,7 @@ define(['jquery',
 				var index = Math.floor((Math.random() * subset.length) + 1);
 
 				// ZERO -- for testing
-				var chosen = subset[0];
+				var chosen = subset[index];
 				console.log(this.where({ CTS: chosen.get('CTS') }));
 
 				return this.where({ CTS: chosen.get('CTS') })[0];
