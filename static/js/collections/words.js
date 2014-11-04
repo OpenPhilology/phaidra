@@ -42,30 +42,6 @@ define(['jquery',
 					return response.objects;			// Word/Lemma
 				}
 			},
-			/*add: function(newWord) {
-				// We override the add function to ensure that we keep words
-				// that, when added to the collection, contain more information (e.g. translation)
-				newWord = _.isArray(newWord) ? newWord : [newWord];	
-				var duplicates = [];
-				for (var i = 0, word; word = newWord[i]; i++) {
-					var dup = this.any(function(w) {
-						return w.equiv(word);
-					}.bind(this));
-					if (dup) duplicates.push(word);
-				};
-				duplicates = _.compact(duplicates);
-				
-				// Carefully merge in duplicates
-				duplicates.forEach(function(d) {
-					var model = this.findWhere({ CTS: d.CTS });
-					var keys = Object.keys(model.attributes);
-					for (var key in model.attributes) {
-						if (d[key]) model.set(key, d[key]);
-					}
-				}.bind(this));
-
-				return Backbone.Collection.prototype.add.call(this, newWord);
-			},*/
 			getDefinitions: function(lemma, lemma_resource_uri) {
 				// Extract translations
 				var alignments = this.extractTranslations(lemma);
@@ -262,6 +238,8 @@ define(['jquery',
 
 					// Helper data Morea likes to have (because it normally likes to get data from the API)
 					// Normally these would be API endpoints, but we are providing the data so it's not needed
+					alignment.translations = {};
+
 					if (i === 0)
 						alignment.translations[target_lang] = '/';
 					else
@@ -274,6 +252,18 @@ define(['jquery',
 				}.bind(phrase));
 
 				return alignments;
+			},
+			getTranslatedSentence: function(alignments, target_lang) {
+				var sentence = alignments.filter(function(alignment) {
+					return alignment.lang === target_lang;
+				})[0];
+
+				var translation = sentence.words.reduce(function(memo, word) {
+					memo += word.value + ' ';
+					return memo;
+				}, '').trim() + '.';
+
+				return translation.charAt(0).toUpperCase() + translation.slice(1);
 			},
 			_createVocabulary: function(options) {
 				// Function creates vocab list of lemmas based on frequency in current collection

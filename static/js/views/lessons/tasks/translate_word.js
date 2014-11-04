@@ -41,14 +41,17 @@ define(['jquery',
 					return false;
 				}
 
-				//var alignment = this.collection.buildAlignmentPhrase(this.phrase, LOCALE);
+				var alignments = this.collection.buildAlignmentPhrase(this.phrase, LOCALE);
+				var translation = this.collection.getTranslatedSentence(alignments, LOCALE);
 
 				this.$el.html(this.template({
 					model: this.model,
-					definition: this.defs
-					//sentence: this.makeSampleSentence(alignment[0], 'open')
-					//translated_sentence: alignment[1]
+					definition: this.defs,
+					sentence: this.makeSampleSentence(alignments[0], 'open'),
+					translated_sentence: translation
 				}));
+
+				this.$el.find('[data-toggle="tooltip"]').tooltip();
 			},
 			makeSampleSentence: function(sentence, state) {
 				// State: open, correct, incorrect
