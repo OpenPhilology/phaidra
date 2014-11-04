@@ -15,6 +15,10 @@ define(['jquery',
 				'selected': false
 			},
 			idAttribute: 'CTS',
+			initialize: function(attributes) {
+				if (!attributes.CTS && attributes.sentenceCTS)
+					this.set('CTS', attributes.sentenceCTS + ':' + (attributes.index + 1));
+			},
 			url: function() {
 				return this.get('resource_uri');
 			},

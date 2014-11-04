@@ -87,7 +87,7 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/reader/page.html
 		},
 		hoverWord: function(e) {
 			var word = this.model.words.findWhere({ 
-				wordCTS: $(e.target).attr('data-cts') 
+				CTS: $(e.target).attr('data-cts') 
 			});
 
 			var hovered = (e.type == 'mouseenter') ? true : false;
@@ -99,7 +99,7 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/reader/page.html
 				selected: true
 			});
 			var target = this.model.words.findWhere({ 
-				wordCTS: $(e.target).attr('data-cts') 
+				CTS: $(e.target).attr('data-cts') 
 			});
 
 			// If this word is the same as current word, deselect
@@ -117,13 +117,13 @@ define(['jquery', 'underscore', 'backbone', 'text!/templates/js/reader/page.html
 				this.$el.parent().css('padding-bottom', '200px');
 			}
 		},
-		// If an element becomes selected or de-selected, update highlight accordingly
 		toggleHighlight: function(model) {
 
+			// If an element becomes selected or de-selected, update highlight accordingly
 			model.fetch();
 
 			if (model.get('selected'))
-				this.$el.find('.page-content span[data-cts="' + model.get('wordCTS') + '"]')
+				this.$el.find('.page-content span[data-cts="' + model.get('CTS') + '"]')
 					.addClass('selected');
 			else if (!model.get('selected'))
 				this.$el.find('.page-content span[data-cts="' + model.get('wordCTS') + '"]')

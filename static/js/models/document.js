@@ -75,36 +75,27 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'collections/words'], funct
 		},
 		populate: function(sentenceCTS, options) {
 			// Populate a section of words by their sentence CTS id
-			var starter = this.words.findWhere({ sentenceCTS: sentenceCTS });
+			var target = this.words.findWhere({ sentenceCTS: sentenceCTS });
+
 			var that = this;
-
-			if (starter.get('lemma')) {
-				// If it has a lemma property, we know its been populated
-				this.trigger('populated', this, { CTS: sentenceCTS });
-			}
-			else {
-				$.ajax({
-					url: starter.get('sentence_resource_uri'),
-					dataType: 'json',
-					doc: that,
-					options: options,
-					success: function(response) {
-						this.doc.set('translations', response.translations);
-						
-						for (var i = 0; i < response.words.length; i++) {
-							var target = this.doc.words.findWhere(
-								{ wordCTS: response.words[i]["CTS"] }
-							);
-							target.set(response.words[i])
-						}
-
-						this.doc.trigger('populated', this.doc, { CTS: response["CTS"] });
-					},
-					error: function(x, y, z) {
-						console.log(x, y, z);
-					}
-				});
-			}
+			this.words.url = target.get('sentence_resource_uri');
+			this.words.fetch({
+				merge: true,
+				remove: false,
+				success: that.populateWordsSuccess.bind(that),
+				error: that.populateWordsError.bind(that)
+			});
+		},
+		populateWordsSuccess: function(collection, response, options) {
+			collection.meta('translations', response.translations);
+			this.trigger('populated', this, response.CTS);
+		},
+		populateWordsError: function(collection, response, options) {
+			Utils.displayNotification('Document Error', 'Could not load document.', {
+				btnName: 'Back to Index',
+				state: 'error',
+				url: '/'
+			});
 		}
 	});
 

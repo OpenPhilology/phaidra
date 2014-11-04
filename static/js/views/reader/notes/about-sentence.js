@@ -15,8 +15,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/reader/
 				word: this.model.attributes,
 				langs: this.options.langs,
 				readableLang: Utils.getReadableLang,
-				lang: this.options.lang || locale.split('-')[0],
-				grammar: this.model.getGrammar()
+				lang: this.options.lang || LOCALE
 			}));
 			this.$el.find('a').tooltip();
 			return this;	
