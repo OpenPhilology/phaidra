@@ -97,7 +97,7 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_amphora.png",
+        "graphic": "icon_grk_deer.png",
         "name": "Foundational"
     },
     "model": "app.category",
@@ -201,6 +201,14 @@
 },
 {
     "fields": {
+        "graphic": "icon_grk_amphora.png",
+        "name": "Nouns Second Declension "
+    },
+    "model": "app.category",
+    "pk": 18
+},
+{
+    "fields": {
         "username": "monica",
         "first_name": "Monica",
         "last_name": "Lent",
@@ -249,7 +257,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-11-03T14:57:39.910Z",
+        "last_login": "2014-11-04T14:50:11.455Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$mjylIxJjSuP8$hXlaTs4LJGg8TDaOgueySvUCzigoGyiWFEMPIG/0dso=",
@@ -845,7 +853,7 @@
 },
 {
     "fields": {
-        "category": 1,
+        "category": 18,
         "tasks": null,
         "title": "Second Declension Nouns - Masculine (\u03bf\u03c2-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s228",
@@ -1351,8 +1359,8 @@
     "fields": {
         "target_lang": 5,
         "title": "Diacritics: Iota Subscript",
-        "content": "#### For example:\r\n\r\n* * *\r\n\r\n### \u03c7\u03c9\u03c1\u1fb3, _land_\r\n\r\nListen\r\n\r\n## Iota Subscript\r\n\r\nWhen the long vowels \u03b1,\u03b7,\u03c9 meet a short \u03b9, the \u03b9 is written under (subscript!)\r\nthese letters instead of being written next to them. A **iota subscript** is\r\nnever pronounced.\r\n\r\nSo,\r\n\r\n  * \u03b1 \\+ \u03b9 = \u1fb3\r\n  * \u03b7 \\+ \u03b9 = \u1fc3\r\n  * \u03c9 \\+ \u03b9 = \u1ff3\r\n\r\n",
-        "grammar_ref": null,
+        "content": "## Iota Subscript\r\n\r\nWhen the long vowels \u03b1,\u03b7,\u03c9 meet a short \u03b9, the \u03b9 is written under (subscript!)\r\nthese letters instead of being written next to them. A **iota subscript** is\r\nnever pronounced.\r\n\r\nSo,\r\n\r\n  * \u03b1 \\+ \u03b9 = \u1fb3\r\n  * \u03b7 \\+ \u03b9 = \u1fc3\r\n  * \u03c9 \\+ \u03b9 = \u1ff3\r\n\r\n#### For example:\r\n\r\n* * *\r\n\r\n### \u03c7\u03c9\u03c1\u1fb3, _land_\r\n\r\n\r\n\r\n",
+        "grammar_ref": 4,
         "related_content": [],
         "source_lang": 4
     },
@@ -1362,7 +1370,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Diacritics: Grave Accent_Thirdrule",
+        "title": "Diacritics: Accents (Third Rule)",
         "content": "## Third Accent Rule: Grave Accent\r\n\r\n  1. **The grave accent appears _only_ on the ultima.**\r\n  2. The acute accent turns into a grave accent on the ultima **when the word is not followed by a punctuation mark, but by another word**. \r\n\r\n* * *\r\n\r\n## \u03c0\u03bf\u03bb\u03bb\u1f70 \u03ba\u03b1\u03ba\u03ac meaning \"many evil (things)\"\r\n\r\n\u03c0\u03bf\u03bb\u03bb_\u03ac_\r\n\r\n* * *  \r\n  \r\n---  \r\nChanges its accent when not followed by a punctuation mark, like so:  \r\n\u03c0\u03bf\u03bb\u03bb_\u1f70_ \u03ba\u03b1\u03ba\u03ac.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -1374,7 +1382,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Diacritics:  Accents_Secondrule",
+        "title": "Diacritics:  Accents (Second Rule)",
         "content": "## Second Accent Rule: Acute Accent\r\n\r\n  1. The acute accent, like other accents, can _never_ must be placed one one of the last three syllables of a word. \r\n  2. It can be found over the antepenult _only_ if the last syllable is short.\r\n\r\n* * *\r\n\r\nNames for the Syllables in a Greek Word\r\n\r\n## \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 meaning \"Man\"\r\n\r\n* * *\r\n\r\n_\u1f04_\u03bd\r\n\r\n* * *\r\n\r\n|  \u03b8\u03c1\u03c9\r\n\r\n* * *\r\n\r\n|  \u03c0\u03bf\u03c2\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Antepenult**  \r\n|  **Penult**  \r\n|  **Ultima**  \r\n  \r\n  \r\nThis example shows how the **acute accent** of this word is placed on the\r\nantepenult (\u1f04\u03bd) **because the ultima** (\u03c0\u03bf\u03c2) **is short**.\r\n\r\nFor the Ultima to be long, it would need to contain a long vowel, such as \u03c9.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -1398,7 +1406,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Diacritics: Circumflex Accent",
+        "title": "Diacritics: Accents (Fourth Rule)",
         "content": "## Fourth Accent Rule: Circumflex Accent\r\n\r\n  1. The circumflex accent can _only_ be placed **on the penult or ultima**.\r\n  2. The circumflex accent can _only_ be placed **on long vowels or dipthongs** (You will learn about dipthongs shortly).\r\n\r\n* * *\r\n\r\nFor example:\r\n\r\n## \u03c3\u1ff6\u03bc\u03b1 meaning \"Body\"\r\n\r\n* * *\r\n\r\n\u03c3_\u1ff6_\r\n\r\n* * *\r\n\r\n|  \u03bc\u03b1\r\n\r\n* * *  \r\n  \r\n---|---  \r\n**Penult**  \r\n|  **Ultima**  \r\n  \r\n  \r\nThe **circumflex accent** is placed on the **penult**. The penult is a **long\r\nsyllable** because it contains the long vowel, \u1ff6, omega.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -1411,8 +1419,8 @@
     "fields": {
         "target_lang": 5,
         "title": "Diacritics: Long and Short Vowels",
-        "content": "##### Long and Short Vowels\r\n\r\nLong | Long or Short | Short  \r\n---|---|---  \r\n\u03b1 | \u03b1 | \u03b1  \r\n\u03b7 |  | \u03b5  \r\n\u03b9 | \u03b9 | \u03b9  \r\n\u03c9 |  | \u03bf  \r\n\u03c5 | \u03c5 | \u03c5  \r\n  \r\n## Long and Short Vowels\r\n\r\nThe Ancient Greeks pronounced vowels differently according to their \"length\".\r\nThe length of a vowel, therefore, has an effect on the accent rules that you\r\nwill be learning later in this unit. For now, all that you need to know is\r\nthat vowels can be divided into two categories:\r\n\r\n  * **Long vowels**\r\n  * **Short vowels**\r\n\r\nSome vowels can be both long or short depending on the word. Take a look at\r\nthe table to learn which ones.\r\n\r\nNotice how \u03b7 is simply the long version of \u03b5, and \u03c9 is the long version of \u03bf.\r\n\r\n",
-        "grammar_ref": null,
+        "content": "## Long and Short Vowels\r\n\r\nThe Ancient Greeks pronounced vowels differently according to their \"length\".\r\nThe length of a vowel, therefore, has an effect on the accent rules that you\r\nwill be learning later in this unit. For now, all that you need to know is\r\nthat vowels can be divided into two categories:\r\n\r\n  * **Long vowels**\r\n  * **Short vowels**\r\n\r\nLong | Long or Short | Short  \r\n---|---|---  \r\n\u03b1 | \u03b1 | \u03b1  \r\n\u03b7 |  | \u03b5  \r\n\u03b9 | \u03b9 | \u03b9  \r\n\u03c9 |  | \u03bf  \r\n\u03c5 | \u03c5 | \u03c5  \r\n  \r\nSome vowels can be both long or short depending on the word. Take a look at\r\nthe table to learn which ones.\r\n\r\nNotice how \u03b7 is simply the long version of \u03b5, and \u03c9 is the long version of \u03bf.\r\n\r\n",
+        "grammar_ref": 2,
         "related_content": [],
         "source_lang": 4
     },
@@ -1435,9 +1443,11 @@
     "fields": {
         "target_lang": 5,
         "title": "Diacritics: Smooth Breathing",
-        "content": "#### For example:\r\n\r\n* * *\r\n\r\n### \u1f40\u03bb\u03b9\u03b3\u03b1\u03c1\u03c7\u03af\u03b1, _oligarchy_\r\n\r\nListen\r\n\r\n## Smooth Breathing\r\n\r\nWhen words begin with a _vowel_, but don't have a rough breathing, then you\r\nwill see this sign \u1fbf on the first letter. This sign \u1fbf is called **smooth\r\nbreathing**. Smooth breathings have no effect on pronunciation.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nThe majority of words beginning with a vowel will have a **smooth breathing**.\r\n\r\n",
-        "grammar_ref": null,
-        "related_content": [],
+        "content": "## Smooth Breathing\r\n\r\nWhen words begin with a _vowel_, but don't have a rough breathing, then you\r\nwill see this sign \u1fbf on the first letter. This sign \u1fbf is called **smooth\r\nbreathing**. Smooth breathings have no effect on pronunciation.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nThe majority of words beginning with a vowel will have a **smooth breathing**.\r\n\r\n#### For example:\r\n\r\n* * *\r\n\r\n### \u1f40\u03bb\u03b9\u03b3\u03b1\u03c1\u03c7\u03af\u03b1, _oligarchy_\r\n\r\n",
+        "grammar_ref": 6,
+        "related_content": [
+            240
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -1459,9 +1469,11 @@
     "fields": {
         "target_lang": 5,
         "title": "Diacritics: Rough Breathing",
-        "content": "#### For example:\r\n\r\n* * *\r\n\r\n### \u1f41\u03b4\u03cc\u03c2, _way_\r\n\r\nListen\r\n\r\n* * *\r\n\r\n#### Or:\r\n\r\n### \u1ffe\u00b4\u0395\u03bb\u03bb\u03b7\u03bd\u03b5\u03c2, _Greeks_\r\n\r\nListen\r\n\r\n## Rough Breathing\r\n\r\nWhen you see this sign \u1ffe on the first letter of a word beginning with a\r\n_vowel_, you are looking at a **rough breathing**. The Greeks used it to\r\nindicate that the word would be pronounced as though the first letter were\r\npreceded by an \"H\".\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\n**All words** starting with the vowel **\u03c5** have a rough breathing. **All words** starting with **\u03c1** also have a rough breathing, but in this case, as \u03c1 is a consonant and not a vowel, the breathing has no effect on how the word sounds. \r\n\r\n",
-        "grammar_ref": null,
-        "related_content": [],
+        "content": "## Rough Breathing\r\n\r\nWhen you see this sign \u1ffe on the first letter of a word beginning with a\r\n_vowel_, you are looking at a **rough breathing**. The Greeks used it to\r\nindicate that the word would be pronounced as though the first letter were\r\npreceded by an \"H\".\r\n\r\n* * *\r\n\r\n#### For example:\r\n\r\n* * *\r\n\r\n### \u1f41\u03b4\u03cc\u03c2, _way_\r\n\r\nListen\r\n\r\n* * *\r\n\r\n#### Or:\r\n\r\n### \u1ffe\u00b4\u0395\u03bb\u03bb\u03b7\u03bd\u03b5\u03c2, _Greeks_\r\n\r\n\r\n#####  Useful tip!\r\n\r\n**All words** starting with the vowel **\u03c5** have a rough breathing. **All words** starting with **\u03c1** also have a rough breathing, but in this case, as \u03c1 is a consonant and not a vowel, the breathing has no effect on how the word sounds. \r\n\r\n",
+        "grammar_ref": 5,
+        "related_content": [
+            240
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -1470,10 +1482,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Diacritics: Accents_Firstrule",
-        "content": "## First Accent Rule: General\r\n\r\n**Accents can _only_ appear over one of the last three _syllables_ of a word**, no matter how many syllables a word has. Each of the last three syllables has its own name, so that it is easier to define the position of an accent. \r\n\r\n* * *\r\n\r\nNames for the Syllables in a Greek Word\r\n\r\n## \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 meaning \"Man\"\r\n\r\n* * *\r\n\r\n\u1f04\u03bd\r\n\r\n* * *\r\n\r\n|  \u03b8\u03c1\u03c9\r\n\r\n* * *\r\n\r\n|  \u03c0\u03bf\u03c2\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Antepenult**  \r\n\r\n* * *\r\n\r\nThird syllable from the end.  \r\n\"Ante\" meaning \"before\", \"penult\" meaning \"second to last\".  |  **Penult**  \r\n\r\n* * *\r\n\r\nSecond to last  \r\nor \"penultimate\" syllable.  |  **Ultima**  \r\n\r\n* * *\r\n\r\nLast syllable  \r\nLike \"Ultimate\", meaning \"last\".  \r\n  \r\n![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\nThis example shows how the **acute accent** of this word is placed on the\r\nvowel in the **antepenult** syllable.\r\n\r\n* * *\r\n\r\n### Listen up!\r\n\r\nJust like vowels, syllables can also be defined as _long or short_ depending\r\non which vowel/s form them. So, for example, **a syllable containing a long \u03b1\r\nwill be a long syllable.**\r\n\r\nYou'll use this knowledge for moving accents around!\r\n\r\n",
-        "grammar_ref": null,
-        "related_content": [],
+        "title": "Diacritics: Accents",
+        "content": "## Accents\r\nIn the Greek language, accents are very important and should be learned as an\r\nintergral part of its spelling. Accents determine the music of a word and\r\nindicate which vowels in the word should be emphasized. When pronouncing a\r\nGreek word, simply _stress the vowel_ on which you see an accent! Take a look\r\nat the table to learn what the **three Greek accents** are.\r\n\r\n#### Accent Names\r\n\r\n* * *\r\n\r\n## **\u00b4** Acute\r\n\r\n## **`** Grave\r\n\r\n## **\u1fc0** Circumflex\r\n\r\n\r\n* * *\r\n\r\nTo help you with the spelling of Greek words, you should know that **the\r\naccents follow four very specific sets of rules**.\r\n## First Accent Rule: General\r\n\r\n**Accents can _only_ appear over one of the last three _syllables_ of a word**, no matter how many syllables a word has. Each of the last three syllables has its own name, so that it is easier to define the position of an accent. \r\n\r\n* * *\r\n\r\nNames for the Syllables in a Greek Word\r\n\r\n## \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 meaning \"Man\"\r\n\r\n* * *\r\n\r\n\u1f04\u03bd\r\n\r\n* * *\r\n\r\n|  \u03b8\u03c1\u03c9\r\n\r\n* * *\r\n\r\n|  \u03c0\u03bf\u03c2\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Antepenult**  \r\n\r\n* * *\r\n\r\nThird syllable from the end.  \r\n\"Ante\" meaning \"before\", \"penult\" meaning \"second to last\".  |  **Penult**  \r\n\r\n* * *\r\n\r\nSecond to last  \r\nor \"penultimate\" syllable.  |  **Ultima**  \r\n\r\n* * *\r\n\r\nLast syllable  \r\nLike \"Ultimate\", meaning \"last\".  \r\n\r\nThis example shows how the **acute accent** of this word is placed on the\r\nvowel in the **antepenult** syllable.\r\n\r\n* * *\r\n\r\n### Listen up!\r\n\r\nJust like vowels, syllables can also be defined as _long or short_ depending\r\non which vowel/s form them. So, for example, **a syllable containing a long \u03b1\r\nwill be a long syllable.**\r\n\r\nYou'll use this knowledge for moving accents around!\r\n\r\n",
+        "grammar_ref": 9,
+        "related_content": [
+            234,
+            235,
+            237
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -1904,7 +1920,7 @@
         "target_lang": 5,
         "title": "Nouns: First Declension_originalexample1",
         "content": "#### First Declension: 3 groups\r\n\r\nCase | I. | II. | III.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | -\u03b1 | -\u03b7 | -\u03b7\u03c2  \r\nGen. | -\u03b1\u03c2 | -\u03b7\u03c2 | -\u03bf\u03c5  \r\nDat. | -\u1fb3 | -\u1fc3 | -\u1fc3  \r\nAcc. | -\u03b1\u03bd | -\u03b7\u03bd | -\u03b7\u03bd  \r\nVoc. | -\u03b1 | -\u03b7 | -\u03b1  \r\n**Plural**  \r\nNom. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\nGen. | -\u1ff6\u03bd | -\u1ff6\u03bd | -\u1ff6\u03bd  \r\nDat. | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2  \r\nAcc. | -\u03b1\u03c2 | -\u03b1\u03c2 | -\u03b1\u03c2  \r\nVoc. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\n  \r\nNotice again that all the plural forms are identical.\r\n\r\n## The First Declension in the Pentecontaetia\r\n\r\nTake a look at another two examples showing first declension nouns in the\r\nPentecontaetia.\r\n\r\n[...] **\u03bf\u1f30\u03ba\u03af\u03b1\u03b9 \u03b1\u1f31** \u03bc\u1f72\u03bd \u03c0\u03bf\u03bb\u03bb\u03b1\u1f76 |  \u1f10\u03c0\u03b5\u03c0\u03c4\u03ce\u03ba\u03b5\u03c3\u03b1\u03bd  \r\n---|---  \r\n[...] many **houses** |  had fallen  \r\n**(Nominative)** |  (Verb)   \r\n-- _The History of the Peloponnesian War_, 1.89.3\r\n\r\nKeep Reading \u00bb\r\n\r\n\u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd\u03b9\u03bf\u03b9 \u03b4\u1f72 \u03b1\u1f30\u03c3\u03b8\u03cc\u03bc\u03b5\u03bd\u03bf\u03b9 |  [...] \u1f26\u03bb\u03b8\u03bf\u03bd |  **\u03c0\u03c1\u03b5\u03c3\u03b2\u03b5\u03af\u1fb3**  \r\n---|---|---  \r\nPerceiving this, the Spartans  |  went  |  with **an embassy** [...]  \r\n(Nominative)  |  (Verb)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.91.1\r\n\r\nKeep Reading \u00bb\r\n\r\n",
-        "grammar_ref": 18,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -1926,10 +1942,13 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: First Declension_Secondgroup",
-        "content": "## First declension continued...\r\n\r\nThe second group of nouns end in -\u03b7 in the singular and in -\u03b1 in the plural.\r\n\r\nTake a look at the declension of \u1f21 \u03b3\u03bd\u03ce\u03bc\u03b7 meaning _the thought_.\r\n\r\n##### \u1f21 \u03b3\u03bd\u03ce\u03bc\u03b7,\u03b7\u03c2: The thought, of the thought\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u03b3\u03bd\u03ce\u03bc**\u03b7** | \u03b1\u1f31 \u03b3\u03bd\u1ff6\u03bc**\u03b1\u03b9**  \r\nGen. | \u03c4\u1fc6\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b7\u03c2** | \u03c4\u1ff6\u03bd \u03b3\u03bd\u03c9\u03bc**\u1ff6\u03bd**  \r\nDat. | \u03c4\u1fc7 \u03b3\u03bd\u03ce\u03bc**\u1fc3** | \u03c4\u03b1\u1fd6\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b1\u03b9\u03c2**  \r\nAcc. | \u03c4\u1f74\u03bd \u03b3\u03bd\u03ce\u03bc**\u03b7\u03bd** | \u03c4\u1f70\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u03b3\u03bd\u03ce\u03bc**\u03b7** | \u1f66 \u03b3\u03bd\u1ff6\u03bc**\u03b1\u03b9**\r\n\r\n",
+        "title": "Nouns: First Declension (Second group)",
+        "content": "## First declension \r\n\r\nThe second group of nouns end in -\u03b7 in the singular and in -\u03b1 in the plural.\r\n\r\nTake a look at the declension of \u1f21 \u03b3\u03bd\u03ce\u03bc\u03b7 meaning _the thought_.\r\n\r\n##### \u1f21 \u03b3\u03bd\u03ce\u03bc\u03b7,\u03b7\u03c2: The thought, of the thought\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u03b3\u03bd\u03ce\u03bc**\u03b7** | \u03b1\u1f31 \u03b3\u03bd\u1ff6\u03bc**\u03b1\u03b9**  \r\nGen. | \u03c4\u1fc6\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b7\u03c2** | \u03c4\u1ff6\u03bd \u03b3\u03bd\u03c9\u03bc**\u1ff6\u03bd**  \r\nDat. | \u03c4\u1fc7 \u03b3\u03bd\u03ce\u03bc**\u1fc3** | \u03c4\u03b1\u1fd6\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b1\u03b9\u03c2**  \r\nAcc. | \u03c4\u1f74\u03bd \u03b3\u03bd\u03ce\u03bc**\u03b7\u03bd** | \u03c4\u1f70\u03c2 \u03b3\u03bd\u03ce\u03bc**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u03b3\u03bd\u03ce\u03bc**\u03b7** | \u1f66 \u03b3\u03bd\u1ff6\u03bc**\u03b1\u03b9**\r\n\r\n",
         "grammar_ref": 19,
-        "related_content": [],
+        "related_content": [
+            284,
+            286
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -1962,10 +1981,13 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: First Declension_Firstgroup",
-        "content": "##### \u1f21 \u03c7\u03ce\u03c1\u03b1,\u03b1\u03c2: The land, of the land\r\n\r\nCase | Article, Noun  \r\n---|---  \r\n**Singular** | **Plural**  \r\nNom. | \u1f21 \u03c7\u03ce\u03c1**\u03b1** | \u03b1\u1f31 \u03c7\u1ff6\u03c1**\u03b1\u03b9**  \r\nGen. | \u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1**\u03b1\u03c2** | \u03c4\u1ff6\u03bd \u03c7\u03c9\u03c1**\u1ff6\u03bd**  \r\nDat. | \u03c4\u1fc7 \u03c7\u03c9\u03c1**\u1fb3** | \u03c4\u03b1\u1fd6\u03c2 \u03c7\u1ff6\u03c1**\u03b1\u03b9\u03c2**  \r\nAcc. | \u03c4\u1f74\u03bd \u03c7\u03ce\u03c1**\u03b1\u03bd** | \u03c4\u1f70\u03c2 \u03c7\u03ce\u03c1**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u03c7\u03ce\u03c1**\u03b1** | \u1f66 \u03c7\u1ff6\u03c1**\u03b1\u03b9**  \r\n  \r\n## First declension\r\n\r\nThe first Greek declension consists of **nearly exclusively feminine nouns**.\r\nOnly few masculine nouns belong to the first declension and no neuter nouns.\r\n\r\nThe first and most common group of nouns ends in -\u03b1 in the whole singular and\r\nplural. Take a look at the declension of \u1f21 \u03c7\u03ce\u03c1\u03b1 meaning _the land_.\r\n\r\n* * *\r\n\r\n####  Look out for Accents!\r\n\r\nWhen a first declension noun has an acute accent on the last syllable in the\r\nnominative, the accent is changed to a circumflex in the genitive and dative,\r\nin both the singular and plural.\r\n\r\nFor example: \u1f21 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u03ac (meaning _the army_) will become \u03c4\u1fc6\u03c2 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u1fb6\u03c2 in the\r\ngenitive singular.\r\n\r\n",
+        "title": "Nouns: First Declension (First group)",
+        "content": "## First declension\r\n\r\nThe first Greek declension consists of **nearly exclusively feminine nouns**.\r\nOnly few masculine nouns belong to the first declension and no neuter nouns.\r\n\r\nThe first and most common group of nouns ends in -\u03b1 in the whole singular and\r\nplural. Take a look at the declension of \u1f21 \u03c7\u03ce\u03c1\u03b1 meaning _the land_.\r\n\r\n* * *\r\n\r\n##### \u1f21 \u03c7\u03ce\u03c1\u03b1,\u03b1\u03c2: The land, of the land\r\n\r\nCase | Article, Noun  \r\n---|---  \r\n**Singular** | **Plural**  \r\nNom. | \u1f21 \u03c7\u03ce\u03c1**\u03b1** | \u03b1\u1f31 \u03c7\u1ff6\u03c1**\u03b1\u03b9**  \r\nGen. | \u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1**\u03b1\u03c2** | \u03c4\u1ff6\u03bd \u03c7\u03c9\u03c1**\u1ff6\u03bd**  \r\nDat. | \u03c4\u1fc7 \u03c7\u03c9\u03c1**\u1fb3** | \u03c4\u03b1\u1fd6\u03c2 \u03c7\u1ff6\u03c1**\u03b1\u03b9\u03c2**  \r\nAcc. | \u03c4\u1f74\u03bd \u03c7\u03ce\u03c1**\u03b1\u03bd** | \u03c4\u1f70\u03c2 \u03c7\u03ce\u03c1**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u03c7\u03ce\u03c1**\u03b1** | \u1f66 \u03c7\u1ff6\u03c1**\u03b1\u03b9**  \r\n\r\n\r\n####  Look out for Accents!\r\n\r\nWhen a first declension noun has an acute accent on the last syllable in the\r\nnominative, the accent is changed to a circumflex in the genitive and dative,\r\nin both the singular and plural.\r\n\r\nFor example: \u1f21 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u03ac (meaning _the army_) will become \u03c4\u1fc6\u03c2 \u03c3\u03c4\u03c1\u03b1\u03c4\u03b9\u1fb6\u03c2 in the\r\ngenitive singular.\r\n\r\n",
         "grammar_ref": 18,
-        "related_content": [],
+        "related_content": [
+            281,
+            286
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -1974,9 +1996,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Declensions_intro",
+        "title": "Nouns: What is a declension?",
         "content": "## What is a declension?\r\n\r\nA declension is a group of nouns, pronouns, adjectives, and articles that\r\nfollow a particular **pattern of inflection**. There are 3 declensions in\r\nGreek. Each noun belongs to only one declension and can only have the endings\r\nthat belong to that particular declension. Those nouns whose endings are (for\r\nthe most part) the vowels -\u03b1 or -\u03b7, belong to the **first declension**. Those\r\nnouns ending in -\u03bf belong to the **second declension**. All the other nouns\r\nbelong to the **third declension**.\r\n\r\n####  Reading a Dictionary Entry\r\n\r\nThe vocabulary entry for each noun shows the nominative and the genitive\r\nforms, the definite article and the English meaning. For example:\r\n\r\n\u03c7\u03ce\u03c1\u03b1, \u03b1\u03c2 \u1f21...land, country\r\n\r\nTo decline any noun, take the **genitive singular**, remove the ending to get\r\nthe stem, and then add the right set of endings to the stem.\r\n\r\n",
-        "grammar_ref": 13,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -1986,10 +2008,13 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: First Declension_Thirdgroup",
-        "content": "## First declension continued...\r\n\r\nThe third group of nouns end in -\u03b7\u03c2 in the singular and in -\u03b1 in the plural.\r\nThese strictly masculine nouns take, of course, masculine definite articles,\r\ntheir genitive singular ends in -\u03bf\u03c5 and their vocative singular in -\u03b1.\r\n\r\nTake a look at the declension of \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4\u03b7\u03c2 meaning _the citizen_.\r\n\r\n##### \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4\u03b7\u03c2,\u03bf\u03c5: the citizen\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b7\u03c2** | \u03bf\u1f31 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1\u03b9**  \r\nGen. | \u03c4\u03bf\u1fe6 \u03c0\u03bf\u03bb\u03af\u03c4**\u03bf\u03c5** | \u03c4\u1ff6\u03bd \u03c0\u03bf\u03bb\u03b9\u03c4**\u1ff6\u03bd**  \r\nDat. | \u03c4\u1ff6 \u03c0\u03bf\u03bb\u03af\u03c4**\u1fc3** | \u03c4\u03bf\u1fd6\u03c2 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b1\u03b9\u03c2**  \r\nAcc. | \u03c4\u1f78\u03bd \u03c0\u03bf\u03bb\u03af\u03c4**\u03b7\u03bd** | \u03c4\u03bf\u1f7a\u03c2 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1** | \u1f66 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1\u03b9**\r\n\r\n",
+        "title": "Nouns: First Declension (Third group)",
+        "content": "## First declension \r\n\r\nThe third group of nouns end in -\u03b7\u03c2 in the singular and in -\u03b1 in the plural.\r\nThese strictly masculine nouns take, of course, masculine definite articles,\r\ntheir genitive singular ends in -\u03bf\u03c5 and their vocative singular in -\u03b1.\r\n\r\nTake a look at the declension of \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4\u03b7\u03c2 meaning _the citizen_.\r\n\r\n##### \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4\u03b7\u03c2,\u03bf\u03c5: the citizen\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f41 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b7\u03c2** | \u03bf\u1f31 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1\u03b9**  \r\nGen. | \u03c4\u03bf\u1fe6 \u03c0\u03bf\u03bb\u03af\u03c4**\u03bf\u03c5** | \u03c4\u1ff6\u03bd \u03c0\u03bf\u03bb\u03b9\u03c4**\u1ff6\u03bd**  \r\nDat. | \u03c4\u1ff6 \u03c0\u03bf\u03bb\u03af\u03c4**\u1fc3** | \u03c4\u03bf\u1fd6\u03c2 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b1\u03b9\u03c2**  \r\nAcc. | \u03c4\u1f78\u03bd \u03c0\u03bf\u03bb\u03af\u03c4**\u03b7\u03bd** | \u03c4\u03bf\u1f7a\u03c2 \u03c0\u03bf\u03bb\u03af\u03c4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1** | \u1f66 \u03c0\u03bf\u03bb\u1fd6\u03c4**\u03b1\u03b9**\r\n\r\n",
         "grammar_ref": 20,
-        "related_content": [],
+        "related_content": [
+            281,
+            284
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -2000,7 +2025,7 @@
         "target_lang": 5,
         "title": "Nouns: First Declension_originalexample",
         "content": "### First Declension: 3 groups\r\n\r\nCase | I. | II. | III.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | -\u03b1 | -\u03b7 | -\u03b7\u03c2  \r\nGen. | -\u03b1\u03c2 | -\u03b7\u03c2 | -\u03bf\u03c5  \r\nDat. | -\u1fb3 | -\u1fc3 | -\u1fc3  \r\nAcc. | -\u03b1\u03bd | -\u03b7\u03bd | -\u03b7\u03bd  \r\nVoc. | -\u03b1 | -\u03b7 | -\u03b1  \r\n**Plural**  \r\nNom. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\nGen. | -\u1ff6\u03bd | -\u1ff6\u03bd | -\u1ff6\u03bd  \r\nDat. | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2 | -\u03b1\u03b9\u03c2  \r\nAcc. | -\u03b1\u03c2 | -\u03b1\u03c2 | -\u03b1\u03c2  \r\nVoc. | -\u03b1\u03b9 | -\u03b1\u03b9 | -\u03b1\u03b9  \r\n  \r\nNotice again that all the plural forms are identical.\r\n\r\n## The First Declension in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of first\r\ndeclension nouns in the Pentecontaetia.\r\n\r\n[...] \u03bf\u1f31 \u03b2\u03ac\u03c1\u03b2\u03b1\u03c1\u03bf\u03b9 |  \u1f10\u03ba**\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2** |  \u1f00\u03c0\u1fc6\u03bb\u03b8\u03bf\u03bd  \r\n---|---|---  \r\n[...] the barbarians  |  from the country  |  departed  \r\n(Nominative)  |  (Genitive)  |  (Verb)  \r\n-- _The History of the Peloponnesian War_, 1.89.3\r\n\r\n\u03c4\u1fc6\u03c2 \u03c7\u03ce\u03c1\u03b1\u03c2 belongs to the first group of first declension nouns. It is\r\nfeminine, singular and in the genitive case!\r\n\r\n",
-        "grammar_ref": 18,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2061,7 +2086,9 @@
         "title": "Adjectives: Third Declension (Two-ending)",
         "content": "## Two-ending Adjectives of the Third Declension\r\n\r\nThe adjectives of the third declension with two endings are declined just like\r\nthe third declension nouns with consonant stems. These adjectives have one\r\ntype of ending for masculine and feminine, and one type for neuter.\r\n\r\nLook at the following example of \u03b5\u1f50\u03b4\u03b1\u03af\u03bc**\u03c9\u03bd**, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc**\u03bf\u03bd**, meaning _happy_.\r\n\r\n### \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd -- _happy_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1** | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \r\nVoc.| \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd |\r\n **Plural**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd** | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nVoc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\n\r\nAnd now another example with different endings: \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ae\u03c2**, \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ad\u03c2**,\r\nmeaning _noble_.\r\n\r\n### \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2, \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 -- _noble_\r\n\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2\r\n| \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | \r\n**Plural**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\n  \r\n\r\n\r\n",
         "grammar_ref": 63,
-        "related_content": [],
+        "related_content": [
+            302
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -2097,7 +2124,9 @@
         "title": "Adjectives: Third Declension (Three-ending)",
         "content": "## Three-ending Adjectives of the Third Declension\r\n\r\nAs you can see from the table, the adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd has forms of the\r\nfirst and third declensions of nouns.\r\n\r\n### \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd -- _every_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd  \r\nGen. | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2** | \u03c0\u03ac\u03c3**\u03b7\u03c2** | \u03c0\u03b1\u03bd\u03c4**\u03cc\u03c2**  \r\nDat. | \u03c0\u03b1\u03bd\u03c4**\u03af** | \u03c0\u03ac\u03c3**\u1fc3** | \u03c0\u03b1\u03bd\u03c4**\u03af** | \r\nAcc. | \u03c0\u03ac\u03bd\u03c4**\u03b1** | \u03c0\u1fb6\u03c3**\u03b1\u03bd** | \u03c0\u1fb6\u03bd |\r\nVoc. | \u03c0\u1fb6\u03c2 | \u03c0\u1fb6\u03c3**\u03b1** | \u03c0\u1fb6\u03bd | \r\n**Plural**  \r\nNom. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nGen. | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd** | \u03c0\u03b1\u03c3**\u1ff6\u03bd** | \u03c0\u03ac\u03bd\u03c4**\u03c9\u03bd**  \r\nDat. | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)** | \u03c0\u03ac\u03c3**\u03b1\u03b9\u03c2** | \u03c0\u1fb6**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03c0\u03ac\u03bd\u03c4**\u03b1\u03c2** | \u03c0\u03ac\u03c3**\u03b1\u03c2** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\nVoc. | \u03c0\u03ac\u03bd\u03c4**\u03b5\u03c2** | \u03c0\u1fb6\u03c3**\u03b1\u03b9** | \u03c0\u03ac\u03bd\u03c4**\u03b1**  \r\n  \r\n***\r\n\r\n##### Useful tip\r\n\r\nThe adjective \u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd often also means _all_ or _whole_.\r\n\r\n* * *\r\n\r\nAnother adjective that follows this pattern is \u03bc\u03ad\u03bb**\u03b1\u03c2**, \u03bc\u03ad\u03bb**\u03b1\u03b9\u03bd\u03b1**,\r\n\u03bc\u03ad\u03bb**\u03b1\u03bd**, meaning _black_. If you look closely the endings for this\r\nparticular adjective, though similar, are somewhat different from those in\r\n\u03c0\u1fb6\u03c2, \u03c0\u1fb6\u03c3\u03b1, \u03c0\u1fb6\u03bd.\r\n\r\n* * *\r\n\r\nThe very last type of adjectives following this pattern is \u1f21\u03b4**\u03cd\u03c2**,\r\n\u1f21\u03b4**\u03b5\u1fd6\u03b1**, \u1f21\u03b4**\u03cd**, meaning _sweet_.\r\n\r\n",
         "grammar_ref": 30,
-        "related_content": [],
+        "related_content": [
+            302
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -2178,8 +2207,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Third Declension_ConsonantStem",
-        "content": "##### \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2,\u1f10\u03bb\u03c0\u03af\u03b4\u03bf\u03c2: The hope, of the hope\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 | \u03b1\u1f31 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\nGen. | \u03c4\u1fc6\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1fc7 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b9** | \u03c4\u03b1\u1fd6\u03c2 \u1f10\u03bb\u03c0\u03af**\u03c3\u1f31(\u03bd)**  \r\nAcc. | \u03c4\u1f74\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1** | \u03c4\u1f70\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u1f10\u03bb\u03c0\u03af | \u1f66 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\n  \r\n## Third declension: consonant stem\r\n\r\nThird declension nouns can be masculine, feminine, or neuter. They are called\r\n\"nouns with consonant stems\" because their stems end with a consonant and so\r\nthat they distinguish themselves from third declension nouns with vowel stems.\r\n\r\n* * *\r\n\r\nUnlike nouns from the first and second declensions, **the nominative singular\r\nforms of third declension nouns don't have a specific ending** \\- rather, the\r\nending of every noun is different. However, some features of the third\r\ndeclension remain stable for every noun. These are:\r\n\r\n  * the endings of the genitive\r\n  * the endings of the dative\r\n  * the endings of the accusative plural\r\n  * the endings of the vocative plural\r\nHere is the declension of the Greek word \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 meaning _the hope_.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nIn the third declension, masculine and feminine nouns have the same endings.\r\n\r\n#####  Keep and eye out!\r\n\r\nIn masculine and feminine nouns, the **vocative** singular is identical in\r\nform to the nominative singular:\r\n\r\n  * when the nominative singular ends in -\u03be or -\u03c8\r\n  * when the nominative singular ends in -\u03bd or -\u03c1 and accents the ultima\r\nOtherwise the nominative singular stays as the stem alone, with any final\r\nletter dropped (e.g.\u1f10\u03bb\u03c0\u03b9)\r\n\r\n",
+        "title": "Nouns: Third Declension (Consonant Stem)",
+        "content": "## Third declension: consonant stem\r\n\r\nThird declension nouns can be masculine, feminine, or neuter. They are called\r\n\"nouns with consonant stems\" because their stems end with a consonant and so\r\nthat they distinguish themselves from third declension nouns with vowel stems.\r\n\r\n##### \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2,\u1f10\u03bb\u03c0\u03af\u03b4\u03bf\u03c2: The hope, of the hope\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 | \u03b1\u1f31 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\nGen. | \u03c4\u1fc6\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1fc7 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b9** | \u03c4\u03b1\u1fd6\u03c2 \u1f10\u03bb\u03c0\u03af**\u03c3\u1f31(\u03bd)**  \r\nAcc. | \u03c4\u1f74\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1** | \u03c4\u1f70\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u1f10\u03bb\u03c0\u03af | \u1f66 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\n  \r\n* * *\r\n\r\nUnlike nouns from the first and second declensions, **the nominative singular\r\nforms of third declension nouns don't have a specific ending** \\- rather, the\r\nending of every noun is different. However, some features of the third\r\ndeclension remain stable for every noun. These are:\r\n\r\n  * the endings of the genitive\r\n  * the endings of the dative\r\n  * the endings of the accusative plural\r\n  * the endings of the vocative plural\r\nHere is the declension of the Greek word \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 meaning _the hope_.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nIn the third declension, masculine and feminine nouns have the same endings.\r\n\r\n#####  Keep and eye out!\r\n\r\nIn masculine and feminine nouns, the **vocative** singular is identical in\r\nform to the nominative singular:\r\n\r\n  * when the nominative singular ends in -\u03be or -\u03c8\r\n  * when the nominative singular ends in -\u03bd or -\u03c1 and accents the ultima\r\nOtherwise the nominative singular stays as the stem alone, with any final\r\nletter dropped (e.g.\u1f10\u03bb\u03c0\u03b9)\r\n\r\n",
         "grammar_ref": 24,
         "related_content": [],
         "source_lang": 4
@@ -2310,9 +2339,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Characteristics of Nouns_translation",
-        "content": "## Characteristics of Greek Nouns\r\n\r\nEvery Greek noun will have these 3 important characteristics:\r\n\r\n  1. **Gender**: Masculine, Feminine, or Neuter\r\n  2. **Number**: Singular or Plural\r\n  3. **Case**: Nominative, Genitive, Dative, Accusative or Vocative\r\n\r\n* * *\r\n\r\n### Cases in English\r\n\r\nWhile Gender and Number may be easy concepts to grasp, Case can be tricky for\r\nuninflected-language speakers. Case indicates the change in the ending of a\r\nword according to its function in the sentence. Though English is largely\r\nuninflected, some words do change according to their function.\r\n\r\n#### Example\r\n\r\n> _**Who** am I?_\r\n\r\n\"Who\" is in the **nominative** case, because it is the subject.\r\n\r\n> _I have seen the man **whom** I admire._\r\n\r\n\"Whom\" is in **accusative** case, because it is the direct object.\r\n\r\nHere, English adds an \"m\" to indicate how \"who\" functions in the sentence.\r\nWith an \"m\", it's the direct object, without, it's the subject.\r\n\r\n![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _English also does this with personal pronouns: **She** walks the dog\r\n(subject), or does the dog walk **her**? (direct object)_ Thucydides\r\n\r\n",
-        "grammar_ref": 13,
+        "title": "Nouns: What is a Case?",
+        "content": "### Cases in English\r\n\r\nWhile Gender and Number may be easy concepts to grasp, Case can be tricky for\r\nuninflected-language speakers. Case indicates the change in the ending of a\r\nword according to its function in the sentence. Though English is largely\r\nuninflected, some words do change according to their function.\r\n\r\n#### Example\r\n\r\n> _**Who** am I?_\r\n\r\n\"Who\" is in the **nominative** case, because it is the subject.\r\n\r\n> _I have seen the man **whom** I admire._\r\n\r\n\"Whom\" is in **accusative** case, because it is the direct object.\r\n\r\nHere, English adds an \"m\" to indicate how \"who\" functions in the sentence.\r\nWith an \"m\", it's the direct object, without, it's the subject.\r\n\r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2322,10 +2351,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Characteristics of Nouns_Case",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _Think about yourself as a detective -- in Ancient Greek, you're always\r\ntrying to solve the case._ Thucydides\r\n\r\n## Case\r\n\r\nThe last -- but arguably most important -- thing to remember about Greek nouns\r\nis that their ending changes according to the case they are in. The case of a\r\nGreek noun indicates its grammatical relation to the rest of the sentence\r\n(i.e., subject, direct object, etc.).\r\n\r\n* * *\r\n\r\n### Example\r\n\r\n> _Thucydides describes the war._\r\n\r\n_Thucydides_ is the **subject or nominative** of the verb _describes_, while\r\n_the war_ is the **direct object or accusative** of the sentence.\r\n\r\n* * *\r\n\r\nIn Greek there are **5 main cases** and it really helps to remember which\r\n**order** they are in:\r\n\r\n  1. **Nominative**\r\n  2. **Genitive**\r\n  3. **Dative**\r\n  4. **Accusative**\r\n  5. **Vocative**\r\n\r\nIn Greek, the _ending of a noun_ will always indicate which case it is in.\r\nIndeed, both the definite article of a noun and the noun's ending will vary\r\naccording to case. The stem of the noun, however, always remains the same.\r\n\r\n",
+        "title": "Nouns: Characteristics of Nouns (Case)",
+        "content": "## Case\r\n\r\nThe last -- but arguably most important -- thing to remember about Greek nouns\r\nis that their ending changes according to the case they are in. The case of a\r\nGreek noun indicates its grammatical relation to the rest of the sentence\r\n(i.e., subject, direct object, etc.).\r\n\r\n* * *\r\n\r\n### Example\r\n\r\n> _Thucydides describes the war._\r\n\r\n_Thucydides_ is the **subject or nominative** of the verb _describes_, while\r\n_the war_ is the **direct object or accusative** of the sentence.\r\n\r\n* * *\r\n\r\nIn Greek there are **5 main cases** and it really helps to remember which\r\n**order** they are in:\r\n\r\n  1. **Nominative**\r\n  2. **Genitive**\r\n  3. **Dative**\r\n  4. **Accusative**\r\n  5. **Vocative**\r\n\r\nIn Greek, the _ending of a noun_ will always indicate which case it is in.\r\nIndeed, both the definite article of a noun and the noun's ending will vary\r\naccording to case. The stem of the noun, however, always remains the same.\r\n\r\n",
         "grammar_ref": 16,
-        "related_content": [],
+        "related_content": [
+            320,
+            322,
+            317
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -2358,10 +2391,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Characteristics of Nouns_Number",
+        "title": "Nouns: Characteristics of Nouns (Number)",
         "content": "## Number\r\n\r\nJust like it is in English, every Greek noun is either **singular** or\r\n**plural**. As you learned earlier, the best way of determining the number of\r\na noun is to look at its _definite article_ and _ending_.\r\n\r\nNotice how the _definite article_ and the _ending_ change from singular to\r\nplural, while the _stem_ remains unchanged:\r\n\r\n### Feminine\r\n\r\nSingular | Plural  \r\n---|---  \r\n_\u1f21_ \u1f21\u03bc\u03ad\u03c1_\u03b1_  \r\nthe day  |  _\u03b1\u1f31_ \u1f21\u03bc\u03ad\u03c1_\u03b1\u03b9_  \r\nthe days  \r\n  \r\n### Masculine\r\n\r\nSingular | Plural  \r\n---|---  \r\n_\u1f41_ \u03c0\u03cc\u03bb\u03b5\u03bc_\u03bf\u03c2_  \r\nthe war  |  _\u03bf\u1f31_ \u03c0\u03cc\u03bb\u03b5\u03bc_\u03bf\u03b9_  \r\nthe wars  \r\n  \r\n### Neuter\r\n\r\nSingular | Plural  \r\n---|---  \r\n_\u03c4\u03cc_ \u1f14\u03c1\u03b3_\u03bf\u03bd_  \r\nthe work  |  _\u03c4\u03ac_ \u1f14\u03c1\u03b3_\u03b1_  \r\nthe works\r\n\r\n",
         "grammar_ref": 14,
-        "related_content": [],
+        "related_content": [
+            320,
+            322,
+            314
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -2384,7 +2421,7 @@
         "target_lang": 5,
         "title": "Nouns: Characteristics of Nouns_intro1",
         "content": "## Identifying the 3 characteristics of nouns\r\n\r\n  1. To identify the **gender** of a noun, look at its _definite article_.\r\n  2. To identify the **number** of a noun, look at its _definite article_ and its _ending_.\r\n  3. To identify the **case** of a noun, look at its _definite article_, _stem_ and _ending_.\r\n\r\nLet's take the Greek word for \"day\" again:\r\n\r\n\u1f21 (the) \u1f21\u03bc\u03ad\u03c1\u03b1 (Day)\r\n\r\n\u1f21\r\n\r\n* * *\r\n\r\n|  \u1f21\u03bc\u03ad\u03c1\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Definite Article**  \r\n\r\n* * *\r\n\r\nThe definite article, \u1f21 (\"the\"), tells us \u1f21\u03bc\u03ad\u03c1\u03b1 is a _feminine_ (**gender**)\r\nnoun.  |  **Stem**  \r\n\r\n* * *\r\n\r\nThe stem, \u1f21\u03bc\u03ad\u03c1-, stays constant as we change the noun's number and case.  |\r\n**Ending**  \r\n\r\n* * *\r\n\r\nThe ending, -\u03b1, indicates this is a _singular_ (**number**) _nominative_\r\n(**case**) noun.  \r\n  \r\nThis means that \u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1 is a _Feminine_, _Singular_, _Nominative_ noun.\r\n\r\n",
-        "grammar_ref": 13,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2394,10 +2431,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Characteristics of Nouns_Gender",
+        "title": "Nouns: Characteristics of Nouns (Gender)",
         "content": "## Gender\r\n\r\nEvery noun in Greek is either **masculine**, **feminine** or **neuter**. The\r\ngender of a noun is an aspect of the word's grammar, so try not getting it\r\nconfused with biological sex -- often the two will not match!\r\n\r\nAs you learned in the previous slide, you can **identify the gender of a\r\nnoun** by its _definite article_ preceeding the word.\r\n\r\n* * *\r\n\r\n### Feminine\r\n\r\n_\u1f21_ \u1f21\u03bc\u03ad\u03c1\u03b1\r\n\r\nthe Day\r\n\r\n* * *\r\n\r\n\u1f21 is the definite article for feminine nouns.\r\n\r\n### Masculine\r\n\r\n_\u1f41_ \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03c2_\r\n\r\nthe War\r\n\r\n* * *\r\n\r\n\u1f41 is the definite article for masculine nouns.\r\n\r\n### Neuter\r\n\r\n_\u03c4\u03cc_ \u1f14\u03c1\u03b3\u03bf\u03bd\r\n\r\nthe Work\r\n\r\n* * *\r\n\r\n\u03c4\u03cc is the definite article for neuter nouns.\r\n\r\n",
         "grammar_ref": 15,
-        "related_content": [],
+        "related_content": [
+            322,
+            314,
+            317
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -2418,10 +2459,16 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Characteristics of Nouns_intro",
-        "content": "## How Greek Nouns Work\r\n\r\nJust like many modern languages (for example, German and Russian) **Greek is\r\nan inflected language**.**\r\n\r\nThis means that the **endings** of nouns, pronouns, adjectives and verbs\r\n**change to reflect their relationship with other words**.\r\n\r\n* * *\r\n\r\nTake, for example, the Greek word for \"day\":\r\n\r\n\u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1\r\n\r\nThe Day\r\n\r\nBy looking at \u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1, you may already identify its 3 characteristics:  \r\n  \r\n\r\n  1. Gender: _Feminine_\r\n  2. Number: _Singular_\r\n  3. Case: _Nominative_\r\n\r\n",
+        "title": "Nouns: Characteristics of Nouns",
+        "content": "## Characteristics of Greek Nouns\r\n\r\nEvery Greek noun will have these 3 important characteristics:\r\n\r\n  1. **Gender**: Masculine, Feminine, or Neuter\r\n  2. **Number**: Singular or Plural\r\n  3. **Case**: Nominative, Genitive, Dative, Accusative or Vocative\r\n\r\n* * *\r\n\r\n## How Greek Nouns Work\r\n\r\nJust like many modern languages (for example, German and Russian) **Greek is\r\nan inflected language**.**\r\n\r\nThis means that the **endings** of nouns, pronouns, adjectives and verbs\r\n**change to reflect their relationship with other words**.\r\n\r\n* * *\r\n\r\nTake, for example, the Greek word for \"day\":\r\n\r\n\u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1\r\n\r\nThe Day\r\n\r\nBy looking at \u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1, you may already identify its 3 characteristics:  \r\n  \r\n\r\n  1. Gender: _Feminine_\r\n  2. Number: _Singular_\r\n  3. Case: _Nominative_\r\n\r\n## Identifying the 3 characteristics of nouns\r\n\r\n  1. To identify the **gender** of a noun, look at its _definite article_.\r\n  2. To identify the **number** of a noun, look at its _definite article_ and its _ending_.\r\n  3. To identify the **case** of a noun, look at its _definite article_, _stem_ and _ending_.\r\n\r\nLet's take the Greek word for \"day\" again:\r\n\r\n\u1f21 (the) \u1f21\u03bc\u03ad\u03c1\u03b1 (Day)\r\n\r\n\u1f21\r\n\r\n* * *\r\n\r\n|  \u1f21\u03bc\u03ad\u03c1\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Definite Article**  \r\n\r\n* * *\r\n\r\nThe definite article, \u1f21 (\"the\"), tells us \u1f21\u03bc\u03ad\u03c1\u03b1 is a _feminine_ (**gender**)\r\nnoun.  |  **Stem**  \r\n\r\n* * *\r\n\r\nThe stem, \u1f21\u03bc\u03ad\u03c1-, stays constant as we change the noun's number and case.  |\r\n**Ending**  \r\n\r\n* * *\r\n\r\nThe ending, -\u03b1, indicates this is a _singular_ (**number**) _nominative_\r\n(**case**) noun.  \r\n  \r\nThis means that \u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1 is a _Feminine_, _Singular_, _Nominative_ noun.\r\n\r\n",
         "grammar_ref": 13,
-        "related_content": [],
+        "related_content": [
+            320,
+            313,
+            314,
+            317,
+            285
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -2433,7 +2480,9 @@
         "title": "Articles: Definite Articles",
         "content": "## Definite Articles\r\n\r\nGreek has articles that in meaning are roughly the equivalent of the English\r\n**\"the\"**. The Greek article takes on different form for the different\r\ngenders, numbers and cases. Articles always **agree** with the nouns they\r\nrefer to, meaning that they take the same gender, number, and case of the\r\nnoun.\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n\r\n\r\n#####  Useful tip!\r\n\r\nNote the change in accent from an acute to a circumflex in the genitive and\r\ndative, both singular and plural.\r\n\r\n",
         "grammar_ref": 31,
-        "related_content": [],
+        "related_content": [
+            284
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3090,10 +3139,12 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Second Declension_neuter",
-        "content": "#### \u03c4\u03cc \u1f14\u03c1\u03b3\u03bf\u03bd,\u03bf\u03c5: The work, of the work\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u03c4\u03cc \u1f14\u03c1\u03b3**\u03bf\u03bd** | \u03c4\u03ac \u1f14\u03c1\u03b3**\u03b1**  \r\nGen. | \u03c4\u03bf\u1fe6 \u1f14\u03c1\u03b3**\u03bf\u03c5** | \u03c4\u1ff6\u03bd \u1f14\u03c1\u03b3**\u03c9\u03bd**  \r\nDat. | \u03c4\u1ff7 \u1f14\u03c1\u03b3**\u1ff3** | \u03c4\u03bf\u1fd6\u03c2 \u1f14\u03c1\u03b3**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03c4\u03cc \u1f14\u03c1\u03b3**\u03bf\u03bd** | \u03c4\u03ac \u1f14\u03c1\u03b3**\u03b1**  \r\nVoc. | \u1ff7 \u1f14\u03c1\u03b3**\u03bf\u03bd** | \u1ff7 \u1f14\u03c1\u03b3**\u03b1**  \r\n  \r\n## Second declension continued...\r\n\r\nAnd now here is an example of a neuter second declension noun: \u03c4\u03cc \u1f14\u03c1\u03b3\u03bf\u03bd\r\nmeaning _the work_.\r\n\r\n* * *\r\n\r\n### Neuter Nouns are a Special Case\r\n\r\nIn all neuter nouns, **the accusative and the vocative are the same as the\r\nnominative**. This works for both singular and plural.\r\n\r\n* * *\r\n\r\n### Examples\r\n\r\nNotice how \u03c4\u1f78 \u03c7\u03c9\u03c1\u03af\u03bf\u03bd remains in the same form in these two sentences, even\r\nthough it is the object of the first sentence and the subject in the second.\r\n\r\n#### Neuter noun in the Accusative\r\n\r\n\u03b2\u03af\u1fb3 \u03b3\u1f70\u03c1 \u1f02\u03bd \u03b5\u1f37\u03bb\u03bf\u03bd **\u03c4\u1f78 \u03c7\u03c9\u03c1\u03af\u03bf\u03bd**.\r\n\r\n_For otherwise they would have taken **the place** by force._ ([Thuc\r\n1.102.4](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.4))\r\n\r\n#### Neuter noun in the Nominative\r\n\r\n...\u1f10\u03c0\u03b5\u03b9\u03b4\u1f74 **\u03c4\u1f78 \u03c7\u03c9\u03c1\u03af\u03bf\u03bd** \u03b2\u03af\u1fb3 \u03bf\u1f50\u03c7 \u1f21\u03bb\u03af\u03c3\u03ba\u03b5\u03c4\u03bf...\r\n\r\n_...but since **the place** was not conquered by force..._ ([Thuc\r\n1.102.6](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.6))\r\n\r\n",
+        "title": "Nouns: Second Declension (Neuter)",
+        "content": "## Second declension \r\n\r\nAnd now here is an example of a neuter second declension noun: \u03c4\u03cc \u1f14\u03c1\u03b3\u03bf\u03bd\r\nmeaning _the work_.\r\n\r\n* * *\r\n\r\n#### \u03c4\u03cc \u1f14\u03c1\u03b3\u03bf\u03bd,\u03bf\u03c5: The work, of the work\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u03c4\u03cc \u1f14\u03c1\u03b3**\u03bf\u03bd** | \u03c4\u03ac \u1f14\u03c1\u03b3**\u03b1**  \r\nGen. | \u03c4\u03bf\u1fe6 \u1f14\u03c1\u03b3**\u03bf\u03c5** | \u03c4\u1ff6\u03bd \u1f14\u03c1\u03b3**\u03c9\u03bd**  \r\nDat. | \u03c4\u1ff7 \u1f14\u03c1\u03b3**\u1ff3** | \u03c4\u03bf\u1fd6\u03c2 \u1f14\u03c1\u03b3**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03c4\u03cc \u1f14\u03c1\u03b3**\u03bf\u03bd** | \u03c4\u03ac \u1f14\u03c1\u03b3**\u03b1**  \r\nVoc. | \u1ff7 \u1f14\u03c1\u03b3**\u03bf\u03bd** | \u1ff7 \u1f14\u03c1\u03b3**\u03b1**  \r\n\r\n### Neuter Nouns are a Special Case\r\n\r\nIn all neuter nouns, **the accusative and the vocative are the same as the\r\nnominative**. This works for both singular and plural.\r\n\r\n* * *\r\n\r\n### Examples\r\n\r\nNotice how \u03c4\u1f78 \u03c7\u03c9\u03c1\u03af\u03bf\u03bd remains in the same form in these two sentences, even\r\nthough it is the object of the first sentence and the subject in the second.\r\n\r\n#### Neuter noun in the Accusative\r\n\r\n\u03b2\u03af\u1fb3 \u03b3\u1f70\u03c1 \u1f02\u03bd \u03b5\u1f37\u03bb\u03bf\u03bd **\u03c4\u1f78 \u03c7\u03c9\u03c1\u03af\u03bf\u03bd**.\r\n\r\n_For otherwise they would have taken **the place** by force._ ([Thuc\r\n1.102.4](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.4))\r\n\r\n#### Neuter noun in the Nominative\r\n\r\n...\u1f10\u03c0\u03b5\u03b9\u03b4\u1f74 **\u03c4\u1f78 \u03c7\u03c9\u03c1\u03af\u03bf\u03bd** \u03b2\u03af\u1fb3 \u03bf\u1f50\u03c7 \u1f21\u03bb\u03af\u03c3\u03ba\u03b5\u03c4\u03bf...\r\n\r\n_...but since **the place** was not conquered by force..._ ([Thuc\r\n1.102.6](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.102.6))\r\n\r\n",
         "grammar_ref": 22,
-        "related_content": [],
+        "related_content": [
+            380
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3114,10 +3165,12 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Second Declension_declension",
+        "title": "Nouns: Second Declension (Masculine and Feminine)",
         "content": "## Second declension\r\n\r\nSecond declension nouns either have the nominative singular ending in -\u03bf\u03c2 for\r\nmasculine and, less frequently, feminine nouns, or the ending in -\u03bf\u03bd for the\r\nneuter. Here is the declension for the Greek word \u1f41 \u03bb\u03cc\u03b3\u03bf\u03c2 meaning _the word_.\r\n\r\n##### \u1f41 \u03bb\u03cc\u03b3\u03bf\u03c2,\u03bf\u03c5: The word\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f41 \u03bb\u03cc\u03b3**\u03bf\u03c2** | \u03bf\u1f31 \u03bb\u03cc\u03b3**\u03bf\u03b9**  \r\nGen. | \u03c4\u03bf\u1fe6 \u03bb\u03cc\u03b3**\u03bf\u03c5** | \u03c4\u1ff6\u03bd \u03bb\u03cc\u03b3**\u03c9\u03bd**  \r\nDat. | \u03c4\u1ff7 \u03bb\u03cc\u03b3**\u1ff3** | \u03c4\u03bf\u1fd6\u03c2 \u03bb\u03cc\u03b3**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03c4\u03cc\u03bd \u03bb\u03cc\u03b3**\u03bf\u03bd** | \u03c4\u03bf\u03cd\u03c2 \u03bb\u03cc\u03b3**\u03bf\u03c5\u03c2**  \r\nVoc. | \u1ff7 \u03bb\u03cc\u03b3**\u03b5** | \u1ff7 \u03bb\u03cc\u03b3**\u03bf\u03b9**  \r\n  \r\n#####  The Genitive is the key!\r\n\r\nRemember that to decline you must take the genitive singular, remove the\r\nending to get the stem and add the correct ending to form the other cases.\r\n\r\n",
         "grammar_ref": 21,
-        "related_content": [],
+        "related_content": [
+            378
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3126,7 +3179,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Second Declension_intro",
+        "title": "Startpage: Second Declension_intro",
         "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _Holla at my br-\u03bf\u03c2!_ Thucydides _(ca 460 - 395 BC)_\r\n\r\n### Second Declension\r\n\r\n* * *\r\n\r\nNow that you have learned how to recognize, decline and translate first\r\ndeclension nouns, you can expand your vocabulary by learning **second\r\ndeclension nouns**!\r\n\r\n* * *\r\n\r\n#### In this Section\r\n\r\nNew Skills New Vocab Themistocles goes to Sparta.\r\n\r\n  1. Identify second declension nouns ending in -\u03bf\u03c2.\r\n  2. Identify second declension nouns ending in -\u03bf\u03bd.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -3214,6 +3267,7 @@
         "content": "## How First and Second Declension Adjectives work\r\n\r\nJust like articles and nouns have gender, number and case, so do all the\r\nadjectives. Like the article, **an adjective must agree in gender, number and\r\ncase with the noun it describes**.\r\n\r\nHowever, this does not mean that the ending of the article and that of the\r\nnoun are always identical; there are exceptions where, though the adjective\r\nand noun agree, the endings might look different (e.g. \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2 \u03c8\u03c5\u03c7\u03ae, meaning\r\n_an unjust soul_).\r\n\r\nAdjectives agreeing with first and second declension nouns fall into two\r\ngroups:\r\n\r\n  * **Three-ending Adjectives**  \r\nThere are separate sets of endings for each of the three genders.  \r\n  \r\n\r\n  * **Two-ending Adjectives**  \r\nMasculine and Feminine nouns share one set of endings, while neuter has a\r\ndifferent set.  \r\n\r\n***\r\n\r\n## Two-ending Adjectives of the Second Declension\r\n\r\n\r\nAs you can see from the table, the adjective \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd has the same\r\nendings as second declension nouns.\r\n\r\nExample: \u03c4\u03bf\u1fe6 \u1f00\u03b4\u03af\u03ba\u03bf\u03c5 \u1f00\u03bd\u03b8\u03c1\u03ce\u03c0\u03bf\u03c5, meaning _of the unjust man._\r\n\r\n### \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd -- _unjust_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd**  \r\nGen. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5** | \u1f04\u03b4\u03af\u03ba**\u03bf\u03c5**  \r\nDat. | \u1f00\u03b4\u03af\u03ba**\u1ff3** | \u1f00\u03b4\u03af\u03ba**\u1ff3** | \r\nAcc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | \r\nVoc. | \u1f04\u03b4\u03b9\u03ba**\u03b5** | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03bd** | \r\n**Plural**  \r\nNom. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\nGen. | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd** | \u1f00\u03b4\u03af\u03ba**\u03c9\u03bd**  \r\nDat. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2** | \u1f00\u03b4\u03af\u03ba**\u03bf\u03b9\u03c2**  \r\nAcc. | \u1f00\u03b4\u03af\u03ba**\u03bf\u03c5\u03c2** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\nVoc. | \u1f04\u03b4\u03b9\u03ba**\u03bf\u03b9** | \u1f04\u03b4\u03b9\u03ba**\u03b1**  \r\n \r\n\r\nAs you can see from the table, the adjective \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2, \u1f04\u03b4\u03b9\u03ba\u03bf\u03bd has the same\r\nendings as second declension nouns.\r\n\r\nExample: \u03c4\u03bf\u1fe6 \u1f00\u03b4\u03af\u03ba\u03bf\u03c5 \u1f00\u03bd\u03b8\u03c1\u03ce\u03c0\u03bf\u03c5, meaning _of the unjust man._\r\n\r\n##### Meet the Alpha Privative\r\n\r\nThe adjective **\u1f04**\u03b4\u03b9\u03ba\u03bf\u03c2, meaning _unjust_ is the exact opposite in meaning of\r\n\u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 meaning _just_. The clue is in the prefix **\u03b1**, also called _alpha\r\nprivative_, expressesing negation or absence.\r\n\r\n",
         "grammar_ref": 29,
         "related_content": [
+            378,
             380
         ],
         "source_lang": 4
@@ -3240,6 +3294,8 @@
         "content": "## How First and Second Declension Adjectives work\r\n\r\nJust like articles and nouns have gender, number and case, so do all the\r\nadjectives. Like the article, **an adjective must agree in gender, number and\r\ncase with the noun it describes**.\r\n\r\nHowever, this does not mean that the ending of the article and that of the\r\nnoun are always identical; there are exceptions where, though the adjective\r\nand noun agree, the endings might look different (e.g. \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2 \u03c8\u03c5\u03c7\u03ae, meaning\r\n_an unjust soul_).\r\n\r\nAdjectives agreeing with first and second declension nouns fall into two\r\ngroups:\r\n\r\n  * **Three-ending Adjectives**  \r\nThere are separate sets of endings for each of the three genders.  \r\n  \r\n\r\n  * **Two-ending Adjectives**  \r\nMasculine and Feminine nouns share one set of endings, while neuter has a\r\ndifferent set.  \r\n  \r\n\r\n* * *\r\n\r\nAs you can see from the table, the adjective \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd has the\r\nsame endings as first declension nouns in the feminine, and as second\r\ndeclension nouns in the masculine and neuter.\r\n\r\nExample: \u1f41 \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2, meaning _the just man._\r\n\r\n### \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd -- _just_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1fb3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \r\nAcc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03bd**| \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \r\n**Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**\r\n\r\n***\r\n\r\n##### Word Order and Adjectives\r\n\r\nThe meaning given to the article, noun, and its agreeing adjective can vary\r\nslightly according to **word order**. So, you might not always find these\r\nthree components (article, noun, adjective) in the same sequence.\r\n\r\nFor example: \u1f41 \u1f00\u03b3\u03b1\u03b8\u1f78\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 means _the good man_, but \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u1f41 \u1f00\u03b3\u03b1\u03b8\u03bf\u03c2\r\nmeans _a man, the good one_\r\n\r\n",
         "grammar_ref": 28,
         "related_content": [
+            284,
+            378,
             380
         ],
         "source_lang": 4
@@ -3658,9 +3714,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Nominative Case_originalexample",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Nominative Case\r\n\r\n##### Nominatives in the Pentecontaetia\r\n\r\nEssentially every sentence in Greek contains a word in the nominative case.\r\nTake a look at the very beginning of Thucydides' _Pentacontaetia_!\r\n\r\n**\u03bf\u1f31** \u03b3\u1f70\u03c1 **\u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9** |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f26\u03bb\u03b8\u03bf\u03bd...  \r\n---|---|---  \r\nSo **the Athenians**,  |  in this way,  |  came...  \r\n**(Subject)** |    |  (Verb)   \r\n-- _The History of the Peloponnesian War_, 1.89.1\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nNow that's an ominous start to any story, if I do say so myself...which I did.\r\n\r\nNow that you have learned the **nominative**, test yourself!  \r\n  \r\nClick the arrow to try recognizing the dative in English and Greek sentences!\r\n\r\n",
-        "grammar_ref": 49,
+        "title": "Nouns: Nominative Case (Original Example)",
+        "content": "#### The Nominative Case\r\n\r\n##### Nominatives in the Pentecontaetia\r\n\r\nEssentially every sentence in Greek contains a word in the nominative case.\r\nTake a look at the very beginning of Thucydides' _Pentacontaetia_!\r\n\r\n**\u03bf\u1f31** \u03b3\u1f70\u03c1 **\u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9** |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f26\u03bb\u03b8\u03bf\u03bd...  \r\n---|---|---  \r\nSo **the Athenians**,  |  in this way,  |  came...  \r\n**(Subject)** |    |  (Verb)   \r\n-- _The History of the Peloponnesian War_, 1.89.1\r\n\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3694,8 +3750,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Genitive Case_Comparative",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Genitive Case\r\n\r\n##### Genitive of Comparison\r\n\r\nIn these sentences, the genitive expresses **comparison**. When \u1f24 (than) is\r\nabsent, the **object of comparison** (i.e. anything after 'than' in English)\r\nis in the genitive.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c3\u03ce\u03c6\u03c1\u03c9\u03bd |  **\u03c4\u03bf\u1fe6 \u03c0\u03b1\u03b9\u03b4\u03cc\u03c2**.  \r\n---|---|---|---  \r\nThucydides  |  is  |  wiser  |  **than the boy**.  \r\n(Nominative)  |  (Verb)  |  |  **(Genitive)**  \r\n  \r\n##### Genitive following Prepositions\r\n\r\nIn these sentences, the genitive follows **prepositions** for a variety of\r\npurposes. Here is the example of the preposition **\u1f10\u03ba** meaning **out\r\nof/from**.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u1f10\u03ba\u03b2\u03b1\u03af\u03bd\u03b5\u03b9 |  **\u1f10\u03ba \u03c4\u1fc6\u03c2 \u03bf\u1f30\u03ba\u03af\u03b1\u03c2.**  \r\n---|---|---  \r\nThe girl  |  walks out  |  **of the house**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**\r\n\r\n",
+        "title": "Nouns: Genitive Case (Comparative)",
+        "content": "#### The Genitive Case\r\n\r\n##### Genitive of Comparison\r\n\r\nIn these sentences, the genitive expresses **comparison**. When \u1f24 (than) is\r\nabsent, the **object of comparison** (i.e. anything after 'than' in English)\r\nis in the genitive.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c3\u03ce\u03c6\u03c1\u03c9\u03bd |  **\u03c4\u03bf\u1fe6 \u03c0\u03b1\u03b9\u03b4\u03cc\u03c2**.  \r\n---|---|---|---  \r\nThucydides  |  is  |  wiser  |  **than the boy**.  \r\n(Nominative)  |  (Verb)  |  |  **(Genitive)**  \r\n  \r\n##### Genitive following Prepositions\r\n\r\nIn these sentences, the genitive follows **prepositions** for a variety of\r\npurposes. Here is the example of the preposition **\u1f10\u03ba** meaning **out\r\nof/from**.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u1f10\u03ba\u03b2\u03b1\u03af\u03bd\u03b5\u03b9 |  **\u1f10\u03ba \u03c4\u1fc6\u03c2 \u03bf\u1f30\u03ba\u03af\u03b1\u03c2.**  \r\n---|---|---  \r\nThe girl  |  walks out  |  **of the house**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**\r\n\r\n***\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n",
         "grammar_ref": 53,
         "related_content": [],
         "source_lang": 4
@@ -3706,9 +3762,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Genitive Case_Partitive",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Genitive Case\r\n\r\n##### Partitive Genitive\r\n\r\nIn these sentences, the genitive indicates the **part of something**.\r\n\r\n\u1f21 \u03c3\u03c5\u03bd\u03c4\u03c5\u03c7\u03af\u03b1  |  **\u03c4\u1fc6\u03c2 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  \u03b2\u03c1\u03b1\u03c7\u03b5\u1fd6\u03b1.  \r\n---|---|---|---  \r\nThe event  |  **of (out of) the narrative** |  is  |  short.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n  \r\n##### Genitive of Separation\r\n\r\nIn these sentences, the genitive indicates the **separation or lack of\r\nsomething**.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u1f00\u03c6\u03af\u03c3\u03c4\u03b1\u03c4\u03b1\u03b9 |  **\u03c4\u1ff6\u03bd \u03ba\u03b9\u03bd\u03b4\u03cd\u03bd\u03c9\u03bd.**  \r\n---|---|---  \r\nThe girl  |  stays away  |  **from the dangers**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**  \r\n  \r\n##### Genitive with verbs of Desire\r\n\r\nIn these sentences, the genitive follows **verbs of desire**.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c0\u03b9\u03b8\u03c5\u03bc\u03ad\u03b9 |  **\u03c4\u1fc6\u03c2 \u1f21\u03c3\u03c5\u03c7\u03af\u03b1\u03c2.**  \r\n---|---|---  \r\nThucydides  |  desires  |  **rest.**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**\r\n\r\n",
-        "grammar_ref": 52,
+        "title": "Nouns: Genitive Case (Partitive)",
+        "content": "#### The Genitive Case\r\n\r\n##### Partitive Genitive\r\n\r\nIn these sentences, the genitive indicates the **part of something**.\r\n\r\n\u1f21 \u03c3\u03c5\u03bd\u03c4\u03c5\u03c7\u03af\u03b1  |  **\u03c4\u1fc6\u03c2 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  \u03b2\u03c1\u03b1\u03c7\u03b5\u1fd6\u03b1.  \r\n---|---|---|---  \r\nThe event  |  **of (out of) the narrative** |  is  |  short.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n  \r\n##### Genitive of Separation\r\n\r\nIn these sentences, the genitive indicates the **separation or lack of\r\nsomething**.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u1f00\u03c6\u03af\u03c3\u03c4\u03b1\u03c4\u03b1\u03b9 |  **\u03c4\u1ff6\u03bd \u03ba\u03b9\u03bd\u03b4\u03cd\u03bd\u03c9\u03bd.**  \r\n---|---|---  \r\nThe girl  |  stays away  |  **from the dangers**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**  \r\n  \r\n##### Genitive with verbs of Desire\r\n\r\nIn these sentences, the genitive follows **verbs of desire**.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03c0\u03b9\u03b8\u03c5\u03bc\u03ad\u03b9 |  **\u03c4\u1fc6\u03c2 \u1f21\u03c3\u03c5\u03c7\u03af\u03b1\u03c2.**  \r\n---|---|---  \r\nThucydides  |  desires  |  **rest.**  \r\n(Nominative)  |  (Verb)  |  **(Genitive)**\r\n\r\n***\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3718,10 +3774,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Nominative Case_intro",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Nominative Case\r\n\r\n##### What's in a name?\r\n\r\nThe word \"nominative\" originally comes from the Greek word \u1f44\u03bd\u03bf\u03bc\u03b1, meaning\r\n\"name\". Thus, the nominative case is used to indicate the **subject of a\r\nsentence** or the **complement of the verb**.\r\n\r\n* * *\r\n\r\n##### Keep an eye out!\r\n\r\nTake a look at the table to your left. We'll be focusing mostly on words that\r\nfit into this pattern, or **declension**.\r\n\r\n",
+        "title": "Nouns: Nominative Case",
+        "content": "#### The Nominative Case\r\n\r\n##### What's in a name?\r\n\r\nThe word \"nominative\" originally comes from the Greek word \u1f44\u03bd\u03bf\u03bc\u03b1, meaning\r\n\"name\". Thus, the nominative case is used to indicate the **subject of a\r\nsentence** or the **complement of the verb**.\r\n\r\n* * *\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n\r\n##### Keep an eye out!\r\n\r\nWe'll be focusing mostly on words that\r\nfit into this pattern, or **declension**.\r\n",
         "grammar_ref": 49,
-        "related_content": [],
+        "related_content": [
+            425,
+            437,
+            445
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3766,8 +3826,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Intro to Cases_intro",
-        "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _Conjugate a noun? I decline._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n### How Cases Work\r\n\r\n* * *\r\n\r\nIn \"Introduction to Nouns\" you learned that in Greek there are **5 main\r\ncases**: nominative, accusative, genitive, dative and vocative. Understanding\r\ncases is vital to help you translate a text.\r\n\r\n* * *\r\n\r\n#### In this Section\r\n\r\nNew Skills New Vocab Protagonists of the Peloponnesian War.\r\n\r\n  1. Identify the cases.\r\n  2. Know what the function of each word is in a sentence. \r\n\r\n",
+        "title": "Nouns: Introduction to Cases",
+        "content": "### How Cases Work\r\n\r\n* * *\r\n\r\nIn \"Introduction to Nouns\" you learned that in Greek there are **5 main\r\ncases**: nominative, accusative, genitive, dative and vocative. Understanding\r\ncases is vital to help you translate a text.\r\n\r\n* * *\r\n\r\n#### In this Section\r\n\r\nNew Skills New Vocab Protagonists of the Peloponnesian War.\r\n\r\n  1. Identify the cases.\r\n  2. Know what the function of each word is in a sentence. \r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -3778,9 +3838,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Genitive Case_originalexample",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Genitive Case\r\n\r\n##### Genitives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, the Persians\r\nhave just suffered the final defeat by the Greeks, or _Hellenes_, led by the\r\nSpartan king Leotychides.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 \u03bc\u1f72\u03bd \u1f41 \u03b2\u03b1\u03c3\u03b9\u03bb\u03b5\u1f7a\u03c2 |  **\u03c4\u1ff6\u03bd \u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd\u03af\u03c9\u03bd** |  \u1f00\u03c0\u03b5\u03c7\u03ce\u03c1\u03b7\u03c3\u03b5\u03bd |  \u1f10\u03c0\u1fbd \u03bf\u1f34\u03ba\u03bf\u03c5  \r\n---|---|---|---  \r\nLeotychides, king  |  of the Spartans  |  set out  |  towards home...  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nFinally \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 \u1f41 \u03b2\u03b1\u03c3\u03b9\u03bb\u03b5\u1f7a\u03c2 has defeated the Persians! Can there be peace\r\nnow?\r\n\r\n##### Almost there!\r\n\r\nNow that you have learned the **genitive**, test yourself!  \r\n  \r\nClick on the arrow to try recognizing the genitive in English and Greek\r\nsentences!\r\n\r\n",
-        "grammar_ref": 51,
+        "title": "Nouns: Genitive Case (Original Example)",
+        "content": "#### The Genitive Case\r\n\r\n##### Genitives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, the Persians\r\nhave just suffered the final defeat by the Greeks, or _Hellenes_, led by the\r\nSpartan king Leotychides.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 \u03bc\u1f72\u03bd \u1f41 \u03b2\u03b1\u03c3\u03b9\u03bb\u03b5\u1f7a\u03c2 |  **\u03c4\u1ff6\u03bd \u039b\u03b1\u03ba\u03b5\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd\u03af\u03c9\u03bd** |  \u1f00\u03c0\u03b5\u03c7\u03ce\u03c1\u03b7\u03c3\u03b5\u03bd |  \u1f10\u03c0\u1fbd \u03bf\u1f34\u03ba\u03bf\u03c5  \r\n---|---|---|---  \r\nLeotychides, king  |  of the Spartans  |  set out  |  towards home...  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  ",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3790,10 +3850,15 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Genitive Case_intro",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Genitive Case\r\n\r\nIn most cases the meaning of the genitive can be associated with the English\r\nword **_of_**, so if you take the sentence _Thucydides wrote a narration of\r\nevents_, you will find \"of events\" in the genitive.\r\n\r\n* * *\r\n\r\n##### Useful tip!\r\n\r\nThe genitive is a very useful case. Very often the ending of the genitive will\r\nhelp you determine the gender and number of irregular nouns that in the\r\nnominative may confuse you. For example, we know the name \"Thucydides\" is\r\nmasculine, though the ending \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4**\u03b7\u03c2** may look feminine. The genitive\r\nhere, however, shows you that this noun is undoubtedly masculine:\r\n\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4**\u03bf\u03c5**.\r\n\r\n",
+        "title": "Nouns: Genitive Case",
+        "content": "#### The Genitive Case\r\n\r\nIn most cases the meaning of the genitive can be associated with the English\r\nword **_of_**, so if you take the sentence _Thucydides wrote a narration of\r\nevents_, you will find \"of events\" in the genitive.\r\n\r\n* * *\r\n\r\n##### Useful tip!\r\n\r\nThe genitive is a very useful case. Very often the ending of the genitive will\r\nhelp you determine the gender and number of irregular nouns that in the\r\nnominative may confuse you. For example, we know the name \"Thucydides\" is\r\nmasculine, though the ending \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4**\u03b7\u03c2** may look feminine. The genitive\r\nhere, however, shows you that this noun is undoubtedly masculine:\r\n\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4**\u03bf\u03c5**.\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  ",
         "grammar_ref": 51,
-        "related_content": [],
+        "related_content": [
+            441,
+            435,
+            428,
+            429
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3802,8 +3867,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Nominative Case_Complement",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Nominative Case\r\n\r\n##### Nominative as the Complement\r\n\r\nThe complement, which is also a noun or adjective in the nominative case,\r\n**always follows the verb _to be_**. Spotting the verb first can help you\r\nunderstand the function of the other words in the sentence!\r\n\r\n**\u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03bc\u03b1\u03ba\u03c1\u03ac**.  \r\n---|---|---  \r\n**The day** |  is  |  **long**.   \r\n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \r\n  \r\n* * *\r\n\r\n**\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03cd\u03c2**  \r\n---|---|---  \r\n**Thucydides** |  is  |  **a historian**.   \r\n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \r\n  \r\n* * *\r\n\r\n**\u03a3\u03b9\u03ba\u03b5\u03bb\u03af\u03b1** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03bd\u1fc6\u03c3\u03bf\u03c2**  \r\n---|---|---  \r\n**Sicily** |  is  |  **an island**.   \r\n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \r\n  \r\n#####  Useful tip!\r\n\r\nThe Greek word order might surprise you. You will find that the word order\r\ndoesn't follow particular conventions and the verb may often be at the end of\r\na sentence!\r\n\r\n  \r\n\r\n",
+        "title": "Nouns: Nominative Case (Complement)",
+        "content": "#### The Nominative Case\r\n\r\n##### Nominative as the Complement\r\n\r\nThe complement, which is also a noun or adjective in the nominative case,\r\n**always follows the verb _to be_**. Spotting the verb first can help you\r\nunderstand the function of the other words in the sentence!\r\n\r\n**\u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03bc\u03b1\u03ba\u03c1\u03ac**.  \r\n---|---|---  \r\n**The day** |  is  |  **long**.   \r\n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \r\n  \r\n* * *\r\n\r\n**\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03cd\u03c2**  \r\n---|---|---  \r\n**Thucydides** |  is  |  **a historian**.   \r\n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \r\n  \r\n* * *\r\n\r\n**\u03a3\u03b9\u03ba\u03b5\u03bb\u03af\u03b1** |  \u1f10\u03c3\u03c4\u1f76 |  **\u03bd\u1fc6\u03c3\u03bf\u03c2**  \r\n---|---|---  \r\n**Sicily** |  is  |  **an island**.   \r\n**(Subject)** |  (Linking Verb)  |  **(Complement)**  \r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n\r\n  \r\n#####  Useful tip!\r\n\r\nThe Greek word order might surprise you. You will find that the word order\r\ndoesn't follow particular conventions and the verb may often be at the end of\r\na sentence!\r\n\r\n  \r\n\r\n",
         "grammar_ref": 48,
         "related_content": [],
         "source_lang": 4
@@ -3850,9 +3915,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Genitive Case_Possession",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n##### Genitive of Possession\r\n\r\nIn these sentences, the genitive indicates the **possession of something**.\r\n\r\n\u1f21 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1 |  **\u03c4\u03bf\u1fe6 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03bf\u03c5** |  \u1f10\u03c3\u03c4\u1f76 |  \u03bc\u03b5\u03b3\u03ac\u03bb\u03b7.  \r\n---|---|---|---  \r\nThe narration  |  **of Thucydides** |  is  |  long.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n  \r\n* * *\r\n\r\n\u1f41 \u03ba\u1fc6\u03c0\u03bf\u03c2 |  **\u03c4\u1fc6\u03c2 \u03bf\u03b9\u03ba\u03af\u03b1\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  \u03bc\u03b5\u03b3\u03ac\u03bb\u03b7.  \r\n---|---|---|---  \r\nThe garden  |  **of the house** |  is  |  big.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |\r\n\r\n",
-        "grammar_ref": 51,
+        "title": "Nouns: Genitive Case (Possession)",
+        "content": "##### Genitive of Possession\r\n\r\nIn these sentences, the genitive indicates the **possession of something**.\r\n\r\n\u1f21 \u1f31\u03c3\u03c4\u03bf\u03c1\u03af\u03b1 |  **\u03c4\u03bf\u1fe6 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03bf\u03c5** |  \u1f10\u03c3\u03c4\u1f76 |  \u03bc\u03b5\u03b3\u03ac\u03bb\u03b7.  \r\n---|---|---|---  \r\nThe narration  |  **of Thucydides** |  is  |  long.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |  \r\n  \r\n* * *\r\n\r\n\u1f41 \u03ba\u1fc6\u03c0\u03bf\u03c2 |  **\u03c4\u1fc6\u03c2 \u03bf\u03b9\u03ba\u03af\u03b1\u03c2** |  \u1f10\u03c3\u03c4\u1f76 |  \u03bc\u03b5\u03b3\u03ac\u03bb\u03b7.  \r\n---|---|---|---  \r\nThe garden  |  **of the house** |  is  |  big.  \r\n(Nominative)  |  **(Genitive)** |  (Verb)  |\r\n\r\n***\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3898,9 +3963,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Nominative Case_Subject",
+        "title": "Nouns: Nominative Case (Subject)",
         "content": "## The Nominative Case\r\n\r\n### Nominative as the Subject\r\n\r\nIn these sentences, the subject of the sentence is marked by the nominative\r\ncase.\r\n\r\n**\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2** |  \u1f10\u03be\u03b7\u03b3\u03ad\u03c4\u03b1\u03b9 |  \u03c4\u03cc\u03bd \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03bd.  \r\n---|---|---  \r\n**Thucydides** |  describes  |  the war.   \r\n**(Subject)** |  (Verb)  |  (Object)   \r\n  \r\n* * *\r\n\r\n**\u1f21 \u1f21\u03bc\u03ad\u03c1\u03b1** |  \u03c6\u03ad\u03c1\u03b5\u03b9 |  \u03c4\u03ae\u03bd \u1f21\u03c3\u03c5\u03c7\u03af\u03b1\u03bd  \r\n---|---|---  \r\n**The day** |  brings  |  rest.   \r\n**(Subject)** |  (Verb)  |  (Object)   \r\n  \r\n#####  Useful tip!\r\n\r\nYou can always rely on the definite article, such as \u1f41 or \u1f21 in these examples,\r\nto indicate the nominative case.\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -\r\n\r\n",
-        "grammar_ref": 49,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -20298,5 +20363,1877 @@
     },
     "model": "admin.logentry",
     "pk": 898
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:32:04.442Z",
+        "object_repr": "Nouns: Characteristics of Nouns_intro1",
+        "object_id": "319",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 899
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:32:16.851Z",
+        "object_repr": "Nouns: Characteristics of Nouns_intro",
+        "object_id": "322",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 900
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:33:15.479Z",
+        "object_repr": "Nouns: Characteristics of Nouns",
+        "object_id": "322",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 901
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:33:43.282Z",
+        "object_repr": "Nouns: Characteristics of Nouns_intro1",
+        "object_id": "319",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 902
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:35:39.093Z",
+        "object_repr": "Nouns: Characteristics of Nouns_translation",
+        "object_id": "313",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 903
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:37:53.379Z",
+        "object_repr": "Nouns: What is a declension?",
+        "object_id": "285",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 904
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:39:04.745Z",
+        "object_repr": "Nouns: What is a Case?",
+        "object_id": "313",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 905
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:40:59.697Z",
+        "object_repr": "Nouns: Characteristics of Nouns",
+        "object_id": "322",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 906
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:44:21.317Z",
+        "object_repr": "Nouns: What is a declension?",
+        "object_id": "285",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 907
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:47:53.695Z",
+        "object_repr": "Nouns: Characteristics of Nouns",
+        "object_id": "322",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 908
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-03T18:55:52.598Z",
+        "object_repr": "Nouns: Characteristics of Nouns",
+        "object_id": "322",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 909
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:29:13.385Z",
+        "object_repr": "Nouns: Second Declension",
+        "object_id": "380",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 910
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:29:48.398Z",
+        "object_repr": "Adjectives: First and Second Declension (Three-ending)",
+        "object_id": "390",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 911
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:31:17.284Z",
+        "object_repr": "Adjectives: First and Second Declension (Three-ending)",
+        "object_id": "390",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 912
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:32:53.258Z",
+        "object_repr": "Nouns: First Declension_Firstgroup",
+        "object_id": "284",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 913
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:34:31.975Z",
+        "object_repr": "Nouns: Second Declension (Neuter)",
+        "object_id": "378",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 914
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:35:16.267Z",
+        "object_repr": "Nouns: Second Declension (Masculine and Feminine)",
+        "object_id": "380",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 915
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:35:30.962Z",
+        "object_repr": "Nouns: First Declension (Firstgroup)",
+        "object_id": "284",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 916
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:38:02.376Z",
+        "object_repr": "Adjectives: Third Declension (Three-ending)",
+        "object_id": "295",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 917
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:39:52.392Z",
+        "object_repr": "Nouns: Third Declension (Consonant Stem)",
+        "object_id": "302",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 918
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:41:26.677Z",
+        "object_repr": "Adjectives: Second Declension (Two-ending)",
+        "object_id": "388",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 919
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:41:50.885Z",
+        "object_repr": "Adjectives: Second Declension (Two-ending)",
+        "object_id": "388",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 920
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:42:55.263Z",
+        "object_repr": "Adjectives: Third Declension (Two-ending)",
+        "object_id": "292",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 921
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T13:45:16.444Z",
+        "object_repr": "Articles: Definite Articles",
+        "object_id": "323",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 922
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:23:09.259Z",
+        "object_repr": "Nouns: Characteristics of Nouns",
+        "object_id": "322",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 923
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:26:17.265Z",
+        "object_repr": "Nouns: What is a declension?",
+        "object_id": "285",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 924
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:26:29.914Z",
+        "object_repr": "Nouns: What is a Case?",
+        "object_id": "313",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 925
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:27:02.141Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Gender)",
+        "object_id": "320",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 926
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:27:33.401Z",
+        "object_repr": "Nouns: Characteristics of Nouns_Case",
+        "object_id": "314",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 927
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:27:43.465Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Case)",
+        "object_id": "314",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 928
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:27:58.842Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Number)",
+        "object_id": "317",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 929
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:29:04.206Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Case)",
+        "object_id": "314",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 930
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:29:08.401Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Case)",
+        "object_id": "314",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 931
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:29:12.997Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Gender)",
+        "object_id": "320",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 932
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:29:17.515Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Number)",
+        "object_id": "317",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 933
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:33:58.286Z",
+        "object_repr": "Nouns: First Declension (Firstgroup)",
+        "object_id": "284",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 934
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:34:24.575Z",
+        "object_repr": "Nouns: First Declension (Firstgroup)",
+        "object_id": "284",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 935
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:34:53.642Z",
+        "object_repr": "Nouns: First Declension (Secondgroup)",
+        "object_id": "281",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 936
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:35:11.491Z",
+        "object_repr": "Nouns: First Declension (Third group)",
+        "object_id": "286",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 937
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:35:17.929Z",
+        "object_repr": "Nouns: First Declension (Second group)",
+        "object_id": "281",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 938
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:35:23.760Z",
+        "object_repr": "Nouns: First Declension (First group)",
+        "object_id": "284",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 939
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:36:33.859Z",
+        "object_repr": "Nouns: First Declension (First group)",
+        "object_id": "284",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 940
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:36:52.995Z",
+        "object_repr": "Nouns: First Declension_originalexample",
+        "object_id": "287",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 941
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:37:11.241Z",
+        "object_repr": "Nouns: First Declension_originalexample1",
+        "object_id": "279",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 942
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:37:49.942Z",
+        "object_repr": "Nouns: First Declension (First group)",
+        "object_id": "284",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 943
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:38:49.401Z",
+        "object_repr": "Nouns: First Declension (Second group)",
+        "object_id": "281",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 944
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:39:10.641Z",
+        "object_repr": "Nouns: First Declension (Third group)",
+        "object_id": "286",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 945
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:42:13.530Z",
+        "object_repr": "Startpage: Second Declension_intro",
+        "object_id": "381",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 946
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:43:23.027Z",
+        "object_repr": "Nouns: Second Declension (Masculine and Feminine)",
+        "object_id": "380",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 947
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:44:36.089Z",
+        "object_repr": "Nouns: Second Declension (Masculine and Feminine)",
+        "object_id": "380",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 948
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:45:51.225Z",
+        "object_repr": "Adjectives: Second Declension (Two-ending)",
+        "object_id": "388",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 949
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-04T14:48:51.726Z",
+        "object_repr": "Nouns: Second Declension (Masculine and Feminine)",
+        "object_id": "18",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 950
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:49:14.808Z",
+        "object_repr": "Nouns Second Declension ",
+        "object_id": "18",
+        "change_message": "Changed name.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 951
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:49:45.187Z",
+        "object_repr": "Second Declension Nouns - Masculine (\u03bf\u03c2-stem)",
+        "object_id": "21",
+        "change_message": "Changed category.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 952
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:53:58.508Z",
+        "object_repr": "Nouns: Second Declension (Masculine and Feminine)",
+        "object_id": "380",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 953
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T14:53:59.638Z",
+        "object_repr": "Nouns: Second Declension (Masculine and Feminine)",
+        "object_id": "380",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 954
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:08:07.010Z",
+        "object_repr": "Nouns: Second Declension (Neuter)",
+        "object_id": "378",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 955
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:11:05.002Z",
+        "object_repr": "Diacritics: Accents (First Rule)",
+        "object_id": "243",
+        "change_message": "Changed title, grammar_ref and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 956
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:13:11.379Z",
+        "object_repr": "Foundational",
+        "object_id": "4",
+        "change_message": "Changed graphic.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 957
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:14:17.625Z",
+        "object_repr": "Diacritics: Accents (First Rule)",
+        "object_id": "243",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 958
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:14:55.215Z",
+        "object_repr": "Diacritics:  Accents (Second Rule)",
+        "object_id": "235",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 959
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:15:11.130Z",
+        "object_repr": "Diacritics: Grave Accent (Third Rule)",
+        "object_id": "234",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 960
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:25:20.013Z",
+        "object_repr": "Diacritics: Accents",
+        "object_id": "243",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 961
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:26:15.328Z",
+        "object_repr": "Diacritics: Accents",
+        "object_id": "243",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 962
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:27:31.131Z",
+        "object_repr": "Diacritics: Rough Breathing",
+        "object_id": "242",
+        "change_message": "Changed grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 963
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:28:20.520Z",
+        "object_repr": "Diacritics: Smooth Breathing",
+        "object_id": "240",
+        "change_message": "Changed grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 964
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:28:53.504Z",
+        "object_repr": "Diacritics: Rough Breathing",
+        "object_id": "242",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 965
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:29:10.294Z",
+        "object_repr": "Diacritics: Smooth Breathing",
+        "object_id": "240",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 966
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:29:35.046Z",
+        "object_repr": "Diacritics: Rough Breathing",
+        "object_id": "242",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 967
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:29:42.241Z",
+        "object_repr": "Diacritics: Smooth Breathing",
+        "object_id": "240",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 968
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:30:05.631Z",
+        "object_repr": "Diacritics: Accents",
+        "object_id": "243",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 969
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:31:37.314Z",
+        "object_repr": "Diacritics: Accents (Fourth Rule)",
+        "object_id": "237",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 970
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:32:23.898Z",
+        "object_repr": "Diacritics: Accents",
+        "object_id": "243",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 971
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:32:37.075Z",
+        "object_repr": "Diacritics: Accents (Third Rule)",
+        "object_id": "234",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 972
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:33:19.098Z",
+        "object_repr": "Diacritics: Iota Subscript",
+        "object_id": "233",
+        "change_message": "Changed grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 973
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:34:41.355Z",
+        "object_repr": "Diacritics: Long and Short Vowels",
+        "object_id": "238",
+        "change_message": "Changed grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 974
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:35:17.971Z",
+        "object_repr": "Diacritics: Long and Short Vowels",
+        "object_id": "238",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 975
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:37:41.867Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Gender)",
+        "object_id": "320",
+        "change_message": "Changed grammar_ref and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 976
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:40:15.144Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Case)",
+        "object_id": "314",
+        "change_message": "Changed grammar_ref and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 977
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:40:49.737Z",
+        "object_repr": "Nouns: Characteristics of Nouns (Number)",
+        "object_id": "317",
+        "change_message": "Changed grammar_ref and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 978
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:44:20.867Z",
+        "object_repr": "Nouns: Introduction to Cases",
+        "object_id": "434",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 979
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:45:57.299Z",
+        "object_repr": "Nouns: Nominative Case_intro",
+        "object_id": "430",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 980
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:47:20.436Z",
+        "object_repr": "Nouns: Nominative Case",
+        "object_id": "430",
+        "change_message": "Changed title and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 981
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:47:39.805Z",
+        "object_repr": "Nouns: Nominative Case",
+        "object_id": "430",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 982
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:48:40.875Z",
+        "object_repr": "Nouns: Nominative Case",
+        "object_id": "430",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 983
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:49:34.157Z",
+        "object_repr": "Nouns: Nominative Case_originalexample",
+        "object_id": "425",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 984
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:49:55.447Z",
+        "object_repr": "Nouns: Nominative Case_Subject",
+        "object_id": "445",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 985
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:50:26.567Z",
+        "object_repr": "Nouns: Nominative Case_Complement",
+        "object_id": "437",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 986
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:54:43.422Z",
+        "object_repr": "Nouns: Nominative Case_Subject",
+        "object_id": "445",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 987
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:55:31.618Z",
+        "object_repr": "Nouns: Nominative Case_Subject",
+        "object_id": "445",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 988
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:55:39.203Z",
+        "object_repr": "Nouns: Nominative Case (Subject)",
+        "object_id": "445",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 989
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:55:56.999Z",
+        "object_repr": "Nouns: Nominative Case (Complement)",
+        "object_id": "437",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 990
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:56:33.426Z",
+        "object_repr": "Nouns: Nominative Case",
+        "object_id": "430",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 991
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:57:34.513Z",
+        "object_repr": "Nouns: Nominative Case (Original Example)",
+        "object_id": "425",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 992
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:58:06.039Z",
+        "object_repr": "Nouns: Nominative Case (Original Example)",
+        "object_id": "425",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 993
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T15:58:25.941Z",
+        "object_repr": "Nouns: Nominative Case (Original Example)",
+        "object_id": "425",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 994
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T16:00:44.598Z",
+        "object_repr": "Nouns: Genitive Case_intro",
+        "object_id": "436",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 995
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T16:01:57.054Z",
+        "object_repr": "Nouns: Genitive Case",
+        "object_id": "436",
+        "change_message": "Changed title and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 996
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T16:02:33.197Z",
+        "object_repr": "Nouns: Genitive Case (Comparative)",
+        "object_id": "428",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 997
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T16:03:31.958Z",
+        "object_repr": "Nouns: Genitive Case (Original Example)",
+        "object_id": "435",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 998
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T16:04:28.946Z",
+        "object_repr": "Nouns: Genitive Case (Partitive)",
+        "object_id": "429",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 999
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T16:04:52.392Z",
+        "object_repr": "Nouns: Genitive Case (Possession)",
+        "object_id": "441",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1000
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T16:05:32.683Z",
+        "object_repr": "Nouns: Genitive Case (Partitive)",
+        "object_id": "429",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1001
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T16:05:39.835Z",
+        "object_repr": "Nouns: Genitive Case (Possession)",
+        "object_id": "441",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1002
 }
 ]
