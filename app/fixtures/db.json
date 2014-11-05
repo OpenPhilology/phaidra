@@ -209,6 +209,22 @@
 },
 {
     "fields": {
+        "graphic": "icon_grk_monster.png",
+        "name": "Present Tense Active"
+    },
+    "model": "app.category",
+    "pk": 19
+},
+{
+    "fields": {
+        "graphic": "alphabet/alpha.svg",
+        "name": "Alphabet"
+    },
+    "model": "app.category",
+    "pk": 20
+},
+{
+    "fields": {
         "username": "monica",
         "first_name": "Monica",
         "last_name": "Lent",
@@ -257,7 +273,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-11-04T14:50:11.455Z",
+        "last_login": "2014-11-05T11:32:32.144Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$mjylIxJjSuP8$hXlaTs4LJGg8TDaOgueySvUCzigoGyiWFEMPIG/0dso=",
@@ -1357,6 +1373,18 @@
 },
 {
     "fields": {
+        "category": 20,
+        "tasks": null,
+        "title": "Alphabet",
+        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1",
+        "query": "",
+        "ref": "s1"
+    },
+    "model": "app.grammar",
+    "pk": 64
+},
+{
+    "fields": {
         "target_lang": 5,
         "title": "Diacritics: Iota Subscript",
         "content": "## Iota Subscript\r\n\r\nWhen the long vowels \u03b1,\u03b7,\u03c9 meet a short \u03b9, the \u03b9 is written under (subscript!)\r\nthese letters instead of being written next to them. A **iota subscript** is\r\nnever pronounced.\r\n\r\nSo,\r\n\r\n  * \u03b1 \\+ \u03b9 = \u1fb3\r\n  * \u03b7 \\+ \u03b9 = \u1fc3\r\n  * \u03c9 \\+ \u03b9 = \u1ff3\r\n\r\n#### For example:\r\n\r\n* * *\r\n\r\n### \u03c7\u03c9\u03c1\u1fb3, _land_\r\n\r\n\r\n\r\n",
@@ -1499,8 +1527,8 @@
     "fields": {
         "target_lang": 5,
         "title": "Diacritics: Dipthongs",
-        "content": "##### Dipthongs\r\n\r\n\u03b1\u03b9 |  Listen  \r\n---|---  \r\n\u03b5\u03b9 |  Listen  \r\n\u03bf\u03b9 |  Listen  \r\n\u03c5\u03b9 |  Listen  \r\n\u03b1\u03c5 |  Listen  \r\n\u03b5\u03c5 |  Listen  \r\n\u03b7\u03c5 |  Listen  \r\n\u03bf\u03c5 |  Listen  \r\n  \r\n## Dipthongs\r\n\r\n**Dipthongs are vowels in pairs of two that produce one long sound**. Words that begin with a dipthong will have either a rough or smooth breathing (depending on the word). Whichever breathing it is, it is placed on the second vowel of the dipthong. For example: \u03b1\u1f30\u03c4\u03af\u03b1, _cause_. \r\n\r\nAll dipthongs are counted as **long**.\r\n\r\n",
-        "grammar_ref": null,
+        "content": "## Dipthongs\r\n\r\n**Dipthongs are vowels in pairs of two that produce one long sound**. Words that begin with a dipthong will have either a rough or smooth breathing (depending on the word). Whichever breathing it is, it is placed on the second vowel of the dipthong. For example: \u03b1\u1f30\u03c4\u03af\u03b1, _cause_. \r\n\r\nAll dipthongs are counted as **long**.\r\n\r\n***\r\n\r\n##### Dipthongs\r\n\u03b1\u03b9\r\n\u03b5\u03b9 \r\n\u03bf\u03b9\r\n\u03c5\u03b9  \r\n\u03b1\u03c5  \r\n\u03b5\u03c5 \r\n\u03b7\u03c5 \r\n\u03bf\u03c5 \r\n\r\n",
+        "grammar_ref": 3,
         "related_content": [],
         "source_lang": 4
     },
@@ -1583,7 +1611,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Mu",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Mu\r\n\r\n![](/static/images/alphabet/mu.svg)\r\n\r\n## \u039c \u03bc\r\n\r\n**Say it like** the \"m\" in _m_inotaur.   **IPA** /m/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nMu makes the same sound in \u03bc\u1fe6\u03b8\u03bf\u03c2 (m\u00fbthos), meaning \"report\", \"tale\", or\r\n\"story\".  \r\nThink of _myth_, _mythology_.\r\n\r\n",
+        "content": "# Mu\r\n\r\n![](/static/images/alphabet/mu.svg)\r\n\r\n## \u039c \u03bc\r\n\r\n**Say it like** the \"m\" in _m_inotaur.   **IPA** /m/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nMu makes the same sound in \u03bc\u1fe6\u03b8\u03bf\u03c2 (m\u00fbthos), meaning \"report\", \"tale\", or\r\n\"story\".  \r\nThink of _myth_, _mythology_.\r\n\r\n***\r\n\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1595,7 +1623,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Alpha",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Alpha\r\n\r\n![](/static/images/alphabet/alpha.svg)\r\n\r\n## \u0391 \u03b1\r\n\r\n**Say it like** the \"a\" in _a_rachnid.   **IPA** /a/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nAlpha makes the same sound in \u1f00\u03c1\u03ac\u03c7\u03bd\u03b7 (arakhn\u0113), meaning \"spider.\"  \r\nThink of _arachnid_, _arachnophobia_.\r\n\r\n",
+        "content": "# Alpha\r\n\r\n![](/static/images/alphabet/alpha.svg)\r\n\r\n## \u0391 \u03b1\r\n\r\n**Say it like** the \"a\" in _a_rachnid.   **IPA** /a/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nAlpha makes the same sound in \u1f00\u03c1\u03ac\u03c7\u03bd\u03b7 (arakhn\u0113), meaning \"spider.\"  \r\nThink of _arachnid_, _arachnophobia_.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1607,7 +1635,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Sigma",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Sigma\r\n\r\n![](/static/images/alphabet/sigma.svg)\r\n\r\n## \u03a3 \u03c3/\u03c2\r\n\r\n**Say it like** the \"s\" in _s_alamander.   **IPA** /s/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nSigma makes the same sound in \u03c3\u03b1\u1fe6\u03c1\u03bf\u03c2 (sauros), meaning \"lizard.\"  \r\nThink of _dinosaur_, _stegosaurus_, _tyrannosaurus_.\r\n\r\n",
+        "content": "# Sigma\r\n\r\n![](/static/images/alphabet/sigma.svg)\r\n\r\n## \u03a3 \u03c3/\u03c2\r\n\r\n**Say it like** the \"s\" in _s_alamander.   **IPA** /s/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nSigma makes the same sound in \u03c3\u03b1\u1fe6\u03c1\u03bf\u03c2 (sauros), meaning \"lizard.\"  \r\nThink of _dinosaur_, _stegosaurus_, _tyrannosaurus_.\r\n\r\n***\r\n\r\n* \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1619,7 +1647,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Eta",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Eta\r\n\r\n![](/static/images/alphabet/eta.svg)\r\n\r\n## \u0397 \u03b7\r\n\r\n**Say it like** the \"e\" in _e_cho   **IPA** /\u025b\u02d0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nEta is pronounced the same in \u1f26\u03c7\u03bf\u03c2 (\u00e9chos), meaning \"sound\".  \r\nThink of _echo_, _echolocation_, and _Echo_ (the forest nymph punished by Hera\r\nto repeat only what other people said).\r\n\r\n",
+        "content": "# Eta\r\n\r\n![](/static/images/alphabet/eta.svg)\r\n\r\n## \u0397 \u03b7\r\n\r\n**Say it like** the \"e\" in _e_cho   **IPA** /\u025b\u02d0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nEta is pronounced the same in \u1f26\u03c7\u03bf\u03c2 (\u00e9chos), meaning \"sound\".  \r\nThink of _echo_, _echolocation_, and _Echo_ (the forest nymph punished by Hera\r\nto repeat only what other people said).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1631,7 +1659,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Iota",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Iota\r\n\r\n![](/static/images/alphabet/iota.svg)\r\n\r\n## \u0399 \u03b9\r\n\r\n**Say it like** the \"ea\" in _ea_r  \r\n**IPA** /i/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nIota makes the same sound in \u1f30\u03c7\u03b8\u03cd\u03c2 (ikhth\u00fas), meaning \"fish.\"  \r\nThink of _ichthyology_, the study of fish.\r\n\r\n",
+        "content": "# Iota\r\n\r\n![](/static/images/alphabet/iota.svg)\r\n\r\n## \u0399 \u03b9\r\n\r\n**Say it like** the \"ea\" in _ea_r  \r\n**IPA** /i/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nIota makes the same sound in \u1f30\u03c7\u03b8\u03cd\u03c2 (ikhth\u00fas), meaning \"fish.\"  \r\nThink of _ichthyology_, the study of fish.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1643,7 +1671,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Chi",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Chi\r\n\r\n![](/static/images/alphabet/chi.svg)\r\n\r\n## \u03a7 \u03c7\r\n\r\n**Say it like** the \"ch\" in _ch_oreography.   **IPA** /kh/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nChi makes the same sound in \u03c7\u03bf\u03c1\u03b5\u03af\u03b1 (khoreia) and \u03c7\u03bf\u03c1\u03cc\u03c2 (khoros), both meaning\r\n\"dance\"  \r\nThink of _choir_, _chorus_, _choreography_.\r\n\r\n",
+        "content": "# Chi\r\n\r\n![](/static/images/alphabet/chi.svg)\r\n\r\n## \u03a7 \u03c7\r\n\r\n**Say it like** the \"ch\" in _ch_oreography.   **IPA** /kh/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nChi makes the same sound in \u03c7\u03bf\u03c1\u03b5\u03af\u03b1 (khoreia) and \u03c7\u03bf\u03c1\u03cc\u03c2 (khoros), both meaning\r\n\"dance\"  \r\nThink of _choir_, _chorus_, _choreography_.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1655,7 +1683,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Delta",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Delta\r\n\r\n![](/static/images/alphabet/delta.svg)\r\n\r\n## \u0394 \u03b4\r\n\r\n**Say it like** the \"d\" in _d_ata.   **IPA** /d/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nDelta makes the same sound in \u03b4\u03ad\u03bd\u03b4\u03c1\u03bf\u03bd (d\u00e9ndron), meaning \"tree\".  \r\nThink of _dendrochronoloy_ (study of tree rings) or _Rhododendron_ (flower\r\nwhose name means 'rose tree').\r\n\r\n",
+        "content": "# Delta\r\n\r\n![](/static/images/alphabet/delta.svg)\r\n\r\n## \u0394 \u03b4\r\n\r\n**Say it like** the \"d\" in _d_ata.   **IPA** /d/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nDelta makes the same sound in \u03b4\u03ad\u03bd\u03b4\u03c1\u03bf\u03bd (d\u00e9ndron), meaning \"tree\".  \r\nThink of _dendrochronoloy_ (study of tree rings) or _Rhododendron_ (flower\r\nwhose name means 'rose tree').\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1667,7 +1695,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Kappa",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Kappa\r\n\r\n![](/static/images/alphabet/kappa.svg)\r\n\r\n## \u039a \u03ba\r\n\r\n**Say it like** the \"k\" in bi_k_e.   **IPA** /k/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nKappa makes the same sound in \u03ba\u03cd\u03ba\u03bb\u03bf\u03c2 (k\u00faklos), meaning \"circle, ring.\"  \r\nThink of _cyclone_, _bicycle_, _encyclopedia_ (literally, circle + education).\r\n\r\n",
+        "content": "# Kappa\r\n\r\n![](/static/images/alphabet/kappa.svg)\r\n\r\n## \u039a \u03ba\r\n\r\n**Say it like** the \"k\" in bi_k_e.   **IPA** /k/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nKappa makes the same sound in \u03ba\u03cd\u03ba\u03bb\u03bf\u03c2 (k\u00faklos), meaning \"circle, ring.\"  \r\nThink of _cyclone_, _bicycle_, _encyclopedia_ (literally, circle + education).\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1679,7 +1707,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Nu",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Nu\r\n\r\n![](/static/images/alphabet/nu.svg)\r\n\r\n## \u039d \u03bd\r\n\r\n**Say it like** the \"n\" in _n_autical.   **IPA** /n/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nNu makes the same sound in \u03bd\u03b1\u1fe6\u03c2 (na\u00fbs), meaning \"ship\" and \u03bd\u03b1\u03c5\u03c4\u03b9\u03ba\u03cc\u03c2\r\n(nautik\u00f3s), meaning \"sailor\" or \"seafaring\".  \r\nThink of _naval_, _astronaut_.\r\n\r\n",
+        "content": " # Nu\r\n\r\n![](/static/images/alphabet/nu.svg)\r\n\r\n## \u039d \u03bd\r\n\r\n**Say it like** the \"n\" in _n_autical.   **IPA** /n/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nNu makes the same sound in \u03bd\u03b1\u1fe6\u03c2 (na\u00fbs), meaning \"ship\" and \u03bd\u03b1\u03c5\u03c4\u03b9\u03ba\u03cc\u03c2\r\n(nautik\u00f3s), meaning \"sailor\" or \"seafaring\".  \r\nThink of _naval_, _astronaut_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1691,7 +1719,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Zeta",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Zeta\r\n\r\n![](/static/images/alphabet/zeta.svg)\r\n\r\n## \u0396 \u03b6\r\n\r\n**Say it like** the \"s\" in wi_s_e &nsbp; **IPA** /z/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nFor example, \u03b6\u1ff7\u03bf\u03bd (z\u014don), meaning \"animal\".  \r\nThink of _zoo_, _zoology_, _protozoa_ (literally, first + animal).\r\n\r\n",
+        "content": "# Zeta\r\n\r\n![](/static/images/alphabet/zeta.svg)\r\n\r\n## \u0396 \u03b6\r\n\r\n**Say it like** the \"s\" in wi_s_e &nsbp; **IPA** /z/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nFor example, \u03b6\u1ff7\u03bf\u03bd (z\u014don), meaning \"animal\".  \r\nThink of _zoo_, _zoology_, _protozoa_ (literally, first + animal).\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1703,7 +1731,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Beta",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Beta\r\n\r\n![](/static/images/alphabet/beta.svg)\r\n\r\n## \u0392 \u03b2\r\n\r\n**Say it like** the \"b\" in _b_ook.   **IPA** /b/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nBeta makes the same sound in \u03b2\u03af\u03b2\u03bb\u03bf\u03c2 (b\u00edblos), meaning \"book.\"  \r\nThink of _bibliography_, _Bible_.\r\n\r\n",
+        "content": "# Beta\r\n\r\n![](/static/images/alphabet/beta.svg)\r\n\r\n## \u0392 \u03b2\r\n\r\n**Say it like** the \"b\" in _b_ook.   **IPA** /b/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nBeta makes the same sound in \u03b2\u03af\u03b2\u03bb\u03bf\u03c2 (b\u00edblos), meaning \"book.\"  \r\nThink of _bibliography_, _Bible_.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1715,7 +1743,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Xi",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Xi\r\n\r\n![](/static/images/alphabet/xi.svg)\r\n\r\n## \u039e \u03be\r\n\r\n**Say it like** the \"ks\" in ca_kes_.   **IPA** /ks/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nXi makes the same sound in \u03be\u03ad\u03bd\u03bf\u03c2 (ks\u00e9nos), meaning \"guest\" or \"stranger\".  \r\nThink of _xenophobia_ (literally, fear of strangers or foreigners), _xenon_\r\n(chemical element).\r\n\r\n",
+        "content": "# Xi\r\n\r\n![](/static/images/alphabet/xi.svg)\r\n\r\n## \u039e \u03be\r\n\r\n**Say it like** the \"ks\" in ca_kes_.   **IPA** /ks/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nXi makes the same sound in \u03be\u03ad\u03bd\u03bf\u03c2 (ks\u00e9nos), meaning \"guest\" or \"stranger\".  \r\nThink of _xenophobia_ (literally, fear of strangers or foreigners), _xenon_\r\n(chemical element).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1727,7 +1755,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Omega",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Omega\r\n\r\n![](/static/images/alphabet/omega.svg)\r\n\r\n## \u03a9 \u03c9\r\n\r\n**Say it like** the \"o\" in h_o_roscope.   **IPA** /\u0254\u02d0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nOmega makes the same sound in \u1f65\u03c1\u03b1 (h\u1e53ra), meaning \"season, hour.\"  \r\nThink of _horology_ (the art or science of measuring time), _horoscope_.\r\n\r\n",
+        "content": " # Omega\r\n\r\n![](/static/images/alphabet/omega.svg)\r\n\r\n## \u03a9 \u03c9\r\n\r\n**Say it like** the \"o\" in h_o_roscope.   **IPA** /\u0254\u02d0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nOmega makes the same sound in \u1f65\u03c1\u03b1 (h\u1e53ra), meaning \"season, hour.\"  \r\nThink of _horology_ (the art or science of measuring time), _horoscope_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1739,7 +1767,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Lambda",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Lambda\r\n\r\n![](/static/images/alphabet/lambda.svg)\r\n\r\n## \u039b \u03bb\r\n\r\n**Say it like** the \"l\" in _l_ithography.   **IPA** /l/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nLambda makes the same sound in \u03bb\u03af\u03b8\u03bf\u03c2 (l\u00edthos), meaning \"stone\".  \r\nThink of _neolithic_ (literally, new + stones), _lithology_ (study of rock\r\nformation).\r\n\r\n",
+        "content": "# Lambda\r\n\r\n![](/static/images/alphabet/lambda.svg)\r\n\r\n## \u039b \u03bb\r\n\r\n**Say it like** the \"l\" in _l_ithography.   **IPA** /l/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nLambda makes the same sound in \u03bb\u03af\u03b8\u03bf\u03c2 (l\u00edthos), meaning \"stone\".  \r\nThink of _neolithic_ (literally, new + stones), _lithology_ (study of rock\r\nformation).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1751,7 +1779,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Psi",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Psi\r\n\r\n![](/static/images/alphabet/psi.svg)\r\n\r\n## \u03a8 \u03c8\r\n\r\n**Say it like** the \"ps\" in _ps_yche.   **IPA** /ps/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPsi makes the same sound in \u03c8\u03c5\u03c7\u03ae (psukh\u1e17), meaning \"sprit, mind, soul.\"  \r\nThink of _psychology_, _psychedelic_, _psychosis_, _psychosomatic_.\r\n\r\n",
+        "content": "  # Psi\r\n\r\n![](/static/images/alphabet/psi.svg)\r\n\r\n## \u03a8 \u03c8\r\n\r\n**Say it like** the \"ps\" in _ps_yche.   **IPA** /ps/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPsi makes the same sound in \u03c8\u03c5\u03c7\u03ae (psukh\u1e17), meaning \"sprit, mind, soul.\"  \r\nThink of _psychology_, _psychedelic_, _psychosis_, _psychosomatic_.\r\n\r\n***\r\n\r\n* \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1763,7 +1791,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Rho",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Rho\r\n\r\n![](/static/images/alphabet/rho.svg)\r\n\r\n## \u03a1 \u03c1\r\n\r\n**Say it like** the \"r\" in _r_ose.   **IPA** /r/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nRho makes the same sound in \u1fe5\u03cc\u03b4\u03bf\u03bd (rhodon), meaning \"rose, red\"  \r\nThink of _rhododendron_, a genus of plant which often bears red flowers.\r\n\r\n",
+        "content": "# Rho\r\n\r\n![](/static/images/alphabet/rho.svg)\r\n\r\n## \u03a1 \u03c1\r\n\r\n**Say it like** the \"r\" in _r_ose.   **IPA** /r/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nRho makes the same sound in \u1fe5\u03cc\u03b4\u03bf\u03bd (rhodon), meaning \"rose, red\"  \r\nThink of _rhododendron_, a genus of plant which often bears red flowers.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1786,9 +1814,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Punctuation: Intro",
+        "title": "Diacritics: Punctuation",
         "content": "## Greek Punctuation\r\n\r\nIn Greek printed texts, the comma (**,**) and the period (**.**) have the same\r\nuse as in English.\r\n\r\nThe semicolon (**;**) is used in Greek as a question mark (?).\r\n\r\nThe raised period (**\u00b7**) is equivalent to both the English semicolon (;) and\r\ncolon (:).\r\n\r\n, . ; \u00b7\r\n\r\nIn Greek\r\n\r\n, . ? ;/:\r\n\r\nIn English\r\n\r\n",
-        "grammar_ref": null,
+        "grammar_ref": 12,
         "related_content": [],
         "source_lang": 4
     },
@@ -1799,7 +1827,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Gamma",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Gamma\r\n\r\n![](/static/images/alphabet/gamma.svg)\r\n\r\n## \u0393 \u03b3\r\n\r\n**Say it like** the \"g\" in _g_rammar.   **IPA** /g/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nGamma makes the same sound in \u03b3\u03c1\u03ac\u03c6\u03c9 (gr\u00e1ph\u014d), meaning \"I write.\"  \r\nThink of _graphic_, _graphite_.\r\n\r\n",
+        "content": " # Gamma\r\n\r\n![](/static/images/alphabet/gamma.svg)\r\n\r\n## \u0393 \u03b3\r\n\r\n**Say it like** the \"g\" in _g_rammar.   **IPA** /g/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nGamma makes the same sound in \u03b3\u03c1\u03ac\u03c6\u03c9 (gr\u00e1ph\u014d), meaning \"I write.\"  \r\nThink of _graphic_, _graphite_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1823,7 +1851,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Epsilon",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Epsilon\r\n\r\n![](/static/images/alphabet/epsilon.svg)\r\n\r\n## \u0395 \u03b5\r\n\r\n**Say it like** the \"e\" in _e_nergy   **IPA** /e/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nEpsilon makes the same sound in \u1f14\u03c1\u03b3\u03bf\u03bd (\u00e9rgon), meaning \"work\".  \r\nThink of _energy_.\r\n\r\n",
+        "content": "# Epsilon\r\n\r\n![](/static/images/alphabet/epsilon.svg)\r\n\r\n## \u0395 \u03b5\r\n\r\n**Say it like** the \"e\" in _e_nergy   **IPA** /e/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nEpsilon makes the same sound in \u1f14\u03c1\u03b3\u03bf\u03bd (\u00e9rgon), meaning \"work\".  \r\nThink of _energy_.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1834,10 +1862,35 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Alphabet: Table",
+        "title": "Alphabet",
         "content": "## The Greek Alphabet\r\n\r\nThe Greek alphabet comprises **24 letters** (7 vowels and 17 consonants). The\r\nalphabet you will learn is the Ionic alphabet first adopted in Athens at the\r\nend of the 5th century BC.\r\n\r\n### The Greek Alphabet\r\n\r\nUppercase | Lowercase | Name | Pronunciation  \r\n---|---|---|---  \r\n\u0391 | \u03b1 | alpha | a  \r\n\u0392 | \u03b2 | beta | b  \r\n\u0393 | \u03b3 | gamma | g (like \"glue\")  \r\n\u0394 | \u03b4 | delta | d  \r\n\u0395 | \u03b5 | epsilon | e (like \"get\")  \r\nZ | \u03b6 | zdeta | zd  \r\n\u0397 | \u03b7 | eta | e (like \"hair\")  \r\n\u0398 | \u03b8 | theta | th  \r\n\u0399 | \u03b9 | iota | i (like \"east\")  \r\n\u039a | \u03ba | kappa | k  \r\n\u039b | \u03bb | lambda | l  \r\n\u039c | \u03bc | m\u00fc | m  \r\n\u039d | \u03bd | n\u00fc | n  \r\n\u039e | \u03be | ksi | x  \r\n\u039f | \u03bf | omicron | o  \r\n\u03a0 | \u03c0 | pi | p  \r\n\u03a1 | \u03c1 | rho | r  \r\n\u03a3 | \u03c3 or \u03c2* | sigma | s  \r\n\u03a4 | \u03c4 | tau | t  \r\n\u03a5 | \u03c5 | \u00fcpsilon | \u00fc  \r\n\u03a6 | \u03c6 | fi | f  \r\n\u03a7 | \u03c7 | khi | kh  \r\n\u03a8 | \u03c8 | psi | ps  \r\n\u03a9 | \u03c9 | omega | o  \r\n  \r\n* \u03c3 is used when the letter is in the middle of the word. \u03c2 is used when the letter is at the end of the word. \r\n\r\n",
-        "grammar_ref": null,
-        "related_content": [],
+        "grammar_ref": 64,
+        "related_content": [
+            256,
+            255,
+            258,
+            264,
+            278,
+            265,
+            266,
+            257,
+            251,
+            261,
+            259,
+            263,
+            262,
+            260,
+            274,
+            277,
+            273,
+            275,
+            276,
+            253,
+            270,
+            269,
+            254,
+            271
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -1847,7 +1900,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Pi",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Pi\r\n\r\n![](/static/images/alphabet/pi.svg)\r\n\r\n## \u03a0 \u03c0\r\n\r\n**Say it like** the \"p\" in helico_p_ter.   **IPA** /p/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPi makes the same sound in \u03c0\u03c4\u03b5\u03c1\u03cc\u03bd (pteron), meaning \"wing.\"  \r\nThink of _pterodactyl_, _helicopter_, _ornithopter_.\r\n\r\n",
+        "content": "# Pi\r\n\r\n![](/static/images/alphabet/pi.svg)\r\n\r\n## \u03a0 \u03c0\r\n\r\n**Say it like** the \"p\" in helico_p_ter.   **IPA** /p/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPi makes the same sound in \u03c0\u03c4\u03b5\u03c1\u03cc\u03bd (pteron), meaning \"wing.\"  \r\nThink of _pterodactyl_, _helicopter_, _ornithopter_.\r\n\r\n***\r\n\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1859,7 +1912,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Upsilon",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Upsilon\r\n\r\n![](/static/images/alphabet/upsilon.svg)\r\n\r\n## \u03a5 \u03c5\r\n\r\n**Say it like** the \"\u00fc\" in _\u00fc_ber.   **IPA** /y/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nAn upsilon at the beginning of a word is often pronounced \"h\u00fc\". For example,\r\n\u1f55\u03b4\u03c9\u03c1 (h\u00fad\u014dr), meaning \"water\"  \r\nThink of _hydrology_, _hydrolysis_ (literally, loosening water).\r\n\r\n",
+        "content": "# Upsilon\r\n\r\n![](/static/images/alphabet/upsilon.svg)\r\n\r\n## \u03a5 \u03c5\r\n\r\n**Say it like** the \"\u00fc\" in _\u00fc_ber.   **IPA** /y/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nAn upsilon at the beginning of a word is often pronounced \"h\u00fc\". For example,\r\n\u1f55\u03b4\u03c9\u03c1 (h\u00fad\u014dr), meaning \"water\"  \r\nThink of _hydrology_, _hydrolysis_ (literally, loosening water).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1871,7 +1924,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Tau",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Tau\r\n\r\n  \r\n  \r\n![](/static/images/alphabet/tau.svg)\r\n\r\n## \u03a4 \u03c4\r\n\r\n**Say it like** the \"t\" in _t_oxic.   **IPA** /t/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nTau makes the same sound in \u03c4\u03cc\u03be\u03bf\u03bd (t\u00f3kson), meaning \"archer's bow, rainbow,\r\narc\", and \u03c4\u03bf\u03be\u03b9\u03ba\u03cc\u03bd (toxikon) meaning \"poison\".  \r\nThink of _toxicology_, _detox_, _intoxication_.\r\n\r\n",
+        "content": " # Tau\r\n\r\n  \r\n  \r\n![](/static/images/alphabet/tau.svg)\r\n\r\n## \u03a4 \u03c4\r\n\r\n**Say it like** the \"t\" in _t_oxic.   **IPA** /t/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nTau makes the same sound in \u03c4\u03cc\u03be\u03bf\u03bd (t\u00f3kson), meaning \"archer's bow, rainbow,\r\narc\", and \u03c4\u03bf\u03be\u03b9\u03ba\u03cc\u03bd (toxikon) meaning \"poison\".  \r\nThink of _toxicology_, _detox_, _intoxication_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1883,7 +1936,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Theta",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Theta\r\n\r\n![](/static/images/alphabet/theta.svg)\r\n\r\n## \u0398 \u03b8\r\n\r\n**Say it like** the \"th\" in _th_eology.   **IPA** /t\u02b0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nTheta makes the same sound in \u03b8\u03b5\u03cc\u03c2 (the\u00f3s), meaning \"a god.\"  \r\nThink of _theism_, _atheism_.\r\n\r\n",
+        "content": "# Theta\r\n\r\n![](/static/images/alphabet/theta.svg)\r\n\r\n## \u0398 \u03b8\r\n\r\n**Say it like** the \"th\" in _th_eology.   **IPA** /t\u02b0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nTheta makes the same sound in \u03b8\u03b5\u03cc\u03c2 (the\u00f3s), meaning \"a god.\"  \r\nThink of _theism_, _atheism_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1895,7 +1948,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Omicron",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Omicron\r\n\r\n![](/static/images/alphabet/omicron.svg)\r\n\r\n## \u039f \u03bf\r\n\r\n**Say it like** the \"o\" in _o_ptical.   **IPA** /o/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nOmicron makes the same sound in \u1f40\u03c0\u03c4\u03b9\u03ba\u03cc\u03c2 (optik\u00f3s), meaning \"relating to sight\r\nor vision\" and in \u1f40\u03c6\u03b8\u03b1\u03bb\u03bc\u03cc\u03c2, meaning \"eye\".  \r\nThink of _fiberoptics_, _optometry_, _ophthalmology_ (medicine dealing with\r\nanatomy, physiology, and diseases of the eye).\r\n\r\n",
+        "content": "# Omicron\r\n\r\n![](/static/images/alphabet/omicron.svg)\r\n\r\n## \u039f \u03bf\r\n\r\n**Say it like** the \"o\" in _o_ptical.   **IPA** /o/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nOmicron makes the same sound in \u1f40\u03c0\u03c4\u03b9\u03ba\u03cc\u03c2 (optik\u00f3s), meaning \"relating to sight\r\nor vision\" and in \u1f40\u03c6\u03b8\u03b1\u03bb\u03bc\u03cc\u03c2, meaning \"eye\".  \r\nThink of _fiberoptics_, _optometry_, _ophthalmology_ (medicine dealing with\r\nanatomy, physiology, and diseases of the eye).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1907,7 +1960,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Phi",
-        "content": "  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n# Phi\r\n\r\n![](/static/images/alphabet/phi.svg)\r\n\r\n## \u03a6 \u03c6\r\n\r\n**Say it like** the \"ph\" in _ph_ilosophy.   **IPA** /p\u02b0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPhi sounds the same in \u03c6\u03af\u03bb\u03bf\u03c2 (ph\u00edlos), meaning \"dear, beloved.\"  \r\nThink of _philanthropy_ (literally, love for men), _Philadelphia_ (the city of\r\nbrotherly love).\r\n\r\n",
+        "content": "# Phi\r\n\r\n![](/static/images/alphabet/phi.svg)\r\n\r\n## \u03a6 \u03c6\r\n\r\n**Say it like** the \"ph\" in _ph_ilosophy.   **IPA** /p\u02b0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPhi sounds the same in \u03c6\u03af\u03bb\u03bf\u03c2 (ph\u00edlos), meaning \"dear, beloved.\"  \r\nThink of _philanthropy_ (literally, love for men), _Philadelphia_ (the city of\r\nbrotherly love).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -2135,7 +2188,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Third Declension_Conson_Neuter",
+        "title": "Nouns: Third Declension (Consonant Stem - Neuter Nouns)",
         "content": "#### \u03c4\u03cc \u1f14\u03c1\u03b3\u03bf\u03bd,\u03bf\u03c5: The body, of the body\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 | \u03c4\u03ac \u03c3\u03ce\u03bc\u03b1\u03c4**\u03b1**  \r\nGen. | \u03c4\u03bf\u1fe6 \u03c3\u1ff6\u03bc\u03b1\u03c4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u03c3\u03c9\u03bc\u03ac\u03c4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1ff7 \u03c3\u03ce\u03bc\u03b1\u03c4**\u03b9** | \u03c4\u03bf\u1fd6\u03c2 \u03c3\u03ce\u03bc\u03b1**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 | \u03c4\u03ac \u03c3\u1ff6\u03bc\u03b1**\u03c4\u03b1**  \r\nVoc. | \u1ff7 \u03c3\u1ff6\u03bc\u03b1 | \u1ff7 \u03c3\u1ff6\u03bc\u03b1**\u03c4\u03b1**  \r\n  \r\n## Third declension continued...\r\n\r\nAnd now here is an example of a neuter third declension noun: \u03c4\u03cc \u03c3\u1ff6\u03bc\u03b1 meaning\r\n_the body_.\r\n\r\n* * *\r\n\r\n### Neuter Nouns are a Special Case\r\n\r\nIn all neuter nouns, **the accusative and the vocative are the same as the\r\nnominative**. This works for both singular and plural.\r\n\r\n",
         "grammar_ref": 25,
         "related_content": [],
@@ -2171,9 +2224,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Third Declension_ConsonantStem_Dativeendings",
+        "title": "Nouns: Third Declension (Dative Ending)",
         "content": "## A few things to remember!\r\n\r\nWhen the final consonant of a stem meets the **dative plural** ending -\u03c3\u03b9 , it\r\ncauses the following spelling and phonetic changes:\r\n\r\nThe consonants are grouped according to sound.\r\n\r\nType of consonant | Consonants |  | Dative Ending |  | Results in | Example  \r\n---|---|---|---|---|---|---  \r\nLabial | \u03c0, \u03b2, \u03c6 | + | -\u03c3\u03b9 | = | **-\u03c8\u03b9** | \u03c6\u03bb\u03b5\u03b2+\u03c3\u03af = \u03c6\u03bb\u03b5\u03c8\u03af  \r\nVelar | \u03ba, \u03b3, \u03c7 | + | -\u03c3\u03b9 | = | **-\u03be\u03b9** | \u03c6\u03cd\u03bb\u03b1\u03ba+\u03c3\u03b9 = \u03c6\u03cd\u03bb\u03b1\u03be\u03b9  \r\nDental | \u03c4, \u03b4, \u03b8 | + | -\u03c3\u03b9 | = | **-\u03c3\u03b9** | \u1f10\u03bb\u03c0\u03af\u03b4+\u03c3\u03b9 = \u1f10\u03bb\u03c0\u03af\u03c3\u03b9  \r\nStem in -\u03bd\u03c4 | -\u03b1\u03bd\u03c4 | + | -\u03c3\u03b9 | = | **-\u03b1\u03c3\u03b9** | \u03b3\u03af\u03b3\u03b1\u03bd\u03c4+\u03c3\u03b9 = \u03b3\u03af\u03b3\u03b1\u03c3\u03b9  \r\nStem in -\u03bd\u03c4 | -\u03bf\u03bd\u03c4 | + | -\u03c3\u03b9 | = | **-\u03bf\u03c5\u03c3\u03b9** | \u03b3\u03ad\u03c1\u03bf\u03bd\u03c4+\u03c3\u03b9 = \u03b3\u03ad\u03c1\u03bf\u03c5\u03c3\u03b9\r\n\r\n",
-        "grammar_ref": 24,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2195,9 +2248,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Third Declension_ConsonantStem_originalexample",
-        "content": "##### Third Declension: Consonant Stem\r\n\r\nCase | Singular | Plural  \r\n---|---|---  \r\n**Feminine/Masculine**  \r\nNom. | - | -\u03b5\u03c2  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | -\u03b1, -\u03bd | -\u03b1\u03c2  \r\nVoc. | - | -\u03bf\u03b9  \r\n**Neuter**  \r\nNom. | - | -\u03b1  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | - | -\u03b1  \r\nVoc. | - | -\u03b1  \r\n  \r\n#### The Third Declension in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of third\r\ndeclension nouns in the Pentecontaetia.\r\n\r\n\u03bf\u1f30 [...] \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f27\u03bb\u03b8\u03bf\u03bd |  \u1f10\u03c0\u1f76 \u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1**  \r\n---|---|---|---  \r\nThe [...] Athenians  |  in this way  |  came  |  **to the circumstances...**  \r\n(Nominative)  |  **   |  (Verb)  |  \r\n-- _The History of the Peloponnesian War_, 1.89.1\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\n\u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1 is a neuter, accusative plural of the noun \u03c4\u03cc \u03c0\u03c1\u1fb6\u03b3\u03bc\u03b1.\r\n\r\n",
-        "grammar_ref": 25,
+        "title": "Nouns: Third Declension (Original Example)",
+        "content": "##### Third Declension: Consonant Stem\r\n\r\nCase | Singular | Plural  \r\n---|---|---  \r\n**Feminine/Masculine**  \r\nNom. | - | -\u03b5\u03c2  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | -\u03b1, -\u03bd | -\u03b1\u03c2  \r\nVoc. | - | -\u03bf\u03b9  \r\n**Neuter**  \r\nNom. | - | -\u03b1  \r\nGen. | -\u03bf\u03c2 | -\u03c9\u03bd  \r\nDat. | -\u03b9 | -\u03c3\u03b9(\u03bd)  \r\nAcc. | - | -\u03b1  \r\nVoc. | - | -\u03b1  \r\n  \r\n#### The Third Declension in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of third\r\ndeclension nouns in the Pentecontaetia.\r\n\r\n\u03bf\u1f30 [...] \u1f08\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 |  \u03c4\u03c1\u03cc\u03c0\u1ff3 \u03c4\u03bf\u03b9\u1ff7\u03b4\u03b5 |  \u1f27\u03bb\u03b8\u03bf\u03bd |  \u1f10\u03c0\u1f76 \u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1**  \r\n---|---|---|---  \r\nThe [...] Athenians  |  in this way  |  came  |  **to the circumstances...**  \r\n(Nominative)  |  **   |  (Verb)  |  \r\n-- _The History of the Peloponnesian War_, 1.89.1\r\n\r\n\u03c4\u1f70 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1 is a neuter, accusative plural of the noun \u03c4\u03cc \u03c0\u03c1\u1fb6\u03b3\u03bc\u03b1.\r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2210,7 +2263,11 @@
         "title": "Nouns: Third Declension (Consonant Stem)",
         "content": "## Third declension: consonant stem\r\n\r\nThird declension nouns can be masculine, feminine, or neuter. They are called\r\n\"nouns with consonant stems\" because their stems end with a consonant and so\r\nthat they distinguish themselves from third declension nouns with vowel stems.\r\n\r\n##### \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2,\u1f10\u03bb\u03c0\u03af\u03b4\u03bf\u03c2: The hope, of the hope\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 | \u03b1\u1f31 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\nGen. | \u03c4\u1fc6\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1fc7 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b9** | \u03c4\u03b1\u1fd6\u03c2 \u1f10\u03bb\u03c0\u03af**\u03c3\u1f31(\u03bd)**  \r\nAcc. | \u03c4\u1f74\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1** | \u03c4\u1f70\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u1f10\u03bb\u03c0\u03af | \u1f66 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\n  \r\n* * *\r\n\r\nUnlike nouns from the first and second declensions, **the nominative singular\r\nforms of third declension nouns don't have a specific ending** \\- rather, the\r\nending of every noun is different. However, some features of the third\r\ndeclension remain stable for every noun. These are:\r\n\r\n  * the endings of the genitive\r\n  * the endings of the dative\r\n  * the endings of the accusative plural\r\n  * the endings of the vocative plural\r\nHere is the declension of the Greek word \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 meaning _the hope_.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nIn the third declension, masculine and feminine nouns have the same endings.\r\n\r\n#####  Keep and eye out!\r\n\r\nIn masculine and feminine nouns, the **vocative** singular is identical in\r\nform to the nominative singular:\r\n\r\n  * when the nominative singular ends in -\u03be or -\u03c8\r\n  * when the nominative singular ends in -\u03bd or -\u03c1 and accents the ultima\r\nOtherwise the nominative singular stays as the stem alone, with any final\r\nletter dropped (e.g.\u1f10\u03bb\u03c0\u03b9)\r\n\r\n",
         "grammar_ref": 24,
-        "related_content": [],
+        "related_content": [
+            296,
+            299,
+            301
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -2291,9 +2348,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Imperfect Indicative Active_intro1",
+        "title": "Verbs: Imperfect Indicative Active (Translation)",
         "content": "## Imperfect Indicative Active\r\n\r\nAs you now know:\r\n\r\n  * The **imperfect tense** describes an action in the past with progressive aspect (i.e. the action took place over a period of time). \r\n  * The **indicative mood** is used for factual statements and questions.\r\n  * The **active voice** means the subject of the verb is performing the action.\r\n\r\n* * *\r\n\r\n### Examples of the Imperfect in English\r\n\r\nI **was grading** exams, when suddenly I heard thunder.\r\n\r\nEmily **was drinking** tea all morning.\r\n\r\nThe ships **were sailing** at top speed.\r\n\r\nNotice how, in these examples, the verbs took place over a period of time --\r\ni.e. they express **progressive aspect**. If the sentences were simply \"I\r\ngraded exams\", \"Emily drank coffee\", and \"The ships sailed\", their verbs would\r\n_not_ belong in the Imperfect tense. This is because \"graded\", \"drank\", and\r\n\"sailed\" would indicate simple, one-time actions.\r\n\r\n* * *\r\n\r\n### Tips\r\n\r\n##### Keep an eye out!\r\n\r\nRemember that unlike English verbs, **the subject of the Greek verb is implied\r\nby the verb's ending**. Therefore, it is not necessary for it to be\r\naccompanied by the personal pronouns such as _I, You, He/She/It, We, You,\r\nThey_.\r\n\r\n##### Imperfect Indicative Active, _To have_\r\n\r\n**Singular**  \r\n---  \r\n1st | I  | was having  \r\n2nd | You | were having  \r\n3rd | He/She/It | was having | **Plural**  \r\n1st | We | were having  \r\n2nd | You | were having  \r\n3rd | They | were having\r\n\r\n",
-        "grammar_ref": 57,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -2315,10 +2372,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Imperfect Indicative Active_intro",
+        "title": "Verbs: Imperfect Indicative Active",
         "content": "#### Imperfect Indicative Active\r\n\r\nTo form the Imperfect Indicative Active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part.\"  \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n  3. **Add a \u1f10- in front**. This prefix is called the \"Past Indicative Augment\".   \r\ne.g. \u1f14\u03bb\u03c5-\r\n\r\n  4. **Add the endings** from the table to indicate person and number. Notice that these are different than the ending you use for the present and future tenses!   \r\ne.g. \u1f14\u03bb\u03c5\u03bf\u03bd, _I was untying_ -- or -- \u1f14\u03bb\u03c5\u03bf\u03bc\u03b5\u03bd, _We were untying_.\r\n\r\n* * *\r\n\r\nFor example:\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03c5\r\n\r\n* * *\r\n\r\n|  \u03bf\u03bd\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Augment**  \r\n|  **Stem**  \r\n|  **Ending**  \r\n  \r\n  \r\n###  Here's a Clue!\r\n\r\nBe on the look out for verbs that begin with an \u1f10. When a verb gets an \u1f10 as a\r\nprefix, this \u1f10 is called the **past indicative augment** because it only\r\noccurs when: 1 The verb indicates a **past** action 2 The verb is in the\r\n**indicative** mood.  \r\n  \r\nIf you see a verb without the Past Indicative Augument, this is a good sign\r\nthat it's in another tense and voice.\r\n\r\n### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nImperfect Indicative Active -- \u1f14\u03bb\u03c5\u03bf\u03bd, _I was untying_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u1f14\u03bb\u03c5**\u03bf\u03bd** | \u1f14\u03bb\u03c5**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u1f14\u03bb\u03c5**\u03b5\u03c2** | \u1f14\u03bb\u03c5**\u03b5\u03c4\u03b5**  \r\n3rd | \u1f14\u03bb\u03c5**\u03b5(\u03bd)** | \u1f14\u03bb\u03c5**\u03bf\u03bd**\r\n\r\n",
         "grammar_ref": 57,
-        "related_content": [],
+        "related_content": [
+            312,
+            309,
+            311
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -2327,8 +2388,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Imperfect Indicative Active_ToBe_conjugation",
-        "content": "### \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nImperfect Indicative Active -- \u1f27\u03bd, _I was (being)_\r\n\r\n**Singular**  \r\n---  \r\n1st | \u1f27\u03bd | I was (being)  \r\n2nd | \u1f27\u03c3\u03b8\u03b1 | You were (being)  \r\n3rd | \u1f27\u03bd | He/She/It was (being) | **Plural**  \r\n1st | \u1f27\u03bc\u03b5\u03bd | We were (being)  \r\n2nd | \u1f27\u03c4\u03b5 | You were (being)  \r\n3rd | \u1f27\u03c3\u03b1\u03bd | They were (being)  \r\n  \r\n## Imperfect Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n",
+        "title": "Verbs: Imperfect Indicative Active (To Be)",
+        "content": "## Imperfect Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n### \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nImperfect Indicative Active -- \u1f27\u03bd, _I was (being)_\r\n\r\n**Singular**  \r\n---  \r\n1st | \u1f27\u03bd | I was (being)  \r\n2nd | \u1f27\u03c3\u03b8\u03b1 | You were (being)  \r\n3rd | \u1f27\u03bd | He/She/It was (being) | **Plural**  \r\n1st | \u1f27\u03bc\u03b5\u03bd | We were (being)  \r\n2nd | \u1f27\u03c4\u03b5 | You were (being)  \r\n3rd | \u1f27\u03c3\u03b1\u03bd | They were (being)  \r\n  \r\n\r\n",
         "grammar_ref": 47,
         "related_content": [],
         "source_lang": 4
@@ -3055,8 +3116,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_ToBe_conjugation",
-        "content": "# \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03b5\u1f30\u03bc\u03af | I am  \r\n2nd | \u03b5\u1f36 | You are  \r\n3rd | \u1f10\u03c3\u03c4\u03af(\u03bd) | He/She/It is | **Plural**  \r\n1st | \u1f10\u03c3\u03bc\u03ad\u03bd | We are  \r\n2nd | \u1f10\u03c3\u03c4\u03ad | You are  \r\n3rd | \u03b5\u1f30\u03c3\u03af(\u03bd) | They are  \r\n\r\n* * *\r\n\r\n### Present Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n\r\n",
+        "title": "Verbs: Present Indicative Active (To Be)",
+        "content": "### Present Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n# \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03b5\u1f30\u03bc\u03af | I am  \r\n2nd | \u03b5\u1f36 | You are  \r\n3rd | \u1f10\u03c3\u03c4\u03af(\u03bd) | He/She/It is | \r\n**Plural**  \r\n1st | \u1f10\u03c3\u03bc\u03ad\u03bd | We are  \r\n2nd | \u1f10\u03c3\u03c4\u03ad | You are  \r\n3rd | \u03b5\u1f30\u03c3\u03af(\u03bd) | They are  \r\n\r\n* * *\r\n\r\n\r\n",
         "grammar_ref": 45,
         "related_content": [],
         "source_lang": 4
@@ -3079,9 +3140,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_translation",
+        "title": "Verbs: Present Indicative Active (How to translate)",
         "content": "##### Present Indicative Active, _To have_\r\n\r\n| **Singular** | **Plural**  \r\n---|---|---  \r\n1st | I | have | We | have  \r\n2nd | You | have | You (all) | have  \r\n3rd | He/She/It | has | They | have  \r\n  \r\n## Present Indicative Active\r\n\r\nAs you now know:\r\n\r\n  * The**present tense**describes an action in the present time with progressive aspect (i.e. the action is still taking place). \r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\n* * *\r\n\r\n##### Remember: Greek implies the subject of the verb in the verb's\r\nconjugation!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\nFor example: The English _I have_ can be translated either \u1f10\u03b3\u03ce \u1f14\u03c7\u03c9 or, more\r\ncommonly, simply  \u1f14\u03c7\u03c9.\r\n\r\n",
-        "grammar_ref": 58,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3091,9 +3152,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_originalexample",
+        "title": "Verbs: Present Indicative Active (Original Example)",
         "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPresent Indicative Active\r\n\r\n**Singular**  \r\n---  \r\n1st | \u03bb\u03cd**\u03c9** | I untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03b9\u03c2** | You untie  \r\n3rd | \u03bb\u03cd**\u03b5\u03b9** | He/She/It unties | **Plural**  \r\n1st | \u03bb\u03cd**\u03bf\u03bc\u03b5\u03bd** | We untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03c4\u03b5** | You untie  \r\n3rd | \u03bb\u03cd**\u03bf\u03c5\u03c3\u03b9(\u03bd)** | They untie  \r\n  \r\n## The First Indicative Active in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of a present\r\nindicative active verb in the Pentecontaetia.\r\n\r\n-- _The History of the Peloponnesian War_,\r\n[1.90.4](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.90.4)\r\n\r\nKeep Reading \u00bb\r\n\r\n",
-        "grammar_ref": 39,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3103,7 +3164,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_intro",
+        "title": "Startpage: Present Indicative Active_intro",
         "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _\"Indicative\" comes from Latin, _indicare_, which means to declare\r\nsomething. I declare Latin to be useless compared to almighty Greek!_\r\nThucydides _(ca 460 - 395 BC)_\r\n\r\n# Present Indicative Active\r\n\r\n* * *\r\n\r\nNow that you are familiar with the 5 characteristics of verbs, start by\r\nlearning the **present indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab The fate of Pausanias\r\n\r\n  1. Identify present indicative active verbs.\r\n  2. Conjugate present indicative active verbs.\r\n\r\n",
         "grammar_ref": 39,
         "related_content": [],
@@ -3127,10 +3188,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Present Indicative Active_conjugation",
-        "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03bb\u03cd**\u03c9** | I untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03b9\u03c2** | You untie  \r\n3rd | \u03bb\u03cd**\u03b5\u03b9** | He/She/It unties | **Plural**  \r\n1st | \u03bb\u03cd**\u03bf\u03bc\u03b5\u03bd** | We untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03c4\u03b5** | You untie  \r\n3rd | \u03bb\u03cd**\u03bf\u03c5\u03c3\u03b9(\u03bd)** | They untie  \r\n  \r\n## Present Indicative Active\r\n\r\nTo form the present indicative active, **identify the present tense stem by\r\nremoving the variable ending \\- \u03c9**. Add the endings from the table to\r\nindicate person and number.\r\n\r\n* * *\r\n\r\nFor example:\r\n\r\n\u03bb\u03cd\r\n\r\n* * *\r\n\r\n|  \u03c9\r\n\r\n* * *  \r\n  \r\n---|---  \r\n**Stem**  \r\n|  **Ending**  \r\n  \r\n  \r\n##### Learn something Nu!\r\n\r\nThe letter \u03bd at the end of the third person plural is called **nu-movable**.\r\nIt may be added to certain endings when/if the following word begins with a\r\nvowel or at the end of a sentence.\r\n\r\nAnd...remember the accent rules? They also apply to verbs!\r\n\r\n",
-        "grammar_ref": 58,
-        "related_content": [],
+        "title": "Verbs: Present Indicative Active",
+        "content": "## Present Indicative Active\r\n\r\nTo form the present indicative active, **identify the present tense stem by\r\nremoving the variable ending \\- \u03c9**. Add the endings from the table to\r\nindicate person and number.\r\n\r\n* * *\r\n\r\nFor example:\r\n\r\n\u03bb\u03cd\r\n\r\n* * *\r\n\r\n|  \u03c9\r\n\r\n* * *  \r\n  \r\n---|---  \r\n**Stem**  \r\n|  **Ending** \r\n\r\n***\r\n\r\n ### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPresent Indicative Active\r\n\r\nPerson |  |  |  \r\n---|---|---|---  \r\n**Singular**  \r\n1st | \u03bb\u03cd**\u03c9** | I untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03b9\u03c2** | You untie  \r\n3rd | \u03bb\u03cd**\u03b5\u03b9** | He/She/It unties | **Plural**  \r\n1st | \u03bb\u03cd**\u03bf\u03bc\u03b5\u03bd** | We untie  \r\n2nd | \u03bb\u03cd**\u03b5\u03c4\u03b5** | You untie  \r\n3rd | \u03bb\u03cd**\u03bf\u03c5\u03c3\u03b9(\u03bd)** | They untie  \r\n  \r\n  \r\n##### Learn something Nu!\r\n\r\nThe letter \u03bd at the end of the third person plural is called **nu-movable**.\r\nIt may be added to certain endings when/if the following word begins with a\r\nvowel or at the end of a sentence.\r\n\r\nAnd...remember the accent rules? They also apply to verbs!\r\n\r\n",
+        "grammar_ref": 39,
+        "related_content": [
+            371,
+            373,
+            374
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3606,9 +3671,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Future Indicative Active_translation",
-        "content": "#### Future Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | will have  \r\n2nd | You | will have  \r\n3rd | He/She/It | will have | **Plural**  \r\n1st | We | will have  \r\n2nd | You | will have  \r\n3rd | They | will have  \r\n  \r\nIn English, we form the future by using the helping verb \"will\". In Ancient\r\nGreek, however, the verb itself changes to reflect that it is in the future\r\ntense.\r\n\r\n## Future Indicative Active\r\n\r\nAs you now know:\r\n\r\n  * The**future tense**describes an action in the future time with either simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\n* * *\r\n\r\n#### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\n",
-        "grammar_ref": 40,
+        "title": "Verbs: Future Indicative Active (Translation)",
+        "content": "## Future Indicative Active\r\n\r\nAs you now know:\r\n\r\n  * The**future tense**describes an action in the future time with either simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\n* * *\r\n\r\n#### Future Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | will have  \r\n2nd | You | will have  \r\n3rd | He/She/It | will have | **Plural**  \r\n1st | We | will have  \r\n2nd | You | will have  \r\n3rd | They | will have  \r\n  \r\nIn English, we form the future by using the helping verb \"will\". In Ancient\r\nGreek, however, the verb itself changes to reflect that it is in the future\r\ntense.\r\n\r\n## Future Indicative Active\r\n\r\nAs you now know:\r\n\r\n  * The**future tense**describes an action in the future time with either simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\n* * *\r\n\r\n#### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3630,8 +3695,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Future Indicative Active_ToBe_conjugation",
-        "content": "### \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nFuture Active Indicative -- \u1f14\u03c3\u03bf\u03bc\u03b1\u03b9, _I will be_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u1f14\u03c3**\u03bf\u03bc\u03b1\u03b9** | \u1f10\u03c3**\u03cc\u03bc\u03b5\u03b8\u03b1**  \r\n2nd | \u1f14\u03c3**\u1fc3** | \u1f14\u03c3**\u03b5\u03c3\u03b8\u03b5**  \r\n3rd | \u1f14\u03c3**\u03c4\u03b1\u03b9** | \u1f14\u03c3**\u03bf\u03bd\u03c4\u03b1\u03b9**  \r\n  \r\n## Future Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n",
+        "title": "Verbs: Future Indicative Active (To Be)",
+        "content": "## Future Indicative Active of _To Be_\r\n\r\nThe verb _To Be_ is **irregular**, meaning it does not follow the usual\r\nconventions.\r\n\r\n### \u03b5\u1f30\u03bc\u03af, _I am_\r\n\r\nFuture Active Indicative -- \u1f14\u03c3\u03bf\u03bc\u03b1\u03b9, _I will be_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u1f14\u03c3**\u03bf\u03bc\u03b1\u03b9** | \u1f10\u03c3**\u03cc\u03bc\u03b5\u03b8\u03b1**  \r\n2nd | \u1f14\u03c3**\u1fc3** | \u1f14\u03c3**\u03b5\u03c3\u03b8\u03b5**  \r\n3rd | \u1f14\u03c3**\u03c4\u03b1\u03b9** | \u1f14\u03c3**\u03bf\u03bd\u03c4\u03b1\u03b9**  \r\n  \r\n\r\n\r\n",
         "grammar_ref": 46,
         "related_content": [],
         "source_lang": 4
@@ -3642,10 +3707,15 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Future Indicative Active_intro",
+        "title": "Verbs: Future Indicative Active",
         "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nFuture Indicative Active -- \u03bb\u03cd\u03c3\u03c9, _I will untie_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u03bb\u03cd\u03c3**\u03c9** | \u03bb\u03cd\u03c3**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u03bb\u03cd\u03c3**\u03b5\u03b9\u03c2** | \u03bb\u03cd\u03c3**\u03b5\u03c4\u03b5**  \r\n3rd | \u03bb\u03cd\u03c3**\u03b5\u03b9** | \u03bb\u03cd\u03c3**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n## Future Indicative Active\r\n\r\nTo form the future indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n  3. **Add a \u03c3** to get the future stem.   \r\ne.g. \u03bb\u03cd\u03c3-\r\n\r\n  4. **Add the endings** from the table to indicate the person and number.   \r\ne.g. \u03bb\u03cd\u03c3\u03bf\u03bc\u03b5\u03bd, _We will untie_ -- or -- \u03bb\u03cd\u03c3\u03b5\u03b9\u03c2, _You will untie_\r\n\r\nThe future then becomes the **second principle part** of a verb (while the\r\npresent is the first principle part).\r\n\r\n* * *\r\n\r\nThe Parts of a Future Tense Verb\r\n\r\n\u03bb\u03cd\u03c3\r\n\r\n* * *\r\n\r\n|  \u03c9\r\n\r\n* * *  \r\n  \r\n---|---  \r\n**Future Stem**  \r\n\r\n* * *\r\n\r\nThe future stem is formed by taking the present tense stem \u03bb\u03cd- and adding\r\n**\u03c3**.  |  **Ending**  \r\n\r\n* * *\r\n\r\nThe endings of the future indicative active are **the same as those of the\r\npresent indicative active**.\r\n\r\n",
         "grammar_ref": 40,
-        "related_content": [],
+        "related_content": [
+            416,
+            418,
+            420,
+            423
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3654,9 +3724,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Future Indicative Active_originalexample",
-        "content": "## The Future Indicative Active in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of a future\r\nindicative active verb in the Pentecontaetia.\r\n\r\n\u03bf\u1f31 \u1fbf\u0391\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 [...] |  **\u03c0\u03ad\u03bc\u03c8\u03bf\u03c5\u03c3\u03b9\u03bd** |  \u03c0\u03c1\u03ad\u03c3\u03b2\u03b5\u03b9\u03c2 [...]  \r\n---|---|---  \r\nThe Athenians [...]  |  **will send** |  ambassadors [...]  \r\n(Nominative)  |  **(Verb)**   |  (Object)  \r\n-- _The History of the Peloponnesian War_,\r\n[1.90.3](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3)\r\n\r\n[Keep Reading \u00bb](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3)\r\n\r\n### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nFuture Active Indicative -- \u03c0\u03ad\u03bc\u03c8\u03c9, _I will send_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u03c0\u03ad\u03bc\u03c8**\u03c9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9\u03c2** | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03c4\u03b5**  \r\n3rd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**\r\n\r\n",
-        "grammar_ref": 40,
+        "title": "Verbs: Future Indicative Active (Original Example)",
+        "content": "## The Future Indicative Active in the Pentecontaetia\r\n\r\nThe following is an example of how Thucydides himself makes use of a future\r\nindicative active verb in the Pentecontaetia.\r\n\r\n\u03bf\u1f31 \u1fbf\u0391\u03b8\u03b7\u03bd\u03b1\u1fd6\u03bf\u03b9 [...] |  **\u03c0\u03ad\u03bc\u03c8\u03bf\u03c5\u03c3\u03b9\u03bd** |  \u03c0\u03c1\u03ad\u03c3\u03b2\u03b5\u03b9\u03c2 [...]  \r\n---|---|---  \r\nThe Athenians [...]  |  **will send** |  ambassadors [...]  \r\n(Nominative)  |  **(Verb)**   |  (Object)  \r\n-- _The History of the Peloponnesian War_,\r\n[1.90.3](/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc1:1.90.3)\r\n\r\n### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nFuture Active Indicative -- \u03c0\u03ad\u03bc\u03c8\u03c9, _I will send_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u03c0\u03ad\u03bc\u03c8**\u03c9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9\u03c2** | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03c4\u03b5**  \r\n3rd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**\r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3690,9 +3760,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Future Indicative Active_conjugation",
-        "content": "### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nFuture Indicative Active -- \u03c0\u03ad\u03bc\u03c8\u03c9, _I will send_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u03c0\u03ad\u03bc\u03c8**\u03c9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9\u03c2** | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03c4\u03b5**  \r\n3rd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n## Future Indicative Active for Stop Verbs\r\n\r\nThe future stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n  \r\n\r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u03bb\u03ad**\u03be**\u03c9, _I will say_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u03c0\u03ad\u03bc**\u03c8**\u03c9, _I will send_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u03c0\u03b5\u03af**\u03c3**\u03c9, _I will persuade_\r\n\r\n####\r\n\r\n",
-        "grammar_ref": 40,
+        "title": "Verbs: Future Indicative Active (Stop Verbs)",
+        "content": "## Future Indicative Active for Stop Verbs\r\n\r\nThe future stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u03bb\u03ad**\u03be**\u03c9, _I will say_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u03c0\u03ad\u03bc**\u03c8**\u03c9, _I will send_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n\r\n### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nFuture Indicative Active -- \u03c0\u03ad\u03bc\u03c8\u03c9, _I will send_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u03c0\u03ad\u03bc\u03c8**\u03c9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9\u03c2** | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03c4\u03b5**  \r\n3rd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n\r\n***\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u03c0\u03b5\u03af**\u03c3**\u03c9, _I will persuade_\r\n\r\n####\r\n  \r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3790,26 +3860,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Dative Case_In",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Dative Case\r\n\r\n##### Dative meaning **in**\r\n\r\nIn these sentences, the dative expresses **metaphorical or physical\r\nlocation**. Thucydides often uses the dative in this way. When indicating a\r\nphysical location, the dative is often preceeded by the preposition **\u1f10\u03bd**.\r\n\r\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u1f10\u03c3\u03c4\u1f76 |  \u03bd\u03ad\u03bf\u03c2 |  **\u1f21\u03bb\u03b9\u03ba\u03af\u1fb3**.  \r\n---|---|---|---  \r\nThe man  |  is  |  young  |  **in age**.  \r\n(Nominative)  |  (Verb)  |  (Complement)  |  **(Dative)**  \r\n  \r\n##### Dative meaning **with** or **by**\r\n\r\nIn these sentences, the dative expresses **means or instrument**. Thucydides\r\noften uses the dative in this way.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u03b2\u03ac\u03bb\u03bb\u03b5\u03b9 |  \u03c4\u03cc\u03bd \u1f04\u03bd\u03b4\u03c1\u03b1 |  **\u03bb\u03af\u03b8\u03bf\u03b9\u03c2**  \r\n---|---|---|---  \r\nThe girl  |  hits  |  the man  |  **with stones**.  \r\n(Nominative)  |  (Verb)  |  **(Accusative)** |  **(Dative)**\r\n\r\n",
+        "title": "Nouns: Dative Case (Meaning \"in\")",
+        "content": "#### The Dative Case\r\n\r\n##### Dative meaning **in**\r\n\r\nIn these sentences, the dative expresses **metaphorical or physical\r\nlocation**. Thucydides often uses the dative in this way. When indicating a\r\nphysical location, the dative is often preceeded by the preposition **\u1f10\u03bd**.\r\n\r\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u1f10\u03c3\u03c4\u1f76 |  \u03bd\u03ad\u03bf\u03c2 |  **\u1f21\u03bb\u03b9\u03ba\u03af\u1fb3**.  \r\n---|---|---|---  \r\nThe man  |  is  |  young  |  **in age**.  \r\n(Nominative)  |  (Verb)  |  (Complement)  |  **(Dative)**  \r\n  \r\n##### Dative meaning **with** or **by**\r\n\r\nIn these sentences, the dative expresses **means or instrument**. Thucydides\r\noften uses the dative in this way.\r\n\r\n\u1f21 \u03ba\u03cc\u03c1\u03b7 |  \u03b2\u03ac\u03bb\u03bb\u03b5\u03b9 |  \u03c4\u03cc\u03bd \u1f04\u03bd\u03b4\u03c1\u03b1 |  **\u03bb\u03af\u03b8\u03bf\u03b9\u03c2**  \r\n---|---|---|---  \r\nThe girl  |  hits  |  the man  |  **with stones**.  \r\n(Nominative)  |  (Verb)  |  **(Accusative)** |  **(Dative)**\r\n\r\n***\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n\r\n",
         "grammar_ref": 54,
         "related_content": [],
         "source_lang": 4
     },
     "model": "app.content",
     "pk": 431
-},
-{
-    "fields": {
-        "target_lang": 5,
-        "title": "Nouns: Dative Case_originalexample1",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Dative Case\r\n\r\n##### Datives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\r\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\r\nthe final blow.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \r\n---|---|---|---  \r\nLeotychides  |  led  |  the Greeks  |  at Mycale...  \r\n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\r\n(Genitive)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nKing \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 is badass!\r\n\r\n##### Almost there!\r\n\r\nNow that you have learned the **dative**, test yourself!  \r\n  \r\nClick the arrow to try recognizing the dative in English and Greek sentences!\r\n\r\n",
-        "grammar_ref": 54,
-        "related_content": [],
-        "source_lang": 4
-    },
-    "model": "app.content",
-    "pk": 432
 },
 {
     "fields": {
@@ -3891,7 +3949,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Accusative Case_Directobject",
+        "title": "Nouns: Accusative Case (Direct Object)",
         "content": "## The Accusative Case\r\n\r\n### Accusative for Direct Objects\r\n\r\nThe accusative case is used to indicate the **direct object of a verb**. A\r\ndirect object is the thing being acted upon by the subject.\r\n\r\n\u1f41 \u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b7\u03c2 |  \u1f10\u03be\u03b7\u03b3\u03ad\u03c4\u03b1\u03b9 |  **\u03c4\u03cc\u03bd \u03c0\u03cc\u03bb\u03b5\u03bc\u03bf\u03bd**.  \r\n---|---|---  \r\nThucydides  |  describes  |  **the war**.  \r\n(Subject)  |  (Verb)  |  **(Direct Object)**  \r\n\u1f21 \u03c0\u03cc\u03bb\u03b9\u03c2 |  \u1f14\u03c7\u03b5\u03b9 |  **\u03c3\u03c4\u03c1\u03b1\u03c4\u03af\u03b1\u03bd**.  \r\n---|---|---  \r\nThe city  |  has  |  **an army**.  \r\n(Subject)  |  (Verb)  |  **(Direct Object)**  \r\n  \r\n##### Don't forget!\r\n\r\nWhile there is a Greek transaltion for the definite article \"the\", there is no\r\ntranslation for the indefinite article \"a\" or \"an\". In this case, you can just\r\nskip the Greek article and translate the noun directly.\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -\r\n\r\n",
         "grammar_ref": 56,
         "related_content": [],
@@ -3927,9 +3985,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Dative Case_originalexample",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\n  \r\n#### The Dative Case\r\n\r\n##### Datives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\r\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\r\nthe final blow.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \r\n---|---|---|---  \r\nLeotychides  |  led  |  the Greeks  |  at Mycale...  \r\n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\r\n(Genitive)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\nKeep Reading \u00bb\r\n\r\n![](/static/images/thuc.png)\r\n\r\nKing \u1f41 \u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 is badass!\r\n\r\n##### Almost there!\r\n\r\nNow that you have learned the **dative**, test yourself!  \r\n  \r\nClick on the arrow to try recognizing the dative in English and Greek\r\nsentences!\r\n\r\n",
-        "grammar_ref": 54,
+        "title": "Nouns: Dative Case (Original Example)",
+        "content": "#### The Dative Case\r\n\r\n##### Datives in the Pentecontaetia\r\n\r\nIn this section right at the beginning of the Pentecontaetia, Thucydides talks\r\nabout king Leotychides' victory at Mycale in 479BC, when he gave the Persians\r\nthe final blow.\r\n\r\n\u039b\u03b5\u03c9\u03c4\u03c5\u03c7\u03af\u03b4\u03b7\u03c2 |  **\u1f21\u03b3\u03b5\u1fd6\u03c4\u03bf** |  \u03c4\u1ff6\u03bd \u1f19\u03bb\u03bb\u03ae\u03bd\u03c9\u03bd |  \u1f10\u03bd \u039c\u03c5\u03ba\u03ac\u03bb\u1fc3...  \r\n---|---|---|---  \r\nLeotychides  |  led  |  the Greeks  |  at Mycale...  \r\n(Nominative)  |  (Verb - \u1f21\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9 takes an object in the genitive)  |\r\n(Genitive)  |  **(Dative)**  \r\n-- _The History of the Peloponnesian War_, 1.89.2\r\n\r\n****\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\n\r\n\r\n\r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -3939,10 +3997,13 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Dative Case_intro",
+        "title": "Nouns: Dative Case",
         "content": "#### The Dative Case\r\n\r\nThe word \"dative\" derives from the Latin word _dare_, meaning to \"give\". In\r\nmost cases its meaning can be associated with the English words **to** and\r\n**for**. It goes naturally with verbs of giving, so if you take the sentence\r\n_Thucydides gave a story to the audience_, you will find \"to the audience\" in\r\nthe dative.\r\n\r\nThese verbs are generally followed by a direct object in the accusative and an\r\n_indirect object in the dative_. Take a look at the example below!\r\n\r\n\u1f41 \u1f00\u03bd\u03ae\u03c1 |  \u03b4\u03af\u03b4\u03c9\u03c3\u03b9 |  \u03b4\u1ff6\u03c1\u03bf\u03bd |  **\u03c4\u1fc7 \u03ba\u03cc\u03c1\u1fc3**.  \r\n---|---|---|---  \r\nThe man  |  gives  |  a rose  |  **to the girl**.  \r\n(Nominative)  |  (Verb)  |  (Accusative)  |  **(Dative)**  \r\n  \r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -\r\n\r\n",
         "grammar_ref": 54,
-        "related_content": [],
+        "related_content": [
+            442,
+            431
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -3951,8 +4012,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Nouns: Vocative Case_intro",
-        "content": "##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n#### The Vocative Case\r\n\r\nThe vocative is the case by which one addresses or calls out to someone. It is\r\ngenerally very similar in form to the nominative. Notice there is no definite\r\narticle for it in the table. That is because **there is no definite article\r\nfor the vocative**, though often it is preceeded by the interjection \u1f66.\r\n\r\n**\u1f66 \u0396\u03b5\u1fe6,** |  \u1f41 \u03b2\u03af\u03bf\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c7\u03b1\u03bb\u03b5\u03c0\u1f78\u03c2.  \r\n---|---|---|---  \r\n**O Zeus,** |  life  |  is  |  difficult.   \r\n**(Vocative)** |  (Nominative)  |  (Verb)  |  (Complement)   \r\n  \r\n**\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b5\u03c2,** |  \u1f00\u03ba\u03bf\u03cd\u03b5\u03b9\u03c2;  \r\n---|---  \r\n**Thucydides,** |  do you hear?   \r\n(Vocative)  |  (Verb)\r\n\r\n",
+        "title": "Nouns: Vocative Case",
+        "content": "#### The Vocative Case\r\n\r\nThe vocative is the case by which one addresses or calls out to someone. It is\r\ngenerally very similar in form to the nominative. Notice there is no definite\r\narticle for it in the table. That is because **there is no definite article\r\nfor the vocative**, though often it is preceeded by the interjection \u1f66.\r\n\r\n**\u1f66 \u0396\u03b5\u1fe6,** |  \u1f41 \u03b2\u03af\u03bf\u03c2 |  \u1f10\u03c3\u03c4\u1f76 |  \u03c7\u03b1\u03bb\u03b5\u03c0\u1f78\u03c2.  \r\n---|---|---|---  \r\n**O Zeus,** |  life  |  is  |  difficult.   \r\n**(Vocative)** |  (Nominative)  |  (Verb)  |  (Complement)   \r\n  \r\n**\u0398\u03bf\u03c5\u03ba\u03c5\u03b4\u03af\u03b4\u03b5\u03c2,** |  \u1f00\u03ba\u03bf\u03cd\u03b5\u03b9\u03c2;  \r\n---|---  \r\n**Thucydides,** |  do you hear?   \r\n(Vocative)  |  (Verb)\r\n\r\n***\r\n\r\n##### \u1f41 \u1f21 \u03c4\u03cc, The\r\n\r\nCase | Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u1f41 | \u1f21 | \u03c4\u03cc  \r\nGen. | \u03c4\u03bf\u1fe6 | \u03c4\u1fc6\u03c2 | \u03c4\u03bf\u1fe6  \r\nDat. | \u03c4\u1ff7 | \u03c4\u1fc7 | \u03c4\u1ff7  \r\nAcc. | \u03c4\u03cc\u03bd | \u03c4\u03ae\u03bd | \u03c4\u03cc  \r\nVoc. | - | - | -  \r\n**Plural**  \r\nNom. | \u03bf\u1f31 | \u03b1\u1f31 | \u03c4\u03ac  \r\nGen. | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd | \u03c4\u1ff6\u03bd  \r\nDat. | \u03c4\u03bf\u1fd6\u03c2 | \u03c4\u03b1\u1fd6\u03c2 | \u03c4\u03bf\u1fd6\u03c2  \r\nAcc. | \u03c4\u03bf\u03cd\u03c2 | \u03c4\u03ac\u03c2 | \u03c4\u03ac  \r\nVoc. | - | - | -  \r\n  \r\n",
         "grammar_ref": 50,
         "related_content": [],
         "source_lang": 4
@@ -4035,9 +4096,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Aorist Indicative Active_Asigmatic_examples1",
-        "content": "#### Aorist Indicative Active\r\n\r\nThe following is a list of verbs with their corresponding aorists that can be\r\noften found in Ancient Greek texts. Notice how all of these have **second**\r\naorists. Try learning them!\r\n\r\n1st: Present | 2nd: Future | 3rd: Aorist  \r\n---|---|---  \r\n\u1f04\u03b3\u03c9 (I lead) | \u1f04\u03be\u03c9 (I will lead) | **\u1f24\u03b3\u03b1\u03b3\u03bf\u03bd** (I led)  \r\n\u03b2\u03ac\u03bb\u03bb\u03c9 (I throw) | \u03b2\u03b1\u03bb\u1ff6 (I will throw) | **\u1f14\u03b2\u03b1\u03bb\u03bf\u03bd** (I threw)  \r\n\u03c0\u03b5\u03af\u03b8\u03c9 (I persuade) | \u03c0\u03b5\u03af\u03c3\u03c9 (I will persuade) | **\u1f14\u03c0\u03b5\u03b9\u03c3\u03b1** (I persuaded)  \r\n\u03c4\u03ad\u03bc\u03bd\u03c9 (I cut) | \u03c4\u03b5\u03bc\u1ff6 (I will cut) | **\u1f14\u03c4\u03b5\u03bc\u03bf\u03bd** (I cut)\r\n\r\n",
-        "grammar_ref": 44,
+        "title": "Verbs: Aorist Indicative Active (Examples)",
+        "content": "#### Aorist Indicative Active\r\n\r\nThe following is a list of verbs with their corresponding aorists that can be\r\noften found in Ancient Greek texts. Notice how all of these have **second**\r\naorists. Try learning them!\r\n\r\n1st: Present | 2nd: Future | 3rd: Aorist  \r\n---|---|---  \r\n\u1f04\u03b3\u03c9 (I lead) | \u1f04\u03be\u03c9 (I will lead) | **\u1f24\u03b3\u03b1\u03b3\u03bf\u03bd** (I led)  \r\n\u03b2\u03ac\u03bb\u03bb\u03c9 (I throw) | \u03b2\u03b1\u03bb\u1ff6 (I will throw) | **\u1f14\u03b2\u03b1\u03bb\u03bf\u03bd** (I threw)  \r\n\u03c0\u03b5\u03af\u03b8\u03c9 (I persuade) | \u03c0\u03b5\u03af\u03c3\u03c9 (I will persuade) | **\u1f14\u03c0\u03b5\u03b9\u03c3\u03b1** (I persuaded)  \r\n\u03c4\u03ad\u03bc\u03bd\u03c9 (I cut) | \u03c4\u03b5\u03bc\u1ff6 (I will cut) | **\u1f14\u03c4\u03b5\u03bc\u03bf\u03bd** (I cut)\r\n\r\n***\r\n\r\nThe following is a list of verbs with their corresponding aorists that can be\r\noften found in Ancient Greek texts. Notice how all of these have **asigmatic**\r\naorists.\r\n\r\nPresent | Aorist | Note  \r\n---|---|---  \r\n\u1f00\u03b3\u03b3\u03ad\u03bb\u03bb\u03c9 (I announce) | **\u1f24\u03b3\u03b3\u03b5\u03b9\u03bb\u03b1 | The augment has changed from \u03b5 to \u03b7\r\nfollowing a merge of \u03b1 \\+ \u03b5  \r\n\u03ba\u03c1\u03af\u03bd\u03c9 (I judge) | **\u1f14\u03ba\u03c1\u03b9\u03bd\u03b1 |  \r\n\u03c0\u03b5\u03c1\u03b1\u03af\u03bd\u03c9 (I finish) | **\u1f10\u03c0\u03ad\u03c1\u03b1\u03bd\u03b1 |\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -4047,9 +4108,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Aorist Indicative Active_Asigmatic_intro",
-        "content": "### \u03c6\u03b1\u03af\u03bd\u03c9, _I show_\r\n\r\nAorist Indicative Active -- \u1f14\u03c6\u03b7\u03bd\u03b1, _I showed_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c6\u03b7\u03bd**\u03b1** | **\u1f10**\u03c6\u03ae\u03bd**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c6\u03ae\u03bd**\u03b1\u03c2** | **\u1f10**\u03c6\u03ae\u03bd**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c6\u03b7\u03bd**\u03b5(\u03bd)** | **\u1f14**\u03c6\u03b7\u03bd**\u03b1\u03bd**  \r\n  \r\n#### Aorist Indicative Active\r\n\r\nThe **asigmatic** aorist behaves in a similar way to the sigmatic aorist.\r\nYou'll notice, however, that in this case it is not as easy to separate the\r\nstem. Often with the aorist, it is just a case of memorizing the **third\r\nprinciple part** of some common words.\r\n\r\nFor example, in the case of \u03c6\u03b1\u03af\u03bd\u03c9, _to show_, the aorist indicative active is\r\n\u1f14\u03c6\u03b7\u03bd\u03b1. You'll see how here there is **no sigma**, but the endings remain **the\r\nsame as the sigmatic aorist**.\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03c6\u03b7\u03bd\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Asigmatic Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
-        "grammar_ref": 44,
+        "title": "Verbs: Aorist Indicative Active (Asigmatic)",
+        "content": "#### Aorist Indicative Active\r\n\r\nThe **asigmatic** aorist behaves in a similar way to the sigmatic aorist.\r\nYou'll notice, however, that in this case it is not as easy to separate the\r\nstem. Often with the aorist, it is just a case of memorizing the **third\r\nprinciple part** of some common words.\r\n\r\nFor example, in the case of \u03c6\u03b1\u03af\u03bd\u03c9, _to show_, the aorist indicative active is\r\n\u1f14\u03c6\u03b7\u03bd\u03b1. You'll see how here there is **no sigma**, but the endings remain **the\r\nsame as the sigmatic aorist**.\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03c6\u03b7\u03bd\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Asigmatic Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n\r\n### \u03c6\u03b1\u03af\u03bd\u03c9, _I show_\r\n\r\nAorist Indicative Active -- \u1f14\u03c6\u03b7\u03bd\u03b1, _I showed_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c6\u03b7\u03bd**\u03b1** | **\u1f10**\u03c6\u03ae\u03bd**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c6\u03ae\u03bd**\u03b1\u03c2** | **\u1f10**\u03c6\u03ae\u03bd**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c6\u03b7\u03bd**\u03b5(\u03bd)** | **\u1f14**\u03c6\u03b7\u03bd**\u03b1\u03bd**  \r\n  \r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -4059,13 +4120,13 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Aorist Indicative Active for Stop Verbs",
-        "content": "### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nAorist Active Indicative -- \u1f14\u03c0\u03b5\u03bc\u03c8\u03b1, _I sent_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1\u03c2** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b5(\u03bd)** | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n#### Aorist Indicative Active for Stop Verbs\r\n\r\nThe aorist stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n  \r\n\r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u1f14\u03bb\u03b5**\u03be**\u03b1, _I said_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u1f14\u03c0\u03b5\u03bc**\u03c8**\u03b1, _I sent_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u1f14\u03c0\u03b5\u03b9**\u03c3**\u03b1, _I persuaded_\r\n\r\n####\r\n\r\n",
-        "grammar_ref": 61,
+        "title": "Verbs: Aorist Indicative Active (Stop Verbs)",
+        "content": "#### Aorist Indicative Active for Stop Verbs\r\n\r\nThe aorist stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n \r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u1f14\u03bb\u03b5**\u03be**\u03b1, _I said_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u1f14\u03c0\u03b5\u03bc**\u03c8**\u03b1, _I sent_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u1f14\u03c0\u03b5\u03b9**\u03c3**\u03b1, _I persuaded_\r\n\r\n####\r\n\r\n***\r\n\r\n### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nAorist Active Indicative -- \u1f14\u03c0\u03b5\u03bc\u03c8\u03b1, _I sent_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1\u03c2** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b5(\u03bd)** | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n",
+        "grammar_ref": null,
         "related_content": [
+            456,
             458,
-            454,
-            456
+            454
         ],
         "source_lang": 4
     },
@@ -4075,9 +4136,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Aorist Indicative Active_intro",
+        "title": "Startpage: Aorist Indicative Active_intro",
         "content": "> _When in doubt, aorist._ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Aorist Indicative Active\r\n\r\n* * *\r\n\r\nThis is a good time to carry on learning the verbs. Here you will learn about\r\nthe **aorist indicative active**!",
-        "grammar_ref": 60,
+        "grammar_ref": null,
         "related_content": [
             458
         ],
@@ -4089,12 +4150,12 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Aorist Indicative Active_Asigmatic_conjugation",
-        "content": "### \u03bb\u03b5\u03af\u03c0\u03c9, _I leave_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03b9\u03c0\u03bf\u03bd, _I left_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03b9\u03c0**\u03bf\u03bd** | **\u1f10**\u03bb\u03af\u03c0**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03b9\u03c0**\u03b5\u03c2** | **\u1f10**\u03bb\u03af\u03c0**\u03b5\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03b9\u03c0**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03b9\u03c0**\u03bf\u03bd**  \r\n  \r\n#### Aorist Indicative Active: Second Aorist\r\n\r\nIn the **third principle part** of the verbs you have seen so far, the ending\r\nfor the first person singular has always been -\u03b1. This is becasue the verbs\r\nyou have seen so far have **first aorists**. There are, however, some verbs\r\nwith **second aorists**. For these **the endings change**, despite the meaning\r\nremaining the same as first aorists.\r\n\r\nFor example, in the case of \u03bb\u03b5\u03af\u03c0\u03c9, _to leave_, the aorist indicative active is\r\n\u1f14\u03bb\u03b9\u03c0\u03bf\u03bd. **The endings of the second aorist active resemble those of the\r\nimperfect.**\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03b9\u03c0\r\n\r\n* * *\r\n\r\n|  \u03bf\u03bd\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
+        "title": "Verbs: Aorist Indicative Active (Second)",
+        "content": "#### Aorist Indicative Active: Second Aorist\r\n\r\nIn the **third principle part** of the verbs you have seen so far, the ending\r\nfor the first person singular has always been -\u03b1. This is becasue the verbs\r\nyou have seen so far have **first aorists**. There are, however, some verbs\r\nwith **second aorists**. For these **the endings change**, despite the meaning\r\nremaining the same as first aorists.\r\n\r\nFor example, in the case of \u03bb\u03b5\u03af\u03c0\u03c9, _to leave_, the aorist indicative active is\r\n\u1f14\u03bb\u03b9\u03c0\u03bf\u03bd. **The endings of the second aorist active resemble those of the\r\nimperfect.**\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03b9\u03c0\r\n\r\n* * *\r\n\r\n|  \u03bf\u03bd\r\n\r\n* * *  \r\n  \r\n---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n### \u03bb\u03b5\u03af\u03c0\u03c9, _I leave_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03b9\u03c0\u03bf\u03bd, _I left_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03b9\u03c0**\u03bf\u03bd** | **\u1f10**\u03bb\u03af\u03c0**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03b9\u03c0**\u03b5\u03c2** | **\u1f10**\u03bb\u03af\u03c0**\u03b5\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03b9\u03c0**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03b9\u03c0**\u03bf\u03bd**  \r\n  \r\n",
         "grammar_ref": 44,
         "related_content": [
-            458,
-            454
+            456,
+            452
         ],
         "source_lang": 4
     },
@@ -4104,12 +4165,15 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Aorist Indicative Active_Sigmatic_conjugation",
-        "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03c5\u03c3\u03b1, _I untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03c5\u03c3**\u03b1** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03c2** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03c5\u03c3**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03bd**  \r\n  \r\n#### Aorist Indicative Active\r\n\r\nThe aorist can have many different endings. The general rule, however, is that\r\nthe aorist can be either **sigmatic** (meaning with an added \u03c3) or\r\n**asigmatic** (without \u03c3).\r\n\r\nTo form the sigmatic aorist indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n**Add the augment \u1f10** (just like you did for the imperfect). \r\n  3. **Add a \u03c3** to get the sigmatic aorist stem.   \r\ne.g. \u1f14\u03bb\u03c5\u03c3-\r\n\r\n  4. **Add the endings** from the table to indicate the person and number.   \r\ne.g. \u1f10\u03bb\u03cd\u03c3\u03b1\u03bc\u03b5\u03bd, _We untied_\r\n\r\nThe aorist then becomes the **third principle part** of a verb.\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03c5\r\n\r\n* * *\r\n\r\n|  \u03c3\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  ****\u03c3****  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
+        "title": "Verbs: Aorist Indicative Active (First)",
+        "content": "#### Aorist Indicative Active\r\n\r\nThe aorist can have many different endings. The general rule, however, is that\r\nthe aorist can be either **sigmatic** (meaning with an added \u03c3) or\r\n**asigmatic** (without \u03c3).\r\n\r\nTo form the sigmatic aorist indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n**Add the augment \u1f10** (just like you did for the imperfect). \r\n  3. **Add a \u03c3** to get the sigmatic aorist stem.   \r\ne.g. \u1f14\u03bb\u03c5\u03c3-\r\n\r\n  4. **Add the endings** from the table to indicate the person and number.   \r\ne.g. \u1f10\u03bb\u03cd\u03c3\u03b1\u03bc\u03b5\u03bd, _We untied_\r\n\r\nThe aorist then becomes the **third principle part** of a verb.\r\n\r\n* * *\r\n\r\nThe Parts of an Aorist Tense Verb\r\n\r\n\u1f14\r\n\r\n* * *\r\n\r\n|  \u03bb\u03c5\r\n\r\n* * *\r\n\r\n|  \u03c3\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  ****\u03c3****  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nAorist Indicative Active -- \u1f14\u03bb\u03c5\u03c3\u03b1, _I untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03bb\u03c5\u03c3**\u03b1** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03c2** | **\u1f10**\u03bb\u03cd\u03c3**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03bb\u03c5\u03c3**\u03b5(\u03bd)** | **\u1f14**\u03bb\u03c5\u03c3**\u03b1\u03bd**  \r\n  \r\n",
         "grammar_ref": 43,
         "related_content": [
             458,
-            454
+            451,
+            452,
+            453,
+            455
         ],
         "source_lang": 4
     },
@@ -4131,26 +4195,14 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Aorist Indicative Active_translation",
-        "content": "### Aorist Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | had  \r\n2nd | You | had  \r\n3rd | He/She/It | had\r\n **Plural**  \r\n1st | We | had  \r\n2nd | You | had  \r\n3rd | They | had\r\n\r\n* * *\r\n  \r\n### Aorist Indicative Active\r\n\r\n  * The**aorist tense**describes an action in the past time with simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _I **heard** a noise.\r\nSuddenly darkness **fell**._\r\n\r\n* * *\r\n\r\n### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.",
-        "grammar_ref": 60,
+        "title": "Verbs: Aorist Indicative Active (Translation)",
+        "content": "### Aorist Indicative Active\r\n\r\n  * The**aorist tense**describes an action in the past time with simple aspect (i.e. fixed moment in time).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _I **heard** a noise.\r\nSuddenly darkness **fell**._\r\n\r\n* * *\r\n\r\n### Aorist Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | had  \r\n2nd | You | had  \r\n3rd | He/She/It | had\r\n **Plural**  \r\n1st | We | had  \r\n2nd | You | had  \r\n3rd | They | had\r\n\r\n* * *\r\n\r\n### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
     "model": "app.content",
     "pk": 458
-},
-{
-    "fields": {
-        "target_lang": 5,
-        "title": "Verbs: Aorist Indicative Active_Asigmatic_examples",
-        "content": "#### Aorist Indicative Active\r\n\r\nThe following is a list of verbs with their corresponding aorists that can be\r\noften found in Ancient Greek texts. Notice how all of these have **asigmatic**\r\naorists.\r\n\r\nPresent | Aorist | Note  \r\n---|---|---  \r\n\u1f00\u03b3\u03b3\u03ad\u03bb\u03bb\u03c9 (I announce) | **\u1f24\u03b3\u03b3\u03b5\u03b9\u03bb\u03b1 | The augment has changed from \u03b5 to \u03b7\r\nfollowing a merge of \u03b1 \\+ \u03b5  \r\n\u03ba\u03c1\u03af\u03bd\u03c9 (I judge) | **\u1f14\u03ba\u03c1\u03b9\u03bd\u03b1 |  \r\n\u03c0\u03b5\u03c1\u03b1\u03af\u03bd\u03c9 (I finish) | **\u1f10\u03c0\u03ad\u03c1\u03b1\u03bd\u03b1 |\r\n",
-        "grammar_ref": 44,
-        "related_content": [],
-        "source_lang": 4
-    },
-    "model": "app.content",
-    "pk": 459
 },
 {
     "fields": {
@@ -22235,5 +22287,2255 @@
     },
     "model": "admin.logentry",
     "pk": 1002
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:54:27.102Z",
+        "object_repr": "Nouns: Dative Case_intro",
+        "object_id": "443",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1003
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:54:36.760Z",
+        "object_repr": "Nouns: Dative Case",
+        "object_id": "443",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1004
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:55:08.452Z",
+        "object_repr": "Nouns: Dative Case (Meaning \"in\")",
+        "object_id": "431",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1005
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:55:53.329Z",
+        "object_repr": "Nouns: Dative Case (Original Example)",
+        "object_id": "442",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1006
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:56:33.700Z",
+        "object_repr": "Nouns: Dative Case_originalexample1",
+        "object_id": "432",
+        "change_message": "Changed grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1007
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-04T17:56:55.354Z",
+        "object_repr": "Nouns: Dative Case_originalexample1",
+        "object_id": "432",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1008
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:57:20.460Z",
+        "object_repr": "Nouns: Dative Case",
+        "object_id": "443",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1009
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:58:22.139Z",
+        "object_repr": "Nouns: Dative Case (Original Example)",
+        "object_id": "442",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1010
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T17:59:56.106Z",
+        "object_repr": "Nouns: Vocative Case",
+        "object_id": "444",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1011
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:00:51.432Z",
+        "object_repr": "Nouns: Vocative Case",
+        "object_id": "444",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1012
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:01:48.223Z",
+        "object_repr": "Nouns: Vocative Case",
+        "object_id": "444",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1013
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:02:49.167Z",
+        "object_repr": "Nouns: Accusative Case (Direct Object)",
+        "object_id": "439",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1014
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:04:42.858Z",
+        "object_repr": "Nouns: Third Declension (Consonant Stem)",
+        "object_id": "302",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1015
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:05:54.678Z",
+        "object_repr": "Nouns: Third Declension (Consonant Stem - Neuter Nouns)",
+        "object_id": "296",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1016
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:08:53.611Z",
+        "object_repr": "Nouns: Third Declension (Dative Ending)",
+        "object_id": "299",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1017
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:09:45.463Z",
+        "object_repr": "Nouns: Third Declension (Original Example)",
+        "object_id": "301",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1018
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:12:40.968Z",
+        "object_repr": "Nouns: Third Declension (Dative Ending)",
+        "object_id": "299",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1019
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:14:51.120Z",
+        "object_repr": "Startpage: Present Indicative Active_intro",
+        "object_id": "375",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1020
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:17:29.992Z",
+        "object_repr": "Verbs: Present Indicative Active (How to translate)",
+        "object_id": "373",
+        "change_message": "Changed title and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1021
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:19:21.529Z",
+        "object_repr": "Verbs: Present Indicative Active_conjugation",
+        "object_id": "377",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1022
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:19:39.291Z",
+        "object_repr": "Verbs: Present Indicative Active (How to translate)",
+        "object_id": "373",
+        "change_message": "Changed grammar_ref and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1023
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:20:13.431Z",
+        "object_repr": "Verbs: Present Indicative Active",
+        "object_id": "377",
+        "change_message": "Changed title and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1024
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:20:50.225Z",
+        "object_repr": "Verbs: Present Indicative Active (To Be)",
+        "object_id": "371",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1025
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:21:11.688Z",
+        "object_repr": "Verbs: Present Indicative Active (Original Example)",
+        "object_id": "374",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1026
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:21:20.730Z",
+        "object_repr": "Verbs: Present Indicative Active",
+        "object_id": "377",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1027
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:22:16.042Z",
+        "object_repr": "Verbs: Present Indicative Active",
+        "object_id": "377",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1028
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:24:37.618Z",
+        "object_repr": "Verbs: Present Indicative Active (To Be)",
+        "object_id": "371",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1029
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:24:53.588Z",
+        "object_repr": "Verbs: Present Indicative Active (To Be)",
+        "object_id": "371",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1030
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:25:18.625Z",
+        "object_repr": "Verbs: Present Indicative Active",
+        "object_id": "377",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1031
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-04T18:27:10.091Z",
+        "object_repr": "Present Tense Active",
+        "object_id": "19",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1032
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-04T18:28:22.007Z",
+        "object_repr": "Verbs Present Tense",
+        "object_id": "2",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1033
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-05T11:28:31.274Z",
+        "object_repr": "Alphabet",
+        "object_id": "20",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1034
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-05T11:30:04.768Z",
+        "object_repr": "Alphabet",
+        "object_id": "64",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1035
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:30:59.928Z",
+        "object_repr": "Alphabet: Alpha",
+        "object_id": "252",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1036
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:31:30.437Z",
+        "object_repr": "Alphabet",
+        "object_id": "20",
+        "change_message": "Changed graphic.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1037
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:31:50.653Z",
+        "object_repr": "Alphabet",
+        "object_id": "20",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1038
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:32:08.069Z",
+        "object_repr": "Participles",
+        "object_id": "6",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1039
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:32:15.841Z",
+        "object_repr": "Alphabet",
+        "object_id": "20",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1040
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:33:06.361Z",
+        "object_repr": "Alphabet",
+        "object_id": "20",
+        "change_message": "Changed graphic.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1041
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:33:57.262Z",
+        "object_repr": "Alphabet",
+        "object_id": "20",
+        "change_message": "Changed graphic.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1042
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:34:15.090Z",
+        "object_repr": "Alphabet",
+        "object_id": "252",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1043
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:35:33.300Z",
+        "object_repr": "Alphabet",
+        "object_id": "252",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1044
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:36:13.859Z",
+        "object_repr": "Alphabet",
+        "object_id": "252",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1045
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T11:36:17.378Z",
+        "object_repr": "Alphabet",
+        "object_id": "252",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1046
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:03:51.070Z",
+        "object_repr": "Alphabet: Table",
+        "object_id": "272",
+        "change_message": "Changed grammar_ref and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1047
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:04:07.443Z",
+        "object_repr": "Alphabet",
+        "object_id": "252",
+        "change_message": "Changed grammar_ref and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1048
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:04:20.583Z",
+        "object_repr": "Alphabet: Alpha",
+        "object_id": "252",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1049
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:04:30.866Z",
+        "object_repr": "Alphabet",
+        "object_id": "272",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1050
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:05:19.129Z",
+        "object_repr": "Alphabet: Beta",
+        "object_id": "261",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1051
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:05:43.068Z",
+        "object_repr": "Alphabet: Chi",
+        "object_id": "256",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1052
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:05:59.352Z",
+        "object_repr": "Alphabet: Delta",
+        "object_id": "257",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1053
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:06:34.657Z",
+        "object_repr": "Alphabet: Epsilon",
+        "object_id": "271",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1054
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:07:08.173Z",
+        "object_repr": "Alphabet: Eta",
+        "object_id": "254",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1055
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:07:23.929Z",
+        "object_repr": "Alphabet: Gamma",
+        "object_id": "269",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1056
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:07:40.869Z",
+        "object_repr": "Alphabet: Iota",
+        "object_id": "255",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1057
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:07:57.004Z",
+        "object_repr": "Alphabet: Kappa",
+        "object_id": "258",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1058
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:08:13.259Z",
+        "object_repr": "Alphabet: Lambda",
+        "object_id": "264",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1059
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:08:29.408Z",
+        "object_repr": "Alphabet: Mu",
+        "object_id": "251",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1060
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:08:45.469Z",
+        "object_repr": "Alphabet: Nu",
+        "object_id": "259",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1061
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:08:58.416Z",
+        "object_repr": "Alphabet: Omega",
+        "object_id": "263",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1062
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:09:11.496Z",
+        "object_repr": "Alphabet: Omicron",
+        "object_id": "277",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1063
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:09:28.676Z",
+        "object_repr": "Alphabet: Phi",
+        "object_id": "278",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1064
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:09:43.835Z",
+        "object_repr": "Alphabet: Pi",
+        "object_id": "273",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1065
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:09:59.483Z",
+        "object_repr": "Alphabet: Psi",
+        "object_id": "265",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1066
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:10:15.661Z",
+        "object_repr": "Alphabet: Rho",
+        "object_id": "266",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1067
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:10:53.839Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1068
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:11:13.410Z",
+        "object_repr": "Alphabet: Tau",
+        "object_id": "275",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1069
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:11:38.769Z",
+        "object_repr": "Alphabet: Theta",
+        "object_id": "276",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1070
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:11:56.317Z",
+        "object_repr": "Alphabet: Upsilon",
+        "object_id": "274",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1071
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:12:11.936Z",
+        "object_repr": "Alphabet: Xi",
+        "object_id": "262",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1072
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:12:28.386Z",
+        "object_repr": "Alphabet: Zeta",
+        "object_id": "260",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1073
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:14:30.561Z",
+        "object_repr": "Alphabet",
+        "object_id": "20",
+        "change_message": "Changed graphic.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1074
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:14:37.489Z",
+        "object_repr": "Alphabet",
+        "object_id": "20",
+        "change_message": "Changed graphic.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1075
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:26:16.953Z",
+        "object_repr": "Alphabet",
+        "object_id": "20",
+        "change_message": "Changed graphic.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1076
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:28:16.802Z",
+        "object_repr": "Verbs: Future Indicative Active",
+        "object_id": "419",
+        "change_message": "Changed title and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1077
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:28:26.377Z",
+        "object_repr": "Verbs: Future Indicative Active",
+        "object_id": "419",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1078
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:29:47.640Z",
+        "object_repr": "Verbs: Future Indicative Active (Stop Verbs)",
+        "object_id": "423",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1079
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:30:14.706Z",
+        "object_repr": "Verbs: Future Indicative Active (Original Example)",
+        "object_id": "420",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1080
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:30:39.267Z",
+        "object_repr": "Verbs: Future Indicative Active (To Be)",
+        "object_id": "418",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1081
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:30:56.828Z",
+        "object_repr": "Verbs: Future Indicative Active (Original Example)",
+        "object_id": "420",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1082
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:31:20.473Z",
+        "object_repr": "Verbs: Future Indicative Active (Stop Verbs)",
+        "object_id": "423",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1083
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:31:52.422Z",
+        "object_repr": "Verbs: Future Indicative Active (Translation)",
+        "object_id": "416",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1084
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:32:14.430Z",
+        "object_repr": "Verbs: Future Indicative Active (Translation)",
+        "object_id": "416",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1085
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:32:53.102Z",
+        "object_repr": "Verbs: Future Indicative Active (Translation)",
+        "object_id": "416",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1086
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:39:04.429Z",
+        "object_repr": "Verbs: Imperfect Indicative Active",
+        "object_id": "311",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1087
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:41:11.137Z",
+        "object_repr": "Verbs: Imperfect Indicative Active (Translation)",
+        "object_id": "309",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1088
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:41:40.132Z",
+        "object_repr": "Verbs: Imperfect Indicative Active (To Be)",
+        "object_id": "312",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1089
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:42:28.126Z",
+        "object_repr": "Verbs: Imperfect Indicative Active",
+        "object_id": "311",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1090
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:43:03.927Z",
+        "object_repr": "Verbs: Imperfect Indicative Active (Translation)",
+        "object_id": "309",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1091
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:50:10.930Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Sigmatic)",
+        "object_id": "456",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1092
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:50:23.159Z",
+        "object_repr": "Verbs: Aorist Indicative Active_intro",
+        "object_id": "454",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1093
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:50:33.522Z",
+        "object_repr": "Startpage: Aorist Indicative Active_intro",
+        "object_id": "454",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1094
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:50:46.166Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Translation)",
+        "object_id": "458",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1095
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:51:00.086Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Stop Verbs)",
+        "object_id": "453",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1096
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:51:21.476Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Sigmatic)",
+        "object_id": "456",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1097
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:51:49.461Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Stop Verbs)",
+        "object_id": "453",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1098
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:52:00.214Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Stop Verbs)",
+        "object_id": "453",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1099
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:52:06.827Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Stop Verbs)",
+        "object_id": "453",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1100
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:52:30.331Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Translation)",
+        "object_id": "458",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1101
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:52:43.698Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Translation)",
+        "object_id": "458",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1102
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:52:48.960Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Stop Verbs)",
+        "object_id": "453",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1103
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:52:53.202Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Sigmatic)",
+        "object_id": "456",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1104
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:53:10.424Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Asigmatic)",
+        "object_id": "452",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1105
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:53:36.719Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Asigmatic)",
+        "object_id": "452",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1106
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:54:02.141Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Asigmatic)",
+        "object_id": "455",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1107
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:54:11.591Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Asigmatic)",
+        "object_id": "455",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1108
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:55:23.835Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Examples)",
+        "object_id": "451",
+        "change_message": "Changed title, grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1109
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-05T13:55:42.584Z",
+        "object_repr": "Verbs: Aorist Indicative Active_Asigmatic_examples",
+        "object_id": "459",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1110
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T13:59:16.079Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Sigmatic)",
+        "object_id": "456",
+        "change_message": "Changed grammar_ref and related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1111
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:03:27.819Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Asigmatic 2)",
+        "object_id": "455",
+        "change_message": "Changed title, grammar_ref, related_content and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1112
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:03:42.364Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Asigmatic 1)",
+        "object_id": "452",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1113
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:04:36.124Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Asigmatic 2)",
+        "object_id": "455",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1114
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:05:02.732Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Second)",
+        "object_id": "455",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1115
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:05:12.148Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Asigmatic)",
+        "object_id": "452",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1116
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:05:44.732Z",
+        "object_repr": "Verbs: Aorist Indicative Active (First)",
+        "object_id": "456",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1117
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:06:39.051Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Second)",
+        "object_id": "455",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1118
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:10:58.623Z",
+        "object_repr": "Diacritics: Punctuation",
+        "object_id": "268",
+        "change_message": "Changed title and grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1119
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:12:52.871Z",
+        "object_repr": "Diacritics: Dipthongs",
+        "object_id": "244",
+        "change_message": "Changed grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1120
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:13:33.050Z",
+        "object_repr": "Diacritics: Dipthongs",
+        "object_id": "244",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1121
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:14:00.003Z",
+        "object_repr": "Diacritics: Dipthongs",
+        "object_id": "244",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1122
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:15:32.605Z",
+        "object_repr": "Diacritics: Dipthongs",
+        "object_id": "244",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1123
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:16:48.282Z",
+        "object_repr": "Diacritics: Dipthongs",
+        "object_id": "244",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1124
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:17:24.578Z",
+        "object_repr": "Diacritics: Dipthongs",
+        "object_id": "244",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1125
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:18:56.085Z",
+        "object_repr": "Diacritics: Dipthongs",
+        "object_id": "244",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1126
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-05T14:19:23.962Z",
+        "object_repr": "Diacritics: Dipthongs",
+        "object_id": "244",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1127
 }
 ]
