@@ -1,0 +1,23 @@
+{
+  "name": "typegeek",
+  "version": "0.0.1",
+  "description": "Type Roman characters and produce polytonic Greek in unicode.",
+  "main": "src/typegeek.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlent/typegeek"
+  },
+  "author": "Monica Lent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlent/typegeek/issues"
+  },
+  "homepage": "https://github.com/mlent/typegeek",
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.6.0"
+  }
+}
