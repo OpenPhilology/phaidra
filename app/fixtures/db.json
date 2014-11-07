@@ -631,18 +631,6 @@
     "fields": {
         "category": 4,
         "tasks": null,
-        "title": "Reading Greek - Ancient Greek Alphabet",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1",
-        "query": "lang=grc",
-        "ref": "s1"
-    },
-    "model": "app.grammar",
-    "pk": 1
-},
-{
-    "fields": {
-        "category": 4,
-        "tasks": null,
         "title": "Reading Greek - Long and Short Vowels",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s4",
         "query": "lang=grc",
@@ -703,30 +691,6 @@
     "fields": {
         "category": 4,
         "tasks": null,
-        "title": "Reading Greek - Gamma Nasal",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=ss19",
-        "query": "pos=noun&lemma__contains=\u03b3\u03b3",
-        "ref": "s19#a"
-    },
-    "model": "app.grammar",
-    "pk": 7
-},
-{
-    "fields": {
-        "category": 4,
-        "tasks": null,
-        "title": "Reading Greek - Introduction to Accents",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
-        "query": "lang=grc",
-        "ref": "s149"
-    },
-    "model": "app.grammar",
-    "pk": 8
-},
-{
-    "fields": {
-        "category": 4,
-        "tasks": null,
         "title": "Reading Greek - Acute Accents",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
         "query": "lang=grc",
@@ -734,30 +698,6 @@
     },
     "model": "app.grammar",
     "pk": 9
-},
-{
-    "fields": {
-        "category": 4,
-        "tasks": null,
-        "title": "Reading Greek - Circumflex Accents",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
-        "query": "lang=grc",
-        "ref": "s149#b"
-    },
-    "model": "app.grammar",
-    "pk": 10
-},
-{
-    "fields": {
-        "category": 4,
-        "tasks": null,
-        "title": "Reading Greek - Grave Accents",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
-        "query": "lang=grc",
-        "ref": "s149#c"
-    },
-    "model": "app.grammar",
-    "pk": 11
 },
 {
     "fields": {
@@ -823,18 +763,6 @@
     "fields": {
         "category": 1,
         "tasks": null,
-        "title": "The Alpha or First Declension",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s216",
-        "query": "pos=noun&posAdd=h_hs",
-        "ref": "s216"
-    },
-    "model": "app.grammar",
-    "pk": 17
-},
-{
-    "fields": {
-        "category": 1,
-        "tasks": null,
         "title": "First Declension Nouns - Feminine (\u03b1-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s217#a",
         "query": "pos=noun&gender=fem&lemma__endswith=\u03b1&posAdd__contains=h_hs",
@@ -890,18 +818,6 @@
     },
     "model": "app.grammar",
     "pk": 22
-},
-{
-    "fields": {
-        "category": 1,
-        "tasks": 1,
-        "title": "Second Declension Nouns - Feminine",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s232",
-        "query": "pos=noun&gender=fem&posAdd__contains=os_ou",
-        "ref": "s232"
-    },
-    "model": "app.grammar",
-    "pk": 23
 },
 {
     "fields": {
@@ -1111,18 +1027,6 @@
     "fields": {
         "category": 2,
         "tasks": null,
-        "title": "The Future Tense - Introduction to Future, Active, Indicative",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s532",
-        "query": "pos=verb&tense=fut&mood=ind&voice=act",
-        "ref": "s532#b"
-    },
-    "model": "app.grammar",
-    "pk": 41
-},
-{
-    "fields": {
-        "category": 2,
-        "tasks": null,
         "title": "The Future Tense - Active, Indicative for Stop Verbs",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s537",
         "query": "pos=verb&tense=fut&mood=ind&voice=act&lemma__endswith=\u03c0\u03c9",
@@ -1243,18 +1147,6 @@
     "fields": {
         "category": 1,
         "tasks": null,
-        "title": "The Genitive Case - Partitive",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1306",
-        "query": "pos=noun&case=gen",
-        "ref": "s1306"
-    },
-    "model": "app.grammar",
-    "pk": 52
-},
-{
-    "fields": {
-        "category": 1,
-        "tasks": null,
         "title": "The Genitive Case - Comparative",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1315",
         "query": "pos=noun&case=gen",
@@ -1274,18 +1166,6 @@
     },
     "model": "app.grammar",
     "pk": 54
-},
-{
-    "fields": {
-        "category": 1,
-        "tasks": null,
-        "title": "The Dative Case - Instrumental",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1506",
-        "query": "pos=noun&case=dat",
-        "ref": "s1506"
-    },
-    "model": "app.grammar",
-    "pk": 55
 },
 {
     "fields": {
@@ -1322,18 +1202,6 @@
     },
     "model": "app.grammar",
     "pk": 58
-},
-{
-    "fields": {
-        "category": 2,
-        "tasks": 2,
-        "title": "The Aorist Tense",
-        "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s542",
-        "query": "pos=verb&tense=aor",
-        "ref": "s542,s546"
-    },
-    "model": "app.grammar",
-    "pk": 60
 },
 {
     "fields": {
@@ -3356,7 +3224,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Adjectives: First and Second Declension (Three-ending)",
-        "content": "## How First and Second Declension Adjectives work\r\n\r\nJust like articles and nouns have gender, number and case, so do all the\r\nadjectives. Like the article, **an adjective must agree in gender, number and\r\ncase with the noun it describes**.\r\n\r\nHowever, this does not mean that the ending of the article and that of the\r\nnoun are always identical; there are exceptions where, though the adjective\r\nand noun agree, the endings might look different (e.g. \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2 \u03c8\u03c5\u03c7\u03ae, meaning\r\n_an unjust soul_).\r\n\r\nAdjectives agreeing with first and second declension nouns fall into two\r\ngroups:\r\n\r\n  * **Three-ending Adjectives**  \r\nThere are separate sets of endings for each of the three genders.  \r\n  \r\n\r\n  * **Two-ending Adjectives**  \r\nMasculine and Feminine nouns share one set of endings, while neuter has a\r\ndifferent set.  \r\n  \r\n\r\n* * *\r\n\r\nAs you can see from the table, the adjective \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd has the\r\nsame endings as first declension nouns in the feminine, and as second\r\ndeclension nouns in the masculine and neuter.\r\n\r\nExample: \u1f41 \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2, meaning _the just man._\r\n\r\n### \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd -- _just_\r\n\r\nThree-ending Adjective\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1fb3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \r\nAcc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03bd**| \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \r\n**Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**\r\n\r\n***\r\n\r\n##### Word Order and Adjectives\r\n\r\nThe meaning given to the article, noun, and its agreeing adjective can vary\r\nslightly according to **word order**. So, you might not always find these\r\nthree components (article, noun, adjective) in the same sequence.\r\n\r\nFor example: \u1f41 \u1f00\u03b3\u03b1\u03b8\u1f78\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 means _the good man_, but \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u1f41 \u1f00\u03b3\u03b1\u03b8\u03bf\u03c2\r\nmeans _a man, the good one_\r\n\r\n",
+        "content": "## How First and Second Declension Adjectives work\r\n\r\nJust like articles and nouns have gender, number and case, so do all the\r\nadjectives. Like the article, **an adjective must agree in gender, number and\r\ncase with the noun it describes**.\r\n\r\nHowever, this does not mean that the ending of the article and that of the\r\nnoun are always identical; there are exceptions where, though the adjective\r\nand noun agree, the endings might look different (e.g. \u1f04\u03b4\u03b9\u03ba\u03bf\u03c2 \u03c8\u03c5\u03c7\u03ae, meaning\r\n_an unjust soul_).\r\n\r\nAdjectives agreeing with first and second declension nouns fall into two\r\ngroups:\r\n\r\n  * **Three-ending Adjectives**  \r\nThere are separate sets of endings for each of the three genders.  \r\n  \r\n\r\n  * **Two-ending Adjectives**  \r\nMasculine and Feminine nouns share one set of endings, while neuter has a\r\ndifferent set.  \r\n  \r\n\r\n* * *\r\n\r\nAs you can see from the table, the adjective \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd has the\r\nsame endings as first declension nouns in the feminine, and as second\r\ndeclension nouns in the masculine and neuter.\r\n\r\nExample: \u1f41 \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2, meaning _the just man._\r\n\r\n### \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03c2, \u03b4\u03b9\u03ba\u03b1\u03af\u03b1, \u03b4\u03af\u03ba\u03b1\u03b9\u03bf\u03bd -- _just_\r\n\r\nThree-ending Adjective\r\n\r\n\r\n| Masc. | Fem. | Neut.  \r\n---|---|---|---  \r\n**Singular**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1fb3** | \u03b4\u03b9\u03ba\u03b1\u03af**\u1ff3** | \r\nAcc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03bd**| \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b5** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03bd** | \r\n**Plural**  \r\nNom. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nGen. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03c9\u03bd**  \r\nDat. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03b9\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03b9\u03c2**  \r\nAcc. | \u03b4\u03b9\u03ba\u03b1\u03af**\u03bf\u03c5\u03c2** | \u03b4\u03b9\u03ba\u03b1\u03af**\u03b1\u03c2** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**  \r\nVoc. | \u03b4\u03af\u03ba\u03b1\u03b9**\u03bf\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1\u03b9** | \u03b4\u03af\u03ba\u03b1\u03b9**\u03b1**\r\n\r\n***\r\n\r\n##### Word Order and Adjectives\r\n\r\nThe meaning given to the article, noun, and its agreeing adjective can vary\r\nslightly according to **word order**. So, you might not always find these\r\nthree components (article, noun, adjective) in the same sequence.\r\n\r\nFor example: \u1f41 \u1f00\u03b3\u03b1\u03b8\u1f78\u03c2 \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 means _the good man_, but \u1f04\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u1f41 \u1f00\u03b3\u03b1\u03b8\u03bf\u03c2\r\nmeans _a man, the good one_\r\n\r\n",
         "grammar_ref": 28,
         "related_content": [
             284,
@@ -3762,7 +3630,7 @@
         "target_lang": 5,
         "title": "Verbs: Future Indicative Active (Stop Verbs)",
         "content": "## Future Indicative Active for Stop Verbs\r\n\r\nThe future stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u03bb\u03ad**\u03be**\u03c9, _I will say_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u03c0\u03ad\u03bc**\u03c8**\u03c9, _I will send_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n\r\n### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nFuture Indicative Active -- \u03c0\u03ad\u03bc\u03c8\u03c9, _I will send_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | \u03c0\u03ad\u03bc\u03c8**\u03c9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03bc\u03b5\u03bd**  \r\n2nd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9\u03c2** | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03c4\u03b5**  \r\n3rd | \u03c0\u03ad\u03bc\u03c8**\u03b5\u03b9** | \u03c0\u03ad\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n\r\n***\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u03c0\u03b5\u03af**\u03c3**\u03c9, _I will persuade_\r\n\r\n####\r\n  \r\n",
-        "grammar_ref": null,
+        "grammar_ref": 42,
         "related_content": [],
         "source_lang": 4
     },
@@ -4060,7 +3928,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Pluperfect Indicative Active_intro",
+        "title": "Startpage: Pluperfect Indicative Active_intro",
         "content": "![](/static/images/new_thuc.png) ![](/static/images/glasses.svg)\r\n\r\n> _Don't be tense... You'll be pluperfect!_ Thucydides _(ca 460 - 395 BC)_\r\n\r\n# Pluperfect Indicative Active\r\n\r\n* * *\r\n\r\nThis is a good time to learn about the\r\n**pluperfect indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab \\--.\r\n\r\n  1. Identify pluperfect indicative active verbs.\r\n  2. Conjugate pluperfect indicative active verbs.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
@@ -4084,10 +3952,12 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Pluperfect Indicative Active_conjugation",
-        "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPluperfect Indicative Active -- \u1f10\u03bb\u03b5\u03bb\u03cd\u03ba\u03b5\u03b9\u03bd, _I had untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f10**\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03bd** | **\u1f10**\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c2** | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c4\u03b5**  \r\n3rd | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9** | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c3\u03b1(\u03bd)**  \r\n  \r\n#### Pluperfect Indicative Active\r\n\r\nTo form the pluperfect indicative active:\r\n\r\n  1. **Take the fourth principle part** (the one for the perfect tense).   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1\r\n\r\n  2. **Remove the ending** (-\u03b1) to get the the perfect stem.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba-\r\n\r\n**Add the augment \u1f10**.   \r\ne.g. \u1f10\u03bb\u03ad\u03bb\u03c5\u03ba-\r\n\r\n  3. **Add the the endings you see in the table.**   \r\ne.g. \u1f10\u03bb\u03b5\u03bb\u03cd\u03ba\u03b5\u03b9\u03bd, meaning _I had untied_.\r\n\r\n* * *\r\n\r\nThe Parts of an Pluperfect Tense Verb\r\n\r\n\u1f10\r\n\r\n* * *\r\n\r\n|  \u03bb\u03b5\r\n\r\n* * *\r\n\r\n|  \u03bb\u03cd\r\n\r\n* * *\r\n\r\n|  \u03ba\r\n\r\n* * *\r\n\r\n|  \u03b5\u03b9\u03bd\r\n\r\n* * *  \r\n  \r\n---|---|---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Reduplication**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Suffix**  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
+        "title": "Verbs: Pluperfect Indicative Active",
+        "content": "#### Pluperfect Indicative Active\r\n\r\nTo form the pluperfect indicative active:\r\n\r\n  1. **Take the fourth principle part** (the one for the perfect tense).   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1\r\n\r\n  2. **Remove the ending** (-\u03b1) to get the the perfect stem.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba-\r\n\r\n**Add the augment \u1f10**.   \r\ne.g. \u1f10\u03bb\u03ad\u03bb\u03c5\u03ba-\r\n\r\n  3. **Add the the endings you see in the table.**   \r\ne.g. \u1f10\u03bb\u03b5\u03bb\u03cd\u03ba\u03b5\u03b9\u03bd, meaning _I had untied_.\r\n\r\n* * *\r\n\r\nThe Parts of an Pluperfect Tense Verb\r\n\r\n\u1f10\r\n\r\n* * *\r\n\r\n|  \u03bb\u03b5\r\n\r\n* * *\r\n\r\n|  \u03bb\u03cd\r\n\r\n* * *\r\n\r\n|  \u03ba\r\n\r\n* * *\r\n\r\n|  \u03b5\u03b9\u03bd\r\n\r\n* * *  \r\n  \r\n---|---|---|---|---  \r\n**Augment**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Reduplication**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Suffix**  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPluperfect Indicative Active -- \u1f10\u03bb\u03b5\u03bb\u03cd\u03ba\u03b5\u03b9\u03bd, _I had untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f10**\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03bd** | **\u1f10**\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c2** | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c4\u03b5**  \r\n3rd | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9** | **\u1f10**\u1f10\u03bb\u03b5\u03bb\u03cd\u03ba**\u03b5\u03b9\u03c3\u03b1(\u03bd)**  \r\n",
         "grammar_ref": null,
-        "related_content": [],
+        "related_content": [
+            447
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -4122,7 +3992,7 @@
         "target_lang": 5,
         "title": "Verbs: Aorist Indicative Active (Stop Verbs)",
         "content": "#### Aorist Indicative Active for Stop Verbs\r\n\r\nThe aorist stem of many verbs simply ends in \u03c3, as you just learned.\r\n\r\nBut sometimes, when adding the \u03c3 to the end, it **combines with the final\r\nletter of the present stem to form another letter**. Take a look at the three\r\ncategories below:\r\n\r\n \r\n#### \u03ba or \u03b3 or \u03c7 \\+ \u03c3 **\u03be**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03bb\u03ad**\u03b3**\u03c9, _I say_\r\n\r\n#### \u1f14\u03bb\u03b5**\u03be**\u03b1, _I said_\r\n\r\n####\r\n\r\n#### \u03c0 or \u03b2 or \u03c6 \\+ \u03c3 **\u03c8**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03ad\u03bc**\u03c0**\u03c9, _I send_\r\n\r\n#### \u1f14\u03c0\u03b5\u03bc**\u03c8**\u03b1, _I sent_\r\n\r\n####\r\n\r\n#### \u03c4 or \u03b4 or \u03b8 \\+ \u03c3 **\u03c3**\r\n\r\n* * *\r\n\r\nFor example:  \r\n\r\n#### \u03c0\u03b5\u03af**\u03b8**\u03c9, _I persuade_\r\n\r\n#### \u1f14\u03c0\u03b5\u03b9**\u03c3**\u03b1, _I persuaded_\r\n\r\n####\r\n\r\n***\r\n\r\n### \u03c0\u03ad\u03bc\u03c0\u03c9, _I send_\r\n\r\nAorist Active Indicative -- \u1f14\u03c0\u03b5\u03bc\u03c8\u03b1, _I sent_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b1\u03c2** | **\u1f10**\u03c0\u03ad\u03bc\u03c8**\u03b1\u03c4\u03b5**  \r\n3rd | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03b5(\u03bd)** | **\u1f14**\u03c0\u03b5\u03bc\u03c8**\u03bf\u03c5\u03c3\u03b9(\u03bd)**  \r\n  \r\n",
-        "grammar_ref": null,
+        "grammar_ref": 61,
         "related_content": [
             456,
             458,
@@ -4207,10 +4077,12 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Perfect Indicative Active_conjugation",
-        "content": "### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPerfect Indicative Active -- \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1, _I have untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u03bb\u03ad**\u03bb\u03c5**\u03ba\u03b1** | **\u03bb\u03b5**\u03bb\u03cd**\u03ba\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u03bb\u03ad**\u03bb\u03c5**\u03ba\u03b1\u03c2** | **\u03bb\u03b5**\u03bb\u03cd**\u03ba\u03b1\u03c4\u03b5**  \r\n3rd | **\u03bb\u03ad**\u03bb\u03c5**\u03ba\u03b5** | **\u03bb\u03b5**\u03bb\u03cd**\u03ba\u03b1\u03c3\u03b9(\u03bd)**  \r\n  \r\n#### Perfect Indicative Active\r\n\r\nTo form the perfect indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n**Add the augment \u03b5** (just like you did for the imperfect and aorist). \r\n  3. **Add the first letter of the stem** in front of the augment.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5-\r\n\r\n  4. **Add the suffix -\u03ba**.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba-.\r\n\r\n  5. **Add the the endings of the present indicative active**, except for the third person singular, where the ending can be either -\u03b5 or -\u03bf, depending on the verb.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1, meaning _I have untied_.\r\n\r\nThe perfect then becomes the **fourth principle part** of a verb.\r\n\r\n* * *\r\n\r\nThe Parts of an Perfect Tense Verb\r\n\r\n\u03bb\u03ad\r\n\r\n* * *\r\n\r\n|  \u03bb\u03c5\r\n\r\n* * *\r\n\r\n|  \u03ba\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---|---  \r\n**Reduplication**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Suffix**  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n\r\n",
+        "title": "Verbs: Perfect Indicative Active",
+        "content": "#### Perfect Indicative Active\r\n\r\nTo form the perfect indicative active:\r\n\r\n  1. **Take the present tense form**, also known as the first \"principle part\".   \r\ne.g. \u03bb\u03cd\u03c9\r\n\r\n  2. **Remove the ending** (-\u03c9) to get the the present stem.   \r\ne.g. \u03bb\u03cd-\r\n\r\n**Add the augment \u03b5** (just like you did for the imperfect and aorist). \r\n  3. **Add the first letter of the stem** in front of the augment.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5-\r\n\r\n  4. **Add the suffix -\u03ba**.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba-.\r\n\r\n  5. **Add the the endings of the present indicative active**, except for the third person singular, where the ending can be either -\u03b5 or -\u03bf, depending on the verb.   \r\ne.g. \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1, meaning _I have untied_.\r\n\r\nThe perfect then becomes the **fourth principle part** of a verb.\r\n\r\n* * *\r\n\r\nThe Parts of an Perfect Tense Verb\r\n\r\n\u03bb\u03ad\r\n\r\n* * *\r\n\r\n|  \u03bb\u03c5\r\n\r\n* * *\r\n\r\n|  \u03ba\r\n\r\n* * *\r\n\r\n|  \u03b1\r\n\r\n* * *  \r\n  \r\n---|---|---|---  \r\n**Reduplication**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Stem**  \r\n**\r\n\r\n* * *\r\n\r\n|  **Suffix**  \r\n\r\n* * *\r\n\r\n|  **Ending**  \r\n\r\n* * *\r\n### \u03bb\u03cd\u03c9, _I untie_\r\n\r\nPerfect Indicative Active -- \u03bb\u03ad\u03bb\u03c5\u03ba\u03b1, _I have untied_\r\n\r\nPerson | Singular | Plural  \r\n---|---|---  \r\n1st | **\u03bb\u03ad**\u03bb\u03c5**\u03ba\u03b1** | **\u03bb\u03b5**\u03bb\u03cd**\u03ba\u03b1\u03bc\u03b5\u03bd**  \r\n2nd | **\u03bb\u03ad**\u03bb\u03c5**\u03ba\u03b1\u03c2** | **\u03bb\u03b5**\u03bb\u03cd**\u03ba\u03b1\u03c4\u03b5**  \r\n3rd | **\u03bb\u03ad**\u03bb\u03c5**\u03ba\u03b5** | **\u03bb\u03b5**\u03bb\u03cd**\u03ba\u03b1\u03c3\u03b9(\u03bd)**  \r\n",
         "grammar_ref": 58,
-        "related_content": [],
+        "related_content": [
+            461
+        ],
         "source_lang": 4
     },
     "model": "app.content",
@@ -4219,9 +4091,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Perfect Indicative Active_translation",
-        "content": "##### Perfect Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | have had  \r\n2nd | You | have had  \r\n3rd | He/She/It | has had | **Plural**  \r\n1st | We | have had  \r\n2nd | You | have had  \r\n3rd | They | have had  \r\n  \r\n#### Perfect Indicative Active\r\n\r\nAs you remember from \"Introduction to Verbs\":\r\n\r\n  * The**perfect tense**Describes an action in the present time with completed aspect (i.e. fixed moment in time that has come to an end).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _I **have had** a long life.\r\nI **have lived**._\r\n\r\n* * *\r\n\r\n##### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\n",
-        "grammar_ref": 58,
+        "title": "Verbs: Perfect Indicative Active (Translation)",
+        "content": "#### Perfect Indicative Active\r\n\r\nAs you remember from \"Introduction to Verbs\":\r\n\r\n  * The**perfect tense**Describes an action in the present time with completed aspect (i.e. fixed moment in time that has come to an end).\r\n  * The**indicative mood**is used for factual statements and questions.\r\n  * The**active voice**means the subject of the verb is performing the action.\r\n\r\nHere are some examples of the aorist in English: _I **have had** a long life.\r\nI **have lived**._\r\n\r\n* * *\r\n##### Perfect Indicative Active, _To have_\r\n\r\nPerson | Subject | Verb  \r\n---|---|---  \r\n**Singular**  \r\n1st | I | have had  \r\n2nd | You | have had  \r\n3rd | He/She/It | has had | **Plural**  \r\n1st | We | have had  \r\n2nd | You | have had  \r\n3rd | They | have had  \r\n  \r\n##### Keep an eye out!\r\n\r\nRemember that unlike English verbs, the subject of the Greek verb is implied\r\nby the verb's ending. Therefore, it is not necessary for it to be accompanied\r\nby the personal pronouns _I, You, He/She/It, We, You, They_.\r\n\r\n",
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -4231,9 +4103,9 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Verbs: Perfect Indicative Active_intro",
+        "title": "Starpage: Perfect Indicative Active_intro",
         "content": "# Perfect Indicative Active\r\n\r\n* * *\r\n\r\nHere you will learn about the **perfect indicative active**!\r\n\r\n* * *\r\n\r\n## In this Section\r\n\r\nNew Skills New Vocab The Athenians go to Cyprus.\r\n\r\n  1. Identify perfect indicative active verbs.\r\n  2. Conjugate perfect indicative active verbs.\r\n\r\n",
-        "grammar_ref": 58,
+        "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
     },
@@ -24537,5 +24409,545 @@
     },
     "model": "admin.logentry",
     "pk": 1127
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:07:44.914Z",
+        "object_repr": "Adjectives: First and Second Declension (Three-ending)",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1128
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:08:45.675Z",
+        "object_repr": "Adjectives: First and Second Declension (Three-ending)",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1129
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:09:25.371Z",
+        "object_repr": "Adjectives: First and Second Declension (Three-ending)",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1130
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:09:56.561Z",
+        "object_repr": "Adjectives: First and Second Declension (Three-ending)",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1131
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:10:25.129Z",
+        "object_repr": "Adjectives: First and Second Declension (Three-ending)",
+        "object_id": "390",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1132
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:30:30.931Z",
+        "object_repr": "Starpage: Perfect Indicative Active_intro",
+        "object_id": "462",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1133
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:31:14.038Z",
+        "object_repr": "Verbs: Perfect Indicative Active_conjugation",
+        "object_id": "460",
+        "change_message": "Changed content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1134
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:31:27.497Z",
+        "object_repr": "Verbs: Perfect Indicative Active",
+        "object_id": "460",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1135
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:31:59.235Z",
+        "object_repr": "Verbs: Pluperfect Indicative Active",
+        "object_id": "450",
+        "change_message": "Changed title and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1136
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:32:25.696Z",
+        "object_repr": "Verbs: Perfect Indicative Active",
+        "object_id": "460",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1137
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:32:54.166Z",
+        "object_repr": "Verbs: Perfect Indicative Active_translation",
+        "object_id": "461",
+        "change_message": "Changed grammar_ref and content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1138
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:33:11.464Z",
+        "object_repr": "Verbs: Perfect Indicative Active (Translation)",
+        "object_id": "461",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1139
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:33:57.535Z",
+        "object_repr": "Starpage: Perfect Indicative Active_intro",
+        "object_id": "462",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1140
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:35:25.605Z",
+        "object_repr": "Startpage: Pluperfect Indicative Active_intro",
+        "object_id": "448",
+        "change_message": "Changed title.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1141
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:36:04.793Z",
+        "object_repr": "Verbs: Pluperfect Indicative Active",
+        "object_id": "450",
+        "change_message": "Changed related_content.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1142
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T15:42:47.831Z",
+        "object_repr": "Alphabet",
+        "object_id": "272",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1143
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T15:43:12.505Z",
+        "object_repr": "Reading Greek - Ancient Greek Alphabet",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1144
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T15:44:21.807Z",
+        "object_repr": "Reading Greek - Circumflex Accents",
+        "object_id": "10",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1145
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T15:45:28.162Z",
+        "object_repr": "Reading Greek - Gamma Nasal",
+        "object_id": "7",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1146
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T15:46:01.013Z",
+        "object_repr": "Reading Greek - Grave Accents",
+        "object_id": "11",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1147
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T15:47:43.867Z",
+        "object_repr": "Reading Greek - Introduction to Accents",
+        "object_id": "8",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1148
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T15:48:27.850Z",
+        "object_repr": "Second Declension Nouns - Feminine",
+        "object_id": "23",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1149
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T15:49:24.489Z",
+        "object_repr": "The Alpha or First Declension",
+        "object_id": "17",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1150
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T15:51:06.204Z",
+        "object_repr": "The Aorist Tense",
+        "object_id": "60",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1151
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T15:52:17.712Z",
+        "object_repr": "The Dative Case - Instrumental",
+        "object_id": "55",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1152
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T16:02:04.886Z",
+        "object_repr": "Verbs: Future Indicative Active",
+        "object_id": "419",
+        "change_message": "No fields changed.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1153
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T16:02:21.879Z",
+        "object_repr": "The Future Tense - Introduction to Future, Active, Indicative",
+        "object_id": "41",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1154
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-07T16:03:10.519Z",
+        "object_repr": "The Genitive Case - Partitive",
+        "object_id": "52",
+        "change_message": "",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1155
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T16:04:11.865Z",
+        "object_repr": "Verbs: Aorist Indicative Active (Stop Verbs)",
+        "object_id": "453",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1156
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T16:04:28.600Z",
+        "object_repr": "Verbs: Future Indicative Active (Stop Verbs)",
+        "object_id": "423",
+        "change_message": "Changed grammar_ref.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1157
 }
 ]
