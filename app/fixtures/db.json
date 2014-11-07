@@ -218,7 +218,7 @@
 {
     "fields": {
         "graphic": "alphabet/alpha.svg",
-        "name": "Alphabet"
+        "name": "The Alphabet "
     },
     "model": "app.category",
     "pk": 20
@@ -24949,5 +24949,23 @@
     },
     "model": "admin.logentry",
     "pk": 1157
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-07T16:22:54.319Z",
+        "object_repr": "The Alphabet ",
+        "object_id": "20",
+        "change_message": "Changed name.",
+        "user": [
+            "emily"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1158
 }
 ]
