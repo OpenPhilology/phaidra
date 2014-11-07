@@ -5,10 +5,6 @@ import os
 
 ################ set your dump's meta data #####################
 
-#document_CTS_greek = "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
-#author_in_source_lang = "Θουκυδίδης"
-#work_in_source_lang = "Πεντηκονταετία"
-#target_lang = "grc"
 path = os.path.dirname(os.path.abspath(__file__))
 dump_file = os.path.join(path, "pentecontaetia_dump.json")
 host = "http://localhost:7474/db/data/"

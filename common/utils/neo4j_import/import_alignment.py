@@ -1,19 +1,14 @@
 # coding: utf8
-#!/usr/bin/env python
-#from django.conf import settings
 from neo4jrestclient.client import GraphDatabase
 from xml.dom import minidom
-import os, sys
-
-sys.path.append('/opt/phaidra')
-
-from phaidra.settings import GRAPH_DATABASE_REST_URL
+import os
 
 ###### your alignment's meta data if you don't use the fabric file ######
 # The script assumes Alpheios alignment output with the references being unique in the document
 # It assumes Greek to be the L1 language.
 
 TARGET_LANGUAGE = 'en'
+GRAPH_DATABASE_REST_URL = 'http://localhost:7474/db/data/'
 
 ########################################################################
 
@@ -97,6 +92,7 @@ def save_sentence(nodes, sentence_ref, lang, d, document):
 
     print "Sentence: " + document.cts() + ":" + sentence_ref + " saved."
 
+
 """
 Before saving the alignment (xml) data for a language, make sure the relating document doesn't exist already. 
 """
@@ -107,7 +103,7 @@ def align(lang):
     # check if document already exists
     doc_name = gdb.query("""MATCH (d) WHERE d.CTS='""" + document.cts() + """' RETURN d.name""")    
     if len(doc_name) >= 1:
-        print "Document " + str(doc_name[0][0]) + " already exists."
+        print "Document " + str(doc_name[0][0].encode('utf-8')) + " already exists."
         return
         
     # create the document node at the very beginning
@@ -146,6 +142,8 @@ gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 
 if __name__ == "__main__":
     
+    import sys
+    
     if sys.argv[1] == 'lookup':
         print "Avaialble languages are: " + str(list(languages.keys())) + "."
         
@@ -159,8 +157,8 @@ if __name__ == "__main__":
     else:
         print "Language " + sys.argv[1] + " not available."
 
-else:
-    align(TARGET_LANGUAGE)
+#else:
+    #align(TARGET_LANGUAGE)
 
 
 
