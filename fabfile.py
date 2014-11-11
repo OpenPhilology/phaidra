@@ -63,12 +63,16 @@ def import_neo4j():
         local('python %s/common/utils/neo4j_import/pentecontaetia_import.py' % env.directory)
 
 @task
-def import_alignment():
+def import_alignment(lang):
     """
     Load alignment data.
+    Language parameter required.
+    E.g.: fab import_alignment:lang='en' for English or
+    fab import_alignment:lang='all' for saving the alignments of all available languages.
+    To get a list of all avaialable languages type: fab import_alignment:lang='lookup'
     """
     with virtualenv():
-        local('python %s/common/utils/neo4j_import/import_alignment.py' % env.directory)
+        local('python %s/common/utils/neo4j_import/import_alignment.py %s' % (env.directory, lang))
 
 ###############################
 # Backend Utility tasks       #

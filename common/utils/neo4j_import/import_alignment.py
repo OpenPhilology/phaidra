@@ -1,14 +1,16 @@
 # coding: utf8
-#from django.conf import settings
 from neo4jrestclient.client import GraphDatabase
 from xml.dom import minidom
 import os
 
-################ set your alignment's meta data ################
+###### your alignment's meta data if you don't use the fabric file ######
 # The script assumes Alpheios alignment output with the references being unique in the document
 # It assumes Greek to be the L1 language.
 
-TARGET_LANGUAGE = 'fa'
+TARGET_LANGUAGE = 'en'
+GRAPH_DATABASE_REST_URL = 'http://localhost:7474/db/data/'
+
+########################################################################
 
 class Document:
     path = os.path.dirname(os.path.abspath(__file__))
@@ -36,9 +38,12 @@ languages = {
         'urn:cts:greekLit:tlg0003.tlg001.perseus-grc')
 }
 
-################################################################
-
-def save_sentence(nodes, sentence_ref, lang):
+"""
+Creates a sentence node in the database while saving the node set originating from the xml.
+sntence_ref is needed as identifier.
+lang is needed for discriminating the reference target and to figure if a sentence has to be created.
+"""
+def save_sentence(nodes, sentence_ref, lang, d, document):
     
     wordcounter = 0
     referring_CTS_root = ''
@@ -75,9 +80,7 @@ def save_sentence(nodes, sentence_ref, lang):
                         table = gdb.query("""MATCH (w) WHERE w.CTS='""" + referring_CTS_root + ":" + ref + """' RETURN w""")
                         translated_word = gdb.nodes.get(table[0][0]['self'])
                         w.translation(translated_word)
-                        print "word: " + node.attributes['n'].value + "; word_id: " + str(w.id)
-                        print "ref: " + ref + "; ref_word_id: " + str(translated_word.id)
-            
+                        #print "word: " + node.attributes['n'].value + "; word_id: " + str(w.id); print "ref: " + ref + "; ref_word_id: " + str(translated_word.id)
             except:
                 continue
         
@@ -85,43 +88,77 @@ def save_sentence(nodes, sentence_ref, lang):
     if lang != 'grc':           
         s.set('length', wordcounter)
         s.labels.add("Sentence")
-        d.sentences(s)  
+        d.sentences(s)
 
-################################################################
+    print "Sentence: " + document.cts() + ":" + sentence_ref + " saved."
 
-document = languages[TARGET_LANGUAGE]
 
-host = "http://localhost:7474/db/data/"
-
-# graph database instance
-gdb = GraphDatabase(host)
-
-# create the document node at the very beginning
-d = gdb.nodes.create(CTS=document.cts(), 
-        author=document.author, 
-        name=document.title, 
-        lang=document.locale)
-
-d.labels.add("Document") 
-
-# get first node from the xml parser instance
-alignNode = minidom.parse(document.xml()).firstChild
- 
-for sentence in alignNode.childNodes:
+"""
+Before saving the alignment (xml) data for a language, make sure the relating document doesn't exist already. 
+"""
+def align(lang):
     
-    # avoid the language nodes at the very beginning 
-    if sentence.attributes and sentence.tagName == 'sentence':	
-        # get the two node sets for the two languages after ensuring the order of the parsed alignments
-        if sentence.childNodes[1].attributes['lnum'].value == 'L1':
-            save_sentence(sentence.childNodes[3].childNodes, sentence.attributes['id'].value, 'translation')
-            save_sentence(sentence.childNodes[1].childNodes, sentence.attributes['id'].value, 'grc')
-        else:
-            save_sentence(sentence.childNodes[1].childNodes, entence.attributes['id'].value, 'translation')
-            save_sentence(sentence.childNodes[3].childNodes, entence.attributes['id'].value, 'grc')
+    document = languages[lang]    
+    
+    # check if document already exists
+    doc_name = gdb.query("""MATCH (d) WHERE d.CTS='""" + document.cts() + """' RETURN d.name""")    
+    if len(doc_name) >= 1:
+        print "Document " + str(doc_name[0][0].encode('utf-8')) + " already exists."
+        return
         
+    # create the document node at the very beginning
+    d = gdb.nodes.create(CTS=document.cts(),
+                         author=document.author,
+                         name=document.title,
+                         lang=document.locale)
         
+    d.labels.add("Document")
+        
+    # get first node from the xml parser instance
+    alignNode = minidom.parse(document.xml()).firstChild
+        
+    for sentence in alignNode.childNodes:
+            
+        # avoid the language nodes at the very beginning 
+        if sentence.attributes and sentence.tagName == 'sentence':    
+            # get the two node sets for the two languages after ensuring the order of the parsed alignments
+            if sentence.childNodes[1].attributes['lnum'].value == 'L1':
+                save_sentence(sentence.childNodes[3].childNodes, sentence.attributes['id'].value, 'translation', d, document)
+                save_sentence(sentence.childNodes[1].childNodes, sentence.attributes['id'].value, 'grc', d, document)
+            else:
+                save_sentence(sentence.childNodes[1].childNodes, entence.attributes['id'].value, 'translation', d, document)
+                save_sentence(sentence.childNodes[3].childNodes, entence.attributes['id'].value, 'grc', d, document) 
+        
+    #print lang
+          
+########################################################################   
 
+# Main function
+"""
+Handle multiple languages and index errors.
+"""
+# graph database instance
+gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)
 
+if __name__ == "__main__":
+    
+    import sys
+    
+    if sys.argv[1] == 'lookup':
+        print "Avaialble languages are: " + str(list(languages.keys())) + "."
+        
+    elif sys.argv[1] == 'all':
+        for lang in languages.keys():
+            align(lang)
+            
+    elif sys.argv[1] in languages.keys():
+        align(sys.argv[1])
+        
+    else:
+        print "Language " + sys.argv[1] + " not available."
+
+#else:
+    #align(TARGET_LANGUAGE)
 
 
 
