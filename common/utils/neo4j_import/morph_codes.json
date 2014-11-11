@@ -1,0 +1,74 @@
+{
+    "pos": {
+	    "n": "noun",
+	    "v": "verb",
+	    "t": "participle",
+	    "a": "adj",
+	    "d": "adverb",
+	    "l": "article",
+	    "g": "particle",
+	    "c": "conj",
+	    "r": "prep",
+	    "p": "pron",
+	    "m": "numeral",
+	    "i": "interjection",
+	    "e": "exclam",
+	    "u": "punct"
+    },
+    "person": {
+	    "1": "1st",
+	    "2": "2nd",
+	    "3": "3rd"
+    },
+    "number": {
+	    "s": "sg",
+	    "p": "pl",
+	    "d": "dual"
+    },
+    "tense": {
+	    "p": "pres",
+	    "i": "imperf",
+	    "r": "perf",
+	    "l": "plup",
+	    "t": "furperf",
+	    "f": "fut",
+	    "a": "aor"
+    },
+    "mood": {
+	    "i": "ind",
+	    "s": "subj",
+	    "o": "opt",
+	    "n": "inf",
+	    "m": "imperat",
+	    "p": "part"
+    },
+    "voice": {
+	    "a": "act",
+	    "p": "pass",
+	    "m": "mid",
+	    "e": "mp"
+    },
+    "gender": {
+	    "m": "masc",
+	    "f": "fem",
+	    "n": "neut"
+    },
+    "case": {
+	    "n": "nom",
+	    "g": "gen",
+	    "d": "dat",
+	    "a": "acc",
+	    "v": "voc",
+	    "l": "loc"
+    },
+    "degree": {
+	    "p": "posv",
+	    "c": "comp",
+	    "s": "superl"
+    }
+}
+
+
+
+
+

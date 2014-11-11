@@ -6,7 +6,7 @@ import os
 ################ set your dump's meta data #####################
 
 path = os.path.dirname(os.path.abspath(__file__))
-dump_file = os.path.join(path, "pentecontaetia_dump.json")
+dump_file = os.path.join(path, "data/pentecontaetia_dump.json")
 host = "http://localhost:7474/db/data/"
 
 ################################################################
@@ -72,7 +72,17 @@ with open(filename, 'r') as json_data:
                             s.words(w)           
                 d.sentences(s)
                 print "Sentence: " + s['CTS'] + " saved."
+  
                         
+# build indexes at the end:
+gdb.query("""CREATE INDEX ON :Document(CTS)""")
+gdb.query("""CREATE INDEX ON :Document(ID)""")
+gdb.query("""CREATE INDEX ON :Sentence(CTS)""")
+gdb.query("""CREATE INDEX ON :Sentence(ID)""")
+gdb.query("""CREATE INDEX ON :Word(CTS)""")
+gdb.query("""CREATE INDEX ON :Word(ID)""")
+gdb.query("""CREATE INDEX ON :Lemma(CITE)""")
+gdb.query("""CREATE INDEX ON :Lemma(ID)""")
                                         
                                         
                                 

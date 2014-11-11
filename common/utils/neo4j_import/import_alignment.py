@@ -26,7 +26,7 @@ class Document:
         return 'urn:cts:greekLit:tlg0003.tlg001.perseus-%s' % self.locale
 
     def xml(self):
-        xml_file = 'tlg0003.tlg001.perseus-%s.xml' % self.lang
+        xml_file = 'data/tlg0003.tlg001.perseus-%s.xml' % self.lang
         return os.path.join(self.path, xml_file)
 
 languages = {

@@ -4,7 +4,7 @@ import json
 
 ################ set your dump's meta data #####################
 
-dump_file = "pentecontaetia_dump.json"
+dump_file = "data/pentecontaetia_dump.json"
 # the CTS of the document that is going to be dumped;
 dump_document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
 host = "http://localhost:7474/db/data/"
