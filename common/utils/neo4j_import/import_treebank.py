@@ -116,14 +116,14 @@ for sentence in alignNode.childNodes:
                     
                     
 # build indexes at the end:
-#gdb.query("""CREATE INDEX ON :Document(CTS)""")
-#gdb.query("""CREATE INDEX ON :Document(ID)""")
-#gdb.query("""CREATE INDEX ON :Sentence(CTS)""")
-#gdb.query("""CREATE INDEX ON :Sentence(ID)""")
-#gdb.query("""CREATE INDEX ON :Word(CTS)""")
-#gdb.query("""CREATE INDEX ON :Word(ID)""")
-#gdb.query("""CREATE INDEX ON :Lemma(CITE)""")
-#gdb.query("""CREATE INDEX ON :Lemma(ID)""")
+gdb.query("""CREATE INDEX ON :Document(CTS)""")
+gdb.query("""CREATE INDEX ON :Document(ID)""")
+gdb.query("""CREATE INDEX ON :Sentence(CTS)""")
+gdb.query("""CREATE INDEX ON :Sentence(ID)""")
+gdb.query("""CREATE INDEX ON :Word(CTS)""")
+gdb.query("""CREATE INDEX ON :Word(ID)""")
+gdb.query("""CREATE INDEX ON :Lemma(CITE)""")
+gdb.query("""CREATE INDEX ON :Lemma(ID)""")
                 
             
             

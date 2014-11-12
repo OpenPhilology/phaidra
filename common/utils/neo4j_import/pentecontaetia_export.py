@@ -23,13 +23,11 @@ document_dict = {}
 for doc in table:
 	document = doc[0]
 	documentNode = gdb.nodes.get(document['self'])
-	#print documentNode.properties
 
 	# get the metas of the document
 	for doc_attr in documentNode.properties:
 		document_dict[doc_attr] = documentNode.properties[doc_attr]
 	
-	#senteceRels = documentNode.relationships.outgoing(types=["sentences"])
 	sent_table = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE d.CTS='"""+ documentNode.properties['CTS'] +"""' RETURN s ORDER BY ID(s)""")
 
 	#get the document's sentences

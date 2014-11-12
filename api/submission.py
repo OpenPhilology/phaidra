@@ -256,18 +256,17 @@ class SubmissionResource(Resource):
                 knows_grammar = gdb.query("""MATCH (u:`User`)-[kg:knows_grammar]->(w:`Word`) WHERE HAS (w.CTS) AND w.CTS='""" + t[0]['data']['CTS'] + """' RETURN kg""")
                 if len(knows_grammar) < 1:
                     userNode.knows_grammar(word)              
-                
-            
+                            
             # set links between the lemmas of the encountered words (as vocab knowledge) and the words themselves, if the encountered words were not already known, otherwise increase times_seen
             for cts in data.get("encounteredWords"):    
-                relation = gdb.query("""MATCH (u:`User`)-[kv:knows_vocab]->(w:`Word`)<-[:values]-(l:`Lemma`) 
-                                    WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' and u.username='""" + request.user.username + """' RETURN kv, w, l""")
+                relation = gdb.query("""MATCH (u:`User`)-[kv:knows_vocab]->(w:`Word`)
+                                        WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' and u.username='""" + request.user.username + """' RETURN kv""")
                 try:
                    times = relation[0][0]['data']['times_seen']+1
                    id = relation[0][0]['self'].split('/')[len(relation[0][0]['self'].split('/'))-1]  
                    rel = gdb.relationships.get(id)
                    rel.properties = {'times_seen':times}      
-                except Error as e:   
+                except IndexError as e:   
                     table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN w, l""")           
                     word = gdb.nodes.get(table[0][0]['self'])
                     lemma = gdb.nodes.get(table[0][1]['self'])
