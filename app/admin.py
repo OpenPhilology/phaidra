@@ -59,7 +59,8 @@ class TaskSequenceAdmin(admin.ModelAdmin):
 
 class TaskContextAdmin(admin.ModelAdmin):
         list_display = ('task', 'task_sequence', 'order', 'target_accuracy', 'max_attempts')
-        sortable = 'order'
+        list_editable = ('order',)
+        ordering = ('task_sequence', 'order')
 
         formfield_overrides = {
                 models.CharField: { 'widget': LargeTextInput },

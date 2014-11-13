@@ -5,6 +5,7 @@ define(['jquery',
 	'utils', 
 	'views/lessons/tasks/sample_task',
 	'views/lessons/tasks/type_greek',
+	'views/lessons/tasks/identify_letter',
 	'views/lessons/tasks/translate_word'], 
 	function($, _, Backbone, WordCollection, Utils) { 
 		
@@ -51,6 +52,8 @@ define(['jquery',
 
 				// Select our task, then create the view
 				var task = tasks[0].split(':')[0];
+
+				// TODO: Make this robust
 				var options = { args: tasks[0].split(':')[1] };
 				var View = require('views/lessons/tasks/' + task);
 
@@ -62,7 +65,8 @@ define(['jquery',
 					index: this.options.index,
 					collection: this.collection,
 					DIR: DIR,
-					options: options
+					args: options.args,
+					topic: this.topic
 				}).render();
 
 				// Meaning, we couldn't render this type of task with 

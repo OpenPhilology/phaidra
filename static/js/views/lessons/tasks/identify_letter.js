@@ -4,7 +4,7 @@ define(['jquery',
 	'views/lessons/tasks/base_task',
 	'utils',
 	'typegeek',
-	'text!/templates/js/lessons/tasks/sample_task.html'], 
+	'text!/templates/js/lessons/tasks/identify_letter.html'], 
 	function($, _, Backbone, BaseTaskView, Utils, TypeGeek, Template) {
 
 		return BaseTaskView.extend({
@@ -13,7 +13,36 @@ define(['jquery',
 				'submit form': 'checkAnswer'
 			},
 			initialize: function(options) {
-				console.log(options.args);
+				this.letter = options.args;
+
+				// Answer map
+				this.answerMap = {
+					"alpha":	{ "upper": "Α", "lower": "α" },
+					"beta":		{ "upper": "Β", "lower": "β" },
+					"gamma":	{ "upper": "Γ", "lower": "γ" },
+					"delta":	{ "upper": "Δ", "lower": "δ" },
+					"epsilon":	{ "upper": "Ε", "lower": "ε" },
+					"zeta":		{ "upper": "Ζ", "lower": "ζ" },
+					"eta":		{ "upper": "Η", "lower": "η" },
+					"theta":	{ "upper": "Θ", "lower": "θ" },
+					"iota":		{ "upper": "Ι", "lower": "ι" },
+					"kappa":	{ "upper": "Κ", "lower": "κ" },
+					"lambda":	{ "upper": "Λ", "lower": "λ" },
+					"mu":		{ "upper": "Μ", "lower": "μ" },
+					"nu":		{ "upper": "Ν", "lower": "ν" },
+					"xi":		{ "upper": "Ξ", "lower": "ξ" },
+					"omicron":	{ "upper": "Ο", "lower": "ο" },
+					"pi":		{ "upper": "Π", "lower": "π" },
+					"rho":		{ "upper": "Ρ", "lower": "ρ" },
+					"sigma":	{ "upper": "Σ", "lower": "σς" },
+					"tau":		{ "upper": "Τ", "lower": "τ" },
+					"upsilon":	{ "upper": "Υ", "lower": "υ" },
+					"phi":		{ "upper": "Φ", "lower": "φ" },
+					"chi":		{ "upper": "Χ", "lower": "χ" },
+					"psi":		{ "upper": "Ψ", "lower": "ψ" },
+					"omega":	{ "upper": "Ω", "lower": "ω" }
+				};
+
 				BaseTaskView.prototype.initialize.apply(this, [options]);
 			},
 
@@ -30,12 +59,12 @@ define(['jquery',
 
 				this.$el.html(this.template({
 					model: this.model,
-					options: options
+					options: options,
+					letter: this.letter,
+					answerMap: this.answerMap
 				}));
 				
-				// Now that the DOM is available, bindings:
 				var answerBox = this.$el.find('input[type="text"]')[0];
-				new TypeGeek(answerBox);
 				answerBox.focus();
 			},
 			checkAnswer: function(e) {
@@ -43,8 +72,8 @@ define(['jquery',
 
 				// Grab answers from the UI, pass to base_task
 				var inputField = $(e.target).find('input');
-				var answer = this.model.get('value');
-				var userAnswer = inputField.val();
+				var answer = this.letter.toLowerCase().trim();
+				var userAnswer = inputField.val().toLowerCase().trim();
 
 				// Call our BaseTask's answer checking functionality 
 				var newState = BaseTaskView.prototype.checkAnswer.apply(this, [answer, userAnswer]);
