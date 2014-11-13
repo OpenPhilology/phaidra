@@ -7,12 +7,7 @@
 
 <div class="answer-box" dir="ltr">
 	<form>
-		<div class="input-group">
-			<input lang="grc" class="form-control input-lg" class="answer-input" title="<%= model.getHumanReadableMorph() %>" placeholder='<%= model.getHumanReadableMorph() %>'>
-			<span class="input-group-btn">
-				<button type="submit" style="height: 46px" class="btn btn-success">{% trans "Answer!" %}</button>
-			</span>
-		</div>
+		<input type="text" class="answer-input" title="<%= model.getHumanReadableMorph() %>" data-toggle="tooltip">
 	</form>
 	<hr>
 	<span lang="grc" class="sentence" data-toggle="tooltip" title="<%= translated_sentence %>"><%= sentence %>.</span>

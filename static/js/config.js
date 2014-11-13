@@ -14,12 +14,10 @@ requirejs.config({
 
 		// Included as git submodules
 		'daphne': 'lib/daphnejs/src/daphne',
-		'morea': 'lib/moreajs/src/morea'
+		'morea': 'lib/moreajs/src/morea',
+		'typegeek': 'lib/typegeek/src/typegeek'
 	},
 	'shim': {
-		'underscore': {
-			'exports': '_'
-		},
 		'backbone': {
 			'deps': ['jquery', 'underscore'],
 			'exports': 'Backbone'
@@ -30,9 +28,6 @@ requirejs.config({
 		'd3': {
 			'exports': 'd3'
 		},
-		'morea': {
-			'exports': 'morea'
-		},
 		'daphne': {
 			'exports': 'daphne',
 			'deps': ['d3']
@@ -42,6 +37,12 @@ requirejs.config({
 		},
 		'jquery-ui-slide': {
 			'deps': ['jquery', 'jquery-ui-core']
+		},
+		'morea': {
+			'exports': 'morea'
+		},
+		'underscore': {
+			'exports': '_'
 		}
 	}
 });

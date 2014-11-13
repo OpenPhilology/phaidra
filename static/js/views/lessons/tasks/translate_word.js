@@ -4,8 +4,9 @@ define(['jquery',
 	'models/word', 
 	'collections/words', 
 	'utils', 
+	'typegeek',
 	'text!/templates/js/lessons/tasks/translate_word.html'], 
-	function($, _, Backbone, WordModel, WordsCollection, Utils, Template) {
+	function($, _, Backbone, WordModel, WordsCollection, Utils, TypeGeek, Template) {
 
 		return Backbone.View.extend({
 			template: _.template(Template),
@@ -50,6 +51,8 @@ define(['jquery',
 					sentence: this.makeSampleSentence(alignments[0], 'open'),
 					translated_sentence: translation
 				}));
+
+				new TypeGeek(this.$el.find('input[type="text"]')[0]);
 
 				this.$el.find('[data-toggle="tooltip"]').tooltip();
 			},
