@@ -43,6 +43,7 @@ def propagate_db():
     """
     with virtualenv():
         local("./manage.py dumpdata --natural --indent=4 --exclude=contenttypes --exclude=auth --exclude=tastypie > app/fixtures/db.json")
+        local('git add app/fixtures/db.json')
 
 @task
 def load_db():

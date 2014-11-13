@@ -21,17 +21,17 @@ define(['jquery',
 				this.topic = options.topic;
 
 				// Instantiate our collection, tell it how to populate vocabulary
-				this.collection = new WordCollection([], { 
-					grammar: options.index,
-					topic: this.topic 
+				this.collection = new WordCollection([], {
+					url: '/api/v1/word/?' + that.topic.get('query')
 				});
-				this.collection.on('populated', this.selectNext, this);
+
+				// New tasks render every time the selected word changes
 				this.collection.on('change:selected', this.render, this);
+
+				// Add to word collection based on topic's morph query
 				this.collection.fetch({
-					success: that.selectNext.bind(that),
-					error: function(x, y, z) {
-						console.log("error");
-					}
+					success: that.handleSuccess.bind(that),
+					error: that.handleError.bind(that)
 				});
 			},
 			render: function() {
@@ -51,30 +51,52 @@ define(['jquery',
 				this.task_view = new View({ 
 					model: this.model, 
 					index: this.options.index,
+					collection: this.collection,
 					DIR: DIR
 				}).render();
 
-				/* Meaning, we couldn't render this type of task with 
-				 * the selected word -- try the next one.
-				 */
-				if (!this.task_view) this.selectNext();
-				else this.$el.append(this.task_view.el);
+				// Meaning, we couldn't render this type of task with 
+				// the selected word -- try the next one.
+				if (!this.task_view) { 
+					console.log("Removing task view");
+					this.selectNext();
+				}
+				else 
+					this.$el.append(this.task_view.el);
 			},
-			initialTrigger: function(collection) {
-				collection.meta('populated', true);
-				collection.trigger('populated');
+			handleSuccess: function(collection, response, options) {
+				console.log(collection, response, options);
+				this.selectNext();
+			},
+			handleError: function(collection, response, options) {
+				console.log(collection, response, options);
 			},
 			selectNext: function(e) { 
 				if (e && e.preventDefault) e.preventDefault();
 
-				var next = this.collection.getNextRandom(this.options.ref, this.model);
+				console.log("selectNext called");
+				var next = this.collection.getNextVocab();
+				var that = this;
+
+				// Unselect current vocab word
 				if (this.model) this.model.set({'selected': false}, {silent: true});
+
+				// Select new vocabulary word
 				this.model = next;
 
-				var that = this;
-				this.model.fetchSentence(this.model.get('CTS'), {
-					success: function() {
+				// Grab the container sentence
+				var url = this.model.get('sentence_resource_uri');  //+ '?full=True';
+				this.collection.url = url;
+				this.collection.fetch({
+					url: url,
+					remove: false,
+					merge: true,
+					success: function(collection, response, options) {
+						console.log(that.collection.indexOf(that.model));
 						that.model.set('selected', true);
+					},
+					error: function(collection, response, options) {
+						console.log("Error", collection, response, options);
 					}
 				});
 			}
