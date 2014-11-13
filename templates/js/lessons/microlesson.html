@@ -71,7 +71,8 @@
 								</h4>
 							</div>
 							<div id="collapse-<%= topic.id %>" class="panel-collapse collapse">
-								<div class="panel-body" data-id="<%= topic.id %>">
+								<% var style = topic.title.indexOf("Alphabet") !== -1 ? 'text-align: center; background-color: #DDD' : '' %>
+								<div class="panel-body" data-id="<%= topic.id %>" style="<%= style %>">
 									<%= topic.content %>
 								</div>
 							</div>
