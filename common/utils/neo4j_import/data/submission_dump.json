@@ -49,5 +49,11 @@
                 "timestamp": "2014-08-22T00:46:38"
             }
         ]
+    }, 
+    "maria": {
+        "knows_grammar": [], 
+        "knows_vocab_lemmas": [], 
+        "knows_vocab_words": {}, 
+        "submissions": []
     }
 }
