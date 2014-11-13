@@ -35,6 +35,7 @@ def decode_morphology(morphological_code):
 path = os.path.dirname(os.path.abspath(__file__))
 treebank_file = os.path.join(path, treebank_file_name)
 morph_code_file = os.path.join(path, "morph_codes.json")
+# create the graph database instance
 gdb = GraphDatabase(host)
 
 morph_content = {}

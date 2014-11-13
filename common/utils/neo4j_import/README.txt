@@ -69,8 +69,19 @@ submission_import.py
 The Only Treebank Import
 #########################################
 
-# if you are only interested in saving the treebank data of Thucydide's Pentecontaetia, run this script
+# If you are only interested in saving the treebank data of Thucydide's Pentecontaetia, run this script
 import_treebank.py
+
+
+General New Text Data import script
+#########################################
+
+# This script gives you an example how graph nodes should be built for adding new text into the graph database.
+# It requires sentences to be linewise and punctuation to be separated.
+import_any_text.py
+
+
+
 
 
 
