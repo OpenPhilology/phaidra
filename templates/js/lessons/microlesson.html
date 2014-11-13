@@ -28,6 +28,10 @@
 				<div data-toggle="daphne" data-dataSource="<%= url %>" data-mode="display"></div>
 			</div>
 			<div data-source="grammar" class="row note" style="display: block">
+
+				<!-- The primary content -->
+				<% content = content[0] %>
+
 				<% if (user.get('is_superuser')) { %>
 					<div class="btn-group btn-group-justified">
 						<a class="btn btn-default">{% trans "Admin Panel" %}</a>
@@ -36,8 +40,6 @@
 					<br>
 				<% } %>
 				<div class="panel-group" id="topic-panel">
-					<!-- The primary content -->
-					<% content = content[0] %>
 					<div class="panel panel-default primary-topic">
 						<div class="panel-heading">
 							<% if (user.get('is_superuser')) { %>
@@ -60,7 +62,7 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<% if (user.get('is_superuser')) { %>
-									<a href="/admin/app/content/<%= content.id %>" class="btn btn-warning admin-link" data-toggle="tooltip" data-placement="right" title="Edit" target="_blank"><span class="glyphicon glyphicon-pencil"></span></a>
+									<a href="/admin/app/content/<%= topic.id %>" class="btn btn-warning admin-link" data-toggle="tooltip" data-placement="right" title="Edit" target="_blank"><span class="glyphicon glyphicon-pencil"></span></a>
 								<% } %>
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-parent="#topic-panel" href="#collapse-<%= topic.id %>" data-id="<%= topic.id %>">

@@ -43,7 +43,7 @@
 		}
 	}
 
-	&[class*="verbs"] {
+	&[class*="verbs"], &[class*="adverbs"] {
 		@include tile($color-pri-two);
 	}
 	&[class*="adjectives"] {
@@ -55,11 +55,8 @@
 	&[class*="nouns"] {
 		@include tile($color-sec-one);
 	}
-	&[class*="participles"] {
+	&[class*="participles"], &[class*="adverbs"] {
 		@include tile($color-sec-four);
-	}
-	&[class*="adverbs"] {
-		@include tile($color-pri-three);
 	}
 	&[class*="admin"] {
 		@include tile(#DDE3EC);
