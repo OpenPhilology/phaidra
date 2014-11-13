@@ -77,8 +77,11 @@ General New Text Data import script
 #########################################
 
 # This script gives you an example how graph nodes should be built for adding new text into the graph database.
-# It requires sentences to be linewise and punctuation to be separated.
+# It requires punctuation to be separated. The example text is in data/text.txt
 import_any_text.py
+
+# the example text
+data/text.txt
 
 
 
