@@ -4,6 +4,7 @@ define(['jquery',
 	'collections/words', 
 	'utils', 
 	'views/lessons/tasks/sample_task',
+	'views/lessons/tasks/type_greek',
 	'views/lessons/tasks/translate_word'], 
 	function($, _, Backbone, WordCollection, Utils) { 
 		
@@ -32,16 +33,26 @@ define(['jquery',
 				});
 			},
 			render: function() {
-				// TODO: get this in a smart way, not random
-				var tasks = ['translate_word', 
-					'sample_task',
-					'align_phrase', 
-					'build_tree', 
-					'identify_morph', 
-					'provide_article'];
 
-				var i = Math.floor(Math.random() * (tasks.length - 1));
-				var View = require('views/lessons/tasks/' + tasks[1]);
+				// Must define a task sequence before using this section
+				if (this.topic.get('task_sequence').length === 0) {
+					var title = 'This lesson has no tasks';
+					var msg = 'This lesson does not yet have tasks assigned.';
+					var options = { state: 'error', linkUrl: '/lessons/' };
+
+					Utils.displayNotification(title, msg, options);
+					return;
+				}
+
+				// Tasks for this lesson
+				var tasks = this.topic.get('task_sequence').tasks.map(function(entry) {
+					return entry.task.name;
+				});
+
+				// Select our task, then create the view
+				var task = tasks[0].split(':')[0];
+				var options = { args: tasks[0].split(':')[1] };
+				var View = require('views/lessons/tasks/' + task);
 
 				// Remove an existing view if needed
 				if (this.task_view) this.task_view.remove();
@@ -50,7 +61,8 @@ define(['jquery',
 					model: this.model, 
 					index: this.options.index,
 					collection: this.collection,
-					DIR: DIR
+					DIR: DIR,
+					options: options
 				}).render();
 
 				// Meaning, we couldn't render this type of task with 
