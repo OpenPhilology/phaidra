@@ -3,6 +3,7 @@
 	<% if (topic.get('titles')[LOCALE] !== undefined) { %>
 		<a href="/<%= LOCALE %>/lessons/<%= topic.get('id') %>" class="module <%= topic.get('category').name.toLowerCase().split(' ').join('-') %>">
 			<p><% print(topic.get('titles')[LOCALE]) %></p>
+			<div class="donut percent-75 <%= topic.get('category').name.toLowerCase().split(' ').join('-') %>"></div>
 		</a>
 	<% } else { %>
 		<% if (user.get('is_superuser')) { %>
