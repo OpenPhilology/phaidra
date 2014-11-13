@@ -61,7 +61,7 @@ for user in fileContent:
         table = gdb.query("""MATCH (l:`Lemma`) WHERE HAS (l.CITE) and l.CITE='""" + voc +"""' RETURN l""")           
         lemma = gdb.nodes.get(table[0][0]['self'])
         u.knows_vocab(lemma)
-        print str(user)  + " knows voc of lemma: " + str(lemma['CITE'])
+        print str(user)  + " knows voc of lemma: " + str(lemma['CITE'].encode('utf-8'))
         
     # set links to the words where grammar was known  
     for word in fileContent[user]['knows_grammar']:

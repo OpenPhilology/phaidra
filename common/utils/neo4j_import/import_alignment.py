@@ -90,7 +90,7 @@ def save_sentence(nodes, sentence_ref, lang, d, document):
         s.labels.add("Sentence")
         d.sentences(s)
 
-    print "Sentence: " + document.cts() + ":" + sentence_ref + " saved."
+        print "Sentence: " + document.cts() + ":" + sentence_ref + " imported."
 
 
 """

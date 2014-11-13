@@ -76,7 +76,7 @@ for sentence in alignNode.childNodes:
         s = gdb.nodes.create() 
         s.labels.add("Sentence")
         s['CTS'] = document_cts + ":" + str(book) + "." + str(chapter) + "." + str(sent_no)
-        print document_cts + ":" + str(book) + "." + str(chapter) + "." + str(sent_no)
+        print document_cts + ":" + str(book) + "." + str(chapter) + "." + str(sent_no) + " imported."
         
         # run over word nodes
         word_no = 0
