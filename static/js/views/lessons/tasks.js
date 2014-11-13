@@ -3,11 +3,8 @@ define(['jquery',
 	'backbone', 
 	'collections/words', 
 	'utils', 
-	'views/lessons/tasks/translate_word', 
-	'views/lessons/tasks/build_tree', 
-	'views/lessons/tasks/identify_morph', 
-	'views/lessons/tasks/provide_article', 
-	'views/lessons/tasks/align_phrase'], 
+	'views/lessons/tasks/sample_task',
+	'views/lessons/tasks/translate_word'], 
 	function($, _, Backbone, WordCollection, Utils) { 
 		
 		return Backbone.View.extend({
@@ -37,13 +34,14 @@ define(['jquery',
 			render: function() {
 				// TODO: get this in a smart way, not random
 				var tasks = ['translate_word', 
+					'sample_task',
 					'align_phrase', 
 					'build_tree', 
 					'identify_morph', 
 					'provide_article'];
 
 				var i = Math.floor(Math.random() * (tasks.length - 1));
-				var View = require('views/lessons/tasks/' + tasks[0]);
+				var View = require('views/lessons/tasks/' + tasks[1]);
 
 				// Remove an existing view if needed
 				if (this.task_view) this.task_view.remove();

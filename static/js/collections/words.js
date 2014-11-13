@@ -296,7 +296,9 @@ define(['jquery',
 
 				// ZERO -- for testing
 				var chosen = subset[index];
-				console.log(this.where({ CTS: chosen.get('CTS') }));
+
+				// TODO: Find out why this fails sometimes
+				console.log(chosen, subset, index);
 
 				return this.where({ CTS: chosen.get('CTS') })[0];
 			}

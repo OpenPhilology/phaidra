@@ -386,7 +386,9 @@ table.inflection-table {
 		box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, .1);
 		background-color: $color-sec-two;
 		height: 100%;
-		overflow: scroll;
+		overflow-y: scroll;
+		position: fixed;
+		width: 33%;
 	}
 	.left-nav {
 		height: 100%;

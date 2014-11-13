@@ -1,31 +1,19 @@
 define(['jquery', 
 	'underscore', 
 	'backbone', 
-	'models/word', 
-	'collections/words', 
+	'views/lessons/tasks/base_task',
 	'utils', 
 	'typegeek',
 	'text!/templates/js/lessons/tasks/translate_word.html'], 
-	function($, _, Backbone, WordModel, WordsCollection, Utils, TypeGeek, Template) {
+	function($, _, Backbone, BaseTaskView, Utils, TypeGeek, Template) {
 
-		return Backbone.View.extend({
+		return BaseTaskView.extend({
 			template: _.template(Template),
-			tagName: 'div',
-			className: 'subtask',
 			events: {
 				'submit form': 'checkAnswer'
 			},
 			initialize: function(options) {
-				this.options = options;
-				var that = this;
-				
-				// Fetch the sentence our model is in, then render
-				this.collection.url = this.model.get('sentence_resource_uri') + '?full=True';
-				this.collection.fetch({
-					remove: false,
-					merge: true,
-					success: that.fullRender.bind(that)
-				});
+				BaseTaskView.prototype.initialize.apply(this, [options]);
 			},
 			render: function() {
 				// Initial render just to make $el available to parent view
@@ -78,22 +66,23 @@ define(['jquery',
 						return s.value === this.model.get('value') ? ('<span class="success">' + s.value + '</span>') : s.value;
 					else if (state === 'warning')
 						return s.value === this.model.get('value') ? ('<span class="warning">' + s.value + '</span>') : s.value;
+					else if (state === 'error')
+						return s.value === this.model.get('value') ? ('<span class="error">' + s.value + '</span>') : s.value;
 				}.bind(this)).join(' &nbsp; ');
 			},
 			checkAnswer: function(e) {
 				e.preventDefault();
 
-				var input = $(e.target).find('input');
-				var answer = input.val();
+				// Grab answers from the UI, pass to base_task
+				var inputField = $(e.target).find('input');
+				var answer = this.model.get('value');
+				var userAnswer = inputField.val();
 
-				if (answer == this.model.get('value')) {
-					this.fullRender({ state: 'success' });
-					input.val(answer);
-				}
-				else {
-					this.fullRender({ state: 'warning' });
-					input.focus();
-				}
+				// Call our BaseTask's answer checking functionality 
+				var newState = BaseTaskView.prototype.checkAnswer.apply(this, [answer, userAnswer]);
+
+				// Update our UI accordingly
+				this.fullRender({ state: newState });
 			}
 		});
 	}
