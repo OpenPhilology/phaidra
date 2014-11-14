@@ -61,16 +61,14 @@ urlpatterns = patterns('',
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
     # Logout
-    url(r'^logout/', 'django.contrib.auth.views.logout', {'next_page': '/home'}),
+    url(r'^logout/', 'django.contrib.auth.views.logout', {'next_page': '/'}),
 )
 
 urlpatterns += i18n_patterns('', 
 
     # Website URLS
-    url(r'^home/', 'web.views.home'),
     url(r'^lessons/', 'web.views.lessons'),
     url(r'^create/', 'web.views.create'),
-    url(r'^grammar/', 'web.views.grammar'),
     url(r'^module/', 'web.views.module'),
     url(r'^reader/', 'web.views.reader'),
     url(r'^profile/', 'web.views.profile'),
