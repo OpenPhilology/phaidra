@@ -130,7 +130,7 @@ class VisualizationResource(Resource):
             userTable = gdb.query("""MATCH (n:`User`) WHERE n.username =  '""" + user + """' RETURN n""")
             userNode = gdb.nodes.get(userTable[0][0]['self'])
         except:
-            return self.error_response(request, {'error': 'Login or hand over user.'}, response_class=HttpBadRequest)
+            return self.error_response(request, {'error': 'No neo4j node exists for the user: "' + user +'". Make sure you have submissions and user is logged in or passed.'}, response_class=HttpBadRequest)
         
         #fo = open("foo.txt", "wb")
         #millis = int(round(time.time() * 1000))
@@ -355,7 +355,7 @@ class VisualizationResource(Resource):
             userTable = gdb.query("""MATCH (n:`User`) WHERE n.username =  '""" + user + """' RETURN n""")
             userNode = gdb.nodes.get(userTable[0][0]['self'])
         except:
-            return self.error_response(request, {'error': 'No neo4j node exists for the user: "' + user +'". Make sure you are logged in, user is passed or has submissions.'}, response_class=HttpBadRequest)
+            return self.error_response(request, {'error': 'No neo4j node exists for the user: "' + user +'". Make sure you have submissions and user is logged in or passed.'}, response_class=HttpBadRequest)
         
         # preprocess knowledge of a user; callFunction = self.calculateKnowledgeMap(request.GET.get('user')); vocKnowledge = callFunction[0]; smythFlat = callFunction[1]; lemmaFreqs = callFunction[2]
         knows_vocab = 0
