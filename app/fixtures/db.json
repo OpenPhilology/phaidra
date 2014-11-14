@@ -121,14 +121,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_deer.png",
-        "name": "Articles"
-    },
-    "model": "app.category",
-    "pk": 7
-},
-{
-    "fields": {
         "graphic": "icon_grk_amphora.png",
         "name": "Nouns Second Declension"
     },
@@ -225,14 +217,6 @@
 },
 {
     "fields": {
-        "graphic": "alphabet/alpha.svg",
-        "name": "The Alphabet "
-    },
-    "model": "app.category",
-    "pk": 20
-},
-{
-    "fields": {
         "username": "monica",
         "first_name": "Monica",
         "last_name": "Lent",
@@ -241,7 +225,7 @@
         "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-11-12T16:38:38.650Z",
+        "last_login": "2014-11-13T13:03:51.409Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$OQeapR8t70Mz$t/UHAUZyIUG0Zxl7LFYDup2wSpLox0Qo9t6XoUzZGBc=",
@@ -336,17 +320,17 @@
         "username": "thomas",
         "first_name": "",
         "last_name": "",
-        "lang_speaking": null,
+        "lang_speaking": 4,
         "is_active": true,
-        "lang_learning": null,
+        "lang_learning": 5,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2014-11-12T16:42:45.697Z",
+        "last_login": "2014-11-13T09:00:29Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$9pNpaUmDGX2E$t6BWuHgbbaViW7CvFiL81EH72lVGljLQpJ506H0TmaE=",
         "email": "thomas.koentges@gmail.com",
-        "date_joined": "2014-11-12T16:42:19.542Z"
+        "date_joined": "2014-11-12T16:42:19Z"
     },
     "model": "app.appuser",
     "pk": 10
@@ -539,6 +523,45 @@
 },
 {
     "fields": {
+        "endpoint": "word",
+        "success_msg": "",
+        "name": "type_greek",
+        "aspect": [
+            3
+        ],
+        "hint_msg": ""
+    },
+    "model": "app.task",
+    "pk": 12
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "",
+        "name": "identify_letter:alpha",
+        "aspect": [
+            3
+        ],
+        "hint_msg": ""
+    },
+    "model": "app.task",
+    "pk": 13
+},
+{
+    "fields": {
+        "endpoint": "word",
+        "success_msg": "",
+        "name": "identify_letter:beta",
+        "aspect": [
+            3
+        ],
+        "hint_msg": ""
+    },
+    "model": "app.task",
+    "pk": 14
+},
+{
+    "fields": {
         "name": "Nouns for Beginners"
     },
     "model": "app.tasksequence",
@@ -557,6 +580,20 @@
     },
     "model": "app.tasksequence",
     "pk": 3
+},
+{
+    "fields": {
+        "name": "Learn the Alphabet"
+    },
+    "model": "app.tasksequence",
+    "pk": 4
+},
+{
+    "fields": {
+        "name": "Dummy Sequence"
+    },
+    "model": "app.tasksequence",
+    "pk": 5
 },
 {
     "fields": {
@@ -637,8 +674,52 @@
 },
 {
     "fields": {
+        "task_sequence": 4,
+        "target_accuracy": 0.8,
+        "task": 12,
+        "order": 1,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 8
+},
+{
+    "fields": {
+        "task_sequence": 4,
+        "target_accuracy": 0.8,
+        "task": 13,
+        "order": 0,
+        "max_attempts": 10
+    },
+    "model": "app.taskcontext",
+    "pk": 9
+},
+{
+    "fields": {
+        "task_sequence": 4,
+        "target_accuracy": 0.8,
+        "task": 14,
+        "order": 2,
+        "max_attempts": 2
+    },
+    "model": "app.taskcontext",
+    "pk": 10
+},
+{
+    "fields": {
+        "task_sequence": 5,
+        "target_accuracy": 0.8,
+        "task": 1,
+        "order": 0,
+        "max_attempts": 20
+    },
+    "model": "app.taskcontext",
+    "pk": 11
+},
+{
+    "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Ancient Greek Alphabet",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1",
         "query": "lang=grc",
@@ -650,7 +731,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Long and Short Vowels",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s4",
         "query": "lang=grc",
@@ -662,7 +743,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Dipthongs",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s5",
         "query": "lang=grc",
@@ -674,7 +755,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Iota Subscript",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s5",
         "query": "lang=grc",
@@ -686,7 +767,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Rough Breathing",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s9#a",
         "query": "lang=grc",
@@ -698,7 +779,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Smooth Breathing",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s9",
         "query": "lang=grc",
@@ -710,7 +791,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Gamma Nasal",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=ss19",
         "query": "pos=noun&lemma__contains=\u03b3\u03b3",
@@ -722,7 +803,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Introduction to Accents",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
         "query": "lang=grc",
@@ -734,7 +815,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Acute Accents",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
         "query": "lang=grc",
@@ -746,7 +827,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Circumflex Accents",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
         "query": "lang=grc",
@@ -758,7 +839,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Grave Accents",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s149",
         "query": "lang=grc",
@@ -770,7 +851,7 @@
 {
     "fields": {
         "category": 4,
-        "tasks": null,
+        "tasks": 5,
         "title": "Reading Greek - Marks of Punctuation",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s188",
         "query": "pos=punct",
@@ -782,7 +863,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "Nouns in Ancient Greek - Introduction",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s194",
         "query": "pos=noun",
@@ -794,7 +875,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "Nouns in Ancient Greek - Number",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s195",
         "query": "pos=noun",
@@ -806,7 +887,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "Nouns in Ancient Greek - Gender",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s196",
         "query": "pos=noun",
@@ -818,7 +899,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "Nouns in Ancient Greek - Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s201",
         "query": "pos=noun",
@@ -830,7 +911,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Alpha or First Declension",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s216",
         "query": "pos=noun&posAdd=h_hs",
@@ -842,7 +923,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "First Declension Nouns - Feminine (\u03b1-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s217#a",
         "query": "pos=noun&gender=fem&lemma__endswith=\u03b1&posAdd__contains=h_hs",
@@ -854,7 +935,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "First Declension Nouns - Feminine (\u03b7-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s217",
         "query": "pos=noun&gender=fem&lemma__endswith=\u03b7&posAdd__contains=h_hs",
@@ -866,7 +947,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "First Declension Nouns - Masculine (\u03b7\u03c2-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s222",
         "query": "pos=noun&gender=masc&posAdd__contains=hs_ou",
@@ -878,7 +959,7 @@
 {
     "fields": {
         "category": 18,
-        "tasks": null,
+        "tasks": 5,
         "title": "Second Declension Nouns - Masculine (\u03bf\u03c2-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s228",
         "query": "pos=noun&gender=masc&posAdd__contains=os_ou",
@@ -890,7 +971,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "Second Declension Nouns - Neuter (\u03bf\u03bd-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s228",
         "query": "pos=noun&gender=neut&posAdd__contains=os_ou",
@@ -914,7 +995,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "Third Declension Nouns - Masculine and Feminine",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s255",
         "query": "pos=noun&posAdd__contains=is_idos",
@@ -926,7 +1007,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "Third Declension Nouns - Neuter",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s255",
         "query": "pos=noun&gender=neut&posAdd__contains=ma_matos",
@@ -938,7 +1019,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "Third Declension Nouns - Stems in -\u03b9 and -\u03c5",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s268",
         "query": "pos=noun&lemma__endswith=&posAdd__contains=is_ews",
@@ -950,7 +1031,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "Third Declension Nouns - Stems in -\u03b5\u03c5, -\u03b1\u03c5, -\u03bf\u03c5",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s275",
         "query": "pos=noun&lemma__endswith=&posAdd__contains=eus_ews",
@@ -962,7 +1043,7 @@
 {
     "fields": {
         "category": 3,
-        "tasks": null,
+        "tasks": 5,
         "title": "Adjectives - Three-termination",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s286",
         "query": "pos=adj&posAdd__contains=os_h_on",
@@ -974,7 +1055,7 @@
 {
     "fields": {
         "category": 3,
-        "tasks": null,
+        "tasks": 5,
         "title": "Adjectives - Two-termination",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s288",
         "query": "pos=adj&posAdd__contains=os_on",
@@ -986,7 +1067,7 @@
 {
     "fields": {
         "category": 17,
-        "tasks": null,
+        "tasks": 5,
         "title": "Adjectives - Three-termination in the Third Declension",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s299",
         "query": "pos=adj&posAdd__contains=as_asa_an",
@@ -997,8 +1078,8 @@
 },
 {
     "fields": {
-        "category": 7,
-        "tasks": null,
+        "category": 4,
+        "tasks": 5,
         "title": "Articles Declension",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s332",
         "query": "pos=article",
@@ -1010,7 +1091,7 @@
 {
     "fields": {
         "category": 5,
-        "tasks": null,
+        "tasks": 5,
         "title": "Adverbs",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s343",
         "query": "pos=adverb",
@@ -1022,7 +1103,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "Verbs in Ancient Greek",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s343",
         "query": "pos=verb",
@@ -1034,7 +1115,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "Verbs in Ancient Greek - Person",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s364",
         "query": "pos=verb",
@@ -1046,7 +1127,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "Verbs in Ancient Greek - Number",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s363",
         "query": "pos=verb",
@@ -1058,7 +1139,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "Verbs in Ancient Greek - Tense",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s359",
         "query": "pos=verb",
@@ -1070,7 +1151,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "Verbs in Ancient Greek - Mood",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s357",
         "query": "pos=verb",
@@ -1082,7 +1163,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "Verbs in Ancient Greek - Voice",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s356",
         "query": "pos=verb",
@@ -1094,7 +1175,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Present Tense - Active, Indicative (\u03c9-stem)",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s499",
         "query": "pos=verb&tense=pres&mood=ind&voice=act&posAdd__contains=w_stem",
@@ -1106,7 +1187,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Future Tense",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s532",
         "query": "pos=verb&tense=fut",
@@ -1118,7 +1199,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Future Tense - Introduction to Future, Active, Indicative",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s532",
         "query": "pos=verb&tense=fut&mood=ind&voice=act",
@@ -1130,7 +1211,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Future Tense - Active, Indicative for Stop Verbs",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s537",
         "query": "pos=verb&tense=fut&mood=ind&voice=act&lemma__endswith=\u03c0\u03c9",
@@ -1166,7 +1247,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Present Tense - \u03b5\u1f30\u03bc\u03af",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s768",
         "query": "pos=verb&lemma=\u03b5\u1f30\u03bc\u03af&tense=pres&mood=ind",
@@ -1178,7 +1259,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Future Tense - \u03b5\u1f30\u03bc\u03af",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s768",
         "query": "pos=verb&lemma=\u03b5\u1f30\u03bc\u03af&tense=fut",
@@ -1190,7 +1271,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Imperfect Tense - \u03b5\u1f30\u03bc\u03af",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s768",
         "query": "pos=verb&lemma=\u03b5\u1f30\u03bc\u03af&tense=imperf",
@@ -1202,7 +1283,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Nominative Case - Predicate",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s910",
         "query": "pos=noun&case=nom",
@@ -1214,7 +1295,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Nominative Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s938",
         "query": "pos=noun&case=nom",
@@ -1226,7 +1307,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Vocative Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1283",
         "query": "pos=noun&case=voc",
@@ -1238,7 +1319,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Genitive Case - Possessive",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1297",
         "query": "pos=noun&case=gen",
@@ -1250,7 +1331,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Genitive Case - Partitive",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1306",
         "query": "pos=noun&case=gen",
@@ -1262,7 +1343,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Genitive Case - Comparative",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1315",
         "query": "pos=noun&case=gen",
@@ -1274,7 +1355,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Dative Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1450",
         "query": "pos=noun&case=dat",
@@ -1286,7 +1367,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Dative Case - Instrumental",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1506",
         "query": "pos=noun&case=dat",
@@ -1298,7 +1379,7 @@
 {
     "fields": {
         "category": 1,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Accusative Case",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1590",
         "query": "pos=noun&case=acc",
@@ -1310,7 +1391,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Imperfect Tense - Active, Indicative",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1889",
         "query": "pos=verb&tense=imperf&mood=ind&voice=act&posAdd__contains=w_stem",
@@ -1322,7 +1403,7 @@
 {
     "fields": {
         "category": 2,
-        "tasks": null,
+        "tasks": 5,
         "title": "The Perfect Tense - Indicative Active",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s 555",
         "query": "pos=verb&tense=perf&mood=ind&voice=act",
@@ -1358,7 +1439,7 @@
 {
     "fields": {
         "category": 6,
-        "tasks": null,
+        "tasks": 5,
         "title": "Participles",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s300",
         "query": "pos=participle",
@@ -1370,7 +1451,7 @@
 {
     "fields": {
         "category": 3,
-        "tasks": null,
+        "tasks": 5,
         "title": "Adjectives -Two-termination in the Third Declension",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Smyth+grammar+291&fromdoc=Perseus%3Atext%3A1999.04.0007",
         "query": "pos=adj&posAdd__contains=wn_on",
@@ -1381,11 +1462,11 @@
 },
 {
     "fields": {
-        "category": 20,
-        "tasks": null,
+        "category": 4,
+        "tasks": 4,
         "title": "Alphabet",
         "external_link": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007:id=s1",
-        "query": "",
+        "query": "lang=grc",
         "ref": "s1"
     },
     "model": "app.grammar",
@@ -1619,7 +1700,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Mu",
-        "content": "# Mu\r\n\r\n![](/static/images/alphabet/mu.svg)\r\n\r\n## \u039c \u03bc\r\n\r\n**Say it like** the \"m\" in _m_inotaur.   **IPA** /m/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nMu makes the same sound in \u03bc\u1fe6\u03b8\u03bf\u03c2 (m\u00fbthos), meaning \"report\", \"tale\", or\r\n\"story\".  \r\nThink of _myth_, _mythology_.\r\n\r\n***\r\n\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Mu\r\n\r\n![](/static/images/alphabet/mu.svg)\r\n\r\n## \u039c \u03bc\r\n\r\n**Say it like** the \"m\" in <u>m</u>inotaur.   **IPA** /m/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_mu.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n* * *\r\n\r\nMu makes the same sound in \u03bc\u1fe6\u03b8\u03bf\u03c2 (m\u00fbthos), meaning \"report\", \"tale\", or\r\n\"story\".  \r\nThink of *myth*, *mythology*.\r\n\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Mu with the following key combinations:\r\n\r\n### \u03bc &mdash;  m\r\n### \u039c &mdash; [Shift] m",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1631,7 +1712,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Alpha",
-        "content": "# Alpha\r\n\r\n![](/static/images/alphabet/alpha.svg)\r\n\r\n## \u0391 \u03b1\r\n\r\n**Say it like** the \"a\" in _a_rachnid.   **IPA** /a/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nAlpha makes the same sound in \u1f00\u03c1\u03ac\u03c7\u03bd\u03b7 (arakhn\u0113), meaning \"spider.\"  \r\nThink of _arachnid_, _arachnophobia_.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
+        "content": "# Alpha\r\n\r\n![](/static/images/alphabet/alpha.svg)\r\n\r\n## \u0391 \u03b1\r\n\r\n**Say it like** the \"a\" in *a*rachnid.   **IPA** /a/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_alpha.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nAlpha makes the same sound in \u1f00\u03c1\u03ac\u03c7\u03bd\u03b7 (arakhn\u0113), meaning \"spider.\"  \r\nThink of _arachnid_, _arachnophobia_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce an Alpha with the following key combinations:\r\n\r\n### \u03b1 &mdash;  a\r\n### \u0391 &mdash; [Shift] a",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1643,7 +1724,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Sigma",
-        "content": "# Sigma\r\n\r\n![](/static/images/alphabet/sigma.svg)\r\n\r\n## \u03a3 \u03c3/\u03c2\r\n\r\n**Say it like** the \"s\" in _s_alamander.   **IPA** /s/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nSigma makes the same sound in \u03c3\u03b1\u1fe6\u03c1\u03bf\u03c2 (sauros), meaning \"lizard.\"  \r\nThink of _dinosaur_, _stegosaurus_, _tyrannosaurus_.\r\n\r\n***\r\n\r\n* \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Sigma\r\n\r\n![](/static/images/alphabet/sigma.svg)\r\n\r\n## \u03a3 \u03c3/\u03c2\r\n\r\n**Say it like** the \"s\" in **s**alamander.   **IPA** /s/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_sigma.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n* * *\r\n\r\nSigma makes the same sound in \u03c3\u03b1\u1fe6\u03c1\u03bf\u03c2 (sauros), meaning \"lizard.\"  \r\nThink of _dinosaur_, _stegosaurus_, _tyrannosaurus_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce sigmas with the following key combinations:\r\n\r\n### \u03c3 &mdash;  s \r\n### \u03c2 &mdash; , s \r\n### \u03a3 &mdash; [Shift] s ",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1655,7 +1736,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Eta",
-        "content": "# Eta\r\n\r\n![](/static/images/alphabet/eta.svg)\r\n\r\n## \u0397 \u03b7\r\n\r\n**Say it like** the \"e\" in _e_cho   **IPA** /\u025b\u02d0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nEta is pronounced the same in \u1f26\u03c7\u03bf\u03c2 (\u00e9chos), meaning \"sound\".  \r\nThink of _echo_, _echolocation_, and _Echo_ (the forest nymph punished by Hera\r\nto repeat only what other people said).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Eta\r\n\r\n![](/static/images/alphabet/eta.svg)\r\n\r\n## \u0397 \u03b7\r\n\r\n**Say it like** the \"e\" in *e*cho   **IPA** /\u025b\u02d0/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_eta.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nEta is pronounced the same in \u1f26\u03c7\u03bf\u03c2 (\u00e9chos), meaning \"sound\".  \r\nThink of _echo_, _echolocation_, and _Echo_ (the forest nymph punished by Hera to repeat only what other people said).\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce an Eta with the following key combinations:\r\n\r\n### \u03b7 &mdash;  h\r\n### \u0397 &mdash; [Shift] h",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1667,7 +1748,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Iota",
-        "content": "# Iota\r\n\r\n![](/static/images/alphabet/iota.svg)\r\n\r\n## \u0399 \u03b9\r\n\r\n**Say it like** the \"ea\" in _ea_r  \r\n**IPA** /i/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nIota makes the same sound in \u1f30\u03c7\u03b8\u03cd\u03c2 (ikhth\u00fas), meaning \"fish.\"  \r\nThink of _ichthyology_, the study of fish.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Iota\r\n\r\n![](/static/images/alphabet/iota.svg)\r\n\r\n## \u0399 \u03b9\r\n\r\n**Say it like** the \"ea\" in *ea*r  \r\n**IPA** /i/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_iota.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nIota makes the same sound in \u1f30\u03c7\u03b8\u03cd\u03c2 (ikhth\u00fas), meaning \"fish.\"  \r\nThink of _ichthyology_, the study of fish.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce an Iota with the following key combinations:\r\n\r\n### \u03b9 &mdash;  i\r\n### \u0399 &mdash; [Shift] i",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1679,7 +1760,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Chi",
-        "content": "# Chi\r\n\r\n![](/static/images/alphabet/chi.svg)\r\n\r\n## \u03a7 \u03c7\r\n\r\n**Say it like** the \"ch\" in _ch_oreography.   **IPA** /kh/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nChi makes the same sound in \u03c7\u03bf\u03c1\u03b5\u03af\u03b1 (khoreia) and \u03c7\u03bf\u03c1\u03cc\u03c2 (khoros), both meaning\r\n\"dance\"  \r\nThink of _choir_, _chorus_, _choreography_.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Chi\r\n\r\n![](/static/images/alphabet/chi.svg)\r\n\r\n## \u03a7 \u03c7\r\n\r\n**Say it like** the \"ch\" in **ch**oreography.   **IPA** /kh/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_chi.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nChi makes the same sound in \u03c7\u03bf\u03c1\u03b5\u03af\u03b1 (khoreia) and \u03c7\u03bf\u03c1\u03cc\u03c2 (khoros), both meaning\r\n\"dance\"  \r\nThink of _choir_, _chorus_, _choreography_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Chi with the following key combinations:\r\n\r\n### \u03c7 &mdash;  x\r\n### \u03a7 &mdash; [Shift] x",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1691,7 +1772,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Delta",
-        "content": "# Delta\r\n\r\n![](/static/images/alphabet/delta.svg)\r\n\r\n## \u0394 \u03b4\r\n\r\n**Say it like** the \"d\" in _d_ata.   **IPA** /d/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nDelta makes the same sound in \u03b4\u03ad\u03bd\u03b4\u03c1\u03bf\u03bd (d\u00e9ndron), meaning \"tree\".  \r\nThink of _dendrochronoloy_ (study of tree rings) or _Rhododendron_ (flower\r\nwhose name means 'rose tree').\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Delta\r\n\r\n![](/static/images/alphabet/delta.svg)\r\n\r\n## \u0394 \u03b4\r\n\r\n**Say it like** the \"d\" in **d**ata.   **IPA** /d/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_delta.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nDelta makes the same sound in \u03b4\u03ad\u03bd\u03b4\u03c1\u03bf\u03bd (d\u00e9ndron), meaning \"tree\".  \r\nThink of _dendrochronoloy_ (study of tree rings) or _Rhododendron_ (flower whose name means 'rose tree').\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Delta with the following key combinations:\r\n\r\n### \u03b4 &mdash;  d\r\n### \u0394 &mdash; [Shift] d\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1703,7 +1784,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Kappa",
-        "content": "# Kappa\r\n\r\n![](/static/images/alphabet/kappa.svg)\r\n\r\n## \u039a \u03ba\r\n\r\n**Say it like** the \"k\" in bi_k_e.   **IPA** /k/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nKappa makes the same sound in \u03ba\u03cd\u03ba\u03bb\u03bf\u03c2 (k\u00faklos), meaning \"circle, ring.\"  \r\nThink of _cyclone_, _bicycle_, _encyclopedia_ (literally, circle + education).\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9",
+        "content": "# Kappa\r\n\r\n![](/static/images/alphabet/kappa.svg)\r\n\r\n## \u039a \u03ba\r\n\r\n**Say it like** the \"k\" in bi**k**e.   **IPA** /k/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_kappa.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nKappa makes the same sound in \u03ba\u03cd\u03ba\u03bb\u03bf\u03c2 (k\u00faklos), meaning \"circle, ring.\"  \r\nThink of _cyclone_, _bicycle_, _encyclopedia_ (literally, circle + education).\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Mu with the following key combinations:\r\n\r\n### \u03ba &mdash;  k\r\n### \u039a &mdash; [Shift] k",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1715,7 +1796,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Nu",
-        "content": " # Nu\r\n\r\n![](/static/images/alphabet/nu.svg)\r\n\r\n## \u039d \u03bd\r\n\r\n**Say it like** the \"n\" in _n_autical.   **IPA** /n/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nNu makes the same sound in \u03bd\u03b1\u1fe6\u03c2 (na\u00fbs), meaning \"ship\" and \u03bd\u03b1\u03c5\u03c4\u03b9\u03ba\u03cc\u03c2\r\n(nautik\u00f3s), meaning \"sailor\" or \"seafaring\".  \r\nThink of _naval_, _astronaut_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
+        "content": " # Nu\r\n\r\n![](/static/images/alphabet/nu.svg)\r\n\r\n## \u039d \u03bd\r\n\r\n**Say it like** the \"n\" in **n**autical.   **IPA** /n/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_nu.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nNu makes the same sound in \u03bd\u03b1\u1fe6\u03c2 (na\u00fbs), meaning \"ship\" and \u03bd\u03b1\u03c5\u03c4\u03b9\u03ba\u03cc\u03c2 (nautik\u00f3s), meaning \"sailor\" or \"seafaring\".  \r\nThink of _naval_, _astronaut_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Nu with the following key combinations:\r\n\r\n### \u03bd &mdash;  n\r\n### \u039d &mdash; [Shift] n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1727,7 +1808,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Zeta",
-        "content": "# Zeta\r\n\r\n![](/static/images/alphabet/zeta.svg)\r\n\r\n## \u0396 \u03b6\r\n\r\n**Say it like** the \"s\" in wi_s_e &nsbp; **IPA** /z/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nFor example, \u03b6\u1ff7\u03bf\u03bd (z\u014don), meaning \"animal\".  \r\nThink of _zoo_, _zoology_, _protozoa_ (literally, first + animal).\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Zeta\r\n\r\n![](/static/images/alphabet/zeta.svg)\r\n\r\n## \u0396 \u03b6\r\n\r\n**Say it like** the \"s\" in wi**s**e  **IPA** /z/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_zeta.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nFor example, \u03b6\u1ff7\u03bf\u03bd (z\u014don), meaning \"animal\".  \r\nThink of _zoo_, _zoology_, _protozoa_ (literally, first + animal).\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Zeta with the following key combinations:\r\n\r\n### \u03b6 &mdash;  z\r\n### \u0396 &mdash; [Shift] z",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1739,7 +1820,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Beta",
-        "content": "# Beta\r\n\r\n![](/static/images/alphabet/beta.svg)\r\n\r\n## \u0392 \u03b2\r\n\r\n**Say it like** the \"b\" in _b_ook.   **IPA** /b/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nBeta makes the same sound in \u03b2\u03af\u03b2\u03bb\u03bf\u03c2 (b\u00edblos), meaning \"book.\"  \r\nThink of _bibliography_, _Bible_.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Beta\r\n\r\n![](/static/images/alphabet/beta.svg)\r\n\r\n## \u0392 \u03b2\r\n\r\n**Say it like** the \"b\" in **b**ook.   **IPA** /b/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_beta.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nBeta makes the same sound in \u03b2\u03af\u03b2\u03bb\u03bf\u03c2 (b\u00edblos), meaning \"book.\"  \r\nThink of _bibliography_, _Bible_.\r\n\r\n***\r\n \r\n## Type it!\r\n\r\nYou can produce a Beta with the following key combinations:\r\n\r\n### \u03b2 &mdash;  b\r\n### \u0392 &mdash; [Shift] b",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1751,7 +1832,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Xi",
-        "content": "# Xi\r\n\r\n![](/static/images/alphabet/xi.svg)\r\n\r\n## \u039e \u03be\r\n\r\n**Say it like** the \"ks\" in ca_kes_.   **IPA** /ks/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nXi makes the same sound in \u03be\u03ad\u03bd\u03bf\u03c2 (ks\u00e9nos), meaning \"guest\" or \"stranger\".  \r\nThink of _xenophobia_ (literally, fear of strangers or foreigners), _xenon_\r\n(chemical element).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n\r\n",
+        "content": "# Xi\r\n\r\n![](/static/images/alphabet/xi.svg)\r\n\r\n## \u039e \u03be\r\n\r\n**Say it like** the \"ks\" in ca**kes**.   **IPA** /ks/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_xi.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nXi makes the same sound in \u03be\u03ad\u03bd\u03bf\u03c2 (ks\u00e9nos), meaning \"guest\" or \"stranger\".  \r\nThink of _xenophobia_ (literally, fear of strangers or foreigners), _xenon_ (chemical element).\r\n\r\n***\r\n## Type it!\r\n\r\nYou can produce a Xi with the following key combinations:\r\n\r\n### \u03be &mdash;  c\r\n### \u039e &mdash; [Shift] c",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1763,7 +1844,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Omega",
-        "content": " # Omega\r\n\r\n![](/static/images/alphabet/omega.svg)\r\n\r\n## \u03a9 \u03c9\r\n\r\n**Say it like** the \"o\" in h_o_roscope.   **IPA** /\u0254\u02d0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nOmega makes the same sound in \u1f65\u03c1\u03b1 (h\u1e53ra), meaning \"season, hour.\"  \r\nThink of _horology_ (the art or science of measuring time), _horoscope_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9",
+        "content": " # Omega\r\n\r\n![](/static/images/alphabet/omega.svg)\r\n\r\n## \u03a9 \u03c9\r\n\r\n**Say it like** the \"o\" in h**o**roscope.   **IPA** /\u0254\u02d0/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_omega.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nOmega makes the same sound in \u1f65\u03c1\u03b1 (h\u1e53ra), meaning \"season, hour.\"  \r\nThink of _horology_ (the art or science of measuring time), _horoscope_.\r\n\r\n***\r\n## Type it!\r\n\r\nYou can produce an Omega with the following key combinations:\r\n\r\n### \u03c9 &mdash;  w\r\n### \u03a9 &mdash; [Shift] w",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1775,7 +1856,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Lambda",
-        "content": "# Lambda\r\n\r\n![](/static/images/alphabet/lambda.svg)\r\n\r\n## \u039b \u03bb\r\n\r\n**Say it like** the \"l\" in _l_ithography.   **IPA** /l/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nLambda makes the same sound in \u03bb\u03af\u03b8\u03bf\u03c2 (l\u00edthos), meaning \"stone\".  \r\nThink of _neolithic_ (literally, new + stones), _lithology_ (study of rock\r\nformation).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Lambda\r\n\r\n![](/static/images/alphabet/lambda.svg)\r\n\r\n## \u039b \u03bb\r\n\r\n**Say it like** the \"l\" in **l**ithography.   **IPA** /l/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_lambda.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nLambda makes the same sound in \u03bb\u03af\u03b8\u03bf\u03c2 (l\u00edthos), meaning \"stone\".  \r\nThink of _neolithic_ (literally, new + stones), _lithology_ (study of rock formation).\r\n\r\n***\r\n## Type it!\r\n\r\nYou can produce a Lambda with the following key combinations:\r\n\r\n### \u03bb &mdash;  l\r\n### \u039b &mdash; [Shift] l",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1787,7 +1868,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Psi",
-        "content": "  # Psi\r\n\r\n![](/static/images/alphabet/psi.svg)\r\n\r\n## \u03a8 \u03c8\r\n\r\n**Say it like** the \"ps\" in _ps_yche.   **IPA** /ps/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPsi makes the same sound in \u03c8\u03c5\u03c7\u03ae (psukh\u1e17), meaning \"sprit, mind, soul.\"  \r\nThink of _psychology_, _psychedelic_, _psychosis_, _psychosomatic_.\r\n\r\n***\r\n\r\n* \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n\r\n",
+        "content": "# Psi\r\n\r\n![](/static/images/alphabet/psi.svg)\r\n\r\n## \u03a8 \u03c8\r\n\r\n**Say it like** the \"ps\" in **ps**yche.   **IPA** /ps/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_psi.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nPsi makes the same sound in \u03c8\u03c5\u03c7\u03ae (psukh\u1e17), meaning \"sprit, mind, soul.\"  \r\nThink of _psychology_, _psychedelic_, _psychosis_, _psychosomatic_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Mu with the following key combinations:\r\n\r\n### \u03c8 &mdash;  y\r\n### \u03a8 &mdash; [Shift] y",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1799,7 +1880,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Rho",
-        "content": "# Rho\r\n\r\n![](/static/images/alphabet/rho.svg)\r\n\r\n## \u03a1 \u03c1\r\n\r\n**Say it like** the \"r\" in _r_ose.   **IPA** /r/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nRho makes the same sound in \u1fe5\u03cc\u03b4\u03bf\u03bd (rhodon), meaning \"rose, red\"  \r\nThink of _rhododendron_, a genus of plant which often bears red flowers.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Rho\r\n\r\n![](/static/images/alphabet/rho.svg)\r\n\r\n## \u03a1 \u03c1\r\n\r\n**Say it like** the \"r\" in *r*ose.   **IPA** /r/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_rho.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nRho makes the same sound in \u1fe5\u03cc\u03b4\u03bf\u03bd (rhodon), meaning \"rose, red\"  \r\nThink of _rhododendron_, a genus of plant which often bears red flowers.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Rho with the following key combinations:\r\n\r\n### \u03c1 &mdash;  r\r\n### \u03a1 &mdash; [Shift] r",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1835,7 +1916,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Gamma",
-        "content": " # Gamma\r\n\r\n![](/static/images/alphabet/gamma.svg)\r\n\r\n## \u0393 \u03b3\r\n\r\n**Say it like** the \"g\" in _g_rammar.   **IPA** /g/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nGamma makes the same sound in \u03b3\u03c1\u03ac\u03c6\u03c9 (gr\u00e1ph\u014d), meaning \"I write.\"  \r\nThink of _graphic_, _graphite_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
+        "content": "# Gamma\r\n\r\n![](/static/images/alphabet/gamma.svg)\r\n\r\n## \u0393 \u03b3\r\n\r\n**Say it like** the \"g\" in **g**rammar.   **IPA** /g/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_gamma.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nGamma makes the same sound in \u03b3\u03c1\u03ac\u03c6\u03c9 (gr\u00e1ph\u014d), meaning \"I write.\"  \r\nThink of _graphic_, _graphite_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Mu with the following key combinations:\r\n\r\n### \u03b3 &mdash;  g\r\n### \u0393 &mdash; [Shift] g",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1846,8 +1927,8 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "Alphabet: Digraphs",
-        "content": "## A few things to remember!\r\n\r\nThe following **letter combinations** might at first appear hard to pronounce.\r\n\r\nTake a look at the following table to find out how to tackle them easily:\r\n\r\n## Digraphs in Greek\r\n\r\nThese so-called \"\u03b3 nasals\" are example of _digraphs_ in Ancient Greek. _Di_,\r\nmeaning 'two', and _graph_ meaning 'something written'.\r\n\r\nLetter combination | Pronunciation | Example | Pronunciation  \r\n---|---|---|---  \r\n\u03b3\u03b3 | ng | \u1f04\u03b3\u03b3\u03b5\u03bb\u03bf\u03c2 | angelos  \r\n\u03b3\u03ba | nk | \u1f04\u03b3\u03ba\u03c5\u03c1\u03b1 | ank\u00fcra  \r\n\u03b3\u03c7 | nkh | \u03bb\u03cc\u03b3\u03c7\u03b7 | lonkhe  \r\n\u03b3\u03be | nx | \u03c3\u03ac\u03bb\u03c0\u03b9\u03b3\u03be | salpinx  \r\n  \r\nYou don't need to know what they're called, just remember that if a \u03b3 is\r\nfollowed by another \u03b3, or a \u03ba, \u03c7, \u03be, you should pronounce the first \u03b3 as\r\nthough it were actually a \u03bd.\r\n\r\n",
+        "title": "Digraphs",
+        "content": "## A few things to remember!\r\n\r\nThe following **letter combinations** might at first appear hard to pronounce.\r\n\r\nTake a look at the following table to find out how to tackle them easily:\r\n\r\n## Digraphs in Greek\r\n\r\nThese so-called \"\u03b3 nasals\" are example of _digraphs_ in Ancient Greek. _Di_,\r\nmeaning 'two', and _graph_ meaning 'something written'.\r\n\r\nLetters | Sound | Example | Pronunciation  \r\n---|---|---|---  \r\n\u03b3\u03b3 | ng | \u1f04\u03b3\u03b3\u03b5\u03bb\u03bf\u03c2 | angelos  \r\n\u03b3\u03ba | nk | \u1f04\u03b3\u03ba\u03c5\u03c1\u03b1 | ank\u00fcra  \r\n\u03b3\u03c7 | nkh | \u03bb\u03cc\u03b3\u03c7\u03b7 | lonkhe  \r\n\u03b3\u03be | nx | \u03c3\u03ac\u03bb\u03c0\u03b9\u03b3\u03be | salpinx  \r\n  \r\nYou don't need to know what they're called, just remember that if a \u03b3 is followed by another \u03b3, or a \u03ba, \u03c7, \u03be, you should pronounce the first \u03b3 as though it were actually a \u03bd.\r\n\r\n",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1859,7 +1940,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Epsilon",
-        "content": "# Epsilon\r\n\r\n![](/static/images/alphabet/epsilon.svg)\r\n\r\n## \u0395 \u03b5\r\n\r\n**Say it like** the \"e\" in _e_nergy   **IPA** /e/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nEpsilon makes the same sound in \u1f14\u03c1\u03b3\u03bf\u03bd (\u00e9rgon), meaning \"work\".  \r\nThink of _energy_.\r\n\r\n***\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Epsilon\r\n\r\n![](/static/images/alphabet/epsilon.svg)\r\n\r\n## \u0395 \u03b5\r\n\r\n**Say it like** the \"e\" in *e*nergy   **IPA** /e/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_epsilon.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nEpsilon makes the same sound in \u1f14\u03c1\u03b3\u03bf\u03bd (\u00e9rgon), meaning \"work\".  \r\nThink of _energy_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce an Epsilon with the following key combinations:\r\n\r\n### \u03b5 &mdash;  e\r\n### \u0395 &mdash; [Shift] e",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1871,15 +1952,16 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet",
-        "content": "## The Greek Alphabet\r\n\r\nThe Greek alphabet comprises **24 letters** (7 vowels and 17 consonants). The\r\nalphabet you will learn is the Ionic alphabet first adopted in Athens at the\r\nend of the 5th century BC.\r\n\r\n### The Greek Alphabet\r\n\r\nUppercase | Lowercase | Name | Pronunciation  \r\n---|---|---|---  \r\n\u0391 | \u03b1 | alpha | a  \r\n\u0392 | \u03b2 | beta | b  \r\n\u0393 | \u03b3 | gamma | g (like \"glue\")  \r\n\u0394 | \u03b4 | delta | d  \r\n\u0395 | \u03b5 | epsilon | e (like \"get\")  \r\nZ | \u03b6 | zdeta | zd  \r\n\u0397 | \u03b7 | eta | e (like \"hair\")  \r\n\u0398 | \u03b8 | theta | th  \r\n\u0399 | \u03b9 | iota | i (like \"east\")  \r\n\u039a | \u03ba | kappa | k  \r\n\u039b | \u03bb | lambda | l  \r\n\u039c | \u03bc | m\u00fc | m  \r\n\u039d | \u03bd | n\u00fc | n  \r\n\u039e | \u03be | ksi | x  \r\n\u039f | \u03bf | omicron | o  \r\n\u03a0 | \u03c0 | pi | p  \r\n\u03a1 | \u03c1 | rho | r  \r\n\u03a3 | \u03c3 or \u03c2* | sigma | s  \r\n\u03a4 | \u03c4 | tau | t  \r\n\u03a5 | \u03c5 | \u00fcpsilon | \u00fc  \r\n\u03a6 | \u03c6 | fi | f  \r\n\u03a7 | \u03c7 | khi | kh  \r\n\u03a8 | \u03c8 | psi | ps  \r\n\u03a9 | \u03c9 | omega | o  \r\n  \r\n* \u03c3 is used when the letter is in the middle of the word. \u03c2 is used when the letter is at the end of the word. \r\n\r\n",
+        "content": "## The Greek Alphabet\r\n\r\nThe Greek alphabet comprises **24 letters** (7 vowels and 17 consonants). The\r\nalphabet you will learn is the Ionic alphabet first adopted in Athens at the\r\nend of the 5th century BC.\r\n\r\n### The Greek Alphabet\r\n\r\nUppercase | Lowercase | Name | Pronunciation  \r\n---|---|---|---  \r\n\u0391 | \u03b1 | alpha | a  \r\n\u0392 | \u03b2 | beta | b  \r\n\u0393 | \u03b3 | gamma | g (like \"glue\")  \r\n\u0394 | \u03b4 | delta | d  \r\n\u0395 | \u03b5 | epsilon | e (like \"get\")  \r\nZ | \u03b6 | zdeta | zd  \r\n\u0397 | \u03b7 | eta | e (like \"hair\")  \r\n\u0398 | \u03b8 | theta | th  \r\n\u0399 | \u03b9 | iota | i (like \"east\")  \r\n\u039a | \u03ba | kappa | k  \r\n\u039b | \u03bb | lambda | l  \r\n\u039c | \u03bc | m\u00fc | m  \r\n\u039d | \u03bd | n\u00fc | n  \r\n\u039e | \u03be | ksi | x  \r\n\u039f | \u03bf | omicron | o  \r\n\u03a0 | \u03c0 | pi | p  \r\n\u03a1 | \u03c1 | rho | r  \r\n\u03a3 | \u03c3 or \u03c2* | sigma | s  \r\n\u03a4 | \u03c4 | tau | t  \r\n\u03a5 | \u03c5 | \u00fcpsilon | \u00fc  \r\n\u03a6 | \u03c6 | fi | f  \r\n\u03a7 | \u03c7 | khi | kh  \r\n\u03a8 | \u03c8 | psi | ps  \r\n\u03a9 | \u03c9 | omega | o  \r\n\r\n***\r\n\r\n\u03c3 is used when the letter is in the middle of the word. \u03c2 is used when the letter is at the end of the word.",
         "grammar_ref": 64,
         "related_content": [
             266,
-            251,
-            253,
-            254,
             255,
             271,
+            253,
+            251,
+            252,
+            254,
             256,
             257,
             258,
@@ -1908,7 +1990,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Pi",
-        "content": "# Pi\r\n\r\n![](/static/images/alphabet/pi.svg)\r\n\r\n## \u03a0 \u03c0\r\n\r\n**Say it like** the \"p\" in helico_p_ter.   **IPA** /p/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPi makes the same sound in \u03c0\u03c4\u03b5\u03c1\u03cc\u03bd (pteron), meaning \"wing.\"  \r\nThink of _pterodactyl_, _helicopter_, _ornithopter_.\r\n\r\n***\r\n\r\n\r\n  * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9",
+        "content": "# Pi\r\n\r\n![](/static/images/alphabet/pi.svg)\r\n\r\n## \u03a0 \u03c0\r\n\r\n**Say it like** the \"p\" in helico**p**ter.   **IPA** /p/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_pi.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nPi makes the same sound in \u03c0\u03c4\u03b5\u03c1\u03cc\u03bd (pteron), meaning \"wing.\"  \r\nThink of _pterodactyl_, _helicopter_, _ornithopter_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Pi with the following key combinations:\r\n\r\n### \u03c0 &mdash;  p\r\n### \u03a0 &mdash; [Shift] p",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1920,7 +2002,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Upsilon",
-        "content": "# Upsilon\r\n\r\n![](/static/images/alphabet/upsilon.svg)\r\n\r\n## \u03a5 \u03c5\r\n\r\n**Say it like** the \"\u00fc\" in _\u00fc_ber.   **IPA** /y/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nAn upsilon at the beginning of a word is often pronounced \"h\u00fc\". For example,\r\n\u1f55\u03b4\u03c9\u03c1 (h\u00fad\u014dr), meaning \"water\"  \r\nThink of _hydrology_, _hydrolysis_ (literally, loosening water).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Upsilon\r\n\r\n![](/static/images/alphabet/upsilon.svg)\r\n\r\n## \u03a5 \u03c5\r\n\r\n**Say it like** the \"\u00fc\" in **\u00fc**ber.   **IPA** /y/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_upsilon.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nAn upsilon at the beginning of a word is often pronounced \"h\u00fc\". For example, \u1f55\u03b4\u03c9\u03c1 (h\u00fad\u014dr), meaning \"water\".\r\n\r\nThink of _hydrology_, _hydrolysis_ (literally, loosening water).\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce an Upsilon with the following key combinations:\r\n\r\n### \u03c5 &mdash;  u\r\n### \u03a5 &mdash; [Shift] u",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1932,7 +2014,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Tau",
-        "content": " # Tau\r\n\r\n  \r\n  \r\n![](/static/images/alphabet/tau.svg)\r\n\r\n## \u03a4 \u03c4\r\n\r\n**Say it like** the \"t\" in _t_oxic.   **IPA** /t/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nTau makes the same sound in \u03c4\u03cc\u03be\u03bf\u03bd (t\u00f3kson), meaning \"archer's bow, rainbow,\r\narc\", and \u03c4\u03bf\u03be\u03b9\u03ba\u03cc\u03bd (toxikon) meaning \"poison\".  \r\nThink of _toxicology_, _detox_, _intoxication_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n",
+        "content": "# Tau\r\n\r\n![](/static/images/alphabet/tau.svg)\r\n\r\n## \u03a4 \u03c4\r\n\r\n**Say it like** the \"t\" in **t**oxic.   **IPA** /t/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nTau makes the same sound in \u03c4\u03cc\u03be\u03bf\u03bd (t\u00f3kson), meaning \"archer's bow, rainbow, arc\", and \u03c4\u03bf\u03be\u03b9\u03ba\u03cc\u03bd (toxikon) meaning \"poison\".  \r\n\r\nThink of _toxicology_, _detox_, _intoxication_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Tau with the following key combinations:\r\n\r\n### \u03c4 &mdash;  t\r\n### \u03a4 &mdash; [Shift] t",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1944,7 +2026,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Theta",
-        "content": "# Theta\r\n\r\n![](/static/images/alphabet/theta.svg)\r\n\r\n## \u0398 \u03b8\r\n\r\n**Say it like** the \"th\" in _th_eology.   **IPA** /t\u02b0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nTheta makes the same sound in \u03b8\u03b5\u03cc\u03c2 (the\u00f3s), meaning \"a god.\"  \r\nThink of _theism_, _atheism_.\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n\r\n\r\n",
+        "content": "# Theta\r\n\r\n![](/static/images/alphabet/theta.svg)\r\n\r\n## \u0398 \u03b8\r\n\r\n**Say it like** the \"th\" in **th**eology.   **IPA** /t\u02b0/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_theta.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nTheta makes the same sound in \u03b8\u03b5\u03cc\u03c2 (the\u00f3s), meaning \"a god.\"\r\n\r\nThink of _theism_, _atheism_.\r\n\r\n***\r\n\r\n## Type it!\r\n\r\nYou can produce a Theta with the following key combinations:\r\n\r\n### \u03b8 &mdash;  q\r\n### \u0398 &mdash; [Shift] q",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1956,7 +2038,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Omicron",
-        "content": "# Omicron\r\n\r\n![](/static/images/alphabet/omicron.svg)\r\n\r\n## \u039f \u03bf\r\n\r\n**Say it like** the \"o\" in _o_ptical.   **IPA** /o/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nOmicron makes the same sound in \u1f40\u03c0\u03c4\u03b9\u03ba\u03cc\u03c2 (optik\u00f3s), meaning \"relating to sight\r\nor vision\" and in \u1f40\u03c6\u03b8\u03b1\u03bb\u03bc\u03cc\u03c2, meaning \"eye\".  \r\nThink of _fiberoptics_, _optometry_, _ophthalmology_ (medicine dealing with\r\nanatomy, physiology, and diseases of the eye).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
+        "content": "# Omicron\r\n\r\n![](/static/images/alphabet/omicron.svg)\r\n\r\n## \u039f \u03bf\r\n\r\n**Say it like** the \"o\" in **o**ptical.   **IPA** /o/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_omicron.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nOmicron makes the same sound in \u1f40\u03c0\u03c4\u03b9\u03ba\u03cc\u03c2 (optik\u00f3s), meaning \"relating to sight or vision\" and in \u1f40\u03c6\u03b8\u03b1\u03bb\u03bc\u03cc\u03c2, meaning \"eye\".  \r\nThink of _fiberoptics_, _optometry_, _ophthalmology_ (medicine dealing with anatomy, physiology, and diseases of the eye).\r\n\r\n***\r\n## Type it!\r\n\r\nYou can produce an Omicron with the following key combinations:\r\n\r\n### \u03bf &mdash;  o\r\n### \u039f &mdash; [Shift] o",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -1968,7 +2050,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Alphabet: Phi",
-        "content": "# Phi\r\n\r\n![](/static/images/alphabet/phi.svg)\r\n\r\n## \u03a6 \u03c6\r\n\r\n**Say it like** the \"ph\" in _ph_ilosophy.   **IPA** /p\u02b0/ \r\n\r\nYour browser does not support the audio element.\r\n\r\n* * *\r\n\r\nPhi sounds the same in \u03c6\u03af\u03bb\u03bf\u03c2 (ph\u00edlos), meaning \"dear, beloved.\"  \r\nThink of _philanthropy_ (literally, love for men), _Philadelphia_ (the city of\r\nbrotherly love).\r\n\r\n***\r\n\r\n * \u03b1\r\n  * \u03b2\r\n  * \u03b3\r\n  * \u03b4\r\n  * \u03b5\r\n  * \u03b6\r\n  * \u03b7\r\n  * \u03b8\r\n  * \u03b9\r\n  * \u03ba\r\n  * \u03bb\r\n  * \u03bc\r\n  * \u03bd\r\n  * \u03be\r\n  * \u03bf\r\n  * \u03c0\r\n  * \u03c1\r\n  * \u03c3/\u03c2\r\n  * \u03c4\r\n  * \u03c5\r\n  * \u03c6\r\n  * \u03c7\r\n  * \u03c8\r\n  * \u03c9\r\n",
+        "content": "# Phi\r\n\r\n![](/static/images/alphabet/phi.svg)\r\n\r\n## \u03a6 \u03c6\r\n\r\n**Say it like** the \"ph\" in **ph**ilosophy.   **IPA** /p\u02b0/ \r\n\r\n<audio controls>\r\n    <source src=\"/static/audio/_phi.wav\" type=\"audio/wav\">\r\n    Your browser does not support the audio element.\r\n</audio>\r\n\r\n* * *\r\n\r\nPhi sounds the same in \u03c6\u03af\u03bb\u03bf\u03c2 (ph\u00edlos), meaning \"dear, beloved.\"  \r\nThink of _philanthropy_ (literally, love for men), _Philadelphia_ (the city of brotherly love).\r\n\r\n***\r\n## Type it!\r\n\r\nYou can produce a Mu with the following key combinations:\r\n\r\n### \u03c6 &mdash;  f\r\n### \u03a6 &mdash; [Shift] f",
         "grammar_ref": null,
         "related_content": [],
         "source_lang": 4
@@ -2145,7 +2227,7 @@
     "fields": {
         "target_lang": 5,
         "title": "Adjectives: Third Declension (Two-ending)",
-        "content": "## Two-ending Adjectives of the Third Declension\r\n\r\nThe adjectives of the third declension with two endings are declined just like\r\nthe third declension nouns with consonant stems. These adjectives have one\r\ntype of ending for masculine and feminine, and one type for neuter.\r\n\r\nLook at the following example of \u03b5\u1f50\u03b4\u03b1\u03af\u03bc**\u03c9\u03bd**, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc**\u03bf\u03bd**, meaning _happy_.\r\n\r\n### \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd -- _happy_\r\n\r\nTwo-ending Adjective\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1** | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \r\nVoc.| \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd |\r\n **Plural**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd** | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nVoc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\n\r\nAnd now another example with different endings: \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ae\u03c2**, \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ad\u03c2**,\r\nmeaning _noble_.\r\n\r\n### \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2, \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 -- _noble_\r\n\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2\r\n| \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | \r\n**Plural**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\n  \r\n\r\n\r\n",
+        "content": "## Two-ending Adjectives of the Third Declension\r\n\r\nThe adjectives of the third declension with two endings are declined just like\r\nthe third declension nouns with consonant stems. These adjectives have one\r\ntype of ending for masculine and feminine, and one type for neuter.\r\n\r\nLook at the following example of \u03b5\u1f50\u03b4\u03b1\u03af\u03bc**\u03c9\u03bd**, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc**\u03bf\u03bd**, meaning _happy_.\r\n\r\n### \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd, \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd -- _happy_\r\n\r\nTwo-ending Adjective\r\n\r\nCase | Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03c9\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03bf\u03c2**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b9** | \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1** | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \r\nVoc.| \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd | \u03b5\u1f54\u03b4\u03b1\u03b9\u03bc\u03bf\u03bd |\r\n **Plural**  \r\nNom. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nGen. | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd** | \u03b5\u1f50\u03b4\u03b1\u03b9\u03bc\u03cc\u03bd**\u03c9\u03bd**  \r\nDat. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\nVoc. | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b5\u03c2** | \u03b5\u1f50\u03b4\u03b1\u03af\u03bc\u03bf\u03bd**\u03b1**  \r\n\r\nAnd now another example with different endings: \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ae\u03c2**, \u03b5\u1f50\u03b3\u03b5\u03bd**\u03ad\u03c2**,\r\nmeaning _noble_.\r\n\r\n### \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2, \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 -- _noble_\r\n\r\n\r\n| Masc./Fem. | Neut.  \r\n---|---|---  \r\n**Singular**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ae\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u03bf\u1fe6\u03c2**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5**\u1fd6** | \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2\r\n| \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad\u03c2 | \r\n**Plural**  \r\nNom. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nGen. | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd** | \u03b5\u1f50\u03b3\u03b5\u03bd**\u1ff6\u03bd**  \r\nDat. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)** | \u03b5\u1f50\u03b3\u03b5\u03bd\u03ad**\u03c3\u03b9(\u03bd)**  \r\nAcc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\nVoc. | \u03b5\u1f50\u03b3\u03b5\u03bd\u03b5\u1fd6\u03c2 | \u03b5\u1f50\u03b3\u03b5\u03bd\u1fc6  \r\n  \r\n\r\n\r\n",
         "grammar_ref": 63,
         "related_content": [
             302
@@ -2269,12 +2351,12 @@
     "fields": {
         "target_lang": 5,
         "title": "Nouns: Third Declension (Consonant Stem)",
-        "content": "## Third declension: consonant stem\r\n\r\nThird declension nouns can be masculine, feminine, or neuter. They are called\r\n\"nouns with consonant stems\" because their stems end with a consonant and so\r\nthat they distinguish themselves from third declension nouns with vowel stems.\r\n\r\n##### \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2,\u1f10\u03bb\u03c0\u03af\u03b4\u03bf\u03c2: The hope, of the hope\r\n\r\n**Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 | \u03b1\u1f31 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\nGen. | \u03c4\u1fc6\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1fc7 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b9** | \u03c4\u03b1\u1fd6\u03c2 \u1f10\u03bb\u03c0\u03af**\u03c3\u1f31(\u03bd)**  \r\nAcc. | \u03c4\u1f74\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1** | \u03c4\u1f70\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u1f10\u03bb\u03c0\u03af | \u1f66 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\n  \r\n* * *\r\n\r\nUnlike nouns from the first and second declensions, **the nominative singular\r\nforms of third declension nouns don't have a specific ending** \\- rather, the\r\nending of every noun is different. However, some features of the third\r\ndeclension remain stable for every noun. These are:\r\n\r\n  * the endings of the genitive\r\n  * the endings of the dative\r\n  * the endings of the accusative plural\r\n  * the endings of the vocative plural\r\nHere is the declension of the Greek word \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 meaning _the hope_.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nIn the third declension, masculine and feminine nouns have the same endings.\r\n\r\n#####  Keep and eye out!\r\n\r\nIn masculine and feminine nouns, the **vocative** singular is identical in\r\nform to the nominative singular:\r\n\r\n  * when the nominative singular ends in -\u03be or -\u03c8\r\n  * when the nominative singular ends in -\u03bd or -\u03c1 and accents the ultima\r\nOtherwise the nominative singular stays as the stem alone, with any final\r\nletter dropped (e.g.\u1f10\u03bb\u03c0\u03b9)\r\n\r\n",
+        "content": "# Third declension: consonant stem\r\n\r\nThird declension nouns can be masculine, feminine, or neuter. They are called\r\n\"nouns with consonant stems\" because their stems end with a consonant and so\r\nthat they distinguish themselves from third declension nouns with vowel stems.\r\n\r\n## \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2,\u1f10\u03bb\u03c0\u03af\u03b4\u03bf\u03c2: The hope, of the hope\r\n\r\nCase | **Singular** | **Plural**  \r\n---|---  \r\nNom. | \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 | \u03b1\u1f31 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\nGen. | \u03c4\u1fc6\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03bf\u03c2** | \u03c4\u1ff6\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03c9\u03bd**  \r\nDat. | \u03c4\u1fc7 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b9** | \u03c4\u03b1\u1fd6\u03c2 \u1f10\u03bb\u03c0\u03af**\u03c3\u1f31(\u03bd)**  \r\nAcc. | \u03c4\u1f74\u03bd \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1** | \u03c4\u1f70\u03c2 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b1\u03c2**  \r\nVoc. | \u1f66 \u1f10\u03bb\u03c0\u03af | \u1f66 \u1f10\u03bb\u03c0\u03af\u03b4**\u03b5\u03c2**  \r\n  \r\n* * *\r\n\r\nUnlike nouns from the first and second declensions, **the nominative singular\r\nforms of third declension nouns don't have a specific ending** \\- rather, the\r\nending of every noun is different. However, some features of the third\r\ndeclension remain stable for every noun. These are:\r\n\r\n  * the endings of the genitive\r\n  * the endings of the dative\r\n  * the endings of the accusative plural\r\n  * the endings of the vocative plural\r\nHere is the declension of the Greek word \u1f21 \u1f10\u03bb\u03c0\u03af\u03c2 meaning _the hope_.\r\n\r\n* * *\r\n\r\n#####  Useful tip!\r\n\r\nIn the third declension, masculine and feminine nouns have the same endings.\r\n\r\n#####  Keep and eye out!\r\n\r\nIn masculine and feminine nouns, the **vocative** singular is identical in\r\nform to the nominative singular:\r\n\r\n  * when the nominative singular ends in -\u03be or -\u03c8\r\n  * when the nominative singular ends in -\u03bd or -\u03c1 and accents the ultima\r\nOtherwise the nominative singular stays as the stem alone, with any final\r\nletter dropped (e.g.\u1f10\u03bb\u03c0\u03b9)\r\n\r\n",
         "grammar_ref": 24,
         "related_content": [
             296,
-            301,
-            299
+            299,
+            301
         ],
         "source_lang": 4
     },
@@ -25295,5 +25377,2219 @@
     },
     "model": "admin.logentry",
     "pk": 1167
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T09:01:44.274Z",
+        "object_repr": "thomas",
+        "object_id": "10",
+        "change_message": "Changed lang_learning and lang_speaking.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "appuser"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1168
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T12:42:05.027Z",
+        "object_repr": "Alphabet",
+        "object_id": "64",
+        "change_message": "Changed category.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1169
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T12:42:20.070Z",
+        "object_repr": "Alphabet",
+        "object_id": "64",
+        "change_message": "Changed query.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1170
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T12:42:40.101Z",
+        "object_repr": "Articles Declension",
+        "object_id": "31",
+        "change_message": "Changed category.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1171
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-13T12:42:57.708Z",
+        "object_repr": "The Alphabet ",
+        "object_id": "20",
+        "change_message": "",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1172
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2014-11-13T12:42:57.713Z",
+        "object_repr": "Articles",
+        "object_id": "7",
+        "change_message": "",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "category"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1173
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T12:50:19.363Z",
+        "object_repr": "Alphabet: Rho",
+        "object_id": "266",
+        "change_message": "Changed content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1174
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T12:55:09.628Z",
+        "object_repr": "Alphabet: Rho",
+        "object_id": "266",
+        "change_message": "Changed content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1175
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T12:55:29.403Z",
+        "object_repr": "Alphabet: Mu",
+        "object_id": "251",
+        "change_message": "Changed content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1176
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T12:57:29.055Z",
+        "object_repr": "Alphabet: Mu",
+        "object_id": "251",
+        "change_message": "Changed content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1177
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T12:58:18.251Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1178
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:00:43.093Z",
+        "object_repr": "Alphabet",
+        "object_id": "272",
+        "change_message": "Changed related_content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1179
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:01:55.202Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1180
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:02:49.541Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1181
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:03:08.790Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1182
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:03:43.261Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "thomas"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1183
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:04:25.888Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1184
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:05:18.062Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1185
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:06:20.122Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1186
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:07:43.360Z",
+        "object_repr": "Alphabet: Sigma",
+        "object_id": "253",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1187
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:09:04.533Z",
+        "object_repr": "Alphabet: Rho",
+        "object_id": "266",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1188
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:09:31.271Z",
+        "object_repr": "Alphabet: Rho",
+        "object_id": "266",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1189
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:10:32.108Z",
+        "object_repr": "Alphabet: Mu",
+        "object_id": "251",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1190
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:11:01.119Z",
+        "object_repr": "Alphabet: Rho",
+        "object_id": "266",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1191
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:12:29.379Z",
+        "object_repr": "Alphabet: Alpha",
+        "object_id": "252",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1192
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:13:48.690Z",
+        "object_repr": "Alphabet: Eta",
+        "object_id": "254",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1193
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:15:19.585Z",
+        "object_repr": "Alphabet: Iota",
+        "object_id": "255",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1194
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:16:26.754Z",
+        "object_repr": "Alphabet: Epsilon",
+        "object_id": "271",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1195
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:17:12.281Z",
+        "object_repr": "Alphabet: Chi",
+        "object_id": "256",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1196
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:18:08.891Z",
+        "object_repr": "Alphabet: Chi",
+        "object_id": "256",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1197
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:19:18.564Z",
+        "object_repr": "Alphabet: Delta",
+        "object_id": "257",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1198
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:20:22.939Z",
+        "object_repr": "Alphabet: Kappa",
+        "object_id": "258",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1199
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:21:20.706Z",
+        "object_repr": "Alphabet: Nu",
+        "object_id": "259",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1200
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:22:25.914Z",
+        "object_repr": "Alphabet: Zeta",
+        "object_id": "260",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1201
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:23:26.042Z",
+        "object_repr": "Alphabet: Beta",
+        "object_id": "261",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1202
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:25:58.016Z",
+        "object_repr": "Alphabet: Xi",
+        "object_id": "262",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1203
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:26:58.192Z",
+        "object_repr": "Alphabet: Omega",
+        "object_id": "263",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1204
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:28:45.199Z",
+        "object_repr": "Alphabet: Lambda",
+        "object_id": "264",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1205
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:30:01.438Z",
+        "object_repr": "Alphabet: Psi",
+        "object_id": "265",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1206
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:30:52.043Z",
+        "object_repr": "Alphabet: Gamma",
+        "object_id": "269",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1207
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:32:01.798Z",
+        "object_repr": "Digraphs",
+        "object_id": "270",
+        "change_message": "Changed title and content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1208
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:33:39.568Z",
+        "object_repr": "Alphabet: Pi",
+        "object_id": "273",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1209
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:34:53.376Z",
+        "object_repr": "Alphabet: Upsilon",
+        "object_id": "274",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1210
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:35:51.460Z",
+        "object_repr": "Alphabet: Tau",
+        "object_id": "275",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1211
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:37:14.780Z",
+        "object_repr": "Alphabet: Theta",
+        "object_id": "276",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1212
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:38:14.065Z",
+        "object_repr": "Alphabet: Omicron",
+        "object_id": "277",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1213
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:39:34.074Z",
+        "object_repr": "Alphabet: Phi",
+        "object_id": "278",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1214
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:41:48.619Z",
+        "object_repr": "Alphabet",
+        "object_id": "272",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1215
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T13:42:13.258Z",
+        "object_repr": "Alphabet",
+        "object_id": "272",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1216
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T16:32:10.629Z",
+        "object_repr": "Adjectives: Third Declension (Two-ending)",
+        "object_id": "292",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1217
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T16:32:44.701Z",
+        "object_repr": "Adjectives: Third Declension (Two-ending)",
+        "object_id": "292",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1218
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T16:33:11.248Z",
+        "object_repr": "Nouns: Third Declension (Consonant Stem)",
+        "object_id": "302",
+        "change_message": "Changed content.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1219
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-13T19:00:19.916Z",
+        "object_repr": "type_greek",
+        "object_id": "12",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "task"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1220
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-13T19:00:49.003Z",
+        "object_repr": "Learn the Alphabet",
+        "object_id": "4",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "tasksequence"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1221
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-13T19:01:10.919Z",
+        "object_repr": "identify_letter",
+        "object_id": "13",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "task"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1222
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-13T19:01:36.546Z",
+        "object_repr": "TaskContext object",
+        "object_id": "8",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "taskcontext"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1223
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-13T19:02:17.430Z",
+        "object_repr": "TaskContext object",
+        "object_id": "9",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "taskcontext"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1224
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T19:02:54.565Z",
+        "object_repr": "Alphabet",
+        "object_id": "64",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1225
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T19:04:04.871Z",
+        "object_repr": "identify_letter:alpha",
+        "object_id": "13",
+        "change_message": "Changed name.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "task"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1226
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-13T19:04:15.506Z",
+        "object_repr": "identify_letter:beta",
+        "object_id": "14",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "task"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1227
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-13T19:04:58.119Z",
+        "object_repr": "TaskContext object",
+        "object_id": "10",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "taskcontext"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1228
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T19:05:06.077Z",
+        "object_repr": "TaskContext object",
+        "object_id": "10",
+        "change_message": "Changed order.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "taskcontext"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1229
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T23:13:04.359Z",
+        "object_repr": "TaskContext object",
+        "object_id": "9",
+        "change_message": "Changed order.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "taskcontext"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1230
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-13T23:13:09.855Z",
+        "object_repr": "TaskContext object",
+        "object_id": "8",
+        "change_message": "Changed order.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "taskcontext"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1231
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-14T00:02:29.335Z",
+        "object_repr": "Dummy Sequence",
+        "object_id": "5",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "tasksequence"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1232
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2014-11-14T00:02:48.993Z",
+        "object_repr": "TaskContext object",
+        "object_id": "11",
+        "change_message": "",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "taskcontext"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1233
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:11.973Z",
+        "object_repr": "Adjectives - Three-termination",
+        "object_id": "28",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1234
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:11.982Z",
+        "object_repr": "Adjectives - Three-termination in the Third Declension",
+        "object_id": "30",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1235
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:11.988Z",
+        "object_repr": "Adjectives - Two-termination",
+        "object_id": "29",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1236
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:11.994Z",
+        "object_repr": "Adjectives -Two-termination in the Third Declension",
+        "object_id": "63",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1237
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.000Z",
+        "object_repr": "Adverbs",
+        "object_id": "32",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1238
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.006Z",
+        "object_repr": "Articles Declension",
+        "object_id": "31",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1239
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.013Z",
+        "object_repr": "First Declension Nouns - Feminine (\u03b1-stem)",
+        "object_id": "18",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1240
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.018Z",
+        "object_repr": "First Declension Nouns - Feminine (\u03b7-stem)",
+        "object_id": "19",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1241
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.025Z",
+        "object_repr": "First Declension Nouns - Masculine (\u03b7\u03c2-stem)",
+        "object_id": "20",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1242
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.031Z",
+        "object_repr": "Nouns in Ancient Greek - Case",
+        "object_id": "16",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1243
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.037Z",
+        "object_repr": "Nouns in Ancient Greek - Gender",
+        "object_id": "15",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1244
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.042Z",
+        "object_repr": "Nouns in Ancient Greek - Introduction",
+        "object_id": "13",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1245
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.049Z",
+        "object_repr": "Nouns in Ancient Greek - Number",
+        "object_id": "14",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1246
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.054Z",
+        "object_repr": "Participles",
+        "object_id": "62",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1247
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.060Z",
+        "object_repr": "Reading Greek - Acute Accents",
+        "object_id": "9",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1248
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.066Z",
+        "object_repr": "Reading Greek - Ancient Greek Alphabet",
+        "object_id": "1",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1249
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.072Z",
+        "object_repr": "Reading Greek - Circumflex Accents",
+        "object_id": "10",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1250
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.078Z",
+        "object_repr": "Reading Greek - Dipthongs",
+        "object_id": "3",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1251
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.084Z",
+        "object_repr": "Reading Greek - Gamma Nasal",
+        "object_id": "7",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1252
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.090Z",
+        "object_repr": "Reading Greek - Grave Accents",
+        "object_id": "11",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1253
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.096Z",
+        "object_repr": "Reading Greek - Introduction to Accents",
+        "object_id": "8",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1254
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.102Z",
+        "object_repr": "Reading Greek - Iota Subscript",
+        "object_id": "4",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1255
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.108Z",
+        "object_repr": "Reading Greek - Long and Short Vowels",
+        "object_id": "2",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1256
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.115Z",
+        "object_repr": "Reading Greek - Marks of Punctuation",
+        "object_id": "12",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1257
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.121Z",
+        "object_repr": "Reading Greek - Rough Breathing",
+        "object_id": "5",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1258
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.127Z",
+        "object_repr": "Reading Greek - Smooth Breathing",
+        "object_id": "6",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1259
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.134Z",
+        "object_repr": "Second Declension Nouns - Masculine (\u03bf\u03c2-stem)",
+        "object_id": "21",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1260
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.140Z",
+        "object_repr": "Second Declension Nouns - Neuter (\u03bf\u03bd-stem)",
+        "object_id": "22",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1261
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.146Z",
+        "object_repr": "The Accusative Case",
+        "object_id": "56",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1262
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.154Z",
+        "object_repr": "The Alpha or First Declension",
+        "object_id": "17",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1263
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.160Z",
+        "object_repr": "The Dative Case",
+        "object_id": "54",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1264
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.166Z",
+        "object_repr": "The Dative Case - Instrumental",
+        "object_id": "55",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1265
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.173Z",
+        "object_repr": "The Future Tense",
+        "object_id": "40",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1266
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.178Z",
+        "object_repr": "The Future Tense - Active, Indicative for Stop Verbs",
+        "object_id": "42",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1267
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.185Z",
+        "object_repr": "The Future Tense - Introduction to Future, Active, Indicative",
+        "object_id": "41",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1268
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.190Z",
+        "object_repr": "The Future Tense - \u03b5\u1f30\u03bc\u03af",
+        "object_id": "46",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1269
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.196Z",
+        "object_repr": "The Genitive Case - Comparative",
+        "object_id": "53",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1270
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.202Z",
+        "object_repr": "The Genitive Case - Partitive",
+        "object_id": "52",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1271
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.209Z",
+        "object_repr": "The Genitive Case - Possessive",
+        "object_id": "51",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1272
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.216Z",
+        "object_repr": "The Imperfect Tense - Active, Indicative",
+        "object_id": "57",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1273
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.222Z",
+        "object_repr": "The Imperfect Tense - \u03b5\u1f30\u03bc\u03af",
+        "object_id": "47",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1274
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.229Z",
+        "object_repr": "The Nominative Case",
+        "object_id": "49",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1275
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.235Z",
+        "object_repr": "The Nominative Case - Predicate",
+        "object_id": "48",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1276
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.241Z",
+        "object_repr": "The Perfect Tense - Indicative Active",
+        "object_id": "58",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1277
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.247Z",
+        "object_repr": "The Present Tense - Active, Indicative (\u03c9-stem)",
+        "object_id": "39",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1278
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.253Z",
+        "object_repr": "The Present Tense - \u03b5\u1f30\u03bc\u03af",
+        "object_id": "45",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1279
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.259Z",
+        "object_repr": "The Vocative Case",
+        "object_id": "50",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1280
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.265Z",
+        "object_repr": "Third Declension Nouns - Masculine and Feminine",
+        "object_id": "24",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1281
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.271Z",
+        "object_repr": "Third Declension Nouns - Neuter",
+        "object_id": "25",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1282
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.277Z",
+        "object_repr": "Third Declension Nouns - Stems in -\u03b5\u03c5, -\u03b1\u03c5, -\u03bf\u03c5",
+        "object_id": "27",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1283
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.283Z",
+        "object_repr": "Third Declension Nouns - Stems in -\u03b9 and -\u03c5",
+        "object_id": "26",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1284
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.290Z",
+        "object_repr": "Verbs in Ancient Greek",
+        "object_id": "33",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1285
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.296Z",
+        "object_repr": "Verbs in Ancient Greek - Mood",
+        "object_id": "37",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1286
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.301Z",
+        "object_repr": "Verbs in Ancient Greek - Number",
+        "object_id": "35",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1287
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.308Z",
+        "object_repr": "Verbs in Ancient Greek - Person",
+        "object_id": "34",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1288
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.313Z",
+        "object_repr": "Verbs in Ancient Greek - Tense",
+        "object_id": "36",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1289
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-14T00:07:12.320Z",
+        "object_repr": "Verbs in Ancient Greek - Voice",
+        "object_id": "38",
+        "change_message": "Changed tasks.",
+        "user": [
+            "monica"
+        ],
+        "content_type": [
+            "app",
+            "grammar"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1290
 }
 ]

@@ -5,10 +5,19 @@
 <h2><small>{% trans "What is the" context 'Task question: "What is the [morph] of [word]?"' %} <%= model.getHumanReadableMorph() %> {% trans "of" %} <strong><%= model.get('lemma') %></strong>{% trans "?" %}</small></h2>
 <hr>
 
-<div class="answer-box" dir="ltr">
+<div class="answer-box <% if (options.state) print(options.state) %>" dir="ltr">
+
 	<form>
 		<input type="text" class="answer-input" title="<%= model.getHumanReadableMorph() %>" data-toggle="tooltip">
 	</form>
+
+	<hr>
+
+	<% if (options.state == 'warning' || options.state == 'error') { %>
+		<h3>{% trans "Type the answer:" %} <span lang="grc"><%= model.get('value') %></span></h3>
+	<% } else if (options.state == 'success') { %>
+		<h3>{% trans "Good job!" %}</h3>
+	<% } %>
 	<hr>
 	<span lang="grc" class="sentence" data-toggle="tooltip" title="<%= translated_sentence %>"><%= sentence %>.</span>
 
