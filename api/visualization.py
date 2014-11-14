@@ -355,7 +355,7 @@ class VisualizationResource(Resource):
             userTable = gdb.query("""MATCH (n:`User`) WHERE n.username =  '""" + user + """' RETURN n""")
             userNode = gdb.nodes.get(userTable[0][0]['self'])
         except:
-            return self.error_response(request, {'error': 'Login or hand over user.'}, response_class=HttpBadRequest)
+            return self.error_response(request, {'error': 'No neo4j node exists for the user: "' + user +'". Make sure you are logged in, user is passed or has submissions.'}, response_class=HttpBadRequest)
         
         # preprocess knowledge of a user; callFunction = self.calculateKnowledgeMap(request.GET.get('user')); vocKnowledge = callFunction[0]; smythFlat = callFunction[1]; lemmaFreqs = callFunction[2]
         knows_vocab = 0
@@ -365,7 +365,7 @@ class VisualizationResource(Resource):
         sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE HAS (n.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN count(w)""")
         all = sentenceTable[0][0]
         
-        sentenceTable = gdb.query("""MATCH (u:`User`)-[:knows_vocab]->(l:`Lemma`) RETURN l""")
+        sentenceTable = gdb.query("""MATCH (u:`User`)-[:knows_vocab]->(l:`Lemma`) WHERE u.username='""" + user + """' RETURN l""")
         
         for lemma in sentenceTable:
             knows_vocab = knows_vocab + lemma[0]['data']['frequency'] 
