@@ -370,14 +370,20 @@ table.inflection-table {
 		margin-top: 20px;
 		list-style-type: none;
 		font-size: 12px;
-		position: fixed;
-		#{$left}: 33%;
-		line-height: 20px;
+		position: absolute;
+		#{$right}: -50px;
+		line-height: 30px;
+
+		li.active a {
+			color: #FFF;
+		}
 		
 		a {
 			padding: 20px;
 			border-radius: 3px;
 			margin-bottom: 2px;
+			background-color: darken($color-sec-two, 5%);
+			color: lighten($color-sec-two, 40%);
 		}
 	}
 	.study-notes {
@@ -394,6 +400,7 @@ table.inflection-table {
 		height: 100%;
 		width: 33%;
 		padding: 0;
+		position: relative;
 	}
 	.task {
 		position: absolute;
