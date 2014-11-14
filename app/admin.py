@@ -24,6 +24,8 @@ class LargeSelectMultiple(forms.SelectMultiple):
 class GrammarAdmin(admin.ModelAdmin):
         list_filter = ('title', 'query', 'category', 'tasks')
         list_display = ['title', 'ref', 'query', 'category', 'tasks']
+        list_editable = ('tasks',)
+
         formfield_overrides = {
                 models.CharField: { 'widget': LargeTextInput },
                 models.TextField: { 'widget': LargeTextarea },
@@ -59,7 +61,8 @@ class TaskSequenceAdmin(admin.ModelAdmin):
 
 class TaskContextAdmin(admin.ModelAdmin):
         list_display = ('task', 'task_sequence', 'order', 'target_accuracy', 'max_attempts')
-        sortable = 'order'
+        list_editable = ('order',)
+        ordering = ('task_sequence', 'order')
 
         formfield_overrides = {
                 models.CharField: { 'widget': LargeTextInput },

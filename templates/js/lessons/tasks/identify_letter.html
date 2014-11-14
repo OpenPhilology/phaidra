@@ -1,0 +1,37 @@
+{% load i18n %}
+
+<h1>{% trans "What is this letter called?" %}</h1>
+
+<div class="answer-box <%= options.state %>" style="text-align: center">
+	<img src="/static/images/alphabet/<%= letter %>.svg" style="float: left">
+
+	<h1><%= answerMap[letter].upper %>, <%= answerMap[letter].lower %></h1>
+	<br><br>
+
+	<form>
+		<input type="text" style="font-size: 36px">
+	</form>
+
+	<br style="clear: both">
+
+	<% if (options.state == 'warning') { %>
+		<hr>
+		<h2>You're so close!</h2>
+		<p>The answer was: </p>
+		<h1 class="warning"><%= letter %></h1> 
+		<p class="lead">Type the word, <%= letter %></p>
+
+	<% } else if (options.state == 'error') { %>
+		<hr>
+		<h2>Getting close!</h2>
+		<p>Try again!</p>
+		<h1 class="error"><%= letter.toUpperCase() %></h1> 
+
+	<% } else if (options.state == 'success') { %>
+		<hr>
+		<h2>Fantastic</h2>
+		<h1 class="success"><%= letter.toUpperCase() %></h1> 
+		<p>is the name for <strong><%= answerMap[letter].upper  %>, <%= answerMap[letter].lower %></strong>.</p>
+
+	<% } %>
+</div>

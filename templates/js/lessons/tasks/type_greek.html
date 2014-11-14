@@ -1,0 +1,43 @@
+{% load i18n %}
+
+<% var romanized = Utils.romanize(model.get('value')); %>
+
+<h1>{% trans "Type this in Greek!" %}</h1>
+
+<hr>
+
+<div class="answer-box <%= options.state %>">
+	<h2><%= romanized %> &mdash; <small><em><%= definition %></em></small></h2>
+
+	<hr>
+
+	<form>
+		<input type="text">
+	</form>
+
+	<% if (options.state == 'warning') { %>
+		<hr>
+		<h2>Getting close!</h2>
+		<p>Your answer should look like:</p>
+		<h1 class="warning" lang="grc"><%= Utils.removeDiacritics(model.get('value')) %></h1> 
+		<p>Try again!</p>
+		<hr>
+		<strong>HINT:</strong> Are you remembering that long vowels, like <strong>ō</strong> and <strong>ē</strong> are special letters? Read up on Omega and Eta!
+
+	<% } else if (options.state == 'error') { %>
+		<hr>
+		<h2>Getting close!</h2>
+		<p>Your answer should look like:</p>
+		<h1 lang="grc" class="error"><%= Utils.removeDiacritics(model.get('value')) %></h1> 
+		<p>Try again!</p>
+		<hr>
+		<strong>HINT:</strong> Are you remembering that long vowels, like <strong>ō</strong> and <strong>ē</strong> are special letters? Read up on Omega and Eta!
+
+	<% } else if (options.state == 'success') { %>
+		<hr>
+		<h2>Fantastic</h2>
+		<h1 lang="grc" class="success"><%= Utils.removeDiacritics(model.get('value')) %></h1> 
+		<p>is the correct way to write <strong><%= romanized %></strong>, <%= definition %>, in Greek characters!</p>
+
+	<% } %>
+</div>
