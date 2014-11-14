@@ -1,0 +1,59 @@
+{
+    "john": {
+        "knows_grammar": [
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.114.1:27", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.109.3:30", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.109.2:13", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.105.10:13", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.97.4:7", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.95.9:5", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.91.3:12", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.91.3:1", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.91.2:4", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.91.1:25", 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.90.4:19"
+        ], 
+        "knows_vocab_lemmas": [
+            "urn:cite:greekLit:tlg0003.tlg001.perseus-grc:lemma:\u1f45\u03c2", 
+            "urn:cite:greekLit:tlg0003.tlg001.perseus-grc:lemma:\u1f10\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03b7\u03c4\u03ad\u03bf\u03bd"
+        ], 
+        "knows_vocab_words": {
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.118.4:8": 2, 
+            "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.90.4:18": 2
+        }, 
+        "submissions": [
+            {
+                "accuracy": 20, 
+                "encounteredWords": [
+                    "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.118.4:8", 
+                    "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.90.4:18"
+                ], 
+                "response": "responseString", 
+                "slideType": "treebank", 
+                "smyth": "s499", 
+                "starttime": "50", 
+                "task": "blu", 
+                "timestamp": "2014-08-22T00:46:38"
+            }, 
+            {
+                "accuracy": 20, 
+                "encounteredWords": [
+                    "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.118.4:8", 
+                    "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.90.4:18"
+                ], 
+                "response": "responseString", 
+                "slideType": "treebank", 
+                "smyth": "s499", 
+                "starttime": "50", 
+                "task": "blu", 
+                "timestamp": "2014-08-22T00:46:38"
+            }
+        ]
+    }, 
+    "maria": {
+        "knows_grammar": [], 
+        "knows_vocab_lemmas": [], 
+        "knows_vocab_words": {}, 
+        "submissions": []
+    }
+}

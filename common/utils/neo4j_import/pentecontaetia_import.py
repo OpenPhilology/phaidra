@@ -5,12 +5,8 @@ import os
 
 ################ set your dump's meta data #####################
 
-#document_CTS_greek = "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
-#author_in_source_lang = "Θουκυδίδης"
-#work_in_source_lang = "Πεντηκονταετία"
-#target_lang = "grc"
 path = os.path.dirname(os.path.abspath(__file__))
-dump_file = os.path.join(path, "pentecontaetia_dump.json")
+dump_file = os.path.join(path, "data/pentecontaetia_dump.json")
 host = "http://localhost:7474/db/data/"
 
 ################################################################
@@ -75,8 +71,18 @@ with open(filename, 'r') as json_data:
                                     w[word_attr] = ''
                             s.words(w)           
                 d.sentences(s)
-                print "Sentence: " + s['CTS'] + " saved."
+                print "Sentence: " + s['CTS'] + " imported."
+  
                         
+# build indexes at the end:
+gdb.query("""CREATE INDEX ON :Document(CTS)""")
+gdb.query("""CREATE INDEX ON :Document(ID)""")
+gdb.query("""CREATE INDEX ON :Sentence(CTS)""")
+gdb.query("""CREATE INDEX ON :Sentence(ID)""")
+gdb.query("""CREATE INDEX ON :Word(CTS)""")
+gdb.query("""CREATE INDEX ON :Word(ID)""")
+gdb.query("""CREATE INDEX ON :Lemma(CITE)""")
+gdb.query("""CREATE INDEX ON :Lemma(ID)""")
                                         
                                         
                                 

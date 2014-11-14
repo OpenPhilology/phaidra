@@ -91,8 +91,7 @@ define(['jquery',
 						model: selected,
 						collection: this.model,
 						langs: _.uniq(_.pluck(selected.get('translations'), 'lang')),
-						lang: this.lang || LOCALE, 	// Locale is set in base.html, comes from Django. 
-						grammar: selected.getGrammar()
+						lang: this.lang || LOCALE 	// Locale is set in base.html, comes from Django. 
 					};
 
 					// TODO: Find out what the best way to do this is -- currently, when creating new views, Backbone

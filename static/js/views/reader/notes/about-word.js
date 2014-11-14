@@ -13,8 +13,7 @@ define(['jquery', 'underscore', 'backbone', 'utils', 'text!/templates/js/reader/
 			this.$el.html(this.template({ 
 				word: this.model.attributes,
 				langs: this.options.langs,
-				lang: this.options.lang || locale.split('-')[0],
-				grammar: this.model.getGrammar()
+				lang: this.options.lang || LOCALE,
 			}));
 			return this;	
 		},

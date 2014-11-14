@@ -8,7 +8,7 @@
 	margin-right: auto;
 }
 .module {
-	background-color: lighten($color-sec-two, 50%);
+	background-color: #DDE3EC;
 	text-align: center;
 	display: inline-block;
 	padding: 20px;
@@ -21,6 +21,7 @@
 	vertical-align: top;
 	position: relative;
 	box-shadow:	0px 0px 4px 0px rgba(0, 0, 0, .1);
+	@include transition(background-color, .2s, ease-out);
 
 	img {
 		height: 65px;
@@ -32,113 +33,206 @@
 
 	@mixin tile($color) {
 		background-color: $color;
-		@include transition(background-color, .2s, ease-out);
+
+		p {
+			color: #eee;
+		}
 
 		&:hover {
 			background-color: lighten($color, 5%);
 			@include transition(background-color, .2s, ease-in);
-			box-shadow: 2px 2px 3px #CCC;
-			position: relative;
-			top: -3px;
 		}
 	}
 
-	&[class*="verbs"] {
-		@include tile($color-pri-two);
+	// Progress pies!
+	.donut {
+		border-radius: 50%;
+		border: 50px solid #DDD;
+		height: 210px;
+		width: 210px;
+		position: absolute;
+		z-index: -1;
+		top: -5px;
+		left: -5px;
+
+		&.percent-25 {
+			border-top: 50px solid $color-pri-one;
+			border-right: 50px solid transparent;
+			border-bottom: 50px solid transparent;
+			border-left: 50px solid transparent;
+			-webkit-transform: rotate(45deg);
+		}
+		&.percent-50 {
+			border-top: 50px solid $color-pri-one;
+			border-right: 50px solid $color-pri-one;
+			border-bottom: 50px solid transparent;
+			border-left: 50px solid transparent;
+			-webkit-transform: rotate(45deg);
+		}
+		&.percent-75 {
+			border-top: 50px solid $color-pri-one;
+			border-right: 50px solid $color-pri-one;
+			border-bottom: 50px solid $color-pri-one;
+			border-left: 50px solid transparent;
+			-webkit-transform: rotate(45deg);
+		}
+		&.percent-100 {
+			border-top: 50px solid $color-pri-one;
+			border-right: 50px solid $color-pri-one;
+			border-bottom: 50px solid $color-pri-one;
+			border-left: 50px solid $color-pri-one;
+			-webkit-transform: rotate(45deg);
+		}
 	}
+
+	&[class*="verbs"], &[class*="adverbs"] {
+		$color: $color-pri-two;
+
+		.percent-25 {
+			border-top-color: $color;
+		}
+		.percent-50 {
+			border-top-color: $color;
+			border-right-color: $color;
+		}
+		.percent-75 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+		}
+		.percent-100 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+			border-left-color: $color;
+		}
+
+		&:hover {
+			@include tile($color);
+		}
+	}
+
 	&[class*="adjectives"] {
-		@include tile($color-sec-two);
+		$color: $color-sec-two;
+
+		.percent-25 {
+			border-top-color: $color;
+		}
+		.percent-50 {
+			border-top-color: $color;
+			border-right-color: $color;
+		}
+		.percent-75 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+		}
+		.percent-100 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+			border-left-color: $color;
+		}
+
+		&:hover {
+			@include tile($color);
+		}
 	}
 	&[class*="foundational"] {
-		@include tile($color-pri-one);
+		$color: $color-pri-one;
+
+		.percent-25 {
+			border-top-color: $color;
+		}
+		.percent-50 {
+			border-top-color: $color;
+			border-right-color: $color;
+		}
+		.percent-75 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+		}
+		.percent-100 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+			border-left-color: $color;
+		}
+
+		&:hover {
+			@include tile($color);
+		}
 	}
+
 	&[class*="nouns"] {
-		@include tile($color-sec-one);
+		$color: $color-sec-one;
+
+		.percent-25 {
+			border-top-color: $color;
+		}
+		.percent-50 {
+			border-top-color: $color;
+			border-right-color: $color;
+		}
+		.percent-75 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+		}
+		.percent-100 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+			border-left-color: $color;
+		}
+
+		&:hover {
+			@include tile($color);
+		}
 	}
-	&[class*="participles"] {
-		@include tile($color-sec-four);
+
+	&[class*="participles"], &[class*="adverbs"] {
+		$color: $color-sec-four;
+
+		.percent-25 {
+			border-top-color: $color;
+		}
+		.percent-50 {
+			border-top-color: $color;
+			border-right-color: $color;
+		}
+		.percent-75 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+		}
+		.percent-100 {
+			border-top-color: $color;
+			border-right-color: $color;
+			border-bottom-color: $color;
+			border-left-color: $color;
+		}
+
+		&:hover {
+			@include tile($color);
+		}
 	}
-	&[class*="adverbs"] {
-		@include tile($color-pri-three);
-	}
+
 	&[class*="admin"] {
-		@include tile(#DDE3EC);
 		span.glyphicon {
 			color: $color-pri-one;
 			font-size: 56px;
 		}
-		p {
-			color: #333;
-		}
 	}
 
 	p {
-		color: $text-light-color;
+		color: #333;
 		position: absolute;
 		width: 80%;
 		top: 50%;
 		font-size: 14px;
 		line-height: 18px;
-	}
-}
-
-// Styling for Alphabet units
-.alphabet {
-	list-style-type: none;
-	border: 1px solid #EEE;
-	width: 100%;
-	padding-#{$left}: 0;
-	margin-bottom: 20px !important;
-	
-	li {
-		font-family: 'Cambria', 'Times New Romans' !important;
-		display: inline;
-		font-size: 24px;
-		padding: 5px 10px;
-		color: #AAA;
-		margin-left: -3px;
-		margin-right: -3px;
-
-		&.learned {
-			color: #333;
-			background-color: desaturate(lighten($color-pri-one, 30%), 0%);
-		}
-		&.current {
-			color: #FFF;
-			background-color: $color-pri-one;
-		}
-	}
-}
-.letter {
-	text-align: center;
-	padding: 30px;
-	box-sizing: border-box;
-
-	img {
-		height: 200px;
-		max-width: 200px;
-		max-width: 100%;
-	}
-
-	&.bg-light {
-		background-color: #F4CDA2;	
-	}
-	&.bg-med {
-		background-color: desaturate(lighten($color-pri-two, 40%), 30%);
-	}
-	&.bg-dark {
-		background-color: desaturate(lighten($color-sec-two, 35%), 5%);
-	}
-
-	hr {
-		border: 1px solid #FFF;
-	}
-
-	a {
-		background-color: #FFF;
-		padding: 6px 9px 3px 6px;
-		border-radius: 2px;
-		margin: 6px;
 	}
 }
 
@@ -209,42 +303,6 @@ table.inflection-table {
 		color: #333;
 		span[lang="grc"] {
 			color: #333;
-		}
-	}
-}
-
-// For our trial units
-.alert.as-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	border-radius: 0;
-	height: 43px;
-	font-size: 14px;
-	padding: 10px;
-	overflow: hidden;
-	line-height: 26px;
-
-	a.btn {
-		margin: -5px 5px -5px -5px;
-	}
-}
-
-.new-knowledge {
-	span.glyphicon {
-		margin-left: 10px;
-		margin-right: 10px;
-
-		&.glyphicon-flash {
-			color: $color-sec-four;	
-		}
-		&.glyphicon-inbox {
-			color: $color-pri-two;
-		}
-		&.glyphicon-bookmark {
-			color: $color-pri-one;
 		}
 	}
 }
@@ -328,7 +386,9 @@ table.inflection-table {
 		box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, .1);
 		background-color: $color-sec-two;
 		height: 100%;
-		overflow: scroll;
+		overflow-y: scroll;
+		position: fixed;
+		width: 33%;
 	}
 	.left-nav {
 		height: 100%;
@@ -336,8 +396,9 @@ table.inflection-table {
 		padding: 0;
 	}
 	.task {
-		position: fixed;
+		position: absolute;
 		#{$left}: 33%;
+		width: 66%;
 	}
 
 	table {
@@ -349,11 +410,40 @@ table.inflection-table {
 	}
 }
 .answer-box {
-	background-color: lighten(desaturate($color-dark-green, 10%), 50%);
+	background-color: $text-light-color;
 	padding: 30px;
-	width: 80%;
+	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+
+	.sentence {
+		font-size: 24px;
+		line-height: 50px;
+		text-align: center;
+		display: block;
+	}
+	.tooltip {
+		font-size: 16px;
+		width: auto;
+	}
+	&.success {
+		background-color: lighten($color-light-green, 20%);
+	}
+	.success {
+		color: $color-dark-green;
+	}
+	&.warning {
+		background-color: lighten($color-sec-four, 20%);
+	}
+	.warning {
+		color: darken($color-sec-four, 20%);
+	}
+	&.error {
+		background-color: lighten($color-pri-one, 20%);
+	}
+	.error {
+		color: $color-pri-one;
+	}
 }
 
 // Grammar panels

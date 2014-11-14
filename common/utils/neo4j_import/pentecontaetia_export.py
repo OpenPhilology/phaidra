@@ -4,7 +4,7 @@ import json
 
 ################ set your dump's meta data #####################
 
-dump_file = "pentecontaetia_dump.json"
+dump_file = "data/pentecontaetia_dump.json"
 # the CTS of the document that is going to be dumped;
 dump_document_CTS = "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
 host = "http://localhost:7474/db/data/"
@@ -23,13 +23,11 @@ document_dict = {}
 for doc in table:
 	document = doc[0]
 	documentNode = gdb.nodes.get(document['self'])
-	#print documentNode.properties
 
 	# get the metas of the document
 	for doc_attr in documentNode.properties:
 		document_dict[doc_attr] = documentNode.properties[doc_attr]
 	
-	#senteceRels = documentNode.relationships.outgoing(types=["sentences"])
 	sent_table = gdb.query("""MATCH (d:`Document`)-[:sentences]->(s:`Sentence`) WHERE d.CTS='"""+ documentNode.properties['CTS'] +"""' RETURN s ORDER BY ID(s)""")
 
 	#get the document's sentences
@@ -71,7 +69,7 @@ for doc in table:
 		sentence_dict['words'] = words_array
 		sentences_array.append(sentence_dict)
 		
-		print "Sentence: " + sentence_dict['CTS'] + " dumped."
+		print "Sentence: " + sentence_dict['CTS'] + " exported."
 	# save the sentence array as document attribute
 	document_dict['sentences'] = sentences_array
 
