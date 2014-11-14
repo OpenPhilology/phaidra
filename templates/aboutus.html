@@ -2,7 +2,7 @@
 
 	{# Determine which CSS file to load #}
 	{% block css %}
-		{% with 'global' as css_file %}
+		{% with 'index' as css_file %}
 			{{ block.super }}
 		{% endwith %}
 	{% endblock %}

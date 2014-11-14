@@ -35,11 +35,27 @@
 <body>
 
 <div class="container" style="background: rgba(255, 255, 255, 0.7)">
-	<header class="row banner" style="position: static">
-		<div class="col-md-6" style="padding: 11px; font-size: 16px; letter-spacing: 1px">
-			Ancient Geek
+	<header class="row banner">
+		<div class="col-md-7 col-sm-8 col-xs-5">
+			{% block nav %}
+				<nav class="row navigation">
+					<a class="col-xs-3 col-sm-3 progress-home active" href="/{{ LANGUAGE_CODE }}/">
+						<span class="glyphicon glyphicon-home"></span> <span class="hidden-sm hidden-xs">{% trans "Ancient Geek" %}</span>
+					</a>
+					<a class="col-xs-3 col-sm-2 progress-lessons" href="/{{ LANGUAGE_CODE }}/lessons">
+						<span class="glyphicon glyphicon-flash"></span> <span class="hidden-sm hidden-xs">{% trans "Learn" %}</span>
+					</a>
+					<a class="col-xs-3 col-sm-2 progress-voc" href="/{{ LANGUAGE_CODE }}/reader/urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.90.3">
+						<span class="glyphicon glyphicon-bookmark"></span> <span class="hidden-sm hidden-xs">{% trans "Read" %}</span>
+					</a>
+					<a class="col-xs-3 col-sm-2 progress-book" href="/{{ LANGUAGE_CODE }}/create">
+						<span class="glyphicon glyphicon-comment"></span> <span class="hidden-sm hidden-xs">{% trans "Create" %}</span>
+					</a>
+				</nav>
+			{% endblock %}
 		</div>
-		<div class="col-md-6">
+
+		<div class="col-md-5 col-sm-4 col-xs-7">
 			<div class="user-info">
 				<div class="btn-group">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
