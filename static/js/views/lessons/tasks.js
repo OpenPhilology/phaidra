@@ -36,10 +36,10 @@ define(['jquery',
 			render: function() {
 
 				// Must define a task sequence before using this section
-				if (this.topic.get('task_sequence').length === 0) {
+				if (!this.topic.get('task_sequence') || this.topic.get('task_sequence').length === 0) {
 					var title = 'This lesson has no tasks';
 					var msg = 'This lesson does not yet have tasks assigned.';
-					var options = { state: 'error', linkUrl: '/lessons/' };
+					var options = { state: 'error', url: '/lessons/', btnName: 'Go back to Lessons' };
 
 					Utils.displayNotification(title, msg, options);
 					return;
