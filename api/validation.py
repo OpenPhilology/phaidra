@@ -11,7 +11,7 @@ class ResourceValidation(Validation):
         invalidChars = invalidChars.replace("-", "")
         #allowed for word attributes
         invalidChars = invalidChars.replace("_", "")
-        #allowed for smyth keys
+        #allowed for ref keys
         invalidChars = invalidChars.replace("#", "")
         
         invalidChars = set(invalidChars)

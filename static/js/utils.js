@@ -187,6 +187,23 @@ define(['text!/templates/js/display_notification.html'], function(NotificationTe
 		);
 	};
 
+	Utils.compareStrings = function(a, b) {
+		var lengthA = a.length;
+		var lengthB = b.length;
+		var equiv = 0;
+		var minLength = (a.length > b.length) ? b.length : a.length;
+		var maxLength = (a.length < b.length) ? b.length : a.length;
+
+		for (var i = 0; i < minLength; i++) {
+			if (a[i] == b[i])
+				equiv++;
+		}
+
+		var weight = equiv / maxLength;
+
+		return weight * 100;
+	};
+
 	Utils.removeDiacritics = function(text) {
 		text = text.replace(/Ά|Α|ά|ἀ|ἁ|ἂ|ἃ|ἄ|ἅ|ἆ|ἇ|ὰ|ά|ᾀ|ᾁ|ᾂ|ᾃ|ᾄ|ᾅ|ᾆ|ᾇ|ᾰ|ᾱ|ᾲ|ᾳ|ᾴ|ᾶ|ᾷ|Ἀ|Ἁ|Ἂ|Ἃ|Ἄ|Ἅ|Ἆ|Ἇ|ᾈ|ᾉ|ᾊ|ᾋ|ᾌ|ᾍ|ᾎ|ᾏ|Ᾰ|Ᾱ|Ὰ|Ά|ᾼ/g,'α');
 		text = text.replace(/Έ|Ε|έ|ἐ|ἑ|ἒ|ἓ|ἔ|ἕ|ὲ|έ|Ἐ|Ἑ|Ἒ|Ἓ|Ἔ|Ἕ|Ὲ|Έ/g,'ε');

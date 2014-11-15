@@ -1,7 +1,7 @@
 define(['jquery', 
 	'underscore', 
 	'backbone', 
-	'views/lessons/tasks/base_task',
+	'views/lessons/tasks/base',
 	'utils', 
 	'typegeek',
 	'text!/templates/js/lessons/tasks/translate_word.html'], 

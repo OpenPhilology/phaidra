@@ -30,7 +30,7 @@ class SubmissionAuthorization(Authorization):
     def read_list(self, object_list, bundle):
         
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)        
-        attrlist = ['response', 'task', 'smyth', 'slideType', 'user', 'starttime', 'timestamp', 'accuracy']
+        attrlist = ['response', 'task', 'ref', 'user', 'starttime', 'timestamp', 'accuracy']
         
         query_params = {}
         for obj in bundle.request.GET.keys():
@@ -106,11 +106,10 @@ class SubmissionResource(Resource):
     
     response = fields.CharField(attribute='response', null = True, blank = True) 
     task = fields.CharField(attribute='task', null = True, blank = True)
-    smyth = fields.CharField(attribute='smyth', null = True, blank = True)
+    ref = fields.CharField(attribute='ref', null = True, blank = True)
     starttime = fields.CharField(attribute='starttime', null = True, blank = True)
     accuracy = fields.IntegerField(attribute='accuracy', null = True, blank = True)
     encounteredWords = fields.ListField(attribute='encounteredWords', null = True, blank = True)
-    slideType = fields.CharField(attribute='slideType', null = True, blank = True)
     timestamp = fields.CharField(attribute='timestamp', null = True, blank = True)
     user = fields.CharField(attribute='user', null = True, blank = True)
     
@@ -206,11 +205,10 @@ class SubmissionResource(Resource):
             subms = gdb.nodes.create(
                 response = data.get("response"),
                 task = data.get("task"), 
-                smyth = data.get("smyth"),    # string
+                ref = data.get("ref"),    # string
                 starttime = data.get("starttime"),     # catch this so that it doesn't lead to submission problems
                 accuracy = int(data.get("accuracy")),
                 encounteredWords = data.get("encounteredWords"), # array
-                slideType = data.get("slideType"),
                 timestamp = data.get("timestamp") 
             )
             
@@ -223,10 +221,10 @@ class SubmissionResource(Resource):
             # Form the connections from the new Submission node to the existing slide and user nodes
             userNode.submits(subms)
             
-            # set links between the smyth key filtered words and the user... 
+            # set links between the ref key filtered words and the user... 
             q = """MATCH (w:`Word`) WHERE """
             try:
-                grammarParams = Grammar.objects.filter(ref=data.get("smyth"))[0].query.split('&')
+                grammarParams = Grammar.objects.filter(ref=data.get("ref"))[0].query.split('&')
                 for pair in grammarParams:
                     if len(pair.split('=')[0].split('__')) == 1:
                         attribute = pair.split('=')[0]
@@ -247,7 +245,7 @@ class SubmissionResource(Resource):
                 q = q[:len(q)-4]
                 q = q + """RETURN w"""        
             except:
-                return self.error_response(request, {'error': 'Smyth data could not be processed.' }, response_class=HttpBadRequest)
+                return self.error_response(request, {'error': 'Reference data could not be processed.' }, response_class=HttpBadRequest)
             
             # ... if not already known
             table = gdb.query(q)
