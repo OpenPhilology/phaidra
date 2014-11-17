@@ -391,7 +391,7 @@ class VisualizationResource(Resource):
 
         # process accuracy of grammar of submissions of a user
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)    
-        submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")            
+        submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + request.user.username + """' RETURN s""")            
                                     
         # get the accuray per ref key
         for sub in submissions.elements:                               
@@ -434,7 +434,7 @@ class VisualizationResource(Resource):
 
         # process time of grammar of submissions of a user
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)    
-        submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")            
+        submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + request.user.username + """' RETURN s""")            
         
         # get the current time
         unix = datetime(1970,1,1)
