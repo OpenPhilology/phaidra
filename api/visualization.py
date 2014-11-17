@@ -442,16 +442,21 @@ class VisualizationResource(Resource):
         # get the accuray per ref key
         for sub in submissions.elements:
             
-            if len(sub[0]['data']['ref']) == 0:
-                return self.error_response(request, {'error': 'Reference keys are necessary for calculating averaged lesson progress.'}, response_class=HttpBadRequest)
-            
-            t = dateutil.parser.parse(sub[0]['data']['timestamp'])
-            diff = (t-unix).total_seconds()                                                                            
-            try:                    
-                time[sub[0]['data']['ref']].append(diff)  
+            try:
+                if len(sub[0]['data']['ref']) == 0:
+                    return self.error_response(request, {'error': 'Reference keys are necessary for calculating averaged lesson progress.'}, response_class=HttpBadRequest)
+                
+                t = dateutil.parser.parse(sub[0]['data']['timestamp'])
+                t = t.replace(tzinfo=None)
+                diff = (t-unix).total_seconds()
+                try:
+                    time[sub[0]['data']['ref']].append(diff)
+                except KeyError as k:
+                    time[sub[0]['data']['ref']] = []
+                    time[sub[0]['data']['ref']].append(diff)
             except KeyError as k:
-                time[sub[0]['data']['ref']] = []
-                time[sub[0]['data']['ref']].append(diff)
+                continue
+                
         
         # calculate the averages and sort by it
         average = {}
