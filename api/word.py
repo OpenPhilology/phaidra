@@ -79,11 +79,10 @@ class WordResource(Resource):
         words = []
         query_params = {}
         
-        if request.GET.get('smyth'):
+        if request.GET.get('ref'):
                 
             try:
-                #grammarParams = fileContent[0][request.GET.get('smyth')]['query'].split('&')
-                grammarParams = Grammar.objects.filter(ref=request.GET.get('smyth'))[0].query.split('&')        
+                grammarParams = Grammar.objects.filter(ref=request.GET.get('ref'))[0].query.split('&')        
                 for pair in grammarParams:
                     query_params[pair.split('=')[0]] = pair.split('=')[1]
             except KeyError as k:

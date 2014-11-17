@@ -214,7 +214,7 @@ define(['jquery',
 				var alignments = sentences.map(function(s, i) {
 					
 					var alignment = {};
-					alignment.lang = s[0].lang;
+					alignment.lang = i === 0 ? s[0].lang : target_lang;
 
 					// Order our sentence
 					alignment.words = _.sortBy(s, function(t) {
@@ -292,13 +292,10 @@ define(['jquery',
 				}.bind(this));
 				
 				// Right now this is random. Should have a better strategy...
-				var index = Math.floor((Math.random() * subset.length) + 1);
+				var index = Math.floor((Math.random() * subset.length) + 1) - 1;
 
 				// ZERO -- for testing
 				var chosen = subset[index];
-
-				// TODO: Find out why this fails sometimes
-				console.log(chosen, subset, index);
 
 				return this.where({ CTS: chosen.get('CTS') })[0];
 			}

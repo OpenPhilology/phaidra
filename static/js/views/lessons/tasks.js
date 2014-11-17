@@ -19,11 +19,6 @@ define(['jquery',
 				this.options = options;
 				this.topic = options.topic;
 
-				// Instantiate our collection, tell it how to populate vocabulary
-				this.collection = new WordCollection([], {
-					url: '/api/v1/word/?' + that.topic.get('query')
-				});
-
 				// New tasks render every time the selected word changes
 				this.collection.on('change:selected', this.render, this);
 
@@ -75,8 +70,11 @@ define(['jquery',
 					console.log("Removing task view");
 					this.selectNext();
 				}
-				else 
+				else { 
+					this.task_view.el.setAttribute('style', 'display:none');
 					this.$el.append(this.task_view.el);
+					this.task_view.$el.fadeIn();
+				}
 			},
 			handleSuccess: function(collection, response, options) {
 				console.log(collection, response, options);
@@ -88,7 +86,6 @@ define(['jquery',
 			selectNext: function(e) { 
 				if (e && e.preventDefault) e.preventDefault();
 
-				console.log("selectNext called");
 				var next = this.collection.getNextVocab();
 				var that = this;
 
@@ -106,7 +103,6 @@ define(['jquery',
 					remove: false,
 					merge: true,
 					success: function(collection, response, options) {
-						console.log(that.collection.indexOf(that.model));
 						that.model.set('selected', true);
 					},
 					error: function(collection, response, options) {

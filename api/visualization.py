@@ -46,16 +46,16 @@ class VisualizationResource(Resource):
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)    
         submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + user + """' RETURN s""")    
                     
-        #filename = os.path.join(os.path.dirname(__file__), '../static/json/smyth.json')
+        #filename = os.path.join(os.path.dirname(__file__), '../static/json/ref.json')
         #fileContent = {}
         #with open(filename, 'r') as json_data:
             #fileContent = json.load(json_data); json_data.close()                                  
                         
         vocab = {}
-        smyth = {}        
+        ref = {}        
         lemmas = {}
         lemmaFreq = 0
-        # flatten the smyth and collect the vocab knowledge
+        # flatten the ref and collect the vocab knowledge
         for sub in submissions.elements:            
             
             try:     
@@ -73,15 +73,15 @@ class VisualizationResource(Resource):
                         # in case of weird submission test data for encounteredWords
                         except IndexError as i:
                             continue
-                    if sub[0]['data']['smyth'] not in smyth:
-                        # get the morph info via a file lookup of submission's smyth key, save params to test it on the words of the work
-                        #smyth[sub[0]['data']['smyth']] = grammar[sub[0]['data']['smyth']]
+                    if sub[0]['data']['ref'] not in ref:
+                        # get the morph info via a file lookup of submission's ref key, save params to test it on the words of the work
+                        #ref[sub[0]['data']['ref']] = grammar[sub[0]['data']['ref']]
                         try:
                             params = {}
-                            grammar = Grammar.objects.filter(ref=sub[0]['data']['smyth'])[0].query.split('&')
+                            grammar = Grammar.objects.filter(ref=sub[0]['data']['ref'])[0].query.split('&')
                             for pair in params:
                                 params[pair.split('=')[0]] = pair.split('=')[1] 
-                            smyth[sub[0]['data']['smyth']] = params
+                            ref[sub[0]['data']['ref']] = params
                         except IndexError as k:
                             continue                        
             except KeyError as k:
@@ -91,7 +91,7 @@ class VisualizationResource(Resource):
         for freq in lemmas:
             lemmaFreq = lemmaFreq + int(lemmas[freq])
 
-        return [vocab, smyth, lemmas, lemmaFreq]
+        return [vocab, ref, lemmas, lemmaFreq]
     
     
     def check_fuzzy_filters(self, filter, request_attribute, word_attribute ):
@@ -195,7 +195,7 @@ class VisualizationResource(Resource):
             # preprocess knowledge of a user
             callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
             vocKnowledge = callFunction[0]
-            smythFlat = callFunction[1]
+            refFlat = callFunction[1]
             lemmas = callFunction[2]
             
             # get the sentences of that document
@@ -210,25 +210,25 @@ class VisualizationResource(Resource):
                     knownDict[word['data']['CTS']] = False
                     
                     know_the_word = False
-                    for smyth in smythFlat:
+                    for ref in refFlat:
                         # scan the submission for vocab information
                         if word['data']['CTS'] in vocKnowledge or word['data']['lemma'] in lemmas:
                             # loop over params to get morph known infos
-                            # extract this maybe (hand over smyth, its value and word)
+                            # extract this maybe (hand over ref, its value and word)
                             badmatch = False
                             
-                            for p in smythFlat[smyth].keys():
+                            for p in refFlat[ref].keys():
                                 
                                 try:
                                     word['data'][p]
-                                    if smythFlat[smyth][p] != word['data'][p]:
+                                    if refFlat[ref][p] != word['data'][p]:
                                         badmatch = True
                                         break
                                 # check for fuzzy filtering attributes
                                 except KeyError as k:
                                     if len(p.split('__')) > 1:
                                         try:
-                                            badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], word['data'][p.split('__')[0]])
+                                            badmatch = self.check_fuzzy_filters(p.split('__')[1], refFlat[ref][p], word['data'][p.split('__')[0]])
                                         except KeyError as k:
                                             badmatch = True
                                             break
@@ -260,7 +260,7 @@ class VisualizationResource(Resource):
             # preprocess knowledge of a user
             callFunction = self.calculateKnowledgeMap(request.GET.get('user'))
             vocKnowledge = callFunction[0]
-            smythFlat = callFunction[1]
+            refFlat = callFunction[1]
             lemmas = callFunction[2] # values + freqs
                 
             # get the sentences of that document
@@ -285,7 +285,7 @@ class VisualizationResource(Resource):
                     morphKnown[word.properties['CTS']] = False
                     syntaxKnown[word.properties['CTS']] = False
                     # scan the submission for vocab information
-                    for smyth in smythFlat:
+                    for ref in refFlat:
                         # was this word seen?
                         # also already know the other words connected to known words via a lemma
                         if word.properties['CTS'] in vocKnowledge or word.properties['lemma'] in lemmas:    
@@ -294,17 +294,17 @@ class VisualizationResource(Resource):
                             if morphKnown[word.properties['CTS']]:
                                 # loop over params to get morph known infos
                                 badmatch = False
-                                for p in smythFlat[smyth].keys():
+                                for p in refFlat[ref].keys():
                                     try:
                                         word.properties[p]
-                                        if smythFlat[smyth][p] != word.properties[p]:
+                                        if refFlat[ref][p] != word.properties[p]:
                                             badmatch = True
                                             break
                                     # check for fuzzy filtering attributes
                                     except KeyError as k:
                                         if len(p.split('__')) > 1:
                                             try:
-                                                badmatch = self.check_fuzzy_filters(p.split('__')[1], smythFlat[smyth][p], word.properties[p.split('__')[0]])
+                                                badmatch = self.check_fuzzy_filters(p.split('__')[1], refFlat[ref][p], word.properties[p.split('__')[0]])
                                             except KeyError as k:
                                                 badmatch = True
                                                 break                                                                                    
@@ -357,7 +357,7 @@ class VisualizationResource(Resource):
         except:
             return self.error_response(request, {'error': 'No neo4j node exists for the user: "' + user +'". Make sure you have submissions and user is logged in or passed.'}, response_class=HttpBadRequest)
         
-        # preprocess knowledge of a user; callFunction = self.calculateKnowledgeMap(request.GET.get('user')); vocKnowledge = callFunction[0]; smythFlat = callFunction[1]; lemmaFreqs = callFunction[2]
+        # preprocess knowledge of a user; callFunction = self.calculateKnowledgeMap(request.GET.get('user')); vocKnowledge = callFunction[0]; refFlat = callFunction[1]; lemmaFreqs = callFunction[2]
         knows_vocab = 0
         knows_grammar = 0
         knows_syntax = 0    
@@ -393,27 +393,27 @@ class VisualizationResource(Resource):
         gdb = GraphDatabase(GRAPH_DATABASE_REST_URL)    
         submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + request.GET.get('user') + """' RETURN s""")            
                                     
-        # get the accuray per smyth key
+        # get the accuray per ref key
         for sub in submissions.elements:                               
             try:
-                accuracy[sub[0]['data']['smyth']].append(sub[0]['data']['accuracy'])  
+                accuracy[sub[0]['data']['ref']].append(sub[0]['data']['accuracy'])  
             except KeyError as k:
-                accuracy[sub[0]['data']['smyth']] = []
-                accuracy[sub[0]['data']['smyth']].append(sub[0]['data']['accuracy'])
+                accuracy[sub[0]['data']['ref']] = []
+                accuracy[sub[0]['data']['ref']].append(sub[0]['data']['accuracy'])
         
         # calculate the averages and sort by it
         average = {}
-        for smyth in accuracy.keys():
-            average[smyth] = 0.0
-            for value in accuracy[smyth]:
-                average[smyth] = average[smyth] + value
-            average[smyth] = average[smyth]/len(accuracy[smyth]) 
+        for ref in accuracy.keys():
+            average[ref] = 0.0
+            for value in accuracy[ref]:
+                average[ref] = average[ref] + value
+            average[ref] = average[ref]/len(accuracy[ref]) 
         
         sorted_dict = sorted(average.iteritems(), key=operator.itemgetter(1))
         #sorted_reverse = sorted.reverse()                         
                 
         for entry in sorted_dict:
-            data['accuracy_ranking'].append({'smyth': entry[0], 'average': average[entry[0]],
+            data['accuracy_ranking'].append({'ref': entry[0], 'average': average[entry[0]],
                                              'title': Grammar.objects.filter(ref=entry[0])[0].title,
                                              'query': Grammar.objects.filter(ref=entry[0])[0].query})
     
@@ -439,37 +439,37 @@ class VisualizationResource(Resource):
         # get the current time
         unix = datetime(1970,1,1)
                                     
-        # get the accuray per smyth key
+        # get the accuray per ref key
         for sub in submissions.elements:
             
-            if len(sub[0]['data']['smyth']) == 0:
-                return self.error_response(request, {'error': 'Smyth keys are necessary for calculating averaged lesson progress.'}, response_class=HttpBadRequest)
+            if len(sub[0]['data']['ref']) == 0:
+                return self.error_response(request, {'error': 'Reference keys are necessary for calculating averaged lesson progress.'}, response_class=HttpBadRequest)
             
             t = dateutil.parser.parse(sub[0]['data']['timestamp'])
             diff = (t-unix).total_seconds()                                                                            
             try:                    
-                time[sub[0]['data']['smyth']].append(diff)  
+                time[sub[0]['data']['ref']].append(diff)  
             except KeyError as k:
-                time[sub[0]['data']['smyth']] = []
-                time[sub[0]['data']['smyth']].append(diff)
+                time[sub[0]['data']['ref']] = []
+                time[sub[0]['data']['ref']].append(diff)
         
         # calculate the averages and sort by it
         average = {}
-        for smyth in time.keys():
-            average[smyth] = 0.0
-            for value in time[smyth]:
-                average[smyth] = average[smyth] + value
+        for ref in time.keys():
+            average[ref] = 0.0
+            for value in time[ref]:
+                average[ref] = average[ref] + value
                 
-            av = average[smyth]/len(time[smyth])
+            av = average[ref]/len(time[ref])
             av = datetime.fromtimestamp(int(av)).strftime('%Y-%m-%d %H:%M:%S')
             av = av.replace(' ', 'T')
-            average[smyth] = av
+            average[ref] = av
         
         sorted_dict = sorted(average.iteritems(), key=operator.itemgetter(1))
         #sorted_reverse = sorted_dict.reverse()
                 
         for entry in sorted_dict:
-            data['time_ranking'].append({'smyth': entry[0],
+            data['time_ranking'].append({'ref': entry[0],
                                          'average': average[entry[0]],
                                          'title': Grammar.objects.filter(ref=entry[0])[0].title,
                                          'query': Grammar.objects.filter(ref=entry[0])[0].query})

@@ -1,7 +1,7 @@
 define(['jquery', 
 	'underscore', 
 	'backbone', 
-	'views/lessons/tasks/base_task',
+	'views/lessons/tasks/base',
 	'utils',
 	'typegeek',
 	'text!/templates/js/lessons/tasks/identify_letter.html'], 
@@ -14,6 +14,7 @@ define(['jquery',
 			},
 			initialize: function(options) {
 				this.letter = options.args;
+				this.topic = options.topic;
 
 				// Answer map
 				this.answerMap = {
@@ -64,6 +65,9 @@ define(['jquery',
 					answerMap: this.answerMap
 				}));
 				
+				// Set the starttime for this exercise
+				this.starttime = new Date();
+				
 				var answerBox = this.$el.find('input[type="text"]')[0];
 				answerBox.focus();
 			},
@@ -72,14 +76,33 @@ define(['jquery',
 
 				// Grab answers from the UI, pass to base_task
 				var inputField = $(e.target).find('input');
+
+				// Modify strings before checking accuracy
 				var answer = this.letter.toLowerCase().trim();
 				var userAnswer = inputField.val().toLowerCase().trim();
 
-				// Call our BaseTask's answer checking functionality 
-				var newState = BaseTaskView.prototype.checkAnswer.apply(this, [answer, userAnswer]);
+				// Check accuracy
+				var accuracy = BaseTaskView.prototype.getAccuracy.apply(this, [answer, userAnswer]);
+
+				// Determine new state of the task
+				var newState = BaseTaskView.prototype.getNewState.apply(this, [answer, userAnswer]);
+
+				// Send a submission to the server
+				this.sendSubmission({ 
+					response: userAnswer, 
+					accuracy: accuracy,
+					smyth: this.topic.get('ref'),
+					encounteredWords: [],
+					timestamp: (new Date()).toISOString(),
+					task: 'identify_letter:' + this.letter,
+					starttime: this.starttime.toISOString()
+				});
 
 				// Update our UI accordingly
 				this.fullRender({ state: newState });
+			},
+			sendSubmission: function(submission) {
+				BaseTaskView.prototype.sendSubmission.apply(this, [submission]);
 			}
 		});
 	}
