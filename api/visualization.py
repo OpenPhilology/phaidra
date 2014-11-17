@@ -394,12 +394,16 @@ class VisualizationResource(Resource):
         submissions = gdb.query("""MATCH (n:`User`)-[:submits]->(s:`Submission`) WHERE HAS (n.username) AND n.username =  '""" + request.user.username + """' RETURN s""")            
                                     
         # get the accuray per ref key
-        for sub in submissions.elements:                               
-            try:
-                accuracy[sub[0]['data']['ref']].append(sub[0]['data']['accuracy'])  
+        for sub in submissions.elements:
+            try:                             
+                try:
+                    accuracy[sub[0]['data']['ref']].append(sub[0]['data']['accuracy'])  
+                except KeyError as k:
+                    accuracy[sub[0]['data']['ref']] = []
+                    accuracy[sub[0]['data']['ref']].append(sub[0]['data']['accuracy'])
             except KeyError as k:
-                accuracy[sub[0]['data']['ref']] = []
-                accuracy[sub[0]['data']['ref']].append(sub[0]['data']['accuracy'])
+                continue
+                
         
         # calculate the averages and sort by it
         average = {}
