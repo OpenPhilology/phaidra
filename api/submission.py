@@ -221,6 +221,12 @@ class SubmissionResource(Resource):
             # Form the connections from the new Submission node to the existing slide and user nodes
             userNode.submits(subms)
             
+            # check empty encountered words than spare the 
+            for cts in data.get("encounteredWords"):
+                if not cts:
+                    body = json.loads(request.body) if type(request.body) is str else request.body
+                    return self.create_response(request, body)
+            
             # set links between the ref key filtered words and the user... 
             q = """MATCH (w:`Word`) WHERE """
             try:
