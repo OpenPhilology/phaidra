@@ -264,7 +264,12 @@ class Grammar(models.Model):
                             max_length=10, 
                             help_text=textwrap.dedent("""
                                 Refers to the section of the grammar 
-                                book you're using.
+                                book you're using (e.g. s6 for Smyth,
+                                section 6). Must be unique. <br><br> 
+                                <b>FYI:</b>
+                                Once created, this field is read-only,
+                                because it's used to calculate user
+                                progress.
                             """))
 
     external_link = models.CharField("external url", 
@@ -307,7 +312,7 @@ class Grammar(models.Model):
 
     def __unicode__(self):
         return unicode(self.title) or u''
-
+    
 """
 Content Model for Phaidra
 """
