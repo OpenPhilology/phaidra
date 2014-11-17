@@ -71,7 +71,7 @@ with open(filename, 'r') as json_data:
                                     w[word_attr] = ''
                             s.words(w)           
                 d.sentences(s)
-                print "Sentence: " + s['CTS'] + " saved."
+                print "Sentence: " + s['CTS'] + " imported."
   
                         
 # build indexes at the end:

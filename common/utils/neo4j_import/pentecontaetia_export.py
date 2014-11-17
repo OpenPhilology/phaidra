@@ -69,7 +69,7 @@ for doc in table:
 		sentence_dict['words'] = words_array
 		sentences_array.append(sentence_dict)
 		
-		print "Sentence: " + sentence_dict['CTS'] + " dumped."
+		print "Sentence: " + sentence_dict['CTS'] + " exported."
 	# save the sentence array as document attribute
 	document_dict['sentences'] = sentences_array
 

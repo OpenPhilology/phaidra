@@ -35,6 +35,7 @@ def decode_morphology(morphological_code):
 path = os.path.dirname(os.path.abspath(__file__))
 treebank_file = os.path.join(path, treebank_file_name)
 morph_code_file = os.path.join(path, "morph_codes.json")
+# create the graph database instance
 gdb = GraphDatabase(host)
 
 morph_content = {}
@@ -75,7 +76,7 @@ for sentence in alignNode.childNodes:
         s = gdb.nodes.create() 
         s.labels.add("Sentence")
         s['CTS'] = document_cts + ":" + str(book) + "." + str(chapter) + "." + str(sent_no)
-        print document_cts + ":" + str(book) + "." + str(chapter) + "." + str(sent_no)
+        print document_cts + ":" + str(book) + "." + str(chapter) + "." + str(sent_no) + " imported."
         
         # run over word nodes
         word_no = 0

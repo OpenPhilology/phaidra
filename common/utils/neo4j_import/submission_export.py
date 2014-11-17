@@ -60,7 +60,8 @@ for user in table:
 
 
     # dump to the main dict  
-    global_dict[user] = user_dict 
+    global_dict[user] = user_dict
+    print "Submissions of " + user + " saved." 
     
     
 # dump all data    
