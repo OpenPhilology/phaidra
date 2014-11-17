@@ -310,6 +310,9 @@ class Grammar(models.Model):
         verbose_name = 'Grammar Topic'
         ordering = ['title']
 
+    def get_absolute_url(self):
+        return '/lessons/%i/' % self.id
+
     def __unicode__(self):
         return unicode(self.title) or u''
     

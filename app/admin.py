@@ -22,14 +22,6 @@ class LargeSelectMultiple(forms.SelectMultiple):
             super(LargeSelectMultiple, self).__init__(*args, **kwargs)
 
 class GrammarAdmin(admin.ModelAdmin):
-    # The ref is (unfortunately) tightly coupled to submission data,
-    # meaning, once you the ref, do not change it or you'll lose connected submissions.
-    def get_readonly_fields(self, request, obj=None):
-        if obj:
-            return ['ref',]
-        else:
-            return []
-
     list_filter = ('title', 'query', 'category', 'tasks')
     list_display = ['title', 'ref', 'query', 'category', 'tasks']
     list_editable = ('tasks',)
@@ -38,6 +30,15 @@ class GrammarAdmin(admin.ModelAdmin):
             models.CharField: { 'widget': LargeTextInput },
             models.TextField: { 'widget': LargeTextarea },
     }
+    
+    # The ref is (unfortunately) tightly coupled to submission data,
+    # meaning, once you the ref, do not change it or you'll lose connected submissions.
+    def get_readonly_fields(self, request, obj=None):
+        if obj:
+            return ['ref',]
+        else:
+            return []
+
 
 class ContentAdmin(admin.ModelAdmin):
     list_filter = ('title', 'grammar_ref', 'source_lang')
