@@ -42,9 +42,10 @@ class GrammarAdmin(admin.ModelAdmin):
 
 class ContentAdmin(admin.ModelAdmin):
     list_filter = ('title', 'grammar_ref', 'source_lang')
-    list_display = ('title', 'content_preview', 'grammar_ref', 'all_related_content')
+    list_display = ('title', 'source_lang', 'content_preview', 'grammar_ref', 'all_related_content')
     filter_vertical = ('related_content',)
     list_display_links = ('title',)
+    ordering = ('source_lang', 'title')
 
     formfield_overrides = {
             models.CharField: { 'widget': LargeTextInput },
@@ -52,7 +53,7 @@ class ContentAdmin(admin.ModelAdmin):
     }
 
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('name', 'endpoint', 'success_msg', 'hint_msg')  
+    list_display = ('name', 'endpoint',)  
     list_display_links = ('name',)
 
     formfield_overrides = {
@@ -61,7 +62,7 @@ class TaskAdmin(admin.ModelAdmin):
     }
 
 class TaskSequenceAdmin(admin.ModelAdmin):
-    list_display = ('name', 'all_tasks')
+    list_display = ('name', 'all_tasks', 'target_accuracy', 'max_attempts', 'min_attempts')
 
     formfield_overrides = {
             models.CharField: { 'widget': LargeTextInput },
@@ -69,7 +70,7 @@ class TaskSequenceAdmin(admin.ModelAdmin):
     }
 
 class TaskContextAdmin(admin.ModelAdmin):
-    list_display = ('task', 'task_sequence', 'order', 'target_accuracy', 'max_attempts')
+    list_display = ('task', 'task_sequence', 'order',)
     list_editable = ('order',)
     ordering = ('task_sequence', 'order')
 
@@ -79,7 +80,7 @@ class TaskContextAdmin(admin.ModelAdmin):
     }
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'graphic')
+    list_display = ('name',)
 
     formfield_overrides = {
             models.CharField: { 'widget': LargeTextInput },
