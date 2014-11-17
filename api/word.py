@@ -115,9 +115,25 @@ class WordResource(Resource):
                         else:
                             q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
                     elif key.split('__')[1] == 'startswith':
-                        q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
+                        if "__" in query_params[key]:
+                            q = q + """("""
+                            chunks = query_params[key].split('__')
+                            for chunk in chunks:
+                                q = q + """ w."""+key.split('__')[0]+ """=~'""" +chunk+ """.*' OR """
+                            q = q[:len(q)-3]
+                            q = q + """) AND """
+                        else:
+                            q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'""" +query_params[key]+ """.*' AND """
                     elif key.split('__')[1] == 'endswith':
-                        q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+                        if "__" in query_params[key]:
+                            q = q + """("""
+                            chunks = query_params[key].split('__')
+                            for chunk in chunks:
+                                q = q + """ w."""+key.split('__')[0]+ """=~'.*""" +chunk+ """' OR """
+                            q = q[:len(q)-3]
+                            q = q + """) AND """
+                        else:
+                            q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
                     elif key.split('__')[1] == 'gt':
                         q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """>""" +query_params[key]+ """ AND """
                     elif key.split('__')[1] == 'lt':
