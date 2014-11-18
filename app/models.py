@@ -57,16 +57,8 @@ class Category(models.Model):
     """
     # Verbs, Nouns, Adjectives, etc.
     name = models.CharField('category name', 
-                            max_length=200)
-
-    # alphabet/lambda.svg
-    graphic = models.CharField(max_length=200, 
-                            help_text=textwrap.dedent("""
-                                Image within /static/images/ that 
-                                should be shown on lesson tiles 
-                                within this category.
-                            """),
-                            null=True)
+                            max_length=200,
+                            help_text='Affects the ring color around task')
 
     class Meta:
         verbose_name_plural = 'categories'
@@ -165,23 +157,6 @@ class Task(models.Model):
                                 is tested?
                             """))
 
-    success_msg = models.CharField('success message', 
-                            max_length=200, 
-                            help_text=textwrap.dedent("""
-                                Message the user sees on success.
-                            """),
-                            null=True, 
-                            blank=True)
-
-    hint_msg = models.CharField('hint message', 
-                            max_length=200, 
-                            help_text=textwrap.dedent("""
-                                Message the user sees on their first 
-                                incorrect attempt.
-                            """),
-                            null=True, 
-                            blank=True)
-
     def __unicode__(self):
         return unicode(self.name) or u''
 
@@ -202,6 +177,35 @@ class TaskSequence(models.Model):
                                 Name of this unique set and order of tasks. 
                                 (e.g. "Beginner Nouns" or "Learn to Read Greek")
                             """))
+
+    target_accuracy = models.IntegerField('target accuracy', 
+                            null=True, blank=True,
+                            help_text=textwrap.dedent("""
+                                Decimal between 1 and 100. When a user 
+                                reaches this level of accuracy, 
+                                they move to the next grammar topic.
+                            """))
+
+    min_attempts = models.IntegerField('minimum attempts', 
+                            null=True, blank=True,
+                            help_text=textwrap.dedent("""
+                                Minimum number of times user should be 
+                                presented with this sequence before moving 
+                                on to the next grammar topic.
+                            """))
+
+    max_attempts = models.IntegerField('maximum attempts', 
+                            null=True, blank=True,
+                            help_text=textwrap.dedent("""
+                                Maximum number of times user should be 
+                                presented with this sequence before moving 
+                                on to the next grammar topic.
+                                <br><br>
+                                A value of 0 indicates that the user should
+                                continue to try this sequence until reaching
+                                the target accuracy.
+                            """))
+
 
     def all_tasks(self):
         return SafeString(', '.join([t.name for t in self.tasks.all()])) 
@@ -232,21 +236,6 @@ class TaskContext(models.Model):
                                 this point.
                             """))
 
-    # 0.5 means we wait for 50% accuracy before proceeding to next task
-    target_accuracy = models.FloatField('target accuracy', 
-                            help_text=textwrap.dedent("""
-                                Decimal between 0 and 1. When a user 
-                                reaches this level of accuracy, 
-                                they move to the next task.
-                            """))
-
-    max_attempts = models.IntegerField('maximum attempts', 
-                            help_text=textwrap.dedent("""
-                                Maximum number of times user should be 
-                                presented with this task before moving 
-                                on to the next.
-                            """))
-
     order = models.IntegerField(help_text=textwrap.dedent("""
                                 Order of this task in the defined sequence.
                             """))
@@ -264,7 +253,12 @@ class Grammar(models.Model):
                             max_length=10, 
                             help_text=textwrap.dedent("""
                                 Refers to the section of the grammar 
-                                book you're using.
+                                book you're using (e.g. s6 for Smyth,
+                                section 6). Must be unique. <br><br> 
+                                <b>FYI:</b>
+                                Once created, this field is read-only,
+                                because it's used to calculate user
+                                progress.
                             """))
 
     external_link = models.CharField("external url", 
@@ -305,9 +299,12 @@ class Grammar(models.Model):
         verbose_name = 'Grammar Topic'
         ordering = ['title']
 
+    def get_absolute_url(self):
+        return '/lessons/%i/' % self.id
+
     def __unicode__(self):
         return unicode(self.title) or u''
-
+    
 """
 Content Model for Phaidra
 """

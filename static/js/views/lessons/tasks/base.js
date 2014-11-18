@@ -40,7 +40,7 @@ define(['jquery',
 					encounteredWords: submission.encounteredWords || [],
 
 					// Accessible from topic modal as topic.get('ref')
-					smyth: submission.smyth,
+					ref: submission.ref,
 
 					// Timestamp is now
 					timestamp: submission.timestamp || (new Date()).toISOString(),

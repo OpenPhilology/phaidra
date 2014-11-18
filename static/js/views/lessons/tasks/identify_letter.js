@@ -91,8 +91,8 @@ define(['jquery',
 				this.sendSubmission({ 
 					response: userAnswer, 
 					accuracy: accuracy,
-					smyth: this.topic.get('ref'),
-					encounteredWords: [],
+					ref: this.topic.get('ref'),
+					encounteredWords: [""],
 					timestamp: (new Date()).toISOString(),
 					task: 'identify_letter:' + this.letter,
 					starttime: this.starttime.toISOString()
