@@ -12,7 +12,7 @@
 #########################################################################
 
 
-Initial Data
+Initial Data Formats
 #########################################
 
 # The treebank xml file of Francesco Mambrini 1999.01.0199_utf8.xml
@@ -20,7 +20,7 @@ Initial Data
 data/1999.01.0199_utf8_edited.xml
 
 # A section of the Morpheus output of the whole Thucydides with some entries 
-# manipulated to fit the sentence strucure of the treebank file of Mambrini.
+# manipulated to fit the sentence structure of the treebank file of Mambrini.
 data/thucmorphs_outtakes_edited.txt
 
 
@@ -28,13 +28,14 @@ The Morpho-Syntactic Data Dump and Import
 #########################################
 
 # This file contains the data as it was formerly fed into the neo database via some java code.
-# This code took into consideration: the , the and the 
+# This code took into consideration: the 1999.01.0199_utf8_edited.xml, the thucmorphs_outtakes_edited.txt and the alignment data as it was avaialable.
+# The pentecontaetia_dump now contains the document node of the Pentecontaetia, the Sentence, Word and Lemma nodes and the ralationships amongst them all.
 data/pentecontaetia_dump.json
 
 # Script to export the databases document -, sentence -, word - and lemma nodes (of Pentecontaetia for now).
-# the output of this script is the pentecontaetia_dump.json in the data directory.
+# The output of this script is the opt/phaidra/common/utils/neo4j_import/data/pentecontaetia_dump.json.
 pentecontaetia_export.py
-# the script to import the docuemt -, sentence -, word - and lemma objects from the JSON dump (Pentecontaetia for now).
+# the script to import the document -, sentence -, word - and lemma objects from the JSON dump (Pentecontaetia for now).
 pentecontaetia_import.py
 
 
@@ -73,7 +74,7 @@ The Only Treebank Import
 import_treebank.py
 
 
-General New Text Data import script
+General New Text Data Import Script
 #########################################
 
 # This script gives you an example how graph nodes should be built for adding new text into the graph database.

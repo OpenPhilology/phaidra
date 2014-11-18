@@ -106,6 +106,7 @@ class WordResource(Resource):
                 # fuzzy match           
                 if len(key.split('__')) > 1:
                     if key.split('__')[1] == 'contains':
+                        # multi values
                         if "__" in query_params[key]:
                             q = q + """("""
                             chunks = query_params[key].split('__')
@@ -113,6 +114,7 @@ class WordResource(Resource):
                                 q = q + """ w."""+key.split('__')[0]+ """=~'.*""" +chunk+ """.*' OR """
                             q = q[:len(q)-3]
                             q = q + """) AND """
+                        # one value
                         else:
                             q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """.*' AND """
                     elif key.split('__')[1] == 'startswith':
@@ -135,31 +137,55 @@ class WordResource(Resource):
                             q = q + """) AND """
                         else:
                             q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """=~'.*""" +query_params[key]+ """' AND """
+                    # only for integer values
                     elif key.split('__')[1] == 'gt':
                         q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """>""" +query_params[key]+ """ AND """
+                    # only for integer values
                     elif key.split('__')[1] == 'lt':
                         q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<""" +query_params[key]+ """ AND """        
                     # negated match
                     elif key.split('__')[1] == 'isnot':
                         # integer values
                         if key.split('__')[0] in ['tbwid', 'head', 'length', 'cid']:
-                            q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>""" +query_params[key]+ """ AND """
-                        # string values
-                        else:
+                            # multiple values
                             if "__" in query_params[key]:   
                                 q = q + """("""
                                 chunks = query_params[key].split('__')
                                 for chunk in chunks:
-                                    q = q + """ w."""+key.split('__')[0]+ """=~'.*""" +chunk+ """' OR """
+                                    q = q + """ w."""+key.split('__')[0]+ """<>""" +chunk+ """ OR """
                                 q = q[:len(q)-3]
                                 q = q + """) AND """
+                            # one value
+                            else:
+                                q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>""" +query_params[key]+ """ AND """
+                        # string values
+                        else:
+                            # multi values
+                            if "__" in query_params[key]:   
+                                q = q + """("""
+                                chunks = query_params[key].split('__')
+                                for chunk in chunks:
+                                    q = q + """ w."""+key.split('__')[0]+ """<>'""" +chunk+ """' OR """
+                                q = q[:len(q)-3]
+                                q = q + """) AND """
+                            # one value
                             else:
                                 q = q + """HAS (w.""" +key.split('__')[0]+ """) AND w.""" +key.split('__')[0]+ """<>'""" +query_params[key]+ """' AND """
                 # perfect match
                 else:
                     # integer values
                     if key in ['tbwid', 'head', 'length', 'cid']:
-                        q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """=""" +query_params[key]+ """ AND """
+                        # multi values
+                        if "__" in query_params[key]:   
+                                q = q + """("""
+                                chunks = query_params[key].split('__')
+                                for chunk in chunks:
+                                    q = q + """ w."""+key.split('__')[0]+ """=""" +chunk+ """ OR """
+                                q = q[:len(q)-3]
+                                q = q + """) AND """
+                        # one value
+                        else:
+                            q = q + """HAS (w.""" +key+ """) AND w.""" +key+ """=""" +query_params[key]+ """ AND """
                     # string values
                     else:
                         if "__" in query_params[key]:
