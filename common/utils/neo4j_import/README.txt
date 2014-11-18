@@ -70,7 +70,7 @@ submission_import.py
 The Only Treebank Import
 #########################################
 
-# If you are only interested in saving the treebank data of Thucydide's Pentecontaetia, run this script
+# If you are only interested in having the treebank data of Thucydide's Pentecontaetia (next to morphological infos, but without the information Morpheus provides), run this script
 import_treebank.py
 
 
@@ -85,7 +85,22 @@ import_any_text.py
 data/text.txt
 
 
+Delete a Work (Recommended for only! testing purposes)
+#########################################
 
+# If you want to delete a subgraph, e.g. a work, because of data updating issues, run the following command either in the Neo4j browser
+# (localhost:7474/browser) or it's old data browser (under http://localhost:7474/webadmin/).
+# (This is only recommended as long as no user submissions were made based on this work!)
+# Start by checking your subgraph:
+
+MATCH (d:`Document`)-[dr:`sentences`]->(s:`Sentence`)-[sr:`words`]->(w:`Word`)
+WHERE d.CTS='urn:cts:greekLit:tlg0815.tlg001.perseus-lat'
+RETURN d, dr, s, sr, w
+
+# DELETE it afterwards. !!! Caution !!! The author of this text gives no guaranty on any global or local database inconsistencies or misbehaviors or unrecoverable data afterwards!
+MATCH (d:`Document`)-[dr:`sentences`]->(s:`Sentence`)-[sr:`words`]->(w:`Word`)
+WHERE d.CTS='urn:cts:greekLit:tlg0815.tlg001.perseus-lat'
+DELETE d, dr, s, sr, w
 
 
 

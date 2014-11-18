@@ -189,6 +189,8 @@ class SentenceResource(Resource):
                 
             wordArray.append(word['data'])
             
+            ## sort array here
+            
         # if short=True return only words of the short sentence
         if bundle.request.GET.get('short'):
 

@@ -39,8 +39,8 @@ d.labels.add("Document")
 # open the file
 file = open('data/text.txt', 'r')
 
-# set your sentece ends here
-sentence_ends = ['.', '·', '!']
+# set your sentence ends here
+sentence_ends = ['.', '·', '!', '?']
 
 sentence_no = 1
 chapter_no = 1
