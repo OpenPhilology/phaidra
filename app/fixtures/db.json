@@ -4346,7 +4346,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "\u0641\u0627\u0631\u0633\u06cc",
+        "title": "\u0635\u0641\u062a: ....",
         "content": "\u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc ",
         "grammar_ref": 28,
         "related_content": [],
@@ -27538,5 +27538,23 @@
     },
     "model": "admin.logentry",
     "pk": 1290
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-18T15:31:36.645Z",
+        "object_repr": "\u0635\u0641\u062a: ....",
+        "object_id": "466",
+        "change_message": "Changed title.",
+        "user": [
+            "maryam"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1291
 }
 ]
