@@ -73,7 +73,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_amphora.png",
         "name": "Nouns First Declension"
     },
     "model": "app.category",
@@ -81,7 +80,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_monster.png",
         "name": "Verbs Present Tense"
     },
     "model": "app.category",
@@ -89,7 +87,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_parthenon.png",
         "name": "Adjectives Two Termination"
     },
     "model": "app.category",
@@ -97,7 +94,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_deer.png",
         "name": "Foundational"
     },
     "model": "app.category",
@@ -105,7 +101,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_monster.png",
         "name": "Adverbs"
     },
     "model": "app.category",
@@ -113,7 +108,6 @@
 },
 {
     "fields": {
-        "graphic": "alphabet/pi.svg",
         "name": "Participles"
     },
     "model": "app.category",
@@ -121,7 +115,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_amphora.png",
         "name": "Nouns Second Declension"
     },
     "model": "app.category",
@@ -129,7 +122,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_amphora.png",
         "name": "Nouns Third Declension"
     },
     "model": "app.category",
@@ -137,7 +129,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_amphora.png",
         "name": "Verbs Future Tense"
     },
     "model": "app.category",
@@ -145,7 +136,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_amphora.png",
         "name": "Verbs Aorist Tense"
     },
     "model": "app.category",
@@ -153,7 +143,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_monster.png",
         "name": "Verbs Perfect Tense"
     },
     "model": "app.category",
@@ -161,7 +150,6 @@
 },
 {
     "fields": {
-        "graphic": "alphabet/pi.svg",
         "name": "Verbs Imperfect Tense"
     },
     "model": "app.category",
@@ -169,7 +157,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_amphora.png",
         "name": "Verbs Future Perfect Tense"
     },
     "model": "app.category",
@@ -177,7 +164,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_parthenon.png",
         "name": "Verbs Pluperfect Tense"
     },
     "model": "app.category",
@@ -185,7 +171,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_monster.png",
         "name": "Adjectives Three Termination"
     },
     "model": "app.category",
@@ -193,7 +178,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_parthenon.png",
         "name": "Adjectives Three-termination"
     },
     "model": "app.category",
@@ -201,7 +185,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_amphora.png",
         "name": "Nouns Second Declension "
     },
     "model": "app.category",
@@ -209,7 +192,6 @@
 },
 {
     "fields": {
-        "graphic": "icon_grk_monster.png",
         "name": "Present Tense Active"
     },
     "model": "app.category",
@@ -379,13 +361,11 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Good job!",
         "name": "translate_word",
         "aspect": [
             1,
             3
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 1
@@ -393,12 +373,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Good job!",
         "name": "align_phrase",
         "aspect": [
             1
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 2
@@ -406,13 +384,11 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Bravo!",
         "name": "build_tree",
         "aspect": [
-            3,
-            2
-        ],
-        "hint_msg": "Try again."
+            2,
+            3
+        ]
     },
     "model": "app.task",
     "pk": 3
@@ -420,12 +396,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Good job!",
         "name": "identify_morph:person",
         "aspect": [
             3
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 4
@@ -433,12 +407,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Good job!",
         "name": "identify_morph:number",
         "aspect": [
             3
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 5
@@ -446,12 +418,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Super!",
         "name": "identify_morph:gender",
         "aspect": [
             3
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 6
@@ -459,12 +429,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Bravo!",
         "name": "identify_morph:tense",
         "aspect": [
             3
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 7
@@ -472,12 +440,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Bravo!",
         "name": "identify_morph:voice",
         "aspect": [
             3
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 8
@@ -485,12 +451,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Bravo!",
         "name": "identify_morph:mood",
         "aspect": [
             3
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 9
@@ -498,12 +462,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Bravo!",
         "name": "identify_morph:case",
         "aspect": [
             3
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 10
@@ -511,12 +473,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "Bravo!",
         "name": "provide_article",
         "aspect": [
             3
-        ],
-        "hint_msg": "Try again."
+        ]
     },
     "model": "app.task",
     "pk": 11
@@ -524,12 +484,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "",
         "name": "type_greek",
         "aspect": [
             3
-        ],
-        "hint_msg": ""
+        ]
     },
     "model": "app.task",
     "pk": 12
@@ -537,12 +495,10 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "",
         "name": "identify_letter:alpha",
         "aspect": [
             3
-        ],
-        "hint_msg": ""
+        ]
     },
     "model": "app.task",
     "pk": 13
@@ -550,47 +506,60 @@
 {
     "fields": {
         "endpoint": "word",
-        "success_msg": "",
         "name": "identify_letter:beta",
         "aspect": [
             3
-        ],
-        "hint_msg": ""
+        ]
     },
     "model": "app.task",
     "pk": 14
 },
 {
     "fields": {
-        "name": "Nouns for Beginners"
+        "target_accuracy": 60,
+        "max_attempts": 5,
+        "name": "Nouns for Beginners",
+        "min_attempts": 1
     },
     "model": "app.tasksequence",
     "pk": 1
 },
 {
     "fields": {
-        "name": "Verbs for Beginners"
+        "target_accuracy": 60,
+        "max_attempts": 5,
+        "name": "Verbs for Beginners",
+        "min_attempts": 1
     },
     "model": "app.tasksequence",
     "pk": 2
 },
 {
     "fields": {
-        "name": "Learn Participles"
+        "target_accuracy": 60,
+        "max_attempts": 5,
+        "name": "Learn Participles",
+        "min_attempts": 1
     },
     "model": "app.tasksequence",
     "pk": 3
 },
 {
     "fields": {
-        "name": "Learn the Alphabet"
+        "target_accuracy": 60,
+        "max_attempts": 5,
+        "name": "Learn the Alphabet",
+        "min_attempts": 1
     },
     "model": "app.tasksequence",
     "pk": 4
 },
 {
     "fields": {
-        "name": "Dummy Sequence"
+        "target_accuracy": 60,
+        "max_attempts": 5,
+        "name": "Dummy Sequence",
+        "min_attempts": 1
     },
     "model": "app.tasksequence",
     "pk": 5
@@ -598,10 +567,8 @@
 {
     "fields": {
         "task_sequence": 1,
-        "target_accuracy": 0.5,
         "task": 1,
-        "order": 0,
-        "max_attempts": 10
+        "order": 0
     },
     "model": "app.taskcontext",
     "pk": 1
@@ -609,10 +576,8 @@
 {
     "fields": {
         "task_sequence": 1,
-        "target_accuracy": 0.8,
         "task": 11,
-        "order": 1,
-        "max_attempts": 10
+        "order": 1
     },
     "model": "app.taskcontext",
     "pk": 2
@@ -620,10 +585,8 @@
 {
     "fields": {
         "task_sequence": 1,
-        "target_accuracy": 0.8,
         "task": 5,
-        "order": 2,
-        "max_attempts": 10
+        "order": 2
     },
     "model": "app.taskcontext",
     "pk": 3
@@ -631,10 +594,8 @@
 {
     "fields": {
         "task_sequence": 2,
-        "target_accuracy": 0.5,
         "task": 4,
-        "order": 0,
-        "max_attempts": 10
+        "order": 0
     },
     "model": "app.taskcontext",
     "pk": 4
@@ -642,10 +603,8 @@
 {
     "fields": {
         "task_sequence": 2,
-        "target_accuracy": 0.8,
         "task": 5,
-        "order": 1,
-        "max_attempts": 5
+        "order": 1
     },
     "model": "app.taskcontext",
     "pk": 5
@@ -653,10 +612,8 @@
 {
     "fields": {
         "task_sequence": 3,
-        "target_accuracy": 0.5,
         "task": 10,
-        "order": 0,
-        "max_attempts": 10
+        "order": 0
     },
     "model": "app.taskcontext",
     "pk": 6
@@ -664,10 +621,8 @@
 {
     "fields": {
         "task_sequence": 3,
-        "target_accuracy": 0.5,
         "task": 5,
-        "order": 1,
-        "max_attempts": 10
+        "order": 1
     },
     "model": "app.taskcontext",
     "pk": 7
@@ -675,10 +630,8 @@
 {
     "fields": {
         "task_sequence": 4,
-        "target_accuracy": 0.8,
         "task": 12,
-        "order": 1,
-        "max_attempts": 10
+        "order": 1
     },
     "model": "app.taskcontext",
     "pk": 8
@@ -686,10 +639,8 @@
 {
     "fields": {
         "task_sequence": 4,
-        "target_accuracy": 0.8,
         "task": 13,
-        "order": 0,
-        "max_attempts": 10
+        "order": 0
     },
     "model": "app.taskcontext",
     "pk": 9
@@ -697,10 +648,8 @@
 {
     "fields": {
         "task_sequence": 4,
-        "target_accuracy": 0.8,
         "task": 14,
-        "order": 2,
-        "max_attempts": 2
+        "order": 2
     },
     "model": "app.taskcontext",
     "pk": 10
@@ -708,10 +657,8 @@
 {
     "fields": {
         "task_sequence": 5,
-        "target_accuracy": 0.8,
         "task": 1,
-        "order": 0,
-        "max_attempts": 20
+        "order": 0
     },
     "model": "app.taskcontext",
     "pk": 11
@@ -1955,13 +1902,11 @@
         "content": "## The Greek Alphabet\r\n\r\nThe Greek alphabet comprises **24 letters** (7 vowels and 17 consonants). The\r\nalphabet you will learn is the Ionic alphabet first adopted in Athens at the\r\nend of the 5th century BC.\r\n\r\n### The Greek Alphabet\r\n\r\nUppercase | Lowercase | Name | Pronunciation  \r\n---|---|---|---  \r\n\u0391 | \u03b1 | alpha | a  \r\n\u0392 | \u03b2 | beta | b  \r\n\u0393 | \u03b3 | gamma | g (like \"glue\")  \r\n\u0394 | \u03b4 | delta | d  \r\n\u0395 | \u03b5 | epsilon | e (like \"get\")  \r\nZ | \u03b6 | zdeta | zd  \r\n\u0397 | \u03b7 | eta | e (like \"hair\")  \r\n\u0398 | \u03b8 | theta | th  \r\n\u0399 | \u03b9 | iota | i (like \"east\")  \r\n\u039a | \u03ba | kappa | k  \r\n\u039b | \u03bb | lambda | l  \r\n\u039c | \u03bc | m\u00fc | m  \r\n\u039d | \u03bd | n\u00fc | n  \r\n\u039e | \u03be | ksi | x  \r\n\u039f | \u03bf | omicron | o  \r\n\u03a0 | \u03c0 | pi | p  \r\n\u03a1 | \u03c1 | rho | r  \r\n\u03a3 | \u03c3 or \u03c2* | sigma | s  \r\n\u03a4 | \u03c4 | tau | t  \r\n\u03a5 | \u03c5 | \u00fcpsilon | \u00fc  \r\n\u03a6 | \u03c6 | fi | f  \r\n\u03a7 | \u03c7 | khi | kh  \r\n\u03a8 | \u03c8 | psi | ps  \r\n\u03a9 | \u03c9 | omega | o  \r\n\r\n***\r\n\r\n\u03c3 is used when the letter is in the middle of the word. \u03c2 is used when the letter is at the end of the word.",
         "grammar_ref": 64,
         "related_content": [
-            266,
-            255,
-            271,
-            253,
             251,
             252,
+            253,
             254,
+            255,
             256,
             257,
             258,
@@ -1972,8 +1917,10 @@
             263,
             264,
             265,
+            266,
             269,
             270,
+            271,
             273,
             274,
             275,
@@ -2355,8 +2302,8 @@
         "grammar_ref": 24,
         "related_content": [
             296,
-            299,
-            301
+            301,
+            299
         ],
         "source_lang": 4
     },
@@ -4399,7 +4346,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "\u0641\u0627\u0631\u0633\u06cc",
+        "title": "\u0635\u0641\u062a: ....",
         "content": "\u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc \u0641\u0627\u0631\u0633\u06cc ",
         "grammar_ref": 28,
         "related_content": [],
@@ -26641,7 +26588,7 @@
 {
     "fields": {
         "action_flag": 2,
-        "action_time": "2014-11-14T00:07:12.000Z",
+        "action_time": "2014-11-14T00:07:12Z",
         "object_repr": "Adverbs",
         "object_id": "32",
         "change_message": "Changed tasks.",
@@ -27591,5 +27538,23 @@
     },
     "model": "admin.logentry",
     "pk": 1290
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-18T15:31:36.645Z",
+        "object_repr": "\u0635\u0641\u062a: ....",
+        "object_id": "466",
+        "change_message": "Changed title.",
+        "user": [
+            "maryam"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1291
 }
 ]

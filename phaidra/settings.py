@@ -99,8 +99,7 @@ STATICFILES_DIRS = (
 )
 
 # Ignore files and folders that match these
-COLLECT_STATIC_IGNORE = [
-    'admin', 
+COLLECT_STATIC_IGNORE = [ 
     'collected'
 ]
 

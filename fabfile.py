@@ -177,7 +177,7 @@ def setup_frontend():
     """
     with lcd(env.directory):
         # Github distributes submodules as blank folders. Remove, clear cache, then pull
-        submodules = ['daphnejs', 'moreajs']
+        submodules = ['daphnejs', 'moreajs', 'typegeek']
         
         for module in submodules:
             if os.path.exists('static/js/lib/%s' % module):
