@@ -59,7 +59,7 @@ class WordResource(Resource):
         object_class = DataObject
         resource_name = 'word'
         authorization = ReadOnlyAuthorization()
-        #cache = SimpleCache(timeout=None)
+        cache = SimpleCache(timeout=None)
         validation =  ResourceValidation()
 
     

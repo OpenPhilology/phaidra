@@ -64,10 +64,12 @@ def sort_sentences(array):
 Operators for sentence ordering based on book:chapter:sentence number
 """
 def less_than(left, pivot):
-        
+    
+    # if sorting on at least sentence list is done, you might wan to check here of a object or only dictionary is handed over
+    # (senteces within a document or words within a sentence are just dict; whereas on sentence or world list, the elements to compare are objects -> see utils 
     left_arr = left['CTS'].split(':')[len(left['CTS'].split(':'))-1].split('.')
     pivot_arr = pivot['CTS'].split(':')[len(pivot['CTS'].split(':'))-1].split('.')
-         
+            
     if int(left_arr[0]) > int(pivot_arr[0]):
         return False
     elif int(left_arr[0]) < int(pivot_arr[0]):
@@ -85,12 +87,10 @@ def less_than(left, pivot):
     return False 
             
 def greater_equal(right, pivot):
-        
-    fo = open("foo.txt", "wb")
-            
+   
     right_arr = right['CTS'].split(':')[len(right['CTS'].split(':'))-1].split('.')
     pivot_arr = pivot['CTS'].split(':')[len(pivot['CTS'].split(':'))-1].split('.')      
-        
+                
     if int(right_arr[0]) < int(pivot_arr[0]):
         return False
     elif int(right_arr[0]) > int(pivot_arr[0]):
