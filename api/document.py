@@ -95,11 +95,13 @@ class DocumentResource(Resource):
                 
                 sent = s[0]
                 url = sent['self'].split('/')
+                sent_cts = sent['data']['CTS']
                 sent['data'] = {}
                 sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
+                sent['data']['CTS'] = sent_cts
                 sentenceArray.append(sent['data'])
                 
-            new_obj.__dict__['_data']['sentences'] = sentenceArray
+            new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
             
             documents.append(new_obj)        
                 
