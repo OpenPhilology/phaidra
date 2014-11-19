@@ -11,7 +11,7 @@ from neo4jrestclient.client import GraphDatabase
 
 # imported from the phaidra api
 from validation import ResourceValidation
-from utils import DataObject
+from utils import DataObject, sort_sentences
 
 
 class DocumentResource(Resource):
@@ -113,62 +113,6 @@ class DocumentResource(Resource):
         else:
             return self.get_object_list(bundle.request)
     
-    def less_than(self, left, pivot):
-        
-        left_arr = left['CTS'].split(':')[len(left['CTS'].split(':'))-1].split('.')
-        pivot_arr = pivot['CTS'].split(':')[len(pivot['CTS'].split(':'))-1].split('.')
-         
-        if int(left_arr[0]) > int(pivot_arr[0]):
-            return False
-        elif int(left_arr[0]) < int(pivot_arr[0]):
-            return True
-        else:
-            if int(left_arr[1]) > int(pivot_arr[1]):
-                return False
-            elif int(left_arr[1]) < int(pivot_arr[1]):
-                return True
-            else:
-                if int(left_arr[2]) >= int(pivot_arr[2]):
-                    return False
-                else:
-                    return True             
-        return False    
-        
-    
-    def greater_equal(self, right, pivot):
-        
-        fo = open("foo.txt", "wb")
-            
-        right_arr = right['CTS'].split(':')[len(right['CTS'].split(':'))-1].split('.')
-        pivot_arr = pivot['CTS'].split(':')[len(pivot['CTS'].split(':'))-1].split('.')      
-        
-        if int(right_arr[0]) < int(pivot_arr[0]):
-            return False
-        elif int(right_arr[0]) > int(pivot_arr[0]):
-            return True
-        else:
-            if int(right_arr[1]) < int(pivot_arr[1]):
-                return False
-            elif int(right_arr[1]) > int(pivot_arr[1]):
-                return True
-            else:
-                if int(right_arr[2]) < int(pivot_arr[2]):
-                    return False
-                else:
-                    return True             
-        return False
-             
-    
-    def sort(self, array):
-        
-        if array == []:
-            return []
-        else:
-            pivot = array[0]
-            lesser = self.sort([x for x in array[1:] if self.less_than(x, pivot)])
-            greater = self.sort([x for x in array[1:] if self.greater_equal(x, pivot)])
-            return lesser + [pivot] + greater
-        
     
     def obj_get(self, bundle, **kwargs):
         
@@ -188,9 +132,8 @@ class DocumentResource(Resource):
             # which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
             sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
             sentenceArray.append(sent['data'])
-           
-        arr = self.sort(sentenceArray)
-        new_obj.__dict__['_data']['sentences'] = arr
+
+        new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
             
         
         # get a dictionary of related translations of this document
