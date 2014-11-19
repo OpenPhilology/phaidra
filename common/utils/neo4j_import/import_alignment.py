@@ -67,7 +67,7 @@ def save_sentence(nodes, sentence_ref, lang, d, document):
                 wordTable = gdb.query("""MATCH (w) WHERE w.CTS='""" + document.primary_source_urn + ":" + node.attributes['n'].value + """' RETURN w""")
                 w = gdb.nodes.get(wordTable[0][0]['self'])
             else:
-                w = gdb.nodes.create(CTS=document.cts() + ":" + node.attributes['n'].value, value=word_value, length=len(word_value), lang=document.lang)
+                w = gdb.nodes.create(CTS=document.cts() + ":" + node.attributes['n'].value, value=word_value, length=len(word_value), lang=document.locale)
                 w.labels.add("Word")
                 s.words(w)
                               
@@ -126,8 +126,8 @@ def align(lang):
                 save_sentence(sentence.childNodes[3].childNodes, sentence.attributes['id'].value, 'translation', d, document)
                 save_sentence(sentence.childNodes[1].childNodes, sentence.attributes['id'].value, 'grc', d, document)
             else:
-                save_sentence(sentence.childNodes[1].childNodes, entence.attributes['id'].value, 'translation', d, document)
-                save_sentence(sentence.childNodes[3].childNodes, entence.attributes['id'].value, 'grc', d, document) 
+                save_sentence(sentence.childNodes[1].childNodes, sentence.attributes['id'].value, 'translation', d, document)
+                save_sentence(sentence.childNodes[3].childNodes, sentence.attributes['id'].value, 'grc', d, document) 
         
     #print lang
           
@@ -159,14 +159,3 @@ if __name__ == "__main__":
 
 #else:
     #align(TARGET_LANGUAGE)
-
-
-
- 
-
-		
-
-				
-					
-
-          
