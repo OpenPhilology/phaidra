@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-18 17:15+0100\n"
+"POT-Creation-Date: 2014-11-20 12:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,107 +20,107 @@ msgstr ""
 
 #: static/js/utils.js:88
 msgid "Ancient Greek"
-msgstr ""
+msgstr "یونانی باستان"
 
 #: static/js/utils.js:89
 msgid "Farsi"
-msgstr ""
+msgstr "فارسی"
 
 #: static/js/utils.js:90
 msgid "English"
-msgstr ""
+msgstr "انگلیسی"
 
 #: static/js/utils.js:91
 msgid "Croatian"
-msgstr ""
+msgstr "کروات"
 
 #: static/js/utils.js:92
 msgid "Portuguese"
-msgstr ""
+msgstr "پرتغالی"
 
 #: static/js/utils.js:93
 msgid "French"
-msgstr ""
+msgstr "فرانسوی"
 
 #: static/js/utils.js:120
 msgid "Feminine"
-msgstr ""
+msgstr "مونث"
 
 #: static/js/utils.js:121
 msgid "Neuter"
-msgstr ""
+msgstr "خنثی"
 
 #: static/js/utils.js:122
 msgid "Masculine"
-msgstr ""
+msgstr "مذکر"
 
 #: static/js/utils.js:125
 msgid "Singular"
-msgstr ""
+msgstr "مفرد"
 
 #: static/js/utils.js:126
 msgid "Plural"
-msgstr ""
+msgstr "جمع"
 
 #: static/js/utils.js:129
 msgid "Nominative"
-msgstr ""
+msgstr "حالت فاعلی"
 
 #: static/js/utils.js:130
 msgid "Genitive"
-msgstr ""
+msgstr "حالت اضافه ملکی"
 
 #: static/js/utils.js:131
 msgid "Dative"
-msgstr ""
+msgstr "حالت مفعول با واسطه"
 
 #: static/js/utils.js:132
 msgid "Accusative"
-msgstr ""
+msgstr "حالت مفعول بی‌واسطه"
 
 #: static/js/utils.js:135
 msgid "3rd Person"
-msgstr ""
+msgstr "سوم شخص"
 
 #: static/js/utils.js:136
 msgid "2nd Person"
-msgstr ""
+msgstr "دوم شخص"
 
 #: static/js/utils.js:137
 msgid "1st Person"
-msgstr ""
+msgstr "اول شخص"
 
 #: static/js/utils.js:140
 msgid "Indicative"
-msgstr ""
+msgstr "وجه اخباری"
 
 #: static/js/utils.js:141
 msgid "Subjunctive"
-msgstr ""
+msgstr "وجه شرطی"
 
 #: static/js/utils.js:142
 msgid "Optative"
-msgstr ""
+msgstr "وجه آرزویی"
 
 #: static/js/utils.js:143
 msgid "Infinitive"
-msgstr ""
+msgstr "مصدر"
 
 #: static/js/utils.js:146
 msgid "Aorist"
-msgstr ""
+msgstr "گذشته ساده"
 
 #: static/js/utils.js:147
 msgid "Imperfect"
-msgstr ""
+msgstr "گذشته استمراری"
 
 #: static/js/utils.js:148
 msgid "Future"
-msgstr ""
+msgstr "آینده"
 
 #: static/js/utils.js:149
 msgid "Present"
-msgstr ""
+msgstr "حال"
 
 #: static/js/utils.js:150
 msgid "Future Perfect"
@@ -128,23 +128,23 @@ msgstr ""
 
 #: static/js/utils.js:153
 msgid "Active"
-msgstr ""
+msgstr "معلوم"
 
 #: static/js/utils.js:154
 msgid "Middle"
-msgstr ""
+msgstr "میانه"
 
 #: static/js/utils.js:155
 msgid "Middle/Passive"
-msgstr ""
+msgstr "میانه/مجهول"
 
 #: static/js/utils.js:156
 msgid "Passive"
-msgstr ""
+msgstr "مجهول"
 
 #: static/js/views/reader/notes/about-word.js:26
 msgid "Morphology"
-msgstr ""
+msgstr "واج شناسی"
 
 #: static/js/views/reader/notes/notes.js:124
 msgid "Information about"
