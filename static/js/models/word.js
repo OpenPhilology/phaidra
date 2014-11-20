@@ -60,7 +60,7 @@ define(['jquery',
 						break;
 				}
 
-				return _.compact(attrs).join(', ');
+				return _.compact(attrs).join(gettext(', '));
 			}
 		});
 	}

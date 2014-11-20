@@ -20,6 +20,15 @@ define(['jquery',
 				}
 
 				this.set(response);
+
+			},
+			sortTasks: function() {
+				if (!this.get('task_sequence')) return;
+
+				// Sort task sequence by order
+				this.get('task_sequence').tasks = _.sortBy(this.get('task_sequence').tasks, function(task) {
+					return task.order;
+				});
 			}
 		}
 	);

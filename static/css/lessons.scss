@@ -429,10 +429,6 @@ table.inflection-table {
 		text-align: center;
 		display: block;
 	}
-	.tooltip {
-		font-size: 16px;
-		width: auto;
-	}
 	&.success {
 		background-color: lighten($color-light-green, 20%);
 	}
@@ -470,4 +466,8 @@ table.inflection-table {
 		background-color: $color-pri-one;
 		color: #EEE;
 	}
+}
+.tooltip {
+	font-size: 16px;
+	width: auto;
 }

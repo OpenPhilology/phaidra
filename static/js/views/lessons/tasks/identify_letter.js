@@ -85,7 +85,7 @@ define(['jquery',
 				var accuracy = BaseTaskView.prototype.getAccuracy.apply(this, [answer, userAnswer]);
 
 				// Determine new state of the task
-				var newState = BaseTaskView.prototype.getNewState.apply(this, [answer, userAnswer]);
+				var newState = BaseTaskView.prototype.getState.apply(this, [answer, userAnswer]);
 
 				// Send a submission to the server
 				this.sendSubmission({ 

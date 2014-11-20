@@ -71,7 +71,7 @@ define(['jquery',
 					}
 				});
 			},
-			getNewState: function(answer, userInput) {
+			getState: function(answer, userInput) {
 				// Return a state based on edit distance
 				var distance = Utils.lDistance(answer, userInput);
 				
@@ -91,6 +91,27 @@ define(['jquery',
 				 */
 
 				 return Utils.compareStrings(a, b);
+			},
+			updateTaskAccuracy: function(self, args) {
+				var topic = args[0], accuracy = args[1];
+				var avg;
+
+				if (topic.get('attempts') === 0) {
+					avg = accuracy;
+				}
+				else {
+					// Calcuate the weighted accuracy
+					var total_attempts = attempts + 1;
+
+					var prev = (attempts / total_attempts) * topic.get('accuracy'); 
+					var curr = (1 / total_attempts) * accuracy;
+
+					var avg = prev + curr; 
+				}
+
+				// Increment attempts, set accuracy
+				topic.set('attempts', topic.get('attempts') + 1);
+				topic.set('accuracy', avg);
 			}
 		});
 	}
