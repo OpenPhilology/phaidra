@@ -11,7 +11,7 @@ from neo4jrestclient.client import GraphDatabase
 
 # imported from the phaidra api
 from validation import ResourceValidation
-from utils import DataObject
+from utils import DataObject, sort_sentences
 
 
 class DocumentResource(Resource):
@@ -95,11 +95,13 @@ class DocumentResource(Resource):
                 
                 sent = s[0]
                 url = sent['self'].split('/')
+                sent_cts = sent['data']['CTS']
                 sent['data'] = {}
                 sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
+                sent['data']['CTS'] = sent_cts
                 sentenceArray.append(sent['data'])
                 
-            new_obj.__dict__['_data']['sentences'] = sentenceArray
+            new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
             
             documents.append(new_obj)        
                 
@@ -112,6 +114,7 @@ class DocumentResource(Resource):
             return dict
         else:
             return self.get_object_list(bundle.request)
+    
     
     def obj_get(self, bundle, **kwargs):
         
@@ -131,8 +134,8 @@ class DocumentResource(Resource):
             # which gives us great performance instead of creating relations amongst objects and referencing/dereferencing foreign keyed fields
             sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
             sentenceArray.append(sent['data'])
-                
-            new_obj.__dict__['_data']['sentences'] = sentenceArray
+
+        new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
             
         
         # get a dictionary of related translations of this document
