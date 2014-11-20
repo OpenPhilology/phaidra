@@ -23,11 +23,9 @@ msgstr ""
 msgid "Ancient Geek - by the Open Philology Project"
 msgstr "آموزش الکترونیکی زبان‌های باستانی – کاری از پروژه “Open Philology”"
 
-#: templates/base.html:51 templates/index.html:43
-#, fuzzy
-#| msgid "Login to Ancient Geek!"
+#: templates/base.html:51 
 msgid "Ancient Geek"
-msgstr "ورود به سیستم Ancient Geek!"
+msgstr "Ancient Geek"
 
 #: templates/base.html:54 templates/index.html:46
 msgid "Learn"
@@ -230,7 +228,7 @@ msgstr ""
 
 #: templates/index.html:213
 msgid "What then?"
-msgstr "بعد چی؟"
+msgstr "بعد چی"
 
 #: templates/index.html:218
 msgid ""
@@ -312,8 +310,6 @@ msgid "Admin Panel"
 msgstr "پنل ادمین"
 
 #: templates/js/lessons/microlesson.html:38
-#, fuzzy
-#| msgid "Related Grammar Topics"
 msgid "Edit Grammar Topic"
 msgstr "ویرایش موضوع دستوری"
 
@@ -322,15 +318,13 @@ msgid "What is this letter called?"
 msgstr "این حرف چه نام دارد؟"
 
 #: templates/js/lessons/tasks/translate_word.html:5
-#, fuzzy
-#| msgid "What then?"
 msgctxt "Task question: \"What is the [morph] of [word]?\""
 msgid "What is the"
 msgstr "بعد چی؟"
 
 #: templates/js/lessons/tasks/translate_word.html:5
 msgid "of"
-msgstr "ِ"
+msgstr ""
 
 #: templates/js/lessons/tasks/translate_word.html:5
 msgid "?"
