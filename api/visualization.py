@@ -170,14 +170,14 @@ class VisualizationResource(Resource):
                 CTS = wordRef
                 
                 # check the ends of a word's relationships
-                for rel in userNode.relationships.outgoing(["knows_vocab"])[:]:
+                for rel in userNode.relationships.outgoing(["has_seen"])[:]:
                     if word == rel.end:
                         times_seen = rel.properties['times_seen']
                         voc_known = True
                     if lemma == rel.end:
                         voc_known = True
                 
-                for rel in userNode.relationships.outgoing(["knows_grammar"])[:]:        
+                for rel in userNode.relationships.outgoing(["knows_morph"])[:]:        
                     if word == rel.end:
                         morph_known = True
                                                                 
@@ -239,7 +239,7 @@ class VisualizationResource(Resource):
                             if not badmatch:
                                 knownDict[word['data']['CTS']] = True
                                 
-                            # vocab of word knwn?
+                            # vocab of word known?
                             know_the_word = True 
                                 
                     # save data
@@ -365,12 +365,12 @@ class VisualizationResource(Resource):
         sentenceTable = gdb.query("""MATCH (n:`Document`)-[:sentences]->(s:`Sentence`)-[:words]->(w:`Word`) WHERE HAS (n.CTS) AND n.CTS = '""" +request.GET.get('range')+ """' RETURN count(w)""")
         all = sentenceTable[0][0]
         
-        sentenceTable = gdb.query("""MATCH (u:`User`)-[:knows_vocab]->(l:`Lemma`) WHERE u.username='""" + user + """' RETURN l""")
+        sentenceTable = gdb.query("""MATCH (u:`User`)-[:has_seen]->(l:`Lemma`) WHERE u.username='""" + user + """' RETURN l""")
         
         for lemma in sentenceTable:
             knows_vocab = knows_vocab + lemma[0]['data']['frequency'] 
         
-        knows_grammar = len(userNode.relationships.outgoing(["knows_grammar"])[:])
+        knows_grammar = len(userNode.relationships.outgoing(["knows_morph"])[:])
         
         # after reading everything return the statistics
         data['statistics'] = {'all': all, 'vocab': float(knows_vocab)/float(all), 'morphology': float(knows_grammar)/float(all), 'syntax': float(knows_syntax)/float(all)}
