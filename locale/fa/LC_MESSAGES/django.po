@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-20 12:19+0100\n"
+"POT-Creation-Date: 2014-11-20 16:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,11 +23,9 @@ msgstr ""
 msgid "Ancient Geek - by the Open Philology Project"
 msgstr "آموزش الکترونیکی زبان‌های باستانی – کاری از پروژه “Open Philology”"
 
-#: templates/base.html:51 templates/index.html:43
-#, fuzzy
-#| msgid "Login to Ancient Geek!"
+#: templates/base.html:51 
 msgid "Ancient Geek"
-msgstr "ورود به سیستم Ancient Geek!"
+msgstr "Ancient Geek"
 
 #: templates/base.html:54 templates/index.html:46
 msgid "Learn"
@@ -156,13 +154,11 @@ msgid ""
 "\t\t\t\t\t"
 msgstr ""
 "\n"
-"\t\t\t\t\t\t<strong>راه خاص خودت برای یادگیری زبان یونانی را انتخاب می‌کنی</strong>"
-"&mdash; چه بخواهی کاملاً غرق در این دنیا شوی یا بخواهی که درس‌های "
-"دارای ساختار را بخوانی Ancient Geek در هر دو مسیر به تو کمک خواهد کرد."
-"<Br><br>\n"
+"\t\t\t\t\t\t<strong>راه خاص خودت برای یادگیری زبان یونانی را انتخاب می‌کنی</"
+"strong>&mdash; چه بخواهی کاملاً غرق در این دنیا شوی یا بخواهی که درس‌های دارای "
+"ساختار را بخوانی Ancient Geek در هر دو مسیر به تو کمک خواهد کرد.<Br><br>\n"
 "\t\t\t\t\t\tهمه ابزارهایی که با آنها سر و کار داری را از روز اول در اختیار "
-"خواهی داشت. قرار نیست فقط مثال‌های کتاب های درسی به تو داده "
-"شود \n"
+"خواهی داشت. قرار نیست فقط مثال‌های کتاب های درسی به تو داده شود \n"
 "\t\t\t\t\t"
 
 #: templates/index.html:179
@@ -190,8 +186,8 @@ msgid ""
 "You'll practice each lesson through enjoyable <strong>interactive exercises</"
 "strong> that will help you develop the skills you need."
 msgstr ""
-"با <strong>تمرین‌هایی تعاملی و لذت‌بخش روی هر درس تمرکز خواهی کرد</strong> "
-"که به تو کمک می‌کند مهارت‌های لازم را گسترش بدهی."
+"با <strong>تمرین‌هایی تعاملی و لذت‌بخش روی هر درس تمرکز خواهی کرد</strong> که "
+"به تو کمک می‌کند مهارت‌های لازم را گسترش بدهی."
 
 #: templates/index.html:196
 msgid ""
@@ -201,8 +197,9 @@ msgid ""
 "others."
 msgstr ""
 "مثلاً یاد می‌گیری چطور جمله‌ای یونانی را انتخاب کنی و <strong>و آن را به صورت "
-"درختی نمایش دهی</strong>. این کار نه تنها ثابت می‌کند که تو یونانی را فهمیده‌ای"
-"بلکه قادر خواهی بود برداشت خودت را از جمله با برداشت دیگران مقایسه کنی. "
+"درختی نمایش دهی</strong>. این کار نه تنها ثابت می‌کند که تو یونانی را "
+"فهمیده‌ایبلکه قادر خواهی بود برداشت خودت را از جمله با برداشت دیگران مقایسه "
+"کنی. "
 
 #: templates/index.html:198
 msgid ""
@@ -210,8 +207,8 @@ msgid ""
 "contribute your interpretation to the Digital Humanities community as a "
 "micropublication."
 msgstr ""
-"هر وقت آماده بودی می‌توانی برای جملات تجزیه نشده نمودار درختی رسم کنی و "
-"تحلیل خودت را به عنوان نشر میکرو در اختیار جامعه علوم انسانی دیجیتال بگذاری. "
+"هر وقت آماده بودی می‌توانی برای جملات تجزیه نشده نمودار درختی رسم کنی و تحلیل "
+"خودت را به عنوان نشر میکرو در اختیار جامعه علوم انسانی دیجیتال بگذاری. "
 
 #: templates/index.html:204
 msgid ""
@@ -223,15 +220,15 @@ msgid ""
 "\t\t\t\t"
 msgstr ""
 "\n"
-"\t\t\t\t\tبا کاری که دیگران انجام داده‌اند یاد می‌گیری چطور نمودار درختی "
-"رسم کنی<br>\n"
-"\t\t\t\t\tسپس <strong>برای متن‌های دیجیتال و کاملاً جدید نمودار درختی "
-"می‌سازی</strong>.\n"
+"\t\t\t\t\tبا کاری که دیگران انجام داده‌اند یاد می‌گیری چطور نمودار درختی رسم "
+"کنی<br>\n"
+"\t\t\t\t\tسپس <strong>برای متن‌های دیجیتال و کاملاً جدید نمودار درختی می‌سازی</"
+"strong>.\n"
 "\t\t\t\t"
 
 #: templates/index.html:213
 msgid "What then?"
-msgstr "بعد چی؟"
+msgstr "بعد چی"
 
 #: templates/index.html:218
 msgid ""
@@ -244,12 +241,12 @@ msgid ""
 "\t\t\t\t\t"
 msgstr ""
 "\n"
-"\t\t\t\t\t\tمی‌دانستی هنوز متن‌های کلاسیک بسیاری هستند که رویشان کار نشده "
-"است؟ بسیاری از آنها هنوز دیجیتال نشده‌اند، و تعداد آنها که ترجمه شده یا "
-"تجزیه تحلیل شده باشند، بسیار کمتر است. <strong>به همین دلیل می‌خواهیم تو "
-"هم با ما همراهی کنی</strong> میلیون‌ها لغت یونانی باستان است که به تازگی دیجیتال شده‌اند "
-"و در انتظار تجزیه و تحلیل شدن به سر می‌برند. تو می‌توانی با همان بازی‌هایی که "
-"الفبا را یادت دادند در انجام این کار کمک کنی.\n"
+"\t\t\t\t\t\tمی‌دانستی هنوز متن‌های کلاسیک بسیاری هستند که رویشان کار نشده است؟ "
+"بسیاری از آنها هنوز دیجیتال نشده‌اند، و تعداد آنها که ترجمه شده یا تجزیه "
+"تحلیل شده باشند، بسیار کمتر است. <strong>به همین دلیل می‌خواهیم تو هم با ما "
+"همراهی کنی</strong> میلیون‌ها لغت یونانی باستان است که به تازگی دیجیتال "
+"شده‌اند و در انتظار تجزیه و تحلیل شدن به سر می‌برند. تو می‌توانی با همان "
+"بازی‌هایی که الفبا را یادت دادند در انجام این کار کمک کنی.\n"
 "\t\t\t\t\t"
 
 #: templates/index.html:224
@@ -263,10 +260,10 @@ msgid ""
 msgstr ""
 "\n"
 "\t\t\t\t\t\tبهترین نکته ماجرا این است که تو تنها نیستی &mdash; Ancient "
-"Geekها از هر جای دنیا در ایجاد‌<strong>نسخه‌های دیجیتال جدید</strong> متونی "
-"که تاکنون رویشان کار نشده است، کمک می‌کنند. آنها از مهارت‌هایی که به‌تازگی "
-"در زبان‌های باستانی کسب کرده‌اند به علاوه توانایی‌هایشان در دیگر زبان‌های "
-"مدرن کمک می‌گیرند.\n"
+"Geekها از هر جای دنیا در ایجاد‌<strong>نسخه‌های دیجیتال جدید</strong> متونی که "
+"تاکنون رویشان کار نشده است، کمک می‌کنند. آنها از مهارت‌هایی که به‌تازگی در "
+"زبان‌های باستانی کسب کرده‌اند به علاوه توانایی‌هایشان در دیگر زبان‌های مدرن کمک "
+"می‌گیرند.\n"
 "\t\t\t\t\t"
 
 #: templates/index.html:232
@@ -313,8 +310,6 @@ msgid "Admin Panel"
 msgstr "پنل ادمین"
 
 #: templates/js/lessons/microlesson.html:38
-#, fuzzy
-#| msgid "Related Grammar Topics"
 msgid "Edit Grammar Topic"
 msgstr "ویرایش موضوع دستوری"
 
@@ -323,15 +318,13 @@ msgid "What is this letter called?"
 msgstr "این حرف چه نام دارد؟"
 
 #: templates/js/lessons/tasks/translate_word.html:5
-#, fuzzy
-#| msgid "What then?"
 msgctxt "Task question: \"What is the [morph] of [word]?\""
 msgid "What is the"
 msgstr "بعد چی؟"
 
 #: templates/js/lessons/tasks/translate_word.html:5
 msgid "of"
-msgstr "ِ"
+msgstr ""
 
 #: templates/js/lessons/tasks/translate_word.html:5
 msgid "?"
@@ -383,7 +376,9 @@ msgstr "چیزی پیدا نشد"
 msgid ""
 "Click a word to see resources for it, or click the comment icon to add your "
 "own annotation."
-msgstr "روی کلمه کلیک کن تا مرجع آن را ببینی، یا روی نماد اظهارنظر کلیک کن تا حاشیه‌نویسی خودت را اضافه کنی."
+msgstr ""
+"روی کلمه کلیک کن تا مرجع آن را ببینی، یا روی نماد اظهارنظر کلیک کن تا "
+"حاشیه‌نویسی خودت را اضافه کنی."
 
 #: templates/js/reader/notes/notes.html:10
 msgid "Translations"
@@ -443,8 +438,8 @@ msgstr "در حال بارگذاری درس"
 #~ "When you feel like you've learned enough, dive right in to more advanced "
 #~ "(and more fun) Greek learning tools."
 #~ msgstr ""
-#~ "هر وقت فکر کردی به اندازه کافی یاد گرفتی، وارد مراحل پیشرفته‌تر استفاده "
-#~ "از ابزارهای یادگیری یونانی بشو (و لذت بیشتری ببر)"
+#~ "هر وقت فکر کردی به اندازه کافی یاد گرفتی، وارد مراحل پیشرفته‌تر استفاده از "
+#~ "ابزارهای یادگیری یونانی بشو (و لذت بیشتری ببر)"
 
 #~ msgid "Start Reading"
 #~ msgstr "شروع به خواندن کن"

@@ -79,7 +79,7 @@ define(['jquery',
 				var userAnswer = inputField.val();
 
 				// Call our BaseTask's answer checking functionality 
-				var newState = BaseTaskView.prototype.checkAnswer.apply(this, [answer, userAnswer]);
+				var newState = BaseTaskView.prototype.getState.apply(this, [answer, userAnswer]);
 
 				// Update our UI accordingly
 				this.fullRender({ state: newState });
