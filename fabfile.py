@@ -140,7 +140,7 @@ def init():
 
     with lcd(env.directory):
         # Prevent attempts to create second env when running install more than once
-        if not os.path.isfile(env.activate):
+        if not os.path.isfile('/opt/phaidra/env/bin/activate'):
 	    local('virtualenv --no-site-packages env')
 
     with virtualenv():
@@ -204,6 +204,7 @@ def setup_django():
         local("./manage.py collectstatic --noinput") 
         local('./manage.py migrate')
         load_db()
+        local('source env/bin/activate') # Don't know why, but this command has issues with 'with virtualenv()'
         local('./manage.py createsuperuser')
 
 @task
