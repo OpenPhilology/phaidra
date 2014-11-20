@@ -13,7 +13,7 @@ from neo4jrestclient.client import GraphDatabase
 
 # imported from the phaidra api
 from validation import ResourceValidation
-from utils import DataObject
+from utils import DataObject, sort_words
 
 
 class SentenceResource(Resource):
@@ -29,7 +29,7 @@ class SentenceResource(Resource):
         object_class = DataObject
         resource_name = 'sentence'    
         authorization = ReadOnlyAuthorization()    
-        # cache = SimpleCache(timeout=None) # caching is not that easy for this resource
+        # cache = SimpleCache(timeout=None) # caching is not that easy for this resource, caching inline
         validation =  ResourceValidation()
     
     def detail_uri_kwargs(self, bundle_or_obj):
@@ -118,7 +118,7 @@ class SentenceResource(Resource):
     
     def obj_get(self, bundle, **kwargs):
         
-        # get the actual cached objects 
+        # get the actually cached objects 
         if cache.get("sentence_%s"%kwargs['pk']) is not None and not bundle.request.GET.get('full') and not bundle.request.GET.get('short'):
             return cache.get("sentence_%s"%kwargs['pk'])
         
@@ -149,10 +149,9 @@ class SentenceResource(Resource):
         new_obj.__dict__['_data']['id'] = kwargs['pk']
         new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + str(sentence.relationships.incoming(types=["sentences"])[0].start.id) + '/'
         
-        # get a dictionary of related translation of this sentence # ordering here is a problem child
+        # get a dictionary of related translation of this sentence 
         relatedSentences = gdb.query("""MATCH (s:`Sentence`)-[:words]->(w:`Word`)-[:translation]->(t:`Word`)<-[:words]-(s1:`Sentence`) WHERE HAS (s.CTS) AND s.CTS='"""+ sentence.properties['CTS'] + """' RETURN DISTINCT s1 ORDER BY ID(s1)""")
-
-        
+    
         new_obj.__dict__['_data']['translations']={}
         for rs in relatedSentences:
             sent = rs[0]
@@ -161,7 +160,7 @@ class SentenceResource(Resource):
                 if sent['data']['CTS'].find("-"+lang+":") != -1:
                     new_obj.__dict__['_data']['translations'][lang] = API_PATH + 'sentence/' + url[len(url)-1] +'/'        
         
-        # get the words    and related information    
+        # get the words and lemma resource uri of the sentence    
         words = gdb.query("""MATCH (d:`Sentence`)-[:words]->(w:`Word`) WHERE d.CTS='""" +sentence.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
         wordArray = []
         for w in words:
@@ -175,7 +174,7 @@ class SentenceResource(Resource):
             if len(lemmaRels) > 0:
                 word['data']['lemma_resource_uri'] = API_PATH + 'lemma/' + str(lemmaRels[0].start.id) + '/'
             
-            # get the full translation # force API into full representation if cache is enabled
+            # get the translations of a word if parameter is set
             if bundle.request.GET.get('full'):    
                 
                 translations = gdb.query("""MATCH (d:`Word`)-[:translation]->(w:`Word`) WHERE d.CTS='""" +wordNode.properties['CTS']+ """' RETURN DISTINCT w ORDER BY ID(w)""")
@@ -188,6 +187,8 @@ class SentenceResource(Resource):
                     word['data']['translations'] = translationArray
                 
             wordArray.append(word['data'])
+            
+        wordArray = sort_words(wordArray)
             
         # if short=True return only words of the short sentence
         if bundle.request.GET.get('short'):
