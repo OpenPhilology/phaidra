@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-01 17:53+0100\n"
+"POT-Creation-Date: 2014-11-20 16:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,50 +102,54 @@ msgstr ""
 msgid "Optative"
 msgstr ""
 
-#: static/js/utils.js:145
-msgid "Aorist"
+#: static/js/utils.js:143
+msgid "Infinitive"
 msgstr ""
 
 #: static/js/utils.js:146
-msgid "Imperfect"
+msgid "Aorist"
 msgstr ""
 
 #: static/js/utils.js:147
-msgid "Future"
+msgid "Imperfect"
 msgstr ""
 
 #: static/js/utils.js:148
-msgid "Present"
+msgid "Future"
 msgstr ""
 
 #: static/js/utils.js:149
+msgid "Present"
+msgstr ""
+
+#: static/js/utils.js:150
 msgid "Future Perfect"
 msgstr ""
 
-#: static/js/utils.js:152
+#: static/js/utils.js:153
 msgid "Active"
 msgstr ""
 
-#: static/js/utils.js:153
+#: static/js/utils.js:154
 msgid "Middle"
 msgstr ""
 
-#: static/js/utils.js:154
+#: static/js/utils.js:155
 msgid "Middle/Passive"
 msgstr ""
 
-#: static/js/utils.js:155
+#: static/js/utils.js:156
 msgid "Passive"
 msgstr ""
 
-#: static/js/views/reader/notes/about-word.js:27
+#: static/js/views/reader/notes/about-word.js:26
 msgid "Morphology"
 msgstr ""
 
-#: static/js/views/reader/notes/notes.js:125
+#: static/js/views/reader/notes/notes.js:124
 msgid "Information about"
 msgstr "Informationen zu"
 
-#: static/js/views/reader/notes/notes.js:132
+#: static/js/views/reader/notes/notes.js:131
 msgid "Show Resources"
 msgstr "Ressourcen anzeigen"
