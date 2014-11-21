@@ -63,10 +63,11 @@ def save_sentence(nodes, sentence_ref, lang, d, document):
             # get the actual word value from the text node of the <text> node of the <w> node.
             word_value = node.childNodes[1].childNodes[0].toxml()                
                 
-            # get the (greek) word from the database or create the word as a node if is from an L2 language
+            # get the (greek) word from the database ...
             if lang == 'grc': 
                 wordTable = gdb.query("""MATCH (w) WHERE w.CTS='""" + document.primary_source_urn + ":" + node.attributes['n'].value + """' RETURN w""")
                 w = gdb.nodes.get(wordTable[0][0]['self'])
+            # .. or create the word as a node if it is from a translation language
             else:
                 sentence_string = sentence_string + word_value + " "
                 w = gdb.nodes.create(CTS=document.cts() + ":" + node.attributes['n'].value, value=word_value, length=len(word_value), lang=document.locale)
