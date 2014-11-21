@@ -386,8 +386,8 @@
         "endpoint": "word",
         "name": "build_tree",
         "aspect": [
-            3,
-            2
+            2,
+            3
         ]
     },
     "model": "app.task",
@@ -1898,7 +1898,7 @@
 {
     "fields": {
         "target_lang": 5,
-        "title": "\u0627\u0644\u0641\u0628\u0627",
+        "title": "Alphabet",
         "content": "## The Greek Alphabet\r\n\r\nThe Greek alphabet comprises **24 letters** (7 vowels and 17 consonants). The\r\nalphabet you will learn is the Ionic alphabet first adopted in Athens at the\r\nend of the 5th century BC.\r\n\r\n### The Greek Alphabet\r\n\r\nUppercase | Lowercase | Name | Pronunciation  \r\n---|---|---|---  \r\n\u0391 | \u03b1 | alpha | a  \r\n\u0392 | \u03b2 | beta | b  \r\n\u0393 | \u03b3 | gamma | g (like \"glue\")  \r\n\u0394 | \u03b4 | delta | d  \r\n\u0395 | \u03b5 | epsilon | e (like \"get\")  \r\nZ | \u03b6 | zdeta | zd  \r\n\u0397 | \u03b7 | eta | e (like \"hair\")  \r\n\u0398 | \u03b8 | theta | th  \r\n\u0399 | \u03b9 | iota | i (like \"east\")  \r\n\u039a | \u03ba | kappa | k  \r\n\u039b | \u03bb | lambda | l  \r\n\u039c | \u03bc | m\u00fc | m  \r\n\u039d | \u03bd | n\u00fc | n  \r\n\u039e | \u03be | ksi | x  \r\n\u039f | \u03bf | omicron | o  \r\n\u03a0 | \u03c0 | pi | p  \r\n\u03a1 | \u03c1 | rho | r  \r\n\u03a3 | \u03c3 or \u03c2* | sigma | s  \r\n\u03a4 | \u03c4 | tau | t  \r\n\u03a5 | \u03c5 | \u00fcpsilon | \u00fc  \r\n\u03a6 | \u03c6 | fi | f  \r\n\u03a7 | \u03c7 | khi | kh  \r\n\u03a8 | \u03c8 | psi | ps  \r\n\u03a9 | \u03c9 | omega | o  \r\n\r\n***\r\n\r\n\u03c3 is used when the letter is in the middle of the word. \u03c2 is used when the letter is at the end of the word.",
         "grammar_ref": 64,
         "related_content": [
@@ -1914,6 +1914,7 @@
             260,
             261,
             262,
+            263,
             264,
             265,
             266,
@@ -1925,10 +1926,9 @@
             275,
             276,
             277,
-            278,
-            263
+            278
         ],
-        "source_lang": 6
+        "source_lang": 4
     },
     "model": "app.content",
     "pk": 272
@@ -4351,8 +4351,8 @@
         "grammar_ref": 28,
         "related_content": [
             288,
-            386,
-            390
+            390,
+            386
         ],
         "source_lang": 6
     },
@@ -27668,5 +27668,23 @@
     },
     "model": "admin.logentry",
     "pk": 1297
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2014-11-21T13:02:54.179Z",
+        "object_repr": "Alphabet",
+        "object_id": "272",
+        "change_message": "title \u0648 source_lang \u062a\u063a\u06cc\u06cc\u0631 \u06cc\u0627\u0641\u062a\u0647.",
+        "user": [
+            "maryam"
+        ],
+        "content_type": [
+            "app",
+            "content"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1298
 }
 ]
