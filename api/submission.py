@@ -117,7 +117,7 @@ class SubmissionResource(Resource):
         object_class = DataObject
         resource_name = 'submission'
         allowed_methods = ['post', 'get', 'patch']
-        authentication = BasicAuthentication() 
+        authentication = SessionAuthentication() 
         authorization = SubmissionAuthorization()
         cache = SimpleCache(timeout=None)
         validation =  ResourceValidation()
