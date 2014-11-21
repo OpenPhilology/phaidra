@@ -257,13 +257,13 @@ class SubmissionResource(Resource):
             table = gdb.query(q)
             for t in table:
                 word = gdb.nodes.get(t[0]['self'])
-                knows_grammar = gdb.query("""MATCH (u:`User`)-[kg:knows_grammar]->(w:`Word`) WHERE HAS (w.CTS) AND w.CTS='""" + t[0]['data']['CTS'] + """' RETURN kg""")
-                if len(knows_grammar) < 1:
-                    userNode.knows_grammar(word)              
+                knows_morph = gdb.query("""MATCH (u:`User`)-[kg:knows_morph]->(w:`Word`) WHERE HAS (w.CTS) AND w.CTS='""" + t[0]['data']['CTS'] + """' RETURN kg""")
+                if len(knows_morph) < 1:
+                    userNode.knows_morph(word)              
                             
             # set links between the lemmas of the encountered words (as vocab knowledge) and the words themselves, if the encountered words were not already known, otherwise increase times_seen
             for cts in data.get("encounteredWords"):    
-                relation = gdb.query("""MATCH (u:`User`)-[kv:knows_vocab]->(w:`Word`)
+                relation = gdb.query("""MATCH (u:`User`)-[kv:has_seen]->(w:`Word`)
                                         WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' and u.username='""" + request.user.username + """' RETURN kv""")
                 try:
                    times = relation[0][0]['data']['times_seen']+1
@@ -275,8 +275,8 @@ class SubmissionResource(Resource):
                     try:
                         word = gdb.nodes.get(table[0][0]['self'])
                         lemma = gdb.nodes.get(table[0][1]['self'])
-                        userNode.knows_vocab(word, times_seen=1)
-                        userNode.knows_vocab(lemma)
+                        userNode.has_seen(word, times_seen=1)
+                        userNode.has_seen(lemma)
                     except IndexError as e:
                         return self.error_response(request, {'error': 'If you do not put at least one word cts, the database query fails :) .' }, response_class=HttpBadRequest)
                     

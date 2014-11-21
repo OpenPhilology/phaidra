@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-20 16:32+0100\n"
+"POT-Creation-Date: 2014-11-21 12:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Ancient Geek - by the Open Philology Project"
 msgstr "آموزش الکترونیکی زبان‌های باستانی – کاری از پروژه “Open Philology”"
 
-#: templates/base.html:51 
+#: templates/base.html:51 templates/index.html:43
 msgid "Ancient Geek"
 msgstr "Ancient Geek"
 
@@ -297,7 +297,7 @@ msgstr "دستور زبان"
 #, fuzzy
 #| msgid "Translations"
 msgid "Translation"
-msgstr "ترجمه‌های موجود"
+msgstr "ترجمه‌"
 
 #: templates/js/lessons/microlesson.html:17
 #, fuzzy
@@ -320,11 +320,11 @@ msgstr "این حرف چه نام دارد؟"
 #: templates/js/lessons/tasks/translate_word.html:5
 msgctxt "Task question: \"What is the [morph] of [word]?\""
 msgid "What is the"
-msgstr "بعد چی؟"
+msgstr "چیست"
 
 #: templates/js/lessons/tasks/translate_word.html:5
 msgid "of"
-msgstr ""
+msgstr " "
 
 #: templates/js/lessons/tasks/translate_word.html:5
 msgid "?"
@@ -392,7 +392,7 @@ msgstr "جمله"
 #, fuzzy
 #| msgid "Add Annotation"
 msgid "User Annotations"
-msgstr "اضافه کردن حاشیه‌نویسی"
+msgstr "حاشیه‌نویسی کاربر"
 
 #: templates/js/reader/notes/notes.html:13
 msgid "Translate this Sentence!"
@@ -402,7 +402,7 @@ msgstr "این جمله را ترجمه کن!"
 #, fuzzy
 #| msgid "Build Parse Trees"
 msgid "Build this Parse Tree!"
-msgstr "برای تجزیه جمله‌ها نمودار درختی بساز"
+msgstr "برای تجزیه این جمله نمودار درختی بساز"
 
 #: templates/js/reader/notes/translations.html:17
 msgid "No Alignment in"
