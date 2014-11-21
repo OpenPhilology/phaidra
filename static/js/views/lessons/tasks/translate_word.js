@@ -86,8 +86,8 @@ define(['jquery',
 				// Check accuracy
 				var accuracy = BaseTaskView.prototype.getAccuracy.apply(this, [answer, userAnswer]);
 
-				// Call our BaseTask's answer checking functionality 
-				var newState = BaseTaskView.prototype.getState.apply(this, [answer, userAnswer]);
+				// Determine new state of the task
+				BaseTaskView.prototype.updateTaskState.apply(this, [this.topic, answer, userAnswer]);
 
 				// Send a submission to the server
 				this.sendSubmission({ 
@@ -101,11 +101,10 @@ define(['jquery',
 				});
 
 				// Update our UI accordingly
-				this.fullRender({ state: newState });
-				this.collectEncounteredWords();
+				this.fullRender({ state: this.topic.getCurrentTask().state });
 
 				// Communicate progress up the view chain
-				BaseTaskView.prototype.updateTaskAccuracy(this, [this.topic, accuracy]);
+				BaseTaskView.prototype.updateTaskAccuracy.apply(this, [this.topic, accuracy]);
 			},
 			collectEncounteredWords: function() {
 				return _.pluck(this.phrase, 'CTS');

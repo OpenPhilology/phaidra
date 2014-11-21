@@ -97,8 +97,6 @@ define(['jquery',
 				return alignedWords.join(' ').trim();
 			},
 			buildPhrase: function(model) {
-				console.log(this.models.length);
-
 				var models = this.where({ sentence_resource_uri: model.get('sentence_resource_uri') });
 
 				// Take an array of word models and construct a dataMap
@@ -282,19 +280,18 @@ define(['jquery',
 				return this.meta('vocabulary');
 			},
 			getNextVocab: function() {
-				if (!this.meta('vocabulary') && this._createVocabulary().length === 0) {
-					return false;
+				if (!this.meta('vocabulary') || this.meta('vocabulary').length === 0) {
+					this._createVocabulary();
 				}
 
 				// Determine the subset of models that match grammar topic
+				// TODO: Figure out why the vocabulary set changes between tasks
 				var subset = this.models.filter(function(model) {
-					return this.meta('vocabulary').indexOf(model.get('lemma') !== 0);
+					return this.meta('vocabulary').indexOf(model.get('lemma') !== -1);
 				}.bind(this));
-				
+
 				// Right now this is random. Should have a better strategy...
 				var index = Math.floor((Math.random() * subset.length) + 1) - 1;
-
-				// ZERO -- for testing
 				var chosen = subset[index];
 
 				return this.where({ CTS: chosen.get('CTS') })[0];

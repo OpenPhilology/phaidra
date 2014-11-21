@@ -29,6 +29,14 @@ define(['jquery',
 				this.get('task_sequence').tasks = _.sortBy(this.get('task_sequence').tasks, function(task) {
 					return task.order;
 				});
+			},
+			getCurrentTask: function() {
+				var i = this.get('currentTaskIndex');
+				var seq = this.get('task_sequence');
+
+				return seq.tasks.filter(function(task) {
+					return task.order === i;
+				})[0];
 			}
 		}
 	);
