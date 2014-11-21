@@ -117,7 +117,7 @@ class SubmissionResource(Resource):
         object_class = DataObject
         resource_name = 'submission'
         allowed_methods = ['post', 'get', 'patch']
-        authentication = SessionAuthentication() 
+        authentication = BasicAuthentication() 
         authorization = SubmissionAuthorization()
         cache = SimpleCache(timeout=None)
         validation =  ResourceValidation()
@@ -271,14 +271,15 @@ class SubmissionResource(Resource):
                    rel = gdb.relationships.get(id)
                    rel.properties = {'times_seen':times}      
                 except IndexError as e:   
-                    table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN w, l""")  
+                    table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN w, l""")
                     try:
                         word = gdb.nodes.get(table[0][0]['self'])
                         lemma = gdb.nodes.get(table[0][1]['self'])
                         userNode.has_seen(word, times_seen=1)
                         userNode.has_seen(lemma)
                     except IndexError as e:
-                        return self.error_response(request, {'error': 'If you do not put at least one word cts, the database query fails :) .' }, response_class=HttpBadRequest)
+                        # no relationship between word and lemma means punctuation
+                        continue
                     
             # create the body
             body = json.loads(request.body) if type(request.body) is str else request.body
@@ -286,3 +287,7 @@ class SubmissionResource(Resource):
             return self.create_response(request, body)
         else:
             return self.error_response(request, {'error': 'User is required.' }, response_class=HttpBadRequest)
+        
+        
+        
+        
