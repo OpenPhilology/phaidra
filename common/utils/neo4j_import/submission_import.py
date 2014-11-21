@@ -48,28 +48,28 @@ for user in fileContent:
                 print sub[sub_attr]
          
     # set links to the words   
-    for voc in fileContent[user]['knows_vocab_words']:
+    for voc in fileContent[user]['has_seen_words']:
         
         table = gdb.query("""MATCH (w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + voc +"""' RETURN w""")           
         word = gdb.nodes.get(table[0][0]['self'])
-        u.knows_vocab(word, times_seen=fileContent[user]['knows_vocab_words'][voc])
-        print str(user) + " knows voc of word " + str(word['CTS']) + " and saw it " + str(fileContent[user]['knows_vocab_words'][voc]) + " time(s)"
+        u.has_seen(word, times_seen=fileContent[user]['has_seen_words'][voc])
+        print str(user) + " saw word " + str(word['CTS']) + " " + str(fileContent[user]['has_seen_words'][voc]) + " time(s)"
     
     # set links to the lemmas   
-    for voc in fileContent[user]['knows_vocab_lemmas']:
+    for voc in fileContent[user]['has_seen_lemmas']:
         
         table = gdb.query("""MATCH (l:`Lemma`) WHERE HAS (l.CITE) and l.CITE='""" + voc +"""' RETURN l""")           
         lemma = gdb.nodes.get(table[0][0]['self'])
-        u.knows_vocab(lemma)
-        print str(user)  + " knows voc of lemma: " + str(lemma['CITE'].encode('utf-8'))
+        u.has_seen(lemma)
+        print str(user)  + " saw lemma: " + str(lemma['CITE'].encode('utf-8'))
         
     # set links to the words where grammar was known  
-    for word in fileContent[user]['knows_grammar']:
+    for word in fileContent[user]['knows_morph']:
         
         table = gdb.query("""MATCH (w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + word +"""' RETURN w""")           
         word = gdb.nodes.get(table[0][0]['self'])
-        u.knows_grammar(word)
-        print str(user)  + " knows grammar of word: " + str(word['CTS'])
+        u.knows_morph(word)
+        print str(user)  + " knows morph of word: " + str(word['CTS'])
             
                       
 # build indexes at the end:
