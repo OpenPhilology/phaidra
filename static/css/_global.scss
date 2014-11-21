@@ -146,6 +146,9 @@ a {
 		color: darken($color-pri-two, 10%);
 	}
 }
+th {
+	text-align: inherit;
+}
 blockquote {
 	line-height: 40px;
 }

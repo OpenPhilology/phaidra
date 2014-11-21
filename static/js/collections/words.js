@@ -268,6 +268,9 @@ define(['jquery',
 				if (this.models.length === 0)
 					return [];
 
+				if (this.meta('vocabulary'))
+					return this.meta('vocabulary');
+
 				var frequencies = _.reduce(this.models, function(map, model) {
 					var lemma = model.get('lemma');
 					(map[lemma] || (map[lemma] = [])).push(model);
