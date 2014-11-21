@@ -94,9 +94,9 @@ define(['jquery',
 			},
 			updateTaskAccuracy: function(self, args) {
 				var topic = args[0], accuracy = args[1];
-				var avg;
+				var avg, attempts = topic.get('attempts');
 
-				if (topic.get('attempts') === 0) {
+				if (attempts === 0) {
 					avg = accuracy;
 				}
 				else {

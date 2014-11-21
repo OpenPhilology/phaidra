@@ -149,12 +149,14 @@ define(['jquery',
 				var max_attempts = model.get('task_sequence').max_attempts;
 				var target_accuracy = model.get('task_sequence').target_accuracy;
 				
+				console.log("attempts", attempts, "accuracy", accuracy, "min attempts", min_attempts, "max attempts", max_attempts, "target accuracy", target_accuracy);
+
 				if (accuracy >= target_accuracy && attempts >= min_attempts)
-					_advanceTask(topic);
-				else if (attempts >= max_attempts || max_attempts = 0)
-					_advanceTask(topic);
+					this._advanceTask(model);
+				else if (attempts >= max_attempts || max_attempts === 0)
+					this._advanceTask(model);
 				else
-					_triggerCompletion(topic);
+					this._triggerCompletion(model);
 			},
 			_lowerBar: function(topic) {
 				// Reset task seq params so that user passes as soon as they reach proficiency
