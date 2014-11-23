@@ -1,14 +1,19 @@
 {% load i18n %}
 
-<h1><%= definition %></h1>
+<h1><strong data-placement="bottom" data-container="body" data-toggle="tooltip" title="<%= definition %>"><%= model.get('lemma') %></strong></h1>
 
-<h2><small>{% trans "What is the" context 'Task question: "What is the [morph] of [word]?"' %} <%= model.getHumanReadableMorph() %> {% trans "of" %} <strong><%= model.get('lemma') %></strong>{% trans "?" %}</small></h2>
+<h2><small>
+
+<%= model.getHumanReadableMorph() %>
+
+</small></h2>
+
 <hr>
 
 <div class="answer-box <% if (options.state) print(options.state) %>" dir="ltr">
 
 	<form>
-		<input type="text" class="answer-input" title="<%= model.getHumanReadableMorph() %>" data-toggle="tooltip">
+		<input type="text" class="answer-input" title="<%= model.getHumanReadableMorph() %>" data-toggle="tooltip" dir="ltr">
 	</form>
 
 	<hr>

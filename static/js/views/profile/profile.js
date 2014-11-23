@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'models/user', 'views/viz-progress-pie', 'text!/templates/js/profile/profile.html'], function($, _, Backbone, UserModel, PieView, Template) { 
+define(['jquery', 'underscore', 'backbone', 'models/user', 'views/viz-progress-pie', 'text!/templates/profile.html'], function($, _, Backbone, UserModel, PieView, Template) { 
 
 		/**
 		 * Try not to cry when you see this code. It is a disaster, will be fixed!
@@ -42,14 +42,10 @@ define(['jquery', 'underscore', 'backbone', 'models/user', 'views/viz-progress-p
 			},
 			fullRender: function(model) {
 				var that = this;
-				that.$el.html(that.template({ 
-					"model": model,
-					"submissions": model.get('submissions')
-				}));
 
 				var data =  {
 					user: model.get('username'),
-					range: "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1"
+					range: "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
 				};
 
 				// TODO: Move this into model

@@ -1,9 +1,9 @@
 {% load i18n %}
 <% _.each(topics, function(topic) { %>
 	<% if (topic.get('titles')[LOCALE] !== undefined) { %>
-		<a href="/<%= LOCALE %>/lessons/<%= topic.get('id') %>" class="module <%= topic.get('category').name.toLowerCase().split(' ').join('-') %>">
+		<a href="/<%= LOCALE %>/lessons/<%= topic.get('id') %>" class="module <%= topic.get('category').name.toLowerCase().split(' ').join('-') %> <% if (topic.getRoundedRanking() === 100) print('full') %>">
 			<p><% print(topic.get('titles')[LOCALE]) %></p>
-			<div class="donut percent-75 <%= topic.get('category').name.toLowerCase().split(' ').join('-') %>"></div>
+			<div class="donut percent-<%= topic.getRoundedRanking() %> <%= topic.get('category').name.toLowerCase().split(' ').join('-') %>"></div>
 		</a>
 	<% } else { %>
 		<% if (user.get('is_superuser')) { %>

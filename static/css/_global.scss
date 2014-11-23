@@ -134,10 +134,6 @@ html, body {
 body {
 	color: #333;
 	font-family: $font-family;
-	//background-image: url('/static/images/footer_graphic.png');
-	background-repeat: repeat-x;
-	background-position: left bottom;
-	background-attachment: fixed;
 }
 a {
 	color: $color-pri-two;
@@ -145,6 +141,9 @@ a {
 	&:hover {
 		color: darken($color-pri-two, 10%);
 	}
+}
+th {
+	text-align: inherit;
 }
 blockquote {
 	line-height: 40px;
@@ -431,31 +430,6 @@ label {
 	z-index: 2;
 	text-align: center;
 	padding: 20px;
-}
-.pie-container {
-	text-align: center;
-
-	#vocab, #morph, #syn {
-		display: inline-block;
-		margin: 10px;
-		max-width: 200px;
-		vertical-align: text-top;
-	}
-
-	p {
-		font-size: 0.9em;
-		line-height: 2em;
-	}
-
-	#vocab h3 {
-		color: $color-pri-one;
-	}
-	#morph h3 {
-		color: $color-pri-two;
-	}
-	#syn h3 {
-		color: $color-pri-three;
-	}
 }
 .report {
 	position: fixed;

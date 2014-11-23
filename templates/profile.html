@@ -3,7 +3,7 @@
 
 	{# Determine which CSS file to load #}
 	{% block css %}
-		{% with 'index' as css_file %}
+		{% with 'profile' as css_file %}
 			{{ block.super }}
 		{% endwith %}
 	{% endblock %}
@@ -18,4 +18,26 @@
 	{% endif %}
 
 	
+	<div class="row user-profile">
+		<div class="col-md-8 col-md-offset-1">
+			<img src="http://www.gravatar.com/avatar/{{ email_hash }}?s=100&d=mm" class="img-circle img-thumbnail"> 
+			<h1>{{ user.first_name }} {{ user.last_name }} <small>@{{ user.username }}</h2>
+			<hr>
+
+		</div>
+		<div class="col-md-3">
+			<div class="pie-container">
+				<div id="vocab">
+					<div class="pie" data-placement="left" data-toggle="tooltip" title="{% trans "Vocabulary: Words you've learned." %}"><img src="/static/images/tree-loader.gif"></div>
+				</div>
+				<div id="morph">
+					<div class="pie" data-placement="left" data-toggle="tooltip" title="{% trans "Morphology: Forms you've learned." %}"><img src="/static/images/tree-loader.gif"></div>
+				</div>
+				<div id="syn">
+					<div class="pie" data-placement="left" data-toggle="tooltip" title="{% trans "Syntax: Grammar concepts you've learned." %}"><img src="/static/images/tree-loader.gif"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	{% endblock %}

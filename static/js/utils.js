@@ -172,21 +172,6 @@ define(['text!/templates/js/display_notification.html'], function(NotificationTe
 		}
 	};
 
-	Utils.lDistance = function(s, t) {
-		if (s.length === 0)
-			return t.length;
-		if (t.length === 0)
-			return s.length;
-
-		var that = this;
-
-		return Math.min(
-			that.lDistance(s.substr(1), t) + 1,
-			that.lDistance(t.substr(1), s) + 1,
-			that.lDistance(s.substr(1), t.substr(1)) + (s[0] !== t[0] ? 1 : 0)
-		);
-	};
-
 	Utils.compareStrings = function(a, b) {
 		var lengthA = a.length;
 		var lengthB = b.length;
