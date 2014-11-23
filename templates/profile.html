@@ -19,22 +19,44 @@
 
 	
 	<div class="row user-profile">
-		<div class="col-md-8 col-md-offset-1">
+		<div class="col-md-9 col-sm-6">
 			<img src="http://www.gravatar.com/avatar/{{ email_hash }}?s=100&d=mm" class="img-circle img-thumbnail"> 
 			<h1>{{ user.first_name }} {{ user.last_name }} <small>@{{ user.username }}</h2>
+			<p class="lead">
+				<strong>Speaks:</strong> {{ user.lang_speaking }} &mdash; <strong>Learning:</strong> {{ user.lang_learning }}
+			</p>
+			<hr style="clear: both">
+			<div class="row">
+				<div class="col-md-9">
+					<h3>{% trans "What You've Read<br><small>from Thucydides' <em>History of the Peloponnesian War</em></small>" %}</h3>
+				</div>
+				<div class="col-md-3">
+					<h4>Your Knowledge</h4>
+					<span class="chapter-word morph" style="width: 12px; height: 12px"></span> &nbsp; Morphology<br> 
+					<span class="chapter-word voc" style="width: 12px; height: 12px;"></span> &nbsp; Vocabulary<br>
+					<span class="chapter-word morph voc" style="width: 12px; height: 12px;"></span> &nbsp; Both	
+				</div>
+			</div>
 			<hr>
-
+			<div class="row">
+				<div id="thuc-knowledge">
+					<!-- As we load our thuc data -->
+					<div style="text-align: center">
+					{% trans "Updating your knowledge of Thucydides..." %}
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3 col-sm-6">
 			<div class="pie-container">
 				<div id="vocab">
-					<div class="pie" data-placement="left" data-toggle="tooltip" title="{% trans "Vocabulary: Words you've learned." %}"><img src="/static/images/tree-loader.gif"></div>
+					<div class="pie" data-placement="{{ left }}" data-toggle="tooltip" title="{% trans "Vocabulary: Words you've learned." %}"><img src="/static/images/tree-loader.gif"></div>
 				</div>
 				<div id="morph">
-					<div class="pie" data-placement="left" data-toggle="tooltip" title="{% trans "Morphology: Forms you've learned." %}"><img src="/static/images/tree-loader.gif"></div>
+					<div class="pie" data-placement="{{ left }}" data-toggle="tooltip" title="{% trans "Morphology: Forms you've learned." %}"><img src="/static/images/tree-loader.gif"></div>
 				</div>
 				<div id="syn">
-					<div class="pie" data-placement="left" data-toggle="tooltip" title="{% trans "Syntax: Grammar concepts you've learned." %}"><img src="/static/images/tree-loader.gif"></div>
+					<div class="pie" data-placement="{{ left }}" data-toggle="tooltip" title="{% trans "Syntax: Grammar concepts you've learned." %}"><img src="/static/images/tree-loader.gif"></div>
 				</div>
 			</div>
 		</div>
