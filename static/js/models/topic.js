@@ -37,6 +37,18 @@ define(['jquery',
 				return seq.tasks.filter(function(task) {
 					return task.order === i;
 				})[0];
+			},
+			getRoundedRanking: function() {
+				if (!this.get('average'))
+					return 0;
+				else if (this.get('average') < 25)
+					return 25;
+				else if (this.get('average') < 50)
+					return 50;
+				else if (this.get('average') < 75)
+					return 75;
+				else
+					return 100;
 			}
 		}
 	);

@@ -47,7 +47,6 @@
 	// Progress pies!
 	.donut {
 		border-radius: 50%;
-		border: 50px solid #DDD;
 		height: 210px;
 		width: 210px;
 		position: absolute;
@@ -110,6 +109,10 @@
 		&:hover {
 			@include tile($color);
 		}
+
+		&.full {
+			@include tile(lighten($color, 10%));
+		}
 	}
 
 	&[class*="adjectives"] {
@@ -137,6 +140,9 @@
 		&:hover {
 			@include tile($color);
 		}
+		&.full {
+			@include tile(lighten($color, 10%));
+		}
 	}
 	&[class*="foundational"] {
 		$color: $color-pri-one;
@@ -162,6 +168,9 @@
 
 		&:hover {
 			@include tile($color);
+		}
+		&.full {
+			@include tile(lighten($color, 10%));
 		}
 	}
 
@@ -190,6 +199,9 @@
 		&:hover {
 			@include tile($color);
 		}
+		&.full {
+			@include tile(lighten($color, 10%));
+		}
 	}
 
 	&[class*="participles"], &[class*="adverbs"] {
@@ -216,6 +228,9 @@
 
 		&:hover {
 			@include tile($color);
+		}
+		&.full {
+			@include tile(lighten($color, 10%));
 		}
 	}
 
