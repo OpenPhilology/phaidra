@@ -1,0 +1,22 @@
+{% load i18n %}
+
+<div class="row">
+<% _.each(struct, function(book) { %>
+	<% _.each(book, function(chapter) { %>
+		<% if (chapter) { %>
+			<div class="col-md-3">
+			<div class="chapter">
+			<% _.each(chapter, function(sentence) { %>
+				<% _.each(sentence, function(word) { %>
+					<% if (word) { %> 
+						<span class="chapter-word <% if (word.morphKnown) print ('morph '); if (word.vocKnown) print ('voc'); %>" data-toggle="tooltip" title="<span lang='grc'><%= word.value %></span><br>{% trans 'Times seen:' %} <%= word.timesSeen %>" data-container="body"></span>
+					<% } %>
+				<% }); %>
+				<br>
+			<% }); %>
+			</div>
+			</div>
+		<% } %>
+	<% }); %>
+<% }); %>
+</div>
