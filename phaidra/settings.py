@@ -209,6 +209,12 @@ LOGGING = {
     }
 }
 
+# Limit the query set of the word list to 500 on sorting.
+# Switch it to False to receive the whole word list, but not neccessarily sorted.
+# See the wiki API docu for further information.
+# https://github.com/OpenPhilology/phaidra/wiki/API-documentation
+ENABLE_WORD_LIST_SORTING = True
+
 # The url on which the Neo4j rest client works
 GRAPH_DATABASE_REST_URL = 'http://localhost:7474/db/data/'
 

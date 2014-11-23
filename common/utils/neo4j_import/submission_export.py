@@ -34,29 +34,29 @@ for user in table:
 
     # get the words a user knows the grammar of
     grammar_list = []   
-    word_table = gdb.query("""MATCH (u:`User`)-[:knows_grammar]->(w:`Word`) WHERE u.username='""" + user + """' RETURN w.CTS""")  
+    word_table = gdb.query("""MATCH (u:`User`)-[:knows_morph]->(w:`Word`) WHERE u.username='""" + user + """' RETURN w.CTS""")  
     for w in word_table:
         grammar_list.append(w[0])
         
-    user_dict['knows_grammar'] = grammar_list
+    user_dict['knows_morph'] = grammar_list
     
     
     #get the words a user knows vocab of 
     vocab_list = {}
-    word_table = gdb.query("""MATCH (u:`User`)-[kv:knows_vocab]->(w:`Word`) WHERE u.username='""" + user + """' RETURN w.CTS, kv""")
+    word_table = gdb.query("""MATCH (u:`User`)-[kv:has_seen]->(w:`Word`) WHERE u.username='""" + user + """' RETURN w.CTS, kv""")
     for w in word_table:
         vocab_list[w[0]] = w[1]['data']['times_seen']
         
-    user_dict['knows_vocab_words'] = vocab_list
+    user_dict['has_seen_words'] = vocab_list
     
     
     # get the lemma a user knows vocab of
     vocab_list = []
-    lemma_table = gdb.query("""MATCH (u:`User`)-[:knows_vocab]->(l:`Lemma`) WHERE u.username='""" + user + """' RETURN l.CITE""")
+    lemma_table = gdb.query("""MATCH (u:`User`)-[:has_seen]->(l:`Lemma`) WHERE u.username='""" + user + """' RETURN l.CITE""")
     for l in lemma_table:
         vocab_list.append(l[0])
         
-    user_dict['knows_vocab_lemmas'] = vocab_list
+    user_dict['has_seen_lemmas'] = vocab_list
 
 
     # dump to the main dict  

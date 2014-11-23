@@ -98,6 +98,8 @@ WHERE d.CTS='urn:cts:greekLit:tlg0815.tlg001.perseus-lat'
 RETURN d, dr, s, sr, w
 
 # DELETE it afterwards. !!! Caution !!! The author of this text gives no guaranty on any global or local database inconsistencies or misbehaviors or unrecoverable data afterwards!
+# It is also highly recommended to NOT delete nodes on a production system, if indexing is switched on, because of ID reuse, which leads to challenging sorting algorithms.
+# See the API docu in the project wiki for further detail on sorting.
 MATCH (d:`Document`)-[dr:`sentences`]->(s:`Sentence`)-[sr:`words`]->(w:`Word`)
 WHERE d.CTS='urn:cts:greekLit:tlg0815.tlg001.perseus-lat'
 DELETE d, dr, s, sr, w

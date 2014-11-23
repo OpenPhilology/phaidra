@@ -13,7 +13,7 @@ from neo4jrestclient.client import GraphDatabase
 
 # imported from the phaidra api
 from validation import ResourceValidation
-from utils import DataObject, sort_words
+from utils import DataObject, sort_sentences, sort_words
 
 
 class SentenceResource(Resource):
@@ -106,7 +106,7 @@ class SentenceResource(Resource):
             new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + urlDoc[len(urlDoc)-1] +'/'
             sentences.append(new_obj)
                 
-        return sentences
+        return sort_sentences(sentences)
     
     def obj_get_list(self, bundle, **kwargs):
         

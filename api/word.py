@@ -1,4 +1,4 @@
-from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH
+from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH, ENABLE_WORD_LIST_SORTING
 
 from tastypie import fields
 from tastypie.bundle import Bundle
@@ -16,7 +16,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phaidra.settings")
 
 # imported from the phaidra api
 from validation import ResourceValidation
-from utils import DataObject
+from utils import DataObject, sort_object_words
 
 
 class WordResource(Resource):
@@ -215,8 +215,12 @@ class WordResource(Resource):
                 new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
                         
                 words.append(new_obj)
-                
-            return words    
+            
+            if ENABLE_WORD_LIST_SORTING:
+                return sort_object_words(words[:500]) 
+            else:
+                return words
+            #return words   
         
         # default querying on big dataset (CTS required)
         elif request.GET.get('document_CTS'):    
@@ -241,8 +245,12 @@ class WordResource(Resource):
                 new_obj.__dict__['_data']['sentence_resource_uri'] = API_PATH + 'sentence/' + urlSent[len(urlSent)-1] +'/'
                                     
                 words.append(new_obj)
-                            
-            return words
+            
+            if ENABLE_WORD_LIST_SORTING:
+                return sort_object_words(words[:500]) 
+            else:
+                return words
+        # no parameter for filtering, return empty
         else:
             return words
         
