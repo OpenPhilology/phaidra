@@ -192,7 +192,7 @@ define(['jquery',
 				var title = gettext('Great Job!');
 				var msg = gettext('You completed this unit!');
 				var options = { 
-					state: 'ok', 
+					state: 'error', 
 					url: '/lessons/', 
 					btnName: gettext('Go back to Lessons')
 				};
