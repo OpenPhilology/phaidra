@@ -1,9 +1,16 @@
-define(['jquery', 'underscore', 'backbone', 'models/user', 'views/viz-progress-pie', 'text!/templates/js/profile/profile.html'], function($, _, Backbone, UserModel, PieView, Template) { 
+define(['jquery', 
+	'underscore', 
+	'backbone', 
+	'models/user', 
+	'views/vis/progress-donuts', 
+	'views/vis/thuc-knowledge',
+	'text!/templates/profile.html'], 
+	function($, _, Backbone, UserModel, PieView, ThucKnowledgeView, Template) { 
 
 		/**
 		 * Try not to cry when you see this code. It is a disaster, will be fixed!
 		 */
-		var View = Backbone.View.extend({
+		return Backbone.View.extend({
 			events: { },
 			template: _.template(Template),
 			initialize: function() {
@@ -42,14 +49,10 @@ define(['jquery', 'underscore', 'backbone', 'models/user', 'views/viz-progress-p
 			},
 			fullRender: function(model) {
 				var that = this;
-				that.$el.html(that.template({ 
-					"model": model,
-					"submissions": model.get('submissions')
-				}));
 
 				var data =  {
 					user: model.get('username'),
-					range: "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1"
+					range: "urn:cts:greekLit:tlg0003.tlg001.perseus-grc"
 				};
 
 				// TODO: Move this into model
@@ -69,9 +72,11 @@ define(['jquery', 'underscore', 'backbone', 'models/user', 'views/viz-progress-p
 						console.log(x, y, z);
 					}
 				});
-
+				
+				new ThucKnowledgeView({
+					el: this.$el.find('#thuc-knowledge')
+				}).render();
 			}
-	});
-
-	return View;
+		}
+	);
 });

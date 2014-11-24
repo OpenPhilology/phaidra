@@ -16,7 +16,9 @@ define(['jquery',
 			template: _.template(Template),
 			initialize: function(options) {
 
-				var that = this;
+				_.bindAll(this, 'render');
+				_.bindAll(this, 'fetchTopicDetails');
+
 				this.options = options;
 				this.user = options.user;
 
@@ -28,9 +30,9 @@ define(['jquery',
 				 */ 
 				if (this.collection.length === 0 || !this.model) { 
 					this.collection.setEndpointLimit(0);
-					this.collection.fetch({ success: function() {
-						that.fetchTopicDetails(); 
-					}});
+
+					var that = this;
+					this.collection.fetch({ success: that.fetchTopicDetails });
 				}
 				else {
 					this.fetchTopicDetails();
@@ -59,22 +61,25 @@ define(['jquery',
 				}
 
 				this.model = match[0];
-				this.model.on('change', this.render, this);
-				this.model.fetch();
+				var that = this;
+				this.model.fetch({
+					success: that.render, 
+					error: function() {
+						console.log("error");
+					}
+				});
 
 				// Now that we have a model with a query we can work with
 				this.initializeWordCollection();
 			},
-			render: function(model) {
-				this.model = model;
-
+			render: function() {
 				// Localize the content
 				content = this.model.get('content').filter(function(text) {
 					return text.source_lang.short_code === LOCALE;
 				});
 
 				if (content.length === 0) {
-					this.displayError('This lesson has not been translated into your selected language');
+					this.displayError(gettext('This lesson has not been translated into your selected language'));
 					return this;
 				}
 
@@ -89,13 +94,13 @@ define(['jquery',
 				return this;
 			},
 			displayError: function(msg) {
-				var title = 'An Error Occured';
-				msg = msg || 'Apologies for the inconvenience.';
+				var title = gettext('An Error Occured');
+				msg = msg || gettext('Apologies for the inconvenience.');
 
 				Utils.displayNotification(title, msg, {
 					state: 'error', 
 					url: '/lessons', 
-					btnName: 'Back to Lessons'
+					btnName: gettext('Back to Lessons')
 				});		
 			},
 			renderTask: function() {

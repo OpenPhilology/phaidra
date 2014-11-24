@@ -1,1 +1,74 @@
 @import "_global";
+
+.pie-container {
+	text-align: center;
+	float: $right;
+	margin-right: 20px;
+
+	#vocab, #morph, #syn {
+		margin: 10px;
+		max-width: 200px;
+		vertical-align: text-top;
+	}
+
+	p {
+		font-size: 0.9em;
+		line-height: 2em;
+	}
+}
+
+.user-profile {
+	padding-top: 20px;
+
+	img {
+		float: $left;
+		margin-#{$right}: 20px;
+	}
+}
+
+.chapter {
+	display: inline-block;
+	box-sizing: border-box;
+	border: 1px solid #DDD;
+	padding: 10px;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+.chapter-word {
+	background-color: #EEE;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+
+	&.morph {
+		background-color: $color-pri-two;
+
+		&:hover {
+			background-color: darken($color-pri-two, 5%);
+		}
+
+		&.voc {
+			background-color: $color-light-green;
+
+			&:hover {
+				background-color: $color-dark-green;
+			}
+		}
+	}
+	&.voc {
+		background-color: $color-sec-four; 
+
+		&:hover {
+			background-color: darken($color-sec-four, 5%);
+		}
+	}
+
+	&:hover {
+		background-color: #DDD;
+		cursor: pointer;
+	}
+}
+
+.tooltip {
+	font-size: 14px;
+}

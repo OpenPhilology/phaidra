@@ -3,9 +3,15 @@
 {% get_current_language_bidi as LANGUAGE_BIDI %}
 {% if LANGUAGE_BIDI %}
 	{% set dir = "rtl" %}
+	{% set left = "right" %}
+	{% set right = "left" %}
 {% else %}
 	{% set dir = "ltr" %}
+	{% set left = "left" %}
+	{% set right = "right" %}
 {% endif %}
+
+{# For localizing RTL on interface components not controlled by CSS #}
 
 <!DOCTYPE html>
 <html dir="{{ dir }}">
@@ -18,7 +24,6 @@
 
 	<!-- CSS -->
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-	<!--<link href="/static/css/phaidra.css" rel="stylesheet">-->
 
 	{% block css %}
 		<link href="/static/css/{{ dir }}/{{ css_file }}.css" rel="stylesheet">
@@ -96,7 +101,6 @@
 					</span>
 				{% endif %}
 			</div>
-			{# Language Selection! #}
 		</div>
 	</header>
 

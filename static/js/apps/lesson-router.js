@@ -18,6 +18,7 @@ define(['jquery',
 
 				// Topics Collection used by both Lesson and Microlesson Views
 				this.topicsCollection = new TopicsCollection();
+				this.topicsCollection.setEndpointLimit(0);
 				this.user = new UserModel();
 
 				// Defer routing until our collections are fetched

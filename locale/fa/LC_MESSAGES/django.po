@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-21 12:21+0100\n"
+"POT-Creation-Date: 2014-11-24 11:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,28 +18,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: templates/base.html:16 templates/index.html:16
+#: templates/base.html:22 templates/index.html:16
 #, fuzzy
 msgid "Ancient Geek - by the Open Philology Project"
 msgstr "آموزش الکترونیکی زبان‌های باستانی – کاری از پروژه “Open Philology”"
 
-#: templates/base.html:51 templates/index.html:43
+#: templates/base.html:56 templates/index.html:43
 msgid "Ancient Geek"
 msgstr "Ancient Geek"
 
-#: templates/base.html:54 templates/index.html:46
+#: templates/base.html:59 templates/index.html:46
 msgid "Learn"
 msgstr "یاد بگیر"
 
-#: templates/base.html:57 templates/index.html:49
+#: templates/base.html:62 templates/index.html:49
 msgid "Read"
 msgstr "بخوان"
 
-#: templates/base.html:60 templates/index.html:52
+#: templates/base.html:65 templates/index.html:52
 msgid "Create"
 msgstr "ایجاد کن"
 
-#: templates/base.html:95 templates/index.html:87
+#: templates/base.html:100 templates/index.html:87
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -317,28 +317,15 @@ msgstr "ویرایش موضوع دستوری"
 msgid "What is this letter called?"
 msgstr "این حرف چه نام دارد؟"
 
-#: templates/js/lessons/tasks/translate_word.html:5
-msgctxt "Task question: \"What is the [morph] of [word]?\""
-msgid "What is the"
-msgstr "چیست"
-
-#: templates/js/lessons/tasks/translate_word.html:5
-msgid "of"
-msgstr " "
-
-#: templates/js/lessons/tasks/translate_word.html:5
-msgid "?"
-msgstr "؟"
-
-#: templates/js/lessons/tasks/translate_word.html:17
+#: templates/js/lessons/tasks/translate_word.html:22
 msgid "Type the answer:"
 msgstr "پاسخ را تایپ کن"
 
-#: templates/js/lessons/tasks/translate_word.html:19
+#: templates/js/lessons/tasks/translate_word.html:24
 msgid "Good job!"
 msgstr "آفرین!"
 
-#: templates/js/lessons/tasks/translate_word.html:29
+#: templates/js/lessons/tasks/translate_word.html:34
 msgid "More definitions for"
 msgstr "تعاریف بیشتر برای"
 
@@ -408,13 +395,13 @@ msgstr "برای تجزیه این جمله نمودار درختی بساز"
 msgid "No Alignment in"
 msgstr "ترجمه تطبیقی موجود نیست"
 
-#: templates/js/reader/page.html:14
-msgid "by"
-msgstr "اثر"
-
 #: templates/js/reader/page.html:15
 msgid "Jump to another section"
 msgstr "برو به قسمت دیگر"
+
+#: templates/js/vis/thuc-knowledge.html:12
+msgid "Times seen:"
+msgstr ""
 
 #: templates/login.html:42
 msgid "Log in"
@@ -427,6 +414,41 @@ msgstr "ادامه"
 #: templates/module.html:36
 msgid "Loading Lesson"
 msgstr "در حال بارگذاری درس"
+
+#: templates/profile.html:31
+msgid ""
+"What You've Read<br><small>from Thucydides' <em>History of the Peloponnesian "
+"War</em></small>"
+msgstr ""
+
+#: templates/profile.html:45
+msgid "Updating your knowledge of Thucydides..."
+msgstr ""
+
+#: templates/profile.html:53
+msgid "Vocabulary: Words you've learned."
+msgstr ""
+
+#: templates/profile.html:56
+msgid "Morphology: Forms you've learned."
+msgstr ""
+
+#: templates/profile.html:59
+msgid "Syntax: Grammar concepts you've learned."
+msgstr ""
+
+#~ msgctxt "Task question: \"What is the [morph] of [word]?\""
+#~ msgid "What is the"
+#~ msgstr "چیست"
+
+#~ msgid "of"
+#~ msgstr " "
+
+#~ msgid "?"
+#~ msgstr "؟"
+
+#~ msgid "by"
+#~ msgstr "اثر"
 
 #~ msgid "Home"
 #~ msgstr "صفحه اصلی"
