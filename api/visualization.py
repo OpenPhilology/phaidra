@@ -79,8 +79,8 @@ class VisualizationResource(Resource):
                         try:
                             params = {}
                             grammar = Grammar.objects.filter(ref=sub[0]['data']['ref'])[0].query.split('&')
-                            for pair in params:
-                                params[pair.split('=')[0]] = pair.split('=')[1] 
+                            for pair in grammar:
+                                params[pair.split('=')[0]] = pair.split('=')[1]
                             ref[sub[0]['data']['ref']] = params
                         except IndexError as k:
                             continue                        
@@ -208,40 +208,44 @@ class VisualizationResource(Resource):
                 for w in words:
                     word = w[0]
                     knownDict[word['data']['CTS']] = False
-                    
                     know_the_word = False
+                    
+                    # scan the submission for vocab information
+                    if word['data']['CTS'] in vocKnowledge or word['data']['lemma'] in lemmas:
+                        # vocab of word known?
+                        know_the_word = True
+                                
                     for ref in refFlat:
-                        # scan the submission for vocab information
-                        if word['data']['CTS'] in vocKnowledge or word['data']['lemma'] in lemmas:
-                            # loop over params to get morph known infos
-                            # extract this maybe (hand over ref, its value and word)
-                            badmatch = False
+                        
+                        # if word morph already known don't apply filter again
+                        if knownDict[word['data']['CTS']]:
+                            continue
+                        
+                        # loop over params to get morph known infos
+                        badmatch = False
                             
-                            for p in refFlat[ref].keys():
+                        for p in refFlat[ref].keys():
                                 
-                                try:
-                                    word['data'][p]
-                                    if refFlat[ref][p] != word['data'][p]:
+                            try:
+                                word['data'][p]
+                                if refFlat[ref][p] != word['data'][p]:
+                                    badmatch = True
+                                    break
+                            # check for fuzzy filtering attributes
+                            except KeyError as k:
+                                if len(p.split('__')) > 1:
+                                    try:
+                                        badmatch = self.check_fuzzy_filters(p.split('__')[1], refFlat[ref][p], word['data'][p.split('__')[0]])
+                                    except KeyError as k:
                                         badmatch = True
                                         break
-                                # check for fuzzy filtering attributes
-                                except KeyError as k:
-                                    if len(p.split('__')) > 1:
-                                        try:
-                                            badmatch = self.check_fuzzy_filters(p.split('__')[1], refFlat[ref][p], word['data'][p.split('__')[0]])
-                                        except KeyError as k:
-                                            badmatch = True
-                                            break
-                                    else:
-                                        badmatch = True
-                                        break
+                                else:
+                                    badmatch = True
+                                    break
                                 
-                            if not badmatch:
-                                knownDict[word['data']['CTS']] = True
-                                
-                            # vocab of word known?
-                            know_the_word = True 
-                                
+                        if not badmatch:
+                            knownDict[word['data']['CTS']] = True
+                                                           
                     # save data
                     try:
                         data['words'].append({'value': word['data']['value'], 'timesSeen' : vocKnowledge[word['data']['CTS']], 'morphKnown': knownDict[word['data']['CTS']], 'synKnown': False, 'vocKnown': know_the_word, 'CTS': word['data']['CTS']})
@@ -284,41 +288,47 @@ class VisualizationResource(Resource):
                     vocabKnown[word.properties['CTS']] = False
                     morphKnown[word.properties['CTS']] = False
                     syntaxKnown[word.properties['CTS']] = False
-                    # scan the submission for vocab information
+                    
+                    if word.properties['CTS'] == "urn:cts:greekLit:tlg0003.tlg001.perseus-grc:1.95.5:4":
+                        True
+                    
+                    # was this word seen?
+                    # also already know the other words connected to known words via a lemma
+                    if word.properties['CTS'] in vocKnowledge or word.properties['lemma'] in lemmas:
+                        # know this vocab
+                        vocabKnown[word.properties['CTS']] = True
+                    
+                    # scan the submission for morph information
                     for ref in refFlat:
-                        # was this word seen?
-                        # also already know the other words connected to known words via a lemma
-                        if word.properties['CTS'] in vocKnowledge or word.properties['lemma'] in lemmas:    
-                            
-                            # if word morph already known don't apply filter again
-                            if morphKnown[word.properties['CTS']]:
-                                # loop over params to get morph known infos
-                                badmatch = False
-                                for p in refFlat[ref].keys():
+                        
+                        # if word morph already known don't apply filter again
+                        if morphKnown[word.properties['CTS']]:
+                            break
+                        
+                        # loop over params to get morph known infos
+                        badmatch = False
+                        for p in refFlat[ref].keys():
+                            try:
+                                word.properties[p]
+                                if refFlat[ref][p] != word.properties[p]:
+                                    badmatch = True
+                                    break
+                            # check for fuzzy filtering attributes
+                            except KeyError as k:
+                                if len(p.split('__')) > 1:
                                     try:
-                                        word.properties[p]
-                                        if refFlat[ref][p] != word.properties[p]:
-                                            badmatch = True
-                                            break
-                                    # check for fuzzy filtering attributes
+                                        badmatch = self.check_fuzzy_filters(p.split('__')[1], refFlat[ref][p], word.properties[p.split('__')[0]])
                                     except KeyError as k:
-                                        if len(p.split('__')) > 1:
-                                            try:
-                                                badmatch = self.check_fuzzy_filters(p.split('__')[1], refFlat[ref][p], word.properties[p.split('__')[0]])
-                                            except KeyError as k:
-                                                badmatch = True
-                                                break                                                                                    
-                                        else:
-                                            badmatch = True
-                                            break
+                                        badmatch = True
+                                        break
+                                else:
+                                    badmatch = True
+                                    break
                                 
-                                if not badmatch:
-                                    morphKnown[word.properties['CTS']] = True # all params are fine                                            
-                            
-                            # know this vocab
-                            vocabKnown[word.properties['CTS']] = True
+                        if not badmatch:
+                            morphKnown[word.properties['CTS']] = True # all params are fine                                            
                 
-                # after reading words calcualte percentages of aspects for the sentence
+                # after reading words calculate percentages of aspects for the sentence
                 sentLeng = len(words)
                 aspects = {'one': 0.0, 'two': 0.0, 'three': 0.0}
                 for cts in all.keys():
