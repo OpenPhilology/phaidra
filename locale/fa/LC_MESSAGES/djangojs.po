@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-21 12:22+0100\n"
+"POT-Creation-Date: 2014-11-24 12:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: static/js/models/word.js:63
+msgid ", "
+msgstr ""
 
 #: static/js/utils.js:88
 msgid "Ancient Greek"
@@ -141,6 +145,51 @@ msgstr "میانه/مجهول"
 #: static/js/utils.js:156
 msgid "Passive"
 msgstr "مجهول"
+
+#: static/js/views/lessons/microlesson.js:82
+msgid "This lesson has not been translated into your selected language"
+msgstr "این درس به زبان انتخابی تو ترجمه نشده است"
+
+#: static/js/views/lessons/microlesson.js:97
+msgid "An Error Occured"
+msgstr "خطایی پیش آمده"
+
+#: static/js/views/lessons/microlesson.js:98
+msgid "Apologies for the inconvenience."
+msgstr "برای مشکل پیش آمده عذرخواهی می‌کنیم"
+
+#: static/js/views/lessons/microlesson.js:103
+msgid "Back to Lessons"
+msgstr "بازگشت به لیست درس‌ها"
+
+#: static/js/views/lessons/tasks.js:64
+msgid "This lesson has no tasks"
+msgstr "این درس هیچ تمرینی ندارد"
+
+#: static/js/views/lessons/tasks.js:65
+msgid "This lesson does not yet have tasks assigned."
+msgstr "برای این درس هنوز هیچ تمرینی تحویل داده نشده است"
+
+#: static/js/views/lessons/tasks.js:69 static/js/views/lessons/tasks.js:110
+#: static/js/views/lessons/tasks.js:197
+msgid "Go back to Lessons"
+msgstr "به لیست درس‌ها برگرد"
+
+#: static/js/views/lessons/tasks.js:105
+msgid "Trouble loading textual data."
+msgstr "مشکل در بارگذاری متن"
+
+#: static/js/views/lessons/tasks.js:106
+msgid "We could not word the vocabulary related to this unit."
+msgstr "هیچ لیست واژگانی مربوط به این درس یافت نشد"
+
+#: static/js/views/lessons/tasks.js:192
+msgid "Great Job!"
+msgstr "آفرین!"
+
+#: static/js/views/lessons/tasks.js:193
+msgid "You completed this unit!"
+msgstr "این درس را تمام کردی!"
 
 #: static/js/views/reader/notes/about-word.js:26
 msgid "Morphology"
