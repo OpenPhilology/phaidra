@@ -263,23 +263,30 @@ class SubmissionResource(Resource):
                             
             # set links between the lemmas of the encountered words (as vocab knowledge) and the words themselves, if the encountered words were not already known, otherwise increase times_seen
             for cts in data.get("encounteredWords"):    
-                relation = gdb.query("""MATCH (u:`User`)-[kv:has_seen]->(w:`Word`)
+                relation_table = gdb.query("""MATCH (u:`User`)-[kv:has_seen]->(w:`Word`)
                                         WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' and u.username='""" + request.user.username + """' RETURN kv""")
                 try:
-                   times = relation[0][0]['data']['times_seen']+1
-                   id = relation[0][0]['self'].split('/')[len(relation[0][0]['self'].split('/'))-1]  
+                   times = relation_table[0][0]['data']['times_seen']+1
+                   id = relation_table[0][0]['self'].split('/')[len(relation_table[0][0]['self'].split('/'))-1]  
                    rel = gdb.relationships.get(id)
                    rel.properties = {'times_seen':times}      
                 except IndexError as e:   
-                    table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN w, l""")
+                    # if not the word is already, thn the lemma?
+                    lemma_relation = gdb.query("""MATCH (u:`User`)-[:has_seen]->(l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN w""")       
                     try:
-                        word = gdb.nodes.get(table[0][0]['self'])
-                        lemma = gdb.nodes.get(table[0][1]['self'])
+                        word = gdb.nodes.get(lemma_relation[0][0]['self'])
                         userNode.has_seen(word, times_seen=1)
-                        userNode.has_seen(lemma)
-                    except IndexError as e:
-                        # no relationship between word and lemma means punctuation
-                        continue
+                    except:
+                        # otherwise set the raltion between user and word/lemma
+                        table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) and w.CTS='""" + cts +"""' RETURN w, l""")
+                        try:
+                            word = gdb.nodes.get(table[0][0]['self'])
+                            lemma = gdb.nodes.get(table[0][1]['self'])
+                            userNode.has_seen(word, times_seen=1)
+                            userNode.has_seen(lemma)
+                        except IndexError as e:
+                            # no relationship between word and lemma means punctuation
+                            continue
                     
             # create the body
             body = json.loads(request.body) if type(request.body) is str else request.body

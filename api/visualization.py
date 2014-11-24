@@ -159,29 +159,36 @@ class VisualizationResource(Resource):
             for wordRef in wordRangeArray:
 
                 table = gdb.query("""MATCH (l:`Lemma`)-[:values]->(w:`Word`) WHERE HAS (w.CTS) AND HAS (w.head) AND w.CTS = '""" +wordRef+ """' RETURN w,l""")
-                word = gdb.nodes.get(table[0][0]['self'])
-                lemma = gdb.nodes.get(table[0][1]['self'])
                 
-                value = word.properties['value']
-                times_seen = 0
-                morph_known = False
-                syn_known = False
-                voc_known = False
-                CTS = wordRef
+                try:
+                    word = gdb.nodes.get(table[0][0]['self'])
+                    lemma = gdb.nodes.get(table[0][1]['self'])
                 
-                # check the ends of a word's relationships
-                for rel in userNode.relationships.outgoing(["has_seen"])[:]:
-                    if word == rel.end:
-                        times_seen = rel.properties['times_seen']
-                        voc_known = True
-                    if lemma == rel.end:
-                        voc_known = True
+                    value = word.properties['value']
+                    times_seen = 0
+                    morph_known = False
+                    syn_known = False
+                    voc_known = False
+                    CTS = wordRef
+                    
+                    # check the ends of a word's relationships
+                    for rel in userNode.relationships.outgoing(["has_seen"])[:]:
+                        if word == rel.end:
+                            times_seen = rel.properties['times_seen']
+                            voc_known = True
+                        if lemma == rel.end:
+                            voc_known = True
+                    
+                    for rel in userNode.relationships.outgoing(["knows_morph"])[:]:        
+                        if word == rel.end:
+                            morph_known = True
+                    
+                    data['words'].append({'value': value, 'timesSeen' : times_seen, 'morphKnown': morph_known, 'synKnown': syn_known, 'vocKnown': voc_known, 'CTS': CTS})
                 
-                for rel in userNode.relationships.outgoing(["knows_morph"])[:]:        
-                    if word == rel.end:
-                        morph_known = True
-                                                                
-                data['words'].append({'value': value, 'timesSeen' : times_seen, 'morphKnown': morph_known, 'synKnown': syn_known, 'vocKnown': voc_known, 'CTS': CTS})
+                except:
+                    table = gdb.query("""MATCH (w:`Word`) WHERE HAS (w.CTS) AND w.CTS = '""" +wordRef+ """' RETURN w""")                    
+                    data['words'].append({'value': table[0][0]['data']['value'], 'timesSeen' : -1, 'morphKnown': False, 'synKnown': False, 'vocKnown': False, 'CTS': wordRef})
+                                                                           
                     
             return self.create_response(request, data)
         
