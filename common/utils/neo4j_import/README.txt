@@ -110,13 +110,13 @@ General New XML Data Import - Petronius
 # The original XML file with Petronius' literature in.
 data/phi0972.phi001.perseus-lat1.xml
 
-# The file manipulated by Giuseppe G. A. Celano to get rid of several xml tags.
+# The Petronius file was modified by Giuseppe G. A. Celano via an xml transformation to get rid of several xml tags.
 data/phi0972.phi001.perseus-lat1_simplified.xml
 
-# The Petronius file from Giuseppe, containing only the 1st part (w/o Fragmenta and Poems), and already tokenized.
-data/phi0972.phi001.perseus-lat1_excerpt.xml
+# The tokenized 1st part (w/o Fragmenta and Poems) of the Petronius file from Giuseppe G. A. Celano.
+data/phi0972.phi001.perseus-lat1_excerpt_tokenized.xml
 
-# The import script for data/phi0972.phi001.perseus-lat1_excerpt_tokenized.xml
+# The import script for data/phi0972.phi001.perseus-lat1_excerpt_tokenized.xml.
 import_petronius.py
 
 
