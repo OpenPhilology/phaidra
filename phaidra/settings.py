@@ -216,7 +216,7 @@ LOGGING = {
 ENABLE_WORD_LIST_SORTING = True
 
 # If this is switched to False, a long document might not be displayed due to the recursion depth limit.
-# If set to True, not sorting happens on documents longer than 500 sentences.
+# If set to True, no sorting happens on documents longer than 500 sentences.
 # See the 'Sorting' section of the wiki API docu for further information.
 # https://github.com/OpenPhilology/phaidra/wiki/API-documentation
 ENABLE_DISPLAYING_LONG_DOCUMENTS = True
