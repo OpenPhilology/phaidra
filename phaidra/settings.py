@@ -211,9 +211,15 @@ LOGGING = {
 
 # Limit the query set of the word list to 500 on sorting.
 # Switch it to False to receive the whole word list, but not neccessarily sorted.
-# See the wiki API docu for further information.
+# See the 'Sorting' section of the wiki API docu for further information.
 # https://github.com/OpenPhilology/phaidra/wiki/API-documentation
 ENABLE_WORD_LIST_SORTING = True
+
+# If this is switched to False, a long document might not be displayed due to the recursion depth limit.
+# If set to True, not sorting happens on documents longer than 500 sentences.
+# See the 'Sorting' section of the wiki API docu for further information.
+# https://github.com/OpenPhilology/phaidra/wiki/API-documentation
+ENABLE_DISPLAYING_LONG_DOCUMENTS = True
 
 # The url on which the Neo4j rest client works
 GRAPH_DATABASE_REST_URL = 'http://localhost:7474/db/data/'

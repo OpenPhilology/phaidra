@@ -105,4 +105,19 @@ WHERE d.CTS='urn:cts:greekLit:tlg0815.tlg001.perseus-lat'
 DELETE d, dr, s, sr, w
 
 
+General New XML Data Import - Petronius
+#########################################
+# The original XML file with Petronius' literature in.
+data/phi0972.phi001.perseus-lat1.xml
+
+# The file manipulated by Giuseppe G. A. Celano to get rid of several xml tags.
+data/phi0972.phi001.perseus-lat1_simplified.xml
+
+# The Petronius file from Giuseppe, containing only the 1st part (w/o Fragmenta and Poems), and already tokenized.
+data/phi0972.phi001.perseus-lat1_excerpt.xml
+
+# The import script for data/phi0972.phi001.perseus-lat1_excerpt_tokenized.xml
+import_petronius.py
+
+
 

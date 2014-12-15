@@ -1,5 +1,4 @@
-from phaidra.settings import CTS_LANG
-from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH
+from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH, CTS_LANG, ENABLE_DISPLAYING_LONG_DOCUMENTS
 
 from tastypie import fields
 from tastypie.bundle import Bundle
@@ -101,7 +100,13 @@ class DocumentResource(Resource):
                 sent['data']['CTS'] = sent_cts
                 sentenceArray.append(sent['data'])
                 
-            new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
+            if ENABLE_DISPLAYING_LONG_DOCUMENTS:
+                if len(sentenceArray) > 500:
+                    new_obj.__dict__['_data']['sentences'] = sentenceArray
+                else:
+                    new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
+            else:
+                new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
             
             documents.append(new_obj)        
                 
@@ -135,7 +140,14 @@ class DocumentResource(Resource):
             sent['data']['resource_uri'] = API_PATH + 'sentence/' + url[len(url)-1] + '/'
             sentenceArray.append(sent['data'])
 
-        new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
+        
+        if ENABLE_DISPLAYING_LONG_DOCUMENTS:
+            if len(sentenceArray) > 500:
+                new_obj.__dict__['_data']['sentences'] = sentenceArray
+            else:
+                new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
+        else:
+            new_obj.__dict__['_data']['sentences'] = sort_sentences(sentenceArray)
             
         
         # get a dictionary of related translations of this document

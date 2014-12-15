@@ -1,5 +1,4 @@
-from phaidra.settings import CTS_LANG
-from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH
+from phaidra.settings import GRAPH_DATABASE_REST_URL, API_PATH, CTS_LANG, ENABLE_DISPLAYING_LONG_DOCUMENTS
 
 from django.core.cache import cache
 
@@ -106,6 +105,15 @@ class SentenceResource(Resource):
             new_obj.__dict__['_data']['document_resource_uri'] = API_PATH + 'document/' + urlDoc[len(urlDoc)-1] +'/'
             sentences.append(new_obj)
                 
+        
+        if ENABLE_DISPLAYING_LONG_DOCUMENTS:
+            if len(sentences) > 500:
+                return sentences
+            else:
+                return sort_sentences(sentences)
+        else:
+            return sort_sentences(sentences)
+        
         return sort_sentences(sentences)
     
     def obj_get_list(self, bundle, **kwargs):
