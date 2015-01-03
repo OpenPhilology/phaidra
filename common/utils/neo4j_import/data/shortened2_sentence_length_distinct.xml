@@ -1,0 +1,1702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank>
+  <sentence document_id="Perseus:text:1999.01.0199" id="70" subdoc="book=1:chapter=100">
+    <word cid="26872490" form="ἐγένετο" head="34" id="1" lemma="γίγνομαι1" postag="v3saim---" relation="PRED_CO"/>
+    <word cid="26872492" form="μετὰ" head="1" id="3" lemma="μετά1" postag="r--------" relation="AuxP"/>
+    <word cid="26872493" form="ταῦτα" head="3" id="4" lemma="οὗτος1" postag="a-p---na-" relation="ADV"/>
+    <word cid="26872501" form="πεζομαχία" head="13" id="12" lemma="πεζομαχία1" postag="n-s---fn-" relation="SBJ_CO"/>
+    <word cid="26872502" form="καὶ" head="1" id="13" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26872503" form="ναυμαχία" head="13" id="14" lemma="ναυμαχία1" postag="n-s---fn-" relation="SBJ_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="70" subdoc="book=1:chapter=100">
+    <word cid="26872512" form="ἐνίκων" head="34" id="23" lemma="νικάω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26872513" form="τῇ" head="26" id="24" lemma="ὁ1" postag="l-s---fd-" relation="ATR"/>
+    <word cid="26872514" form="αὐτῇ" head="26" id="25" lemma="αὐτός1" postag="a-s---fd-" relation="ATR"/>
+    <word cid="26872515" form="ἡμέρᾳ" head="23" id="26" lemma="ἡμέρα1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26872516" form="ἀμφότερα" head="23" id="27" lemma="ἀμφότερος1" postag="a-p---na-" relation="ADV"/>
+    <word cid="26872517" form="Ἀθηναῖοι" head="23" id="28" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="70" subdoc="book=1:chapter=100">
+    <word cid="26872524" form="εἷλον" head="38" id="35" lemma="αἱρέω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="70" subdoc="book=1:chapter=100">
+    <word cid="26872528" form="διέφθειραν" head="38" id="39" lemma="διαφθείρω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="71" subdoc="book=1:chapter=100">
+    <word cid="26872564" form="ναυμαχίᾳ" head="10" id="9" lemma="ναυμαχία1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26872565" form="ἐκράτησαν" head="11" id="10" lemma="κρατέω1" postag="v3paia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="71" subdoc="book=1:chapter=100">
+    <word cid="26872567" form="ἐς" head="15" id="12" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26872568" form="τὴν" head="14" id="13" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26872569" form="γῆν" head="12" id="14" lemma="γῆ1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26872570" form="ἀπέβησαν" head="11" id="15" lemma="ἀποβαίνω1" postag="v3paia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="71" subdoc="book=1:chapter=100">
+    <word cid="26872598" form="τῶν" head="46" id="43" lemma="ὁ1" postag="l-p---fg-" relation="ATR"/>
+    <word cid="26872600" form="Ἐννέα" head="46" id="45" lemma="ἐννέα1" postag="m--------" relation="ATR"/>
+    <word cid="26872601" form="ὁδῶν" head="48" id="46" lemma="ὁδός2" postag="n-p---fg-" relation="OBJ"/>
+    <word cid="26872602" form="αὐτοὶ" head="48" id="47" lemma="αὐτός1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26872603" form="ἐκράτησαν" head="55" id="48" lemma="κρατέω1" postag="v3paia---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="71" subdoc="book=1:chapter=100">
+    <word cid="26872615" form="διεφθάρησαν" head="55" id="60" lemma="διαφθείρω1" postag="v3paip---" relation="PRED_CO"/>
+    <word cid="26872616" form="ἐν" head="60" id="61" lemma="ἐν1" postag="r--------" relation="AuxP"/>
+    <word cid="26872617" form="Δραβησκῷ" head="61" id="62" lemma="Δραβησκός" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26872618" form="τῇ" head="62" id="63" lemma="ὁ1" postag="l-s---fd-" relation="ATR"/>
+    <word cid="26872619" form="Ἠδωνικῇ" head="62" id="64" lemma="Ἠδωνικό" postag="a-s---fd-" relation="ATR"/>
+    <word cid="26872620" form="ὑπὸ" head="60" id="65" lemma="ὑπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26872621" form="τῶν" head="67" id="66" lemma="ὁ1" postag="l-p---mg-" relation="ATR"/>
+    <word cid="26872622" form="Θρᾳκῶν" head="65" id="67" lemma="Θράκιος1" postag="n-p---mg-" relation="OBJ"/>
+    <word cid="26872623" form="ξυμπάντων" head="67" id="68" lemma="σύμπας1" postag="a-p---mg-" relation="ATR"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="72" subdoc="book=1:chapter=100">
+    <word cid="26872534" form="χρόνῳ" head="3" id="1" lemma="χρόνος1" postag="n-s---md-" relation="ADV"/>
+    <word cid="26872536" form="ὕστερον" head="4" id="3" lemma="ὕστερος" postag="a-s---nac" relation="ADV"/>
+    <word cid="26872537" form="ξυνέβη" head="2" id="4" lemma="συμβαίνω1" postag="v3saia---" relation="PRED_CO"/>
+    <word cid="26872540" form="ἀποστῆναι" head="4" id="7" lemma="ἀφίστημι1" postag="v--ana---" relation="SBJ"/>
+    <word cid="26872542" form="διενεχθέντας" head="7" id="9" lemma="διαφέρω1" postag="t-pappma-" relation="ADV"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="73" subdoc="book=1:chapter=101">
+    <word cid="26872641" form="Λακεδαιμονίους" head="8" id="7" lemma="Λακεδαιμόνιος1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26872642" form="ἐπεκαλοῦντο" head="9" id="8" lemma="ἐπικαλέω1" postag="v3piie---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="73" subdoc="book=1:chapter=101">
+    <word cid="26872644" form="ἐπαμύνειν" head="11" id="10" lemma="ἐπαμύνω1" postag="v--pna---" relation="OBJ"/>
+    <word cid="26872645" form="ἐκέλευον" head="9" id="11" lemma="κελεύω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26872646" form="ἐσβαλόντας" head="10" id="12" lemma="εἰσβάλλω1" postag="t-papama-" relation="ADV"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="74" subdoc="book=1:chapter=101">
+    <word cid="26872698" form="ᾗ" head="4" id="1" lemma="ᾗ1" postag="d--------" relation="ADV"/>
+    <word cid="26872700" form="Μεσσήνιοι" head="4" id="3" lemma="Μεσσήνιοι1" postag="n-p---mn-" relation="PNOM"/>
+    <word cid="26872701" form="ἐκλήθησαν" head="0" id="4" lemma="καλέω1" postag="v3paip---" relation="PRED"/>
+    <word cid="26872702" form="οἱ" head="6" id="5" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872703" form="πάντες" head="4" id="6" lemma="πᾶς1" postag="a-p---mn-" relation="SBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="75" subdoc="book=1:chapter=101">
+    <word cid="26872653" form="ὑπέσχοντο" head="8" id="3" lemma="ὑπισχνέομαι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26872655" form="κρύφα" head="3" id="5" lemma="κρύφα1" postag="d--------" relation="AuxP"/>
+    <word cid="26872656" form="τῶν" head="7" id="6" lemma="ὁ1" postag="l-p---mg-" relation="ATR"/>
+    <word cid="26872657" form="Ἀθηναίων" head="5" id="7" lemma="Ἀθηναῖος1" postag="a-p---mg-" relation="ADV"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="75" subdoc="book=1:chapter=101">
+    <word cid="26872659" form="ἔμελλον" head="8" id="9" lemma="μέλλω1" postag="v3piia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="75" subdoc="book=1:chapter=101">
+    <word cid="26872661" form="διεκωλύθησαν" head="12" id="11" lemma="διακωλύω1" postag="v3paip---" relation="PRED_CO"/>
+    <word cid="26872663" form="ὑπὸ" head="11" id="13" lemma="ὑπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26872664" form="τοῦ" head="16" id="14" lemma="ὁ1" postag="l-s---mg-" relation="ATR"/>
+    <word cid="26872665" form="γενομένου" head="16" id="15" lemma="γίγνομαι1" postag="t-sapmmg-" relation="ATR"/>
+    <word cid="26872666" form="σεισμοῦ" head="13" id="16" lemma="σεισμός1" postag="n-s---mg-" relation="OBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="76" subdoc="book=1:chapter=101">
+    <word cid="26872685" form="πλεῖστοι" head="5" id="1" lemma="πλεῖστος1" postag="a-p---mns" relation="SBJ"/>
+    <word cid="26872686" form="δὲ" head="5" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872688" form="Εἱλώτων" head="1" id="4" lemma="Εἵλως1" postag="n-p---mg-" relation="ATR"/>
+    <word cid="26872689" form="ἐγένοντο" head="0" id="5" lemma="γίγνομαι1" postag="v3paim---" relation="PRED"/>
+    <word cid="26872690" form="οἱ" head="12" id="6" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872693" form="Μεσσηνίων" head="12" id="9" lemma="Μεσσήνιοι1" postag="n-p---mg-" relation="ATR"/>
+    <word cid="26872696" form="ἀπόγονοι" head="5" id="12" lemma="ἀπόγονος1" postag="a-p---mn-" relation="PNOM"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="77" subdoc="book=1:chapter=101">
+    <word cid="26872705" form="πρὸς" head="8" id="1" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26872708" form="τοὺς" head="1" id="4" lemma="ὁ1" postag="p-p---ma-" relation="ADV"/>
+    <word cid="26872711" form="πόλεμος" head="8" id="7" lemma="πόλεμος1" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26872712" form="καθειστήκει" head="12" id="8" lemma="καθίστημι1" postag="v3slia---" relation="PRED_CO"/>
+    <word cid="26872713" form="Λακεδαιμονίοις" head="8" id="9" lemma="Λακεδαιμόνιος1" postag="a-p---md-" relation="OBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="77" subdoc="book=1:chapter=101">
+    <word cid="26872715" form="Θάσιοι" head="16" id="11" lemma="Θάσιος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26872717" form="τρίτῳ" head="14" id="13" lemma="τρίτος1" postag="a-s---nd-" relation="ATR"/>
+    <word cid="26872718" form="ἔτει" head="16" id="14" lemma="ἔτος1" postag="n-s---nd-" relation="ADV"/>
+    <word cid="26872720" form="ὡμολόγησαν" head="12" id="16" lemma="ὁμολογέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26872721" form="Ἀθηναίοις" head="16" id="17" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="OBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="78" subdoc="book=1:chapter=102">
+    <word cid="26872749" form="Λακεδαιμόνιοι" head="16" id="1" lemma="Λακεδαιμόνιος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26872750" form="δέ" head="16" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872762" form="ἄλλους" head="17" id="14" lemma="ἄλλος1" postag="a-p---ma-" relation="ATR"/>
+    <word cid="26872764" form="ἐπεκαλέσαντο" head="0" id="16" lemma="ἐπικαλέω1" postag="v3paim---" relation="PRED"/>
+    <word cid="26872765" form="ξυμμάχους" head="18" id="17" lemma="σύμμαχος1" postag="a-p---ma-" relation="OBJ_CO"/>
+    <word cid="26872766" form="καὶ" head="16" id="18" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26872767" form="Ἀθηναίους" head="18" id="19" lemma="Ἀθηναῖος1" postag="a-p---ma-" relation="OBJ_CO"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="79" subdoc="book=1:chapter=102">
+    <word cid="26872797" form="βίᾳ" head="4" id="1" lemma="βία1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26872798" form="γὰρ" head="4" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872800" form="εἷλον" head="0" id="4" lemma="αἱρέω1" postag="v3paia---" relation="PRED"/>
+    <word cid="26872801" form="τὸ" head="6" id="5" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26872802" form="χωρίον" head="4" id="6" lemma="χωρίον1" postag="n-s---na-" relation="OBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="80" subdoc="book=1:chapter=102">
+    <word cid="26872805" form="διαφορὰ" head="12" id="2" lemma="διαφορά1" postag="n-s---fn-" relation="SBJ"/>
+    <word cid="26872806" form="ἐκ" head="12" id="3" lemma="ἐκ1" postag="r--------" relation="AuxP"/>
+    <word cid="26872807" form="ταύτης" head="6" id="4" lemma="οὗτος1" postag="a-s---fg-" relation="ATR"/>
+    <word cid="26872808" form="τῆς" head="6" id="5" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26872809" form="στρατείας" head="3" id="6" lemma="στρατεία1" postag="n-s---fg-" relation="ADV"/>
+    <word cid="26872810" form="πρῶτον" head="12" id="7" lemma="πρότερος1" postag="a-s---nas" relation="ADV"/>
+    <word cid="26872811" form="Λακεδαιμονίοις" head="9" id="8" lemma="Λακεδαιμόνιος1" postag="a-p---md-" relation="ADV_CO"/>
+    <word cid="26872812" form="καὶ" head="12" id="9" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26872813" form="Ἀθηναίοις" head="9" id="10" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="ADV_CO"/>
+    <word cid="26872814" form="φανερὰ" head="12" id="11" lemma="φανερός1" postag="a-s---fn-" relation="PNOM"/>
+    <word cid="26872815" form="ἐγένετο" head="1" id="12" lemma="γίγνομαι1" postag="v3saim---" relation="PRED_CO"/>11</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="81" subdoc="book=1:chapter=102">
+    <word cid="26872780" form="αὐτοὺς" head="4" id="3" lemma="αὐτός1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26872781" form="ἐπεκαλέσαντο" head="12" id="4" lemma="ἐπικαλέω1" postag="v3paim---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="81" subdoc="book=1:chapter=102">
+    <word cid="26872788" form="τοῖς" head="18" id="11" lemma="ὁ1" postag="p-p---md-" relation="OBJ"/>
+    <word cid="26872794" form="ἐνδεᾶ" head="18" id="17" lemma="ἐνδεής1" postag="a-p---nn-" relation="PNOM"/>
+    <word cid="26872795" form="ἐφαίνετο" head="12" id="18" lemma="φαίνω1" postag="v3siie---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="82" subdoc="book=1:chapter=102">
+    <word cid="26872769" form="οἱ" head="3" id="1" lemma="ὁ1" postag="p-p---mn-" relation="SBJ"/>
+    <word cid="26872770" form="δ'" head="3" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872771" form="ἦλθον" head="0" id="3" lemma="ἔρχομαι1" postag="v3paia---" relation="PRED"/>
+    <word cid="26872774" form="πλήθει" head="3" id="6" lemma="πλῆθος1" postag="n-s---nd-" relation="ADV"/>
+    <word cid="26872776" form="ὀλίγῳ" head="6" id="8" lemma="ὀλίγος1" postag="a-s---nd-" relation="ATR"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="83" subdoc="book=1:chapter=102">
+    <word cid="26872817" form="οἱ" head="3" id="1" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872818" form="γὰρ" head="42" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872819" form="Λακεδαιμόνιοι" head="42" id="3" lemma="Λακεδαιμόνιος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26872855" form="μόνους" head="42" id="39" lemma="μόνος1" postag="a-p---ma-" relation="AtvV"/>
+    <word cid="26872857" form="ξυμμάχων" head="39" id="41" lemma="σύμμαχος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26872858" form="ἀπέπεμψαν" head="0" id="42" lemma="ἀποπέμπω1" postag="v3paia---" relation="PRED"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="84" subdoc="book=1:chapter=102">
+    <word cid="26872877" form="ἔγνωσαν" head="17" id="4" lemma="γιγνώσκω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="84" subdoc="book=1:chapter=102">
+    <word cid="26872912" form="πρὸς" head="46" id="39" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26872914" form="Ἀργείοις" head="39" id="41" lemma="Ἀργεῖος1" postag="a-p---md-" relation="ADV"/>
+    <word cid="26872915" form="τοῖς" head="41" id="42" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26872917" form="πολεμίοις" head="41" id="44" lemma="πολέμιος1" postag="a-p---md-" relation="ATR"/>
+    <word cid="26872918" form="ξύμμαχοι" head="46" id="45" lemma="σύμμαχος1" postag="a-p---mn-" relation="PNOM"/>
+    <word cid="26872919" form="ἐγένοντο" head="17" id="46" lemma="γίγνομαι1" postag="v3paim---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="84" subdoc="book=1:chapter=102">
+    <word cid="26872922" form="πρὸς" head="58" id="49" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26872923" form="Θεσσαλοὺς" head="49" id="50" lemma="Θεσσαλός1" postag="n-p---ma-" relation="ADV"/>
+    <word cid="26872924" form="ἅμα" head="58" id="51" lemma="ἅμα1" postag="d--------" relation="ADV"/>
+    <word cid="26872925" form="ἀμφοτέροις" head="58" id="52" lemma="ἀμφότερος1" postag="a-p---md-" relation="ADV"/>
+    <word cid="26872926" form="οἱ" head="55" id="53" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872927" form="αὐτοὶ" head="55" id="54" lemma="αὐτός1" postag="a-p---mn-" relation="ATR"/>
+    <word cid="26872928" form="ὅρκοι" head="56" id="55" lemma="ὅρκος1" postag="n-p---mn-" relation="SBJ_CO"/>
+    <word cid="26872929" form="καὶ" head="58" id="56" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26872930" form="ξυμμαχία" head="56" id="57" lemma="συμμαχία1" postag="n-s---fn-" relation="SBJ_CO"/>
+    <word cid="26872931" form="κατέστη" head="48" id="58" lemma="καθίστημι1" postag="v3saia---" relation="PRED_CO"/>10</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="85" subdoc="book=1:chapter=103">
+    <word cid="26872989" form="ἐξῆλθον" head="9" id="1" lemma="ἐξέρχομαι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26872991" form="αὐτοὶ" head="6" id="3" lemma="αὐτός1" postag="a-p---mn-" relation="SBJ_CO"/>
+    <word cid="26872993" form="παῖδες" head="6" id="5" lemma="παῖς1" postag="n-p---mn-" relation="SBJ_CO"/>
+    <word cid="26872994" form="καὶ" head="1" id="6" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26872995" form="γυναῖκες" head="6" id="7" lemma="γυνή1" postag="n-p---fn-" relation="SBJ_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="85" subdoc="book=1:chapter=103">
+    <word cid="26872998" form="αὐτοὺς" head="21" id="10" lemma="αὐτός1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26872999" form="οἱ" head="12" id="11" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873000" form="Ἀθηναῖοι" head="21" id="12" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873007" form="ἐς" head="21" id="19" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873008" form="Ναύπακτον" head="19" id="20" lemma="Ναύπακτος1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26873009" form="κατῴκισαν" head="9" id="21" lemma="κατοικίζω1" postag="v3paia---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="86" subdoc="book=1:chapter=103">
+    <word cid="26872970" form="ἦν" head="0" id="1" lemma="εἰμί1" postag="v3siia---" relation="PRED"/>
+    <word cid="26872971" form="δέ" head="1" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872972" form="τι" head="5" id="3" lemma="τις1" postag="p-s---nn-" relation="ATR"/>
+    <word cid="26872974" form="χρηστήριον" head="1" id="5" lemma="χρηστήριον1" postag="n-s---nn-" relation="SBJ"/>
+    <word cid="26872975" form="τοῖς" head="7" id="6" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26872976" form="Λακεδαιμονίοις" head="1" id="7" lemma="Λακεδαιμόνιος1" postag="a-p---md-" relation="PNOM"/>
+    <word cid="26872977" form="Πυθικὸν" head="5" id="8" lemma="Πυθικός1" postag="a-s---nn-" relation="ATR"/>
+    <word cid="26872978" form="πρὸ" head="1" id="9" lemma="πρό1" postag="r--------" relation="AuxP"/>
+    <word cid="26872979" form="τοῦ" head="9" id="10" lemma="ὁ1" postag="l-s---ng-" relation="ADV"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="88" subdoc="book=1:chapter=103">
+    <word cid="26873064" form="μὲν" head="11" id="3" lemma="μέν1" postag="g--------" relation="AuxY"/>
+    <word cid="26873067" form="ἀπὸ" head="11" id="6" lemma="ἀπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26873068" form="τοῦδε" head="6" id="7" lemma="ὅδε1" postag="p-s---ng-" relation="ADV"/>
+    <word cid="26873069" form="τὸ" head="10" id="8" lemma="ὁ1" postag="l-s---nn-" relation="ATR"/>
+    <word cid="26873070" form="σφοδρὸν" head="10" id="9" lemma="σφοδρός1" postag="a-s---nn-" relation="ATR"/>
+    <word cid="26873071" form="μῖσος" head="11" id="10" lemma="μῖσος1" postag="n-s---nn-" relation="SBJ"/>
+    <word cid="26873072" form="ἤρξατο" head="1" id="11" lemma="ἄρχω1" postag="v3saim---" relation="PRED_CO"/>
+    <word cid="26873073" form="πρῶτον" head="11" id="12" lemma="πρότερος1" postag="a-s---nas" relation="ADV"/>
+    <word cid="26873076" form="γενέσθαι" head="11" id="15" lemma="γίγνομαι1" postag="v--anm---" relation="OBJ"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="89" subdoc="book=1:chapter=103">
+    <word cid="26873040" form="ἔσχον" head="20" id="2" lemma="ἔχω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873042" form="Μέγαρα" head="5" id="4" lemma="Μέγαρα1" postag="n-p---na-" relation="OBJ_CO"/>
+    <word cid="26873043" form="καὶ" head="2" id="5" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873044" form="Πηγάς" head="5" id="6" lemma="Πηγαί" postag="n-p---fa-" relation="OBJ_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="89" subdoc="book=1:chapter=103">
+    <word cid="26873047" form="τὰ" head="11" id="9" lemma="ὁ1" postag="l-p---na-" relation="ATR"/>
+    <word cid="26873048" form="μακρὰ" head="11" id="10" lemma="μακρός1" postag="a-p---na-" relation="ATR"/>
+    <word cid="26873049" form="τείχη" head="12" id="11" lemma="τεῖχος1" postag="n-p---na-" relation="OBJ"/>
+    <word cid="26873050" form="ᾠκοδόμησαν" head="20" id="12" lemma="οἰκοδομέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873051" form="Μεγαρεῦσι" head="12" id="13" lemma="Μεγαρεύς1" postag="n-p---md-" relation="ADV"/>
+    <word cid="26873052" form="τὰ" head="11" id="14" lemma="ὁ1" postag="l-p---na-" relation="ATR"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="89" subdoc="book=1:chapter=103">
+    <word cid="26873059" form="ἐφρούρουν" head="20" id="21" lemma="φρουρέω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26873060" form="αὐτοί" head="21" id="22" lemma="αὐτός1" postag="a-p---mn-" relation="AtvV"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="90" subdoc="book=1:chapter=103">
+    <word cid="26872933" form="οἱ" head="13" id="1" lemma="ὁ1" postag="p-p---mn-" relation="SBJ"/>
+    <word cid="26872934" form="δ'" head="13" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872937" form="δεκάτῳ" head="6" id="5" lemma="δέκατος1" postag="a-s---nd-" relation="ATR"/>
+    <word cid="26872938" form="ἔτει" head="13" id="6" lemma="ἔτος1" postag="n-s---nd-" relation="ADV"/>
+    <word cid="26872945" form="ξυνέβησαν" head="0" id="13" lemma="συμβαίνω1" postag="v3paia---" relation="PRED"/>
+    <word cid="26872946" form="πρὸς" head="13" id="14" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26872947" form="τοὺς" head="16" id="15" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26872948" form="Λακεδαιμονίους" head="14" id="16" lemma="Λακεδαιμόνιος1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26872951" form="ἐξίασιν" head="13" id="19" lemma="ἔξειμι2" postag="v3ppia---" relation="ADV"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="91" subdoc="book=1:chapter=103">
+    <word cid="26873020" form="προσεχώρησαν" head="0" id="1" lemma="προσχωρέω1" postag="v3paia---" relation="PRED"/>
+    <word cid="26873021" form="δὲ" head="1" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873023" form="Μεγαρῆς" head="1" id="4" lemma="Μεγαρεύς1" postag="n-p---mn-" relation="SBJ"/>
+    <word cid="26873024" form="Ἀθηναίοις" head="1" id="5" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26873025" form="ἐς" head="1" id="6" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873026" form="ξυμμαχίαν" head="6" id="7" lemma="συμμαχία1" postag="n-s---fa-" relation="OBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="92" subdoc="book=1:chapter=104">
+    <word cid="26873098" form="ἀπέστησεν" head="29" id="21" lemma="ἀφίστημι1" postag="v3saia---" relation="PRED_CO"/>
+    <word cid="26873099" form="Αἰγύπτου" head="24" id="22" lemma="Αἴγυπτος1" postag="n-s---mg-" relation="ATR"/>
+    <word cid="26873100" form="τὰ" head="24" id="23" lemma="ὁ1" postag="l-p---na-" relation="ATR"/>
+    <word cid="26873101" form="πλείω" head="21" id="24" lemma="πλείων1" postag="a-p---nac" relation="OBJ"/>
+    <word cid="26873102" form="ἀπὸ" head="21" id="25" lemma="ἀπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26873103" form="βασιλέως" head="27" id="26" lemma="βασιλεύς1" postag="n-s---mg-" relation="ATR"/>
+    <word cid="26873104" form="Ἀρταξέρξου" head="25" id="27" lemma="Ἀρταξέρξης" postag="n-s---mg-" relation="OBJ"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="92" subdoc="book=1:chapter=104">
+    <word cid="26873110" form="Ἀθηναίους" head="34" id="33" lemma="Ἀθηναῖος1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26873111" form="ἐπηγάγετο" head="29" id="34" lemma="ἐπάγω1" postag="v3saim---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="93" subdoc="book=1:chapter=104">
+    <word cid="26873161" form="ἐνῆσαν" head="0" id="1" lemma="ἔνειμι" postag="v3pii----" relation="PRED"/>
+    <word cid="26873162" form="δὲ" head="1" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873163" form="αὐτόθι" head="1" id="3" lemma="αὐτόθι1" postag="d--------" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="94" subdoc="book=1:chapter=104">
+    <word cid="26873129" form="ἦλθον" head="22" id="17" lemma="ἔρχομαι1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="94" subdoc="book=1:chapter=104">
+    <word cid="26873151" form="πρὸς" head="47" id="39" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26873152" form="τὸ" head="42" id="40" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26873153" form="τρίτον" head="42" id="41" lemma="τρίτος1" postag="a-s---na-" relation="ATR"/>
+    <word cid="26873154" form="μέρος" head="39" id="42" lemma="μέρος1" postag="n-s---na-" relation="OBJ"/>
+    <word cid="26873159" form="ἐπολέμουν" head="22" id="47" lemma="πολεμέω1" postag="v3piia---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="95" subdoc="book=1:chapter=105">
+    <word cid="26873175" form="Ἀθηναίοις" head="12" id="1" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="PNOM"/>
+    <word cid="26873178" form="ἀποβᾶσιν" head="1" id="4" lemma="ἀποβαίνω1" postag="t-papamd-" relation="ATR"/>
+    <word cid="26873181" form="πρὸς" head="12" id="7" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26873182" form="Κορινθίους" head="9" id="8" lemma="κορίνθιος1" postag="a-p---ma-" relation="ADV_CO"/>
+    <word cid="26873183" form="καὶ" head="7" id="9" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873184" form="Ἐπιδαυρίους" head="9" id="10" lemma="Ἐπιδαύριος" postag="n-p---ma-" relation="ADV_CO"/>
+    <word cid="26873185" form="μάχη" head="12" id="11" lemma="μάχη1" postag="n-s---fn-" relation="SBJ"/>
+    <word cid="26873186" form="ἐγένετο" head="14" id="12" lemma="γίγνομαι1" postag="v3sai----" relation="PRED_CO"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="95" subdoc="book=1:chapter=105">
+    <word cid="26873189" form="ἐνίκων" head="14" id="15" lemma="νικάω1" postag="v1siia---" relation="PRED_CO"/>
+    <word cid="26873190" form="Κορίνθιοι" head="15" id="16" lemma="κορίνθιος1" postag="a-p---mn-" relation="SBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="96" subdoc="book=1:chapter=105">
+    <word cid="26873248" form="ἔπειτα" head="17" id="1" lemma="ἔπειτα1" postag="d--------" relation="ADV"/>
+    <word cid="26873249" form="Πελοποννήσιοι" head="17" id="2" lemma="Πελοποννήσιος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873253" form="ἐς" head="17" id="6" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873255" form="τὴν" head="9" id="8" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26873256" form="Αἴγιναν" head="6" id="9" lemma="Αἴγινα1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26873257" form="τριακοσίους" head="11" id="10" lemma="τριακόσιοι1" postag="a-p---ma-" relation="ATR"/>
+    <word cid="26873258" form="ὁπλίτας" head="17" id="11" lemma="ὁπλίτης1" postag="n-p---ma-" relation="OBJ"/>
+    <word cid="26873263" form="ἐπικούρους" head="11" id="16" lemma="ἐπίκουρος1" postag="n-p---ma-" relation="ATR"/>
+    <word cid="26873264" form="διεβίβασαν" head="20" id="17" lemma="διαβιβάζω1" postag="v3paia---" relation="PRED_CO"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="96" subdoc="book=1:chapter=105">
+    <word cid="26873266" form="τὰ" head="21" id="19" lemma="ὁ1" postag="l-p---na-" relation="ATR"/>
+    <word cid="26873268" form="ἄκρα" head="24" id="21" lemma="ἄκρον1" postag="n-p---na-" relation="OBJ"/>
+    <word cid="26873270" form="Γερανείας" head="21" id="23" lemma="Γεράνεια" postag="n-s---fg-" relation="ATR"/>
+    <word cid="26873271" form="κατέλαβον" head="25" id="24" lemma="καταλαμβάνω1" postag="v3paia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="96" subdoc="book=1:chapter=105">
+    <word cid="26873273" form="ἐς" head="29" id="26" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873274" form="τὴν" head="28" id="27" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26873275" form="Μεγαρίδα" head="26" id="28" lemma="Μεγαρίς" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26873276" form="κατέβησαν" head="25" id="29" lemma="καταβαίνω1" postag="v3paia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="98" subdoc="book=1:chapter=105">
+    <word cid="26873345" form="διεκρίθησαν" head="11" id="7" lemma="διακρίνω1" postag="v3paip---" relation="PRED_CO"/>
+    <word cid="26873346" form="ἀπ'" head="7" id="8" lemma="ἀπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26873347" form="ἀλλήλων" head="8" id="9" lemma="ἀλλήλων1" postag="a-p---mg-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="98" subdoc="book=1:chapter=105">
+    <word cid="26873350" form="ἐνόμισαν" head="11" id="12" lemma="νομίζω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873351" form="αὐτοὶ" head="12" id="13" lemma="αὐτός1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873352" form="ἑκάτεροι" head="13" id="14" lemma="ἑκάτερος1" postag="a-p---mn-" relation="ATR"/>
+    <word cid="26873355" form="ἔχειν" head="12" id="17" lemma="ἔχω1" postag="v--pna---" relation="OBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="99" subdoc="book=1:chapter=105">
+    <word cid="26873361" form="οἱ" head="4" id="2" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873362" form="μὲν" head="15" id="3" lemma="μέν1" postag="g--------" relation="AuxY"/>
+    <word cid="26873363" form="Ἀθηναῖοι" head="15" id="4" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873373" form="τροπαῖον" head="15" id="14" lemma="τρόπαιον" postag="n-s---na-" relation="OBJ"/>
+    <word cid="26873374" form="ἔστησαν" head="1" id="15" lemma="ἵστημι1" postag="v3paia---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="100" subdoc="book=1:chapter=105">
+    <word cid="26873413" form="διαφθείρουσι" head="14" id="13" lemma="διαφθείρω1" postag="v3ppia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="100" subdoc="book=1:chapter=105">
+    <word cid="26873418" form="ἐκράτησαν" head="14" id="18" lemma="κρατέω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="101" subdoc="book=1:chapter=105">
+    <word cid="26873193" form="ὕστερον" head="4" id="2" lemma="ὕστερον1" postag="n-s---na-" relation="ADV"/>
+    <word cid="26873194" form="Ἀθηναῖοι" head="4" id="3" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873195" form="ἐναυμάχησαν" head="10" id="4" lemma="ναυμαχέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873196" form="ἐπὶ" head="4" id="5" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26873197" form="Κεκρυφαλείᾳ" head="5" id="6" lemma="Κεκρυφάλεια" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26873198" form="Πελοποννησίων" head="8" id="7" lemma="Πελοποννήσιος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873199" form="ναυσί" head="4" id="8" lemma="ναῦς1" postag="n-p---fd-" relation="OBJ"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="101" subdoc="book=1:chapter=105">
+    <word cid="26873202" form="ἐνίκων" head="10" id="11" lemma="νικάω1" postag="v1siia---" relation="PRED_CO"/>
+    <word cid="26873203" form="Ἀθηναῖοι" head="11" id="12" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="102" subdoc="book=1:chapter=105">
+    <word cid="26873309" form="οἱ" head="3" id="1" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873311" form="Ἀθηναῖοι" head="10" id="3" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873312" form="τὸ" head="8" id="4" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26873316" form="στράτευμα" head="10" id="8" lemma="στράτευμα1" postag="n-s---na-" relation="OBJ"/>
+    <word cid="26873317" form="οὐκ" head="10" id="9" lemma="οὐ1" postag="d--------" relation="AuxZ"/>
+    <word cid="26873318" form="ἐκίνησαν" head="13" id="10" lemma="κινέω1" postag="v3paia---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="102" subdoc="book=1:chapter=105">
+    <word cid="26873326" form="οἵ" head="20" id="18" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873328" form="πρεσβύτατοι" head="21" id="20" lemma="πρέσβυς1" postag="a-p---mn-" relation="SBJ_CO"/>
+    <word cid="26873329" form="καὶ" head="24" id="21" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873330" form="οἱ" head="23" id="22" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873331" form="νεώτατοι" head="21" id="23" lemma="νέος1" postag="a-p---mns" relation="SBJ_CO"/>
+    <word cid="26873332" form="ἀφικνοῦνται" head="13" id="24" lemma="ἀφικνέομαι1" postag="v3ppie---" relation="PRED_CO"/>
+    <word cid="26873333" form="ἐς" head="24" id="25" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873334" form="τὰ" head="27" id="26" lemma="ὁ1" postag="l-p---na-" relation="ATR"/>
+    <word cid="26873335" form="Μέγαρα" head="25" id="27" lemma="Μέγαρα1" postag="n-p---na-" relation="OBJ"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="103" subdoc="book=1:chapter=105">
+    <word cid="26873376" form="οἱ" head="3" id="1" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873377" form="δὲ" head="19" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873378" form="Κορίνθιοι" head="19" id="3" lemma="Κορίνθιος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873389" form="ἡμέραις" head="19" id="14" lemma="ἡμέρα1" postag="n-p---fd-" relation="ADV"/>
+    <word cid="26873390" form="ὕστερον" head="14" id="15" lemma="ὕστερος" postag="a-s---nac" relation="ADV"/>
+    <word cid="26873391" form="δώδεκα" head="14" id="16" lemma="δώδεκα1" postag="m--------" relation="ATR"/>
+    <word cid="26873394" form="ἀνθίστασαν" head="0" id="19" lemma="ἀνθίστημι1" postag="v3piia---" relation="PRED"/>
+    <word cid="26873395" form="τροπαῖον" head="19" id="20" lemma="τρόπαιον" postag="n-s---na-" relation="OBJ"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="104" subdoc="book=1:chapter=105">
+    <word cid="26873223" form="οἱ" head="20" id="19" lemma="ὁ1" postag="l--------" relation="ATR"/>
+    <word cid="26873224" form="ξύμμαχοι" head="22" id="20" lemma="σύμμαχος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873225" form="ἑκατέροις" head="22" id="21" lemma="ἑκάτερος1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26873226" form="παρῆσαν" head="18" id="22" lemma="πάρειμι1" postag="v3piia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="104" subdoc="book=1:chapter=105">
+    <word cid="26873229" form="ἐνίκων" head="36" id="25" lemma="νικάω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26873230" form="Ἀθηναῖοι" head="25" id="26" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="104" subdoc="book=1:chapter=105">
+    <word cid="26873236" form="ἐς" head="35" id="32" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873237" form="τὴν" head="34" id="33" lemma="ὁ1" postag="l--------" relation="ATR"/>
+    <word cid="26873238" form="γῆν" head="35" id="34" lemma="γῆ1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26873239" form="ἀπέβησαν" head="36" id="35" lemma="ἀποβαίνω1" postag="v3paia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="104" subdoc="book=1:chapter=105">
+    <word cid="26873241" form="ἐπολιόρκουν" head="36" id="37" lemma="πολιορκέω1" postag="v3piia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="105" subdoc="book=1:chapter=106">
+    <word cid="26873420" form="οἱ" head="4" id="1" lemma="ὁ1" postag="p-p---mn-" relation="SBJ"/>
+    <word cid="26873423" form="ὑπεχώρουν" head="6" id="4" lemma="ὑποχωρέω1" postag="v3piia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="105" subdoc="book=1:chapter=106">
+    <word cid="26873426" form="τι" head="9" id="7" lemma="τις1" postag="p-s---nn-" relation="ATR"/>
+    <word cid="26873427" form="αὐτῶν" head="9" id="8" lemma="αὐτός1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873428" form="μέρος" head="17" id="9" lemma="μέρος1" postag="n-s---nn-" relation="SBJ"/>
+    <word cid="26873430" form="ὀλίγον" head="9" id="11" lemma="ὀλίγος1" postag="a-s---nn-" relation="ATR"/>
+    <word cid="26873436" form="ἐσέπεσεν" head="6" id="17" lemma="εἰσπίπτω1" postag="v3saia---" relation="PRED_CO"/>
+    <word cid="26873437" form="ἔς" head="17" id="18" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873439" form="χωρίον" head="18" id="20" lemma="χωρίον1" postag="n-s---na-" relation="OBJ"/>
+    <word cid="26873440" form="ἰδιώτου" head="20" id="21" lemma="ἰδιώτης1" postag="n-s---mg-" relation="ATR"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="106" subdoc="book=1:chapter=106">
+    <word cid="26873456" form="κατὰ" head="8" id="5" lemma="κατά1" postag="r--------" relation="AuxP"/>
+    <word cid="26873457" form="πρόσωπόν" head="5" id="6" lemma="πρόσωπον1" postag="n-s---na-" relation="ADV"/>
+    <word cid="26873459" form="εἶργον" head="11" id="8" lemma="ἔργω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26873460" form="τοῖς" head="10" id="9" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26873461" form="ὁπλίταις" head="8" id="10" lemma="ὁπλίτης1" postag="n-p---md-" relation="ADV"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="106" subdoc="book=1:chapter=106">
+    <word cid="26873467" form="κατέλευσαν" head="11" id="16" lemma="καταλεύω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="106" subdoc="book=1:chapter=106">
+    <word cid="26873473" form="πάθος" head="26" id="22" lemma="πάθος1" postag="n-s---nn-" relation="PNOM"/>
+    <word cid="26873474" form="μέγα" head="22" id="23" lemma="μέγας1" postag="a-s---nn-" relation="ATR"/>
+    <word cid="26873475" form="τοῦτο" head="26" id="24" lemma="οὗτος1" postag="a-s---nn-" relation="SBJ"/>
+    <word cid="26873476" form="Κορινθίοις" head="26" id="25" lemma="Κορίνθιος1" postag="a-p---md-" relation="ADV"/>
+    <word cid="26873477" form="ἐγένετο" head="21" id="26" lemma="γίγνομαι1" postag="v3saim---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="107" subdoc="book=1:chapter=106">
+    <word cid="26873479" form="τὸ" head="3" id="1" lemma="ὁ1" postag="l-s---nn-" relation="ATR"/>
+    <word cid="26873480" form="δὲ" head="4" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873481" form="πλῆθος" head="4" id="3" lemma="πλῆθος1" postag="n-s---nn-" relation="SBJ"/>
+    <word cid="26873482" form="ἀπεχώρησεν" head="0" id="4" lemma="ἀποχωρέω1" postag="v3saia---" relation="PRED"/>
+    <word cid="26873483" form="αὐτοῖς" head="4" id="5" lemma="αὐτός1" postag="a-p---md-" relation="ADV"/>
+    <word cid="26873485" form="στρατιᾶς" head="3" id="7" lemma="στρατιά1" postag="n-s---fg-" relation="ATR"/>
+    <word cid="26873486" form="ἐπ'" head="4" id="8" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26873487" form="οἴκου" head="8" id="9" lemma="οἶκος1" postag="n-s---mg-" relation="OBJ"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="108" subdoc="book=1:chapter=107">
+    <word cid="26873678" form="ξύμπαντες" head="3" id="1" lemma="σύμπας1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873679" form="δὲ" head="3" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873680" form="ἐγένοντο" head="0" id="3" lemma="γίγνομαι1" postag="v3paim---" relation="PRED"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="109" subdoc="book=1:chapter=107">
+    <word cid="26873594" form="δὲ" head="8" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873598" form="ἀσφαλὲς" head="8" id="6" lemma="ἀσφαλής1" postag="a-s---nn-" relation="PNOM"/>
+    <word cid="26873599" form="αὐτοῖς" head="8" id="7" lemma="αὐτός1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26873600" form="ἐφαίνετο" head="0" id="8" lemma="φαίνω1" postag="v3siie---" relation="PRED"/>
+    <word cid="26873606" form="πορεύεσθαι" head="8" id="14" lemma="πορεύω1" postag="v--pne---" relation="SBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="110" subdoc="book=1:chapter=107">
+    <word cid="26873614" form="ἐφρουρεῖτο" head="6" id="7" lemma="φρουρέω1" postag="v3siie---" relation="PRED_CO"/>
+    <word cid="26873615" form="αἰεὶ" head="7" id="8" lemma="ἀεί1" postag="d--------" relation="ADV"/>
+    <word cid="26873616" form="ὑπὸ" head="7" id="9" lemma="ὑπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26873617" form="Ἀθηναίων" head="9" id="10" lemma="Ἀθηναῖος1" postag="a-p---mg-" relation="OBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="110" subdoc="book=1:chapter=107">
+    <word cid="26873620" form="τότε" head="14" id="13" lemma="τότε1" postag="d--------" relation="ADV"/>
+    <word cid="26873621" form="ᾐσθάνοντο" head="12" id="14" lemma="αἰσθάνομαι1" postag="v3piim---" relation="PRED_CO"/>
+    <word cid="26873622" form="αὐτοὺς" head="14" id="15" lemma="αὐτός1" postag="a-p---ma-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="111" subdoc="book=1:chapter=107">
+    <word cid="26873628" form="ἔδοξε" head="0" id="1" lemma="δοκέω1" postag="v3saia---" relation="PRED"/>
+    <word cid="26873629" form="δ'" head="1" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873630" form="αὐτοῖς" head="1" id="3" lemma="αὐτός1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26873633" form="περιμείνασι" head="7" id="6" lemma="περιμένω1" postag="t-papamd-" relation="ADV"/>
+    <word cid="26873634" form="σκέψασθαι" head="1" id="7" lemma="σκέπτομαι1" postag="v--ane---" relation="SBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="112" subdoc="book=1:chapter=107">
+    <word cid="26873661" form="ἐβοήθησαν" head="0" id="1" lemma="βοηθέω1" postag="v3paia---" relation="PRED"/>
+    <word cid="26873662" form="δὲ" head="1" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873663" form="ἐπ'" head="1" id="3" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26873664" form="αὐτοὺς" head="3" id="4" lemma="αὐτός1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26873665" form="οἱ" head="6" id="5" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873666" form="Ἀθηναῖοι" head="8" id="6" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ_CO"/>
+    <word cid="26873667" form="πανδημεὶ" head="1" id="7" lemma="πανδημεί1" postag="d--------" relation="ADV"/>
+    <word cid="26873668" form="καὶ" head="1" id="8" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873670" form="χίλιοι" head="8" id="10" lemma="χίλιοι1" postag="a-p---mn-" relation="SBJ_CO"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="113" subdoc="book=1:chapter=107">
+    <word cid="26873489" form="ἤρξαντο" head="2" id="1" lemma="ἄρχω1" postag="v3paim---" relation="PRED_CO"/>
+    <word cid="26873491" form="κατὰ" head="1" id="3" lemma="κατά1" postag="r--------" relation="AuxP"/>
+    <word cid="26873492" form="τοὺς" head="5" id="4" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26873493" form="χρόνους" head="3" id="5" lemma="χρόνος1" postag="n-p---ma-" relation="ADV"/>
+    <word cid="26873494" form="τούτους" head="5" id="6" lemma="οὗτος1" postag="a-p---ma-" relation="ATR"/>
+    <word cid="26873499" form="Ἀθηναῖοι" head="1" id="11" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873502" form="οἰκοδομεῖν" head="1" id="14" lemma="οἰκοδομέω1" postag="v--pna---" relation="OBJ"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="114" subdoc="book=1:chapter=107">
+    <word cid="26873701" form="ἦλθον" head="2" id="1" lemma="ἔρχομαι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873704" form="Θεσσαλῶν" head="5" id="4" lemma="Θεσσαλός1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873705" form="ἱππῆς" head="1" id="5" lemma="ἱππεύς1" postag="n-p---mn-" relation="SBJ"/>
+    <word cid="26873706" form="τοῖς" head="7" id="6" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26873707" form="Ἀθηναίοις" head="1" id="7" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26873708" form="κατὰ" head="1" id="8" lemma="κατά1" postag="r--------" relation="AuxP"/>
+    <word cid="26873709" form="τὸ" head="10" id="9" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26873710" form="ξυμμαχικόν" head="8" id="10" lemma="συμμαχικός1" postag="a-s---na-" relation="ADV"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="115" subdoc="book=1:chapter=107">
+    <word cid="26873548" form="ἐβοήθησαν" head="51" id="37" lemma="βοηθέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873549" form="τοῖς" head="39" id="38" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26873550" form="Δωριεῦσιν" head="37" id="39" lemma="Δωριεύς1" postag="n-p---md-" relation="OBJ"/>
+    <word cid="26873551" form="ἑαυτῶν" head="45" id="40" lemma="ἑαυτοῦ1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873556" form="ὁπλίταις" head="46" id="45" lemma="ὁπλίτης1" postag="n-p---md-" relation="ADV_CO"/>
+    <word cid="26873557" form="καὶ" head="37" id="46" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873559" form="ξυμμάχων" head="49" id="48" lemma="σύμμαχος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873560" form="μυρίοις" head="46" id="49" lemma="μυρίος1" postag="a-p---md-" relation="ADV_CO"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="115" subdoc="book=1:chapter=107">
+    <word cid="26873570" form="ἀπεχώρουν" head="51" id="59" lemma="ἀποχωρέω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26873571" form="πάλιν" head="59" id="60" lemma="πάλιν1" postag="d--------" relation="OBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="116" subdoc="book=1:chapter=107">
+    <word cid="26873574" form="κατὰ" head="18" id="2" lemma="κατά1" postag="r--------" relation="AuxP"/>
+    <word cid="26873575" form="θάλασσαν" head="2" id="3" lemma="θάλασσα1" postag="n-s---fa-" relation="ADV"/>
+    <word cid="26873576" form="μὲν" head="18" id="4" lemma="μέν1" postag="g--------" relation="AuxP"/>
+    <word cid="26873587" form="Ἀθηναῖοι" head="18" id="15" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873590" form="ἔμελλον" head="1" id="18" lemma="μέλλω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26873591" form="κωλύσειν" head="18" id="19" lemma="κωλύω1" postag="v--fna---" relation="OBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="117" subdoc="book=1:chapter=107">
+    <word cid="26873686" form="δὲ" head="6" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873690" form="ἐπεστράτευσαν" head="0" id="6" lemma="ἐπιστρατεύω1" postag="v3paia---" relation="PRED"/>
+    <word cid="26873691" form="αὐτοῖς" head="6" id="7" lemma="αὐτός1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26873693" form="καί" head="6" id="9" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873698" form="καταλύσεως" head="15" id="14" lemma="κατάλυσις1" postag="n-s---fg-" relation="ATR"/>
+    <word cid="26873699" form="ὑποψίᾳ" head="9" id="15" lemma="ὑποψία1" postag="n-s---fd-" relation="ADV_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="118" subdoc="book=1:chapter=107">
+    <word cid="26873641" form="δέ" head="8" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26873644" form="ἄνδρες" head="8" id="5" lemma="ἀνήρ1" postag="n-p---mn-" relation="SBJ"/>
+    <word cid="26873646" form="Ἀθηναίων" head="5" id="7" lemma="Ἀθηναῖος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873647" form="ἐπῆγον" head="0" id="8" lemma="ἐπάγω1" postag="v3piia---" relation="PRED"/>
+    <word cid="26873648" form="αὐτοὺς" head="8" id="9" lemma="αὐτός1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26873649" form="κρύφα" head="8" id="10" lemma="κρύφα1" postag="d--------" relation="ADV"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="119" subdoc="book=1:chapter=108">
+    <word cid="26873763" form="ἡμέρᾳ" head="10" id="6" lemma="ἡμέρα1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26873767" form="ἐστράτευσαν" head="48" id="10" lemma="στρατεύω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873768" form="ἐς" head="10" id="11" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873769" form="Βοιωτοὺς" head="11" id="12" lemma="Βοιωτός1" postag="n-p---ma-" relation="OBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="119" subdoc="book=1:chapter=108">
+    <word cid="26873780" form="τῆς" head="25" id="23" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26873782" form="χώρας" head="26" id="25" lemma="χώρα1" postag="n-s---fg-" relation="OBJ"/>
+    <word cid="26873783" form="ἐκράτησαν" head="36" id="26" lemma="κρατέω1" postag="v3paia---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="119" subdoc="book=1:chapter=108">
+    <word cid="26873789" form="Ταναγραίων" head="34" id="32" lemma="Ταναγραῖος1" postag="n-p---mg-" relation="ATR"/>
+    <word cid="26873790" form="τὸ" head="34" id="33" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26873791" form="τεῖχος" head="35" id="34" lemma="τεῖχος1" postag="n-s---na-" relation="OBJ"/>
+    <word cid="26873792" form="περιεῖλον" head="36" id="35" lemma="περιαιρέω1" postag="v3paia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="119" subdoc="book=1:chapter=108">
+    <word cid="26873794" form="Λοκρῶν" head="41" id="37" lemma="Λοκρός1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873797" form="ἑκατὸν" head="41" id="40" lemma="ἑκατόν1" postag="m--------" relation="ATR"/>
+    <word cid="26873798" form="ἄνδρας" head="45" id="41" lemma="ἀνήρ1" postag="n-p---ma-" relation="OBJ"/>
+    <word cid="26873800" form="τοὺς" head="41" id="43" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26873801" form="πλουσιωτάτους" head="41" id="44" lemma="πλούσιος1" postag="a-p---mas" relation="ATR"/>
+    <word cid="26873802" form="ἔλαβον" head="36" id="45" lemma="λαμβάνω1" postag="v3paia---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="119" subdoc="book=1:chapter=108">
+    <word cid="26873804" form="τά" head="49" id="47" lemma="ὁ1" postag="p-p---na-" relation="ATR"/>
+    <word cid="26873806" form="τείχη" head="53" id="49" lemma="τεῖχος1" postag="n-p---na-" relation="OBJ"/>
+    <word cid="26873807" form="ἑαυτῶν" head="49" id="50" lemma="ἑαυτοῦ1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873808" form="τὰ" head="49" id="51" lemma="ὁ1" postag="l-p---na-" relation="ATR"/>
+    <word cid="26873809" form="μακρὰ" head="49" id="52" lemma="μακρός1" postag="a-p---na-" relation="ATR"/>
+    <word cid="26873810" form="ἀπετέλεσαν" head="48" id="53" lemma="ἀποτελέω1" postag="v3paia---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="120" subdoc="book=1:chapter=108">
+    <word cid="26873728" form="ἐνίκων" head="14" id="8" lemma="νικάω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26873729" form="Λακεδαιμόνιοι" head="10" id="9" lemma="Λακεδαιμόνιος1" postag="a-p---mn-" relation="SBJ_CO"/>
+    <word cid="26873730" form="καὶ" head="8" id="10" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873731" form="οἱ" head="12" id="11" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873732" form="ξύμμαχοι" head="10" id="12" lemma="σύμμαχος1" postag="a-p---mn-" relation="SBJ_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="120" subdoc="book=1:chapter=108">
+    <word cid="26873735" form="φόνος" head="16" id="15" lemma="φόνος1" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26873736" form="ἐγένετο" head="14" id="16" lemma="γίγνομαι1" postag="v3saim---" relation="PRED_CO"/>
+    <word cid="26873737" form="ἀμφοτέρων" head="15" id="17" lemma="ἀμφότερος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873738" form="πολύς" head="15" id="18" lemma="πολύς1" postag="a-s---mn-" relation="ATR"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="121" subdoc="book=1:chapter=108">
+    <word cid="26873837" form="Πελοπόννησον" head="3" id="2" lemma="Πελοπόννησος1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26873838" form="περιέπλευσαν" head="21" id="3" lemma="περιπλέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873839" form="Ἀθηναῖοι" head="3" id="4" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="121" subdoc="book=1:chapter=108">
+    <word cid="26873846" form="τὸ" head="12" id="11" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26873847" form="νεώριον" head="15" id="12" lemma="νεώριον1" postag="n-s---na-" relation="OBJ"/>
+    <word cid="26873849" form="Λακεδαιμονίων" head="12" id="14" lemma="Λακεδαιμόνιος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26873850" form="ἐνέπρησαν" head="21" id="15" lemma="ἐμπίμπρημι1" postag="v3paia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="121" subdoc="book=1:chapter=108">
+    <word cid="26873852" form="Χαλκίδα" head="20" id="17" lemma="Χαλκίς1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26873854" form="πόλιν" head="17" id="19" lemma="πόλις1" postag="n-s---fa-" relation="ATR"/>
+    <word cid="26873855" form="εἷλον" head="21" id="20" lemma="αἱρέω1" postag="v3paia---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="121" subdoc="book=1:chapter=108">
+    <word cid="26873857" form="Σικυωνίους" head="28" id="22" lemma="Σικυών1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26873858" form="ἐν" head="28" id="23" lemma="ἐν1" postag="r--------" relation="AuxP"/>
+    <word cid="26873859" form="ἀποβάσει" head="23" id="24" lemma="ἀπόβασις1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26873861" form="γῆς" head="24" id="26" lemma="γῆ1" postag="n-s---fg-" relation="ATR"/>
+    <word cid="26873862" form="μάχῃ" head="28" id="27" lemma="μάχη1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26873863" form="ἐκράτησαν" head="21" id="28" lemma="κρατέω1" postag="v3paia---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="122" subdoc="book=1:chapter=108">
+    <word cid="26873741" form="Λακεδαιμόνιοι" head="11" id="2" lemma="Λακεδαιμόνιος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26873742" form="μὲν" head="11" id="3" lemma="μέν1" postag="g--------" relation="AuxY"/>
+    <word cid="26873749" form="πάλιν" head="11" id="10" lemma="πάλιν1" postag="d--------" relation="ADV"/>
+    <word cid="26873750" form="ἀπῆλθον" head="1" id="11" lemma="ἀπέρχομαι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873751" form="ἐπ'" head="11" id="12" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26873752" form="οἴκου" head="12" id="13" lemma="οἶκος1" postag="n-s---mg-" relation="OBJ"/>
+    <word cid="26873753" form="διὰ" head="11" id="14" lemma="διά1" postag="r--------" relation="AuxP"/>
+    <word cid="26873754" form="Γερανείας" head="16" id="15" lemma="Γερανεία" postag="n-s---fg-" relation="ADV_CO"/>
+    <word cid="26873755" form="καὶ" head="14" id="16" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873756" form="Ἰσθμοῦ" head="16" id="17" lemma="ἰσθμός1" postag="n-s---mg-" relation="ADV_CO"/>10</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="123" subdoc="book=1:chapter=108">
+    <word cid="26873812" form="ὡμολόγησαν" head="2" id="1" lemma="ὁμολογέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26873815" form="οἱ" head="5" id="4" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873816" form="Αἰγινῆται" head="1" id="5" lemma="Αἰγινήτης1" postag="n-p---mn-" relation="SBJ"/>
+    <word cid="26873817" form="μετὰ" head="1" id="6" lemma="μετά1" postag="r--------" relation="AuxP"/>
+    <word cid="26873818" form="ταῦτα" head="6" id="7" lemma="οὗτος1" postag="a-p---na-" relation="ADV"/>
+    <word cid="26873819" form="τοῖς" head="9" id="8" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26873820" form="Ἀθηναίοις" head="1" id="9" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="OBJ"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="124" subdoc="book=1:chapter=109">
+    <word cid="26873957" form="τούς" head="7" id="5" lemma="ὁ1" postag="p-p---ma-" relation="ATR"/>
+    <word cid="26873959" form="Αἰγυπτίους" head="8" id="7" lemma="Αἰγύπτιος1" postag="a-p---ma-" relation="OBJ_CO"/>
+    <word cid="26873960" form="καὶ" head="12" id="8" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873961" form="τοὺς" head="10" id="9" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26873962" form="ξυμμάχους" head="8" id="10" lemma="σύμμαχος1" postag="a-p---ma-" relation="OBJ_CO"/>
+    <word cid="26873963" form="μάχῃ" head="12" id="11" lemma="μάχη1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26873964" form="ἐκράτησε" head="20" id="12" lemma="κρατέω1" postag="v3saia---" relation="PRED_CO"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="124" subdoc="book=1:chapter=109">
+    <word cid="26873966" form="ἐκ" head="17" id="14" lemma="ἐκ1" postag="r--------" relation="AuxP"/>
+    <word cid="26873967" form="τῆς" head="16" id="15" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26873968" form="Μέμφιδος" head="14" id="16" lemma="Μέμφις" postag="n-s---fg-" relation="OBJ"/>
+    <word cid="26873969" form="ἐξήλασε" head="20" id="17" lemma="ἐξελαύνω1" postag="v3saia---" relation="PRED_CO"/>
+    <word cid="26873970" form="τοὺς" head="19" id="18" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26873971" form="Ἕλληνας" head="17" id="19" lemma="Ἕλλην1" postag="n-p---ma-" relation="OBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="124" subdoc="book=1:chapter=109">
+    <word cid="26873974" form="ἐς" head="26" id="22" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873975" form="Προσωπίτιδα" head="22" id="23" lemma="Προσωπῖτις" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26873977" form="νῆσον" head="23" id="25" lemma="νῆσος1" postag="n-s---fa-" relation="ATR"/>
+    <word cid="26873978" form="κατέκλῃσε" head="27" id="26" lemma="κατακλείω1" postag="v3saia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="124" subdoc="book=1:chapter=109">
+    <word cid="26873980" form="ἐπολιόρκει" head="27" id="28" lemma="πολιορκέω1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26873981" form="ἐν" head="28" id="29" lemma="ἐν1" postag="r--------" relation="AuxP"/>
+    <word cid="26873982" form="αὐτῇ" head="29" id="30" lemma="αὐτός1" postag="a-s---fd-" relation="ADV"/>
+    <word cid="26873983" form="ἐνιαυτὸν" head="32" id="31" lemma="ἐνιαυτός1" postag="n-s---ma-" relation="ADV_CO"/>
+    <word cid="26873984" form="καὶ" head="28" id="32" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873985" form="ἓξ" head="34" id="33" lemma="ἕξ1" postag="m--------" relation="ATR"/>
+    <word cid="26873986" form="μῆνας" head="32" id="34" lemma="μείς1" postag="n-p---ma-" relation="ADV_CO"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="125" subdoc="book=1:chapter=109">
+    <word cid="26873865" form="οἱ" head="6" id="1" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873870" form="Ἀθηναῖοι" head="7" id="6" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ_CO"/>
+    <word cid="26873871" form="καὶ" head="10" id="7" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873872" form="οἱ" head="9" id="8" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873873" form="ξύμμαχοι" head="7" id="9" lemma="σύμμαχος1" postag="a-p---mn-" relation="SBJ_CO"/>
+    <word cid="26873874" form="ἐπέμενον" head="12" id="10" lemma="ἐπιμένω1" postag="v3piia---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="125" subdoc="book=1:chapter=109">
+    <word cid="26873877" form="αὐτοῖς" head="17" id="13" lemma="αὐτός1" postag="a-p---md-" relation="ADV"/>
+    <word cid="26873878" form="πολλαὶ" head="15" id="14" lemma="πολύς1" postag="a-p---fn-" relation="ATR"/>
+    <word cid="26873879" form="ἰδέαι" head="17" id="15" lemma="ἰδέα1" postag="n-p---fn-" relation="SBJ"/>
+    <word cid="26873880" form="πολέμων" head="15" id="16" lemma="πόλεμος1" postag="n-p---mg-" relation="ATR"/>
+    <word cid="26873881" form="κατέστησαν" head="12" id="17" lemma="καθίστημι1" postag="v3paia---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="126" subdoc="book=1:chapter=109">
+    <word cid="26873883" form="τὸ" head="4" id="1" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26873886" form="πρῶτον" head="5" id="4" lemma="πρότερος1" postag="a-s---nas" relation="ADV"/>
+    <word cid="26873887" form="ἐκράτουν" head="11" id="5" lemma="κρατέω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26873888" form="τῆς" head="7" id="6" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26873889" form="Αἰγύπτου" head="5" id="7" lemma="Αἴγυπτος1" postag="n-s---mg-" relation="OBJ"/>
+    <word cid="26873890" form="οἱ" head="9" id="8" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26873891" form="Ἀθηναῖοι" head="5" id="9" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="126" subdoc="book=1:chapter=109">
+    <word cid="26873894" form="βασιλεὺς" head="13" id="12" lemma="βασιλεύς1" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26873895" form="πέμπει" head="11" id="13" lemma="πέμπω1" postag="v3spia---" relation="PRED_CO"/>
+    <word cid="26873896" form="ἐς" head="13" id="14" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873897" form="Λακεδαίμονα" head="14" id="15" lemma="Λακεδαίμων1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26873898" form="Μεγάβαζον" head="13" id="16" lemma="Μεγάβαζος" postag="n-s---ma-" relation="OBJ"/>
+    <word cid="26873899" form="ἄνδρα" head="16" id="17" lemma="ἀνήρ1" postag="n-s---ma-" relation="ATR"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="127" subdoc="book=1:chapter=109">
+    <word cid="26873928" form="ὁ" head="14" id="12" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26873930" form="Μεγάβαζος" head="15" id="14" lemma="Μεγάβαζος" postag="n-s---mn-" relation="SBJ_CO"/>
+    <word cid="26873931" form="καὶ" head="24" id="15" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26873932" form="τὰ" head="17" id="16" lemma="ὁ1" postag="l-p---nn-" relation="ATR"/>
+    <word cid="26873933" form="λοιπὰ" head="15" id="17" lemma="λοιπός1" postag="a-p---nn-" relation="SBJ_CO"/>
+    <word cid="26873935" form="χρημάτων" head="17" id="19" lemma="χρῆμα1" postag="n-p---ng-" relation="ATR"/>
+    <word cid="26873936" form="πάλιν" head="24" id="20" lemma="πάλιν1" postag="d--------" relation="ADV"/>
+    <word cid="26873937" form="ἐς" head="24" id="21" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26873938" form="τὴν" head="23" id="22" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26873939" form="Ἀσίαν" head="21" id="23" lemma="Ἀσία1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26873940" form="ἀνεκομίσθη" head="27" id="24" lemma="ἀνακομίζω1" postag="v3saip---" relation="PRED_CO"/>11</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="127" subdoc="book=1:chapter=109">
+    <word cid="26873942" form="Μεγάβυζον" head="30" id="26" lemma="Μεγάβιζος" postag="n-s---ma-" relation="OBJ"/>
+    <word cid="26873944" form="τὸν" head="26" id="28" lemma="ὁ1" postag="l-s---ma-" relation="ATR"/>
+    <word cid="26873945" form="Ζωπύρου" head="26" id="29" lemma="Ζώπυρος" postag="n-s---mg-" relation="ATR"/>
+    <word cid="26873946" form="πέμπει" head="27" id="30" lemma="πέμπω1" postag="v3spia---" relation="PRED_CO"/>
+    <word cid="26873947" form="ἄνδρα" head="26" id="31" lemma="ἀνήρ1" postag="n-s---ma-" relation="ATR"/>
+    <word cid="26873949" form="μετὰ" head="30" id="33" lemma="μετά1" postag="r--------" relation="AuxP"/>
+    <word cid="26873950" form="στρατιᾶς" head="33" id="34" lemma="στρατιά1" postag="n-s---fg-" relation="ADV"/>
+    <word cid="26873951" form="πολλῆς" head="34" id="35" lemma="πολύς1" postag="a-s---fg-" relation="ATR"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="128" subdoc="book=1:chapter=110">
+    <word cid="26874081" form="Ἰνάρως" head="17" id="1" lemma="Ἰνάρως" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26874082" form="δὲ" head="17" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26874085" form="βασιλεύς" head="1" id="5" lemma="βασιλεύς1" postag="n-s---mn-" relation="ATR"/>
+    <word cid="26874097" form="ἀνεσταυρώθη" head="0" id="17" lemma="ἀνασταυρόω1" postag="v3saip---" relation="PRED"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="129" subdoc="book=1:chapter=110">
+    <word cid="26874047" form="Αἴγυπτος" head="6" id="1" lemma="Αἴγυπτος1" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26874048" form="δὲ" head="6" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26874049" form="πάλιν" head="6" id="3" lemma="πάλιν1" postag="d--------" relation="ADV"/>
+    <word cid="26874050" form="ὑπὸ" head="6" id="4" lemma="ὑπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26874051" form="βασιλέα" head="4" id="5" lemma="βασιλεύς1" postag="n-s---ma-" relation="PNOM"/>
+    <word cid="26874052" form="ἐγένετο" head="0" id="6" lemma="γίγνομαι1" postag="v3saim---" relation="PRED"/>
+    <word cid="26874053" form="πλὴν" head="6" id="7" lemma="πλήν1" postag="r--------" relation="AuxP"/>
+    <word cid="26874054" form="Ἀμυρταίου" head="7" id="8" lemma="Ἀμυρταῖος" postag="n-s---mg-" relation="ADV"/>
+    <word cid="26874055" form="τοῦ" head="8" id="9" lemma="ὁ1" postag="l-s---mg-" relation="ATR"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="130" subdoc="book=1:chapter=110">
+    <word cid="26874100" form="δὲ" head="15" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26874107" form="πεντήκοντα" head="10" id="9" lemma="πεντήκοντα1" postag="m--------" relation="ATR"/>
+    <word cid="26874108" form="τριήρεις" head="15" id="10" lemma="τριήρης1" postag="n-p---fn-" relation="SBJ"/>
+    <word cid="26874110" form="πλέουσαι" head="10" id="12" lemma="πλέω1" postag="t-pppafn-" relation="ATR"/>
+    <word cid="26874113" form="ἔσχον" head="0" id="15" lemma="ἔχω1" postag="v3paia---" relation="PRED"/>
+    <word cid="26874114" form="κατὰ" head="15" id="16" lemma="κατά1" postag="r--------" relation="AuxP"/>
+    <word cid="26874115" form="τὸ" head="19" id="17" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26874116" form="Μενδήσιον" head="19" id="18" lemma="Μενδήσιος" postag="a-s---na-" relation="ATR"/>
+    <word cid="26874117" form="κέρας" head="16" id="19" lemma="κέρας1" postag="n-s---na-" relation="OBJ"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="131" subdoc="book=1:chapter=110">
+    <word cid="26874031" form="ὀλίγοι" head="11" id="2" lemma="ὀλίγος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26874038" form="ἐς" head="11" id="9" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26874039" form="Κυρήνην" head="9" id="10" lemma="Κυρήνη1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26874040" form="ἐσώθησαν" head="14" id="11" lemma="σώζω1" postag="v3paip---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="131" subdoc="book=1:chapter=110">
+    <word cid="26874042" form="οἱ" head="15" id="13" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26874044" form="πλεῖστοι" head="16" id="15" lemma="πλεῖστος1" postag="a-p---mns" relation="SBJ"/>
+    <word cid="26874045" form="ἀπώλοντο" head="14" id="16" lemma="ἀπόλλυμι1" postag="v3paim---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="132" subdoc="book=1:chapter=110">
+    <word cid="26874133" form="ἐκ" head="13" id="9" lemma="ἐκ1" postag="r--------" relation="AuxP_ExD0_ADV"/>
+    <word cid="26874135" form="Φοινίκων" head="12" id="11" lemma="Φοῖνιξ1" postag="n-p---mg-" relation="ATR"/>
+    <word cid="26874136" form="ναυτικὸν" head="13" id="12" lemma="ναυτικός1" postag="a-s---nn-" relation="SBJ"/>
+    <word cid="26874137" form="διέφθειραν" head="8" id="13" lemma="διαφθείρω1" postag="v3paia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="132" subdoc="book=1:chapter=110">
+    <word cid="26874143" form="αἱ" head="21" id="19" lemma="ὁ1" postag="l-p---fn-" relation="ATR"/>
+    <word cid="26874145" form="ἐλάσσους" head="22" id="21" lemma="ἐλάσσων1" postag="a-p---fnc" relation="SBJ"/>
+    <word cid="26874146" form="διέφυγον" head="20" id="22" lemma="διαφεύγω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874147" form="πάλιν" head="22" id="23" lemma="πάλιν1" postag="d--------" relation="OBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="133" subdoc="book=1:chapter=110">
+    <word cid="26874019" form="οὕτω" head="7" id="1" lemma="οὕτως1" postag="d--------" relation="ADV"/>
+    <word cid="26874020" form="μὲν" head="7" id="2" lemma="μέν1" postag="g--------" relation="AuxY"/>
+    <word cid="26874021" form="τὰ" head="6" id="3" lemma="ὁ1" postag="l-p---nn-" relation="ATR"/>
+    <word cid="26874023" form="Ἑλλήνων" head="6" id="5" lemma="Ἕλλην1" postag="n-p---mg-" relation="ATR"/>
+    <word cid="26874024" form="πράγματα" head="7" id="6" lemma="πρᾶγμα1" postag="n-p---nn-" relation="SBJ"/>
+    <word cid="26874025" form="ἐφθάρη" head="0" id="7" lemma="φθείρω1" postag="v3saip---" relation="PRED"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="134" subdoc="book=1:chapter=110">
+    <word cid="26874149" form="τὰ" head="14" id="1" lemma="ὁ1" postag="p-p---nn-" relation="SBJ"/>
+    <word cid="26874150" form="μὲν" head="14" id="2" lemma="μέν1" postag="g--------" relation="AuxY"/>
+    <word cid="26874161" form="οὕτως" head="14" id="13" lemma="οὕτως1" postag="d--------" relation="ADV"/>
+    <word cid="26874162" form="ἐτελεύτησεν" head="0" id="14" lemma="τελευτάω1" postag="v3saia---" relation="PRED"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="135" subdoc="book=1:chapter=110">
+    <word cid="26874068" form="οὐκ" head="9" id="8" lemma="οὐ1" postag="d--------" relation="AuxZ"/>
+    <word cid="26874069" form="ἐδύναντο" head="12" id="9" lemma="δύναμαι1" postag="v3piie---" relation="PRED_CO"/>
+    <word cid="26874070" form="ἑλεῖν" head="9" id="10" lemma="αἱρέω1" postag="v--ana---" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="135" subdoc="book=1:chapter=110">
+    <word cid="26874074" form="μαχιμώτατοί" head="15" id="14" lemma="μάχιμος1" postag="a-p---mns" relation="PNOM"/>
+    <word cid="26874075" form="εἰσι" head="12" id="15" lemma="εἰμί1" postag="v3ppia---" relation="PRED_CO"/>
+    <word cid="26874077" form="Αἰγυπτίων" head="14" id="17" lemma="Αἰγύπτιος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26874078" form="οἱ" head="19" id="18" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26874079" form="ἕλειοι" head="15" id="19" lemma="ἕλειος1" postag="a-p---mn-" relation="SBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="136" subdoc="book=1:chapter=111">
+    <word cid="26874165" form="δὲ" head="12" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26874167" form="Ὀρέστης" head="12" id="4" lemma="Ὀρέστης1" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26874168" form="ὁ" head="4" id="5" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26874170" form="υἱὸς" head="4" id="7" lemma="υἱός1" postag="n-s---mn-" relation="ATR"/>
+    <word cid="26874174" form="φεύγων" head="4" id="11" lemma="φεύγω1" postag="t-sppamn-" relation="ATR"/>
+    <word cid="26874175" form="ἔπεισεν" head="0" id="12" lemma="πείθω1" postag="v3saia---" relation="PRED"/>
+    <word cid="26874176" form="Ἀθηναίους" head="12" id="13" lemma="Ἀθηναῖος1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26874178" form="κατάγειν" head="12" id="15" lemma="κατάγω1" postag="v--pna---" relation="OBJ"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="137" subdoc="book=1:chapter=111">
+    <word cid="26874187" form="οἱ" head="9" id="8" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26874188" form="Ἀθηναῖοι" head="10" id="9" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26874189" form="ἐστράτευσαν" head="1" id="10" lemma="στρατεύω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874191" form="Θεσσαλίας" head="14" id="12" lemma="Θεσσαλία1" postag="n-s---fg-" relation="ATR"/>
+    <word cid="26874192" form="ἐπὶ" head="10" id="13" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26874193" form="Φάρσαλον" head="13" id="14" lemma="Φάρσαλος" postag="n-s---ma-" relation="OBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="138" subdoc="book=1:chapter=111">
+    <word cid="26874196" form="τῆς" head="4" id="2" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26874198" form="γῆς" head="5" id="4" lemma="γῆ1" postag="n-s---fg-" relation="OBJ"/>
+    <word cid="26874199" form="ἐκράτουν" head="23" id="5" lemma="κρατέω1" postag="v3piia---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="138" subdoc="book=1:chapter=111">
+    <word cid="26874216" form="τὴν" head="24" id="22" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26874218" form="πόλιν" head="26" id="24" lemma="πόλις1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26874220" form="εἷλον" head="38" id="26" lemma="αἱρέω1" postag="v3paia---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="138" subdoc="book=1:chapter=111">
+    <word cid="26874222" form="οὐ" head="31" id="28" lemma="οὐδέ1" postag="g--------" relation="AuxZ"/>
+    <word cid="26874223" form="ἄλλο" head="33" id="30" lemma="ἄλλος1" postag="a-s---nn-" relation="ATR"/>
+    <word cid="26874224" form="προυχώρει" head="38" id="31" lemma="προχωρέω1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26874225" form="αὐτοῖς" head="31" id="32" lemma="αὐτός1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26874226" form="οὐδὲν" head="31" id="33" lemma="οὐδείς1" postag="a-s---nn-" relation="SBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="138" subdoc="book=1:chapter=111">
+    <word cid="26874232" form="ἀπεχώρησαν" head="38" id="39" lemma="ἀποχωρέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874233" form="πάλιν" head="39" id="40" lemma="πάλιν1" postag="d--------" relation="OBJ"/>
+    <word cid="26874236" form="ἄπρακτοι" head="39" id="43" lemma="ἄπρακτος1" postag="a-p---mn-" relation="AtvV"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="139" subdoc="book=1:chapter=111">
+    <word cid="26874277" form="εὐθὺς" head="12" id="2" lemma="εὐθύς2" postag="d--------" relation="ADV"/>
+    <word cid="26874284" form="Ἀκαρνανίας" head="11" id="9" lemma="Ακαρνανία" postag="n-s---fg-" relation="ATR"/>
+    <word cid="26874285" form="ἐς" head="12" id="10" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26874286" form="Οἰνιάδας" head="10" id="11" lemma="Οἰνιάδαι" postag="n-p---fa-" relation="OBJ"/>
+    <word cid="26874287" form="ἐστράτευσαν" head="13" id="12" lemma="στρατεύω1" postag="v3paia---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="139" subdoc="book=1:chapter=111">
+    <word cid="26874289" form="ἐπολιόρκουν" head="13" id="14" lemma="πολιορκέω1" postag="v3piia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="139" subdoc="book=1:chapter=111">
+    <word cid="26874291" form="οὐ" head="18" id="16" lemma="οὐ1" postag="d--------" relation="AuxZ"/>
+    <word cid="26874293" form="εἷλόν" head="21" id="18" lemma="αἱρέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874294" form="γε" head="18" id="19" lemma="γε1" postag="g--------" relation="AuxZ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="139" subdoc="book=1:chapter=111">
+    <word cid="26874297" form="ἀπεχώρησαν" head="21" id="22" lemma="ἀποχωρέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874298" form="ἐπ'" head="22" id="23" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26874299" form="οἴκου" head="23" id="24" lemma="οἶκος1" postag="n-s---mg-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="140" subdoc="book=1:chapter=111">
+    <word cid="26874260" form="παρέπλευσαν" head="31" id="23" lemma="παραπλέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874261" form="ἐς" head="23" id="24" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26874262" form="Σικυῶνα" head="24" id="25" lemma="Σικυών1" postag="n-s---fa-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="140" subdoc="book=1:chapter=111">
+    <word cid="26874273" form="μάχῃ" head="37" id="36" lemma="μάχη1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26874274" form="ἐκράτησαν" head="31" id="37" lemma="κρατέω1" postag="v3paia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="141" subdoc="book=1:chapter=112">
+    <word cid="26874365" form="ἀπεχώρησαν" head="28" id="7" lemma="ἀποχωρέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874366" form="ἀπὸ" head="7" id="8" lemma="ἀπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26874367" form="Κιτίου" head="8" id="9" lemma="Κίτιον" postag="n-s---ng-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="141" subdoc="book=1:chapter=112">
+    <word cid="26874381" form="ἐναυμάχησαν" head="24" id="23" lemma="ναυμαχέω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="141" subdoc="book=1:chapter=112">
+    <word cid="26874383" form="ἐπεζομάχησαν" head="24" id="25" lemma="πεζομαχέω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="141" subdoc="book=1:chapter=112">
+    <word cid="26874389" form="ἀπεχώρησαν" head="34" id="31" lemma="ἀποχωρέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874390" form="ἐπ'" head="31" id="32" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26874391" form="οἴκου" head="32" id="33" lemma="οἶκος1" postag="n-s---mg-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="142" subdoc="book=1:chapter=112">
+    <word cid="26874405" form="μετὰ" head="9" id="3" lemma="μετά1" postag="r--------" relation="AuxP"/>
+    <word cid="26874406" form="ταῦτα" head="3" id="4" lemma="οὗτος1" postag="a-p---na-" relation="ADV"/>
+    <word cid="26874407" form="τὸν" head="8" id="5" lemma="ὁ1" postag="l-s---ma-" relation="ATR"/>
+    <word cid="26874409" form="καλούμενον" head="8" id="7" lemma="καλέω1" postag="t-sppema-" relation="ATR"/>
+    <word cid="26874410" form="πόλεμον" head="9" id="8" lemma="πόλεμος1" postag="n-s---ma-" relation="OBJ"/>
+    <word cid="26874411" form="ἐστράτευσαν" head="11" id="9" lemma="στρατεύω1" postag="v3paia---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="142" subdoc="book=1:chapter=112">
+    <word cid="26874419" form="παρέδοσαν" head="11" id="17" lemma="παραδίδωμι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874420" form="Δελφοῖς" head="17" id="18" lemma="Δελφοί1" postag="n-p---md-" relation="OBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="143" subdoc="book=1:chapter=112">
+    <word cid="26874424" form="ὕστερον" head="10" id="3" lemma="ὕστερος" postag="a-s---nac" relation="ADV"/>
+    <word cid="26874425" form="Ἀθηναῖοι" head="10" id="4" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26874431" form="παρέδοσαν" head="1" id="10" lemma="παραδίδωμι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874432" form="Φωκεῦσιν" head="10" id="11" lemma="Φωκεύς1" postag="n-p---md-" relation="OBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="144" subdoc="book=1:chapter=112">
+    <word cid="26874314" form="Ἑλληνικοῦ" head="4" id="2" lemma="Ἑλληνικός1" postag="a-s---mg-" relation="ATR"/>
+    <word cid="26874316" form="πολέμου" head="5" id="4" lemma="πόλεμος1" postag="n-s---mg-" relation="OBJ"/>
+    <word cid="26874317" form="ἔσχον" head="10" id="5" lemma="ἔχω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874318" form="οἱ" head="7" id="6" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26874319" form="Ἀθηναῖοι" head="5" id="7" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="144" subdoc="book=1:chapter=112">
+    <word cid="26874321" form="ἐς" head="12" id="9" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26874323" form="Κύπρον" head="9" id="11" lemma="Κύπρος1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26874324" form="ἐστρατεύοντο" head="10" id="12" lemma="στρατεύω1" postag="v3piie---" relation="PRED_CO"/>
+    <word cid="26874325" form="ναυσὶ" head="12" id="13" lemma="ναῦς1" postag="n-p---fd-" relation="ADV"/>
+    <word cid="26874326" form="διακοσίαις" head="13" id="14" lemma="διακόσιοι1" postag="a-p---fd-" relation="ATR"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="145" subdoc="book=1:chapter=112">
+    <word cid="26874336" form="ἑξήκοντα" head="4" id="2" lemma="ἑξήκοντα1" postag="m--------" relation="ATR"/>
+    <word cid="26874338" form="νῆες" head="9" id="4" lemma="ναῦς1" postag="n-p---fn-" relation="SBJ"/>
+    <word cid="26874339" form="ἐς" head="9" id="5" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26874340" form="Αἴγυπτον" head="5" id="6" lemma="Αἴγυπτος1" postag="n-s---ma-" relation="OBJ"/>
+    <word cid="26874343" form="ἔπλευσαν" head="20" id="9" lemma="πλέω1" postag="v3paia---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="145" subdoc="book=1:chapter=112">
+    <word cid="26874353" form="αἱ" head="21" id="19" lemma="ὁ1" postag="l-p---fn-" relation="ATR"/>
+    <word cid="26874355" form="ἄλλαι" head="23" id="21" lemma="ἄλλος1" postag="a-p---fn-" relation="SBJ"/>
+    <word cid="26874356" form="Κίτιον" head="23" id="22" lemma="Κιτιον" postag="n-s---na-" relation="OBJ"/>
+    <word cid="26874357" form="ἐπολιόρκουν" head="20" id="23" lemma="πολιορκέω1" postag="v3piia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="146" subdoc="book=1:chapter=112">
+    <word cid="26874301" form="ὕστερον" head="7" id="1" lemma="ὕστερος" postag="a-s---na-" relation="ADV"/>
+    <word cid="26874306" form="σπονδαὶ" head="7" id="6" lemma="σπονδή1" postag="n-p---fn-" relation="SBJ"/>
+    <word cid="26874307" form="γίγνονται" head="2" id="7" lemma="γίγνομαι1" postag="v3ppie---" relation="PRED_CO"/>
+    <word cid="26874311" form="πεντέτεις" head="6" id="11" lemma="πεντέτης1" postag="a-p---mn-" relation="ATR"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="147" subdoc="book=1:chapter=113">
+    <word cid="26874455" form="ἐστράτευσαν" head="29" id="22" lemma="στρατεύω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874456" form="ἑαυτῶν" head="26" id="23" lemma="ἑαυτοῦ1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26874458" form="χιλίοις" head="26" id="25" lemma="χίλιοι1" postag="a-p---md-" relation="ATR"/>
+    <word cid="26874459" form="ὁπλίταις" head="22" id="26" lemma="ὁπλίτης1" postag="n-p---md-" relation="ADV"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="148" subdoc="book=1:chapter=113">
+    <word cid="26874548" form="καὶ" head="12" id="6" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26874549" form="οἱ" head="8" id="7" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26874550" form="ἄλλοι" head="6" id="8" lemma="ἄλλος1" postag="a-p---mn-" relation="SBJ_CO"/>
+    <word cid="26874551" form="πάντες" head="8" id="9" lemma="πᾶς1" postag="a-p---mn-" relation="ATR"/>
+    <word cid="26874552" form="αὐτόνομοι" head="12" id="10" lemma="αὐτόνομος1" postag="a-p---mn-" relation="PNOM"/>
+    <word cid="26874553" form="πάλιν" head="12" id="11" lemma="πάλιν1" postag="d--------" relation="ADV"/>
+    <word cid="26874554" form="ἐγένοντο" head="1" id="12" lemma="γίγνομαι1" postag="v3paim---" relation="PRED_CO"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="149" subdoc="book=1:chapter=113">
+    <word cid="26874483" form="ἀπεχώρουν" head="1" id="6" lemma="ἀποχωρέω1" postag="v3piia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="150" subdoc="book=1:chapter=113">
+    <word cid="26874529" form="τὴν" head="3" id="2" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26874530" form="Βοιωτίαν" head="4" id="3" lemma="Βοιωτία1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26874531" form="ἐξέλιπον" head="1" id="4" lemma="ἐκλείπω1" postag="v3paia---" relation="PRED"/>
+    <word cid="26874532" form="Ἀθηναῖοι" head="4" id="5" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26874533" form="πᾶσαν" head="3" id="6" lemma="πᾶς1" postag="a-s---fa-" relation="ATR"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="151" subdoc="book=1:chapter=113">
+    <word cid="26874492" form="ἐπιτίθενται" head="14" id="6" lemma="ἐπιτίθημι1" postag="v3ppie---" relation="PRED_CO"/>
+    <word cid="26874493" form="οἵ" head="12" id="7" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26874498" form="φυγάδες" head="6" id="12" lemma="φυγάς1" postag="n-p---mn-" relation="SBJ"/>
+    <word cid="26874499" form="Βοιωτῶν" head="12" id="13" lemma="Βοιωτός1" postag="n-p---mg-" relation="ATR"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="151" subdoc="book=1:chapter=113">
+    <word cid="26874517" form="τοὺς" head="33" id="31" lemma="ὁ1" postag="p-p---ma-" relation="OBJ"/>
+    <word cid="26874519" form="διέφθειραν" head="38" id="33" lemma="διαφθείρω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874521" form="Ἀθηναίων" head="31" id="35" lemma="Ἀθηναῖος1" postag="a-p---mg-" relation="ATR"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="151" subdoc="book=1:chapter=113">
+    <word cid="26874526" form="ἔλαβον" head="38" id="40" lemma="λαμβάνω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="152" subdoc="book=1:chapter=114">
+    <word cid="26874609" form="ἀπέστησαν" head="2" id="8" lemma="ἀφίστημι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874610" form="οἱ" head="10" id="9" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26874611" form="Μεγαρῆς" head="8" id="10" lemma="Μεγαρεύς1" postag="n-p---mn-" relation="SBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="153" subdoc="book=1:chapter=114">
+    <word cid="26874638" form="ἐδῄωσαν" head="21" id="13" lemma="δηιόω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="153" subdoc="book=1:chapter=114">
+    <word cid="26874651" form="ἀπεχώρησαν" head="21" id="26" lemma="ἀποχωρέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874652" form="ἐπ'" head="26" id="27" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26874653" form="οἴκου" head="27" id="28" lemma="οἶκος1" postag="n-s---mg-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="154" subdoc="book=1:chapter=114">
+    <word cid="26874663" form="κατεστρέψαντο" head="12" id="9" lemma="καταστρέφω1" postag="v3paim---" relation="PRED_CO"/>
+    <word cid="26874664" form="πᾶσαν" head="9" id="10" lemma="πᾶς1" postag="a-s---fa-" relation="OBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="154" subdoc="book=1:chapter=114">
+    <word cid="26874667" form="τὴν" head="15" id="13" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26874669" form="ἄλλην" head="17" id="15" lemma="ἄλλος1" postag="a-s---fa-" relation="OBJ"/>
+    <word cid="26874670" form="ὁμολογίᾳ" head="17" id="16" lemma="ὁμολογία1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26874671" form="κατεστήσαντο" head="20" id="17" lemma="καθίστημι1" postag="v3paim---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="154" subdoc="book=1:chapter=114">
+    <word cid="26874676" form="αὐτοὶ" head="25" id="22" lemma="αὐτός1" postag="a-p---mn-" relation="AtvV"/>
+    <word cid="26874677" form="τὴν" head="24" id="23" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26874678" form="γῆν" head="25" id="24" lemma="γῆ1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26874679" form="ἔσχον" head="20" id="25" lemma="ἔχω1" postag="v3paia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="155" subdoc="book=1:chapter=114">
+    <word cid="26874560" form="πολλῷ" head="6" id="5" lemma="πολύς1" postag="a-s---nd-" relation="ADV"/>
+    <word cid="26874561" form="ὕστερον" head="8" id="6" lemma="ὕστερος" postag="a-s---nac" relation="ADV"/>
+    <word cid="26874562" form="Εὔβοια" head="8" id="7" lemma="Εὔβοια1" postag="n-s---fn-" relation="SBJ"/>
+    <word cid="26874563" form="ἀπέστη" head="12" id="8" lemma="ἀφίστημι1" postag="v3saia---" relation="PRED_CO"/>
+    <word cid="26874564" form="ἀπὸ" head="8" id="9" lemma="ἀπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26874565" form="Ἀθηναίων" head="9" id="10" lemma="Ἀθηναῖος1" postag="a-p---mg-" relation="OBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="155" subdoc="book=1:chapter=114">
+    <word cid="26874575" form="ἠγγέλθη" head="12" id="20" lemma="ἀγγέλλω1" postag="v3saip---" relation="PRED_CO"/>
+    <word cid="26874576" form="αὐτῷ" head="20" id="21" lemma="αὐτός1" postag="a-s---md-" relation="OBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="156" subdoc="book=1:chapter=114">
+    <word cid="26874613" form="ὁ" head="3" id="1" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26874615" form="Περικλῆς" head="7" id="3" lemma="Περικλῆς" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26874616" form="πάλιν" head="7" id="4" lemma="πάλιν1" postag="d--------" relation="OBJ"/>
+    <word cid="26874617" form="κατὰ" head="7" id="5" lemma="κατά1" postag="r--------" relation="AuxP"/>
+    <word cid="26874618" form="τάχος" head="5" id="6" lemma="τάχος1" postag="n-s---na-" relation="ADV"/>
+    <word cid="26874619" form="ἐκόμιζε" head="2" id="7" lemma="κομίζω1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26874620" form="τὴν" head="9" id="8" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26874621" form="στρατιὰν" head="7" id="9" lemma="στρατιά1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26874622" form="ἐκ" head="7" id="10" lemma="ἐκ1" postag="r--------" relation="AuxP"/>
+    <word cid="26874623" form="τῆς" head="12" id="11" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26874624" form="Εὐβοίας" head="10" id="12" lemma="Εὔβοια1" postag="n-s---fg-" relation="OBJ"/>11</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="157" subdoc="book=1:chapter=115">
+    <word cid="26874686" form="πολλῷ" head="7" id="6" lemma="πολύς1" postag="a-s---nd-" relation="ADV"/>
+    <word cid="26874687" form="ὕστερον" head="9" id="7" lemma="ὕστερος" postag="a-s---na-" relation="ADV"/>
+    <word cid="26874688" form="σπονδὰς" head="9" id="8" lemma="σπονδή1" postag="n-p---fa-" relation="OBJ"/>
+    <word cid="26874689" form="ἐποιήσαντο" head="2" id="9" lemma="ποιέω1" postag="v3paim---" relation="PRED_CO"/>
+    <word cid="26874690" form="πρὸς" head="9" id="10" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26874691" form="Λακεδαιμονίους" head="12" id="11" lemma="Λακεδαιμόνιος1" postag="a-p---ma-" relation="ADV_CO"/>
+    <word cid="26874692" form="καὶ" head="10" id="12" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26874694" form="ξυμμάχους" head="12" id="14" lemma="σύμμαχος1" postag="a-p---ma-" relation="ADV_CO"/>
+    <word cid="26874695" form="τριακοντούτεις" head="8" id="15" lemma="τριακονταετής" postag="a-p---fa-" relation="ATR"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="158" subdoc="book=1:chapter=115">
+    <word cid="26874872" form="ξυναπέστησαν" head="2" id="1" lemma="συναφίστημι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874874" form="αὐτοῖς" head="1" id="3" lemma="αὐτός1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26874876" form="Βυζάντιοι" head="1" id="5" lemma="Βυζάντιος" postag="a-p---mn-" relation="SBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="159" subdoc="book=1:chapter=115">
+    <word cid="26874736" form="ξυνεπελάβοντο" head="2" id="1" lemma="συνεπιλαμβάνομαι1" postag="v3paim---" relation="PRED_CO"/>
+    <word cid="26874743" form="ἄνδρες" head="1" id="8" lemma="ἀνήρ1" postag="n-p---mn-" relation="SBJ"/>
+    <word cid="26874744" form="ἰδιῶται" head="8" id="9" lemma="ἰδιώτης1" postag="n-p---mn-" relation="ATR"/>
+    <word cid="26874746" form="βουλόμενοι" head="8" id="11" lemma="βούλομαι1" postag="t-pppemn-" relation="ATR"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="160" subdoc="book=1:chapter=115">
+    <word cid="26874715" form="Σαμίοις" head="5" id="4" lemma="Σάμος1" postag="a-p---md-" relation="ADV_CO"/>
+    <word cid="26874716" form="καὶ" head="8" id="5" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26874717" form="Μιλησίοις" head="5" id="6" lemma="Μιλήσιος1" postag="a-p---nd-" relation="ADV_CO"/>
+    <word cid="26874718" form="πόλεμος" head="8" id="7" lemma="πόλεμος1" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26874719" form="ἐγένετο" head="12" id="8" lemma="γίγνομαι1" postag="v3saim---" relation="PRED_CO"/>
+    <word cid="26874720" form="περὶ" head="8" id="9" lemma="περί1" postag="r--------" relation="AuxP"/>
+    <word cid="26874721" form="Πριήνης" head="9" id="10" lemma="Πριήνη" postag="n-s---fd-" relation="ADV"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="160" subdoc="book=1:chapter=115">
+    <word cid="26874724" form="οἱ" head="14" id="13" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26874725" form="Μιλήσιοι" head="21" id="14" lemma="Μιλήσιος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26874732" form="κατεβόων" head="12" id="21" lemma="καταβοάω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26874733" form="τῶν" head="23" id="22" lemma="ὁ1" postag="l-p---mg-" relation="ATR"/>
+    <word cid="26874734" form="Σαμίων" head="21" id="23" lemma="Σάμος1" postag="a-p---mg-" relation="OBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="161" subdoc="book=1:chapter=115">
+    <word cid="26874757" form="δημοκρατίαν" head="9" id="8" lemma="δημοκρατία1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26874758" form="κατέστησαν" head="29" id="9" lemma="καθίστημι1" postag="v3paia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="161" subdoc="book=1:chapter=115">
+    <word cid="26874762" form="ἔλαβον" head="29" id="13" lemma="λαμβάνω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874765" form="πεντήκοντα" head="18" id="16" lemma="πεντήκοντα1" postag="m--------" relation="ATR"/>
+    <word cid="26874767" form="παῖδας" head="21" id="18" lemma="παῖς1" postag="n-p---ma-" relation="OBJ_CO"/>
+    <word cid="26874769" form="ἴσους" head="22" id="20" lemma="ἴσος1" postag="a-p---ma-" relation="ATR"/>
+    <word cid="26874770" form="δὲ" head="13" id="21" lemma="δέ1" postag="g--------" relation="COORD"/>
+    <word cid="26874771" form="ἄνδρας" head="21" id="22" lemma="ἀνήρ1" postag="n-p---ma-" relation="OBJ_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="161" subdoc="book=1:chapter=115">
+    <word cid="26874774" form="κατέθεντο" head="29" id="25" lemma="κατατίθημι1" postag="v3paim---" relation="PRED_CO"/>
+    <word cid="26874775" form="ἐς" head="25" id="26" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26874776" form="Λῆμνον" head="26" id="27" lemma="Λῆμνος1" postag="n-s---fa-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="161" subdoc="book=1:chapter=115">
+    <word cid="26874781" form="ἀνεχώρησαν" head="29" id="32" lemma="ἀναχωρέω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="162" subdoc="book=1:chapter=115">
+    <word cid="26874706" form="ταῦτα" head="3" id="1" lemma="οὗτος1" postag="a-p---na-" relation="OBJ"/>
+    <word cid="26874707" form="γὰρ" head="3" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26874708" form="εἶχον" head="0" id="3" lemma="ἔχω1" postag="v3piia---" relation="PRED"/>
+    <word cid="26874709" form="Ἀθηναῖοι" head="3" id="4" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26874710" form="Πελοποννησίων" head="1" id="5" lemma="Πελοποννήσιος1" postag="a-p---mg-" relation="ATR"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="163" subdoc="book=1:chapter=115">
+    <word cid="26874785" form="Σαμίων" head="6" id="3" lemma="Σάμος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26874786" form="ἦσαν" head="36" id="4" lemma="εἰμί1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26874787" form="γάρ" head="4" id="5" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26874788" form="τινες" head="4" id="6" lemma="τις1" postag="p-p---mn-" relation="SBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="163" subdoc="book=1:chapter=115">
+    <word cid="26874822" form="διέβησαν" head="84" id="40" lemma="διαβαίνω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874823" form="ὑπὸ" head="40" id="41" lemma="ὑπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26874824" form="νύκτα" head="41" id="42" lemma="νύξ1" postag="n-s---fa-" relation="ADV"/>
+    <word cid="26874825" form="ἐς" head="40" id="43" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26874826" form="τὴν" head="45" id="44" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26874827" form="Σάμον" head="43" id="45" lemma="Σάμος1" postag="n-s---fa-" relation="OBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="163" subdoc="book=1:chapter=115">
+    <word cid="26874832" form="τῷ" head="51" id="50" lemma="ὁ1" postag="l-s---md-" relation="ATR"/>
+    <word cid="26874833" form="δήμῳ" head="52" id="51" lemma="δῆμος1" postag="n-s---md-" relation="OBJ"/>
+    <word cid="26874834" form="ἐπανέστησαν" head="53" id="52" lemma="ἐπανίστημι1" postag="v3paia---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="163" subdoc="book=1:chapter=115">
+    <word cid="26874836" form="ἐκράτησαν" head="53" id="54" lemma="κρατέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874837" form="τῶν" head="56" id="55" lemma="ὁ1" postag="l-p---mg-" relation="ATR"/>
+    <word cid="26874838" form="πλείστων" head="54" id="56" lemma="πλεῖστος1" postag="a-p---mg-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="163" subdoc="book=1:chapter=115">
+    <word cid="26874848" form="ἀπέστησαν" head="68" id="66" lemma="ἀφίστημι1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="163" subdoc="book=1:chapter=115">
+    <word cid="26874851" form="τοὺς" head="70" id="69" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26874852" form="φρουροὺς" head="73" id="70" lemma="φρουρός1" postag="n-p---ma-" relation="OBJ_CO"/>
+    <word cid="26874853" form="τοὺς" head="70" id="71" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26874854" form="Ἀθηναίων" head="70" id="72" lemma="Ἀθηναῖος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26874855" form="καὶ" head="80" id="73" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26874856" form="τοὺς" head="75" id="74" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26874857" form="ἄρχοντας" head="73" id="75" lemma="ἄρχων1" postag="n-p---ma-" relation="OBJ_CO"/>
+    <word cid="26874862" form="ἐξέδοσαν" head="68" id="80" lemma="ἐκδίδωμι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874863" form="Πισσούθνῃ" head="80" id="81" lemma="Πισσούνθης" postag="n-s---md-" relation="OBJ"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="163" subdoc="book=1:chapter=115">
+    <word cid="26874868" form="εὐθὺς" head="87" id="86" lemma="εὐθύς1" postag="a-s---mn-" relation="ADV"/>
+    <word cid="26874869" form="παρεσκευάζοντο" head="84" id="87" lemma="παρασκευάζω1" postag="v3piie---" relation="PRED_CO"/>
+    <word cid="26874870" form="στρατεύειν" head="87" id="88" lemma="στρατεύω1" postag="v--pna---" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="164" subdoc="book=1:chapter=116">
+    <word cid="26874888" form="ταῖς" head="13" id="11" lemma="ὁ1" postag="l-p---fd-" relation="ATR"/>
+    <word cid="26874890" form="ἑκκαίδεκα" head="17" id="13" lemma="ἑκκαίδεκα1" postag="m--------" relation="OBJ"/>
+    <word cid="26874892" form="νεῶν" head="13" id="15" lemma="ναῦς1" postag="n-p---fg-" relation="ATR"/>
+    <word cid="26874893" form="οὐκ" head="17" id="16" lemma="οὐ1" postag="d--------" relation="AuxZ"/>
+    <word cid="26874894" form="ἐχρήσαντο" head="43" id="17" lemma="χράω2" postag="v3paim---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="164" subdoc="book=1:chapter=116">
+    <word cid="26874921" form="ναυσὶ" head="51" id="44" lemma="ναῦς1" postag="n-p---fd-" relation="ADV"/>
+    <word cid="26874928" form="ἐναυμάχησαν" head="43" id="51" lemma="ναυμαχέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874929" form="πρὸς" head="51" id="52" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26874930" form="Τραγίᾳ" head="52" id="53" lemma="Τραγία" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26874931" form="τῇ" head="53" id="54" lemma="ὁ1" postag="l-s---fd-" relation="ATR"/>
+    <word cid="26874932" form="νήσῳ" head="53" id="55" lemma="νῆσος1" postag="n-s---fd-" relation="ATR"/>
+    <word cid="26874934" form="ναυσὶν" head="51" id="57" lemma="ναῦς1" postag="n-p---fd-" relation="ADV"/>
+    <word cid="26874935" form="ἑβδομήκοντα" head="57" id="58" lemma="ἑβδομήκοντα1" postag="m--------" relation="ATR"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="164" subdoc="book=1:chapter=116">
+    <word cid="26874953" form="ἐνίκων" head="75" id="76" lemma="νικάω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26874954" form="Ἀθηναῖοι" head="76" id="77" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="165" subdoc="book=1:chapter=116">
+    <word cid="26874989" form="Περικλῆς" head="9" id="1" lemma="Περικλῆς" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26874997" form="ᾤχετο" head="2" id="9" lemma="οἴχομαι1" postag="v3siie---" relation="PRED_CO"/>
+    <word cid="26874998" form="κατὰ" head="9" id="10" lemma="κατά1" postag="r--------" relation="AuxP"/>
+    <word cid="26874999" form="τάχος" head="10" id="11" lemma="τάχος1" postag="n-s---na-" relation="ADV"/>
+    <word cid="26875000" form="ἐπὶ" head="9" id="12" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26875002" form="καὶ" head="12" id="14" lemma="καί1" postag="c--------" relation="COORD"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="166" subdoc="book=1:chapter=116">
+    <word cid="26874958" form="αὐτοῖς" head="4" id="3" lemma="αὐτός1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26874959" form="ἐβοήθησαν" head="18" id="4" lemma="βοηθέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26874963" form="νῆες" head="10" id="8" lemma="ναῦς1" postag="n-p---fn-" relation="SBJ_CO"/>
+    <word cid="26874964" form="τεσσαράκοντα" head="8" id="9" lemma="τεσσαράκοντα1" postag="m--------" relation="ATR"/>
+    <word cid="26874965" form="καὶ" head="4" id="10" lemma="καί1" postag="c--------" relation="COORD"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="166" subdoc="book=1:chapter=116">
+    <word cid="26874979" form="ἐπολιόρκουν" head="18" id="24" lemma="πολιορκέω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26874980" form="τρισὶ" head="26" id="25" lemma="τρεῖς1" postag="m--------" relation="ATR"/>
+    <word cid="26874981" form="τείχεσι" head="29" id="26" lemma="τεῖχος1" postag="n-p---nd-" relation="ADV_CO"/>
+    <word cid="26874982" form="τὴν" head="28" id="27" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26874983" form="πόλιν" head="24" id="28" lemma="πόλις1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26874984" form="καὶ" head="24" id="29" lemma="καί1" postag="c--------" relation="COORD"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="167" subdoc="book=1:chapter=116">
+    <word cid="26875013" form="ᾤχετο" head="0" id="1" lemma="οἴχομαι1" postag="v3siie---" relation="PRED"/>
+    <word cid="26875014" form="γὰρ" head="1" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26875016" form="ἐκ" head="1" id="4" lemma="ἐκ1" postag="r--------" relation="AuxP"/>
+    <word cid="26875017" form="τῆς" head="6" id="5" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26875018" form="Σάμου" head="4" id="6" lemma="Σάμος1" postag="n-s---fg-" relation="OBJ"/>
+    <word cid="26875019" form="πέντε" head="8" id="7" lemma="πέντε1" postag="m--------" relation="ATR"/>
+    <word cid="26875020" form="ναυσὶ" head="1" id="8" lemma="ναῦς1" postag="n-p---fd-" relation="ADV"/>
+    <word cid="26875021" form="Στησαγόρας" head="10" id="9" lemma="Στησαγόρας" postag="n-s---mn-" relation="SBJ_CO"/>
+    <word cid="26875022" form="καὶ" head="1" id="10" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26875023" form="ἄλλοι" head="10" id="11" lemma="ἄλλος1" postag="a-p---mn-" relation="SBJ_CO"/>
+    <word cid="26875024" form="ἐπὶ" head="1" id="12" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26875025" form="τὰς" head="14" id="13" lemma="ὁ1" postag="l-p---fa-" relation="ATR"/>
+    <word cid="26875026" form="Φοινίσσας" head="12" id="14" lemma="Φοῖνιξ1" postag="n-p---fa-" relation="OBJ"/>13</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="168" subdoc="book=1:chapter=117">
+    <word cid="26875149" form="ξυνέβησαν" head="2" id="1" lemma="συμβαίνω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26875152" form="Βυζάντιοι" head="1" id="4" lemma="Βυζάντιος" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26875157" form="εἶναι" head="1" id="9" lemma="εἰμί1" postag="v--pna---" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="169" subdoc="book=1:chapter=117">
+    <word cid="26875074" form="πάλιν" head="7" id="4" lemma="πάλιν1" postag="d--------" relation="ADV"/>
+    <word cid="26875075" form="ταῖς" head="6" id="5" lemma="ὁ1" postag="l-p---fd-" relation="ATR"/>
+    <word cid="26875076" form="ναυσὶ" head="7" id="6" lemma="ναῦς1" postag="n-p---fd-" relation="OBJ"/>
+    <word cid="26875077" form="κατεκλῄσθησαν" head="2" id="7" lemma="κατακλείω1" postag="v3paip---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="170" subdoc="book=1:chapter=117">
+    <word cid="26875040" form="τάς" head="16" id="13" lemma="ὁ1" postag="p-p---fa-" relation="ATR"/>
+    <word cid="26875042" form="προφυλακίδας" head="16" id="15" lemma="προφυλακὶς1" postag="n-p---fa-" relation="ATR"/>
+    <word cid="26875043" form="ναῦς" head="17" id="16" lemma="ναῦς1" postag="n-p---fa-" relation="OBJ"/>
+    <word cid="26875044" form="διέφθειραν" head="18" id="17" lemma="διαφθείρω1" postag="v3paia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="170" subdoc="book=1:chapter=117">
+    <word cid="26875049" form="ἐνίκησαν" head="18" id="22" lemma="νικάω1" postag="v3piia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="170" subdoc="book=1:chapter=117">
+    <word cid="26875052" form="τῆς" head="26" id="25" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26875053" form="θαλάσσης" head="30" id="26" lemma="θάλασσα1" postag="n-s---fg-" relation="OBJ"/>
+    <word cid="26875054" form="τῆς" head="26" id="27" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26875057" form="ἐκράτησαν" head="37" id="30" lemma="κρατέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26875058" form="ἡμέρας" head="30" id="31" lemma="ἡμέρα1" postag="n-p---fa-" relation="ADV"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="170" subdoc="book=1:chapter=117">
+    <word cid="26875065" form="ἐσεκομίσαντο" head="39" id="38" lemma="εἰσκομίζω1" postag="v3paim---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="170" subdoc="book=1:chapter=117">
+    <word cid="26875067" form="ἐξεκομίσαντο" head="39" id="40" lemma="ἐκκομίζω1" postag="v3paim---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="171" subdoc="book=1:chapter=117">
+    <word cid="26875112" form="ναυμαχίαν" head="6" id="2" lemma="ναυμαχία1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26875114" form="τινα" head="2" id="4" lemma="τις1" postag="p-s---fa-" relation="ATR"/>
+    <word cid="26875115" form="βραχεῖαν" head="2" id="5" lemma="βραχύς1" postag="a-s---fa-" relation="ATR"/>
+    <word cid="26875116" form="ἐποιήσαντο" head="11" id="6" lemma="ποιέω1" postag="v3paim---" relation="PRED_CO"/>
+    <word cid="26875117" form="οἱ" head="8" id="7" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26875118" form="Σάμιοι" head="6" id="8" lemma="Σάμος1" postag="a-p---mn-" relation="SBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="171" subdoc="book=1:chapter=117">
+    <word cid="26875124" form="ἐξεπολιορκήθησαν" head="17" id="14" lemma="ἐκπολιορκέω1" postag="v3paip---" relation="PRED_CO"/>
+    <word cid="26875125" form="ἐνάτῳ" head="16" id="15" lemma="ἔνατος1" postag="a-s---md-" relation="ATR"/>
+    <word cid="26875126" form="μηνὶ" head="14" id="16" lemma="μείς1" postag="n-s---md-" relation="ADV"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="171" subdoc="book=1:chapter=117">
+    <word cid="26875128" form="προσεχώρησαν" head="17" id="18" lemma="προσχωρέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26875129" form="ὁμολογίᾳ" head="18" id="19" lemma="ὁμολογία1" postag="n-s---fd-" relation="ADV"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="172" subdoc="book=1:chapter=117">
+    <word cid="26875080" form="ἐκ" head="6" id="2" lemma="ἐκ1" postag="r--------" relation="AuxP"/>
+    <word cid="26875081" form="τῶν" head="4" id="3" lemma="ὁ1" postag="l-p---fg-" relation="ATR"/>
+    <word cid="26875082" form="Ἀθηνῶν" head="2" id="4" lemma="Ἀθῆναι1" postag="n-p---fg-" relation="ADV"/>
+    <word cid="26875084" form="προσεβοήθησαν" head="27" id="6" lemma="προσβοηθέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26875085" form="τεσσαράκοντα" head="16" id="7" lemma="τεσσαράκοντα1" postag="m--------" relation="ATR"/>
+    <word cid="26875087" form="αἱ" head="16" id="9" lemma="ὁ1" postag="l-p---fv-" relation="ATR"/>
+    <word cid="26875094" form="νῆες" head="19" id="16" lemma="ναῦς1" postag="n-p---fn-" relation="SBJ_CO"/>
+    <word cid="26875096" form="εἴκοσι" head="20" id="18" lemma="εἴκοσι1" postag="m--------" relation="ATR"/>
+    <word cid="26875097" form="δὲ" head="6" id="19" lemma="δέ1" postag="g--------" relation="COORD"/>
+    <word cid="26875098" form="αἱ" head="19" id="20" lemma="ὁ1" postag="p-p---fn-" relation="SBJ_CO"/>10</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="173" subdoc="book=1:chapter=118">
+    <word cid="26875315" form="τοῖς" head="5" id="4" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26875316" form="Λακεδαιμονίοις" head="6" id="5" lemma="Λακεδαιμόνιος1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26875317" form="διέγνωστο" head="17" id="6" lemma="διαγιγνώσκω1" postag="v3slie---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="173" subdoc="book=1:chapter=118">
+    <word cid="26875331" form="ἐπηρώτων" head="17" id="20" lemma="ἐπερωτάω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26875332" form="τὸν" head="22" id="21" lemma="ὁ1" postag="l-s---ma-" relation="ATR"/>
+    <word cid="26875333" form="θεὸν" head="20" id="22" lemma="θεός1" postag="n-s---ma-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="174" subdoc="book=1:chapter=118">
+    <word cid="26875217" form="οἱ" head="4" id="3" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26875218" form="Ἀθηναῖοι" head="9" id="4" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26875219" form="τήν" head="7" id="5" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26875221" form="ἀρχὴν" head="9" id="7" lemma="ἀρχή1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26875222" form="ἐγκρατεστέραν" head="7" id="8" lemma="ἐγκρατής1" postag="a-s---fac" relation="ATR"/>
+    <word cid="26875223" form="κατεστήσαντο" head="10" id="9" lemma="καθίστημι1" postag="v3paim---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="174" subdoc="book=1:chapter=118">
+    <word cid="26875225" form="αὐτοὶ" head="14" id="11" lemma="αὐτός1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26875226" form="ἐπὶ" head="14" id="12" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26875227" form="μέγα" head="12" id="13" lemma="μέγας1" postag="a-s---na-" relation="OBJ"/>
+    <word cid="26875228" form="ἐχώρησαν" head="10" id="14" lemma="χωρέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26875229" form="δυνάμεως" head="13" id="15" lemma="δύναμις1" postag="n-s---fg-" relation="ATR"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="174" subdoc="book=1:chapter=118">
+    <word cid="26875235" form="οὔ" head="23" id="21" lemma="οὐ1" postag="d--------" relation="AuxZ"/>
+    <word cid="26875236" form="ἐκώλυον" head="30" id="23" lemma="κωλύω1" postag="v3piia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="174" subdoc="book=1:chapter=118">
+    <word cid="26875242" form="ἡσύχαζόν" head="30" id="29" lemma="ἡσυχάζω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26875244" form="τὸ" head="32" id="31" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26875245" form="πλέον" head="29" id="32" lemma="πλείων1" postag="a-s---nac" relation="ADV"/>
+    <word cid="26875247" form="χρόνου" head="32" id="34" lemma="χρόνος1" postag="n-s---mg-" relation="ATR"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="175" subdoc="book=1:chapter=118">
+    <word cid="26875159" form="μετὰ" head="5" id="1" lemma="μετά1" postag="r--------" relation="AuxP"/>
+    <word cid="26875160" form="ταῦτα" head="1" id="2" lemma="οὗτος1" postag="a-p---na-" relation="ADV"/>
+    <word cid="26875161" form="δὲ" head="5" id="3" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26875162" form="ἤδη" head="5" id="4" lemma="ἤδη1" postag="d--------" relation="ADV"/>
+    <word cid="26875163" form="γίγνεται" head="0" id="5" lemma="γίγνομαι1" postag="v3spie---" relation="PRED"/>
+    <word cid="26875165" form="πολλοῖς" head="8" id="7" lemma="πολύς1" postag="a-p---nd-" relation="ATR"/>
+    <word cid="26875166" form="ἔτεσιν" head="5" id="8" lemma="ἔτος1" postag="n-p---nd-" relation="ADV"/>
+    <word cid="26875167" form="ὕστερον" head="8" id="9" lemma="ὕστερος" postag="a-s---nac" relation="ATR"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="176" subdoc="book=1:chapter=118">
+    <word cid="26875339" form="ὁ" head="3" id="1" lemma="ὁ1" postag="p-s---mn-" relation="SBJ"/>
+    <word cid="26875341" form="ἀνεῖλεν" head="15" id="3" lemma="ἀναιρέω1" postag="v3saia---" relation="PRED_CO"/>
+    <word cid="26875342" form="αὐτοῖς" head="3" id="4" lemma="αὐτός1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26875351" form="ἔσεσθαι" head="3" id="13" lemma="εἰμί1" postag="v--fn----" relation="OBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="176" subdoc="book=1:chapter=118">
+    <word cid="26875355" form="ἔφη" head="15" id="17" lemma="φημί1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26875356" form="ξυλλήψεσθαι" head="17" id="18" lemma="συλλαμβάνω1" postag="v--fnm---" relation="OBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="177" subdoc="book=1:chapter=118">
+    <word cid="26875185" form="ταῦτα" head="14" id="1" lemma="οὗτος1" postag="a-p---nn-" relation="SBJ"/>
+    <word cid="26875186" form="δὲ" head="14" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26875187" form="ξύμπαντα" head="1" id="3" lemma="σύμπας1" postag="a-p---nn-" relation="ATR"/>
+    <word cid="26875198" form="ἐγένετο" head="0" id="14" lemma="γίγνομαι1" postag="v3saim---" relation="PRED"/>
+    <word cid="26875199" form="ἐν" head="14" id="15" lemma="ἐν1" postag="r--------" relation="AuxP"/>
+    <word cid="26875200" form="ἔτεσι" head="15" id="16" lemma="ἔτος1" postag="n-p---nd-" relation="ADV"/>
+    <word cid="26875201" form="πεντήκοντα" head="16" id="17" lemma="πεντήκοντα1" postag="m--------" relation="ATR"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="178" subdoc="book=1:chapter=118">
+    <word cid="26875290" form="ἀνασχετὸν" head="5" id="4" lemma="ἀνασχετός1" postag="a-s---na-" relation="OCOMP"/>
+    <word cid="26875291" form="ἐποιοῦντο" head="7" id="5" lemma="ποιέω1" postag="v3piie---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="178" subdoc="book=1:chapter=118">
+    <word cid="26875295" form="ἐδόκει" head="7" id="9" lemma="δοκέω1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26875296" form="εἶναι" head="9" id="10" lemma="εἰμί1" postag="v--pna---" relation="SBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="1" subdoc="book=1:chapter=89">
+    <word cid="26870838" form="διεκομίζοντο" head="27" id="15" lemma="διακομίζω1" postag="v3piie---" relation="PRED_CO"/>
+    <word cid="26870839" form="εὐθὺς" head="15" id="16" lemma="εὐθύς1" postag="a-s---mn-" relation="ADV"/>
+    <word cid="26870840" form="ὅθεν" head="18" id="17" lemma="ὅθεν1" postag="d--------" relation="ADV"/>
+    <word cid="26870841" form="ὑπεξέθεντο" head="15" id="18" lemma="ὑπεκτίθεμαι1" postag="v3paim---" relation="OBJ"/>
+    <word cid="26870842" form="παῖδας" head="22" id="19" lemma="παῖς1" postag="n-p---ma-" relation="OBJ_CO"/>
+    <word cid="26870844" form="γυναῖκας" head="22" id="21" lemma="γυνή1" postag="n-p---fa-" relation="OBJ_CO"/>
+    <word cid="26870845" form="καὶ" head="15" id="22" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26870846" form="τὴν" head="25" id="23" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26870847" form="περιοῦσαν" head="25" id="24" lemma="περίειμι2" postag="t-sppafa-" relation="ATR"/>
+    <word cid="26870848" form="κατασκευήν" head="22" id="25" lemma="κατασκευή1" postag="n-s---fa-" relation="OBJ_CO"/>10</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="1" subdoc="book=1:chapter=89">
+    <word cid="26870853" form="ἀνοικοδομεῖν" head="31" id="30" lemma="ἀνοικοδομέω1" postag="v--pna---" relation="OBJ"/>
+    <word cid="26870854" form="παρεσκευάζοντο" head="27" id="31" lemma="παρασκευάζω1" postag="v3piie---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="2" subdoc="book=1:chapter=89">
+    <word cid="26870762" form="Λεωτυχίδης" head="38" id="24" lemma="Λεωτυχίδης" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26870765" form="βασιλεὺς" head="24" id="27" lemma="βασιλεύς1" postag="n-s---mn-" relation="ATR"/>
+    <word cid="26870776" form="ἀπεχώρησεν" head="48" id="38" lemma="ἀποχωρέω1" postag="v3saia---" relation="PRED_CO"/>
+    <word cid="26870777" form="ἐπ'" head="38" id="39" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26870778" form="οἴκου" head="39" id="40" lemma="οἶκος1" postag="n-s---mg-" relation="OBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="2" subdoc="book=1:chapter=89">
+    <word cid="26870800" form="Σηστὸν" head="63" id="62" lemma="Σηστός1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26870801" form="ἐπολιόρκουν" head="67" id="63" lemma="πολιορκέω1" postag="v3piia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="2" subdoc="book=1:chapter=89">
+    <word cid="26870807" form="εἷλον" head="67" id="69" lemma="αἱρέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26870808" form="αὐτὴν" head="69" id="70" lemma="αὐτός1" postag="a-s---fa-" relation="OBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="2" subdoc="book=1:chapter=89">
+    <word cid="26870814" form="μετὰ" head="78" id="76" lemma="μετά1" postag="r--------" relation="AuxP"/>
+    <word cid="26870815" form="τοῦτο" head="76" id="77" lemma="οὗτος1" postag="a-s---na-" relation="ADV"/>
+    <word cid="26870816" form="ἀπέπλευσαν" head="75" id="78" lemma="ἀποπλέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26870817" form="ἐξ" head="78" id="79" lemma="ἐκ1" postag="r--------" relation="AuxP"/>
+    <word cid="26870818" form="Ἑλλησπόντου" head="79" id="80" lemma="Ἑλλήσποντος1" postag="n-s---mg-" relation="OBJ"/>
+    <word cid="26870820" form="ἕκαστοι" head="78" id="82" lemma="ἕκαστος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26870821" form="κατὰ" head="78" id="83" lemma="κατά1" postag="r--------" relation="AuxP"/>
+    <word cid="26870822" form="πόλεις" head="83" id="84" lemma="πόλις1" postag="n-p---fa-" relation="OBJ"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="3" subdoc="book=1:chapter=89">
+    <word cid="26870726" form="οἱ" head="3" id="1" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26870727" form="γὰρ" head="6" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26870728" form="Ἀθηναῖοι" head="6" id="3" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26870729" form="τρόπῳ" head="6" id="4" lemma="τρόπος1" postag="n-s---md-" relation="ADV"/>
+    <word cid="26870730" form="τοιῷδε" head="4" id="5" lemma="τοιόσδε1" postag="p-s---md-" relation="ATR"/>
+    <word cid="26870731" form="ἦλθον" head="0" id="6" lemma="ἔρχομαι1" postag="v3paia---" relation="PRED"/>
+    <word cid="26870732" form="ἐπὶ" head="6" id="7" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26870733" form="τὰ" head="9" id="8" lemma="ὁ1" postag="l-p---na-" relation="ATR"/>
+    <word cid="26870734" form="πράγματα" head="7" id="9" lemma="πρᾶγμα1" postag="n-p---na-" relation="OBJ"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="4" subdoc="book=1:chapter=89">
+    <word cid="26870859" form="τοῦ" head="4" id="1" lemma="ὁ1" postag="l-s---mg-" relation="ATR"/>
+    <word cid="26870862" form="περιβόλου" head="6" id="4" lemma="περίβολος1" postag="a-s---mg-" relation="ATR"/>
+    <word cid="26870863" form="βραχέα" head="6" id="5" lemma="βραχύς1" postag="a-p---nn-" relation="SBJ"/>
+    <word cid="26870864" form="εἱστήκει" head="7" id="6" lemma="ἵστημι1" postag="v3slia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="4" subdoc="book=1:chapter=89">
+    <word cid="26870866" form="οἰκίαι" head="12" id="8" lemma="οἰκία1" postag="n-p---fn-" relation="SBJ"/>
+    <word cid="26870867" form="αἱ" head="8" id="9" lemma="ὁ1" postag="l-p---fn-" relation="ATR"/>
+    <word cid="26870869" form="πολλαὶ" head="8" id="11" lemma="πολύς1" postag="a-p---fn-" relation="ATR"/>
+    <word cid="26870870" form="ἐπεπτώκεσαν" head="15" id="12" lemma="πίπτω1" postag="v3plia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="4" subdoc="book=1:chapter=89">
+    <word cid="26870872" form="ὀλίγαι" head="16" id="14" lemma="ὀλίγος1" postag="a-p---fn-" relation="SBJ"/>
+    <word cid="26870874" form="περιῆσαν" head="15" id="16" lemma="περίειμι2" postag="v3piia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="5" subdoc="book=1:chapter=90">
+    <word cid="26870885" form="Λακεδαιμόνιοι" head="6" id="1" lemma="Λακεδαιμόνιος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26870886" form="δὲ" head="6" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26870890" form="ἦλθον" head="0" id="6" lemma="ἔρχομαι1" postag="v3paia---" relation="PRED"/>
+    <word cid="26870891" form="πρεσβείᾳ" head="6" id="7" lemma="πρεσβεία1" postag="n-s---fd-" relation="ADV"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="6" subdoc="book=1:chapter=90">
+    <word cid="26871030" form="ἐκέλευεν" head="2" id="3" lemma="κελεύω1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26871034" form="ὁ" head="8" id="7" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26871035" form="Θεμιστοκλῆς" head="3" id="8" lemma="Θεμιστοκλῆς" postag="n-s---mn-" relation="SBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="7" subdoc="book=1:chapter=90">
+    <word cid="26870937" form="ἠξίουν" head="0" id="1" lemma="ἀξιόω1" postag="v3piia---" relation="PRED"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="8" subdoc="book=1:chapter=90">
+    <word cid="26871120" form="οὐ" head="7" id="6" lemma="οὐ1" postag="d--------" relation="AuxZ"/>
+    <word cid="26871121" form="προσῄει" head="12" id="7" lemma="πρόσειμι2" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26871122" form="πρὸς" head="7" id="8" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26871123" form="τὰς" head="10" id="9" lemma="ὁ1" postag="l-p---fa-" relation="ATR"/>
+    <word cid="26871124" form="ἀρχάς" head="8" id="10" lemma="ἀρχή1" postag="n-p---fa-" relation="OBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="8" subdoc="book=1:chapter=90">
+    <word cid="26871127" form="διῆγε" head="14" id="13" lemma="διάγω1" postag="v3siia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="8" subdoc="book=1:chapter=90">
+    <word cid="26871129" form="προυφασίζετο" head="14" id="15" lemma="προφασίζομαι1" postag="v3siie---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="9" subdoc="book=1:chapter=90">
+    <word cid="26871147" form="ἔφη" head="1" id="17" lemma="φημί1" postag="v3siia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="10" subdoc="book=1:chapter=90">
+    <word cid="26871102" form="ὁ" head="13" id="2" lemma="ὁ1" postag="p-s---mn-" relation="SBJ"/>
+    <word cid="26871103" form="μὲν" head="13" id="3" lemma="μέν1" postag="g--------" relation="AuxY"/>
+    <word cid="26871113" form="ᾤχετο" head="1" id="13" lemma="οἴχομαι1" postag="v3siie---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="11" subdoc="book=1:chapter=90">
+    <word cid="26871006" form="οἱ" head="3" id="1" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26871007" form="δ'" head="21" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26871008" form="Ἀθηναῖοι" head="21" id="3" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26871009" form="Θεμιστοκλέους" head="5" id="4" lemma="Θεμιστοκλῆς" postag="n-s---mg-" relation="ATR"/>
+    <word cid="26871010" form="γνώμῃ" head="21" id="5" lemma="γνώμη1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26871011" form="τοὺς" head="8" id="6" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26871012" form="μὲν" head="21" id="7" lemma="μέν1" postag="g--------" relation="AuxY"/>
+    <word cid="26871013" form="Λακεδαιμονίους" head="21" id="8" lemma="Λακεδαιμόνιος1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26871015" form="εἰπόντας" head="8" id="10" lemma="εἶπον1" postag="t-papama-" relation="ATR"/>
+    <word cid="26871025" form="εὐθὺς" head="21" id="20" lemma="εὐθύς1" postag="a-s---mn-" relation="ADV"/>
+    <word cid="26871026" form="ἀπήλλαξαν" head="0" id="21" lemma="ἀπαλλάσσω1" postag="v3paia---" relation="PRED"/>11</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="13" subdoc="book=1:chapter=90">
+    <word cid="26870997" form="πᾶσιν" head="11" id="4" lemma="πᾶς1" postag="a-p---md-" relation="ADV"/>
+    <word cid="26870998" form="ἔφασαν" head="2" id="5" lemma="φημί1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26871004" form="εἶναι" head="5" id="11" lemma="εἰμί1" postag="v--pna---" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="14" subdoc="book=1:chapter=91">
+    <word cid="26871223" form="ἀποστέλλουσιν" head="4" id="1" lemma="ἀποστέλλω1" postag="v3ppia---" relation="PRED_CO"/>
+    <word cid="26871224" form="οὖν" head="1" id="2" lemma="οὖν1" postag="g--------" relation="AuxY"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="14" subdoc="book=1:chapter=91">
+    <word cid="26871227" form="περὶ" head="12" id="5" lemma="περί1" postag="r--------" relation="AuxP"/>
+    <word cid="26871228" form="αὐτῶν" head="5" id="6" lemma="αὐτός1" postag="a-p---mg-" relation="ADV"/>
+    <word cid="26871229" form="ὁ" head="8" id="7" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26871230" form="Θεμιστοκλῆς" head="12" id="8" lemma="Θεμιστοκλῆς" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26871231" form="τοῖς" head="10" id="9" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26871232" form="Ἀθηναίοις" head="12" id="10" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26871233" form="κρύφα" head="12" id="11" lemma="κρύφα1" postag="d--------" relation="ADV"/>
+    <word cid="26871234" form="πέμπει" head="4" id="12" lemma="πέμπω1" postag="v3spia---" relation="PRED_CO"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="16" subdoc="book=1:chapter=91">
+    <word cid="26871203" form="δὲ" head="4" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26871204" form="ἐκεῖνος" head="4" id="3" lemma="ἐκεῖνος1" postag="a-s---mn-" relation="SBJ"/>
+    <word cid="26871205" form="κελεύει" head="0" id="4" lemma="κελεύω1" postag="v3spia---" relation="PRED"/>
+    <word cid="26871209" form="μᾶλλον" head="9" id="8" lemma="μάλα1" postag="d-------c" relation="ADV"/>
+    <word cid="26871210" form="παράγεσθαι" head="4" id="9" lemma="παράγω1" postag="v--pne---" relation="OBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="17" subdoc="book=1:chapter=91">
+    <word cid="26871429" form="ἔφη" head="0" id="5" lemma="φημί1" postag="v3siia---" relation="PRED"/>
+    <word cid="26871430" form="χρῆναι" head="5" id="6" lemma="χρή1" postag="v--pna---" relation="OBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="18" subdoc="book=1:chapter=91">
+    <word cid="26871286" form="οἵ" head="4" id="1" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26871289" form="Ἀθηναῖοι" head="11" id="4" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26871290" form="τοὺς" head="6" id="5" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26871291" form="πρέσβεις" head="11" id="6" lemma="πρέσβυς" postag="n-p---ma-" relation="OBJ"/>
+    <word cid="26871296" form="κατεῖχον" head="13" id="11" lemma="κατέχω1" postag="v3piia---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="18" subdoc="book=1:chapter=91">
+    <word cid="26871299" form="ὁ" head="15" id="14" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26871300" form="Θεμιστοκλῆς" head="22" id="15" lemma="Θεμιστοκλῆς" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26871302" form="τοῖς" head="18" id="17" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26871303" form="Λακεδαιμονίοις" head="22" id="18" lemma="Λακεδαιμόνιος1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26871304" form="ἐνταῦθα" head="22" id="19" lemma="ἐνταῦθα1" postag="d--------" relation="ADV"/>
+    <word cid="26871306" form="φανερῶς" head="22" id="21" lemma="φανερός1" postag="d--------" relation="ADV"/>
+    <word cid="26871307" form="εἶπεν" head="13" id="22" lemma="εἶπον1" postag="v3saia---" relation="PRED_CO"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="19" subdoc="book=1:chapter=91">
+    <word cid="26871173" form="τῷ" head="6" id="4" lemma="ὁ1" postag="l-s---md-" relation="ATR"/>
+    <word cid="26871175" form="Θεμιστοκλεῖ" head="7" id="6" lemma="Θεμιστοκλῆς" postag="n-s---md-" relation="OBJ"/>
+    <word cid="26871176" form="ἐπείθοντο" head="13" id="7" lemma="πείθω1" postag="v3piie---" relation="PRED_CO"/>
+    <word cid="26871177" form="διὰ" head="7" id="8" lemma="διά1" postag="r--------" relation="AuxP"/>
+    <word cid="26871178" form="φιλίαν" head="8" id="9" lemma="φιλία1" postag="n-s---fa-" relation="ADV"/>
+    <word cid="26871179" form="αὐτοῦ" head="9" id="10" lemma="αὐτός1" postag="a-s---mg-" relation="ATR"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="19" subdoc="book=1:chapter=91">
+    <word cid="26871196" form="οὐκ" head="28" id="27" lemma="οὐ1" postag="d--------" relation="AuxZ"/>
+    <word cid="26871197" form="εἶχον" head="13" id="28" lemma="ἔχω1" postag="v3piia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="21" subdoc="book=1:chapter=91">
+    <word cid="26871351" form="γὰρ" head="18" id="3" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26871366" form="ἔφασαν" head="0" id="18" lemma="φημί1" postag="v3piia---" relation="PRED"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="22" subdoc="book=1:chapter=92">
+    <word cid="26871491" form="οἵ" head="3" id="1" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26871493" form="πρέσβεις" head="5" id="3" lemma="πρέσβυς1" postag="n-p---mn-" relation="SBJ"/>
+    <word cid="26871494" form="ἑκατέρων" head="3" id="4" lemma="ἑκάτερος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26871495" form="ἀπῆλθον" head="2" id="5" lemma="ἀπέρχομαι1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26871496" form="ἐπ'" head="5" id="6" lemma="ἐπί1" postag="r--------" relation="AuxP"/>
+    <word cid="26871497" form="οἴκου" head="6" id="7" lemma="οἶκος1" postag="n-s---mg-" relation="OBJ"/>
+    <word cid="26871498" form="ἀνεπικλήτως" head="5" id="8" lemma="ἀνεπίκλητος1" postag="d--------" relation="ADV"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="23" subdoc="book=1:chapter=92">
+    <word cid="26871443" form="ὀργὴν" head="9" id="5" lemma="ὀργή1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26871445" form="φανερὰν" head="5" id="7" lemma="φανερός1" postag="a-s---fa-" relation="ATR"/>
+    <word cid="26871446" form="οὐκ" head="9" id="8" lemma="οὐ1" postag="d--------" relation="AuxZ"/>
+    <word cid="26871447" form="ἐποιοῦντο" head="46" id="9" lemma="ποιέω1" postag="v3piie---" relation="PRED_CO"/>
+    <word cid="26871448" form="τοῖς" head="11" id="10" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26871449" form="Ἀθηναίοις" head="9" id="11" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="ADV"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="23" subdoc="book=1:chapter=92">
+    <word cid="26871488" form="ἀδήλως" head="52" id="51" lemma="ἄδηλος1" postag="d--------" relation="ADV"/>
+    <word cid="26871489" form="ἤχθοντο" head="46" id="52" lemma="ἄχθομαι1" postag="v3piie---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="24" subdoc="book=1:chapter=93">
+    <word cid="26871789" form="ἐτειχίσθησαν" head="6" id="5" lemma="τειχίζω1" postag="v3paip---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="24" subdoc="book=1:chapter=93">
+    <word cid="26871791" form="τἆλλα" head="8" id="7" lemma="ἄλλος1" postag="a-p---na-" relation="OBJ"/>
+    <word cid="26871792" form="κατεσκευάζοντο" head="6" id="8" lemma="κατασκευάζω1" postag="v3piie---" relation="PRED_CO"/>
+    <word cid="26871793" form="εὐθὺς" head="8" id="9" lemma="εὐθύς2" postag="d--------" relation="ADV"/>
+    <word cid="26871794" form="μετὰ" head="8" id="10" lemma="μετά1" postag="r--------" relation="AuxP"/>
+    <word cid="26871795" form="τὴν" head="13" id="11" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26871796" form="Μήδων" head="13" id="12" lemma="Μῆδος1" postag="n-p---mg-" relation="ATR"/>
+    <word cid="26871797" form="ἀναχώρησιν" head="10" id="13" lemma="ἀναχώρησις1" postag="n-s---fa-" relation="ADV"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="25" subdoc="book=1:chapter=93">
+    <word cid="26871654" form="δύο" head="3" id="1" lemma="δύο1" postag="m--------" relation="ATR"/>
+    <word cid="26871655" form="γὰρ" head="8" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26871656" form="ἅμαξαι" head="8" id="3" lemma="ἄμαξα1" postag="n-p---fn-" relation="SBJ"/>
+    <word cid="26871659" form="τοὺς" head="7" id="6" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26871660" form="λίθους" head="8" id="7" lemma="λίθος1" postag="n-p---ma-" relation="OBJ"/>
+    <word cid="26871661" form="ἐπῆγον" head="0" id="8" lemma="ἐπάγω1" postag="v3piia---" relation="PRED"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="26" subdoc="book=1:chapter=93">
+    <word cid="26871570" form="ἔπεισε" head="61" id="1" lemma="πείθω1" postag="v3saia---" relation="PRED_CO"/>
+    <word cid="26871577" form="ὁ" head="9" id="8" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26871578" form="Θεμιστοκλῆς" head="1" id="9" lemma="Θεμιστοκλῆς" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26871579" form="οἰκοδομεῖν" head="1" id="10" lemma="οἰκοδομέω1" postag="v--pna---" relation="OBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="26" subdoc="book=1:chapter=93">
+    <word cid="26871631" form="τὴν" head="63" id="62" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26871632" form="ἀρχὴν" head="65" id="63" lemma="ἀρχή1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26871633" form="εὐθὺς" head="65" id="64" lemma="εὐθύς2" postag="d--------" relation="ADV"/>
+    <word cid="26871634" form="ξυγκατεσκεύαζεν" head="61" id="65" lemma="συγκατασκευάζω1" postag="v3siia---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="27" subdoc="book=1:chapter=93">
+    <word cid="26871697" form="ἐβούλετο" head="15" id="1" lemma="βούλομαι1" postag="v3siie---" relation="PRED_CO"/>
+    <word cid="26871698" form="γὰρ" head="1" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26871704" form="ἀφιστάναι" head="1" id="8" lemma="ἀφίστημι1" postag="v--pna---" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="27" subdoc="book=1:chapter=93">
+    <word cid="26871712" form="ἐνόμιζεν" head="15" id="16" lemma="νομίζω1" postag="v3siia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="28" subdoc="book=1:chapter=93">
+    <word cid="26871663" form="ἐντὸς" head="9" id="1" lemma="ἐντός1" postag="d--------" relation="ADV"/>
+    <word cid="26871669" form="ἦν" head="2" id="9" lemma="εἰμί1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26871671" form="ἀλλὰ" head="9" id="11" lemma="ἀλλά1" postag="c--------" relation="COORD"/>
+    <word cid="26871673" form="μεγάλοι" head="14" id="13" lemma="μέγας1" postag="a-p---mn-" relation="ATR"/>
+    <word cid="26871674" form="λίθοι" head="11" id="14" lemma="λίθος1" postag="n-p---mn-" relation="SBJ_CO"/>
+    <word cid="26871686" form="δεδεμένοι" head="14" id="26" lemma="δέω1" postag="t-prpemn-" relation="ATR"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="29" subdoc="book=1:chapter=93">
+    <word cid="26871513" form="δήλη" head="8" id="2" lemma="δῆλος1" postag="a-s---fn-" relation="PNOM"/>
+    <word cid="26871514" form="ἡ" head="4" id="3" lemma="ὁ1" postag="l-s---fn-" relation="ATR"/>
+    <word cid="26871515" form="οἰκοδομία" head="8" id="4" lemma="οἰκοδομία1" postag="n-s---fn-" relation="SBJ"/>
+    <word cid="26871518" form="νῦν" head="8" id="7" lemma="νῦν1" postag="d--------" relation="ADV"/>
+    <word cid="26871519" form="ἐστὶν" head="1" id="8" lemma="εἰμί1" postag="v3spia---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="30" subdoc="book=1:chapter=93">
+    <word cid="26871637" form="ᾠκοδόμησαν" head="1" id="2" lemma="οἰκοδομέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26871638" form="τῇ" head="5" id="3" lemma="ὁ1" postag="l-s---fd-" relation="ATR"/>
+    <word cid="26871639" form="ἐκείνου" head="5" id="4" lemma="ἐκεῖνος1" postag="a-s---mg-" relation="ATR"/>
+    <word cid="26871640" form="γνώμῃ" head="2" id="5" lemma="γνώμη1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26871641" form="τὸ" head="7" id="6" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26871642" form="πάχος" head="2" id="7" lemma="πάχος1" postag="n-s---na-" relation="OBJ"/>
+    <word cid="26871644" form="τείχους" head="7" id="9" lemma="τεῖχος1" postag="n-s---ng-" relation="ATR"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="31" subdoc="book=1:chapter=93">
+    <word cid="26871554" form="γὰρ" head="6" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26871555" form="ὁ" head="4" id="3" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26871556" form="περίβολος" head="6" id="4" lemma="περίβολος1" postag="a-s---mn-" relation="SBJ"/>
+    <word cid="26871557" form="πανταχῇ" head="6" id="5" lemma="πανταχῆ1" postag="d--------" relation="ADV"/>
+    <word cid="26871558" form="ἐξήχθη" head="10" id="6" lemma="ἐξάγω1" postag="v3saip---" relation="PRED_CO"/>
+    <word cid="26871560" form="πόλεως" head="4" id="8" lemma="πόλις1" postag="n-s---fg-" relation="ATR"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="31" subdoc="book=1:chapter=93">
+    <word cid="26871563" form="διὰ" head="16" id="11" lemma="διά1" postag="r--------" relation="AuxP"/>
+    <word cid="26871564" form="τοῦτο" head="11" id="12" lemma="οὗτος1" postag="a-s---na-" relation="ADV"/>
+    <word cid="26871568" form="ἠπείγοντο" head="10" id="16" lemma="ἐπείγω1" postag="v3piie---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="32" subdoc="book=1:chapter=93">
+    <word cid="26871530" form="ὑπόκεινται" head="7" id="6" lemma="ὑπόκειμαι1" postag="v3ppie---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="32" subdoc="book=1:chapter=93">
+    <word cid="26871543" form="πολλαί" head="21" id="19" lemma="πολύς1" postag="a-p---fn-" relation="ATR"/>
+    <word cid="26871545" form="στῆλαι" head="24" id="21" lemma="στήλη1" postag="n-p---fn-" relation="SBJ_CO"/>
+    <word cid="26871548" form="καὶ" head="27" id="24" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26871549" form="λίθοι" head="24" id="25" lemma="λίθος1" postag="n-p---mn-" relation="SBJ_CO"/>
+    <word cid="26871550" form="εἰργασμένοι" head="25" id="26" lemma="ἐργάζομαι1" postag="t-prpemn-" relation="ATR"/>
+    <word cid="26871551" form="ἐγκατελέγησαν" head="20" id="27" lemma="ἐγκαταλέγω1" postag="v3paip---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="33" subdoc="book=1:chapter=93">
+    <word cid="26871729" form="ταῖς" head="3" id="1" lemma="ὁ1" postag="l-p---fd-" relation="ATR"/>
+    <word cid="26871730" form="γὰρ" head="5" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26871731" form="ναυσὶ" head="5" id="3" lemma="ναῦς1" postag="n-p---fd-" relation="OBJ"/>
+    <word cid="26871732" form="μάλιστα" head="5" id="4" lemma="μάλα1" postag="d-------s" relation="ADV"/>
+    <word cid="26871733" form="προσέκειτο" head="0" id="5" lemma="πρόσκειμαι1" postag="v3siie---" relation="PRED"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="34" subdoc="book=1:chapter=93">
+    <word cid="26871754" form="τόν" head="3" id="1" lemma="ὁ1" postag="p-s---ma-" relation="ATR"/>
+    <word cid="26871756" form="Πειραιᾶ" head="5" id="3" lemma="Πειραιεύς1" postag="n-s---ma-" relation="OBJ"/>
+    <word cid="26871757" form="ὠφελιμώτερον" head="5" id="4" lemma="ὠφέλιμος1" postag="a-s---mac" relation="OCOMP"/>
+    <word cid="26871758" form="ἐνόμιζε" head="10" id="5" lemma="νομίζω1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26871761" form="πόλεως" head="4" id="8" lemma="πόλις1" postag="n-s---fg-" relation="ADV"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="34" subdoc="book=1:chapter=93">
+    <word cid="26871764" form="πολλάκις" head="14" id="11" lemma="πολλάκις1" postag="d--------" relation="ADV"/>
+    <word cid="26871765" form="τοῖς" head="13" id="12" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26871766" form="Ἀθηναίοις" head="14" id="13" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26871767" form="παρῄνει" head="10" id="14" lemma="παραινέω1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26871776" form="καταβάντας" head="30" id="23" lemma="καταβαίνω1" postag="t-papama-" relation="ADV"/>
+    <word cid="26871780" form="ναυσὶ" head="30" id="27" lemma="ναῦς1" postag="n-p---fd-" relation="ADV"/>
+    <word cid="26871783" form="ἀνθίστασθαι" head="14" id="30" lemma="ἀνθίστημι1" postag="v--pne---" relation="OBJ"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="35" subdoc="book=1:chapter=93">
+    <word cid="26871500" form="τούτῳ" head="3" id="1" lemma="οὗτος1" postag="a-s---md-" relation="ATR"/>
+    <word cid="26871501" form="τῷ" head="3" id="2" lemma="ὁ1" postag="l-s---md-" relation="ATR"/>
+    <word cid="26871502" form="τρόπῳ" head="8" id="3" lemma="τρόπος1" postag="n-s---md-" relation="ADV"/>
+    <word cid="26871503" form="οἱ" head="5" id="4" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26871504" form="Ἀθηναῖοι" head="8" id="5" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26871505" form="τὴν" head="7" id="6" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26871506" form="πόλιν" head="8" id="7" lemma="πόλις1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26871507" form="ἐτείχισαν" head="0" id="8" lemma="τειχίζω1" postag="v3paia---" relation="PRED"/>
+    <word cid="26871508" form="ἐν" head="8" id="9" lemma="ἐν1" postag="r--------" relation="AuxP"/>
+    <word cid="26871509" form="ὀλίγῳ" head="11" id="10" lemma="ὀλίγος1" postag="a-s---md-" relation="ATR"/>
+    <word cid="26871510" form="χρόνῳ" head="9" id="11" lemma="χρόνος1" postag="n-s---md-" relation="ADV"/>11</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="36" subdoc="book=1:chapter=93">
+    <word cid="26871688" form="τὸ" head="3" id="1" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26871690" form="ὕψος" head="6" id="3" lemma="ὕψος1" postag="n-s---na-" relation="ADV"/>
+    <word cid="26871691" form="ἥμισυ" head="6" id="4" lemma="ἥμισυς1" postag="a-s---nn-" relation="SBJ"/>
+    <word cid="26871693" form="ἐτελέσθη" head="2" id="6" lemma="τελέω1" postag="v3saip---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="37" subdoc="book=1:chapter=94">
+    <word cid="26871799" form="Παυσανίας" head="10" id="1" lemma="Παυσανίας" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26871800" form="δὲ" head="10" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26871801" form="ὁ" head="1" id="3" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26871802" form="Κλεομβρότου" head="1" id="4" lemma="Κλεόμβροτος" postag="---------" relation="ATR"/>
+    <word cid="26871803" form="ἐκ" head="10" id="5" lemma="ἐκ1" postag="r--------" relation="AuxP"/>
+    <word cid="26871804" form="Λακεδαίμονος" head="5" id="6" lemma="Λακεδαίμων1" postag="n-s---fg-" relation="OBJ"/>
+    <word cid="26871808" form="ἐξεπέμφθη" head="0" id="10" lemma="ἐκπέμπω1" postag="v3saip---" relation="PRED"/>
+    <word cid="26871809" form="μετὰ" head="10" id="11" lemma="μετά1" postag="r--------" relation="AuxP"/>
+    <word cid="26871810" form="εἴκοσι" head="13" id="12" lemma="εἴκοσι1" postag="m--------" relation="ATR"/>
+    <word cid="26871811" form="νεῶν" head="11" id="13" lemma="ναῦς1" postag="n-p---fg-" relation="ADV"/>10</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="38" subdoc="book=1:chapter=94">
+    <word cid="26871815" form="ξυνέπλεον" head="2" id="1" lemma="συμπλέω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26871818" form="Ἀθηναῖοι" head="7" id="4" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ_CO"/>
+    <word cid="26871819" form="τριάκοντα" head="6" id="5" lemma="τριάκοντα1" postag="m--------" relation="ATR"/>
+    <word cid="26871820" form="ναυσὶ" head="1" id="6" lemma="ναῦς1" postag="n-p---fd-" relation="ADV"/>
+    <word cid="26871821" form="καὶ" head="1" id="7" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26871824" form="ξυμμάχων" head="11" id="10" lemma="σύμμαχος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26871825" form="πλῆθος" head="7" id="11" lemma="πλῆθος1" postag="n-s---nn-" relation="SBJ_CO"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="39" subdoc="book=1:chapter=94">
+    <word cid="26871828" form="ἐστράτευσαν" head="5" id="2" lemma="στρατεύω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26871829" form="ἐς" head="2" id="3" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26871830" form="Κύπρον" head="3" id="4" lemma="Κύπρος1" postag="n-s---fa-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="39" subdoc="book=1:chapter=94">
+    <word cid="26871832" form="αὐτῆς" head="8" id="6" lemma="αὐτός1" postag="a-s---fg-" relation="ATR"/>
+    <word cid="26871833" form="τὰ" head="8" id="7" lemma="ὁ1" postag="p-p---na-" relation="ATR"/>
+    <word cid="26871834" form="πολλὰ" head="9" id="8" lemma="πολύς1" postag="a-p---na-" relation="OBJ"/>
+    <word cid="26871835" form="κατεστρέψαντο" head="5" id="9" lemma="καταστρέφω1" postag="v3paim---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="39" subdoc="book=1:chapter=94">
+    <word cid="26871845" form="ἐξεπολιόρκησαν" head="11" id="19" lemma="ἐκπολιορκέω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26871846" form="ἐν" head="19" id="20" lemma="ἐν1" postag="r--------" relation="AuxP"/>
+    <word cid="26871847" form="τῇδε" head="23" id="21" lemma="ὅδε1" postag="p-s---fd-" relation="ATR"/>
+    <word cid="26871848" form="τῇ" head="23" id="22" lemma="ὁ1" postag="l-s---fd-" relation="ATR"/>
+    <word cid="26871849" form="ἡγεμονίᾳ" head="20" id="23" lemma="ἡγεμονία1" postag="n-s---fd-" relation="ADV"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="40" subdoc="book=1:chapter=95">
+    <word cid="26871949" form="ξυνέβη" head="2" id="1" lemma="συμβαίνω1" postag="v3saia---" relation="PRED_CO"/>
+    <word cid="26871951" form="αὐτῷ" head="1" id="3" lemma="αὐτός1" postag="a-s---md-" relation="OBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="41" subdoc="book=1:chapter=95">
+    <word cid="26871974" form="τῶν" head="10" id="5" lemma="ὁ1" postag="l-p---ng-" relation="ATR"/>
+    <word cid="26871976" form="ἰδίᾳ" head="10" id="7" lemma="ἴδιος1" postag="a-s---fd-" relation="ATR"/>
+    <word cid="26871979" form="ἀδικημάτων" head="11" id="10" lemma="ἀδίκημα1" postag="n-p---ng-" relation="OBJ"/>
+    <word cid="26871980" form="ηὐθύνθη" head="14" id="11" lemma="εὐθύνω1" postag="v3saip---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="41" subdoc="book=1:chapter=95">
+    <word cid="26871982" form="τὰ" head="15" id="13" lemma="ὁ1" postag="l-p---na-" relation="ATR"/>
+    <word cid="26871984" form="μέγιστα" head="16" id="15" lemma="μέγας1" postag="a-p---na-" relation="ADV"/>
+    <word cid="26871985" form="ἀπολύεται" head="14" id="16" lemma="ἀπολύω1" postag="v3spie---" relation="PRED_CO"/>
+    <word cid="26871987" form="ἀδικεῖν" head="16" id="18" lemma="ἀδικέω1" postag="v--pna---" relation="OBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="42" subdoc="book=1:chapter=95">
+    <word cid="26871917" form="ἐν" head="6" id="1" lemma="ἐν1" postag="r--------" relation="AuxP"/>
+    <word cid="26871918" form="τούτῳ" head="1" id="2" lemma="οὗτος1" postag="a-s---md-" relation="ADV"/>
+    <word cid="26871919" form="δὲ" head="6" id="3" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26871920" form="οἱ" head="5" id="4" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26871921" form="Λακεδαιμόνιοι" head="6" id="5" lemma="Λακεδαιμόνιος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26871922" form="μετεπέμποντο" head="0" id="6" lemma="μεταπέμπω1" postag="v3piie---" relation="PRED"/>
+    <word cid="26871923" form="Παυσανίαν" head="6" id="7" lemma="παυσανίας1" postag="n-s---ma-" relation="OBJ"/>7</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="43" subdoc="book=1:chapter=95">
+    <word cid="26871878" form="ἠξίουν" head="2" id="6" lemma="ἀξιόω1" postag="v3piia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="44" subdoc="book=1:chapter=95">
+    <word cid="26871856" form="οἵ" head="9" id="6" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26871858" form="ἄλλοι" head="9" id="8" lemma="ἄλλος1" postag="a-p---mn-" relation="ATR"/>
+    <word cid="26871859" form="Ἕλληνες" head="10" id="9" lemma="Ἕλλην1" postag="n-p---mn-" relation="SBJ"/>
+    <word cid="26871860" form="ἤχθοντο" head="11" id="10" lemma="ἔχθω1" postag="v3piie---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="45" subdoc="book=1:chapter=95">
+    <word cid="26871931" form="ἀδικία" head="5" id="3" lemma="ἀδικία1" postag="n-s---fn-" relation="SBJ"/>
+    <word cid="26871932" form="πολλὴ" head="3" id="4" lemma="πολύς1" postag="a-s---fn-" relation="ATR"/>
+    <word cid="26871933" form="κατηγορεῖτο" head="13" id="5" lemma="κατηγορέω1" postag="v3siie---" relation="PRED_CO"/>
+    <word cid="26871934" form="αὐτοῦ" head="5" id="6" lemma="αὐτός1" postag="a-s---mg-" relation="OBJ"/>
+    <word cid="26871935" form="ὑπὸ" head="5" id="7" lemma="ὑπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26871936" form="τῶν" head="9" id="8" lemma="ὁ1" postag="l-p---mg-" relation="ATR"/>
+    <word cid="26871937" form="Ἑλλήνων" head="7" id="9" lemma="Ἕλλην1" postag="n-p---mg-" relation="OBJ"/>
+    <word cid="26871938" form="τῶν" head="9" id="10" lemma="ὁ1" postag="l-p---mg-" relation="ATR"/>
+    <word cid="26871939" form="ἀφικνουμένων" head="9" id="11" lemma="ἀφικνέομαι1" postag="t-pppemg-" relation="ATR"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="45" subdoc="book=1:chapter=95">
+    <word cid="26871942" form="τυραννίδος" head="17" id="14" lemma="τυραννίς1" postag="n-s---fg-" relation="ATR"/>
+    <word cid="26871943" form="μᾶλλον" head="16" id="15" lemma="μάλα1" postag="d-------c" relation="ADV"/>
+    <word cid="26871944" form="ἐφαίνετο" head="13" id="16" lemma="φαίνω1" postag="v3siie---" relation="PRED_CO"/>
+    <word cid="26871945" form="μίμησις" head="16" id="17" lemma="μίμησις1" postag="n-s---fn-" relation="SBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="46" subdoc="book=1:chapter=95">
+    <word cid="26872004" form="ἐκπέμπουσιν" head="10" id="5" lemma="ἐκπέμπω1" postag="v3ppia---" relation="PRED_CO"/>
+    <word cid="26872007" form="Δόρκιν" head="9" id="8" lemma="Δορκις" postag="n-s---ma-" relation="OBJ_CO"/>
+    <word cid="26872008" form="δὲ" head="5" id="9" lemma="δέ1" postag="g--------" relation="COORD"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="47" subdoc="book=1:chapter=95">
+    <word cid="26871989" form="κατηγορεῖτο" head="7" id="1" lemma="κατηγορέω1" postag="v3siie---" relation="PRED_CO"/>
+    <word cid="26871991" form="αὐτοῦ" head="1" id="3" lemma="αὐτός1" postag="a-s---mg-" relation="OBJ"/>
+    <word cid="26871993" form="ἥκιστα" head="1" id="5" lemma="ἥκιστος" postag="a-p---na-" relation="ADV"/>
+    <word cid="26871994" form="μηδισμὸς" head="1" id="6" lemma="Μηδισμός1" postag="n-s---mn-" relation="SBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="47" subdoc="book=1:chapter=95">
+    <word cid="26871996" form="ἐδόκει" head="7" id="8" lemma="δοκέω1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26871998" form="εἶναι" head="8" id="10" lemma="εἰμί1" postag="v--pna---" relation="SBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="48" subdoc="book=1:chapter=95">
+    <word cid="26871898" form="ἐδέξαντό" head="8" id="4" lemma="δέχομαι1" postag="v3paim---" relation="PRED_CO"/>
+    <word cid="26871900" form="τοὺς" head="7" id="6" lemma="ὁ1" postag="l-p---ma-" relation="ATR"/>
+    <word cid="26871901" form="λόγους" head="4" id="7" lemma="λόγος1" postag="n-p---ma-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="48" subdoc="book=1:chapter=95">
+    <word cid="26871903" form="προσεῖχον" head="8" id="9" lemma="προσέχω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26871904" form="τὴν" head="11" id="10" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26871905" form="γνώμην" head="9" id="11" lemma="γνώμη1" postag="n-s---fa-" relation="OBJ"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="49" subdoc="book=1:chapter=95">
+    <word cid="26872027" form="οἱ" head="4" id="1" lemma="ὁ1" postag="p-p---mn-" relation="SBJ"/>
+    <word cid="26872030" form="ἀπῆλθον" head="6" id="4" lemma="ἀπέρχομαι1" postag="v3paia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="49" subdoc="book=1:chapter=95">
+    <word cid="26872033" form="ἄλλους" head="10" id="7" lemma="ἄλλος1" postag="a-p---ma-" relation="OBJ"/>
+    <word cid="26872035" form="ὕστερον" head="10" id="9" lemma="ὕστερον1" postag="n-s---na-" relation="ADV"/>
+    <word cid="26872036" form="ἐξέπεμψαν" head="6" id="10" lemma="ἐκπέμπω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26872037" form="οἱ" head="12" id="11" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872038" form="Λακεδαιμόνιοι" head="10" id="12" lemma="Λακεδαιμόνιος1" postag="a-p---mn-" relation="SBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="50" subdoc="book=1:chapter=95">
+    <word cid="26872019" form="οἷς" head="3" id="1" lemma="ὅς1" postag="p-p---md-" relation="OBJ"/>
+    <word cid="26872021" form="ἐφίεσαν" head="0" id="3" lemma="ἐφίημι1" postag="v3piia---" relation="PRED"/>
+    <word cid="26872022" form="οἱ" head="5" id="4" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872023" form="ξύμμαχοι" head="3" id="5" lemma="σύμμαχος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26872024" form="τὴν" head="7" id="6" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26872025" form="ἡγεμονίαν" head="3" id="7" lemma="ἡγεμονία1" postag="n-s---fa-" relation="OBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="51" subdoc="book=1:chapter=96">
+    <word cid="26872139" form="ἦν" head="2" id="1" lemma="εἰμί1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26872141" form="ὁ" head="5" id="3" lemma="ὁ1" postag="l-s---mn-" relation="ATR"/>
+    <word cid="26872143" form="φόρος" head="1" id="5" lemma="φόρος1" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26872144" form="ταχθεὶς" head="5" id="6" lemma="τάσσω1" postag="t-sappmn-" relation="ATR"/>
+    <word cid="26872146" form="τάλαντα" head="1" id="8" lemma="τάλαντον1" postag="n-p---nn-" relation="PNOM"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="52" subdoc="book=1:chapter=96">
+    <word cid="26872119" form="Ἑλληνοταμίαι" head="6" id="2" lemma="Ἑλληνοταμίαι1" postag="n-p---mn-" relation="SBJ"/>
+    <word cid="26872120" form="τότε" head="6" id="3" lemma="τότε1" postag="d--------" relation="ADV"/>
+    <word cid="26872121" form="πρῶτον" head="6" id="4" lemma="πρότερος1" postag="a-s---nas" relation="ADV"/>
+    <word cid="26872122" form="Ἀθηναίοις" head="6" id="5" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="ADV"/>
+    <word cid="26872123" form="κατέστη" head="1" id="6" lemma="καθίστημι1" postag="v3saia---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="53" subdoc="book=1:chapter=96">
+    <word cid="26872131" form="οὕτω" head="3" id="1" lemma="οὕτως1" postag="d--------" relation="ADV"/>
+    <word cid="26872132" form="γὰρ" head="3" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872133" form="ὠνομάσθη" head="0" id="3" lemma="ὀνομάζω1" postag="v3saip---" relation="PRED"/>
+    <word cid="26872135" form="χρημάτων" head="7" id="5" lemma="χρῆμα1" postag="n-p---ng-" relation="ATR"/>
+    <word cid="26872136" form="ἡ" head="7" id="6" lemma="υνκνοων1" postag="---------" relation="ATR"/>
+    <word cid="26872137" form="φορά" head="3" id="7" lemma="υνκνοων1" postag="---------" relation="SBJ"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="54" subdoc="book=1:chapter=96">
+    <word cid="26872076" form="δὲ" head="18" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872077" form="οἱ" head="4" id="3" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872078" form="Ἀθηναῖοι" head="18" id="4" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26872092" form="ἔταξαν" head="0" id="18" lemma="τάσσω1" postag="v3paia---" relation="PRED"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="55" subdoc="book=1:chapter=96">
+    <word cid="26872107" form="πρόσχημα" head="3" id="1" lemma="πρόσχημα1" postag="n-s---nn-" relation="PNOM"/>
+    <word cid="26872108" form="γὰρ" head="3" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872109" form="ἦν" head="0" id="3" lemma="εἰμί1" postag="v3siia---" relation="PRED"/>
+    <word cid="26872110" form="ἀμύνεσθαι" head="3" id="4" lemma="ἀμύνω1" postag="v--pne---" relation="SBJ"/>
+    <word cid="26872113" form="δῃοῦντας" head="4" id="7" lemma="δηιόω1" postag="t-pppama-" relation="ADV"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="56" subdoc="book=1:chapter=96">
+    <word cid="26872150" form="ταμιεῖόν" head="4" id="1" lemma="ταμιεῖον1" postag="n-s---nn-" relation="PNOM"/>
+    <word cid="26872152" form="Δῆλος" head="4" id="3" lemma="Δῆλος1" postag="n-s---fn-" relation="SBJ"/>
+    <word cid="26872153" form="ἦν" head="7" id="4" lemma="εἰμί1" postag="v1siia---" relation="PRED_CO"/>
+    <word cid="26872154" form="αὐτοῖς" head="4" id="5" lemma="αὐτός1" postag="a-p---md-" relation="ADV"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="56" subdoc="book=1:chapter=96">
+    <word cid="26872157" form="αἱ" head="9" id="8" lemma="ὁ1" postag="l-p---fn-" relation="ATR"/>
+    <word cid="26872158" form="ξύνοδοι" head="13" id="9" lemma="σύνοδος2" postag="n-p---fn-" relation="SBJ"/>
+    <word cid="26872159" form="ἐς" head="13" id="10" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26872160" form="τὸ" head="12" id="11" lemma="ὁ1" postag="l-s---na-" relation="ATR"/>
+    <word cid="26872161" form="ἱερὸν" head="10" id="12" lemma="ἱερός1" postag="a-s---na-" relation="ADV"/>
+    <word cid="26872162" form="ἐγίγνοντο" head="7" id="13" lemma="γίγνομαι1" postag="v3piie---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="57" subdoc="book=1:chapter=97">
+    <word cid="26872268" form="δὲ" head="7" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872271" form="ἀρχῆς" head="6" id="5" lemma="ἀρχή1" postag="n-s---fg-" relation="ATR"/>
+    <word cid="26872272" form="ἀπόδειξιν" head="7" id="6" lemma="ἀπόδειξις1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26872273" form="ἔχει" head="0" id="7" lemma="ἔχω1" postag="v3spia---" relation="PRED"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="58" subdoc="book=1:chapter=97">
+    <word cid="26872212" form="ἔγραψα" head="4" id="1" lemma="γράφω1" postag="v1saia---" relation="PRED"/>
+    <word cid="26872214" form="αὐτὰ" head="1" id="3" lemma="αὐτός1" postag="a-p---na-" relation="OBJ"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="58" subdoc="book=1:chapter=97">
+    <word cid="26872216" form="τὴν" head="6" id="5" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26872217" form="ἐκβολὴν" head="9" id="6" lemma="ἐκβολή1" postag="n-s---fa-" relation="OBJ"/>
+    <word cid="26872219" form="λόγου" head="6" id="8" lemma="λόγος1" postag="n-s---mg-" relation="ATR"/>
+    <word cid="26872220" form="ἐποιησάμην" head="4" id="9" lemma="ποιέω1" postag="v1saim---" relation="PRED_CO"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="59" subdoc="book=1:chapter=97">
+    <word cid="26872165" form="δὲ" head="14" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872176" form="τοσάδε" head="14" id="13" lemma="τοσόσδε1" postag="p-p---nn-" relation="OBJ"/>
+    <word cid="26872177" form="ἐπῆλθον" head="0" id="14" lemma="ἐπέρχομαι1" postag="v3paia---" relation="PRED"/>
+    <word cid="26872178" form="πολέμῳ" head="17" id="15" lemma="πόλεμος1" postag="n-s---md-" relation="ADV_CO"/>
+    <word cid="26872180" form="καὶ" head="14" id="17" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26872181" form="διαχειρίσει" head="17" id="18" lemma="διαχείρισις1" postag="n-s---fd-" relation="ADV_CO"/>
+    <word cid="26872182" form="πραγμάτων" head="18" id="19" lemma="πρᾶγμα1" postag="n-p---ng-" relation="ATR"/>
+    <word cid="26872183" form="μεταξὺ" head="14" id="20" lemma="μεταξύ1" postag="d--------" relation="AuxP"/>
+    <word cid="26872186" form="πολέμου" head="24" id="23" lemma="πόλεμος1" postag="n-s---mg-" relation="ADV_CO"/>
+    <word cid="26872187" form="καὶ" head="20" id="24" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26872189" form="Μηδικοῦ" head="24" id="26" lemma="Μηδικός1" postag="a-s---mg-" relation="ADV_CO"/>11</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="60" subdoc="book=1:chapter=97">
+    <word cid="26872248" form="δὲ" head="19" id="2" lemma="δέ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872256" form="Ἑλλάνικος" head="19" id="10" lemma="Ἑλλάνικος" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26872258" form="βραχέως" head="14" id="12" lemma="βραχύς1" postag="d--------" relation="ADV_CO"/>
+    <word cid="26872260" form="καὶ" head="19" id="14" lemma="καί1" postag="c--------" relation="COORD"/>
+    <word cid="26872264" form="ἀκριβῶς" head="14" id="18" lemma="ἀκριβής1" postag="d--------" relation="ADV_CO"/>
+    <word cid="26872265" form="ἐπεμνήσθη" head="0" id="19" lemma="ἐπιμιμνήσκομαι1" postag="v3saip---" relation="PRED"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="61" subdoc="book=1:chapter=98">
+    <word cid="26872334" form="Ναξίοις" head="6" id="1" lemma="Νάξιος1" postag="a-p---md-" relation="OBJ"/>
+    <word cid="26872336" form="ἀποστᾶσι" head="1" id="3" lemma="ἀφίστημι1" postag="t-papamd-" relation="ATR"/>
+    <word cid="26872339" form="ἐπολέμησαν" head="7" id="6" lemma="πολεμέω1" postag="v3paia---" relation="PRED_CO"/>3</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="61" subdoc="book=1:chapter=98">
+    <word cid="26872341" form="πολιορκίᾳ" head="9" id="8" lemma="πολιορκία1" postag="n-s---fd-" relation="ADV"/>
+    <word cid="26872342" form="παρεστήσαντο" head="7" id="9" lemma="παρίστημι1" postag="v3paim---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="61" subdoc="book=1:chapter=98">
+    <word cid="26872346" form="αὕτη" head="14" id="13" lemma="οὗτος1" postag="a-s---fn-" relation="ATR"/>
+    <word cid="26872347" form="πόλις" head="19" id="14" lemma="πόλις1" postag="n-s---fn-" relation="SBJ"/>
+    <word cid="26872348" form="ξυμμαχὶς" head="14" id="15" lemma="συμμαχίς1" postag="n-s---fn-" relation="ATR"/>
+    <word cid="26872349" form="παρὰ" head="19" id="16" lemma="παρά1" postag="r--------" relation="AuxP"/>
+    <word cid="26872351" form="καθεστηκὸς" head="16" id="18" lemma="καθίστημι1" postag="t-srpana-" relation="ADV"/>
+    <word cid="26872352" form="ἐδουλώθη" head="22" id="19" lemma="δουλόω1" postag="v3saip---" relation="PRED_CO"/>6</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="62" subdoc="book=1:chapter=98">
+    <word cid="26872312" form="ἠνδραπόδισαν" head="14" id="13" lemma="ἀνδραποδίζω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="62" subdoc="book=1:chapter=98">
+    <word cid="26872314" form="ᾤκισαν" head="14" id="15" lemma="οἰκίζω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="63" subdoc="book=1:chapter=98">
+    <word cid="26872317" form="πρὸς" head="10" id="1" lemma="πρός1" postag="r--------" relation="AuxP"/>
+    <word cid="26872319" form="Καρυστίους" head="1" id="3" lemma="Καρύστιος" postag="a-p---ma-" relation="ATR"/>
+    <word cid="26872320" form="αὐτοῖς" head="10" id="4" lemma="αὐτός1" postag="a-p---md-" relation="PNOM"/>
+    <word cid="26872321" form="ἄνευ" head="10" id="5" lemma="ἄνευ1" postag="r--------" relation="AuxP"/>
+    <word cid="26872322" form="τῶν" head="8" id="6" lemma="ὁ1" postag="l-p---mg-" relation="ATR"/>
+    <word cid="26872323" form="ἄλλων" head="8" id="7" lemma="ἄλλος1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26872324" form="Εὐβοέων" head="5" id="8" lemma="Εὐβοεύς1" postag="n-p---mg-" relation="ADV"/>
+    <word cid="26872325" form="πόλεμος" head="10" id="9" lemma="πόλεμος1" postag="n-s---mn-" relation="SBJ"/>
+    <word cid="26872326" form="ἐγένετο" head="12" id="10" lemma="γίγνομαι1" postag="v3saim---" relation="PRED_CO"/>9</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="63" subdoc="book=1:chapter=98">
+    <word cid="26872329" form="χρόνῳ" head="14" id="13" lemma="χρόνος1" postag="n-s---md-" relation="ADV"/>
+    <word cid="26872330" form="ξυνέβησαν" head="12" id="14" lemma="συμβαίνω1" postag="v3paia---" relation="PRED_CO"/>
+    <word cid="26872331" form="καθ'" head="14" id="15" lemma="κατά1" postag="r--------" relation="AuxP"/>
+    <word cid="26872332" form="ὁμολογίαν" head="15" id="16" lemma="ὁμολογία1" postag="n-s---fa-" relation="OBJ"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="64" subdoc="book=1:chapter=98">
+    <word cid="26872290" form="πολιορκίᾳ" head="10" id="9" lemma="πολιορκία1" postag="n-p---fn-" relation="ADV"/>
+    <word cid="26872291" form="εἷλον" head="11" id="10" lemma="αἱρέω1" postag="v3paia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="64" subdoc="book=1:chapter=98">
+    <word cid="26872293" form="ἠνδραπόδισαν" head="11" id="12" lemma="ἀνδραποδίζω1" postag="v3paia---" relation="PRED_CO"/>1</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="65" subdoc="book=1:chapter=99">
+    <word cid="26872363" form="αἰτίαι" head="5" id="1" lemma="αἰτία1" postag="n-p---fn-" relation="SBJ"/>
+    <word cid="26872365" form="ἄλλαι" head="5" id="3" lemma="ἄλλος1" postag="a-p---fn-" relation="PNOM"/>
+    <word cid="26872367" form="ἦσαν" head="8" id="5" lemma="εἰμί1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26872369" form="ἀποστάσεων" head="1" id="7" lemma="ἀπόστασις1" postag="n-p---fg-" relation="ATR"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="66" subdoc="book=1:chapter=99">
+    <word cid="26872435" form="διὰ" head="19" id="1" lemma="διά1" postag="r--------" relation="AuxP"/>
+    <word cid="26872436" form="γὰρ" head="19" id="2" lemma="γάρ1" postag="g--------" relation="AuxY"/>
+    <word cid="26872437" form="τὴν" head="4" id="3" lemma="ὁ1" postag="l-s---fa-" relation="ATR"/>
+    <word cid="26872438" form="ἀπόκνησιν" head="1" id="4" lemma="ἀπόκνησις1" postag="n-s---fa-" relation="ADV"/>
+    <word cid="26872439" form="ταύτην" head="4" id="5" lemma="οὗτος1" postag="a-s---fa-" relation="ATR"/>
+    <word cid="26872441" form="στρατειῶν" head="4" id="7" lemma="στρατεία1" postag="n-p---fg-" relation="ATR"/>
+    <word cid="26872442" form="οἱ" head="9" id="8" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872443" form="πλείους" head="19" id="9" lemma="πλείων1" postag="a-p---mnc" relation="SBJ"/>
+    <word cid="26872444" form="αὐτῶν" head="9" id="10" lemma="αὐτός1" postag="a-p---mg-" relation="ATR"/>
+    <word cid="26872453" form="ἐτάξαντο" head="28" id="19" lemma="τάσσω1" postag="v3paim---" relation="PRED_CO"/>
+    <word cid="26872460" form="φέρειν" head="19" id="26" lemma="φέρω1" postag="v--pna---" relation="OBJ"/>11</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="66" subdoc="book=1:chapter=99">
+    <word cid="26872463" form="τοῖς" head="31" id="29" lemma="ὁ1" postag="l-p---md-" relation="ATR"/>
+    <word cid="26872465" form="Ἀθηναίοις" head="32" id="31" lemma="Ἀθηναῖος1" postag="a-p---md-" relation="ADV"/>
+    <word cid="26872466" form="ηὔξετο" head="43" id="32" lemma="αὐξάνω1" postag="v3siie---" relation="PRED_CO"/>
+    <word cid="26872467" form="τὸ" head="34" id="33" lemma="ὁ1" postag="l-s---nn-" relation="ATR"/>
+    <word cid="26872468" form="ναυτικὸν" head="32" id="34" lemma="ναυτικός1" postag="a-s---nn-" relation="SBJ"/>
+    <word cid="26872469" form="ἀπὸ" head="32" id="35" lemma="ἀπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26872470" form="τῆς" head="37" id="36" lemma="ὁ1" postag="l-s---fg-" relation="ATR"/>
+    <word cid="26872471" form="δαπάνης" head="35" id="37" lemma="δαπάνη1" postag="n-s---fg-" relation="ADV"/>8</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="66" subdoc="book=1:chapter=99">
+    <word cid="26872476" form="αὐτοὶ" head="54" id="42" lemma="αὐτός1" postag="a-p---mn-" relation="SBJ"/>
+    <word cid="26872485" form="ἐς" head="54" id="51" lemma="εἰς1" postag="r--------" relation="AuxP"/>
+    <word cid="26872486" form="τὸν" head="53" id="52" lemma="ὁ1" postag="l-s---ma-" relation="ATR"/>
+    <word cid="26872487" form="πόλεμον" head="51" id="53" lemma="πόλεμος1" postag="n-s---ma-" relation="OBJ"/>
+    <word cid="26872488" form="καθίσταντο" head="43" id="54" lemma="καθίστημι1" postag="v3piie---" relation="PRED_CO"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="67" subdoc="book=1:chapter=99">
+    <word cid="26872401" form="ἦσαν" head="22" id="1" lemma="εἰμί1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26872403" form="πως" head="1" id="3" lemma="πως1" postag="g--------" relation="ADV"/>
+    <word cid="26872405" form="ἄλλως" head="1" id="5" lemma="ἄλλως1" postag="d--------" relation="ADV"/>
+    <word cid="26872406" form="οἱ" head="7" id="6" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872407" form="Ἀθηναῖοι" head="1" id="7" lemma="Ἀθηναῖος1" postag="a-p---mn-" relation="SBJ"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="67" subdoc="book=1:chapter=99">
+    <word cid="26872415" form="οὔ" head="17" id="15" lemma="οὔτε1" postag="d--------" relation="AuxZ"/>
+    <word cid="26872416" form="ξυνεστράτευον" head="22" id="17" lemma="συστρατεύω1" postag="v3piia---" relation="PRED_CO"/>
+    <word cid="26872417" form="ἀπὸ" head="17" id="18" lemma="ἀπό1" postag="r--------" relation="AuxP"/>
+    <word cid="26872418" form="τοῦ" head="20" id="19" lemma="ὁ1" postag="l-s---mg-" relation="ATR"/>
+    <word cid="26872419" form="ἴσου" head="18" id="20" lemma="ἴσος1" postag="a-s---ng-" relation="ADV"/>5</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="67" subdoc="book=1:chapter=99">
+    <word cid="26872420" form="ῥᾴδιόν" head="24" id="21" lemma="ῥᾴδιος1" postag="a-s---nnc" relation="PNOM"/>
+    <word cid="26872422" form="προσάγεσθαι" head="24" id="23" lemma="προσάγω1" postag="v--pne---" relation="SBJ"/>
+    <word cid="26872423" form="ἦν" head="22" id="24" lemma="εἰμί1" postag="v3siia---" relation="PRED_CO"/>
+    <word cid="26872424" form="αὐτοῖς" head="24" id="25" lemma="αὐτός1" postag="a-p---md-" relation="ADV"/>4</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="68" subdoc="book=1:chapter=99">
+    <word cid="26872387" form="ἀκριβῶς" head="5" id="4" lemma="ἀκριβής1" postag="d--------" relation="ADV"/>
+    <word cid="26872388" form="ἔπρασσον" head="6" id="5" lemma="πράσσω1" postag="v3piia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="68" subdoc="book=1:chapter=99">
+    <word cid="26872390" form="λυπηροὶ" head="8" id="7" lemma="λυπηρός1" postag="a-p---mn-" relation="PNOM"/>
+    <word cid="26872391" form="ἦσαν" head="6" id="8" lemma="εἰμί1" postag="v3piia---" relation="PRED_CO"/>2</sentence>
+  <sentence document_id="Perseus:text:1999.01.0199" id="69" subdoc="book=1:chapter=99">
+    <word cid="26872428" form="ὧν" head="3" id="1" lemma="ὅς1" postag="p-p---ng-" relation="ATR"/>
+    <word cid="26872430" form="αἴτιοι" head="4" id="3" lemma="αἴτιος1" postag="a-p---mn-" relation="PNOM"/>
+    <word cid="26872431" form="ἐγένοντο" head="0" id="4" lemma="γίγνομαι1" postag="v3paim---" relation="PRED"/>
+    <word cid="26872432" form="οἱ" head="6" id="5" lemma="ὁ1" postag="l-p---mn-" relation="ATR"/>
+    <word cid="26872433" form="ξύμμαχοι" head="4" id="6" lemma="σύμμαχος1" postag="a-p---mn-" relation="SBJ"/>5</sentence>
+</treebank>
